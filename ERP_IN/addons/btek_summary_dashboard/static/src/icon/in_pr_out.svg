@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="37px" viewBox="0 0 36 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>in_pr_out</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="New-Icon-Agara" transform="translate(-273.000000, -273.000000)">
+            <g id="Group-20" transform="translate(273.900000, 276.008731)">
+                <g id="ic_today">
+                    <g id="Group-5" transform="translate(0.625000, 0.625000)">
+                        <polygon id="Fill-1" fill="#717C76" opacity="0.5" points="20.188125 1.70175 26.065625 6.598 32.969375 6.598 29.479375 1.70175"></polygon>
+                        <polygon id="Fill-2" fill="#717C76" opacity="0.5" points="3.48975 1.70175 -0.00025 6.598 6.90475 6.598 12.781 1.70175"></polygon>
+                        <polygon id="Fill-3" fill="#717C76" points="21.416625 7.847625 21.416625 24.290125 11.551625 24.290125 11.551625 7.847625 0.000375 7.847625 0.000375 28.016375 32.969125 28.016375 32.969125 7.847625"></polygon>
+                        <polygon id="Fill-4" fill="#2EBC61" points="16.484625 -0.000375 8.792125 6.408375 12.614625 6.408375 12.614625 23.227125 20.353375 23.227125 20.353375 6.408375 24.177125 6.408375"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

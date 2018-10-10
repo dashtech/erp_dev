@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for btek.partner.source -->
+        <record id="seq_partner_source" model="ir.sequence">
+            <field name="name">Source Melee</field>
+            <field name="code">btek.partner.source</field>
+            <field name="prefix">PS</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for btek.partner.group -->
+        <record id="seq_partner_group" model="ir.sequence">
+            <field name="name">Group User</field>
+            <field name="code">btek.partner.group</field>
+            <field name="prefix">GU</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

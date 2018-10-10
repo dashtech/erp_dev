@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_report_revenue_form" model="ir.ui.view">
+        <field name="name">Revenue report</field>
+        <field name="model">wizard.report.revenue</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    <group>
+                        <field name="product_categ_ids"
+                               widget="many2many_tags"/>
+                        <field name="company_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="export_report"
+                            type="object"
+                            string="Export report"
+                            class="oe_highlight"/>
+                    <button special="cancel"
+                            string="Cancel"
+                            class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="report_revenue_action" model="ir.actions.act_window">
+        <field name="name">Report revenue</field>
+        <field name="res_model">wizard.report.revenue</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_report_revenue_action"
+              parent="account.menu_finance_reports"
+              action="report_revenue_action"
+              sequence="10"/>
+</odoo>

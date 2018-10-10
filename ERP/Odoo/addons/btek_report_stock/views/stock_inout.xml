@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="stock_inout_report_form_nhap" model="ir.ui.view">
+            <field name="name">BẢNG KÊ PHIẾU NHẬP KHO HÀNG HÓA</field>
+            <field name="model">stock.report.inout</field>
+            <field name="arch" type="xml">
+                <form string="Bảng kê phiếu nhập">
+                    <group>
+                        <group>
+                            <field name="type" invisible="1"/>
+                            <field name="start_date"/>
+                            <field name="warehouse_id" invisible="1"/>
+                            <field name="lot_stock_id" domain="[('usage', '=', 'internal')]"/>
+                            <field name="product_category_id"/>
+                        </group>
+                        <group>
+                            <!--<field name="company_id" string="Công ty"/>-->
+                            <field name="end_date"/>
+                            <field name="product_id"/>
+                            <field name="company_id" string="Company"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_print" string="Print" class="oe_highlight" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_inout_report_form_nhap_act" model="ir.actions.act_window">
+            <field name="name">Bảng kê nhập</field>
+            <field name="res_model">stock.report.inout</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_type': 'in'}</field>
+            <field name="view_id" ref="stock_inout_report_form_nhap"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_stock_inout_report_form_nhap" name="Bảng kê phiếu nhập"
+                  sequence="2" parent="stock.menu_warehouse_report"
+                  action="stock_inout_report_form_nhap_act"/>
+
+        <report id="stock_report_in_report"
+                model="stock.report.inout"
+                string="Bảng kê phiếu nhập"
+                report_type="xlsx"
+                name="btek_report_stock.stockin_report"
+                file="btek_report_stock.stock_inout"
+                attachment_use="False"/>
+
+        <report id="stock_report_out_report"
+                model="stock.report.out"
+                string="Bảng kê phiếu xuất"
+                report_type="xlsx"
+                name="btek_report_stock.stockout_report"
+                file="btek_report_stock.stock_inout"
+                attachment_use="False"/>
+
+        <record id="stock_inout_report_form_xuat" model="ir.ui.view">
+            <field name="name">BẢNG KÊ PHIẾU XUẤT KHO HÀNG HÓA</field>
+            <field name="model">stock.report.inout</field>
+            <field name="arch" type="xml">
+                <form string="Bảng kê phiếu xuất">
+                    <group>
+                        <group>
+                            <field name="type" invisible="1"/>
+                            <field name="start_date"/>
+                            <field name="warehouse_id" invisible="1"/>
+                            <field name="lot_stock_id" domain="[('usage', '=', 'internal')]"/>
+                            <field name="product_category_id"/>
+                        </group>
+                        <group>
+                            <field name="end_date"/>
+                            <field name="product_id"/>
+                            <field name="company_id" string="Company"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_print" string="Print" class="oe_highlight" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="stock_inout_report_form_xuat_act" model="ir.actions.act_window">
+            <field name="name">Bảng kê xuất</field>
+            <field name="res_model">stock.report.inout</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_type': 'out'}</field>
+            <field name="view_id" ref="stock_inout_report_form_xuat"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_stock_inout_report_form_xuat" name="Bảng kê phiếu xuất"
+                  sequence="2" parent="stock.menu_warehouse_report"
+                  action="stock_inout_report_form_xuat_act"/>
+    </data>
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="vehicle_form"
+            model="ir.ui.view">
+        <field name="name">vehicle.form</field>
+        <field name="model">vehicle</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="avatar_medium" widget="image" class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                    <group>
+                        <field name="name"/>
+                        <field name="plate"/>
+                        <field name="member_id"/>
+                        <field name="vehicle_type"/>
+                        <field name="brand_id"/>
+                        <field name="model_id"/>
+                        <field name="car_color_id"
+                               domain="[('car_vehicle_model_ids', 'in', model_id)]"/>
+                        <field name="obd_mac_address"/>
+                    </group>
+                    <group>
+                        <field name="year"/>
+                        <field name="vin_number"/>
+                        <field name="vehicle_number"/>
+                        <field name="plate_search"/>
+                        <field name="avatar" widget="image"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="vehicle_tree"
+            model="ir.ui.view">
+        <field name="name">vehicle.tree</field>
+        <field name="model">vehicle</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="plate"/>
+                <field name="member_id"/>
+                <field name="vehicle_type"/>
+                <field name="model_id"/>
+                <field name="car_color_id"/>
+                <field name="year"/>
+                <field name="vin_number"/>
+                <field name="vehicle_number"/>
+                <field name="plate_search"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_vehicle"
+            model="ir.actions.act_window">
+        <field name="name">Vehicle</field>
+        <field name="res_model">vehicle</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_vehicle"
+              parent="root_menu_memeber"
+              action="action_vehicle"
+              sequence="20"/>
+
+</odoo>
+

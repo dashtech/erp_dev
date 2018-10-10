@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+    <t t-name="LoyaltyPoints">
+        <div class='loyalty-points'>
+            <span class="wk_won">
+                <span class='wk_value'><t t-esc='wonpoints'/></span> Points.
+            </span>
+            <span class='wk_total'>
+                Total:&amp;nbsp;<span class='wk_value'><t t-esc='totalpoints' /></span>
+            </span>
+        </div>
+    </t>
+    <t t-name="AlertMessagePopup">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput" style="height:260px !important">
+                <p class="title" style="width:92%">
+                    <t t-esc=" widget.options.title || 'Message' " />
+                </p>
+                <p class="body">
+                    <t t-esc="  widget.options.body || '' " />
+                </p>
+                <div class="footer">
+                    <div class="button cancel">
+                        OK
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend='OrderWidget'>
+        <t t-jquery='.summary' t-operation='prepend'>
+            <div class='loyalty-points oe_hidden'>.</div>
+        </t>
+    </t>
+
+    <t t-extend='ClientListScreenWidget'>
+        <t t-jquery='.client-list thead tr' t-operation='append'>
+            <th>Loyalty Points</th>
+        </t>
+    </t>
+
+    <t t-extend='ClientLine'>
+        <t t-jquery='.client-line' t-operation='append'>
+            <td class="wk_loyalty">
+                <t t-esc='widget.format_pr(partner.wk_loyalty_points || 0)' />
+            </td>
+        </t>
+    </t>
+
+    <t t-name="CustomerRedeemWidget">
+        <div class="control-button">
+            Redeem
+        </div>
+    </t>
+
+    <t t-name="LoyaltyRedeemPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-alert" style="width:344px;height:279px">
+                <p class="title">Point Redemption</p>
+                <div style=" text-align: left;margin:15px;font-size:18px">Welcome
+                    <t t-esc=" widget.options.name || '' " />
+                    <br/>
+                    <br/> Total Earned Points :
+                    <t t-esc=" widget.options.points || '' " />
+                    <br/>
+                    <br/> Total Discount :
+                    <t t-esc="widget.format_currency(widget.options.discount) || '' " />
+                </div>
+                <div class="footer">
+                    <span class="button" id="wk_redeem_now">
+                        REDEEM NOW
+                    </span>
+                    <span class="button cancel">
+                        CANCEL
+                    </span>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend="PosTicket">
+        <t t-jquery=".pos-sale-ticket" t-operation="append">
+            <div id="loyalty-points">
+                <t t-if="order.get_loyalty_points()">
+                    <table>
+                        <tr>
+                            <td>Total Earned Points:</td>
+                            <td class="pos-right-align">
+                                <t t-esc="order.get_loyalty_points()" />
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </div>
+        </t>
+    </t>
+
+</templates>

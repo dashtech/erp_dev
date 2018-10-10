@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <template id="assets_backend" name="fleet repair assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/car_repair_industry/static/src/js/form_widgets.js"></script>
+                <script type="text/javascript" src="/car_repair_industry/static/src/js/form_common.js"></script>
+                <link rel="stylesheet" href="/car_repair_industry/static/src/less/fleet_repair_dashboard.less"/>
+                <link rel="stylesheet" href="/car_repair_industry/static/src/less/bave_form_view.less"/>
+                <link rel="stylesheet" href="/car_repair_industry/static/src/less/widget.css"/>
+            </xpath>
+        </template>
+</odoo>

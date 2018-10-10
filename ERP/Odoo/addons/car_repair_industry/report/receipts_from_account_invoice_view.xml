@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="receipts_from_account_invoice_btek"
+            model="account.invoice"
+            string="Phiếu thu"
+            report_type="qweb-pdf"
+            name="car_repair_industry.report_receipts_from_account_invoice"
+            file="car_repair_industry.report_receipts_from_account_invoice"
+            attachment_use="False"
+            menu="False"
+        />
+
+    <record id="paperformat_euro_anhtt_2" model="report.paperformat">
+        <field name="name">European A4 Btek</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">35</field>
+        <field name="dpi">120</field>
+    </record>
+
+    <record id="receipts_from_account_invoice_btek" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="paperformat_euro_anhtt_2" />
+    </record>
+
+    <template id="report_receipts_from_account_invoice">
+        <body>
+            <t t-foreach="docs" t-as="o">
+                <div class="page" style="color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                    <style type="text/css">
+                        .pages {
+                        font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+                        font-size: 10px;
+                        }
+                    </style>
+                    <t class="pages" style="color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                        <div style="color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;margin-top: 3%, padding-top: 3px">
+                            <div style="width:40%;float:left;margin-left: 5%;text-align: center;">
+                                <p>
+                                    <b><span t-esc="res_company.name" /></b>
+                                </p>
+                                <p>
+                                    <span t-esc="res_company.street" />
+                                    <t t-if="res_company.street2!=False">
+                                        <span t-esc="res_company.street2" />
+                                    </t>
+                                    <t t-if="res_company.city!=False">
+                                        <span t-esc="res_company.city" /></t>
+                                    <t t-if="res_company.state_id!=False">
+                                        <span t-esc="res_company.state_id.name" />
+                                    </t>
+                                    <span t-esc="res_company.country_id.name"/>
+                                </p>
+                            </div>
+                            <div style="width:20%;float:left"> </div>
+                            <div style="width:40%;float:right;font-size:16px;">
+                                <p class="text-center" style="text-align: center;">
+                                    <strong>
+                                        <span>Mẫu số 01-TT</span>
+                                    </strong>
+                                </p>
+                                <p style="font-style: italic;text-align: center;" class="text-center">(Ban hành theo TT số 200/2014/TT-BTC<br />
+                                    Ngày 22/12/2014 của Bộ Tài Chính)</p>
+                            </div>
+                        </div>
+
+                        <div style="font-size:12px; padding-top: 3px">
+                            <table style="width:100%;color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                                <td width="33%"></td>
+                                <td width="32%" style="text-align: center">
+                                    <div>
+                                        <h3 style="font-style: bold;">
+                                            <strong>
+                                                <span>PHIẾU THU</span>
+                                            </strong>
+                                        </h3>
+                                        <p style="font-style: bold;">
+                                            <span t-esc="o.get_time_today()"/>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td width="3%"></td>
+                                <td width="32%">
+                                    <p><b>Số phiếu nhập: .............</b></p>
+                                    <p><b>Số phiếu:&#160;</b><t t-esc="o.number"/>
+                                    </p>
+                                </td>
+                            </table>
+                        </div>
+                        <div class="content" style="width:100%;float:left;padding-top: 6px">
+                            <table style="line-height: 200%;margin-left: 5%;color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                                <tr>
+                                    <td width="25%">
+                                        <span>Người nộp tiền</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                        <span>Tên khách</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td>
+                                        <t t-if="o.partner_id">
+                                            <span t-esc="o.partner_id.name"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                        <span>Địa chỉ</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td>
+                                        <span t-esc="o.partner_id.address"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                        <span>Lý do nộp</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                        <span>Số tiền</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td>
+                                        <strong>
+                                            <t t-esc="o.amount_total" t-esc-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                            <!--<span t-esc="o.currency_id.name" />-->
+                                        </strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                        <span>Bằng chữ</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td>
+                                        <t style="font-style: italic;">
+                                            <span t-esc="o.get_num2text()" />
+                                            <span t-esc="o.currency_id.currency_text" />
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">
+                                      <span>Kèm theo</span>
+                                    </td>
+                                    <td width="5%">:</td>
+                                    <td>0 chứng từ gốc.</td>
+                                </tr>
+                                <tr>
+                                    <td width="25%">Thời hạn hoàn ứng</td>
+                                    <td width="5%">
+                                        :
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                      <!--<span>Chi tiết</span>-->
+                                    <!--</td>-->
+                                    <!--<td>:</td>-->
+                                <!--</tr>-->
+                            </table>
+
+                            <!--<div style="clear:both;padding-top:5px"></div>-->
+                            <!--<table class="table table-bordered" style="font-size: 11px" t-if="o.invoice_line_ids">-->
+                                <!--<thead>-->
+                                    <!--<tr>-->
+                                        <!--<th class="text-center" style="width:2%">STT</th>-->
+                                        <!--<th class="text-center" style="width:27%">Sản phẩm</th>-->
+                                        <!--<th class="text-center" style="width:6%">ĐVT</th>-->
+                                        <!--<th class="text-center" style="width:8%">Số lượng</th>-->
+                                        <!--<th class="text-center" style="width:10%">Đơn giá</th>-->
+                                        <!--<th class="text-center" style="width:10%">Chiết khấu</th>-->
+                                        <!--<th class="text-center" style="width:17%">Các loại thuế</th>-->
+                                        <!--<th class="text-center" style="width:10%">Tiền thuế</th>-->
+                                        <!--<th class="text-center" style="width:10%">Tổng tiền</th>-->
+                                    <!--</tr>-->
+                                <!--</thead>-->
+                                <!--<t t-set="stt" t-value="0"/>-->
+                                <!--<tbody t-foreach="o.invoice_line_ids" t-as="invoice_line">-->
+                                    <!--<t t-set="stt" t-value="stt+1"/>-->
+                                    <!--<tr>-->
+                                        <!--<td class="text-center">-->
+                                            <!--<span t-raw="stt"/>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-left">-->
+                                            <!--<t>-->
+                                                <!--<span t-esc="invoice_line.product_id.name"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.uom_id.name"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.quantity"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.price_unit"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.discount"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-left">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.invoice_line_tax_ids.name"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.x_rounding_price_tax"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                        <!--<td class="text-right">-->
+                                            <!--<t>-->
+                                                <!--<span t-field="invoice_line.price_subtotal"/>-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+                                    <!--</tr>-->
+
+                                <!--</tbody>-->
+                                <!--<tr>-->
+                                    <!--<td colspan="8" class="text-right">Giá trị trước thuế :</td>-->
+                                    <!--<td class="text-right">-->
+                                        <!--<t>-->
+                                            <!--<span t-field="o.amount_untaxed"/>-->
+                                        <!--</t>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td colspan="8" class="text-right">Thuế :</td>-->
+                                    <!--<td class="text-right">-->
+                                        <!--<t>-->
+                                            <!--<span t-field="o.amount_tax"/>-->
+                                        <!--</t>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td colspan="8" class="text-right">Tổng :</td>-->
+                                    <!--<td class="text-right">-->
+                                        <!--<t>-->
+                                            <!--<span t-field="o.amount_total"/>-->
+                                        <!--</t>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td colspan="8" class="text-right">Tổng số tiền phải trả :</td>-->
+                                    <!--<td class="text-right">-->
+                                        <!--<t>-->
+                                            <!--<span t-field="o.residual"/>-->
+                                        <!--</t>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                            <!--</table>-->
+
+                            <div style="width:100%;color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                                <table width="100%">
+                                    <tr style="text-align: right;margin-right: 5%;">
+                                        <p style="text-align: right;margin-right: 5%;">
+                                            <b>Ngày........tháng.......năm........</b>
+                                        </p>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div style="width:100%;color: black;font-size: 16px;font-family: Times New Roman, Times, Baskerville, Georgia, serif; padding-top:4px">
+                                <table width="100%">
+                                    <tr>
+                                        <td style="text-align: center;" width="20%">
+                                            <p>
+                                                <strong>Giám đốc</strong>
+                                            </p>
+                                            <p style="font-style: italic;">(Ký, họ tên, đóng dấu)</p>
+                                            <p style="padding-top:90px">
+                                            </p>
+                                        </td>
+                                        <td style="text-align: center;" width="20%">
+                                            <p>
+                                                <strong>Kế toán trưởng</strong>
+                                            </p>
+                                            <p style="font-style: italic;">(Ký, họ tên)</p>
+                                            <p style="padding-top:90px">
+                                            </p>
+                                        </td>
+                                        <td style="text-align: center;" width="20%">
+                                            <p>
+                                                <strong>Thủ quỹ</strong>
+                                            </p>
+                                            <p style="font-style: italic;">(Ký, họ tên)</p>
+                                        </td>
+                                        <td style="text-align: center;" width="20%">
+                                            <p>
+                                                <strong>Người nhận tiền</strong>
+                                            </p>
+                                            <p style="font-style: italic;">(Ký, họ tên)</p>
+                                            <p style="padding-top:90px">
+                                            </p>
+                                        </td>
+                                        <td style="text-align: center;" width="20%">
+                                            <p>
+                                                <strong>Người lập phiếu</strong>
+                                            </p>
+                                            <p style="font-style: italic;">(Ký, họ tên)</p>
+                                            <p style="padding-top:90px">
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="clear:both;padding-top:20px"></div>
+                            <div style="margin-left: 5%;">
+                                <p>
+                                    Đã nhận đủ số tiền (viết bằng chữ):..............................................................................................................
+                                </p>
+                                <p>
+                                    .......................................................................................................................................................................
+                                </p>
+                                <br></br>
+                                + Tỷ giá ngoại tệ (vàng, bạc, đá quý): <span t-esc="o.get_rate()"/><span t-esc="o.currency_id.name" />/<span t-esc="o.currency_id.name" /><br/>
+                                + Số tiền quy đổi: <t t-esc="o.amount_total" t-esc-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                            </div>
+
+                        </div>
+
+                    </t>
+                </div>
+            </t>
+        </body>
+    </template>
+</odoo>

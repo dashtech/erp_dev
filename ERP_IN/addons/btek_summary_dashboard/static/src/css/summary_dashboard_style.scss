@@ -1,0 +1,463 @@
+main {
+    background-color: #e9ecf1;
+    color: #646e83;
+}
+
+.btek-area {
+    padding: 15px 0;
+    .white-box {
+        background-color: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        .text-box-title {
+            padding: 15px;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            line-height: 24px;
+            background-color: #f8fafc;
+            border-radius: 5px 5px 0px 0px;
+            -moz-border-radius: 5px 5px 0px 0px;
+            -webkit-border-radius: 5px 5px 0px 0px;
+            letter-spacing: 1px;
+            span {
+                float: right;
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
+                text-transform: none;
+                span {
+                    font-weight: normal;
+                    float: left;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #016823;
+                }
+                .form-group {
+                    margin-top: -5px;
+                }
+            }
+        }
+        .content-box {
+            padding: 15px;
+            .btek-maxhieght {
+                ul.list-left-right {
+                    li {
+                        > span {
+                            padding-right: 5px;
+                            .form-group {
+                                margin-top: -8px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            ul.list-left-right {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 0;
+                li {
+                    padding-bottom: 5px;
+                    > span {
+                        float: right;
+                    }
+                }
+                &.type {
+                    .form-group {
+                        .form-control {
+                            margin-top: -10px;
+                        }
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &.employee, &.inventory, &.num_invoice {
+                font-size: 15px;
+                padding: 20px!important;
+                text-transform: uppercase;
+                font-weight: 500;
+                text-align: center;
+                letter-spacing: 1px;
+                img {
+                    max-width: 80px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                }
+                span {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.choose-block {
+    input {
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        outline: none;
+        &:hover, &.selected_button {
+            background-color: #0099e5;
+            color: #fff;
+        }
+    }
+}
+
+button.car_in_week, 
+button.car_in_month, 
+button.car_in_quarter, 
+button.revenue_week, 
+button.revenue_month, 
+button.revenue_quarter, 
+button.revenue_year,
+button.cost_week,
+button.cost_month,
+button.cost_quarter,
+button.cost_year {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 14px;
+    border: 1px solid #e6eaf0;
+    border-radius: 4px;
+    outline:none;
+    padding: 4px 15px;
+    background-color: #fff;
+    &.selected_button {
+        background-color: #0099e5;
+        color: #fff;
+    }
+}
+
+.widget-today {
+    .content-box {
+        .current-car {
+            font-size: 80px;
+            text-align: center;
+            font-weight: bold;
+            color: #000;
+            span {
+                display: block;
+                font-size: 14px;
+                font-weight: normal;
+                color: #646e83
+            }
+        }
+        ul.list-left-right {
+            li {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 30px;
+                span {
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+                &.has_been_repair {
+                    color: #16c188;
+                    span {
+                        color: #646e83
+                    }
+                }
+                &.repairing {
+                    color: #ffb02e;
+                    span {
+                        color: #646e83
+                    }
+                }
+            }
+        }
+    }
+    .footer-box {
+        background-color: #16c188;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        border-radius: 0px 0px 5px 5px;
+        -moz-border-radius: 0px 0px 5px 5px;
+        -webkit-border-radius: 0px 0px 5px 5px;
+    }
+}
+
+#revenue-cost .white-box {
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    clear: both;
+    .text-box-title {
+        background: none;
+    }
+    .content-box {
+        padding-top: 0px;
+    }
+    .btek-maxhieght {
+        height: 184px;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+}
+
+.widget-client {
+    ul.list-left-right {
+        li {
+            border-bottom: 1px dashed #e6eaf0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .btek-maxhieght {
+        height: 262px;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        overflow: auto;
+        overflow-x:hidden; 
+    }
+}
+
+.hidden-panel {
+    display: none;
+}
+
+.nav-tab {
+    width: 100%;
+    float: left;
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    .nav-button-tab {
+        width: 50%;
+        float: left;
+        input {
+            width: 100%;
+            padding: 20px;
+            background-color: #f8fafc;
+            outline: none;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+            color: #646e83;
+            letter-spacing: 1px;
+            &.revenue {
+                border-radius: 5px 0px 0px 0px;
+                -moz-border-radius: 5px 0px 0px 0px;
+                -webkit-border-radius: 5px 0px 0px 0px;
+            }
+            &.cost {
+                border-radius: 0px 5px 0px 0px;
+                -moz-border-radius: 0px 5px 0px 0px;
+                -webkit-border-radius: 0px 5px 0px 0px;
+            }
+            &.selected_button {
+                background-color: #0099e5;
+                color: #fff;
+            }
+        }
+    }
+}
+
+#revenue_tab, #cost_tab {
+    .featured {
+        border: 1px solid #e6eaf0;
+        border-right: 0;
+        text-align: center;
+        &:first-child {
+            border-left: 0;
+        }
+        .text-box-title {
+            font-weight: normal;
+            span {
+                padding-top: 5px;
+                display: block;
+                float: none;
+            }
+        }
+    }
+    .content-box {
+        clear: both;
+    }
+    div#period_revenue_value, div#period_cost_value {
+        line-height: 34px;
+        display: initial;
+    }
+    ul.list-left-right {
+        &.total, &.total label {
+            font-weight: bold;
+        }
+        li {
+            border-bottom: 1px dashed #e6eaf0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    label {
+        max-width: 75%;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+}
+
+.customer-chart {
+    span.text-box-button {
+        margin-top: -5px;
+    }
+}
+
+#customer_pie_chart {
+    height: 262px;
+    .amcharts-chart-div > a {
+        display: none!important;
+    }
+}
+
+.item-circle {
+    text-align: center;
+    span {
+        width: 100px;
+        height: 100px;
+        line-height: 95px;
+        border-radius: 50%; /* the magic */
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        text-align: center;
+        color: black;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 auto 10px;
+        display: block;
+        border: 3px solid #cdcdcd;
+    }
+    &.car-in-gara span {
+        border-color: #566783;
+        color: #566783;
+    }
+    &.car-has-been-repair span {
+        border-color: #16c188;
+        color: #16c188;
+    }
+    &.car-repairing span {
+        border-color: #ffb02e;
+        color: #ffb02e;
+    }
+    &.car-waiting span {
+        border-color: #0099e5;
+        color: #0099e5;
+    }
+}
+
+.item-top-purchase {
+    border-bottom: 1px dashed #e6eaf0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1160px) {
+    #revenue-cost .white-box {
+        .btek-maxhieght {
+            height: 138px;
+        }
+    }
+    .widget-client {
+        .btek-maxhieght {
+            height: 212px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #revenue-cost .white-box {
+        .btek-maxhieght {
+            height: 238px;
+        }
+    }
+}
+
+@media screen and (min-width: 980px) {
+   
+}
+
+@media screen and (max-width: 979px) {
+}
+
+@media screen and (max-width: 799px) {
+    .btek-area #revenue_tab, .btek-area #cost_tab {
+        .text-box-title {
+            padding: 10px;
+        }
+        .featured .text-box-title {
+            padding: 10px 0;
+        }
+    }
+    .btek-area > .row {
+        & > div {
+            padding-top: 30px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+    #btek-money > .row, #btek-statistic > .row {
+        & > div {
+            padding-top: 0;
+        }
+    }
+    #revenue_tab .content-box .revenue-chart, #cost_tab .content-box .cost-chart {
+        padding-bottom: 30px;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #btek-today .row {
+        & > div {
+            &:nth-of-type(1n+3) {
+                padding-top: 30px;
+            }
+        }
+    }
+    #btek-money > .row, #btek-statistic > .row{
+        & > div {
+            padding-top: 30px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+    #revenue_tab .featured, #cost_tab .featured {
+        border: none;
+        border-bottom: 1px solid #e6eaf0;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    
+}
+
+@media screen and (max-width: 479px) {
+
+}
+
+
+@media screen and (max-width: 375px) {
+    .btek-area .white-box .text-box-title span.text-box-button {
+        float: left;
+        padding-top: 30px;
+    }
+    #revenue_tab label, #cost_tab label {
+        max-width: 70%;
+    }
+}
+

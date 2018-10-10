@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template id="website_sale.option_collapse_products_categories"
+			priority="1" name="Collapsible Category List" inherit_id="website_sale.products_categories"
+			active="True" customize_show="True">
+			<xpath expr="//div[@id='products_grid_before']/ul" position="replace">
+				<div id="categ_main">
+				<h3 class="widget-title accordion-header ">
+					<span>Categories</span>
+				</h3>
+				<div id="cssmenu">
+					<ul class="nav nav-pills nav-stacked has-sub  pill_menu"
+						id="o_shop_collapse_category">
+						<li t-att-class=" '' if category else 'active' ">
+							<a t-att-href="keep('/shop',category=0)">All Products</a>
+						</li>
+						<t t-foreach="categories" t-as="categ">
+							<li t-att-class="'active' if categ.id == int(category or 0) else ''">
+								<i t-if="categ.child_id"
+									t-attf-class="text-primary fa #{'fa-chevron-down' if categ.id in parent_category_ids else 'fa-chevron-right'}"
+									t-att-style="'position:absolute;right:32px;top:19px;'" />
+								<a t-att-href="keep('/shop/category/' + slug(categ), category=0)"
+									t-field="categ.name"></a>
+								<div class="r_menu">
+									<ul t-if="categ.child_id" class="nav nav-pills nav-stacked nav-hierarchy"
+										t-att-style="'display:block;' if categ.id in parent_category_ids else 'display:none;'">
+										<t t-foreach="categ.child_id" t-as="categ">
+											<t t-call="website_sale.option_collapse_categories_recursive" />
+										</t>
+									</ul>
+								</div>
+							</li>
+						</t>
+					</ul>
+				</div>
+				</div>
+			</xpath>
+		</template>
+
+
+		<template id="website_sale.option_collapse_categories_recursive"
+			name="Collapse Category Recursive">
+			<li t-att-class="'active' if categ.id == int(category or 0) else ''">
+				<a t-att-href="keep('/shop/category/' + slug(categ), category=0)"
+					t-field="categ.name"></a>
+				<ul t-if="categ.child_id" class="nav nav-pills nav-stacked nav-hierarchy"
+					t-att-style="'display:block;' if categ.id in parent_category_ids else 'display:none;'">
+					<t t-foreach="categ.child_id" t-as="categ">
+						<t t-call="website_sale.option_collapse_categories_recursive" />
+					</t>
+				</ul>
+			</li>
+		</template>
+
+
+		<template id="website_sale.products_categories" inherit_id="website_sale.products"
+			active="True" customize_show="True" name="Product Categories">
+			<xpath expr="//div[@id='products_grid_before']" position="inside">
+				<ul class="nav nav-pills nav-stacked mt16">
+					<li t-att-class=" '' if category else 'active' ">
+						<a t-att-href="keep('/shop',category=0)">All Products</a>
+					</li>
+					<t t-foreach="categories" t-as="c">
+						<t t-call="website_sale.categories_recursive" />
+					</t>
+				</ul>
+			</xpath>
+			<xpath expr="//div[@id='products_grid_before']" position="attributes">
+				<attribute name="class">col-md-3 col-sm-4 hidden-xs</attribute>
+			</xpath>
+			<xpath expr="//div[@id='products_grid']" position="attributes">
+				<attribute name="class">col-md-9 col-sm-8</attribute>
+			</xpath>
+		</template>
+
+
+		<!-- Attributes Filter -->
+	<!-- 	<template id="website_sale.products_attributes" inherit_id="website_sale.products"
+			priority="20" active="True" customize_show="True"
+			name="Product Attribute's Filters">
+			<xpath expr="//div[@id='products_grid_before']" position="inside">
+
+				<form class="js_attributes" method="get">
+					<input type="hidden" name="search" t-att-value="search" />
+					<div id="filter-nav">
+						<ul class="nav nav-pills nav-stacked  ">
+							<t t-foreach="attributes" t-as="a">
+								<t t-if="a.type != 'hidden'">
+									<li t-if="a.value_ids and len(a.value_ids) > 1">
+										<div id="filter-attribute">
+
+											<h4 id="heading" t-field="a.name" />
+
+											<t t-if="a.type == 'select'">
+												<select class="form-control" name="attrib">
+													<option value="" />
+													<t t-foreach="a.value_ids" t-as="v">
+														<option t-att-value="'%s-%s' % (a.id,v.id)" t-esc="v.name"
+															t-att-selected="'selected' if v.id in attrib_set else ''" />
+													</t>
+												</select>
+											</t>
+											<t t-if="a.type == 'radio'">
+												<ul class="nav nav-pills nav-stacked">
+													<t t-foreach="a.value_ids" t-as="v">
+														<li t-att-class="'active' if v.id in attrib_set else ''">
+															<label style="margin: 10px 5px;">
+																<input type="checkbox" name="attrib"
+																	t-att-value="'%s-%s' % (a.id,v.id)" t-att-checked="'checked' if v.id in attrib_set else ''" />
+																<span style="font-weight: normal" t-field="v.name" />
+															</label>
+														</li>
+													</t>
+												</ul>
+											</t>
+
+											<t t-if="a.type == 'color'">
+												<t t-foreach="a.value_ids" t-as="v">
+													<label t-attf-style="background-color:#{v.color or v.name}"
+														t-attf-class="css_attribute_color #{'active' if v.id in attrib_set else ''}">
+														<input type="checkbox" name="attrib" t-att-value="'%s-%s' % (a.id,v.id)"
+															t-att-checked="'checked' if v.id in attrib_set else ''"
+															t-att-title="v.name" />
+													</label>
+												</t>
+											</t>
+										</div>
+									</li>
+								</t>
+							</t>
+
+						</ul>
+					</div>
+				</form>
+
+			</xpath>
+			<xpath expr="//div[@id='products_grid_before']" position="attributes">
+				<attribute name="class">col-md-3 </attribute>
+			</xpath>
+			<xpath expr="//div[@id='products_grid']" position="attributes">
+				<attribute name="class">col-md-9</attribute>
+			</xpath>
+		</template> -->
+
+
+		
+		<template id="tag_new"
+			inherit_id="website_product_misc_options_73lines.website_product_tags">
+			<xpath expr="//div[@class='filter_title']" position="replace"> 
+                 <div id="filter-attribute">
+						<h4 id="heading">Tags</h4>
+				</div>
+            </xpath>
+		</template>
+
+		<template id="price_new"
+			inherit_id="website_product_misc_options_73lines.website_product_prices">
+			
+			
+			<xpath expr="//div[@class='filter_title']" position="replace"> 
+				 
+				<div id="filter-attribute">
+						<h4 id="heading">Price Filter</h4>
+				</div>
+			</xpath>
+		</template>
+        
+        <template id="brand_new"
+            inherit_id="website_product_misc_options_73lines.website_product_brands">
+            
+            
+            <xpath expr="//div[@class='filter_title']" position="replace"> 
+                 <div id="filter-attribute">
+						<h4 id="heading">Brands</h4>
+				</div>
+            </xpath>
+        </template>
+        
+         <template id="disable_search_box_products" inherit_id="website_sale.products">
+            <xpath expr="//t[@t-call='website_sale.search']" position="replace">
+            </xpath>
+            <!-- <xpath expr="//t[@t-call='website_sale.pricelist_list']" position="replace">
+            </xpath> -->
+        </template>
+</odoo>

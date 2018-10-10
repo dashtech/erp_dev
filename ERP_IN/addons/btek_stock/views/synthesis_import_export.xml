@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_synthesis_import_export_xlsx"
+        model="wizard.synthesis.import.export"
+        string="Wizard synthesis import export"
+        report_type="xlsx"
+        name="btek_stock.wizard.synthesis.import.export.xlsx"
+        file="btek_stock.wizard.synthesis.import.export.xlsx"
+        attachment_use="False"/>
+
+    <record id="wizard_synthesis_import_export_form" model="ir.ui.view">
+        <field name="name">wizard_synthesis_import_export_form</field>
+        <field name="model">wizard.synthesis.import.export</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    <group>
+                        <field name="location_ids"
+                               widget="many2many_tags"/>
+                        <field name="categ_ids"
+                               widget="many2many_tags"/>
+                        <field name="product_ids"
+                               domain="categ_ids and [('categ_id', 'in', categ_ids[0][2])] or []"
+                               widget="many2many_tags"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="view_report" type="object"
+                            string="View report"
+                            class="oe_highlight"/>
+                    <button name="export_report" type="object"
+                            string="Export report"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_synthesis_import_export"
+            model="ir.actions.act_window">
+        <field name="name">Synthesis import export</field>
+        <field name="res_model">wizard.synthesis.import.export</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_action_wizard_synthesis_import_export"
+              parent="stock.menu_warehouse_report"
+              action="action_wizard_synthesis_import_export"
+              sequence="220"/>
+
+    <record id="synthesis_import_export_tree" model="ir.ui.view">
+        <field name="name">synthesis_import_export_tree</field>
+        <field name="model">synthesis.import.export</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="name"/>
+
+                <field name="beginning_period_inventory"/>
+                <field name="beginning_period_value"/>
+                <field name="uom_id"/>
+                <field name="import_qty"/>
+                <field name="import_value"/>
+                <field name="export_qty"/>
+                <field name="export_value"/>
+                <field name="ending_period_inventory"/>
+                <field name="ending_period_value"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_synthesis_import_export"
+            model="ir.actions.act_window">
+        <field name="name">Synthesis import export</field>
+        <field name="res_model">synthesis.import.export</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="bave_store_main">
+        <link rel="stylesheet" href="/bave_store/static/src/css/style.css"/>
+        
+        <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+        <script src="/bave_store/static/src/js/shop.js"></script>
+
+        <title>Bave store</title>
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <iframe class="full-screen-preview__frame"
+                        t-att-src="'https://bavestore.asia/check-login/?login=' + login + and_char + 'url=' + url + and_char+ 'token=' + token"
+                        name="preview-frame" frameborder="0" noresize="noresize"
+                        data-view="fullScreenPreview"></iframe>
+            </div>
+        </t>
+    </template>
+</odoo>

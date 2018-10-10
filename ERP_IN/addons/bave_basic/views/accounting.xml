@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--Sale - menu-->
+    <record id="account.menu_account_customer" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.menu_product_template_action" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Customer invoice/ Customer refund-->
+    <record id="account_invoice_tree_view_basic" model="ir.ui.view">
+        <field name="name">account.invoice.tree.view.basic</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="car_repair_industry.custom_account_invoice_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='license_plate']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--payment-->
+    <record id="account_payment_tree_view_basic" model="ir.ui.view">
+        <field name="name">account.payment.tree.view.basic</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_method_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--Create new menu, move some menu from Adviser to the menu-->
+    <menuitem id="menu_finance_ledger" name="Ledger" parent="account.menu_finance" sequence="4"/>
+    <menuitem
+            action="account.action_move_journal_line"
+            id="account.menu_action_move_journal_line_form"
+            parent="menu_finance_ledger"
+            groups="account.group_account_user"
+            sequence="1"/>
+
+    <menuitem icon="STOCK_INDENT" action="account_parent.action_account_chart"
+            id="account_parent.menu_action_account_chart"
+            parent="menu_finance_ledger" sequence="20" groups="account_parent.group_coas_user" />
+
+    <menuitem id="btek_legal_financing.closing_entry_menu" parent="menu_finance_ledger"
+              action="btek_legal_financing.action_closing_entry_tree_view"
+              sequence="10"
+              groups="account.group_account_user,account.group_account_manager" />
+
+    <!--change group of menu "Adviser"-->
+    <record id="account.menu_finance_entries" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--change group of menu "Sonhatkichung"-->
+    <record id="btek_account.accounting_sonhatkychung" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--change group of menu "Taisan/CCDC"-->
+    <record id="btek_account.accounting_taisan" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--change group of menu import_master_data-->
+    <!--<record id="btek_account.import_master_data" model="ir.ui.menu">-->
+        <!--<field name="groups_id"-->
+               <!--eval="[(6, False, [ref('base.group_no_one')])]"/>-->
+    <!--</record>-->
+
+    <!--change group of menu Dashboard-->
+    <record id="account.menu_board_journal_1" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Menu Report-->
+    <record id="btek_account_asset_report.menu_btek_assets_report" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <menuitem
+        id="btek_report_stock.stock_inventory_nxt_menu"
+        sequence="3"
+        parent="account.menu_finance_reports"
+        action="btek_report_stock.inventory_s11_act"
+        />
+
+    <record id="btek_report_stock.baocaoketoananhtt" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.account_reports_management_menu" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="btek_financial_report.menu_financial_report" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.account_reports_business_intelligence_menu" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.menu_finance_legal_statement" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="btek_account_report.menu_report_revenue_action" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="btek_tax_report.menu_tax_inout_report_in" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="btek_tax_report.menu_tax_inout_report_out" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Menu Configuration-->
+    <menuitem action="account.action_account_form"
+              id="account.menu_action_account_form"
+              parent="account.menu_finance_configuration"
+              sequence="7"/>
+
+    <menuitem id="btek_legal_financing.closing_entry_config_menu"
+              parent="account.menu_finance_configuration"
+              action="btek_legal_financing.action_closing_entry_config_tree_view"
+              sequence="6" groups="account.group_account_user,account.group_account_manager" />
+
+    <record id="btek_account.menu_account_tax_group_action" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.menu_action_account_fiscal_position_form" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.account_management_menu" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.menu_config_multi_currency" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="account.menu_account_reports" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="payment.root_payment_menu" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Move some menu from /Configuration/Accounting to /Configuration -->
+    <!--and change group /Configuration/Accounting-->
+
+    <menuitem action="account.action_tax_form"
+              id="account.menu_action_tax_form"
+              parent="account.menu_finance_configuration"
+              sequence="1"/>
+
+    <menuitem action="account.action_account_type_form"
+              id="account_parent.menu_action_account_type_form"
+              parent="account.menu_finance_configuration"
+              sequence="2" groups="account_parent.group_coas_user"/>
+
+    <menuitem action="account.action_account_bank_journal_form"
+              id="account.menu_action_account_bank_journal_form"
+              parent="account.menu_finance_configuration"
+              sequence="3"
+              groups="account.group_account_manager"/>
+
+    <menuitem action="account.action_account_journal_form"
+              id="account.menu_action_account_journal_form"
+              parent="account.menu_finance_configuration"
+              sequence="4"
+              groups="account.group_account_manager"/>
+
+    <menuitem action="btek_account.account_invoice_number_act"
+              id="btek_account.account_invoice_number_menu"
+              parent="account.menu_finance_configuration"
+              sequence="5"/>
+
+    <record id="account.account_account_menu" model="ir.ui.menu">
+          <field name="groups_id"
+                 eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="btek_hr_working_day.BtekWeeklyTimesheet">
+        <div class="oe_timesheet_weekly">
+            <table class="table table-condensed table-responsive">
+                <tr>
+                    <th class="oe_timesheet_first_col" colspan="2"/>
+                    <t t-foreach="widget.dates" t-as="date">
+                        <th t-att-class="'oe_timesheet_weekly_date_head' + (moment().format('DD-MM-YYYY') === moment(date).format('DD-MM-YYYY') ? ' oe_timesheet_weekly_today' : '')">
+                            <t t-esc="moment(date).format('ddd')"/><br/>
+                            <t t-esc="moment(date).format('DD MMM')"/>
+                        </th>
+                    </t>
+                    <th class="oe_timesheet_weekly_date_head">Total</th>
+                    <th></th>
+                </tr>
+                <tr t-foreach="widget.employees" t-as="employee">
+                    <td class="oe_timesheet_weekly_account" colspan="2"><a href="javascript:void(0)" t-att-data-id="JSON.stringify(employee.employee)"><t t-esc="widget.employee_names[employee.employee]"/></a></td>
+                    <t t-set="day_count" t-value="0"/>
+                    <t t-foreach="employee.days" t-as="day">
+                        <td t-att-class="moment().format('DD-MM-YYYY') === moment(day.day).format('DD-MM-YYYY') ? 'oe_timesheet_weekly_today' : ''">
+                            <input t-if="!widget.get('effective_readonly')" class="oe_timesheet_weekly_input" t-att-data-employee="employee.employee"
+                                t-att-data-day-count="day_count" type="text"/>
+                            <span t-if="widget.get('effective_readonly')" t-att-data-employee="employee.employee"
+                                t-att-data-day-count="day_count" class="oe_timesheet_weekly_box"/>
+                            <t t-set="day_count" t-value="day_count + 1"/>
+                        </td>
+                    </t>
+                    <td t-att-data-employee-total="employee.employee" class="oe_timesheet_total"/>
+                    <td t-if="!widget.get('effective_readonly')" class='o_list_working_remove' t-att-data-employee="employee.employee">
+                    <!--<td class='o_list_record_delete_cus' t-att-data-employee="employee.employee">-->
+                        <span name="delete" class="fa fa-trash-o"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="o_add_timesheet_line">
+                        <div>
+                            <button t-if="!widget.get('effective_readonly')" class="btn btn-sm btn-primary oe_edit_only oe_timesheet_button_add">Add a Line</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div t-if="widget.employees.length == 0">
+                <div class="oe_view_nocontent oe_edit_only">
+                    <p class="oe_view_nocontent_create">Click to add employees or analytic accounts.</p>
+                    <p>You will be able to register your working days and activities.</p>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="BaveErrorPopup">
+        <div class="modal-dialog">
+            <div class="popup popup-error">
+                <p class="title"><t t-esc=" widget.popup.title || 'Error' " /></p>
+                <!--<p class="title">Validate Days Data</p>-->
+                <p class="body"><t t-esc=" widget.popup.body || '' "/></p>
+                <!--<p class="body">Days can not be greater 1 and less than 0</p>-->
+                <div class="footer">
+                    <div class="button cancel">
+                        Ok
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

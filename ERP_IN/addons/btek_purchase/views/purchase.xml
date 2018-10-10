@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_purchase_order_line_form_view" model="ir.ui.view">
+        <field name="name">import.purchase.order.line.form.view</field>
+        <field name="model">import.purchase.order.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible="1"/>
+                    <field name="order_id" invisible="1"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname"
+                           invisible="1"/>
+                    <field name="datas"
+                           filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_order_line" type="object"
+                            string="Import order line"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_purchase_order_line" model="ir.actions.act_window">
+        <field name="name">Import order line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.purchase.order.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="purchase_order_form_change" model="ir.ui.view">
+        <field name="name">purchase.order.line.form.view</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']" position="before">
+                <button name="open_wizard_import_order_line"
+                        type="object"
+                        string="Import product"
+                        class="oe_highlight"
+                        states="draft"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[1]/field[@name='order_line']/tree" position="attributes">
+                <attribute name="class">col_size</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='qty_received']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='qty_invoiced']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='taxes_id']" position="after">
+                <field name="price_tax"/>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field[@name='order_line']" position="attributes">
+                <attribute name="context">{'only_show_name': True}</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='product_id']" position="attributes">
+                <!--<attribute name="readonly">[('state', 'in', ('cancel',))]</attribute>-->
+                <attribute name="context">{'only_show_name': True}</attribute>
+            </xpath>
+            <xpath expr="//button[1]" position="replace">
+                <button name="bave_action_rfq_send" states="draft" string="Send RFQ by Email" type="object"
+                        context="{'send_rfq':True}" class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//button[2]" position="replace">
+                <button name="bave_action_rfq_send" states="sent" string="Re-Send RFQ by Email"
+                        type="object" context="{'send_rfq':True}"/>
+            </xpath>
+            <xpath expr="//button[8]" position="replace">
+                <button name="bave_action_rfq_send" states="purchase" string="Send PO by Email"
+                        type="object" context="{'send_rfq':False}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase_order_tree_inherit" model="ir.ui.view">
+        <field name="name">purchase_order_tree_inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_order']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="date_order"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_untaxed']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='origin']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="attributes">
+                <attribute name="invisible">context.get('show_purchase', False)</attribute>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="amount_total_in_word" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_filter_inherit" model="ir.ui.view">
+        <field name="name">view_purchase_order_filter_inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='create_uid']" position="after">
+                <field name="date_order"
+                       string="Date order greater than or equal to"
+                       filter_domain="[('date_order', '&gt;=', self)]"/>
+                <field name="date_order"
+                       string="Date order less than or equal to"
+                       filter_domain="[('date_order', '&lt;=', self)]"/>
+                <field name="date_planned"
+                       string="Date planned greater than or equal to"
+                       filter_domain="[('date_planned', '&gt;=', self)]"/>
+                <field name="date_planned"
+                       string="Date planned less than or equal to"
+                       filter_domain="[('date_planned', '&lt;=', self)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_search_inherit" model="ir.ui.view">
+        <field name="name">view.purchase.order.search.inherit</field>
+        <field name="model">purchase.report</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="date_order"
+                       string="Date order greater than or equal to"
+                       filter_domain="[('date_order', '&gt;=', self)]"/>
+                <field name="date_order"
+                       string="Date order less than or equal to"
+                       filter_domain="[('date_order', '&lt;=', self)]"/>
+            </xpath>
+            <xpath expr="//field[@name='date_approve']" position="after">
+                <field name="date_approve"
+                       string="Date approve greater than or equal to"
+                       filter_domain="[('date_approve', '&gt;=', self)]"/>
+                <field name="date_approve"
+                       string="Date approve less than or equal to"
+                       filter_domain="[('date_approve', '&lt;=', self)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="purchase.menu_procurement_partner_contact_form" model="ir.ui.menu">
+        <field name="parent" ref="purchase.menu_procurement_management"/>
+        <!--<field name="action" ref="product.product_template_action_product"/>-->
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--<record id="menu_product_normal_action_puchased" model="ir.ui.menu">-->
+        <!--&lt;!&ndash;<field name="parent" ref="account.menu_finance_payables"/>&ndash;&gt;-->
+        <!--<field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>-->
+    <!--</record>-->
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="customer_feedback_tree_view" model="ir.ui.view">
+        <field name="name">customer.feedback.tree</field>
+        <field name="model">customer.feedback</field>
+        <field name="arch" type="xml">
+            <tree string="Customer Feedback Management">
+                <field name="name"/>
+                <field name="member_id"/>
+                <field name="service_provider_id"/>
+                <field name="create_date"/>
+                <field name="detail"/>
+                <field name="ranking" widget="priority"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="customer_feedback_form_view" model="ir.ui.view">
+        <field name="name">customer.feedback.tree</field>
+        <field name="model">customer.feedback</field>
+        <field name="arch" type="xml">
+            <form string="Customer Feedback">
+                <sheet>
+                    <group>
+                        <field name="name" required="0"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="member_id"/>
+                            <field name="create_date"/>
+                        </group>
+                        <group>
+                            <field name="service_provider_id"/>
+                            <field name="ranking" widget="priority"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="detail"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="customer_feedback_search_view" model="ir.ui.view">
+        <field name="name">customer.feedback.search</field>
+        <field name="model">customer.feedback</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="member_id"/>
+                <field name="service_provider_id"/>
+                <group string="Group by">
+                    <filter name="member_filter" string="Member"
+                            context="{'group_by':'member_id'}"/>
+                    <filter name="service_provider_filter" string="Service provider"
+                            context="{'group_by':'service_provider_id'}"/>
+                    <filter name="create_date_filter" string="Create date"
+                            context="{'group_by':'create_date'}"/>
+                    <filter name="ranking_filter" string="Ranking"
+                            context="{'group_by':'ranking'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_customer_feedback" model="ir.actions.act_window">
+        <field name="name">Customer Feedback Management</field>
+        <field name="res_model">customer.feedback</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <menuitem id="menu_action_customer_feedback"
+              parent="root_menu_service_provider"
+              action="action_customer_feedback"
+              sequence="50"/>
+
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Category Banner Template -->
+    <template id="category_banner" inherit_id="website_sale.products"
+              name="Show Category Banner" active="False" customize_show="True">
+        <xpath expr="//div[@class='products_pager']" position="before">
+            <t t-if="category">
+                <aside class="mt16">
+                    <t t-if="category.cover_banner">
+                        <div t-field="category.cover_banner" t-options='{"widget": "image"}' class="catg-banner"/>
+                    </t>
+                    <h1 t-field="category.name" class="categ-title text-center"
+                        t-attf-style="background-color:#{category.categ_title_background}; color:#{category.categ_title_color};"/>
+                </aside>
+            </t>
+            <t t-if="not category">
+                <div class="container">
+                    <div class="mt16 ">
+                        <div class="oe_structure"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+    
+    <!-- Category Banner Template -->
+    <template id="category_icon_categories_recursive" inherit_id="website_sale.categories_recursive" name="show Category Icon">
+            <xpath expr="//a[@t-field='c.name']" position="before">
+            	<t t-if="c.categ_icon">
+            	<i t-att-class="c.categ_icon" id="categ_icon_recursive"/>
+            	</t>
+            </xpath>
+              
+	</template>
+	
+	<template id="category_icon__option_categories_recursive" inherit_id="website_sale.option_collapse_categories_recursive" name="Category Icon Collapse">
+            <xpath expr="//a[@t-field='categ.name']" position="before">
+            	<t t-if="categ.categ_icon">
+            		<i t-att-class="categ.categ_icon" id="categ_icon_collapse"/>
+            	</t>
+            </xpath>
+	</template>
+	
+</odoo>

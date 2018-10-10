@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem parent="account.menu_finance" id="accounting_sonhatkychung" sequence="4" name="Sổ nhật ký chung" groups="account.group_account_user"/>
+    <menuitem action="account.action_account_moves_all_a" id="account.menu_action_account_moves_all" parent="accounting_sonhatkychung"
+              sequence="1"/>
+
+    <menuitem
+            action="account.action_move_journal_line"
+            id="account.menu_action_move_journal_line_form"
+            parent="accounting_sonhatkychung"
+            groups="account.group_account_user"
+            sequence="2"/>
+
+    <menuitem
+            name="Analytic Entries"
+            parent="accounting_sonhatkychung"
+            action="analytic.account_analytic_line_action_entries"
+            id="account.menu_action_analytic_lines_tree"
+            sequence="35"
+            groups="analytic.group_analytic_accounting"/>
+
+    <menuitem action="account.action_account_form" id="account.menu_action_account_form" parent="accounting_sonhatkychung" sequence="20"/>
+
+
+    <!--TS-->
+    <menuitem parent="account.menu_finance" id="accounting_taisan" sequence="4" name="Tài sản/CCDC" groups="account.group_account_user"/>
+
+    <menuitem parent="accounting_taisan" id="account_asset.menu_action_account_asset_asset_form"
+              action="account_asset.action_account_asset_asset_form" sequence="1" groups="account.group_account_user"/>
+
+    <menuitem name="Generate Assets Entries" action="account_asset.action_asset_depreciation_confirmation_wizard"
+        id="account_asset.menu_asset_depreciation_confirmation_wizard"
+        parent="accounting_taisan" sequence="3" groups="account.group_account_user"/>
+
+    <menuitem parent="accounting_taisan" id="account_asset.menu_action_account_asset_asset_list_normal_purchase"
+              action="account_asset.action_account_asset_asset_list_normal_purchase" sequence="2"/>
+
+    <!--account tax group-->
+    <record id="account_tax_group_action" model="ir.actions.act_window">
+        <field name="name">Account tax group</field>
+        <field name="res_model">account.tax.group</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_account_tax_group_action"
+              action="account_tax_group_action"
+              sequence="0" groups="account.group_account_manager"
+              parent="account.account_account_menu"/>
+
+    <record id="account.menu_product_template_action" model="ir.ui.menu">
+        <field name="parent" ref="account.menu_finance_receivables"/>
+        <!--<field name="action" ref="product.product_template_action_product"/>-->
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="purchase.menu_product_normal_action_puchased" model="ir.ui.menu">
+        <field name="parent" ref="account.menu_finance_receivables"/>
+        <!--<field name="action" ref="product.product_template_action_product"/>-->
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+</odoo>

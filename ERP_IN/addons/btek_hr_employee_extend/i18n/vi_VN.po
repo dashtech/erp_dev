@@ -1,0 +1,390 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_hr_employee_extend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-10 03:00+0000\n"
+"PO-Revision-Date: 2018-09-10 03:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_addition_salary_non
+msgid "Addition Salary"
+msgstr "Phụ cấp"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_allow_timesheets
+msgid "Allow timesheets"
+msgstr "Cho phép chấm công"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_name
+msgid "Attachment Name"
+msgstr "Tên đính kèm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_local_url
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_website_url
+msgid "Attachment URL"
+msgstr "URL Đính kèm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_attachment_id
+msgid "Attachment id"
+msgstr "Attachment id"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Tài khoản ngân hàng"
+
+#. module: btek_hr_employee_extend
+#: model:ir.actions.act_window,name:btek_hr_employee_extend.hr_contract_config_action
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_insurance_salary_base
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_insurance_salary
+#: model:ir.ui.menu,name:btek_hr_employee_extend.hr_contract_config_menu
+msgid "Base Salary Insurance"
+msgstr "Mức lương tính bảo hiểm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_checksum
+msgid "Checksum/SHA1"
+msgstr "Checksum/SHA1"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_company_id
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_hr_employee_extend
+#: model:ir.ui.view,arch_db:btek_hr_employee_extend.hr_employee_form_extend
+msgid "Con"
+msgstr "Con"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_create_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_create_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_create_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_create_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_create_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_create_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_hr_employee_extend
+#: model:ir.ui.view,arch_db:btek_hr_employee_extend.related_person_form_view
+msgid "Các file đính kèm"
+msgstr "Các file đính kèm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_db_datas
+msgid "Database Data"
+msgstr "Database Data"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_id_date
+msgid "Date approve"
+msgstr "Ngày cấp"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_display_name
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_display_name
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_display_name
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_hr_contract
+msgid "Employee Contract"
+msgstr "Hợp đồng nhân viên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_employee_id
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_employee_id
+msgid "Employee id"
+msgstr "Nhân viên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_datas
+msgid "File Content"
+msgstr "Nội dung tập tin"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_datas_fname
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_file_size
+msgid "File Size"
+msgstr "Dung lượng file"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_note
+msgid "Ghi chú"
+msgstr "Ghi chú"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,help:btek_hr_employee_extend.field_btek_related_person_attachment_priority
+msgid "Gives the sequence order when displaying a list of tasks."
+msgstr "Chỉ ra thứ tự sắp xếp khi hiển thị danh sách nhiệm vụ."
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_date_begin
+msgid "Giảm trừ từ ngày"
+msgstr "Giảm trừ từ ngày"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_gender
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_gender
+msgid "Giới tính"
+msgstr "Giới tính"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_home_addr
+msgid "Home address"
+msgstr "Đia chỉ nhà"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_name
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_name
+msgid "Họ tên"
+msgstr "Họ tên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_id
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_id
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_id
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_index_content
+msgid "Indexed Content"
+msgstr "Indexed Content"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_public
+msgid "Is public document"
+msgstr "Là tài liệu công khai"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child___last_update
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person___last_update
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment___last_update
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_write_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_write_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_write_uid
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_write_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_write_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_write_date
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_id_location
+msgid "Location approve"
+msgstr "Nơi cấp"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_mimetype
+msgid "Mime Type"
+msgstr "Mime Type"
+
+#. module: btek_hr_employee_extend
+#: selection:btek.related.child,gender:0
+#: selection:btek.related.person,gender:0
+msgid "Nam"
+msgstr "Nam"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_contract_config_name
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_res_partner_bank_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_identity_date
+msgid "Ngày cấp"
+msgstr "Ngày cấp"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_child_birthday
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_birthday
+msgid "Ngày sinh"
+msgstr "Ngày sinh"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_related_person_ids
+#: model:ir.ui.view,arch_db:btek_hr_employee_extend.hr_employee_form_extend
+msgid "Người phụ thuộc"
+msgstr "Người phụ thuộc"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_identity_place
+msgid "Nơi cấp"
+msgstr "Nơi cấp"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_relation
+msgid "Quan hệ"
+msgstr "Quan hệ"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_related_child_ids
+msgid "Related child ids"
+msgstr "Related child ids"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_related_person_id
+msgid "Related person id"
+msgstr "Related person id"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_related_person_payslip
+msgid "Related person payslip"
+msgstr "Related person payslip"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_res_field
+msgid "Resource Field"
+msgstr "Resource Field"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_res_id
+msgid "Resource ID"
+msgstr "ID Tài nguyên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_res_model
+msgid "Resource Model"
+msgstr "Resource Model"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_res_name
+msgid "Resource Name"
+msgstr "Tên Tài nguyên"
+
+#. module: btek_hr_employee_extend
+#: model:ir.ui.view,arch_db:btek_hr_employee_extend.hr_contract_config_form
+msgid "Set base Insurance"
+msgstr "Đặt lại mức tính bảo hiểm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_store_fname
+msgid "Stored Filename"
+msgstr "Tên tệp tin được lưu trữ"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_x_identity_number
+msgid "Số CMND"
+msgstr "Số CMND"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_related_person
+msgid "Số người phụ thuộc"
+msgstr "Số người phụ thuộc"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_mobile
+msgid "Số điện thoại"
+msgstr "Số điện thoại"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,help:btek_hr_employee_extend.field_btek_related_person_attachment_res_model
+msgid "The database object this attachment will be attached to."
+msgstr "The database object this attachment will be attached to."
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,help:btek_hr_employee_extend.field_btek_related_person_attachment_res_id
+msgid "The record id this is attached to."
+msgstr "The record id this is attached to."
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_hr_employee_code_name
+msgid "Tên viết tắt"
+msgstr "Tên viết tắt"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,help:btek_hr_employee_extend.field_btek_related_person_attachment_type
+msgid "You can either upload a file from your computer or copy/paste an internet link to your file."
+msgstr "You can either upload a file from your computer or copy/paste an internet link to your file."
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_btek_related_child
+msgid "btek.related.child"
+msgstr "btek.related.child"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_btek_related_person
+msgid "btek.related.person"
+msgstr "btek.related.person"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_btek_related_person_attachment
+msgid "btek.related.person.attachment"
+msgstr "btek.related.person.attachment"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model.fields,field_description:btek_hr_employee_extend.field_btek_related_person_attachment
+msgid "các file đính kèm"
+msgstr "các file đính kèm"
+
+#. module: btek_hr_employee_extend
+#: model:ir.model,name:btek_hr_employee_extend.model_hr_contract_config
+msgid "hr.contract.config"
+msgstr "hr.contract.config"
+

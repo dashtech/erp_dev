@@ -1,0 +1,641 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Financial Statement Account Code -->
+        <record id="to_fs_account_code_111" model="to.financial.statement.account.code">
+            <field name="name">111</field>
+        </record>
+
+        <record id="to_fs_account_code_112" model="to.financial.statement.account.code">
+            <field name="name">112</field>
+        </record>
+
+        <record id="to_fs_account_code_113" model="to.financial.statement.account.code">
+            <field name="name">113</field>
+        </record>
+
+        <record id="to_fs_account_code_1211" model="to.financial.statement.account.code">
+            <field name="name">1211</field>
+        </record>
+
+        <record id="to_fs_account_code_1212" model="to.financial.statement.account.code">
+            <field name="name">1212</field>
+        </record>
+
+        <record id="to_fs_account_code_1218" model="to.financial.statement.account.code">
+            <field name="name">1218</field>
+        </record>
+
+        <record id="to_fs_account_code_1368" model="to.financial.statement.account.code">
+            <field name="name">1368</field>
+        </record>
+
+        <record id="to_fs_account_code_1361" model="to.financial.statement.account.code">
+            <field name="name">1361</field>
+        </record>
+
+        <record id="to_fs_account_code_1362" model="to.financial.statement.account.code">
+            <field name="name">1362</field>
+        </record>
+
+        <record id="to_fs_account_code_1363" model="to.financial.statement.account.code">
+            <field name="name">1363</field>
+        </record>
+
+        <record id="to_fs_account_code_337" model="to.financial.statement.account.code">
+            <field name="name">337</field>
+        </record>
+
+        <record id="to_fs_account_code_1385" model="to.financial.statement.account.code">
+            <field name="name">1385</field>
+        </record>
+
+        <record id="to_fs_account_code_1388" model="to.financial.statement.account.code">
+            <field name="name">1388</field>
+        </record>
+
+        <record id="to_fs_account_code_334" model="to.financial.statement.account.code">
+            <field name="name">334</field>
+        </record>
+
+        <record id="to_fs_account_code_3341" model="to.financial.statement.account.code">
+            <field name="name">3341</field>
+        </record>
+
+        <record id="to_fs_account_code_3342" model="to.financial.statement.account.code">
+            <field name="name">3342</field>
+        </record>
+
+        <record id="to_fs_account_code_338" model="to.financial.statement.account.code">
+            <field name="name">338</field>
+        </record>
+
+        <record id="to_fs_account_code_3382" model="to.financial.statement.account.code">
+            <field name="name">3382</field>
+        </record>
+
+        <record id="to_fs_account_code_3383" model="to.financial.statement.account.code">
+            <field name="name">3383</field>
+        </record>
+
+        <record id="to_fs_account_code_3384" model="to.financial.statement.account.code">
+            <field name="name">3384</field>
+        </record>
+
+        <record id="to_fs_account_code_3386" model="to.financial.statement.account.code">
+            <field name="name">3386</field>
+        </record>
+
+        <record id="to_fs_account_code_151" model="to.financial.statement.account.code">
+            <field name="name">151</field>
+        </record>
+
+        <record id="to_fs_account_code_152" model="to.financial.statement.account.code">
+            <field name="name">152</field>
+        </record>
+
+        <record id="to_fs_account_code_153" model="to.financial.statement.account.code">
+            <field name="name">153</field>
+        </record>
+
+        <record id="to_fs_account_code_154" model="to.financial.statement.account.code">
+            <field name="name">154</field>
+        </record>
+
+        <record id="to_fs_account_code_155" model="to.financial.statement.account.code">
+            <field name="name">155</field>
+        </record>
+
+        <record id="to_fs_account_code_156" model="to.financial.statement.account.code">
+            <field name="name">156</field>
+        </record>
+
+        <record id="to_fs_account_code_157" model="to.financial.statement.account.code">
+            <field name="name">157</field>
+        </record>
+
+        <record id="to_fs_account_code_158" model="to.financial.statement.account.code">
+            <field name="name">158</field>
+        </record>
+
+        <record id="to_fs_account_code_133" model="to.financial.statement.account.code">
+            <field name="name">133</field>
+        </record>
+
+        <record id="to_fs_account_code_333" model="to.financial.statement.account.code">
+            <field name="name">333</field>
+        </record>
+
+        <record id="to_fs_account_code_1381" model="to.financial.statement.account.code">
+            <field name="name">1381</field>
+        </record>
+
+        <record id="to_fs_account_code_141" model="to.financial.statement.account.code">
+            <field name="name">141</field>
+        </record>
+
+        <record id="to_fs_account_code_171" model="to.financial.statement.account.code">
+            <field name="name">171</field>
+        </record>
+
+        <record id="to_fs_account_code_211" model="to.financial.statement.account.code">
+            <field name="name">211</field>
+        </record>
+
+        <record id="to_fs_account_code_221" model="to.financial.statement.account.code">
+            <field name="name">221</field>
+        </record>
+
+        <record id="to_fs_account_code_2111" model="to.financial.statement.account.code">
+            <field name="name">2111</field>
+        </record>
+
+        <record id="to_fs_account_code_2112" model="to.financial.statement.account.code">
+            <field name="name">2112</field>
+        </record>
+
+        <record id="to_fs_account_code_2113" model="to.financial.statement.account.code">
+            <field name="name">2113</field>
+        </record>
+
+        <record id="to_fs_account_code_2141" model="to.financial.statement.account.code">
+            <field name="name">2141</field>
+        </record>
+
+        <record id="to_fs_account_code_212" model="to.financial.statement.account.code">
+            <field name="name">212</field>
+        </record>
+
+        <record id="to_fs_account_code_2142" model="to.financial.statement.account.code">
+            <field name="name">2142</field>
+        </record>
+
+        <record id="to_fs_account_code_213" model="to.financial.statement.account.code">
+            <field name="name">213</field>
+        </record>
+
+        <record id="to_fs_account_code_2143" model="to.financial.statement.account.code">
+            <field name="name">2143</field>
+        </record>
+
+        <record id="to_fs_account_code_241" model="to.financial.statement.account.code">
+            <field name="name">241</field>
+        </record>
+
+        <record id="to_fs_account_code_2411" model="to.financial.statement.account.code">
+            <field name="name">2411</field>
+        </record>
+
+        <record id="to_fs_account_code_2412" model="to.financial.statement.account.code">
+            <field name="name">2412</field>
+        </record>
+
+        <record id="to_fs_account_code_2413" model="to.financial.statement.account.code">
+            <field name="name">2413</field>
+        </record>
+
+        <record id="to_fs_account_code_217" model="to.financial.statement.account.code">
+            <field name="name">217</field>
+        </record>
+
+        <record id="to_fs_account_code_2147" model="to.financial.statement.account.code">
+            <field name="name">2147</field>
+        </record>
+
+        <record id="to_fs_account_code_222" model="to.financial.statement.account.code">
+            <field name="name">222</field>
+        </record>
+
+        <record id="to_fs_account_code_228" model="to.financial.statement.account.code">
+            <field name="name">228</field>
+        </record>
+
+        <record id="to_fs_account_code_229" model="to.financial.statement.account.code">
+            <field name="name">229</field>
+        </record>
+
+        <record id="to_fs_account_code_242" model="to.financial.statement.account.code">
+            <field name="name">242</field>
+        </record>
+
+        <record id="to_fs_account_code_243" model="to.financial.statement.account.code">
+            <field name="name">243</field>
+        </record>
+
+        <record id="to_fs_account_code_244" model="to.financial.statement.account.code">
+            <field name="name">244</field>
+        </record>
+
+        <record id="to_fs_account_code_3381" model="to.financial.statement.account.code">
+            <field name="name">3381</field>
+        </record>
+
+        <record id="to_fs_account_code_3385" model="to.financial.statement.account.code">
+            <field name="name">3385</field>
+        </record>
+
+        <record id="to_fs_account_code_335" model="to.financial.statement.account.code">
+            <field name="name">335</field>
+        </record>
+
+        <record id="to_fs_account_code_3361" model="to.financial.statement.account.code">
+            <field name="name">3361</field>
+        </record>
+
+        <record id="to_fs_account_code_3521" model="to.financial.statement.account.code">
+            <field name="name">3521</field>
+        </record>
+
+        <record id="to_fs_account_code_353" model="to.financial.statement.account.code">
+            <field name="name">353</field>
+        </record>
+
+        <record id="to_fs_account_code_3362" model="to.financial.statement.account.code">
+            <field name="name">3362</field>
+        </record>
+
+        <record id="to_fs_account_code_3363" model="to.financial.statement.account.code">
+            <field name="name">3363</field>
+        </record>
+
+        <record id="to_fs_account_code_3368" model="to.financial.statement.account.code">
+            <field name="name">3368</field>
+        </record>
+
+        <record id="to_fs_account_code_344" model="to.financial.statement.account.code">
+            <field name="name">344</field>
+        </record>
+
+        <record id="to_fs_account_code_341" model="to.financial.statement.account.code">
+            <field name="name">341</field>
+        </record>
+
+        <record id="to_fs_account_code_3411" model="to.financial.statement.account.code">
+            <field name="name">3411</field>
+        </record>
+
+        <record id="to_fs_account_code_3412" model="to.financial.statement.account.code">
+            <field name="name">3412</field>
+        </record>
+
+        <record id="to_fs_account_code_347" model="to.financial.statement.account.code">
+            <field name="name">347</field>
+        </record>
+
+        <record id="to_fs_account_code_3522" model="to.financial.statement.account.code">
+            <field name="name">3522</field>
+        </record>
+
+        <record id="to_fs_account_code_3523" model="to.financial.statement.account.code">
+            <field name="name">3523</field>
+        </record>
+
+        <record id="to_fs_account_code_3524" model="to.financial.statement.account.code">
+            <field name="name">3524</field>
+        </record>
+
+        <record id="to_fs_account_code_356" model="to.financial.statement.account.code">
+            <field name="name">356</field>
+        </record>
+
+        <record id="to_fs_account_code_4111" model="to.financial.statement.account.code">
+            <field name="name">4111</field>
+        </record>
+
+        <record id="to_fs_account_code_4112" model="to.financial.statement.account.code">
+            <field name="name">4112</field>
+        </record>
+
+        <record id="to_fs_account_code_4118" model="to.financial.statement.account.code">
+            <field name="name">4118</field>
+        </record>
+
+        <record id="to_fs_account_code_419" model="to.financial.statement.account.code">
+            <field name="name">419</field>
+        </record>
+
+        <record id="to_fs_account_code_412" model="to.financial.statement.account.code">
+            <field name="name">412</field>
+        </record>
+
+        <record id="to_fs_account_code_413" model="to.financial.statement.account.code">
+            <field name="name">413</field>
+        </record>
+
+        <record id="to_fs_account_code_414" model="to.financial.statement.account.code">
+            <field name="name">414</field>
+        </record>
+
+        <record id="to_fs_account_code_418" model="to.financial.statement.account.code">
+            <field name="name">418</field>
+        </record>
+
+        <record id="to_fs_account_code_421" model="to.financial.statement.account.code">
+            <field name="name">421</field>
+        </record>
+
+        <record id="to_fs_account_code_441" model="to.financial.statement.account.code">
+            <field name="name">441</field>
+        </record>
+
+        <record id="to_fs_account_code_417" model="to.financial.statement.account.code">
+            <field name="name">417</field>
+        </record>
+
+        <record id="to_fs_account_code_461" model="to.financial.statement.account.code">
+            <field name="name">461</field>
+        </record>
+
+        <record id="to_fs_account_code_161" model="to.financial.statement.account.code">
+            <field name="name">161</field>
+        </record>
+
+        <record id="to_fs_account_code_466" model="to.financial.statement.account.code">
+            <field name="name">466</field>
+        </record>
+
+        <record id="to_fs_account_code_511" model="to.financial.statement.account.code">
+            <field name="name">511</field>
+        </record>
+
+        <record id="to_fs_account_code_521" model="to.financial.statement.account.code">
+            <field name="name">521</field>
+        </record>
+
+        <record id="to_fs_account_code_3331" model="to.financial.statement.account.code">
+            <field name="name">3331</field>
+        </record>
+
+        <record id="to_fs_account_code_3332" model="to.financial.statement.account.code">
+            <field name="name">3332</field>
+        </record>
+
+        <record id="to_fs_account_code_3333" model="to.financial.statement.account.code">
+            <field name="name">3333</field>
+        </record>
+
+        <record id="to_fs_account_code_911" model="to.financial.statement.account.code">
+            <field name="name">911</field>
+        </record>
+
+        <record id="to_fs_account_code_632" model="to.financial.statement.account.code">
+            <field name="name">632</field>
+        </record>
+
+        <record id="to_fs_account_code_515" model="to.financial.statement.account.code">
+            <field name="name">515</field>
+        </record>
+
+        <record id="to_fs_account_code_635" model="to.financial.statement.account.code">
+            <field name="name">635</field>
+        </record>
+
+        <record id="to_fs_account_code_641" model="to.financial.statement.account.code">
+            <field name="name">641</field>
+        </record>
+
+        <record id="to_fs_account_code_642" model="to.financial.statement.account.code">
+            <field name="name">642</field>
+        </record>
+
+        <record id="to_fs_account_code_711" model="to.financial.statement.account.code">
+            <field name="name">711</field>
+        </record>
+
+        <record id="to_fs_account_code_811" model="to.financial.statement.account.code">
+            <field name="name">811</field>
+        </record>
+
+        <record id="to_fs_account_code_8211" model="to.financial.statement.account.code">
+            <field name="name">8211</field>
+        </record>
+
+        <record id="to_fs_account_code_8212" model="to.financial.statement.account.code">
+            <field name="name">8212</field>
+        </record>
+
+        <record id="to_fs_account_code_821" model="to.financial.statement.account.code">
+            <field name="name">821</field>
+        </record>
+
+        <record id="to_fs_account_code_131" model="to.financial.statement.account.code">
+            <field name="name">131</field>
+        </record>
+
+        <record id="to_fs_account_code_331" model="to.financial.statement.account.code">
+            <field name="name">331</field>
+        </record>
+
+        <record id="to_fs_account_code_3334" model="to.financial.statement.account.code">
+            <field name="name">3334</field>
+        </record>
+
+        <record id="to_fs_account_code_5111" model="to.financial.statement.account.code">
+            <field name="name">5111</field>
+        </record>
+
+        <record id="to_fs_account_code_5112" model="to.financial.statement.account.code">
+            <field name="name">5112</field>
+        </record>
+
+        <record id="to_fs_account_code_5113" model="to.financial.statement.account.code">
+            <field name="name">5113</field>
+        </record>
+
+        <record id="to_fs_account_code_3387" model="to.financial.statement.account.code">
+            <field name="name">3387</field>
+        </record>
+
+        <record id="to_fs_account_code_6278" model="to.financial.statement.account.code">
+            <field name="name">6278</field>
+        </record>
+
+        <record id="to_fs_account_code_3331" model="to.financial.statement.account.code">
+            <field name="name">3331</field>
+        </record>
+
+        <record id="to_fs_account_code_3335" model="to.financial.statement.account.code">
+            <field name="name">3335</field>
+        </record>
+
+        <record id="to_fs_account_code_3336" model="to.financial.statement.account.code">
+            <field name="name">3336</field>
+        </record>
+
+        <record id="to_fs_account_code_3337" model="to.financial.statement.account.code">
+            <field name="name">3337</field>
+        </record>
+
+        <record id="to_fs_account_code_3338" model="to.financial.statement.account.code">
+            <field name="name">3338</field>
+        </record>
+
+        <record id="to_fs_account_code_3339" model="to.financial.statement.account.code">
+            <field name="name">3339</field>
+        </record>
+
+        <record id="to_fs_account_code_352" model="to.financial.statement.account.code">
+            <field name="name">352</field>
+        </record>
+
+        <record id="to_fs_account_code_336" model="to.financial.statement.account.code">
+            <field name="name">336</field>
+        </record>
+
+        <record id="to_fs_account_code_411" model="to.financial.statement.account.code">
+            <field name="name">411</field>
+        </record>
+
+        <record id="to_fs_account_code_627" model="to.financial.statement.account.code">
+            <field name="name">627</field>
+        </record>
+
+        <record id="to_fs_account_code_138" model="to.financial.statement.account.code">
+            <field name="name">138</field>
+        </record>
+
+        <record id="to_fs_account_code_5118" model="to.financial.statement.account.code">
+            <field name="name">5118</field>
+        </record>
+
+        <record id="to_fs_account_code_5211" model="to.financial.statement.account.code">
+            <field name="name">5211</field>
+        </record>
+
+        <record id="to_fs_account_code_5212" model="to.financial.statement.account.code">
+            <field name="name">5212</field>
+        </record>
+
+        <record id="to_fs_account_code_5213" model="to.financial.statement.account.code">
+            <field name="name">5213</field>
+        </record>
+
+        <record id="to_fs_account_code_6421" model="to.financial.statement.account.code">
+            <field name="name">6421</field>
+        </record>
+
+        <record id="to_fs_account_code_6422" model="to.financial.statement.account.code">
+            <field name="name">6422</field>
+        </record>
+
+        <record id="to_fs_account_code_2291" model="to.financial.statement.account.code">
+            <field name="name">2291</field>
+        </record>
+
+        <record id="to_fs_account_code_1281" model="to.financial.statement.account.code">
+            <field name="name">1281</field>
+        </record>
+
+        <record id="to_fs_account_code_1282" model="to.financial.statement.account.code">
+            <field name="name">1282</field>
+        </record>
+
+        <record id="to_fs_account_code_1283" model="to.financial.statement.account.code">
+            <field name="name">1282</field>
+        </record>
+
+        <record id="to_fs_account_code_1288" model="to.financial.statement.account.code">
+            <field name="name">1288</field>
+        </record>
+
+        <record id="to_fs_account_code_2293" model="to.financial.statement.account.code">
+            <field name="name">2293</field>
+        </record>
+
+        <record id="to_fs_account_code_1531" model="to.financial.statement.account.code">
+            <field name="name">1531</field>
+        </record>
+
+        <record id="to_fs_account_code_1532" model="to.financial.statement.account.code">
+            <field name="name">1532</field>
+        </record>
+
+        <record id="to_fs_account_code_1533" model="to.financial.statement.account.code">
+            <field name="name">1533</field>
+        </record>
+
+        <record id="to_fs_account_code_1534" model="to.financial.statement.account.code">
+            <field name="name">1534</field>
+        </record>
+
+        <record id="to_fs_account_code_2294" model="to.financial.statement.account.code">
+            <field name="name">2294</field>
+        </record>
+
+        <record id="to_fs_account_code_2281" model="to.financial.statement.account.code">
+            <field name="name">2281</field>
+        </record>
+
+        <record id="to_fs_account_code_2292" model="to.financial.statement.account.code">
+            <field name="name">2292</field>
+        </record>
+
+        <record id="to_fs_account_code_34311" model="to.financial.statement.account.code">
+            <field name="name">34311</field>
+        </record>
+
+        <record id="to_fs_account_code_357" model="to.financial.statement.account.code">
+            <field name="name">357</field>
+        </record>
+
+        <record id="to_fs_account_code_3432" model="to.financial.statement.account.code">
+            <field name="name">3432</field>
+        </record>
+
+        <record id="to_fs_account_code_41112" model="to.financial.statement.account.code">
+            <field name="name">41112</field>
+        </record>
+
+        <record id="to_fs_account_code_41111" model="to.financial.statement.account.code">
+            <field name="name">41111</field>
+        </record>
+
+        <record id="to_fs_account_code_4113" model="to.financial.statement.account.code">
+            <field name="name">4113</field>
+        </record>
+
+        <record id="to_fs_account_code_4211" model="to.financial.statement.account.code">
+            <field name="name">4211</field>
+        </record>
+
+        <record id="to_fs_account_code_4212" model="to.financial.statement.account.code">
+            <field name="name">4212</field>
+        </record>
+
+        <record id="to_fs_account_code_121" model="to.financial.statement.account.code">
+            <field name="name">121</field>
+        </record>
+
+        <record id="to_fs_account_code_3388" model="to.financial.statement.account.code">
+            <field name="name">3388</field>
+        </record>
+
+        <record id="to_fs_account_code_128" model="to.financial.statement.account.code">
+            <field name="name">128</field>
+        </record>
+
+        <record id="to_fs_account_code_3431" model="to.financial.statement.account.code">
+            <field name="name">3431</field>
+        </record>
+
+        <record id="to_fs_account_code_2288" model="to.financial.statement.account.code">
+            <field name="name">2288</field>
+        </record>
+
+        <record id="to_fs_account_code_5117" model="to.financial.statement.account.code">
+            <field name="name">5117</field>
+        </record>
+
+        <record id="to_fs_account_code_341" model="to.financial.statement.account.code">
+            <field name="name">341</field>
+        </record>
+
+        <record id="to_fs_account_code_34312" model="to.financial.statement.account.code">
+            <field name="name">34312</field>
+        </record>
+
+        <record id="to_fs_account_code_34313" model="to.financial.statement.account.code">
+            <field name="name">34313</field>
+        </record>
+
+    </data>
+</odoo>

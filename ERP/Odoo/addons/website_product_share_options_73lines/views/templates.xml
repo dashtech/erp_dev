@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Enable Share Options in Product Page -->
+    <template id="product_share_button" inherit_id="website_sale.product"
+        name="Product Share Options" customize_show="True" active="False">
+        <xpath expr="//form[contains(@class, 'js_add_cart_variants')]" position="after">
+            <hr/>
+            <div class="oe_share s_share">
+                <h2>
+                    <a target="_Blank" class="oe_share_google share_buttons" data-toggle="tooltip" title="Google"
+                        href="https://plus.google.com/share?url={url}">
+                        <i class="fa fa-google-plus-square"></i>
+                    </a>
+                    <a target="_Blank" class="oe_share_facebook share_buttons" data-toggle="tooltip" title="Facebook"
+                        href="https://www.facebook.com/sharer/sharer.php?u={url}">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a target="_Blank" class="oe_share_twitter share_buttons" data-toggle="tooltip" title="Twitter"
+                        href="https://twitter.com/intent/tweet?text={title}&amp;url={url}">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="mailto:?body={url}&amp;subject={title}" class="oe_share_mail share_buttons"
+                       data-toggle="tooltip" title="Mail">
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </h2>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

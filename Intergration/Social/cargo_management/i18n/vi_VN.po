@@ -1,0 +1,955 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cargo_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-12 04:02+0000\n"
+"PO-Revision-Date: 2018-04-13 14:18+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_abount_me
+msgid "Abount me"
+msgstr "Về chúng tôi"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_active
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_active
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_active
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_active
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_active
+#: model:ir.model.fields,field_description:cargo_management.field_member_active
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_active
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_active
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_active
+#: model:ir.model.fields,field_description:cargo_management.field_services_active
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_address
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_agent_numeric
+msgid "Agent numeric"
+msgstr "Agent numeric"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_album
+#: model:ir.model.fields,field_description:cargo_management.field_images_album_id
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Album"
+msgstr "Album"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_album_ids
+msgid "Albums"
+msgstr "Albums"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_attachment_ids
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_avatar
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_avatar_medium
+#: model:ir.model.fields,field_description:cargo_management.field_member_avatar
+#: model:ir.model.fields,field_description:cargo_management.field_member_avatar_medium
+#: model:ir.model.fields,field_description:cargo_management.field_member_banner_medium
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_avatar
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_avatar_medium
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_avatar
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_avatar_medium
+#: model:ir.model.fields,field_description:cargo_management.field_services_avatar
+#: model:ir.model.fields,field_description:cargo_management.field_services_avatar_medium
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_avatar_small
+#: model:ir.model.fields,field_description:cargo_management.field_member_avatar_small
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_avatar_small
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_avatar_small
+#: model:ir.model.fields,field_description:cargo_management.field_services_avatar_small
+msgid "Avatar small"
+msgstr "Avatar small"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_banner
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_banner
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_banner
+msgid "Banner"
+msgstr "Banner"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_banner_medium
+msgid "Banner medium"
+msgstr "Banner medium"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_banner_small
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_banner_small
+msgid "Banner small"
+msgstr "Banner small"
+
+#. module: cargo_management
+#: model:ir.module.category,description:cargo_management.module_category_social
+msgid "Bave social."
+msgstr "Bave social."
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_cancel_datetime
+msgid "Cancel datetime"
+msgstr "Cancel datetime"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_car_color
+#: model:ir.model,name:cargo_management.model_car_color
+#: model:ir.ui.menu,name:cargo_management.menu_car_color
+msgid "Car Color"
+msgstr "Màu sắc"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_car_color_id
+msgid "Car color id"
+msgstr "Car color id"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_car_manufacturer
+#: model:ir.ui.menu,name:cargo_management.menu_car_manufacturer
+msgid "Car manufacturer"
+msgstr "Hãng"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_car_vehicle_model
+#: model:ir.ui.menu,name:cargo_management.menu_car_vehicle_model
+msgid "Car vehicle model"
+msgstr "Dòng xe"
+
+#. module: cargo_management
+#: selection:voucher,type:0
+msgid "Cash"
+msgstr "Cash"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_services_service_catalog_id
+msgid "Catalog"
+msgstr "Gói"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_closetime
+msgid "Closetime"
+msgstr "Closetime"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_car_vehicle_model_ids
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_car_color_ids
+msgid "Colors"
+msgstr "Màu sắc"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_commentcount
+msgid "Commentcount"
+msgstr "Commentcount"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_user_id
+msgid "Corresponding users"
+msgstr "Corresponding users"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_country_id
+msgid "Country id"
+msgstr "Country id"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_create_date
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_search_view
+msgid "Create date"
+msgstr "Ngày tạo"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_images_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_member_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_services_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_create_uid
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_images_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_member_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_services_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_create_date
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_member_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_customer_feedback
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_form_view
+msgid "Customer Feedback"
+msgstr "Phản hồi khách hàng"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_customer_feedback
+#: model:ir.ui.menu,name:cargo_management.menu_action_customer_feedback
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_tree_view
+msgid "Customer Feedback Management"
+msgstr "Quản lý phản hồi khách hàng"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_description
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_description
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_description
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_description
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_description
+#: model:ir.model.fields,field_description:cargo_management.field_images_description
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_description
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_description
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_description
+#: model:ir.model.fields,field_description:cargo_management.field_services_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_detail
+msgid "Detail"
+msgstr "Nội dung"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_device_id
+msgid "Device id"
+msgstr "Thiết bị"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_device_model
+msgid "Device model"
+msgstr "Dòng thiết bị"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_images_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_member_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_services_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_display_name
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_district_id
+msgid "District"
+msgstr "Quận/Huyện"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_done_datetime
+msgid "Done datetime"
+msgstr "thời gian hoàn thành"
+
+#. module: cargo_management
+#: selection:request.quotation,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_email
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_end_date
+msgid "End date"
+msgstr "Ngày hết hạn"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_first_name
+msgid "First name"
+msgstr "Tên "
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_free_service
+#: model:ir.model,name:cargo_management.model_free_service
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_free_service_ids
+#: model:ir.ui.menu,name:cargo_management.menu_action_free_service
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Free service"
+msgstr "Dịch vụ miễn phí"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_full_name
+msgid "Full name"
+msgstr "Tên đầy đủ"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_g_place_id
+msgid "G place id"
+msgstr "G place id"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_id
+msgid "Gara type"
+msgstr "Loại Gara"
+
+#. module: cargo_management
+#: model:res.groups,name:cargo_management.group_garage
+msgid "Garage"
+msgstr "Gara"
+
+#. module: cargo_management
+#: selection:voucher,type:0
+msgid "Gift"
+msgstr "Gift"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_search_view
+msgid "Group by"
+msgstr "Group by"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_high_school
+msgid "High school"
+msgstr "High school"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_home_url
+msgid "Home url"
+msgstr "Home url"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_hotline
+msgid "Hotline"
+msgstr "Hotline"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_id
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_id
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_id
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_id
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_id
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_id
+#: model:ir.model.fields,field_description:cargo_management.field_images_id
+#: model:ir.model.fields,field_description:cargo_management.field_member_id
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_id
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_id
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_id_1560
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_id
+#: model:ir.model.fields,field_description:cargo_management.field_services_id
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_id
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_id
+msgid "ID"
+msgstr "ID"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.album_form
+msgid "Image"
+msgstr "Image"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_images_image
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_image_ids
+#: model:ir.ui.view,arch_db:cargo_management.request_quotation_form
+msgid "Images"
+msgstr "Images"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_introduction
+msgid "Introduction"
+msgstr "Introduction"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_job_title
+msgid "Job title"
+msgstr "Job title"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_car_color___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_free_service___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_images___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_member___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_services___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle___last_update
+#: model:ir.model.fields,field_description:cargo_management.field_voucher___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_images_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_member_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_services_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_write_uid
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_images_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_member_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_services_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_write_date
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_last_name
+msgid "Last name"
+msgstr "Họ"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_latitude
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_latitude
+msgid "Latitude"
+msgstr "Latitude"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_like_count
+msgid "Like count"
+msgstr "Like count"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_likecount
+msgid "Likecount"
+msgstr "Likecount"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_logo
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_logo
+msgid "Logo"
+msgstr "Logo"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_logo_medium
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_logo_medium
+msgid "Logo medium"
+msgstr "Logo medium"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_logo_small
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_logo_small
+msgid "Logo small"
+msgstr "Logo small"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_longitude
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_longitude
+msgid "Longitude"
+msgstr "Longitude"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_manufacturer_id
+msgid "Manufacturer"
+msgstr "Manufacturer"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Manufacturers"
+msgstr "Manufacturers"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_member
+#: model:ir.model,name:cargo_management.model_member
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_member_id
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_member_id
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_member_ids
+#: model:ir.ui.menu,name:cargo_management.menu_action_member
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_search_view
+msgid "Member"
+msgstr "Thành viên"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.voucher_form
+msgid "Members"
+msgstr "Thành viên"
+
+#. module: cargo_management
+#: model:ir.ui.menu,name:cargo_management.root_menu_memeber
+msgid "Memeber"
+msgstr "Memeber"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_mobile_phone
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_mobile_phone
+msgid "Mobile phone"
+msgstr "Điện thoại"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_model_id
+msgid "Model"
+msgstr "Mô hình"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_model_ids
+msgid "Models"
+msgstr "Models"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_images
+msgid "Multi Images"
+msgstr "Multi Images"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_color_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_manufacturer_name
+#: model:ir.model.fields,field_description:cargo_management.field_car_vehicle_model_name
+#: model:ir.model.fields,field_description:cargo_management.field_free_service_name
+#: model:ir.model.fields,field_description:cargo_management.field_member_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_categ_name
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_name
+#: model:ir.model.fields,field_description:cargo_management.field_services_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_notify
+msgid "Notify"
+msgstr "Notify"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_notify_email
+msgid "Notify email"
+msgstr "Notify email"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_notify_mobile
+msgid "Notify mobile"
+msgstr "Notify mobile"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_notify_time
+msgid "Notify time"
+msgstr "Notify time"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_notify_type
+msgid "Notify type"
+msgstr "Notify type"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_opentime
+msgid "Opentime"
+msgstr "Opentime"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Other"
+msgstr "Other"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_parent_id
+msgid "Parent"
+msgstr "Dịch vụ cha"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_vehicle_id
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_plate
+msgid "Plate"
+msgstr "Biển số"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_plate_search
+msgid "Plate search"
+msgstr "Plate search"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_player_id
+msgid "Player id"
+msgstr "Player id"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_price
+#: model:ir.model.fields,field_description:cargo_management.field_services_price
+msgid "Price"
+msgstr "Giá"
+
+#. module: cargo_management
+#: selection:voucher,type:0
+msgid "Product"
+msgstr "Product"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_voucher
+#: model:ir.ui.menu,name:cargo_management.menu_action_voucher
+#: model:ir.ui.menu,name:cargo_management.root_menu_promotions
+msgid "Promotions"
+msgstr "Khuyến mại"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_provider_id
+msgid "Provider"
+msgstr "Provider"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_state_id
+msgid "Province"
+msgstr "Province"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_province_id
+msgid "Province id"
+msgstr "Province id"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_ranking
+#: model:ir.model.fields,field_description:cargo_management.field_member_ranking
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_ranking
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_search_view
+msgid "Ranking"
+msgstr "Xếp hạng"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_ratecount
+msgid "Ratecount"
+msgstr "Ratecount"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Replied"
+msgstr "Trả lời"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_replied_datetime
+msgid "Replied datetime"
+msgstr "Thời gian trả lời"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_replied_user_id
+msgid "Replied user"
+msgstr "Người trả lời"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_request
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_request_quotation
+#: model:ir.model,name:cargo_management.model_request_quotation
+#: model:ir.ui.menu,name:cargo_management.menu_action_request_quotation
+#: model:ir.ui.menu,name:cargo_management.root_menu_request_quotation
+msgid "Request quotation"
+msgstr "Yêu cầu báo giá"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_name
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_name
+msgid "STT"
+msgstr "STT"
+
+#. module: cargo_management
+#: code:addons/cargo_management/models/customer_feedback.py:22
+#: code:addons/cargo_management/models/promotions.py:35
+#: code:addons/cargo_management/models/quotation.py:40
+#: sql_constraint:customer.feedback:0 sql_constraint:request.quotation:0
+#: sql_constraint:voucher:0
+#, python-format
+msgid "STT must be unique!"
+msgstr "STT must be unique!"
+
+#. module: cargo_management
+#: model:ir.ui.menu,name:cargo_management.root_menu_service
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_customer_feedback_service_provider_id
+msgid "Service Provider"
+msgstr "Nhà cung cấp dịch vụ"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_service_catalog
+#: model:ir.model,name:cargo_management.model_service_catalog
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_service_catalog_ids
+#: model:ir.ui.menu,name:cargo_management.menu_action_service_catalog
+#: model:ir.ui.view,arch_db:cargo_management.service_provider_form
+msgid "Service catalog"
+msgstr "Service catalog"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_service_provider
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_service_provider_id
+#: model:ir.ui.menu,name:cargo_management.menu_service_provider
+#: model:ir.ui.menu,name:cargo_management.root_menu_service_provider
+#: model:ir.ui.view,arch_db:cargo_management.customer_feedback_search_view
+msgid "Service provider"
+msgstr "Nhà cung cấp dịch vụ"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_service_provider_categ
+#: model:ir.ui.menu,name:cargo_management.menu_service_provider_categ
+msgid "Service provider categ"
+msgstr "Nhóm nhà cung cấp dịch vụ"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_services
+#: model:ir.model,name:cargo_management.model_services
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_service_ids
+#: model:ir.model.fields,field_description:cargo_management.field_service_catalog_service_names
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_service_ids
+#: model:ir.ui.menu,name:cargo_management.menu_action_services
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: cargo_management
+#: model:ir.ui.view,arch_db:cargo_management.service_catalog_form
+msgid "Sevices"
+msgstr "Sevices"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_sharecount
+msgid "Sharecount"
+msgstr "Sharecount"
+
+#. module: cargo_management
+#: model:ir.module.category,name:cargo_management.module_category_social
+#: model:ir.ui.menu,name:cargo_management.root_menu_social
+msgid "Social"
+msgstr "Social"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_spo_id
+msgid "Spo id"
+msgstr "Spo id"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_stt
+msgid "Stt"
+msgstr "Stt"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_study_at
+msgid "Study at"
+msgstr "Study at"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_study_degree
+msgid "Study degree"
+msgstr "Study degree"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_title
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_title
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_type
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_voucher_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: cargo_management
+#: model:ir.actions.act_window,name:cargo_management.action_vehicle
+#: model:ir.model,name:cargo_management.model_vehicle
+#: model:ir.ui.menu,name:cargo_management.menu_action_vehicle
+msgid "Vehicle"
+msgstr "Xe"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_vehicle_number
+msgid "Vehicle number"
+msgstr "Số xe"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_request_quotation_vehicle_type
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_vehicle_type
+msgid "Vehicle type"
+msgstr "Loại xe"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_album_view_count
+msgid "View count"
+msgstr "View count"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_viewcount
+msgid "Viewcount"
+msgstr "Viewcount"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_vin_number
+msgid "Vin number"
+msgstr "Số VIN"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_ward_id
+msgid "Ward"
+msgstr "Phường/Xã"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_service_provider_website
+msgid "Website"
+msgstr "Trang web"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_member_work_for
+msgid "Work for"
+msgstr "Work for"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_vehicle_year
+msgid "Year"
+msgstr "Năm"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_car_manufacturer
+msgid "car.manufacturer"
+msgstr "car.manufacturer"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_car_vehicle_model
+msgid "car.vehicle.model"
+msgstr "car.vehicle.model"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_images
+msgid "images"
+msgstr "images"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_multi_images
+msgid "multi.images"
+msgstr "multi.images"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_service_provider
+msgid "service.provider"
+msgstr "service.provider"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_service_provider_categ
+msgid "service.provider.categ"
+msgstr "service.provider.categ"
+
+#. module: cargo_management
+#: model:ir.model.fields,field_description:cargo_management.field_images_title
+msgid "title"
+msgstr "title"
+
+#. module: cargo_management
+#: model:ir.model,name:cargo_management.model_voucher
+msgid "voucher"
+msgstr "voucher"

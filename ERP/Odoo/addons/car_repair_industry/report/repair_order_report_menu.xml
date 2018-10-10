@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report id="report_repair_order_menu"
+            string="Print Repair Order"
+            model="sale.order"
+            report_type="qweb-pdf"
+            file="car_repair_industry.report_repairorder"
+            name="car_repair_industry.report_repairorder"
+            menu="False"/>
+
+    <record id="report_repair_order_menu" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="car_repair_industry.fleet_repair_label_paperformat"/>
+    </record>
+
+    <!--<report id="report_accessories_menu"-->
+            <!--string="Lệnh phụ tùng"-->
+            <!--model="sale.order"-->
+            <!--report_type="qweb-pdf"-->
+            <!--file="car_repair_industry.report_accessories"-->
+            <!--name="car_repair_industry.report_accessories"/>-->
+
+    <record id="paperformat_euro_a4_btek" model="report.paperformat">
+        <field name="name">European A4 Btek</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">15</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">35</field>
+        <field name="dpi">120</field>
+    </record>
+
+    <!--<record id="report_accessories_menu" model="ir.actions.report.xml">-->
+        <!--<field name="paperformat_id" ref="car_repair_industry.paperformat_euro_a4_btek"/>-->
+    <!--</record>-->
+</odoo>

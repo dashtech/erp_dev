@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_partner_custom" model="ir.ui.view">
+        <field name="name">res_partner_custom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="car_repair_industry.car_res_partner_form_view"/>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="attributes">
+                <attribute name="required">0</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

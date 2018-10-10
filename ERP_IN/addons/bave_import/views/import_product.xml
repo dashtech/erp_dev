@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_product_template_form_view" model="ir.ui.view">
+        <field name="name">import.product.template.form.view</field>
+        <field name="model">import.product.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible ="1" attrs="{'value':'product category'}"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname" invisible="1"/>
+                    <field name="datas" filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_product_template" type="object"
+                            string="Import product template"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_product_template" model="ir.actions.act_window">
+        <field name="name">Import product template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.product.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_import.import_product_template_form_view'}</field>
+    </record>
+
+    <!--<menuitem id="import_product_template_menu"-->
+              <!--name="Import Product Template"-->
+              <!--action="action_import_product_template"-->
+              <!--parent="bave_import_menu_root" sequence="10"/>-->
+</odoo>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Sale Off Timer Block" id="snippet_sale_off">
+			<section>
+				<div id="myCarousel1460828202525" class="carousel slide s_homestore1 oe_custom_bg"
+					data-interval="10000" style="height: 450px;">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel1460828202525" data-slide-to="0" />
+						<li data-target="#myCarousel1460828202525" data-slide-to="1"
+							class="active" />
+
+					</ol>
+					<div class="carousel-inner">
+						<div class="item oe_img_bg oe_custom_bg"
+							style="background-image: url('/theme_homestore/static/src/image/timerbg2.jpg');background-position: top center;background-size: cover;">
+							<div class="container">
+								<div class="row content text-center">
+									<div class="custom-content text-center">
+										<h3 class="discount-title">
+											<a href="#" title="">
+
+												Dairy Products sale 30% off</a>
+										</h3>
+
+										<div class="discount-description">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed
+											do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+											Ut enim ad minim veniam, quis
+											<br />
+											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.
+										</div>
+
+									</div>
+									<div id="clockdiv1">
+										<div>
+											<div>
+												<span class="days"></span>
+												<div class="smalltext">Days</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="hours"></span>
+												<div class="smalltext">Hours</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="minutes"></span>
+												<div class="smalltext">Minutes</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="seconds"></span>
+												<div class="smalltext">Seconds</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="action-custom">
+										<a href="#" title="Shop Now">Shop Now</a>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item oe_img_bg oe_custom_bg active"
+							style="background-image: url('/theme_homestore/static/src/image/timerbg1.jpg');background-position: top center;background-size: cover;">
+							<div class="container">
+								<div class="row content text-center">
+									<div class="custom-content text-center">
+										<h3 class="discount-title">
+											<a href="#" title="">
+												Fresh Fruits and Vegetables sale 20% off									</a>
+										</h3>
+
+										<div class="discount-description">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+											sed
+											do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+											Ut enim ad minim veniam, quis
+											<br />
+											nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.
+										</div>
+
+									</div>
+									<div id="clockdiv">
+										<div class="">
+											<div>
+												<span class="days"></span>
+												<div class="smalltext">Days</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="hours"></span>
+												<div class="smalltext">Hours</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="minutes"></span>
+												<div class="smalltext">Minutes</div>
+											</div>
+										</div>
+										<div>
+											<div>
+												<span class="seconds"></span>
+												<div class="smalltext">Seconds</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="action-custom">
+										<a href="#" title="Shop Now">Shop Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+</odoo>

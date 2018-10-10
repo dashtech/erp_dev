@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="root_config" name="Configuration"
+              sequence="1000"/>
+
+    <menuitem id="menu_action_country"
+              parent="root_config"
+              action="base.action_country"
+              sequence="10"/>
+
+    <menuitem id="menu_action_country_state"
+              parent="root_config"
+              action="base.action_country_state"
+              sequence="20"/>
+
+    <!--<record id="view_country_group_form_inherit" model="ir.ui.view">-->
+        <!--<field name="name">res.country.group.form</field>-->
+        <!--<field name="model">res.country.group</field>-->
+        <!--<field name="inherit_id" ref="base.view_country_group_form"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<xpath expr="//label[@for='name']" position="attributes">-->
+                <!--<attribute name="string">Group name form</attribute>-->
+            <!--</xpath>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <!--<record id="action_country_group" model="ir.actions.act_window">-->
+        <!--<field name="name">Country Group</field>-->
+        <!--<field name="type">ir.actions.act_window</field>-->
+        <!--<field name="res_model">res.country.group</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="help">Display and manage the list of all countries group.-->
+            <!--You can create or delete country group to make sure the ones you-->
+            <!--are working on will be maintained.-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_country_group"-->
+              <!--id="menu_country_group" name="Country Group"-->
+              <!--parent="menu_localisation" sequence="3" groups="base.group_no_one"/>-->
+
+    <record id="view_country_form_inherit" model="ir.ui.view">
+        <field name="name">res.country.form</field>
+        <field name="model">res.country</field>
+        <field name="inherit_id" ref="base.view_country_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='address_format']" position="attributes">
+                <attribute name="string">address_format_btek</attribute>
+            </xpath>
+            <xpath expr="//field[@name='phone_code']" position="attributes">
+                <attribute name="string">phone_code_btek</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="res_country_district_form_view" model="ir.ui.view">
+        <field name="name">res.country.district.form</field>
+        <field name="model">res.country.district</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="country_id"/>
+                            <field name="state_id"
+                                   domain="[('country_id','=',country_id)]"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_country_district_tree_view" model="ir.ui.view">
+        <field name="name">res.country.district.tree</field>
+        <field name="model">res.country.district</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_country_district_search_view" model="ir.ui.view">
+        <field name="name">res.country.district.search</field>
+        <field name="model">res.country.district</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <group>
+                    <filter name="active" domain="[('active','=', True)]"
+                            string="Active"/>
+                    <filter name="inactive" domain="[('active','=', False)]"
+                            string="Inactive"/>
+                </group>
+                <group string="Group by">
+                    <filter name="country_filter" string="Country"
+                            context="{'group_by':'country_id'}"/>
+                    <filter name="state_filter" string="State"
+                            context="{'group_by':'state_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_res_country_district" model="ir.actions.act_window">
+        <field name="name">District</field>
+        <field name="res_model">res.country.district</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|', ('active','=', True), ('active','=',
+            False)]
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a district
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="action_res_country_district"
+              id="menu_res_country_district"
+              parent="root_config"
+              sequence="30"/>
+
+    <record id="res_country_ward_form_view" model="ir.ui.view">
+        <field name="name">res.country.ward.form</field>
+        <field name="model">res.country.ward</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="country_id"/>
+                            <field name="state_id"
+                                   domain="[('country_id','=',country_id)]"/>
+                            <field name="district_id"
+                                   domain="[('state_id','=',state_id)]"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_country_ward_tree_view" model="ir.ui.view">
+        <field name="name">res.country.ward.tree</field>
+        <field name="model">res.country.ward</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <field name="district_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_country_ward_search_view" model="ir.ui.view">
+        <field name="name">res.country.ward.search</field>
+        <field name="model">res.country.ward</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <field name="state_id"/>
+                <field name="district_id"/>
+                <group>
+                    <filter name="active" domain="[('active','=', True)]"
+                            string="Active"/>
+                    <filter name="inactive" domain="[('active','=', False)]"
+                            string="Inactive"/>
+                </group>
+                <group string="Group by">
+                    <filter name="country_filter" string="Country"
+                            context="{'group_by':'country_id'}"/>
+                    <filter name="state_filter" string="State"
+                            context="{'group_by':'state_id'}"/>
+                    <filter name="district_filter" string="District"
+                            context="{'group_by':'district_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_res_country_ward" model="ir.actions.act_window">
+        <field name="name">Ward</field>
+        <field name="res_model">res.country.ward</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|', ('active','=', True), ('active','=',
+            False)]
+        </field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a ward
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="action_res_country_ward"
+              id="menu_res_country_ward"
+              parent="root_config"
+              sequence="40"/>
+
+    <record id="res_country_state_search_view" model="ir.ui.view">
+        <field name="name">res.country.state.search</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="country_id"/>
+                <group string="Group by">
+                    <filter name="country_filter" string="Country"
+                            context="{'group_by':'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

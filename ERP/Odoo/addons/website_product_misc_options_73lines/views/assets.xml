@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <!-- CSS, LESS & JS Assets -->
+    <template id="assets_frontend_js" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript"
+                    src="/website_product_misc_options_73lines/static/src/js/ion.rangeSlider.js"></script>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_73lines/static/src/js/products_view_limit.js"></script>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_73lines/static/src/js/products_view_switcher.js"></script>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_73lines/static/src/js/products_price_filter.js"></script>
+            <script type="text/javascript"
+                    src="/website_product_misc_options_73lines/static/src/js/products_tag_filter.js"></script>
+            <link type="text/css" rel="stylesheet"
+                  href="/website_product_misc_options_73lines/static/src/less-css/ion.rangeSlider.css"/>
+            <link type="text/css" rel="stylesheet"
+                  href="/website_product_misc_options_73lines/static/src/less-css/ion.rangeSlider.skinNice.css"/>
+            <link type="text/less" rel="stylesheet"
+                  href="/website_product_misc_options_73lines/static/src/less-css/products_view_switcher.less"/>
+            <link type="text/less" rel="stylesheet"
+                  href="/website_product_misc_options_73lines/static/src/less-css/products_view_limit.less"/>
+        </xpath>
+    </template>
+</odoo>

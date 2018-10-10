@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_payment_search_inherit" model="ir.ui.view">
+        <field name="name">view.account.payment.search.inherit</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='journal_id']" position="after">
+                <field name="payment_date"
+                       string="Payment date greater than or equal to"
+                       filter_domain="[('payment_date', '&gt;=', self)]"/>
+                <field name="payment_date"
+                       string="Payment date date less than or equal to"
+                       filter_domain="[('payment_date', '&lt;=', self)]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">view.account.payment.tree.inherit</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+               <button name="%(btek_account_payment.account_payment_btek)d" string="Print" type="action" class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,1717 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_marketing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180918\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-06 02:25+0000\n"
+"PO-Revision-Date: 2018-10-06 02:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+msgid "% <br/>\n"
+"                        <strong>Invalid</strong>"
+msgstr "% <br/>\n"
+"                        <strong>Không hợp lệ</strong>"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+msgid "%<br/>\n"
+"                        <strong>Fail</strong>"
+msgstr "%<br/>\n"
+"                        <strong>Lỗi</strong>"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+msgid "<strong>Success</strong>"
+msgstr "<strong>Thành công</strong>"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,accent_vietnamese:0
+#: selection:btek.multi.message,accent_vietnamese:0
+msgid "Accent"
+msgstr "Có dấu"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_accent_vietnamese
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_accent_vietnamese
+msgid "Accent vietnamese"
+msgstr "Accent vietnamese"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Action to Trigger"
+msgstr "Action to Trigger"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_active
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_active
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_active
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_active
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_active
+#: model:ir.ui.view,arch_db:btek_marketing.btek_function_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_function_tree_view
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_api_key
+msgid "Api key"
+msgstr "Mã Api"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_args
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_args
+msgid "Arguments"
+msgstr "Đối số"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_args
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_args
+msgid "Arguments to be passed to the method, e.g. (uid,)."
+msgstr "Arguments to be passed to the method, e.g. (uid,)."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Attach a file"
+msgstr "Đính kèm một tập tin"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_attachment_ids
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Auto Mail"
+msgstr "Auto Mail"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Auto Run Infnormation"
+msgstr "Cấu hình chạy  tự động"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_auto_condition
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_condition_form
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_condition_tree
+msgid "Auto Send Condition"
+msgstr "Điều kiện gửi tự động"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_ir_cron_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_ir_cron_id
+msgid "Automatically created field to link to parent ir.cron"
+msgstr "Automatically created field to link to parent ir.cron"
+
+#. module: btek_marketing
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_auto_send_email
+msgid "Automation Email"
+msgstr "Gửi Email tự động"
+
+#. module: btek_marketing
+#: model:ir.ui.menu,name:btek_marketing.menu_btek_auto_marketing
+msgid "Automation Marketing"
+msgstr "Marketing  tự động"
+
+#. module: btek_marketing
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_auto_send
+msgid "Automation Message"
+msgstr "Gửi tin nhắn tự động"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_birth_day
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_birth_day
+msgid "Birth day"
+msgstr "Ngày sinh"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,name:0
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_body_html
+msgid "Body"
+msgstr "Thân"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_name
+msgid "Brand Name"
+msgstr "Thương hiệu"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_brand_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_brand_name
+msgid "Brand name"
+msgstr "Thương hiệu"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Brandname Customer Care"
+msgstr "Thương hiệu Chăm sóc khách hàng"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Brandname dvertisement"
+msgstr "Thương hiệu quảng cáo"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_auto_send
+msgid "Btek Auto Send"
+msgstr "Btek Auto Send"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_auto_send_mail
+msgid "Btek Auto Send Mail"
+msgstr "Btek Auto Send Mail"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_auto_send_log
+msgid "Btek Auto Send Messages Log"
+msgstr "Log gửi tin nhắn tự động"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_auto_send_log_detail
+msgid "Btek Auto Send Messages Log Detail"
+msgstr "Chi tiết Log "
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_auto_send_email
+msgid "Btek Auto send Email"
+msgstr "Gửi email tự động"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_auto_send
+msgid "Btek Auto send Message"
+msgstr "Gửi tin nhắn tự động"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_career
+#: model:ir.ui.menu,name:btek_marketing.action_menu_action_btek_career
+msgid "Btek Career"
+msgstr "Nghề nghiệp"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_function
+#: model:ir.model,name:btek_marketing.model_btek_function
+#: model:ir.ui.menu,name:btek_marketing.action_menu_action_btek_function
+msgid "Btek Function"
+msgstr "Vị trí công tác"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_multi_message
+msgid "Btek Multi Message"
+msgstr "Btek Multi Message"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_sms_config
+#: model:ir.model,name:btek_marketing.model_btek_sms_config
+msgid "Btek SMS Config"
+msgstr "Cấu hình SMS"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_sms_log
+msgid "Btek SMS log"
+msgstr "Nhật ký SMS"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_zalo_config
+#: model:ir.model,name:btek_marketing.model_btek_zalo_config
+msgid "Btek Zalo Config"
+msgstr "Cấu hình Zalo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_btek_auto_condition_ids
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_btek_auto_condition_ids
+msgid "Btek auto condition ids"
+msgstr "Btek auto condition ids"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_btek_auto_send_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_btek_auto_send_id
+msgid "Btek auto send id"
+msgstr "Btek auto send id"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_btek_auto_send_log_detail_ids
+msgid "Btek auto send log detail ids"
+msgstr "Btek auto send log detail ids"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_btek_auto_send_log_id
+msgid "Btek auto send log id"
+msgstr "Btek auto send log id"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_btek_auto_send_log_ids
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_btek_auto_send_log_ids
+msgid "Btek auto send log ids"
+msgstr "Btek auto send log ids"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_btek_auto_send_mail_id
+msgid "Btek auto send mail id"
+msgstr "Btek auto send mail id"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_btek_multi_message_id
+msgid "Btek multi message id"
+msgstr "Btek multi message id"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_campaign_id
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_channel
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_channel
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_channel
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_res_partner_form
+msgid "Channel"
+msgstr "Kênh"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,help:btek_marketing.action_create_multi_message_from_campaign
+#: model:ir.actions.act_window,help:btek_marketing.action_view_multi_sms_from_campaign
+#: model:ir.actions.act_window,help:btek_marketing.action_view_multi_zalo_from_campaign
+msgid "Click here to create a new message."
+msgstr "Nhấn vào để tạo tin nhắn mới."
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,help:btek_marketing.action_btek_multi_message
+msgid "Click here to create a new multi message."
+msgstr "Nhấn vào để tạo tin nhắn mới."
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_code
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_multi_message.py:278
+#, python-format
+msgid "CodeResult"
+msgstr "Mã kết quả"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_color
+msgid "Color Index"
+msgstr "Mã màu"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_career
+msgid "Company/Career/Service"
+msgstr "Công ty/Nghề nghiệp/Dịch vụ"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_operator
+msgid "Compare"
+msgstr "So sánh"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Condition extend"
+msgstr "Điều kiện mở rộng"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_kanban_view
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_contact_list_ids
+msgid "Contact Lists"
+msgstr "Danh sách liên hệ"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Contact Send"
+msgstr "Gửi liên hệ"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Contact Sent"
+msgstr "Số người nhận"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,name:0
+msgid "Create day"
+msgstr "Ngày tạo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_create_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_create_date
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_create_date
+msgid "Creation Date"
+msgstr "Ngày tạo"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Current day"
+msgstr "Hôm nay"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Current month"
+msgstr "Tháng hiện tại"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Current month and day"
+msgstr "Ngày/Tháng hiện tại"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Current year"
+msgstr "Năm hiện tại"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_auto_send.py:43
+#: code:addons/btek_marketing/models/btek_auto_send_mail.py:17
+#: code:addons/btek_marketing/models/btek_multi_message.py:44
+#, python-format
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: btek_marketing
+#: selection:btek.multi.message,message_model:0
+msgid "Danh sách gửi"
+msgstr "Danh sách gửi"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,name:0
+msgid "Date insurance"
+msgstr "Ngày hết hạn bảo hiểm"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_create_day
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_create_day
+msgid "Day Sent"
+msgstr "Ngày gửi"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Days after"
+msgstr "Ngày sắp tới"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,option_date_define:0
+msgid "Days before"
+msgstr "Ngày trước đây"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_kanban_view
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_kanban_view
+msgid "Delivered"
+msgstr "Đã giao tận nơi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_description
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_log_form_view
+msgid "Detail"
+msgstr "Detail"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_display_name
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_define_domain
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_domain
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_define_domain
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_domain
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message_domain
+msgid "Domain"
+msgstr "Miền"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Domain define"
+msgstr "Domain define"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_auto_domain
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_auto_domain
+msgid "Domain total"
+msgstr "Domain total"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,state:0
+#: selection:btek.auto.send.mail,state:0
+#: selection:btek.multi.message,state:0
+msgid "Draft"
+msgstr "Bản thảo"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Duplicate"
+msgstr "Sao chép"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "Equal"
+msgstr "Bằng"
+
+#. module: btek_marketing
+#: selection:btek.multi.message,state:0
+msgid "Error"
+msgstr "Lỗi"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Error Log"
+msgstr "Thông báo lỗi"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.export_customer_supplier_form
+msgid "Export"
+msgstr "Xuất Excel"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.export_customer_supplier
+msgid "Export Customer/Supplier"
+msgstr "Xuất ra Khách hàng/Nhà cung cấp"
+
+#. module: btek_marketing
+#: model:ir.actions.report.xml,name:btek_marketing.excel_xlsx
+msgid "Export_excel"
+msgstr "Export_excel"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,channel:0
+#: selection:btek.message.template,channel:0
+#: selection:btek.multi.message,channel:0
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_contact_facebook_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_facebook_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_facebook_id
+msgid "Facebook ID"
+msgstr "Facebook ID"
+
+#. module: btek_marketing
+#: selection:btek.auto.send.log.detail,result:0
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_kanban_view
+msgid "Fail"
+msgstr "Lỗi"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_ir_model_fields
+msgid "Fields"
+msgstr "Trường"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Fixed Number 10 Numbers"
+msgstr "Số cố định số 10"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Fixed Number Notify"
+msgstr "Thông báo số cố định"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Fixed number Verify"
+msgstr "Cố định số xác minh"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_email_from
+msgid "From"
+msgstr "Từ"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_function_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_function_tree_view
+msgid "Function"
+msgstr "Vị trí"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:24
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_sex
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_sex
+#, python-format
+msgid "Giới tính"
+msgstr "Giới tính"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "Greater Than"
+msgstr "Lớn hơn"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "Greater Than or Equal To"
+msgstr "Lớn hơn hoặc bằng"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_numbercall
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_numbercall
+msgid "How many times the method is called,\n"
+"a negative number indicates no limit."
+msgstr "Phương thức này được gọi bao nhiêu lần,\n"
+"số âm (-) nghĩa là không giới hạn."
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_id
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_marketing
+#: selection:btek.multi.message,state:0
+msgid "In Queue"
+msgstr "Đang chờ"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_interval_type
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_interval_type
+msgid "Interval Unit"
+msgstr "Đơn vị nội bộ"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_interval_number
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_interval_number
+msgid "Interval number"
+msgstr "Interval number"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_contact_is_invite_zalo
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_is_invite_zalo
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_is_invite_zalo
+msgid "Is invite zalo"
+msgstr "Mời Zalo"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,model_id:0
+#: selection:btek.auto.send.mail,model_id:0
+#: selection:btek.multi.message,message_model:0
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:27
+#: selection:res.partner,insurance_status:0
+#, python-format
+msgid "Không"
+msgstr "Không"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config___last_update
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_write_uid
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_write_date
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,name:0
+msgid "Last day of sale"
+msgstr "Ngày mua hàng(SO) gần nhất"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "Less Than"
+msgstr "Nhỏ hơn"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "Less Than or Equal To"
+msgstr "Nhỏ hơn hoặc bằng"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Mail Body"
+msgstr "Thân mail"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_multi_message.py:44
+#, python-format
+msgid "Mailing List"
+msgstr "Danh sách gửi"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_mail_mass_mailing_campaign
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_mass_mailing_campaign_id
+msgid "Mass Mailing Campaign"
+msgstr "Chiến dịch gửi thư hàng loạt"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_mail_mass_mailing_contact
+msgid "Mass Mailing Contact"
+msgstr "Liên hệ gửi thư hàng loạt"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_medium_id
+msgid "Medium"
+msgstr "Kênh / Medium"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_member_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_member_id
+msgid "Member ID"
+msgstr "Member ID"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_message
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_message
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Message"
+msgstr "Thông điệp"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_message_template
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_message_template
+#: model:ir.ui.view,arch_db:btek_marketing.btek_message_template_form_view
+msgid "Message Template"
+msgstr "Mẫu tin nhắn"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message_fail
+msgid "Message fail"
+msgstr "Tin nhắn lỗi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message_success
+msgid "Message success"
+msgstr "Tin nhắn thành công"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_message_template_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message_template_id
+msgid "Message template id"
+msgstr "Tạo mới"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_message_template
+msgid "MessageTemplate"
+msgstr "MessageTemplate"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_function
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_function
+msgid "Method"
+msgstr "Phương thức"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_mobile
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_contact_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: btek_marketing
+#: selection:btek.sms.log,reason:0
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Mobile Syntax"
+msgstr "Sai SĐT"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,channel:0
+#: selection:btek.message.template,channel:0
+#: selection:btek.multi.message,channel:0
+msgid "Mobile push"
+msgstr "Mobile push"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_mobile_syntax
+msgid "Mobile syntax"
+msgstr "Sai SĐT"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_model_id
+msgid "Model"
+msgstr "Dòng xe"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_model
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_model
+msgid "Model name on which the method to be called is located, e.g. 'res.partner'."
+msgstr "Tên mô hình chứa phương thức được gọi, ví dụ như 'res.partner'."
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_create_multi_message_from_campaign
+msgid "Multi Message"
+msgstr "Gửi nhiều tin nhắn"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_multi_message_ids
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Multi Messages"
+msgstr "Gửi nhiều tin nhắn"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,help:btek_marketing.action_create_multi_message_from_campaign
+#: model:ir.actions.act_window,help:btek_marketing.action_view_multi_sms_from_campaign
+#: model:ir.actions.act_window,help:btek_marketing.action_view_multi_zalo_from_campaign
+msgid "Multi messages allows you to to easily design and send message to your contacts, customers or leads using contact lists."
+msgstr "Multi messages allows you to to easily design and send message to your contacts, customers or leads using contact lists."
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_multi_sms_log
+msgid "Multi sms log"
+msgstr "Multi sms log"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:24
+#: selection:res.partner,sex:0
+#, python-format
+msgid "Nam"
+msgstr "Nam"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_message_template_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_group_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_partner_source_name
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_name
+#: model:ir.model.fields,field_description:btek_marketing.field_customer_supplier_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_function
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_function
+msgid "Name of the method to be called when this job is processed."
+msgstr "Tên phương thức được gọi khi công việc này được xử lý."
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_partner_source.py:10
+#: code:addons/btek_marketing/models/btek_partner_source.py:17
+#: code:addons/btek_marketing/models/btek_partner_source.py:20
+#: code:addons/btek_marketing/models/btek_partner_source.py:22
+#: code:addons/btek_marketing/models/btek_partner_source.py:32
+#: code:addons/btek_marketing/models/btek_partner_source.py:35
+#: code:addons/btek_marketing/models/btek_partner_source.py:37
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_next_departure
+msgid "Next Departure"
+msgstr "Next Departure"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_nextcall
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_nextcall
+msgid "Next Execution Date"
+msgstr "Ngày thực hiện tiếp theo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_nextcall
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_nextcall
+msgid "Next planned execution date for this job."
+msgstr "Ngày thực hiện tiếp thep cho công việc này."
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:25
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_source_melee
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_source_melee
+#, python-format
+msgid "Nguồn tiếp cận"
+msgstr "Nguồn tiếp cận"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:40
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_btek_career_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_btek_career_id
+#, python-format
+msgid "Ngành/Dịch vụ"
+msgstr "Ngành/Dịch vụ"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:28
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_date_insurance
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_date_insurance
+#, python-format
+msgid "Ngày hết hạn bảo hiểm"
+msgstr "Ngày hết hạn bảo hiểm"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:29
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_last_day_of_sale
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_last_day_of_sale
+#, python-format
+msgid "Ngày mua hàng(S0) gần nhất"
+msgstr "Ngày mua hàng(S0) gần nhất"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:22
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_date_of_birth
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_date_of_birth
+#, python-format
+msgid "Ngày sinh"
+msgstr "Ngày sinh"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,accent_vietnamese:0
+#: selection:btek.multi.message,accent_vietnamese:0
+msgid "No accent"
+msgstr "Không dấu"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_note
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_career_note
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_function_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_numbercall
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_numbercall
+msgid "Number of Calls"
+msgstr "Số lượng cuộc gọi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_numbers_days
+msgid "Numbers days"
+msgstr "Numbers days"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_multi_message.py:194
+#: code:addons/btek_marketing/models/btek_multi_message.py:208
+#, python-format
+msgid "Nội dung tin nhắn vượt quá giới hạn, chỉnh sửa lại nội dung cho phù hợp"
+msgstr "Nội dung tin nhắn vượt quá giới hạn, chỉnh sửa lại nội dung cho phù hợp"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "OA"
+msgstr "OA"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "OPT"
+msgstr "OPT"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_model
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_model
+msgid "Object"
+msgstr "Đối tượng"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Official account"
+msgstr "Official account"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Option"
+msgstr "Tùy chọn"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_option_date_define
+msgid "Option date define"
+msgstr "Tùy chọn so sánh"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Options"
+msgstr "Tùy chọn"
+
+#. module: btek_marketing
+#: selection:res.partner,sex:0
+msgid "Other"
+msgstr "Other"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_res_partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_partner_group
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_group_form
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_group_tree
+msgid "Partner Groups"
+msgstr "Partner Groups"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_partner_source
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_source_form
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_source_tree
+msgid "Partner Source"
+msgstr "Partner Source"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_group_user
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_group_user
+msgid "Partner group"
+msgstr "Partner group"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:73
+#, python-format
+msgid "Payslip"
+msgstr "Payslip"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_priority
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Random numbers"
+msgstr "Số ngẫu nhiên"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_reason
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Recipients"
+msgstr "Người nhận"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_model_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_message_model
+msgid "Recipients Model"
+msgstr "Model Người nhận"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:30
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_relate_lastday
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_relate_lastday
+#, python-format
+msgid "Relate Lastday SO"
+msgstr "Relate Lastday SO"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_doall
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_doall
+msgid "Repeat Missed"
+msgstr "Repeat Missed"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_interval_number
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_interval_number
+msgid "Repeat every x."
+msgstr "Repeat every x."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Resend"
+msgstr "Gửi lại"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_detail_result
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_result
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Run Manually"
+msgstr "Run Manually"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,state:0
+#: selection:btek.auto.send.mail,state:0
+msgid "Running"
+msgstr "Running"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,channel:0
+#: selection:btek.message.template,channel:0
+#: selection:btek.multi.message,channel:0
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+msgid "SMS"
+msgstr "SMS"
+
+#. module: btek_marketing
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_sms_config
+msgid "SMS Brandname"
+msgstr "Tin nhắn thương hiệu"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "SMS Charged/Person"
+msgstr "SMS Tính phí/Người"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "SMS Charged/Total"
+msgstr "SMS Tính phí/Tổng"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_sms_config_form_view
+msgid "SMS Config"
+msgstr "Cài đặt SMS"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_sms_log_tree_fail
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_sms_log_tree_mobile_syntax
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_sms_log_tree_success
+msgid "SMS Log"
+msgstr "SMS Log"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_sms_config_form_view
+msgid "SMS Supplier"
+msgstr "Nhà cung cấp SMS"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_sms_config_form_view
+msgid "SMS Type"
+msgstr "Kiểu SMS"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "SMS fail"
+msgstr "SMS lỗi"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "SMS invalid"
+msgstr "SMS không hợp lệ"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "SMS success"
+msgstr "SMS thành công"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_schedule_date
+msgid "Schedule in the Future"
+msgstr "Lên lịch trong tương lai"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_secret_key
+msgid "Secret key"
+msgstr "Mã khóa"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Select contact lists..."
+msgstr "Chọn danh sách gửi..."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Select contact lists:"
+msgstr "Chọn danh sách gửi:"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Select recipients"
+msgstr "Chọn Người nhận"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_btek_multi_message
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_multi_message
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_graph
+msgid "Send multi Message"
+msgstr "Gửi tin nhắn hàng loạt"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,help:btek_marketing.action_btek_multi_message
+msgid "Send multi message allows you to to easily design and send message to your contacts, customers or leads using contact lists."
+msgstr "Gửi nhiều tin nhắn cho phép bạn dễ dàng thiết kế và gửi tin nhắn đến các số\n"
+"liên lạc, khách hàng hoặc khách hàng tiềm năng bằng danh sách liên lạc."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Send new Message"
+msgstr "Gửi tin nhắn mới"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "Send to All"
+msgstr "Gửi đến Tất cả"
+
+#. module: btek_marketing
+#: selection:btek.multi.message,state:0
+msgid "Sending"
+msgstr "Đang gửi"
+
+#. module: btek_marketing
+#: selection:btek.sms.log,reason:0
+msgid "Sending fail"
+msgstr "Gửi lỗi"
+
+#. module: btek_marketing
+#: selection:btek.sms.log,reason:0
+msgid "Sending success"
+msgstr "Gửi thành công"
+
+#. module: btek_marketing
+#: selection:btek.auto.send.log.detail,result:0
+#: selection:btek.multi.message,state:0
+msgid "Sent"
+msgstr "Thành công"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_sent_date
+msgid "Sent Date"
+msgstr "Ngày gửi"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Sent Logs"
+msgstr "Log gửi thông tin"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_group_tree
+#: model:ir.ui.view,arch_db:btek_marketing.btek_partner_source_tree
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_sms_charge_person
+msgid "Sms charge person"
+msgstr "Sms charge person"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_sms_charge_total
+msgid "Sms charge total"
+msgstr "Sms charge total"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_fail
+msgid "Sms fail"
+msgstr "Tin nhắn lỗi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_fail_ratio
+msgid "Sms fail ratio"
+msgstr "Sms fail ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_invalid
+msgid "Sms invalid"
+msgstr "Sms không hợp lệ"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_invalid_ratio
+msgid "Sms invalid ratio"
+msgstr "Sms invalid ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_SMS_send_status
+msgid "Sms send status"
+msgstr "Trạng thái gửi sms"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_success
+msgid "Sms success"
+msgstr "Tin nhắn thành công"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_sms_success_ratio
+msgid "Sms success ratio"
+msgstr "Sms success ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_sms_supplier
+msgid "Sms supplier"
+msgstr "Nhà cung cấp SMS"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_sms_type
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_sms_type
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_sms_type
+msgid "Sms type"
+msgstr "Kiểu sms"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_SMSID
+msgid "Smsid"
+msgstr "Smsid"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_spcode
+msgid "Spcode"
+msgstr "Spcode"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_doall
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_doall
+msgid "Specify if missed occurrences should be executed when the server restarts."
+msgstr "Specify if missed occurrences should be executed when the server restarts."
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_state
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_state
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_subject
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_subject
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_tree_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_tree_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_tree_view
+msgid "Subject"
+msgstr "Chủ đề"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_kanban_view
+msgid "Success"
+msgstr "Thành công"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "Technical Data"
+msgstr "Dữ liệu kỹ thuật"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_priority
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_priority
+msgid "The priority of the job, as an integer: 0 means higher priority, 10 means lower priority."
+msgstr "The priority of the job, as an integer: 0 means higher priority, 10 means lower priority."
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_medium_id
+msgid "This is the delivery method, e.g. Postcard, Email, or Banner Ad"
+msgstr "This is the delivery method, e.g. Postcard, Email, or Banner Ad"
+
+#. module: btek_marketing
+#: model:ir.model.fields,help:btek_marketing.field_btek_auto_send_mail_campaign_id
+msgid "This name helps you tracking your different campaign efforts, e.g. Fall_Drive, Christmas_Special"
+msgstr "This name helps you tracking your different campaign efforts, e.g. Fall_Drive, Christmas_Special"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "This will resend the message to all recipients. Sure that you have checked error log before proceed?"
+msgstr "Hành động này sẽ gửi lại tin nhắn đến tất cả người nhận. Chắc chắn rằng bạn đã xem xét lỗi được thông báo trước khi tiếp tục?"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "This will run the auto event"
+msgstr "Hành động này sẽ bắt đầu chạy sự kiện tự động."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_multi_message_form_view
+msgid "This will send the message to all recipients. Do you still want to proceed ?"
+msgstr "Hành động này sẽ gửi tin nhắn đến tất cả người nhận. Bạn có muốn tiếp tục?"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_form_view
+#: model:ir.ui.view,arch_db:btek_marketing.btek_auto_send_mail_form_view
+msgid "This will stop the auto event"
+msgstr "Hành động này sẽ dừng chạy sự kiện tự động."
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Toatal contact"
+msgstr "Tổng số liên lạc"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_total
+msgid "Total"
+msgstr "Tổng"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_total_contact_sms
+msgid "Total contact sms"
+msgstr "Total contact sms"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_total_contact_zalo
+msgid "Total contact zalo"
+msgstr "Total contact zalo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_total_follow
+msgid "Total follow"
+msgstr "Total follow"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_log_total_message
+msgid "Total message"
+msgstr "Số lượng"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_total_sms
+msgid "Total sms"
+msgstr "Total sms"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_total_zalo
+msgid "Total zalo"
+msgstr "Total zalo"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_type:0
+msgid "Two-way message"
+msgstr "thông điệp hai chiều"
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:27
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_insurance_status
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_insurance_status
+#, python-format
+msgid "Tình trạng mua bảo hiểm"
+msgstr "Tình trạng mua bảo hiểm"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_config_url
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_zalo_config_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_mail_user_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_value_compare
+msgid "Value compare"
+msgstr "Giá trị so sánh"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_condition_value_display
+msgid "Value display"
+msgstr "Giá trị so sánh"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,channel:0
+#: selection:btek.message.template,channel:0
+#: selection:btek.multi.message,channel:0
+msgid "Viber"
+msgstr "Viber"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_contact_viber_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_viber_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_viber_id
+msgid "Viber ID"
+msgstr "Viber ID"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.action_view_multi_sms_from_campaign
+#: model:ir.actions.act_window,name:btek_marketing.action_view_multi_zalo_from_campaign
+msgid "View Multi Message From Campaign"
+msgstr "Xem loạt gửi tin nhắn thuộc chiến dịch."
+
+#. module: btek_marketing
+#: code:addons/btek_marketing/models/btek_res_partner.py:38
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_btek_function_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_btek_function_id
+#, python-format
+msgid "Vị trí công tác"
+msgstr "Vị trí công tác"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,name:0
+msgid "Write date"
+msgstr "Ngày chỉnh sửa gần nhất"
+
+#. module: btek_marketing
+#: selection:btek.auto.send,channel:0
+#: selection:btek.message.template,channel:0
+#: selection:btek.multi.message,channel:0
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_kanban
+msgid "Zalo"
+msgstr "Zalo"
+
+#. module: btek_marketing
+#: model:ir.ui.menu,name:btek_marketing.menu_action_btek_zalo_config
+#: model:ir.ui.view,arch_db:btek_marketing.btek_zalo_config_form_view
+msgid "Zalo Config"
+msgstr "Cài đặt Zalo"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_contact_zalo_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_partner_zalo_id
+#: model:ir.model.fields,field_description:btek_marketing.field_res_users_zalo_id
+msgid "Zalo ID"
+msgstr "Zalo ID"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_fail
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Zalo fail"
+msgstr "Tin nhắn lỗi"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_fail_ratio
+msgid "Zalo fail ratio"
+msgstr "Zalo fail ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_sms_log_zalo_id
+msgid "Zalo id"
+msgstr "Zalo id"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_invalid
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Zalo invalid"
+msgstr "Zalo invalid"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_invalid_ratio
+msgid "Zalo invalid ratio"
+msgstr "Zalo invalid ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_success
+#: model:ir.ui.view,arch_db:btek_marketing.btek_mail_mass_mailing_campaign_form
+msgid "Zalo success"
+msgstr "Tin nhắn thành công"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_mail_mass_mailing_campaign_zalo_success_ratio
+msgid "Zalo success ratio"
+msgstr "Zalo success ratio"
+
+#. module: btek_marketing
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_auto_send_zalo_url_id
+#: model:ir.model.fields,field_description:btek_marketing.field_btek_multi_message_zalo_url_id
+msgid "Zalo url id"
+msgstr "Zalo url id"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_auto_condition
+msgid "btek.auto.condition"
+msgstr "btek.auto.condition"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_partner_group
+msgid "btek.partner.group"
+msgstr "btek.partner.group"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_btek_partner_source
+msgid "btek.partner.source"
+msgstr "btek.partner.source"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_customer_supplier
+msgid "customer.supplier"
+msgstr "customer.supplier"
+
+#. module: btek_marketing
+#: model:ir.actions.act_window,name:btek_marketing.export_customer_supplier_view_act
+msgid "customer/supplier"
+msgstr "customer/supplier"
+
+#. module: btek_marketing
+#: selection:btek.sms.config,sms_supplier:0
+msgid "eSMS"
+msgstr "eSMS"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_excel_extended
+msgid "excel.extended"
+msgstr "excel.extended"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_export_customer
+msgid "export.customer"
+msgstr "export.customer"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_export_customer_supplier
+msgid "export.customer.supplier"
+msgstr "export.customer.supplier"
+
+#. module: btek_marketing
+#: model:ir.ui.view,arch_db:btek_marketing.export_customer_supplier_form
+msgid "export_form"
+msgstr "export_form"
+
+#. module: btek_marketing
+#: model:ir.model,name:btek_marketing.model_exportform
+msgid "exportform"
+msgstr "exportform"
+
+#. module: btek_marketing
+#: selection:btek.auto.condition,operator:0
+msgid "notEqual"
+msgstr "Không bằng"
+

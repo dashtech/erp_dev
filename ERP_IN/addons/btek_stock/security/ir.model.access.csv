@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_synthesis_import_export_stock_manager,synthesis_import_export_stock_manager,model_synthesis_import_export,stock.group_stock_user,1,0,0,0
+access_synthesis_stock_inventory_stock_manager,synthesis_stock_inventory_stock_manager,model_synthesis_stock_inventory,stock.group_stock_user,1,0,0,0
+stock.access_stock_picking_user,stock.picking user,stock.model_stock_picking,stock.group_stock_user,1,0,0,0
+stock.access_stock_inventory_user,stock.inventory user,stock.model_stock_inventory,stock.group_stock_user,1,0,0,0
+stock.access_stock_scrap_user,stock.scrap.user,stock.model_stock_scrap,stock.group_stock_user,1,0,0,0
+access_procurement_order,procurement.order.user,stock.model_procurement_order,stock.group_stock_user,1,0,0,0
+stock.access_stock_production_lot_user,stock.production.lot user,stock.model_stock_production_lot,stock.group_stock_user,1,0,0,0
+stock.access_stock_production_lot_user,stock.production.lot user,stock.model_stock_production_lot,stock.group_stock_user,1,0,0,0
+mrp.access_stock_production_lot_user,stock.production.lot user,stock.model_stock_production_lot,stock.group_stock_user,1,0,0,0
+mrp_repair.access_stock_production_lot_user,stock.production.lot user,stock.model_stock_production_lot,stock.group_stock_user,1,0,0,0

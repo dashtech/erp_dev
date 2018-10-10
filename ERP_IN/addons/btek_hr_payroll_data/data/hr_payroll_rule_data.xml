@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+
+<odoo>
+
+<!-- HR SALARY RULE CATEGORIES -->
+    <record id="hr_payroll_rule_category_gt" model="hr.salary.rule.category">
+        <field name="name">Giảm trừ thuế cá nhân</field>
+        <field name="code">GTTCN</field>
+    </record>
+    <record id="hr_payroll_rule_category_tntt" model="hr.salary.rule.category">
+        <field name="name">Thu nhập tính thuế</field>
+        <field name="code">TNTT</field>
+    </record>
+    <record id="hr_payroll_rule_category_bh" model="hr.salary.rule.category">
+        <field name="name">Bảo hiểm</field>
+        <field name="code">BH</field>
+    </record>
+    <record id="hr_payroll_rule_category_ttncn" model="hr.salary.rule.category">
+        <field name="name">Thuế thu nhập cá nhân</field>
+        <field name="code">TTNCN</field>
+    </record>
+    <record id="hr_payroll_rule_category_tl" model="hr.salary.rule.category">
+        <field name="name">	Thực lĩnh</field>
+        <field name="code">TL</field>
+    </record>
+    <record id="hr_payroll_rule_category_dndbh" model="hr.salary.rule.category">
+        <field name="name">Doanh nghiệp đóng BH</field>
+        <field name="code">DNDBH</field>
+    </record>
+    <record id="hr_payroll_rule_category_wage" model="hr.salary.rule.category">
+        <field name="name">Tiền lương</field>
+        <field name="code">WAGE</field>
+    </record>
+    <record id="hr_payroll_rule_category_pc" model="hr.salary.rule.category">
+        <field name="name">Thưởng</field>
+        <field name="code">PC</field>
+    </record>
+    <record id="hr_payroll_rule_category_ttn" model="hr.salary.rule.category">
+        <field name="name">Tổng thu nhập</field>
+        <field name="code">TTN</field>
+    </record>
+    <record id="hr_payroll_rule_category_tntt" model="hr.salary.rule.category">
+        <field name="name">Thu nhập tính thuế</field>
+        <field name="code">TNTT</field>
+    </record>
+    <record id="hr_payroll_rule_category_ttncn" model="hr.salary.rule.category">
+        <field name="name">Thuế thu nhập cá nhân</field>
+        <field name="code">TTNCN</field>
+    </record>
+    <record id="hr_payroll_rule_category_pcn" model="hr.salary.rule.category">
+        <field name="name">Phụ cấp không BH,TTNCN</field>
+        <field name="code">PCN</field>
+    </record>
+
+<!--rule -->
+    <record id="hr_payroll_rules_wage" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_wage" />
+        <field name="name">Lương</field>
+        <field name="sequence">5</field>
+        <field name="code">WAGE</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = contract.wage
+else:
+    day_unpaid = day_legal = day_annual = day_worked = 0
+    if worked_days.UNPAID:
+        day_unpaid = worked_days.UNPAID.number_of_days
+    if worked_days.LEGAL:
+        day_legal = worked_days.LEGAL.number_of_days
+    if worked_days.ANNUAL:
+        day_annual = worked_days.ANNUAL.number_of_days
+    if worked_days.worked_attendance:
+        day_worked = worked_days.worked_attendance.number_of_days
+    if day_worked == 0:
+        result = 0
+    else:
+        result = (contract.wage/worked_days.WORK100.number_of_days) * (day_worked + day_annual + day_legal)
+        </field>
+    </record>
+
+    <record id="hr_payroll_rules_bhxh" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_bh" />
+        <field name="name">Bảo Hiểm Xã Hội</field>
+        <field name="code">BHXH</field>
+        <field name="sequence">10</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.08</field>
+    </record>
+    <record id="hr_payroll_rules_bhyt" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_bh" />
+        <field name="name">Bảo Hiểm Y Tế</field>
+        <field name="code">BHYT</field>
+        <field name="sequence">11</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.015</field>
+    </record>
+    <record id="hr_payroll_rules_bhtn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_bh" />
+        <field name="name">Bảo Hiểm Thất Nghiệp</field>
+        <field name="code">BHTN</field>
+        <field name="sequence">12</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.01</field>
+    </record>
+
+    <record id="hr_payroll_rules_ttn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_ttn" />
+        <field name="name">Tổng thu nhập</field>
+        <field name="code">TTN</field>
+        <field name="sequence">20</field>
+        <field name="appears_on_payslip" eval="0"/>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.WAGE + categories.PC</field>
+    </record>
+    <record id="hr_payroll_rules_gttcn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_gt"/>
+        <field name="name">Giảm Trừ Thuế Thu Nhập Cá Nhân</field>
+        <field name="code">GTTCN</field>
+        <field name="sequence">25</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = 9000000 + 3600000 * employee.related_person_payslip</field>
+    </record>
+    <record id="hr_payroll_rules_tntt" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_tntt"/>
+        <field name="name">Thu nhập tính thuế</field>
+        <field name="code">TNTT</field>
+        <field name="sequence">26</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if (categories.TTN - categories.BH) > categories.GTTCN:
+    result = categories.TTN - categories.BH - categories.GTTCN
+else:
+    result = 0
+        </field>
+    </record>
+
+    <record id="hr_payroll_rules_ttncn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_ttncn" />
+        <field name="name">Thuế thu nhập cá nhân</field>
+        <field name="code">TTNCN</field>
+        <field name="sequence">27</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if categories.TNTT > 0 and categories.TNTT &#60;&#61; 5000000:
+    result = categories.TNTT * 0.05
+elif categories.TNTT > 5000000 and categories.TNTT &#60;&#61; 10000000:
+    result = (categories.TNTT * 0.1) - 250000
+elif categories.TNTT > 10000000 and categories.TNTT &#60;&#61; 18000000:
+    result = (categories.TNTT * 0.15) - 750000
+elif categories.TNTT > 18000000 and categories.TNTT &#60;&#61; 32000000:
+    result = (categories.TNTT * 0.2) - 1650000
+elif categories.TNTT > 32000000 and categories.TNTT &#60;&#61; 52000000:
+    result = (categories.TNTT * 0.25) - 3250000
+elif categories.TNTT > 52000000 and categories.TNTT &#60;&#61; 80000000:
+    result = (categories.TNTT * 0.3) - 5850000
+elif categories.TNTT > 80000000:
+    result = (categories.TNTT * 0.35) - 9850000
+else:
+    result = 0
+        </field>
+    </record>
+
+    <record id="hr_payroll_rules_pcn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_pcn" />
+        <field name="name">Phụ cấp không BH,TTNCN</field>
+        <field name="code">PCN</field>
+        <field name="sequence">110</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = contract.addition_salary_non</field>
+    </record>
+
+    <record id="hr_payroll_rules_tl" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_tl" />
+        <field name="name">Thực Lĩnh</field>
+        <field name="code">TL</field>
+        <field name="sequence">120</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = categories.TTN - categories.BH - categories.TTNCN + categories.PCN</field>
+    </record>
+
+    <record id="hr_payroll_rules_dnbhxh" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_dndbh" />
+        <field name="name">BHXH doanh nghiệp đóng</field>
+        <field name="code">dnbhxh</field>
+        <field name="sequence">70</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.175</field>
+    </record>
+    <record id="hr_payroll_rules_dnbhyt" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_dndbh" />
+        <field name="name">BHYT doanh nghiệp đóng</field>
+        <field name="code">dnbhyt</field>
+        <field name="sequence">71</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.03</field>
+    </record>
+    <record id="hr_payroll_rules_dnbhtn" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll_rule_category_dndbh" />
+        <field name="name">BHTN doanh nghiệp đóng</field>
+        <field name="code">dnbhtn</field>
+        <field name="sequence">72</field>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+if contract.type_id.name == 'CTV':
+    result = 0
+else:
+    result = contract.insurance_salary* 0.01</field>
+    </record>
+</odoo>

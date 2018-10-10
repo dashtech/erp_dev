@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="bave_sale_report_tree" model="ir.ui.view">
+        <field name="name">bave.sale.report.tree</field>
+        <field name="model">bave.sale.report</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false">
+                <!--<field name="id"/>-->
+                <field name="order_id"/>
+                <field name="license_plate"/>
+                <field name="date_date_order"/>
+                <field name="default_code"/>
+                <field name="product_id"/>
+                <field name="product_uom_qty" sum="Sum"/>
+                <field name="price_unit"/>
+                <field name="subtotal_with_out_discount"
+                       sum="Sum"/>
+                <field name="discount_total" sum="Sum"/>
+                <field name="price_tax" sum="Sum"/>
+                <field name="sub_price_after_tax_discount" sum="Sum"/>
+                <field name="invoice_state"
+                       invisible="context.get('invisible_invoice_state',False)"/>
+                <field name="state"
+                       invisible="context.get('invisible_invoice_state',False)==False"/>
+                <!--<field name="user_id"/>-->
+                <!--<field name="invoice_confirmed"/>-->
+                <field name="company_id"
+                       groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bave_sale_report_search" model="ir.ui.view">
+        <field name="name">bave.sale.report.search</field>
+        <field name="model">bave.sale.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="date_date_order"
+                       string="Order date great than or equal"
+                       filter_domain="[('date_date_order', '&gt;=', self)]"/>
+                <field name="date_date_order"
+                       string="Order date less than or equal"
+                       filter_domain="[('date_date_order', '&lt;=', self)]"/>
+                <field name="company_id"
+                       groups="base.group_multi_company"/>
+
+                <filter name="invoice_confirmed_true"
+                        domain="[('invoice_confirmed','=',True)]"
+                        string="Invoice confirmed"/>
+                <filter name="invoice_confirmed_false"
+                        domain="[('invoice_confirmed','=',False)]"
+                        string="Invoice not confirmed"/>
+
+                <filter name="date_date_order_group"
+                        string="Date order"
+                        context="{'group_by':'date_date_order_str'}"/>
+                <filter name="product_type_group"
+                        string="Product type"
+                        context="{'group_by':'product_type'}"/>
+                <filter name="product_id_group"
+                        string="Product"
+                        context="{'group_by':'product_id'}"/>
+                <filter name="partner_id_group"
+                        string="Customer"
+                        context="{'group_by':'partner_id'}"/>
+                <filter name="user_id_group"
+                        string="Saleman"
+                        context="{'group_by':'user_id'}"/>
+                <filter name="order_id_group"
+                        string="Order"
+                        context="{'group_by':'order_id'}"/>
+                <filter name="state_group"
+                        string="State"
+                        context="{'group_by':'state'}"/>
+                <filter name="invoice_status_group"
+                        string="Invoice status"
+                        context="{'group_by':'invoice_status'}"/>
+                <filter name="invoice_confirmed_group"
+                        context="{'group_by':'invoice_confirmed'}"
+                        string="Invoice confirmed"/>
+                <filter name="company_id_group"
+                        context="{'group_by':'company_id'}"
+                        groups="base.group_multi_company"
+                        string="Company"/>
+
+                <filter name="invoice_state_group"
+                        context="{'group_by':'invoice_state'}"
+                        invisible="context.get('invisible_invoice_state',False)"
+                        string="Invoice state"/>
+            </search>
+        </field>
+    </record>
+
+
+    <menuitem id="fleet_repair_report" sequence="90"
+              name="Report"
+              parent="car_repair_industry.menu_base_fleet_repair"
+            groups="car_repair_industry.group_fleet_repair_technician,car_repair_industry.group_fleet_repair_service_manager"/>
+
+    <!--sale in-->
+    <menuitem id="sale_in_report" parent="fleet_repair_report"
+              name="Sale in report" sequence="30"/>
+
+    <!--list view-->
+    <record id="action_bave_sale_in_report"
+            model="ir.actions.act_window">
+        <field name="name">Sales report in detail</field>
+        <field name="res_model">bave.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>
+        <field name="context">{'invisible_invoice_state':True}</field>
+        <field name="target">current</field>
+        <field name="help">This report performs analysis on your quotations and sales orders</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_in_report"-->
+              <!--id="menu_action_bave_sale_in_by_report"-->
+              <!--parent="sale_in_report" sequence="75"/>-->
+
+    <!--group by order-->
+    <record id="action_bave_sale_in_by_order_report"
+            model="ir.actions.act_window">
+        <field name="name">Sales report in summary</field>
+        <field name="res_model">bave.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>
+        <field name="context">{'search_default_order_id_group':True, 'auto_expand':1,'invisible_invoice_state':True}</field>
+        <field name="help">This report performs analysis on your quotations and sales orders</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_in_by_order_report"-->
+              <!--id="menu_action_bave_sale_in_by_order_report"-->
+              <!--parent="sale_in_report" sequence="80"/>-->
+
+    <!--group by date-->
+    <!--<record id="action_bave_sale_in_by_date_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report in by date</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>-->
+        <!--<field name="context">{'invisible_invoice_state':True}</field>-->
+        <!--<field name="context">{'search_default_date_date_order_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_in_by_date_report"-->
+              <!--id="menu_action_bave_sale_in_by_date_report"-->
+              <!--parent="sale_in_report" sequence="80"/>-->
+
+    <!--&lt;!&ndash;group by product type&ndash;&gt;-->
+    <!--<record id="action_bave_sale_in_by_product_type_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report in by product type</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>-->
+        <!--<field name="context">{'search_default_product_type_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_in_by_product_type_report"-->
+              <!--id="menu_action_bave_sale_in_by_product_type_report"-->
+              <!--parent="sale_in_report" sequence="90"/>-->
+
+    <!--&lt;!&ndash;group by partner&ndash;&gt;-->
+    <!--<record id="action_bave_sale_in_by_partner_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report in by partner</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>-->
+        <!--<field name="context">{'search_default_partner_id_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_in_by_partner_report"-->
+              <!--id="menu_action_bave_sale_in_by_partner_report"-->
+              <!--parent="sale_in_report" sequence="100"/>-->
+
+    <!--&lt;!&ndash;group by saleman&ndash;&gt;-->
+    <!--<record id="action_bave_sale_in_by_saleman_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report in by saleman</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>-->
+        <!--<field name="context">{'search_default_user_id_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_in_by_saleman_report"-->
+              <!--id="menu_action_bave_sale_in_by_saleman_report"-->
+              <!--parent="sale_in_report" sequence="110"/>-->
+
+    <!--sale out-->
+    <menuitem id="sale_out_report" parent="fleet_repair_report"
+              name="Sale out report" sequence="30"/>
+
+    <!--list view-->
+    <record id="action_bave_sale_out_report"
+            model="ir.actions.act_window">
+        <field name="name">Sales report out detail</field>
+        <field name="res_model">bave.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="target">current</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>
+        <field name="help">This report performs analysis on your quotations and sales orders</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_out_report"-->
+              <!--id="menu_action_bave_sale_out_report"-->
+              <!--parent="sale_out_report" sequence="70"/>-->
+
+    <!--group by order-->
+    <record id="action_bave_sale_out_summary_report"
+            model="ir.actions.act_window">
+        <field name="name">Sales report out summary</field>
+        <field name="res_model">bave.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>
+        <field name="context">{'search_default_order_id_group':True,'auto_expand':1}</field>
+        <field name="help">This report performs analysis on your quotations and sales orders</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_out_summary_report"-->
+              <!--id="menu_action_bave_sale_out_summary_report"-->
+              <!--parent="sale_out_report" sequence="80"/>-->
+
+    <!--group by date-->
+    <!--<record id="action_bave_sale_out_by_date_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report out by date</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>-->
+        <!--<field name="context">{'search_default_date_date_order_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_out_by_date_report"-->
+              <!--id="menu_action_bave_sale_out_by_date_report"-->
+              <!--parent="sale_out_report" sequence="80"/>-->
+
+    <!--&lt;!&ndash;group by product type&ndash;&gt;-->
+    <!--<record id="action_bave_sale_out_by_product_type_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report out by product type</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>-->
+        <!--<field name="context">{'search_default_product_type_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_out_by_product_type_report"-->
+              <!--id="menu_action_bave_sale_out_by_product_type_report"-->
+              <!--parent="sale_out_report" sequence="90"/>-->
+
+    <!--&lt;!&ndash;group by partner&ndash;&gt;-->
+    <!--<record id="action_bave_sale_out_by_partner_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report out by partner</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>-->
+        <!--<field name="context">{'search_default_partner_id_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_out_by_partner_report"-->
+              <!--id="menu_action_bave_sale_out_by_partner_report"-->
+              <!--parent="sale_out_report" sequence="100"/>-->
+
+    <!--&lt;!&ndash;group by saleman&ndash;&gt;-->
+    <!--<record id="action_bave_sale_out_by_saleman_report"-->
+            <!--model="ir.actions.act_window">-->
+        <!--<field name="name">Sales report out by saleman</field>-->
+        <!--<field name="res_model">bave.sale.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,pivot</field>-->
+        <!--<field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>-->
+        <!--<field name="context">{'search_default_user_id_group':True}</field>-->
+        <!--<field name="help">This report performs analysis on your quotations and sales orders</field>-->
+    <!--</record>-->
+
+    <!--<menuitem action="action_bave_sale_out_by_saleman_report"-->
+              <!--id="menu_action_bave_sale_out_by_saleman_report"-->
+              <!--parent="sale_out_report" sequence="110"/>-->
+
+    <!--fix car in report-->
+    <record id="bave_sale_order_report_tree" model="ir.ui.view">
+        <field name="name">bave.sale.order.report.tree</field>
+        <field name="model">bave.sale.order.report</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false">
+                <field name="name"/>
+                <field name="license_plate"/>
+                <field name="date_order" invisible="1"/>
+                <field name="date_date_order"/>
+                <field name="user_id"/>
+                <field name="qty"/>
+                <field name="amount_untaxed_repair"/>
+                <field name="amount_total_discount_repair"/>
+                <field name="amount_tax_repair"/>
+                <field name="amount_total_repair"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Car in-->
+    <record id="action_bave_sale_order_in_report"
+            model="ir.actions.act_window">
+        <field name="name">Car in revenue</field>
+        <field name="res_model">bave.sale.order.report</field>
+        <field name="view_type">tree</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', False)]</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_order_in_report"-->
+              <!--id="menu_action_bave_sale_order_in_report"-->
+              <!--parent="sale_in_report" sequence="70"/>-->
+
+    <!--Car out-->
+    <record id="action_bave_sale_order_out_report"
+            model="ir.actions.act_window">
+        <field name="name">Car out revenue</field>
+        <field name="res_model">bave.sale.order.report</field>
+        <field name="view_type">tree</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+        <field name="domain">[('upsell', '=', False),('invoice_confirmed','=', True)]</field>
+    </record>
+
+    <!--<menuitem action="action_bave_sale_order_out_report"-->
+              <!--id="menu_action_bave_sale_order_out_report"-->
+              <!--parent="sale_out_report" sequence="70"/>-->
+
+    <!--open lines-->
+    <record id="open_bave_sale_order_out_report_server_action"
+            model="ir.actions.server">
+        <field name="name">Car out revenue</field>
+        <field name="model_id" ref="model_bave_sale_order_report"/>
+        <field name="condition">True</field>
+        <field name="state">code</field>
+        <field name="code">action = record.open_line()</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_open_bave_sale_order_out_report"
+            model="ir.values">
+        <field eval="'tree_but_open'" name="key2"/>
+        <field eval="'bave.sale.order.report'" name="model"/>
+        <field name="name">Car out revenue</field>
+        <field eval="'ir.actions.server,%d'%open_bave_sale_order_out_report_server_action" name="value"/>
+    </record>
+</odoo>

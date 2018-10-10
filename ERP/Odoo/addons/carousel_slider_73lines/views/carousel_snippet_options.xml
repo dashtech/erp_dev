@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Snippet's Options -->
+    <template id="s_object_carousel_option" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='carousel']" position="after">
+            <div data-js='js_get_objects' data-selector=".js_get_objects" />
+
+            <!-- Filter Options -->
+            <div data-js='js_get_objects_selectFilter' data-selector=".js_get_objects">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Filter</a>
+                    <ul class="dropdown-menu">
+                        <li data-filter_by_filter_id="">
+                            <a>No Filter</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Total Object Limit Options -->
+            <div data-js='js_get_objects_limit' data-selector=".js_get_objects">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Number of Objects</a>
+                    <ul class="dropdown-menu">
+                        <li data-objects_limit="">
+                            <a>All Objects</a>
+                        </li>
+                        <li data-objects_limit="1">
+                            <a>1</a>
+                        </li>
+                        <li data-objects_limit="2">
+                            <a>2</a>
+                        </li>
+                        <li data-objects_limit="4">
+                            <a>4</a>
+                        </li>
+                        <li data-objects_limit="6">
+                            <a>6</a>
+                        </li>
+                        <li data-objects_limit="8">
+                            <a>8</a>
+                        </li>
+                        <li data-objects_limit="10">
+                            <a>10</a>
+                        </li>
+                        <li data-objects_limit="12">
+                            <a>12</a>
+                        </li>
+                        <li data-objects_limit="15">
+                            <a>15</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Total Row Displayed Options -->
+            <div data-js='js_get_objects_in_row' data-selector=".js_get_objects">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">In Row</a>
+                    <ul class="dropdown-menu">
+                        <li data-objects_in_row="1">
+                            <a>1</a>
+                        </li>
+                        <li data-objects_in_row="2">
+                            <a>2</a>
+                        </li>
+                        <li data-objects_in_row="3">
+                            <a>3</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Total Object Limit per Slide Options -->
+            <div data-js='js_get_objects_in_slide' data-selector=".js_get_objects">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Objects in Each Slide</a>
+                    <ul class="dropdown-menu">
+                        <li data-objects_in_slide="1">
+                            <a>1</a>
+                        </li>
+                        <li data-objects_in_slide="2">
+                            <a>2</a>
+                        </li>
+                        <li data-objects_in_slide="3">
+                            <a>3</a>
+                        </li>
+                        <li data-objects_in_slide="4">
+                            <a>4</a>
+                        </li>
+                        <li data-objects_in_slide="5">
+                            <a>5</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Hide Headline Option -->
+            <div data-js='js_get_objects_headline' data-selector=".js_get_objects">
+                <li class="divider"></li>
+                <li data-toggle_class="headline_hidden"><a href="#">Hide Headline</a></li>
+            </div>
+
+        </xpath>
+    </template>
+
+</odoo>

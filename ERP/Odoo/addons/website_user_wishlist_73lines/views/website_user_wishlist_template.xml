@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Add WishList Option in Single Product Page -->
+    <template id="add_to_wishlist_product" inherit_id="website_sale.product" name="Add to Wishlist">
+        <xpath expr="//a[@id='add_to_cart']" position="after">
+            <t t-if="website.user_id != user_id and product.website_published and 'on' or 'off' == 'on'">
+                <t t-if="uid &gt; 0">
+                    <t t-if="not product.is_favorite()">
+                        <a data-href="/profile/add_to_wishlist" class="fa fa-heart-o js_add_remove_wish_list_json btn btn-default btn-lg mt8"
+                           t-att-data-product-id="product.id" data-toggle="tooltip" title="WishList"> Wish List</a>
+                    </t>
+                    <t t-if="product.is_favorite()">
+                        <a data-href="/profile/add_to_wishlist" class="fa fa-heart js_add_remove_wish_list_json btn btn-default btn-lg mt8"
+                           t-att-data-product-id="product.id" data-toggle="tooltip" title="WishList"> Wish List</a>
+                    </t>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add WishList Option in Shop Page for all Products -->
+    <template id="products_add_to_wish_list" inherit_id="website_sale.products_item" active="False" customize_show="True" name="Add to WishList">
+        <xpath expr="//div[@class='product_price']" position="inside">
+            <t t-if="website.user_id != user_id and product.website_published and 'on' or 'off' == 'on'">
+                <t t-if="uid &gt; 0">
+                    <t t-if="not product.is_favorite()">
+                        <a data-href="/profile/add_to_wishlist" class="btn btn-default btn-xs fa fa-heart-o easy-shortcuts-wishlist-shop"
+                           t-att-data-product-id="product.id" data-toggle="tooltip" title="WishList"/>
+                    </t>
+                    <t t-if="product.is_favorite()">
+                        <a data-href="/profile/add_to_wishlist" class="btn btn-default btn-xs fa fa-heart easy-shortcuts-wishlist-shop"
+                           t-att-data-product-id="product.id" data-toggle="tooltip" title="WishList"/>
+                    </t>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

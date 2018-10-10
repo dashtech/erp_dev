@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Proper Block Structure of Bottom Pager Block -->
+    <template id="products_bottom_pager_inherit" inherit_id="website_sale.products" name="Products View Options">
+        <xpath expr="//div[@class='products_pager'][2]" position="replace">
+            <div class="products_pager mt16" id="product_pager_bottom">
+                <div class="row" style="width: 100%;">
+                    <t t-call="website.pager"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- View Limit Template -->
+    <template id="product_limit" name="Product View Limit">
+        <div t-if="limits" class="product_limit dropdown btn-group">
+            <button class="btn btn-default dropdown-toggle active_limit" type="button" data-toggle="dropdown">
+                <b><t t-esc="PPG"/></b><span class="perPage"> per Page </span><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu limit_list">
+                <li t-foreach="limits" t-as="limit">
+                    <a class="product_limit_link" t-att-value="limit['name']"><t t-esc="limit['name']"/></a>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+    <!-- View Limit @top Template -->
+    <template id="product_limit_top" inherit_id="website_sale.products" name="Show View Limit @Top"
+              active="True" customize_show="True">
+        <xpath expr="//div[@class='products_pager'][1]/div" position="inside">
+            <t t-call="website_product_misc_options_73lines.product_limit"/>
+        </xpath>
+    </template>
+
+    <!-- View Limit @bottom Template -->
+    <template id="product_limit_bottom" inherit_id="website_product_misc_options_73lines.products_bottom_pager_inherit"
+              name="Show View Limit @Bottom" active="True" customize_show="True">
+        <xpath expr="//div[@id='product_pager_bottom']/div" position="inside">
+            <t t-call="website_product_misc_options_73lines.product_limit"/>
+        </xpath>
+    </template>
+
+    <!-- Shop page Template for View Switcher -->
+    <template id="products_grid_list" inherit_id="website_sale.products">
+        <xpath expr="//table" position="replace">
+            <table></table>
+            <t t-foreach="products" t-as="product">
+                <div id="grid_list" class="col-md-4 oe_product oe_grid oe_product_cart oe-height-4" t-att-data-publish="product.website_published and 'on' or 'off'">
+                    <t t-call="website_sale.products_item">
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Remove Existing Feature of List View from Customize Menu -->
+    <template id="website_sale.products_list_view" inherit_id="website_sale.products" active="False" customize_show="False" name="List View">
+        <xpath expr="//div[@id='products_grid']//table" position="replace">
+            <t t-foreach="products" t-as="product">
+                <div class="oe_product oe_list oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
+                    <t t-call="website_sale.products_item">
+                        <t t-set="show_publish" t-value="True"/>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- View Switcher Icons Template -->
+    <template id="product_view_switcher" name="Product View Switcher">
+        <div class="btn-group switch-grp">
+            <button class="btn btn-default view-switcher grid_view" data-toggle="tooltip" title="Grid View">
+                <span class="fa fa-th-large"/>
+            </button>
+            <button class="btn btn-default view-switcher list_view" data-toggle="tooltip" title="List View">
+                <span class="fa fa-bars"/>
+            </button>
+        </div>
+    </template>
+
+    <!-- View Switcher @top Template -->
+    <template id="product_switcher_top_inherit" inherit_id="website_sale.products" name="Show View Switcher @Top"
+              active="True" customize_show="True">
+        <xpath expr="//div[@class='products_pager'][1]/div" position="inside">
+            <t t-call="website_product_misc_options_73lines.product_view_switcher"/>
+        </xpath>
+    </template>
+
+    <!-- View Switcher @bottom Template -->
+    <template id="product_switcher_bottom_inherit" inherit_id="website_product_misc_options_73lines.products_bottom_pager_inherit"
+              name="Show View Switcher @Bottom" active="True" customize_show="True">
+        <xpath expr="//div[@id='product_pager_bottom']/div" position="inside">
+            <t t-call="website_product_misc_options_73lines.product_view_switcher"/>
+        </xpath>
+    </template>
+
+    <!-- Product Tags Filter -->
+    <template id="website_product_tags" inherit_id="website_sale.products_attributes" active="False" customize_show="True" name="Product Tags's Filter">
+        <xpath expr="//form[@class='js_attributes']" position="inside">
+            <t t-if="tags">
+                <div id="tags_div">
+                    <div class="filter_title">
+                        <strong>Tags</strong>
+                    </div>
+                    <t t-foreach="tags" t-as="tag">
+                        <label class="product-tag btn btn-primary btn-xs mb8">
+                            <input type="checkbox" name="tags" class="hidden product_tags" t-att-title="tag.name" t-att-value="'%s-%s' % (tag.name,tag.id)"
+                                   t-att-checked="'checked' if tag.id in tag_set else None"/>
+                            <span style="font-weight: normal" t-field="tag.name" />
+                        </label>
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Product Brands Filter -->
+    <template id="website_product_brands" inherit_id="website_sale.products_attributes" active="False" customize_show="True" name="Product Brand's Filter">
+        <xpath expr="//form[@class='js_attributes']" position="inside">
+            <t t-if="brands">
+                <div id="brands_div">
+                    <div class="filter_title">
+                        <strong>Brands</strong>
+                    </div>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="brands" t-as="brand">
+                            <li class="brand_list">
+                                <label style="margin: 0 40px;">
+                                    <input type="checkbox" name="brands" t-att-value="'%s-%s' % (brand.name,brand.id)"
+                                       t-att-checked="'checked' if brand.id in brand_set else None"/>
+                                    <span style="font-weight: normal" t-field="brand.name" />
+                                </label>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Product Prices Filter -->
+    <template id="products_price_min_max" inherit_id="website_sale.products" name="Product Price Min Max">
+        <xpath expr="//div[@id='products_grid_before']" position="inside">
+            <input type="hidden" id="price_min_range" t-att-value="price_min_range" name="price_max_range"/>
+            <input type="hidden" id="price_max_range" t-att-value="price_max_range" name="price_max_range"/>
+        </xpath>
+    </template>
+
+    <template id="website_product_prices" inherit_id="website_sale.products_attributes" active="False" customize_show="True" name="Product Price's Filter">
+        <xpath expr="//form[@class='js_attributes']" position="inside">
+            <t t-if="categ_products and category">
+                <div id="price_div">
+                    <div class="filter_title">
+                        <strong>Price</strong>
+                    </div>
+                    <div id="price_range">
+                        <input type="hidden" id="price_min" t-att-value="price_min" name="price_min"/>
+                        <input type="hidden" id="price_max" t-att-value="price_max" name="price_max"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Sort By extended Features -->
+    <template id="product_sorting_extended" inherit_id="website_sale.sort">
+        <xpath expr="//t[@t-set='website_sale_sortable']" position="replace">
+            <t t-set="website_sale_sortable" t-value="[
+                ('New Arrivals &lt;i class=\'fa fa-paper-plane\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'id desc'),
+                ('Price &lt;i class=\'fa fa-arrow-up\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'list_price desc'),
+                ('Price &lt;i class=\'fa fa-arrow-down\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'list_price asc'),
+                ('Name &lt;i class=\'fa fa-sort-alpha-asc\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'name asc'),
+                ('Name &lt;i class=\'fa fa-sort-alpha-desc\' aria-hidden=\'true\'&gt;&lt;/i&gt;', 'name desc'),
+            ]"/>
+        </xpath>
+    </template>
+
+    <!-- Search Template Extended for Filters -->
+    <template id="search_extended" inherit_id="website_sale.search" name="Search Box Extended">
+        <xpath expr="//form/t[@t-if='attrib_values']" position="after">
+            <t t-if="tag_values">
+                <t t-foreach="tag_values" t-as="t">
+                    <input type="hidden" name="tags" t-att-value="'%s-%s' % (t[0], t[1])" />
+                </t>
+            </t>
+            <t t-if="brand_values">
+                <t t-foreach="brand_values" t-as="b">
+                    <input type="hidden" name="brands" t-att-value="'%s-%s' % (b[0], b[1])" />
+                </t>
+            </t>
+            <t t-if="price_min">
+                <input type="hidden" name="price_min" t-att-value="price_min" />
+            </t>
+            <t t-if="price_max">
+                <input type="hidden" name="price_max" t-att-value="price_max" />
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

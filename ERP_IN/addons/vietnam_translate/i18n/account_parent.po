@@ -1,0 +1,250 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_parent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-09 09:14+0000\n"
+"PO-Revision-Date: 2018-05-09 16:42+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_account
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_open_chart
+msgid "Account Open chart"
+msgstr "Account Open chart"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_account_type
+msgid "Account Type"
+msgstr "Kiểu Tài khoản"
+
+#. module: account_parent
+#: model:ir.ui.menu,name:account_parent.menu_action_account_type_form
+msgid "Account Types"
+msgstr "Kiểu tài khoản"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_chart
+msgid "Account charts"
+msgstr "Hệ thống tài khoản"
+
+#. module: account_parent
+#: selection:account.open.chart,target_move:0
+msgid "All Entries"
+msgstr "Tất cả bút toán"
+
+#. module: account_parent
+#: selection:account.open.chart,target_move:0
+msgid "All Posted Entries"
+msgstr "Tất cả bút toán đã vào sổ"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_balance
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_chart
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: account_parent
+#: model:ir.actions.act_window,name:account_parent.open_view_account_noparent_tree
+#: model:ir.actions.act_window,name:account_parent.open_view_account_tree
+msgid "Chart of Account Heirarchy"
+msgstr "Hệ thống phân cấp tài khoản"
+
+#. module: account_parent
+#: model:ir.actions.act_window,name:account_parent.action_account_chart
+#: model:ir.ui.menu,name:account_parent.menu_action_account_chart
+msgid "Chart of Accounts Heirarchy"
+msgstr "Hệ thống phân cấp tài khoản"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_noparent_tree
+#: model:ir.ui.view,arch_db:account_parent.view_account_tree
+msgid "Chart of accounts"
+msgstr "Hệ thống tài khoản"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_child_ids
+msgid "Child Accounts"
+msgstr "Tài khoản con"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_credit
+msgid "Credit"
+msgstr "Có"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_chart
+msgid "Date(s)"
+msgstr "Ngày"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_debit
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_date_to
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_journal
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: account_parent
+#: model:ir.actions.act_window,name:account_parent.action_move_lines_open
+msgid "Journal Entry Items"
+msgstr "Journal Entry Items"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_move_line_ids
+msgid "Journal Entry Lines"
+msgstr "Journal Entry Lines"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_parent_left
+msgid "Left Parent"
+msgstr "Left Parent"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_chart
+msgid "Open Charts"
+msgstr "Xem biểu đồ"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_parent_id
+#: model:ir.model.fields,field_description:account_parent.field_account_account_template_parent_id
+msgid "Parent Account"
+msgstr "Tài khoản cha"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_parent_needed
+msgid "Parent Grouping Needed"
+msgstr "Parent Grouping Needed"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_template_property_temp_related_account_id
+msgid "Related Account"
+msgstr "Related Account"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_account_parent_right
+msgid "Right Parent"
+msgstr "Right Parent"
+
+#. module: account_parent
+#: model:res.groups,name:account_parent.group_coas_user
+msgid "Show Chart of Account Structure"
+msgstr "Hiển thị cấu trúc tài khoản"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_date_from
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: account_parent
+#: model:ir.model.fields,field_description:account_parent.field_account_open_chart_target_move
+msgid "Target Moves"
+msgstr "Lọc Bút toán"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_chart_template
+msgid "Templates for Account Chart"
+msgstr "Mẫu hệ thống tài khoản"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_account_account_template
+msgid "Templates for Accounts"
+msgstr "Mẫu tài khoản"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_noparent_tree
+#: model:ir.ui.view,arch_db:account_parent.view_account_tree
+msgid "Total Balance"
+msgstr "Total Balance"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_noparent_tree
+#: model:ir.ui.view,arch_db:account_parent.view_account_tree
+msgid "Total Credit"
+msgstr "Tổng có"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_noparent_tree
+#: model:ir.ui.view,arch_db:account_parent.view_account_tree
+msgid "Total Debit"
+msgstr "Tổng nợ"
+
+#. module: account_parent
+#: model:account.account.type,name:account_parent.data_account_type_view
+msgid "View Type"
+msgstr "View Type"
+
+#. module: account_parent
+#: model:ir.ui.view,arch_db:account_parent.view_account_chart
+msgid "or"
+msgstr "hoặc"
+
+#. module: account_parent
+#: model:ir.model,name:account_parent.model_wizard_multi_charts_accounts
+msgid "wizard.multi.charts.accounts"
+msgstr "wizard.multi.charts.accounts"

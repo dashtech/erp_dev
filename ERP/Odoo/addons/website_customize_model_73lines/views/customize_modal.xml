@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Customize - Customize Theme -->
+    <template id="all_theme_customize_modal" inherit_id="website.theme_customize" name="All Theme Customize Modal">
+        <xpath expr="//div[@id='theme_customize_modal']" position="replace">
+            <div id="theme_customize_modal" class="modal fade">
+                <div id="lines_customize_modal">
+                    <div id="switcher-body">
+                        <div class="demo_changer">
+                            <div class="demo-icon">
+                                <button type="button" class="close" data-dismiss="modal" style="width: 42px;height: 32px;">
+                                    <i class="fa fa-close fa-1x" style="color: black;"></i>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                            </div>
+                            <div class="form_holder">
+                                <div class="modal-body">
+                                    <ul class="nav nav-pills nav-justified">
+                                        <li class="active">
+                                            <a data-toggle="pill" href="#home">Color</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="pill" href="#menu1">Font</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="pill" href="#menu2">Pattern</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="pill" href="#menu3">Layouts</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="home" class="tab-pane fade in active">
+                                            <div class="row">
+                                                <!-- Header -->
+                                                <div class="col-md-12 mt16 mb16">
+                                                    <strong><h4 class="mt0">Header Color</h4></strong>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="header_bgcolor_white" type="radio" name="header_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.header_white" active="True" />
+                                                        <span class="white"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="header_bgcolor_gray_lighter" type="radio" name="header_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.header_light" />
+                                                        <span class="gray-lighter"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="header_bgcolor_gray_darker" type="radio" name="header_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.header_dark" />
+                                                        <span class="gray-darker"></span>
+                                                    </label>
+                                                </div>
+                                                <!-- Schemes -->
+                                                <div class="col-md-12 mt16">
+                                                    <strong><h4>Main Color</h4></strong>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_mango">
+                                                    <label class="icon checked">
+                                                        <input id="scheme_color_mango" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_mango" active="True" />
+                                                        <span class="mango-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_sun">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_sun" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_sun" />
+                                                        <span class="sun-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_moon">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_moon" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_moon" />
+                                                        <span class="moon-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_leo">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_leo" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_leo" />
+                                                        <span class="leo-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_star">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_star" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_star" />
+                                                        <span class="star-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_pluto">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_pluto" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_pluto" />
+                                                        <span class="pluto-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_tiptop">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_tiptop" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_tiptop" />
+                                                        <span class="tiptop-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 mt16 mb16 scheme_color_libra">
+                                                    <label class="icon">
+                                                        <input id="scheme_color_libra" type="radio" name="scheme_color_var"
+                                                               data-xmlid="website_customize_model_73lines.colors_libra" />
+                                                        <span class="libra-primary"></span>
+                                                    </label>
+                                                </div>
+                                                <!-- Footer -->
+                                                <div class="col-md-12 mt16 mb16">
+                                                    <strong><h4>Footer</h4></strong>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="footer_bgcolor_white" type="radio" name="footer_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.footer_white" active="True" />
+                                                        <span class="white"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="footer_bgcolor_gray_lighter" type="radio" name="footer_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.footer_light" />
+                                                        <span class="gray-lighter"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="icon">
+                                                        <input id="footer_bgcolor_gray_darker" type="radio" name="footer_bgcolor_var"
+                                                               data-xmlid="website_customize_model_73lines.footer_dark" />
+                                                        <span class="gray-darker"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="menu1" class="tab-pane fade">
+                                            <h3>Fonts</h3>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <label class="icon checked font_oxygen">
+                                                        <input name="font_var" type="radio" id="font_oxygen"
+                                                               data-xmlid="website_customize_model_73lines.font_oxygen" active="True" />
+                                                        <h4 style="font-family: Oxygen; font-size: 25px">Oxygen</h4>
+                                                    </label>
+                                                    <label class="icon font_dosis">
+                                                        <input name="font_var" type="radio" id="font_dosis"
+                                                               data-xmlid="website_customize_model_73lines.font_dosis" />
+                                                        <h4 style="font-family: Dosis; font-size: 25px">Dosis</h4>
+                                                    </label>
+                                                    <label class="icon font_lato">
+                                                        <input name="font_var" type="radio" id="font_lato"
+                                                               data-xmlid="website_customize_model_73lines.font_lato" />
+                                                        <h4 style="font-family: Lato; font-size: 25px">Lato</h4>
+                                                    </label>
+
+                                                    <label class="icon font_bitter">
+                                                        <input name="font_var" type="radio" id="font_bitter"
+                                                               data-xmlid="website_customize_model_73lines.font_bitter" />
+                                                        <h4 style="font-family: Bitter; font-size: 25px">Bitter</h4>
+                                                    </label>
+
+                                                    <label class="icon font_comic_sans">
+                                                        <input name="font_var" type="radio" id="font_comic_sans"
+                                                               data-xmlid="website_customize_model_73lines.font_comic_sans" />
+                                                        <h4 style="font-family: ComicRegular; font-size: 25px">Comic Sans</h4>
+                                                    </label>
+
+                                                    <label class="icon font_varela_round">
+                                                        <input name="font_var" type="radio" id="font_varela_round"
+                                                               data-xmlid="website_customize_model_73lines.font_varela_round" />
+                                                        <h4 style="font-family: VarelaRound-Regular; font-size: 25px">Varela</h4>
+                                                    </label>
+
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                    <label class="icon font_nunito">
+                                                        <input name="font_var" type="radio" id="font_nunito"
+                                                               data-xmlid="website_customize_model_73lines.font_nunito" />
+                                                        <h4 style="font-family: Nunito; font-size: 25px">Nunito</h4>
+                                                    </label>
+
+                                                    <label class="icon font_raleway">
+                                                        <input name="font_var" type="radio" id="font_raleway"
+                                                               data-xmlid="website_customize_model_73lines.font_raleway" />
+                                                        <h4 style="font-family: Raleway; font-size: 25px">Raleway</h4>
+                                                    </label>
+
+                                                    <label class="icon font_roboto">
+                                                        <input name="font_var" type="radio" id="font_roboto"
+                                                               data-xmlid="website_customize_model_73lines.font_roboto_slab" />
+                                                        <h4 style="font-family: Roboto Slab; font-size: 25px">Roboto Slab</h4>
+                                                    </label>
+                                                    <label class="icon font_popins">
+                                                        <input name="font_var" type="radio" id="font_popins"
+                                                               data-xmlid="website_customize_model_73lines.font_poppins" />
+                                                        <h4 style="font-family: Poppins; font-size: 25px">Poppins</h4>
+                                                    </label>
+
+                                                    <label class="icon font_gruppo">
+                                                        <input name="font_var" type="radio" id="font_gruppo"
+                                                               data-xmlid="website_customize_model_73lines.font_gruppo" />
+                                                        <h4 style="font-family: Gruppo; font-size: 25px">Gruppo</h4>
+                                                    </label>
+                                                    <label class="icon font_handlee">
+                                                        <input name="font_var" type="radio" id="font_handlee"
+                                                               data-xmlid="website_customize_model_73lines.font_handlee" />
+                                                        <h4 style="font-family: Handlee; font-size: 25px">Handlee</h4>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="menu2" class="tab-pane fade">
+                                            <h3>Pattern</h3>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio" data-xmlid="" />
+                                                        <span class="none"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_1" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_01.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_2" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_02.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_3" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_03.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_4" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_04.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_5" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_05.png');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_6" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_06.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                                    <label class="icon">
+                                                        <input name="bgpattern_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.bg_pattern_7" />
+                                                        <span style="background-image:url('/website_customize_model_73lines/static/img/pattern/bg_pattern_07.jpg');"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="menu3" class="tab-pane fade">
+                                            <h3>Layout</h3>
+                                            <div class="row">
+                                                <!-- Layout body -->
+                                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                    <label class="icon checked">
+                                                        <input name="layout_var" type="radio" data-xmlid="" />
+                                                        Full width
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                    <label class="icon">
+                                                        <input name="layout_var" type="radio"
+                                                               data-xmlid="website_customize_model_73lines.layout_boxed" />
+                                                        Boxed
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

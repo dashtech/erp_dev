@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="survey_1" model="survey.survey">
+        <field name="title">Đèn điện, kính chắn gió</field>
+    </record>
+    <record id="survey_2" model="survey.survey">
+        <field name="title">Thân xe bên ngoài</field>
+    </record>
+    <record id="survey_3" model="survey.survey">
+        <field name="title">Bình ác quy</field>
+    </record>
+    <record id="survey_4" model="survey.survey">
+        <field name="title">Mức xăng</field>
+    </record>
+    <record id="survey_5" model="survey.survey">
+        <field name="title">Hao mòn lốp xe, phanh</field>
+    </record>
+    <record id="survey_6" model="survey.survey">
+        <field name="title">Bên trong xe</field>
+    </record>
+    <record id="survey_7" model="survey.survey">
+        <field name="title">Cần gạt mưa</field>
+    </record>
+    <record id="survey_8" model="survey.survey">
+        <field name="title">Kiểm tra mức chất lỏng</field>
+    </record>
+    <record id="survey_9" model="survey.survey">
+        <field name="title">Dây đai/Đường ống/Chắn đỡ</field>
+    </record>
+    <record id="survey_10" model="survey.survey">
+        <field name="title">Hệ thống phanh</field>
+    </record>
+    <record id="survey_11" model="survey.survey">
+        <field name="title">Hệ thống tay lái/Nhún</field>
+    </record>
+    <record id="survey_12" model="survey.survey">
+        <field name="title">Hệ thống ống xả</field>
+    </record>
+</odoo>

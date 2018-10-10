@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="closing_entry_config_rule" model="ir.rule">
+            <field name="name">closing_entry_config</field>
+            <field name="model_id" ref="model_closing_entry_configs"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+		<!-- Closing Entry Configuration -->
+		<record id="closing_entry_config_tree_view" model="ir.ui.view">
+			<field name="name">closing.entry.config.tree</field>
+			<field name="model">closing.entry.configs</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Closing Entry Config" colors="black:profit_loss == True">
+					<field name="name" />
+					<field name="origin_account_id" />
+					<field name="forward_account_id" />
+					<field name="profit_loss" />
+					<field name="forward_type" />
+					<field name="sequence" />
+					<field name="company_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="closing_entry_config_form_view" model="ir.ui.view">
+			<field name="name">closing.entry.config.form</field>
+			<field name="model">closing.entry.configs</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Closing Entry Config">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="code" />
+								<field name="forward_type" />
+								<field name="profit_loss" />
+
+							</group>
+							<group>
+								<field name="origin_account_code"/>
+								<field name="forward_account_code"/>
+								<field name="origin_account_id" context="{'show_all':True}" domain="[('user_type_id.type', '=', 'view')]"/>
+								<field name="forward_account_id" context="{'show_all':True}" domain="[('user_type_id.type', '=', 'view')]"/>
+								<field name="sequence" />
+								<field name="company_id" groups="base.group_multi_company" required="1" widget="selection"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_closing_entry_config_tree_view">
+			<field name="name">Closing Entries</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">closing.entry.configs</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="closing_entry_config_menu" parent="account.menu_account_reports"
+			action="action_closing_entry_config_tree_view" sequence="20" groups="account.group_account_user,account.group_account_manager" />
+
+		<!-- Closing Entry -->
+
+		<record id="closing_entry_tree_view" model="ir.ui.view">
+			<field name="name">closing.entry.tree</field>
+			<field name="model">closing.entry</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Closing Entry" colors="blue:state == 'draft';black:state == 'confirm';gray:state == 'cancel'">
+					<field name="name" />
+					<field name="reference" />
+					<field name="date" />
+					<field name="start_date" />
+					<field name="end_date" />
+					<field name="journal_id" />
+					<field name="company_id" groups="base.group_multi_company"/>
+					<field name="state" visible="1" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="closing_entry_form_view" model="ir.ui.view">
+			<field name="name">closing.entry.form</field>
+			<field name="model">closing.entry</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Closing Entry Form">
+					<header>
+						<button name="action_confirm" states="draft"
+							string="Confirm" type="object" class="oe_highlight" groups="account.group_account_user" />
+						<button name="action_post" type='object' class="oe_highlight"
+							string='Post' states='confirm' groups="account.group_account_manager" />
+						<button name="action_cancel" type="object" states="confirm,post"
+							string="Cancel Entry" groups="account.group_account_manager" />
+						<button name="action_draft" states="cancel" string="Set to Draft"
+							type="object" groups="account.group_account_manager" class="oe_highlight" />
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm,post" />
+					</header>
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="reference" />
+								<field name="date" />
+								<field name="account_move_id" />
+							</group>
+							<group>
+								<field name="journal_id" />
+								<field name="start_date" />
+								<field name="end_date" />
+								<field name="company_id" groups="base.group_multi_company"/>
+							</group>
+						</group>
+						<notebook attrs="{'invisible': [('state','in',('draft','cancel'))]}">
+							<page string="Journal Items">
+								<field name="closing_entry_line" nolabel="1">
+									<tree>
+										<field name="name"/>
+										<field name="account_id"/>
+										<field name="debit"/>
+										<field name="credit"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_closing_entry_tree_view">
+			<field name="name">Closing Entries</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">closing.entry</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="closing_entry_menu" parent="account.menu_finance_entries"
+			action="action_closing_entry_tree_view" sequence="19" groups="account.group_account_user,account.group_account_manager" />
+
+    </data>
+</odoo>

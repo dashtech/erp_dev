@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-extend="ShowPaymentInfo">
+        <span t-jquery="[class='oe_form_field oe_form_field_float oe_form_field_monetary']"
+              t-operation="before">
+            <span class="oe_form_field"
+                  style="margin-left: -10px;">
+                by <t t-esc="line.journal_name"/>
+            </span>
+        </span>
+    </t>
+</templates>

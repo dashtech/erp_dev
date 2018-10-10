@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="hr_payslip_extend_form">
+        <field name="name">hr_payslip_extend_form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/field[@name='name']" position="after">
+                <field name="bsc_readonly" readonly="1"/>
+                <field name="bsc_value" invisible="1"/>
+                <field name="kpi_readonly" readonly="1"/>
+                <field name="kpi" invisible="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="generate_payslips_inherit" model="ir.ui.view">
+        <field name="name">generate_payslips_inherit</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">160</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[2]" position="replace">
+                <button name="check_to_route" type="object" states="draft" string="Generate Payslips" class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//header/button[2]" position="after">
+                <button name="payment_act" type="object" states="draft" string="Options" class="oe_highlight"/>
+            </xpath>
+           <xpath expr="//group/field[@name='journal_id']" position="before">
+               <field name="company_id" invisible="1"/>
+           </xpath>
+            <xpath expr="//group/field[@name='journal_id']" position="attributes">
+               <attribute name="domain">[('type', 'in', ['cash','bank']), ('company_id', '=', company_id)]</attribute>
+           </xpath>
+        </field>
+    </record>
+    <record id="view_hr_payslip_by_employees_inherit" model="ir.ui.view">
+        <field name="name">view_hr_payslip_by_employees_inherit</field>
+        <field name="model">hr.payslip.employees</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_by_employees"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[1]" position="after">
+                <field name="company_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//group[2]/field[@name='employee_ids']" position="attributes">
+                <attribute name="domain">[('company_id', '=', company_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--Menu options payment salary, print, email-->
+    <record id="payment_payslip_form" model="ir.ui.view">
+        <field name="name">payment_payslip_form</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="priority">5000</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                       <field name="journal_id" required="1"
+                              domain="[('type', 'in', ['cash','bank']), ('company_id', '=', company_id)]"/>
+                    </group>
+                    <group>
+                        <div>
+                            <label for="check_payment" style="margin-left:110px;font-weight: bolder"/>
+                            <field name="check_payment" widget="checkbox" style="margin-left:12px"/>
+                            <field name="check_print" widget="checkbox" style="margin-left:69px"/>
+                            <field name="check_email" widget="checkbox" style="margin-left:7px"/>
+                            <field name="state" invisible="1"/>
+                            <field name="company_id" invisible="1"/>
+                        </div>
+
+                    </group>
+                </group>
+                <field name="slip_ids">
+                    <tree editable="bottom" create="0">
+                        <field name="number" readonly="1"/>
+                        <field name="employee_id" readonly="1"/>
+                        <field name="name" readonly="1"/>
+                        <field name="date_from" readonly="1" invisible="1"/>
+                        <field name="date_to" readonly="1" invisible="1"/>
+                        <field name="net_wage" readonly="1"/>
+                        <field name="state" readonly="1"/>
+                        <field name="payment" widget="checkbox" attrs="{'readonly': ['|',('state', '=', 'done'), '&amp;',('state', '=', 'cancel')]}"/>
+                        <field name="print_" widget="checkbox"/>
+                        <field name="email_" widget="checkbox"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="done_act" type="object" class="oe_highlight" string="Payment"/>
+                    OR
+                    <button name="print_act" type="object" class="oe_highlight" string="Print"/>
+                    OR
+                    <button name="send_act" type="object" class="oe_highlight" string="Send mail"/>
+                </footer>
+            </form>
+
+        </field>
+    </record>
+    <record id="payment_payslip_action" model="ir.actions.act_window">
+        <field name="name">Options</field>
+        <field name="res_model">hr.payslip.run</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref':'btek_hr_holiday.payment_payslip_form'}</field>
+    </record>
+
+    <!--Menu payment insurance-->
+    <record id="payment_insurance_tree" model="ir.ui.view">
+        <field name="name">payment_insurance_tree</field>
+        <field name="model">payment.insurance</field>
+        <!--<field name="priority">5000</field>-->
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="descript"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="state"/>
+                <field name="amount_total"/>
+            </tree>
+        </field>
+    </record>
+    <record id="payment_insurance_form" model="ir.ui.view">
+        <field name="name">payment_insurance_form</field>
+        <field name="model">payment.insurance</field>
+        <!--<field name="priority">500</field>-->
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="open_payment_ins" type="object" class="oe_highlight"
+                            string="Pay Insurance" states="draft"/>
+                    <button name="cancel_ins" type="object" class="oe_highlight"
+                            string="Cancel" states="draft"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <group>
+                    <group context="{'show_parent_account': True}">
+                       <field name="name"/>
+                       <field name="company_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                       <!--<field name="debit_account" required="1"-->
+                              <!--domain="[('code', 'ilike', '338%'), ('company_id', '=', company_id)]"/>-->
+                        <field name="descript" required="1"/>
+                    </group>
+                    <group>
+                        <field name="month" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="year" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                               widget="regex_mask" data-inputmask-regex="[0-9]+\.[0-9]{4}"/>
+                        <field name="amount_total"/>
+                    </group>
+                </group>
+                <button name="load_insurance" string="Load Insurance" type="object"
+                        class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                <field name="detail_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                    <tree editable="bottom">
+                          <!--attrs="{'create': [('state_', '!=', 'draft')], 'edit': [('state_', '!=', 'draft')], 'delete': [('state_', '!=', 'draft')]}">-->
+                        <field name="state_" invisible="1"/>
+                        <field name="descript"/>
+                               <!--attrs="{'readonly': [('state_', '!=', 'draft')]}"/>-->
+                        <field name="account" domain="[('code', 'ilike', '338%'), ('company_id', '=', parent.company_id)]"/>
+                                    <!--attrs="{'readonly': [('state_', '!=', 'draft')]}"/>-->
+                        <field name="amount"/>
+                               <!--attrs="{'readonly': [('state_', '!=', 'draft')]}"/>-->
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+    <record id="payment_insurance_action" model="ir.actions.act_window">
+        <field name="name">Payment Insurance</field>
+        <field name="res_model">payment.insurance</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+        <field name="context">{'show_parent_account': True}</field>
+    </record>
+
+    <!--Menu open for payment insurance-->
+    <record id="open_payment_insurance_form" model="ir.ui.view">
+        <field name="name">open_payment_insurance_form</field>
+        <field name="model">payment.insurance</field>
+        <field name="priority">5100</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                       <field name="journal_id" required="1"
+                              domain="[('type', 'in', ['cash','bank']), ('company_id', '=', company_id.id)]"/>
+                        <field name="amount_total" invisible="0"/>
+                    </group>
+                    <group>
+                        <field name="date_payment" required="1"/>
+                        <field name="note" invisible="0"/>
+                        <field name="company_id" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="pay_insurance" type="object" class="oe_highlight" string="Payment"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+
+        </field>
+    </record>
+    <record id="open_payment_insurance_action" model="ir.actions.act_window">
+        <field name="name">Paymnet Insurance</field>
+        <field name="res_model">payment.insurance</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref':'btek_hr_holiday.open_payment_insurance_form'}</field>
+    </record>
+
+    <menuitem action="payment_insurance_action"
+              id="payment_insurance_menu"
+              parent="hr_payroll.menu_hr_payroll_root"/>
+
+</odoo>

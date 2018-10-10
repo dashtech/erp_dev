@@ -1,0 +1,302 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bave_basic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-24 08:03+0000\n"
+"PO-Revision-Date: 2018-09-24 18:03+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/sale.py:147
+#, python-format
+msgid ""
+"\n"
+"                        <span style=\"text-align: center; color: blue;\">\n"
+"                            <h1>Are you sure ordering this?</h1>\n"
+"                        </span></br>\n"
+"                        <span style=\"font-size: 13; text-align: center\">\n"
+"                            <h3> Amount total payment : {}</h3>\n"
+"                        </span></br>\n"
+"                        <span style=\"text-align: center\"><h3>Equal text : <i>{}</i></h3></span>\n"
+"                        "
+msgstr ""
+"\n"
+"                        <span style=\"text-align: center; color: blue;\">\n"
+"                            <h1>Bạn có chắc chắn thực hiện đơn hàng này?</h1>\n"
+"                        </span></br>\n"
+"                        <span style=\"font-size: 13; text-align: center\">\n"
+"                            <h3> Tổng tiền thanh toán : {}</h3>\n"
+"                        </span></br>\n"
+"                        <span style=\"text-align: center\"><h3>Bằng chữ : <i>{}</i></h3></span>\n"
+"                        "
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/purchase.py:80
+#, python-format
+msgid ""
+"\n"
+"            <span style=\"text-align: center; color: blue;\">\n"
+"                <h1>Are you sure ordering this?</h1>\n"
+"            </span></br>\n"
+"            <span style=\"font-size: 13; text-align: center\">\n"
+"                <h3> Amount total payment : {}</h3>\n"
+"            </span></br>\n"
+"            <span style=\"text-align: center\"><h3>Equal text : <i>{}</i></h3></span>\n"
+"            "
+msgstr ""
+"\n"
+"            <span style=\"text-align: center; color: blue;\">\n"
+"                <h1>Bạn có chắc chắn thực hiện đơn hàng này?</h1>\n"
+"            </span></br>\n"
+"            <span style=\"font-size: 13; text-align: center\">\n"
+"                <h3> Tổng tiền thanh toán : {}</h3>\n"
+"            </span></br>\n"
+"            <span style=\"text-align: center\"><h3>Bằng chữ : <i>{}</i></h3></span>\n"
+"            "
+
+#. module: bave_basic
+#: model:ir.module.category,name:bave_basic.module_category_agara
+msgid "Agara security"
+msgstr "Agara security"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/purchase_config.py:18
+#, python-format
+msgid "Allow auto picking in"
+msgstr "Cho phép tự động nhập kho"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/sale_config.py:18
+#, python-format
+msgid "Allow auto picking out"
+msgstr "Cho phép tự động xuất kho"
+
+#. module: bave_basic
+#: model:ir.model.fields,field_description:bave_basic.field_purchase_config_settings_auto_picking
+msgid "Auto Picking in"
+msgstr "Tự động nhập kho"
+
+#. module: bave_basic
+#: model:ir.model.fields,field_description:bave_basic.field_sale_config_settings_auto_picking_sale
+msgid "Auto Picking out"
+msgstr "Tự động xuất kho"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/purchase.py:37
+#, python-format
+msgid "Can not find account journal!"
+msgstr "Không tìm thấy sổ nhật ký!"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_car_repair_form
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_order_form
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_sale_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: bave_basic
+#: selection:purchase.config.settings,auto_picking:0
+msgid "Cho phép tự động nhập kho"
+msgstr "Cho phép tự động nhập kho"
+
+#. module: bave_basic
+#: selection:sale.config.settings,auto_picking_sale:0
+msgid "Cho phép tự động xuất kho"
+msgstr "Cho phép tự động xuất kho"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_car_repair_form
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_order_form
+#: model:ir.ui.view,arch_db:bave_basic.pre_comfirm_sale_form
+#: model:ir.ui.view,arch_db:bave_basic.purchase_order_form_basic
+#: model:ir.ui.view,arch_db:bave_basic.view_order_form_basic_change
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Cost of capital"
+msgstr "Giá vốn"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.view_fleet_repair_form_basic
+msgid "Create repair order"
+msgstr "Tạo lệnh sửa chữa"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_vpicktree
+msgid "Document number"
+msgstr "Số chứng từ"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.view_partner_tree_basic_change
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: bave_basic
+#: model:ir.module.category,description:bave_basic.module_category_agara
+msgid "Helps you manage Agara."
+msgstr "Helps you manage Agara"
+
+#. module: bave_basic
+#: model:ir.model.fields,field_description:bave_basic.field_purchase_order_html
+msgid "Html"
+msgstr "Html"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Internal Category"
+msgstr "Nhóm nội bộ"
+
+#. module: bave_basic
+#: selection:purchase.config.settings,auto_picking:0
+msgid "Không cho phép tự động nhập kho"
+msgstr "Không cho phép tự động nhập kho"
+
+#. module: bave_basic
+#: selection:sale.config.settings,auto_picking_sale:0
+msgid "Không cho phép tự động xuất kho"
+msgstr "Không cho phép tự động xuất kho"
+
+#. module: bave_basic
+#: model:ir.ui.menu,name:bave_basic.menu_finance_ledger
+msgid "Ledger"
+msgstr "Sổ cái"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_vpicktree
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/sale.py:174
+#, python-format
+msgid "Must be done picking before confirm."
+msgstr "Bạn cần hoàn thành việc xuất/nhập kho trước khi chốt lệnh."
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/sale.py:170
+#, python-format
+msgid "Must be done work order before confirm."
+msgstr "Bạn cần chuyển trạng thái công việc sang hoàn thành trước khi chốt lệnh."
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/purchase_config.py:19
+#, python-format
+msgid "Not allow auto picking in"
+msgstr "Không cho phép tự động nhập kho"
+
+#. module: bave_basic
+#: code:addons/bave_basic/models/sale_config.py:19
+#, python-format
+msgid "Not allow auto picking out"
+msgstr "Không cho phép tự động xuất kho"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.repair_view_order_form_basic
+msgid "Ordered"
+msgstr "Chốt lệnh"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_vpicktree
+msgid "Picking list"
+msgstr "Bảng kế hàng giao nhận"
+
+#. module: bave_basic
+#: model:ir.model.fields,field_description:bave_basic.field_sale_order_pre_order_html
+msgid "Pre order html"
+msgstr "Pre order html"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Price"
+msgstr "Giá"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.repair_view_order_form_basic
+msgid "Print work order"
+msgstr "In phiếu công việc"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Product Variants"
+msgstr "Biến thể VT-HH"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+#: model:ir.ui.view,arch_db:bave_basic.product_product_tree_view_basic_change
+msgid "Product code"
+msgstr "Mã VT-HH"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Product name"
+msgstr "Tên VT-HH"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.purchase_order_auto_config
+msgid "Purchase Picking"
+msgstr "Mua hàng nhập kho"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.sale_order_auto_config
+msgid "Sale order Picking"
+msgstr "Bán hàng xuất kho"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn đặt hàng"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng hàng của Đơn hàng bán"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_product_template_tree_view
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: bave_basic
+#: model:ir.ui.view,arch_db:bave_basic.basic_vpicktree
+msgid "Source Documents"
+msgstr "Tài liệu nguồn"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: bave_basic
+#: model:ir.actions.act_window,name:bave_basic.action_pre_confirm_cso
+#: model:ir.actions.act_window,name:bave_basic.action_pre_confirm_po
+#: model:ir.actions.act_window,name:bave_basic.action_pre_confirm_so
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_purchase_config_settings
+msgid "purchase.config.settings"
+msgstr "purchase.config.settings"
+
+#. module: bave_basic
+#: model:ir.model,name:bave_basic.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "sale.config.settings"

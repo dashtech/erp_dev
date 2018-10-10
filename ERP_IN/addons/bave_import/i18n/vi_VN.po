@@ -1,0 +1,1101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bave_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-04 09:38+0000\n"
+"PO-Revision-Date: 2018-10-04 09:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_accounting
+msgid "Accounting"
+msgstr "Kế toán"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:160
+#, python-format
+msgid "Asset category"
+msgstr "Asset category"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_attachment_id
+msgid "Attachment"
+msgstr "Đính kèm"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_name
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_name
+msgid "Attachment Name"
+msgstr "Tên đính kèm"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_local_url
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_website_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_local_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_website_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_local_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_website_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_local_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_website_url
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_local_url
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_website_url
+msgid "Attachment URL"
+msgstr "URL Đính kèm"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_attachment_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_attachment_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_attachment_id
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_attachment_id
+msgid "Automatically created field to link to parent ir.attachment"
+msgstr "Automatically created field to link to parent ir.attachment"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:208
+#, python-format
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: bave_import
+#: model:ir.ui.view,arch_db:bave_import.import_customer_form_view
+#: model:ir.ui.view,arch_db:bave_import.import_product_category_form_view
+#: model:ir.ui.view,arch_db:bave_import.import_product_failed_form
+#: model:ir.ui.view,arch_db:bave_import.import_product_template_form_view
+#: model:ir.ui.view,arch_db:bave_import.import_product_uom_form_view
+#: model:ir.ui.view,arch_db:bave_import.import_supplier_form_view
+#: model:ir.ui.view,arch_db:bave_import.wizard_import_customer_return_error_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:154
+#, python-format
+msgid "Category"
+msgstr "Category"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:48
+#, python-format
+msgid "Category UOM can not empty, Row %s - Column B"
+msgstr "Nhóm đơn vị tính không thể để trống, Hàng %s - Cột B"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:59
+#, python-format
+msgid "Category UOM does not exist, Row %s - Column B"
+msgstr "Nhóm đơn vị tính không tồn tại, Hàng %s - Cột B"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:58
+#, python-format
+msgid "Category name can not empty, Row %s - Column A"
+msgstr "Tên đơn vị tính không thể để trống, Hàng %s - Cột A"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_checksum
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_checksum
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_checksum
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_checksum
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_checksum
+msgid "Checksum/SHA1"
+msgstr "Checksum/SHA1"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:210
+#, python-format
+msgid "Comment"
+msgstr "Ghi chú"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_company_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_company_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_company_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_company_id
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_create_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_create_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_create_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_create_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_create_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_create_date
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_create_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_create_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_create_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_create_date
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:52
+#, python-format
+msgid "Customer already exists, Row %s - Column C"
+msgstr "Khách hàng đã tồn tại, hàng %s -  cột C"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:159
+#, python-format
+msgid "Customer tax"
+msgstr "Customer tax"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_partner
+msgid "Customer/Supplier"
+msgstr "Khách hàng/NCC"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_db_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_db_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_db_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_db_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_db_datas
+msgid "Database Data"
+msgstr "Database Data"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_description
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_description
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_description
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_description
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_display_name
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_display_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_display_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_display_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_display_name
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:94
+#, python-format
+msgid "Error description"
+msgstr "Mô tả lỗi"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_error_file
+msgid "Error file"
+msgstr "Tập tin lỗi"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:594
+#: code:addons/bave_import/models/import_customer.py:602
+#, python-format
+msgid "Error: Cannot find account code {} in row {}"
+msgstr "Lỗi:Không tìm thấy tài khoản kế toán {} ở hàng {}"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:541
+#, python-format
+msgid "Error: Cannot find country {} in row {}"
+msgstr "Lỗi: Không tìm thấy quốc gia {} ở hàng {}"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:532
+#, python-format
+msgid "Error: Cannot find customer type {} in row {}"
+msgstr "Lỗi: Loại khách hàng {} ở hàng {} không đúng, sửa lại thành \"Cá nhân\" hoặc \"Công ty\""
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:559
+#, python-format
+msgid "Error: Cannot find district {} in row {}"
+msgstr "Lỗi: Không tìm thấy Quận/Huyện {} ở hàng {}"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:611
+#, python-format
+msgid "Error: Cannot find group customer {} in row {}"
+msgstr "Lỗi: Không tìm thấy nhóm khách hàng {} ở hàng {}"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:620
+#, python-format
+msgid "Error: Cannot find insurance status {} in row {}"
+msgstr "Lỗi:Tình trạng mua hiểm: {} ở hàng {} không đúng, sửa lại thành \"Có\" hoặc \"Không\"."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:577
+#, python-format
+msgid "Error: Cannot find sex {} in row {}"
+msgstr "Error: Giới tính {} ở hàng {} không đúng, sửa lại thành \"Nam\" hoặc \"Nữ\" hoặc \"Không xác định\"."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:629
+#, python-format
+msgid "Error: Cannot find source melee {} in row {}"
+msgstr "Lỗi: Không tim thấy nguồn tiếp cận là {} ở hàng {}"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:550
+#, python-format
+msgid "Error: Cannot find state {} in row {}"
+msgstr "Lỗi:Không tìm thấy Tỉnh/TP {} ở hàng {}."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:586
+#, python-format
+msgid "Error: Cannot find title {} in row {}"
+msgstr "Lỗi: Không tìm thấy xưng hô {} ở hàng {}."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:568
+#, python-format
+msgid "Error: Cannot find ward {} in row {}"
+msgstr "Lỗi: Không tìm thấy Phường/Xã {} ở hàng {}."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:91
+#, python-format
+msgid "Error: Cannot import empty file!"
+msgstr "Lỗi: Không thể nhập vào File trống!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:73
+#, python-format
+msgid "Error: Format file incorrect, you must import file have at least 2 row!"
+msgstr "Error: Format file incorrect, you must import file have at least 2 row!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:103
+#: code:addons/bave_import/models/import_product.py:77
+#, python-format
+msgid "Error: Format file incorrect, you must import file have at least {} column!"
+msgstr "Lỗi: Định dạng File không đúng, bạn phải nhập tập tin có ít nhất {} cột!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:512
+#, python-format
+msgid "Error: Mobile {} already exist!"
+msgstr "Lỗi: Số di động {} đã tồn tại trên hệ thống!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:248
+#, python-format
+msgid "Error: Mobile {} in row {} exist on other row"
+msgstr "Lỗi: Số di động {} ở hàng {} đã tồn tại ở một hàng khác trên File."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:502
+#, python-format
+msgid "Error: Partner code {} already exist!"
+msgstr "Lỗi: Mã khách hàng {} đã tồn tại trên hệ thống!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:240
+#, python-format
+msgid "Error: Partner code {} in row {} exist on other row"
+msgstr "Lỗi: Mã khách hàng {} ở hàng {} đã tồn tại ở một hàng khác trên File."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:236
+#, python-format
+msgid "Error: row {} {} invalid!"
+msgstr "Lỗi: Hàng {} {} không đúng!"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:226
+#, python-format
+msgid "Error: row {} {} is blank!"
+msgstr "Lỗi: Hàng {} {} đang trống!"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_f_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_f_name
+msgid "F name"
+msgstr "Tên file"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_datas
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_datas
+msgid "File Content"
+msgstr "Nội dung tập tin"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_datas_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_datas_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_datas_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_datas_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_datas_fname
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_file_size
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_file_size
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_file_size
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_file_size
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_file_size
+msgid "File Size"
+msgstr "Dung lượng file"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_fleet
+msgid "Fleet"
+msgstr "Quản lý xe"
+
+#. module: bave_import
+#: model:ir.model.fields,help:bave_import.field_import_customer_priority
+#: model:ir.model.fields,help:bave_import.field_import_product_category_priority
+#: model:ir.model.fields,help:bave_import.field_import_product_template_priority
+#: model:ir.model.fields,help:bave_import.field_import_product_uom_priority
+#: model:ir.model.fields,help:bave_import.field_import_supplier_priority
+msgid "Gives the sequence order when displaying a list of tasks."
+msgstr "Chỉ ra thứ tự sắp xếp khi hiển thị danh sách nhiệm vụ."
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_id
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_id
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_account_account
+msgid "Import Account Account"
+msgstr "Nhập tài khoản kế toán"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_account_balance
+msgid "Import Account Balance"
+msgstr "Nhập số dư tài khoản"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_asset
+msgid "Import Asset"
+msgstr "Nhập tài sản"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_asset_categ
+msgid "Import Asset Category"
+msgstr "Nhập nhóm tài sản"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_car_repair_history
+msgid "Import Car Repair History"
+msgstr "Nhập lịch sử sửa chữa xe"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_customer
+msgid "Import Customer"
+msgstr "Nhập khách hàng"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_homepage
+#: model:ir.ui.menu,name:bave_import.bave_import_menu_root
+msgid "Import Data"
+msgstr "Nhập dữ liệu"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_debt_customer
+msgid "Import Debt Customer"
+msgstr "Nhập công nợ khách hàng"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_debt_supplier
+msgid "Import Debt Supplier"
+msgstr "Nhập công nợ nhà cung cấp"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_fleet_model
+msgid "Import Fleet Model"
+msgstr "Nhập dòng xe"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_fleet_vedicle
+msgid "Import Fleet Vehicle"
+msgstr "Nhập thông tin xe"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_product
+msgid "Import Product"
+msgstr "Nhập vật tư hàng hóa"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_product_categ
+msgid "Import Product Category"
+msgstr "Nhập dữ liệu nhóm VT-HH"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_product_uom
+msgid "Import Product Uom"
+msgstr "Nhập dữ liệu đơn vị đo"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_supplier
+msgid "Import Supplier"
+msgstr "Nhập nhà cung cấp"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_import_customer
+#: model:ir.actions.act_window,name:bave_import.wizard_import_customer_return_error_form_view_action
+#: model:ir.ui.view,arch_db:bave_import.import_customer_form_view
+msgid "Import customer"
+msgstr "Nhập dữ liệu khách hàng"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_import_product_category
+#: model:ir.ui.view,arch_db:bave_import.import_product_category_form_view
+msgid "Import product category"
+msgstr "Nhập dữ liệu nhóm VT-HH"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_import_product_template
+#: model:ir.ui.view,arch_db:bave_import.import_product_template_form_view
+msgid "Import product template"
+msgstr "Nhập dữ liệu VT-HH"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_import_product_uom
+#: model:ir.ui.view,arch_db:bave_import.import_product_uom_form_view
+msgid "Import product uom"
+msgstr "Nhập dữ liệu đơn vị đo"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.action_import_supplier
+#: model:ir.ui.view,arch_db:bave_import.import_supplier_form_view
+msgid "Import supplier"
+msgstr "Nhập dữ liệu nhà cung cấp"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_index
+msgid "Index"
+msgstr "Index"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_index_content
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_index_content
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_index_content
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_index_content
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_index_content
+msgid "Indexed Content"
+msgstr "Indexed Content"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_public
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_public
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_public
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_public
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_public
+msgid "Is public document"
+msgstr "Là tài liệu công khai"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:87
+#, python-format
+msgid "Không tìm thấy trường Phương pháp tính giá vốn, Hàng %s - Cột D"
+msgstr "Không tìm thấy trường Phương pháp tính giá vốn, Hàng %s - Cột D"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:82
+#, python-format
+msgid "Không tìm thấy trường Phường xã, Hàng %s - Cột G"
+msgstr "Không tìm thấy trường Phường xã, Hàng %s - Cột G"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:79
+#, python-format
+msgid "Không tìm thấy trường Quận/Huyện, Hàng %s - Cột G"
+msgstr "Không tìm thấy trường Quận/Huyện, Hàng %s - Cột G"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:98
+#, python-format
+msgid "Không tìm thấy trường Tạo bút toán kho, Dòng %s - Cột E"
+msgstr "Không tìm thấy trường Tạo bút toán kho, Dòng %s - Cột E"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:73
+#, python-format
+msgid "Không tìm thấy trường quốc gia, Hàng %s - Cột E"
+msgstr "Không tìm thấy trường quốc gia, Hàng %s - Cột E"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:76
+#, python-format
+msgid "Không tìm thấy trường thành phố, Hàng %s - Cột F"
+msgstr "Không tìm thấy trường thành phố, Hàng %s - Cột F"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:133
+#, python-format
+msgid "Không tìm thấy trường tiêu đề, Hàng %s - Cột L"
+msgstr "Không tìm thấy trường tiêu đề, Hàng %s - Cột L"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import___last_update
+#: model:ir.model.fields,field_description:bave_import.field_import_customer___last_update
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category___last_update
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template___last_update
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom___last_update
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_write_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_write_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_write_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_write_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_write_uid
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_write_date
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_write_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_write_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_write_date
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_write_date
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_line_error
+msgid "Line error"
+msgstr "Số dòng lỗi"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_mimetype
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_mimetype
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_mimetype
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_mimetype
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_mimetype
+msgid "Mime Type"
+msgstr "Mime Type"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_home_import_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: bave_import
+#: model:ir.ui.view,arch_db:bave_import.import_product_success_form
+msgid "OK"
+msgstr "Đồng ý"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:156
+#, python-format
+msgid "PO price"
+msgstr "PO price"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:157
+#, python-format
+msgid "PO uom"
+msgstr "PO uom"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:64
+#, python-format
+msgid "Parent Category can not empty, Row %s - Column B"
+msgstr "Nhóm VT-HH cha không tìm thấy, Hàng %s - Cột B"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:57
+#, python-format
+msgid "Payable Account can not empty, Row %s - Column Q"
+msgstr "Payable Account can not empty, Row %s - Column Q"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:107
+#: code:addons/bave_import/models/import_supplier.py:115
+#, python-format
+msgid "Payable Account does not exists! Row %s - Column Q"
+msgstr "Payable Account does not exists! Row %s - Column Q"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:155
+#, python-format
+msgid "Price"
+msgstr "Price"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_priority
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_priority
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_priority
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_priority
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.import_product_failed_action
+msgid "Product Import Failed"
+msgstr "Lỗi nhập VTHH"
+
+#. module: bave_import
+#: model:ir.actions.act_window,name:bave_import.import_product_success_action
+msgid "Product Import Success"
+msgstr "Nhập VTHH thành công"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:150
+#, python-format
+msgid "Product code"
+msgstr "Product code"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:151
+#, python-format
+msgid "Product name"
+msgstr "Product name"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:54
+#, python-format
+msgid "Receivable Account can not empty, Row %s - Column P"
+msgstr "Receivable Account can not empty, Row %s - Column P"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:99
+#, python-format
+msgid "Receivable Account does not exists! Dòng %s - Column P"
+msgstr "Tài khoản phải thu không tồn tại, Hàng %s - Cột P"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:91
+#, python-format
+msgid "Receivable Account does not exists! Row %s - Column P"
+msgstr "Receivable Account does not exists! Row %s - Column P"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_res_field
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_res_field
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_res_field
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_res_field
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_res_field
+msgid "Resource Field"
+msgstr "Resource Field"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_res_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_res_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_res_id
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_res_id
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_res_id
+msgid "Resource ID"
+msgstr "ID Tài nguyên"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_res_model
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_res_model
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_res_model
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_res_model
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_res_model
+msgid "Resource Model"
+msgstr "Resource Model"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_res_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_res_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_res_name
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_res_name
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_res_name
+msgid "Resource Name"
+msgstr "Tên Tài nguyên"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_return_error_file
+msgid "Return error file"
+msgstr "File lỗi trả về"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:58
+#, python-format
+msgid "Return_error_customer.xlsx"
+msgstr "Khách_hàng_nhập_lỗi.xlsx"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:52
+#, python-format
+msgid "Rounding can not empty, Row %s - Column D"
+msgstr "Trường làm tròn không thể để trống, Hàng %s - Cột D"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:158
+#, python-format
+msgid "SO uom"
+msgstr "SO uom"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.import_stock
+msgid "Stock"
+msgstr "Kho"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_store_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_store_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_store_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_store_fname
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_store_fname
+msgid "Stored Filename"
+msgstr "Tên tệp tin được lưu trữ"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_success
+msgid "Success"
+msgstr "Thành công"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:153
+#, python-format
+msgid "Supplier code"
+msgstr "Supplier code"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:49
+#, python-format
+msgid "Supplier code can not empty, Row %s - Column C"
+msgstr "Mã nhà cung cấp không thể để trống, Hàng %s - Cột C"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:47
+#, python-format
+msgid "Supplier name can not empty, Row %s - Column B"
+msgstr "Tên nhà cung cấp không thể để trống, Hàng %s - Cột B"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:161
+#, python-format
+msgid "Supplier tax"
+msgstr "Supplier tax"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:199
+#, python-format
+msgid "Sổ nhật ký không tồn tại ! Dòng %s - Cột L"
+msgstr "Sổ nhật ký không tồn tại ! Hàng %s - Cột L"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_template_file_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_template_file_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_template_file_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_template_file_url
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_template_file_url
+msgid "Template file url"
+msgstr "Liên kết tải tập tin mẫu"
+
+#. module: bave_import
+#: model:ir.model.fields,help:bave_import.field_import_customer_res_model
+#: model:ir.model.fields,help:bave_import.field_import_product_category_res_model
+#: model:ir.model.fields,help:bave_import.field_import_product_template_res_model
+#: model:ir.model.fields,help:bave_import.field_import_product_uom_res_model
+#: model:ir.model.fields,help:bave_import.field_import_supplier_res_model
+msgid "The database object this attachment will be attached to."
+msgstr "The database object this attachment will be attached to."
+
+#. module: bave_import
+#: model:ir.model.fields,help:bave_import.field_import_customer_res_id
+#: model:ir.model.fields,help:bave_import.field_import_product_category_res_id
+#: model:ir.model.fields,help:bave_import.field_import_product_template_res_id
+#: model:ir.model.fields,help:bave_import.field_import_product_uom_res_id
+#: model:ir.model.fields,help:bave_import.field_import_supplier_res_id
+msgid "The record id this is attached to."
+msgstr "The record id this is attached to."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:209
+#: code:addons/bave_import/models/import_customer.py:589
+#, python-format
+msgid "Title"
+msgstr "Title"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product.py:152
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_type
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_type
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_type
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_type
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_type
+#, python-format
+msgid "Type"
+msgstr "Loại"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:74
+#, python-format
+msgid "Type UOM can not empty, Row %s - Column C"
+msgstr "Loại đơn vị đo không thể để trống, Hàng %s - Cột C"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:69
+#, python-format
+msgid "Type customer does not exists, Row %s - Column A"
+msgstr "Type customer does not exists, Row %s - Column A"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:135
+#: code:addons/bave_import/models/import_product_category.py:143
+#, python-format
+msgid "Tài khoản chi phí không tồn tại ! Dòng %s - Cột H"
+msgstr "Tài khoản chi phí không tồn tại ! Dòng %s - Cột H"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:103
+#: code:addons/bave_import/models/import_product_category.py:111
+#, python-format
+msgid "Tài khoản chênh lệch giá không tồn tại! Dòng %s - Cột F"
+msgstr "Tài khoản chênh lệch giá không tồn tại! Dòng %s - Cột F"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:119
+#: code:addons/bave_import/models/import_product_category.py:127
+#, python-format
+msgid "Tài khoản doanh thu không tồn tại ! Dòng %s - Cột G"
+msgstr "Tài khoản doanh thu không tồn tại ! Dòng %s - Cột G"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:151
+#: code:addons/bave_import/models/import_product_category.py:159
+#, python-format
+msgid "Tài khoản nhập kho không tồn tại ! Dòng %s - Cột I"
+msgstr "Tài khoản nhập kho không tồn tại ! Dòng %s - Cột I"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:183
+#: code:addons/bave_import/models/import_product_category.py:191
+#, python-format
+msgid "Tài khoản tồn kho không tồn tại ! Dòng %s - Cột K"
+msgstr "Tài khoản tồn kho không tồn tại ! Dòng %s - Cột K"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_category.py:167
+#: code:addons/bave_import/models/import_product_category.py:175
+#, python-format
+msgid "Tài khoản xuất kho không tồn tại ! Dòng %s - Cột J"
+msgstr "Tài khoản xuất kho không tồn tại ! Dòng %s - Cột J"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:46
+#, python-format
+msgid "Uom name can not empty, Row %s - Column A"
+msgstr "Tên đơn vị đo không thể để trống, Hàng %s - Cột A"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_product_uom.py:50
+#, python-format
+msgid "Uom type can not empty, Row %s - Column C"
+msgstr "Kiểu đơn vị đo không thể để trống, Hàng %s - Cột C"
+
+#. module: bave_import
+#: model:ir.model.fields,field_description:bave_import.field_import_customer_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_category_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_template_url
+#: model:ir.model.fields,field_description:bave_import.field_import_product_uom_url
+#: model:ir.model.fields,field_description:bave_import.field_import_supplier_url
+msgid "Url"
+msgstr "Url"
+
+#. module: bave_import
+#: code:addons/bave_import/models/index.py:8
+#, python-format
+msgid "User Guide"
+msgstr "Hướng dẫn người dùng"
+
+#. module: bave_import
+#: model:ir.ui.menu,name:bave_import.homepage
+msgid "User guide import"
+msgstr "Hướng dẫn"
+
+#. module: bave_import
+#: model:ir.model.fields,help:bave_import.field_import_customer_type
+#: model:ir.model.fields,help:bave_import.field_import_product_category_type
+#: model:ir.model.fields,help:bave_import.field_import_product_template_type
+#: model:ir.model.fields,help:bave_import.field_import_product_uom_type
+#: model:ir.model.fields,help:bave_import.field_import_supplier_type
+msgid "You can either upload a file from your computer or copy/paste an internet link to your file."
+msgstr "You can either upload a file from your computer or copy/paste an internet link to your file."
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:215
+#: code:addons/bave_import/models/import_customer.py:605
+#, python-format
+msgid "account payable"
+msgstr "Tài khoản phải trả"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:214
+#: code:addons/bave_import/models/import_customer.py:597
+#, python-format
+msgid "account receivable"
+msgstr "Tài khoản phải thu"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:202
+#: code:addons/bave_import/models/import_customer.py:544
+#, python-format
+msgid "country"
+msgstr "Quốc gia"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:200
+#: code:addons/bave_import/models/import_customer.py:506
+#, python-format
+msgid "customer code"
+msgstr "Mã khách hàng"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:199
+#, python-format
+msgid "customer name"
+msgstr "Tên khách hàng"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:198
+#: code:addons/bave_import/models/import_customer.py:535
+#, python-format
+msgid "customer type"
+msgstr "Loại khách hàng"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:204
+#: code:addons/bave_import/models/import_customer.py:562
+#, python-format
+msgid "district"
+msgstr "Quận/Huyện"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:213
+#, python-format
+msgid "email"
+msgstr "Email"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:216
+#: code:addons/bave_import/models/import_customer.py:614
+#, python-format
+msgid "group customer"
+msgstr "Nhóm khách hàng"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_home_import
+msgid "home.import"
+msgstr "home.import"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_import_customer
+msgid "import.customer"
+msgstr "Nhập liệu khách hàng"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_import_product_category
+msgid "import.product.category"
+msgstr "import.product.category"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_import_product_template
+msgid "import.product.template"
+msgstr "import.product.template"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_import_product_uom
+msgid "import.product.uom"
+msgstr "import.product.uom"
+
+#. module: bave_import
+#: model:ir.model,name:bave_import.model_import_supplier
+msgid "import.supplier"
+msgstr "import.supplier"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:217
+#: code:addons/bave_import/models/import_customer.py:623
+#, python-format
+msgid "insurance"
+msgstr "Tình trạng mua bảo hiểm"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:212
+#: code:addons/bave_import/models/import_customer.py:516
+#, python-format
+msgid "mobile"
+msgstr "Số di động"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:211
+#, python-format
+msgid "phone"
+msgstr "SĐT"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:207
+#: code:addons/bave_import/models/import_customer.py:580
+#, python-format
+msgid "sex"
+msgstr "Giới tính"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:218
+#: code:addons/bave_import/models/import_customer.py:632
+#, python-format
+msgid "source melee"
+msgstr "Nguồn tiếp cận"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:203
+#: code:addons/bave_import/models/import_customer.py:553
+#, python-format
+msgid "state"
+msgstr "Tỉnh/TP"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:201
+#, python-format
+msgid "street"
+msgstr "Địa chỉ"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:206
+#, python-format
+msgid "vat"
+msgstr "Mã số thuế"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_customer.py:205
+#: code:addons/bave_import/models/import_customer.py:571
+#, python-format
+msgid "ward"
+msgstr "Phường/xã"
+
+#. module: bave_import
+#: code:addons/bave_import/models/import_supplier.py:136
+#, python-format
+msgid "Định dạng nhập trường ngày không đúng, vui lòng nhập định dạng chuỗi như mẫu, Hàng %s - Cột K"
+msgstr "Định dạng nhập trường ngày không đúng, vui lòng nhập định dạng chuỗi như mẫu, Hàng %s - Cột K"
+

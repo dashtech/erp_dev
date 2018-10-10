@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_working_day_emp_tree" model="ir.ui.view">
+        <field name="name">hr_working_day_emp_tree</field>
+        <field name="model">hr.working.day.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="date"/>
+                <field name="unit_amount" string="Amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_working_day_emp_form" model="ir.ui.view">
+        <field name="name">hr_working_day_emp_form</field>
+        <field name="model">hr.working.day.employee</field>
+        <field name="arch" type="xml">
+            <form >
+                <group>
+                    <field name="name" invisible="1"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="unit_amount" string="Amount"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="working_day_import_action" model="ir.actions.act_window">
+        <field name="name">Working Day by Import</field>
+        <field name="res_model">hr.working.day.employee</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="working_day_import_menu"
+              name="Working Day by Import"
+              parent="working_day_main_menu"
+              action="working_day_import_action"/>
+
+</odoo>

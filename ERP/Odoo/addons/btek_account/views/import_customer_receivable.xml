@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="wizard_import_customer_receivable_form_view">
+        <field name="name">Import customer receivable form view</field>
+        <field name="model">wizard.import.customer.receivable</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="template_file_url" widget="url"/>
+                        <field name="datas" filename="datas_fname"/>
+                        <field name="datas_fname" invisible="1"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="account_move_name" string="Certificate Number"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="journal_id"/>
+                        <field name="date"/>
+                    </group>
+                    <group>
+                        <field name="voucher_day"/>
+                        <field name="account_reciprocal"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="import_customer_receivable" type="object"
+                            string="Import" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_import_customer_receivable_action" model="ir.actions.act_window">
+        <field name="name">Import customer receivable</field>
+        <field name="res_model">wizard.import.customer.receivable</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_name': 'Import customer receivable'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="import_master_data" parent="account.menu_finance"-->
+              <!--sequence="100" name="Import master data"/>-->
+
+    <!--<menuitem id="wizard_import_customer_receivable_menu"-->
+              <!--action="wizard_import_customer_receivable_action"-->
+              <!--parent="import_master_data"-->
+              <!--sequence="300"/>-->
+</odoo>
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record model="ir.ui.view" id="view_res_currency_form_field">
+			<field name="name">view.res.currency.form.field</field>
+			<field name="model">res.currency</field>
+			<field name="inherit_id" ref="base.view_currency_form" />
+			<field name="arch" type="xml">
+				<field name="position" position="after">
+					<field name="currency_text" />
+				</field>
+			</field>
+		</record>
+			
+		<report 
+            id="account_voucher_btek"
+            model="account.voucher"
+            string="Vouchers"
+            report_type="qweb-pdf"
+            name="btek_account_payment.report_accountvoucher"
+            file="btek_account_payment.report_accountvoucher"
+            attachment_use="False"
+            menu="False"
+        />
+
+		<record id="paperformat_euro_anhtt" model="report.paperformat">
+            <field name="name">European A4 Btek</field>
+            <field name="default" eval="True" />
+            <field name="format">A5</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">120</field>
+        </record>
+
+        <record id="account_voucher_btek" model="ir.actions.report.xml">
+        	<field name="paperformat_id" ref="paperformat_euro_anhtt" />
+        </record>
+
+         <report
+            id="account_payment_btek"
+            model="account.payment"
+            string="Voucher"
+            report_type="qweb-pdf"
+            name="btek_account_payment.report_accountpayment"
+            file="btek_account_payment.report_accountpayment"
+            attachment_use="False"
+            menu="False"
+        />
+
+        <record id="account_payment_btek" model="ir.actions.report.xml">
+        	<field name="paperformat_id" ref="paperformat_euro_anhtt" />
+        </record>
+
+	</data>
+</openerp>

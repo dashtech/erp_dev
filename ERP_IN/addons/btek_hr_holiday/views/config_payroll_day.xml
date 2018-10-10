@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <record id="config_payroll_day_tree" model="ir.ui.view">
+        <field name="name">config_payroll_day_tree</field>
+        <field name="model">config.payroll.day</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="year"/>
+                <field name="company_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="config_payroll_day_form" model="ir.ui.view">
+        <field name="name">config_payroll_day_from</field>
+        <field name="model">config.payroll.day</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="active" type="object"
+                        string="Active" class="oe_highlight"
+                        states="deactive"/>
+                    <button name="deactive" type="object"
+                        string="Deactive" class="oe_highlight"
+                        states="active"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <group>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="year" required="1" attrs="{'readonly': [('state', '=', 'active')]}"/>
+                    </group>
+                    <group>
+                        <field name="company_id" required="1" attrs="{'readonly': [('state', '=', 'active')]}"/>
+                        <field name="day_monthly_payment" invisible="1"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Date to Payroll">
+                        <field name="day_to_payroll_ids" attrs="{'invisible': [('state', '=', 'deactive')]}">
+                            <tree editable="0">
+                                <field name="month" invisible="1"/>
+                                <field name="name"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="config_payroll_day_action" model="ir.actions.act_window">
+        <field name="name">Configure Payroll Day</field>
+        <field name="res_model">config.payroll.day</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_config_payroll_day"
+              name="Configure Payroll Day"
+              parent="hr_payroll.menu_hr_payroll_configuration"
+              groups="hr_payroll.group_hr_payroll_manager"
+              action="config_payroll_day_action"/>
+</odoo>

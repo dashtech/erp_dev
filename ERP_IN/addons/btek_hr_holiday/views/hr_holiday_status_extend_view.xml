@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record id="hr_holiday_status_tree_extend" model="ir.ui.view">
+            <field name="name">hr_holiday_status_tree_extend</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="inherit_id" ref="hr_holidays.view_holiday_status_normal_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="desc"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="hr_holiday_status_form_extend" model="ir.ui.view">
+            <field name="name">hr_holiday_status_form_extend</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="desc"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="bave_hr_holiday_form_extend" model="ir.ui.view">
+            <field name="name">bave_hr_holiday_form_extend</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays.edit_holiday_new"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='number_of_days_temp']" position="after">
+                    <field name="day_ez" invisible="1"/>
+                </xpath>
+            </field>
+    </record>
+
+</odoo>

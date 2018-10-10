@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="bave_import_menu_root" name="Import Data" sequence="52"
+              web_icon="bave_import,static/description/icon.png"/>
+        <menuitem id="homepage" name="User guide import"
+                  parent="bave_import_menu_root" sequence="1"
+                  action="action_homepage"/>
+        <menuitem id="import_accounting" name="Accounting"
+                  parent="bave_import.bave_import_menu_root"
+                  sequence="2"/>
+            <menuitem id="import_account_account" name="Import Account Account"
+                      parent="import_accounting"
+                      action="btek_account.wizard_import_account_account_action"
+                      sequence="2"/>
+            <menuitem id="import_account_balance" name="Import Account Balance"
+                      parent="import_accounting"
+                      action="btek_account.wizard_import_account_balance_action"
+                      sequence="4"/>
+            <menuitem id="import_asset_categ" name="Import Asset Category"
+                      parent="import_accounting"
+                      action="btek_account_asset.action_import_asset_category"
+                      sequence="6"/>
+            <menuitem id="import_asset" name="Import Asset"
+                      parent="import_accounting"
+                      action="btek_account_asset.action_import_asset"
+                      sequence="8"/>
+            <menuitem id="import_debt_customer" name="Import Debt Customer"
+                      parent="import_accounting"
+                      action="btek_account.wizard_import_customer_receivable_action"
+                      sequence="10"/>
+            <menuitem id="import_debt_supplier" name="Import Debt Supplier"
+                      parent="import_accounting"
+                      action="btek_account.wizard_import_supplier_receivable_action"
+                      sequence="12"/>
+
+        <menuitem id="import_partner" name="Customer/Supplier"
+                  parent="bave_import.bave_import_menu_root"
+                  sequence="3"/>
+            <menuitem id="import_customer" name="Import Customer"
+                      parent="import_partner"
+                      action="action_import_customer"
+                      sequence="2"/>
+            <menuitem id="import_supplier" name="Import Supplier"
+                      parent="import_partner"
+                      action="action_import_supplier"
+                      sequence="4"/>
+
+        <menuitem id="import_fleet" name="Fleet"
+                  parent="bave_import.bave_import_menu_root"
+                  sequence="4"/>
+            <menuitem id="import_fleet_model" name="Import Fleet Model"
+                      parent="import_fleet"
+                      action="car_repair_master_data.wizard_import_fleet_model_action"
+                      sequence="2"/>
+            <menuitem id="import_fleet_vedicle" name="Import Fleet Vehicle"
+                      parent="import_fleet"
+                      action="car_repair_master_data.wizard_import_fleet_vehicle_action"
+                      sequence="3"/>
+            <menuitem id="import_car_repair_history" name="Import Car Repair History"
+                      parent="import_fleet"
+                      action="car_repair_master_data.wizard_import_car_repair_history_action"
+                      sequence="4"/>
+
+
+        <menuitem id="import_stock" name="Stock"
+                  parent="bave_import.bave_import_menu_root"
+                  sequence="5"/>
+            <menuitem id="import_product_uom" name="Import Product Uom"
+                      parent="import_stock"
+                      action="action_import_product_uom"
+                      sequence="2"/>
+            <menuitem id="import_product_categ" name="Import Product Category"
+                      parent="import_stock"
+                      action="action_import_product_category"
+                      sequence="4"/>
+            <menuitem id="import_product" name="Import Product"
+                      parent="import_stock"
+                      action="action_import_product_template"
+                      sequence="6"/>
+
+</odoo>

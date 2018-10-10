@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="btek_product_customer_refunds_view">
+            <field name="name">btek.product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="btek_product.product_template_form_view_inherit" />
+            <field name="priority">54</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_expense_id']" position="before">
+                    <field name="x_property_account_refund" attrs="{'readonly':[('sale_ok','=',0)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

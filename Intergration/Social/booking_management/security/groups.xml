@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="booking_garage_rule" model="ir.rule">
+        <field name="name">Booking</field>
+        <field name="model_id" ref="model_booking"/>
+        <field name="domain_force">[('service_provider_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('cargo_management.group_garage'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="social_setting_form"
+            model="ir.ui.view">
+        <field name="name">social.setting.form</field>
+        <field name="model">social.setting</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="login"/>
+                        <field name="uid"/>
+                        <field name="password" password="1"/>
+                    </group>
+                    <group>
+                        <field name="url"/>
+                        <field name="db"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="social_setting_unique"
+            model="social.setting">
+    </record>
+
+    <record id="action_social_setting"
+            model="ir.actions.act_window">
+        <field name="name">Social setting</field>
+        <field name="res_model">social.setting</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="social_setting_unique"/>
+    </record>
+
+    <menuitem id="root_menu_social"
+              name="Social" sequence="306"
+              groups="group_garage"
+              web_icon="bave_social,static/description/icon.png"/>
+
+    <menuitem id="menu_social" parent="root_menu_social"
+              action="action_social_setting" sequence="10"
+              groups="group_garage"/>
+
+</odoo>

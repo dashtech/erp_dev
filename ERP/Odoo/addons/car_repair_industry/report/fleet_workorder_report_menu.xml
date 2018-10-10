@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <report id="fleet_workorder_report_id"
+            string="Print WorkOrder"
+            model="fleet.workorder"
+            report_type="qweb-pdf"
+            name="car_repair_industry.fleet_workorder_template"/>
+
+        <record id="fleet_workorder_report_id" model="ir.actions.report.xml">
+			<field name="paperformat_id" ref="car_repair_industry.fleet_repair_label_paperformat"/>
+		</record>
+    </data>
+</openerp>

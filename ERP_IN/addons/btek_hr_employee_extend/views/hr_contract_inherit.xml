@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <record id="hr_contract_view_inherit" model="ir.ui.view">
+        <field name="name">hr_contract_view_inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group/group[2]/field[@name='type_id']" position="after">
+                <field name="company_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//page/group/group[1]/field[@name='wage']" position="after">
+                <!--<field name="insurance_salary_compute" invisible="1"/>-->
+                <field name="insurance_salary"/>
+                <field name="addition_salary_non"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

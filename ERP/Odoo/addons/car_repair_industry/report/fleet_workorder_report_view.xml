@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="fleet_workorder_template_view">
+            <t t-call="report.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="color: black;font-size: 17px;font-family: Times New Roman;">
+                        <t t-call="car_repair_industry.company_information_logo"/>
+                        <div class="row">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="text-center" style="font-family: inherit; font-size: 17px!important;">
+                                            <div style="font-family: inherit; font-size: 30px!important;">
+                                                <span><b>CÔNG VIỆC</b></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12" style="border: 1.5px solid black !important; border-radius: 5px; font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                            <div class="col-xs-7" style="padding-top: 5px;color: black;font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                                <div>
+                                                    <span>Tên KH: </span>
+                                                    <span><t t-esc="doc.client_id.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Địa chỉ:</span>
+                                                    <span>
+                                                        <t t-if="doc.client_id.street"><span t-field="doc.client_id.street"/></t>
+                                                        <t t-if="doc.client_id.ward_id and doc.client_id.street">-</t>
+                                                        <t t-if="doc.client_id.ward_id"><span t-field="doc.client_id.ward_id.name"/></t>
+                                                        <t t-if="doc.client_id.district_id and doc.client_id.ward_id or doc.client_id.district_id and doc.client_id.street">-</t>
+                                                        <t t-if="doc.client_id.district_id"><span t-field="doc.client_id.district_id.name"/></t>
+                                                        <t t-if="doc.client_id.state_id and doc.client_id.district_id or doc.client_id.state_id and doc.client_id.ward_id or doc.client_id.state_id and doc.client_id.street">-</t>
+                                                        <t t-if="doc.client_id.state_id"><span t-field="doc.client_id.state_id.name"/></t>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>SĐT: </span>
+                                                    <span class="list-inline">
+                                                        <li t-if="doc.client_phone"><span t-field="doc.client_phone"/></li>
+                                                        <li t-if="doc.client_mobile and doc.client_phone">&amp;bull;</li>
+                                                        <li t-if="doc.client_mobile"><span t-field="doc.client_mobile"/></li>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>Ngày xuất lệnh: </span>
+                                                    <span><t t-if="doc.real_start_date"/><t t-esc="doc.real_start_date"/></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5" style="padding-top: 5px;color: black;font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                                <div>
+                                                    <span>Biển số: </span>
+                                                    <span><t t-esc="doc.fleet_repair_line[0].license_plate"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Tên kiểu xe: </span>
+                                                    <span><t t-esc="doc.fleet_repair_line[0].model_id.name_get()[0][1]"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Số khung: </span>
+                                                    <span><t t-esc="doc.vin_sn"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Ngày giao: </span>
+                                                    <span><t t-esc="doc.real_finish_date_date"/></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="padding-top: 5px;">
+                                    <div class="col-xs-12" style="padding-top: 8px!important; border: 1.5px solid black !important; border-radius: 5px; color: black;font-family: inherit; font-size: 17px!important;">
+                                        <strong><i>Yêu cầu khách hàng:</i></strong><br/>
+                                            <span t-field="doc.sale_order_id.description"/>
+                                        <br/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12" style="padding-top: 5px;">
+                                        <t t-foreach="doc.work_lines_layouted()" t-as="page">
+                                            <table class="table table-bordered" style="border: 1px solid black !important; color: black;font-family: inherit; font-size: 17px!important;">
+                                                <thead>
+                                                    <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                        <!--<th class="text-center col-xs-1" style="border: 1px solid black !important;line-height: 16px;">STT</th>-->
+                                                        <th class="text-center col-xs-7" colspan="3" style="border: 1px solid black !important;line-height: 16px;">Nội dung sửa chữa</th>
+                                                        <th class="text-center col-xs-3" style="border: 1px solid black !important;line-height: 16px;">KT Viên</th>
+                                                        <th class="text-center col-xs-2" style="border: 1px solid black !important;line-height: 16px;">Số lượng</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                    <td colspan="5" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">Phần vật tư phụ tùng</strong>
+                                                    </td>
+                                                </tr>
+                                                <thead style="border: 1px solid black !important;height: 5px!important;">
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">STT</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">Mã vật tư</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">Tên vật tư</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <span style="line-height: 16px;">&#160;</span>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <span style="line-height: 16px;">&#160;</span>
+                                                    </th>
+                                                </thead>
+                                                <t t-foreach="page" t-as="obj">
+                                                    <t t-set="stt" t-value="0"/>
+                                                    <t t-if="obj['prod_order']">
+                                                        <t t-foreach="obj['prod_order']" t-as="l">
+                                                            <t t-set="stt" t-value="stt+1"/>
+                                                            <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                                 <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-raw="stt"/>
+                                                                 </td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-field="l.product_id.default_code"/></td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-field="l.product_id.name"/></td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-field="l.user_id.name"/>
+                                                                </td>
+                                                                <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-field="l.product_uom_qty"/>
+                                                                </td>
+                                                            </tr>
+                                                        </t>
+                                                    </t>
+                                                    <t t-if="not obj['prod_order']">
+                                                        <t t-set="stt" t-value="stt+1"/>
+                                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-raw="stt"/>
+                                                             </td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                            <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                        </tr>
+                                                        <t t-set="stt" t-value="stt+1"/>
+                                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-raw="stt"/>
+                                                             </td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                            <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                </t>
+
+                                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                    <td colspan="5" style="border: 1px solid black !important;line-height: 16px;">
+                                                    <strong style="line-height: 16px;">Phần sửa chữa chung</strong>
+                                                    </td>
+                                                </tr>
+                                                <thead style="border: 1px solid black !important;height: 5px!important;">
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">STT</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center col-xs-2" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">Mã dịch vụ</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <strong style="line-height: 16px;">Tên dịch vụ</strong>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <span style="line-height: 16px;">&#160;</span>
+                                                    </th>
+                                                    <th colspan="1" class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <span style="line-height: 16px;">&#160;</span>
+                                                    </th>
+                                                </thead>
+                                                <t t-foreach="page" t-as="obj">
+                                                    <t t-set="stt_1" t-value="0"/>
+                                                    <t t-if="obj['work_order']">
+                                                        <t t-foreach="obj['work_order']" t-as="o">
+                                                            <t t-set="stt_1" t-value="stt_1+1"/>
+                                                            <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                                <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-raw="stt_1"/>
+                                                                 </td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                   <span style="line-height: 16px;" t-field="o.product_id.default_code"/></td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                   <span style="line-height: 16px;" t-field="o.product_id.name"/></td>
+                                                                <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                                   <span style="line-height: 16px;" t-field="o.user_id.name"/>
+                                                                </td>
+                                                                <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                   <span style="line-height: 16px;" t-field="o.product_uom_qty"/>
+                                                                </td>
+                                                            </tr>
+
+                                                        </t>
+                                                    </t>
+                                                    <t t-if="not obj['work_order']">
+                                                        <t t-set="stt_1" t-value="stt_1+1"/>
+                                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-raw="stt_1"/>
+                                                             </td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                            <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                        </tr>
+                                                        <t t-set="stt_1" t-value="stt_1+1"/>
+                                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-raw="stt_1"/>
+                                                             </td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span></td>
+                                                            <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                            <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                                <span style="line-height: 16px;">&#160;</span>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                </t>
+
+                                            </table>
+                                        </t>
+
+                                    </div>
+                                </div>
+
+                                <div class="row" style="font-family: inherit; font-size: 17px!important;page-break-inside: avoid;">
+
+                                    <table width="100%" style="color: black;font-family: inherit; font-size: 17px!important;page-break-inside: avoid;">
+                                        <tr style="page-break-inside: avoid;">
+                                            <td style="text-align: center;" width="33%">
+                                                <span style="padding-top: 8px;">
+                                                    <b>TỔ TRƯỞNG BỘ PHẬN SƠN</b>
+                                                </span>
+
+                                            </td>
+                                            <td style="text-align: center;" width="33%">
+                                                <span style="padding-top: 8px;">
+                                                    <b>TỔ TRƯỞNG SỬA CHỮA CHUNG</b>
+                                                </span>
+                                            </td>
+                                            <td style="text-align: center;" width="34%">
+                                                <span style="padding-top: 8px;">
+                                                    <b>CỐ VẤN DỊCH VỤ</b>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr style="line-height: 100%;color: black;font-family: inherit; font-size: 16px!important;page-break-inside: avoid;">
+                                            <td style="text-align: center;" width="33%">
+                                                <span><i>(Ký, họ tên)</i></span>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </td>
+                                            <td style="text-align: center;" width="40%">
+                                                <span><i>(Ký, họ tên)</i></span>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </td>
+                                            <td style="text-align: center;" width="27%">
+                                                <span><i>(Ký, họ tên)</i></span>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div class="oe_structure"/>
+                </t>
+            </t>
+        </template>
+
+         <template id="fleet_workorder_template">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="car_repair_industry.fleet_workorder_template_view" t-lang="o.client_id.lang"/>
+                </t>
+        </template>
+    </data>
+</openerp>

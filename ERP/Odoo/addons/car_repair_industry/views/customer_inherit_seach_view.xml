@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="customer_search" model="ir.ui.view">
+        <field name="name">customer_search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/field[@name='category_id']" position="before">
+                <field string="Code" name="code" filter_domain="[('code','ilike', self)]"/>
+                <field string="License Plate" name="fleet_vehicles" filter_domain="[('fleet_vehicles.license_plate','ilike', self)]"/>
+                <field string="VIN Number" name="fleet_vehicles" filter_domain="[('fleet_vehicles.vin_sn','ilike', self)]"/>
+                <field string="Phone Number" name="phone" filter_domain="['|',('phone','ilike', self),('mobile','ilike', self)]"/>
+                <field string="Email" name="email" filter_domain="[('email','ilike', self)]"/>
+                <field string="Address" name="street" filter_domain="[('street','ilike', self)]"/>
+                <field string="Province/City" name="state_id" filter_domain="[('state_id','ilike', self)]"/>
+                <field string="District" name="district_id" filter_domain="[('district_id','ilike', self)]"/>
+                <field string="Ward" name="ward_id" filter_domain="[('ward_id','ilike', self)]"/>
+                <field string="Country" name="country_id" filter_domain="[('country_id','ilike', self)]"/>
+                <field string="Tax Number" name="vat" filter_domain="[('vat','ilike', self)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

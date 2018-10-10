@@ -1,0 +1,218 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_product_misc_options_73lines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-14 03:30+0000\n"
+"PO-Revision-Date: 2018-07-14 03:30+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_limit
+msgid "<span class=\"perPage\"> per Page </span><span class=\"caret\"/>"
+msgstr "<span class=\"perPage\"> per Page </span><span class=\"caret\"/>"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.website_product_brands
+msgid "<strong>Brands</strong>"
+msgstr "<strong>Brands</strong>"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.website_product_prices
+msgid "<strong>Price</strong>"
+msgstr "<strong>Price</strong>"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.website_product_tags
+msgid "<strong>Tags</strong>"
+msgstr "<strong>Tags</strong>"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_brand_image
+msgid "Brand Image"
+msgstr "Brand Image"
+
+#. module: website_product_misc_options_73lines
+#: sql_constraint:product.brand:0
+msgid "Brand name already exists !"
+msgstr "Brand name already exists !"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,name:website_product_misc_options_73lines.product_by_brand_action
+#: model:ir.ui.menu,name:website_product_misc_options_73lines.menu_product_by_brand
+msgid "Brands"
+msgstr "Brands"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,help:website_product_misc_options_73lines.product_by_brand_action
+msgid "Click here to define a new product brand."
+msgstr "Click here to define a new product brand."
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,help:website_product_misc_options_73lines.product_tags_action
+msgid "Click here to define a new product tag."
+msgstr "Click here to define a new product tag."
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,help:website_product_misc_options_73lines.website_product_limit_action
+msgid "Click to define a new Product View Limit per Page in Shop."
+msgstr "Click to define a new Product View Limit per Page in Shop."
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_create_uid
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_create_uid
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_create_date
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_create_date
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_display_name
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_display_name
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,help:website_product_misc_options_73lines.field_product_brand_sequence
+#: model:ir.model.fields,help:website_product_misc_options_73lines.field_product_tags_sequence
+#: model:ir.model.fields,help:website_product_misc_options_73lines.field_product_view_limit_sequence
+msgid "Gives the sequence order when displaying a list of rules."
+msgstr "Hiển thị danh sách các quy tắc theo trình tự."
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_view_switcher
+msgid "Grid View"
+msgstr "Grid View"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_id
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_id
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand___last_update
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags___last_update
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_write_uid
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_write_uid
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_write_date
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_write_date
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_name
+msgid "Limit"
+msgstr "Giới hạn"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_view_switcher
+msgid "List View"
+msgstr "List View"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_name
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model,name:website_product_misc_options_73lines.model_product_brand
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_by_brand_form_view
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_by_brand_tree_view
+msgid "Product Brands"
+msgstr "Thương hiệu"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_product_tag_ids
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_template_tag_ids
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.product_tag_tree_view
+msgid "Product Tags"
+msgstr "Nhãn sản phẩm"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model,name:website_product_misc_options_73lines.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.view,arch_db:website_product_misc_options_73lines.portfolio_category_tree_view
+msgid "Product Veiw Limit per Page"
+msgstr "Product Veiw Limit per Page"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_product_brand_id
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_template_brand_id
+msgid "Product's Brand"
+msgstr "Thương hiệu"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_brand_sequence
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_tags_sequence
+#: model:ir.model.fields,field_description:website_product_misc_options_73lines.field_product_view_limit_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: website_product_misc_options_73lines
+#: sql_constraint:product.tags:0
+msgid "Tag name already exists !"
+msgstr "Tag name already exists !"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,name:website_product_misc_options_73lines.product_tags_action
+#: model:ir.ui.menu,name:website_product_misc_options_73lines.menu_product_tags
+msgid "Tags"
+msgstr "Thẻ"
+
+#. module: website_product_misc_options_73lines
+#: sql_constraint:product.view.limit:0
+msgid "This must be unique!"
+msgstr "This must be unique!"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.ui.menu,name:website_product_misc_options_73lines.menu_view_limit
+msgid "Website Product View Limit"
+msgstr "Website Product View Limit"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.actions.act_window,name:website_product_misc_options_73lines.website_product_limit_action
+msgid "Website Products View Limit"
+msgstr "Website Products View Limit"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model,name:website_product_misc_options_73lines.model_product_tags
+msgid "product.tags"
+msgstr "product.tags"
+
+#. module: website_product_misc_options_73lines
+#: model:ir.model,name:website_product_misc_options_73lines.model_product_view_limit
+msgid "product.view.limit"
+msgstr "product.view.limit"
+

@@ -1,0 +1,4097 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* car_repair_industry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-05 08:12+0000\n"
+"PO-Revision-Date: 2018-10-05 08:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "%CK"
+msgstr "%CK"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "%GG"
+msgstr "%GG"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "%Thuế"
+msgstr "%Thuế"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "&amp;bull;"
+msgstr "&amp;bull;"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "(Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                    Ngày 22/12/2014 của Bộ Tài Chính)"
+msgstr "(Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                    Ngày 22/12/2014 của Bộ Tài Chính)"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "(Ký, ghi rõ họ, tên)"
+msgstr "(Ký, ghi rõ họ, tên)"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "(Ký, họ tên)"
+msgstr "(Ký, họ tên)"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "(Ký, họ tên, đóng dấu)"
+msgstr "(Ký, họ tên, đóng dấu)"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "(update)"
+msgstr "(cập nhật)"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_workorder_state
+msgid "* When a work order is created it is set in 'Draft' status.\n"
+"* When user sets work order in start mode that time it will be set in 'In Progress' status.\n"
+"* When work order is in running mode, during that time if user wants to stop or to make changes in order then can set in 'Pending' status.\n"
+"* When the user cancels the work order it will be set in 'Canceled' status.\n"
+"* When order is completely processed that time it is set in 'Finished' status."
+msgstr "* When a work order is created it is set in 'Draft' status.\n"
+"* When user sets work order in start mode that time it will be set in 'In Progress' status.\n"
+"* When work order is in running mode, during that time if user wants to stop or to make changes in order then can set in 'Pending' status.\n"
+"* When the user cancels the work order it will be set in 'Canceled' status.\n"
+"* When order is completely processed that time it is set in 'Finished' status."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "0 chứng từ gốc."
+msgstr "0 chứng từ gốc."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<b>\n"
+"                                    <span style=\"font-size: 30px !important;\">PHIẾU YÊU CẦU</span>\n"
+"                                </b>"
+msgstr "<b>\n"
+"                                    <span style=\"font-size: 30px !important;\">PHIẾU YÊU CẦU</span>\n"
+"                                </b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<b>\n"
+"                                    <span style=\"font-size: 30px!important;\">\n"
+"                                        LỆNH SỬA CHỮA\n"
+"                                    </span>\n"
+"                                </b>"
+msgstr "<b>\n"
+"                                    <span style=\"font-size: 30px!important;\">\n"
+"                                        LỆNH SỬA CHỮA\n"
+"                                    </span>\n"
+"                                </b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<b><span>Client Address</span></b>"
+msgstr "<b><span>Địa chỉ khách hàng</span></b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<b><span>Date of Receipt</span></b>"
+msgstr "<b><span>Ngày nhận</span></b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<b>Ngày........tháng.......năm........</b>"
+msgstr "<b>Ngày........tháng.......năm........</b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<b>Số phiếu nhập: .............</b>"
+msgstr "<b>Số phiếu nhập: .............</b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<b>Số phiếu: </b>"
+msgstr "<b>Số phiếu: </b>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<br/>\n"
+"                                + Số tiền quy đổi:"
+msgstr "<br/>\n"
+"                                + Số tiền quy đổi:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<br/>\n"
+"                                + Tỷ giá ngoại tệ (vàng, bạc, đá quý):"
+msgstr "<br/>\n"
+"                                + Tỷ giá ngoại tệ (vàng, bạc, đá quý):"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<br/>\n"
+"                                <strong>Ghi chú: </strong>\n"
+"                                ............................................................<br/>\n"
+"                                ............................................................<br/>\n"
+"                                <br/>\n"
+"                                <span>Mức nhiên liệu:</span>\n"
+"                                <br/>"
+msgstr "<br/>\n"
+"                                <strong>Ghi chú: </strong>\n"
+"                                ............................................................<br/>\n"
+"                                ............................................................<br/>\n"
+"                                <br/>\n"
+"                                <span>Mức nhiên liệu:</span>\n"
+"                                <br/>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<br/>\n"
+"                                <strong>Yêu cầu khách hàng:</strong><br/>\n"
+"                                -"
+msgstr "<br/>\n"
+"                                <strong>Yêu cầu khách hàng:</strong><br/>\n"
+"                                -"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<i>\n"
+"                                            <span>  * Tôi đồng ý cho gara sửa chữa xe và chạy thử xe trên đường.</span><br/>\n"
+"                                            <span>  * Vật tư, phụ tùng bảo được hành ... tháng.</span><br/>\n"
+"                                            <span>  * Công ty không chịu trách nhiệm về tài sản trên xe nếu quý khách không bàn giao.</span>\n"
+"                                        </i>"
+msgstr "<i>\n"
+"                                            <span>  * Tôi đồng ý cho gara sửa chữa xe và chạy thử xe trên đường.</span><br/>\n"
+"                                            <span>  * Vật tư, phụ tùng bảo được hành ... tháng.</span><br/>\n"
+"                                            <span>  * Công ty không chịu trách nhiệm về tài sản trên xe nếu quý khách không bàn giao.</span>\n"
+"                                        </i>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<i>\n"
+"                                            <span>   Các công việc cần làm sớm: .................................................................</span>\n"
+"                                            <br/>\n"
+"                                               ...............................................................................................................<br/>\n"
+"                                        </i>"
+msgstr "<i>\n"
+"                                            <span>   Các công việc cần làm sớm: .................................................................</span>\n"
+"                                            <br/>\n"
+"                                               ...............................................................................................................<br/>\n"
+"                                        </i>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"border-top: 1px solid;\">Signature of Reception</span>"
+msgstr "<span style=\"border-top: 1px solid;\">Chữ ký người tiếp nhận</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"border-top: 1px solid;float:right;\">Signature of Client</span>"
+msgstr "<span style=\"border-top: 1px solid;float:right;\">Chữ ký khách hàng</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"font-weight: bold;\">Contact Number:</span>"
+msgstr "<span style=\"font-weight: bold;\">Contact Number:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"font-weight: bold;\">Email:</span>"
+msgstr "<span style=\"font-weight: bold;\">Email:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"font-weight: bold;\">Mobile:</span>"
+msgstr "<span style=\"font-weight: bold;\">Mobile:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<span style=\"font-weight: bold;\">Phone:</span>"
+msgstr "<span style=\"font-weight: bold;\">Phone:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-left: 40px\">Số km cũ:</span>"
+msgstr "<span style=\"padding-left: 40px\">Số km cũ:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-left: 40px\">Điện thoại:</span>"
+msgstr "<span style=\"padding-left: 40px\">Điện thoại:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-left: 60px\">Số km:</span>"
+msgstr "<span style=\"padding-left: 60px\">Số km:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>CỐ VẤN DỊCH VỤ</b>\n"
+"                                                </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>CỐ VẤN DỊCH VỤ</b>\n"
+"                                                </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>TỔ TRƯỞNG BỘ PHẬN SƠN</b>\n"
+"                                                </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>TỔ TRƯỞNG BỘ PHẬN SƠN</b>\n"
+"                                                </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>TỔ TRƯỞNG SỬA CHỮA CHUNG</b>\n"
+"                                                </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                    <b>TỔ TRƯỞNG SỬA CHỮA CHUNG</b>\n"
+"                                                </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>KHÁCH HÀNG</b>\n"
+"                                            </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>KHÁCH HÀNG</b>\n"
+"                                            </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>NGƯỜI LẬP PHIẾU</b>\n"
+"                                            </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>NGƯỜI LẬP PHIẾU</b>\n"
+"                                            </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>NGƯỜI PHÊ DUYỆT</b>\n"
+"                                            </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                                <b>NGƯỜI PHÊ DUYỆT</b>\n"
+"                                            </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>GIÁM ĐỐC GARA</b>\n"
+"                                        </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>GIÁM ĐỐC GARA</b>\n"
+"                                        </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>KHÁCH HÀNG</b>\n"
+"                                        </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>KHÁCH HÀNG</b>\n"
+"                                        </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>NGƯỜI LẬP PHIẾU</b>\n"
+"                                        </span>"
+msgstr "<span style=\"padding-top: 8px;\">\n"
+"                                            <b>NGƯỜI LẬP PHIẾU</b>\n"
+"                                        </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span> Ngày giao xe: </span>"
+msgstr "<span> Ngày giao xe: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>* Công ty không chịu trách nhiệm về tài sản trên xe nếu quý khách không bàn giao.</span>"
+msgstr "<span>* Công ty không chịu trách nhiệm về tài sản trên xe nếu quý khách không bàn giao.</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>* Tôi đồng ý cho gara sửa chữa xe và chạy thử xe trên đường.</span>"
+msgstr "<span>* Tôi đồng ý cho gara sửa chữa xe và chạy thử xe trên đường.</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>* Vật tư, phụ tùng được bảo hành ... tháng.</span>"
+msgstr "<span>* Vật tư, phụ tùng được bảo hành ... tháng.</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span><b>CÔNG VIỆC</b></span>"
+msgstr "<span><b>CÔNG VIỆC</b></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<span><b>Ngày: </b></span>"
+msgstr "<span><b>Ngày: </b></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<span><b>Nội dung</b></span>"
+msgstr "<span><b>Nội dung</b></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<span><b>Đơn vị</b></span>"
+msgstr "<span><b>Đơn vị</b></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<span><b>Địa chỉ</b></span>"
+msgstr "<span><b>Địa chỉ</b></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span><i>(Ký, họ tên)</i></span>"
+msgstr "<span><i>(Ký, họ tên)</i></span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span><i>(Ký, họ tên)</i></span>\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                <br/>"
+msgstr "<span><i>(Ký, họ tên)</i></span>\n"
+"                                                <br/>\n"
+"                                                <br/>\n"
+"                                                <br/>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span><i>(Ký, họ tên)</i></span>\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            <br/>"
+msgstr "<span><i>(Ký, họ tên)</i></span>\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            <br/>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Biển số: </span>"
+msgstr "<span>Biển số: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Biển số:</span>"
+msgstr "<span>Biển số:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Bằng chữ</span>"
+msgstr "<span>Bằng chữ</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Các công việc cần làm sớm: ....................................................................</span>\n"
+"                                    <br/>\n"
+"                                        ................................................................................................................<br/>"
+msgstr "<span>Các công việc cần làm sớm: ....................................................................</span>\n"
+"                                    <br/>\n"
+"                                        ................................................................................................................<br/>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Kèm theo</span>"
+msgstr "<span>Kèm theo</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Loại SC:</span>"
+msgstr "<span>Loại SC:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Lái xe:</span>"
+msgstr "<span>Lái xe:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Lý do nộp</span>"
+msgstr "<span>Lý do nộp</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Mã KH:</span>"
+msgstr "<span>Mã KH:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Mã kiểu xe:</span>"
+msgstr "<span>Mã kiểu xe:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Ngày giao: </span>"
+msgstr "<span>Ngày giao: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Ngày xe ra:</span>"
+msgstr "<span>Ngày xe ra:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Ngày xe vào:</span>"
+msgstr "<span>Ngày xe vào:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Ngày xuất lệnh: </span>"
+msgstr "<span>Ngày xuất lệnh: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Người nộp tiền</span>"
+msgstr "<span>Người nộp tiền</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>SĐT: </span>"
+msgstr "<span>SĐT: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Số khung: </span>"
+msgstr "<span>Số khung: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Số khung:</span>"
+msgstr "<span>Số khung:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Số máy:</span>"
+msgstr "<span>Số máy:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Số phiếu: </span>"
+msgstr "<span>Số phiếu: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Số tiền bằng chữ:</span>"
+msgstr "<span>Số tiền bằng chữ:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Số tiền</span>"
+msgstr "<span>Số tiền</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Thời gian vào xưởng:</span>"
+msgstr "<span>Thời gian vào xưởng:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Tên KH: </span>"
+msgstr "<span>Tên KH: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Tên KH:</span>"
+msgstr "<span>Tên KH:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Tên khách</span>"
+msgstr "<span>Tên khách</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<span>Tên kiểu xe: </span>"
+msgstr "<span>Tên kiểu xe: </span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Tên kiểu xe:</span>"
+msgstr "<span>Tên kiểu xe:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<span>Điện Thoại:</span>"
+msgstr "<span>Điện Thoại:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Điện thoại:</span>"
+msgstr "<span>Điện thoại:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<span>Địa chỉ:</span>"
+msgstr "<span>Địa chỉ:</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<span>Địa chỉ</span>"
+msgstr "<span>Địa chỉ</span>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 10px;\">Cộng:</strong>"
+msgstr "<strong style=\"line-height: 10px;\">Cộng:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 10px;\">Phần sửa chữa chung</strong>"
+msgstr "<strong style=\"line-height: 10px;\">Phần sửa chữa chung</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 10px;\">Tổng CK:</strong>"
+msgstr "<strong style=\"line-height: 10px;\">Tổng CK:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 10px;\">Tổng thuế: </strong>"
+msgstr "<strong style=\"line-height: 10px;\">Tổng thuế: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 10px;\">Vật tư hàng hóa</strong>"
+msgstr "<strong style=\"line-height: 10px;\">Vật tư hàng hóa</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Mã dịch vụ</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Mã dịch vụ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Mã vật tư</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Mã vật tư</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Phần sửa chữa chung</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Phần sửa chữa chung</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Phần vật tư phụ tùng</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Phần vật tư phụ tùng</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">STT</strong>"
+msgstr "<strong style=\"line-height: 16px;\">STT</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Tên dịch vụ</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Tên dịch vụ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong style=\"line-height: 16px;\">Tên vật tư</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Tên vật tư</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 16px;\">Tổng cộng tiền VTHH:</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Tổng cộng tiền VTHH:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 16px;\">Tổng cộng tiền công:</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Tổng cộng tiền công:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"line-height: 16px;\">Tổng cộng:</strong>"
+msgstr "<strong style=\"line-height: 16px;\">Tổng cộng:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "<strong style=\"padding-top: 8px;\">Yêu cầu khách hàng:</strong><br/>\n"
+"                                -"
+msgstr "<strong style=\"padding-top: 8px;\">Yêu cầu khách hàng:</strong><br/>\n"
+"                                -"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>\n"
+"                                                <span>PHIẾU THU</span>\n"
+"                                            </strong>"
+msgstr "<strong>\n"
+"                                                <span>PHIẾU THU</span>\n"
+"                                            </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>\n"
+"                                        <span>MST:</span>\n"
+"                                    </strong>"
+msgstr "<strong>\n"
+"                                        <span>MST:</span>\n"
+"                                    </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>\n"
+"                                        <span>Mẫu số 01-TT</span>\n"
+"                                    </strong>"
+msgstr "<strong>\n"
+"                                        <span>Mẫu số 01-TT</span>\n"
+"                                    </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>\n"
+"                                        <span>SĐT :</span>\n"
+"                                    </strong>"
+msgstr "<strong>\n"
+"                                        <span>SĐT :</span>\n"
+"                                    </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "<strong><i>Yêu cầu khách hàng:</i></strong><br/>"
+msgstr "<strong><i>Yêu cầu khách hàng:</i></strong><br/>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<strong>Contact Name</strong>"
+msgstr "<strong>Tên liên hệ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>CỐ VẤN DỊCH VỤ</strong>"
+msgstr "<strong>CỐ VẤN DỊCH VỤ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<strong>Cố vấn dịch vụ: </strong>"
+msgstr "<strong>Cố vấn dịch vụ: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>Cộng :</strong>"
+msgstr "<strong>Cộng :</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "<strong>Dịch Vụ: </strong>"
+msgstr "<strong>Dịch Vụ: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>GG :</strong>"
+msgstr "<strong>GG :</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>GIÁM ĐỐC DỊCH VỤ</strong>"
+msgstr "<strong>GIÁM ĐỐC DỊCH VỤ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>GIÁM ĐỐC</strong>"
+msgstr "<strong>GIÁM ĐỐC</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>Ghi chú:</strong>"
+msgstr "<strong>Ghi chú:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>Giám đốc</strong>"
+msgstr "<strong>Giám đốc</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>KHÁCH HÀNG</strong>"
+msgstr "<strong>KHÁCH HÀNG</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "<strong>Khách Hàng: </strong>"
+msgstr "<strong>Khách Hàng: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>KẾT QUẢ KHÁM XE</strong>"
+msgstr "<strong>KẾT QUẢ KHÁM XE</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>Kế toán trưởng</strong>"
+msgstr "<strong>Kế toán trưởng</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "<strong>Mã Phiếu: </strong>"
+msgstr "<strong>Mã Phiếu: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<strong>Mã phiếu: </strong>"
+msgstr "<strong>Mã phiếu: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>NHÂN VIÊN PHỤ TÙNG</strong>"
+msgstr "<strong>NHÂN VIÊN PHỤ TÙNG</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<strong>Ngày: </strong>"
+msgstr "<strong>Ngày: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>Người lập phiếu</strong>"
+msgstr "<strong>Người lập phiếu</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>Người nhận tiền</strong>"
+msgstr "<strong>Người nhận tiền</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<strong>Phần sửa chữa chung</strong>"
+msgstr "<strong>Phần sửa chữa chung</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "<strong>Phần vật tư phụ tùng</strong>"
+msgstr "<strong>Phần vật tư phụ tùng</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>QUẢN ĐỐC</strong>"
+msgstr "<strong>QUẢN ĐỐC</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "<strong>Tel: </strong>"
+msgstr "<strong>Tel: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>Thuế :</strong>"
+msgstr "<strong>Thuế :</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "<strong>Thủ quỹ</strong>"
+msgstr "<strong>Thủ quỹ</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "<strong>Trạng thái: </strong>"
+msgstr "<strong>Trạng thái: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>Tên phiếu: </strong>"
+msgstr "<strong>Tên phiếu: </strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "<strong>Tổng cộng :</strong>"
+msgstr "<strong>Tổng cộng :</strong>"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "<strong>Yêu cầu khách hàng:</strong>"
+msgstr "<strong>Yêu cầu khách hàng:</strong>"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_account_invoice
+msgid "Account invoice"
+msgstr "Account invoice"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_type
+msgid "Action Type"
+msgstr "Loại hành động"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_active
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_active
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Actual Repairing Date"
+msgstr "Thời gian sửa chữa thực"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_sale_order_add_order_line
+msgid "Add product"
+msgstr "Thêm VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_reason_form
+msgid "Add reason"
+msgstr "Thêm lý do hủy"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_sale_order_add_repair_order_line
+msgid "Add service"
+msgstr "Thêm dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_client_addr
+#: model:ir.model.fields,field_description:car_repair_industry.field_purchase_order_address
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+#: model:ir.ui.view,arch_db:car_repair_industry.purchase_order_form_change_add_code_adress
+#: model:ir.ui.view,arch_db:car_repair_industry.res_partner_quick_form
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:48
+#, python-format
+msgid "Agara"
+msgstr "Agara"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_voucher_voucher_tree_menu_id
+msgid "All Vouchers"
+msgstr "Mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_pos_loyalty_history_amount_pay
+msgid "Amount Pay"
+msgstr "Số tiền trả"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_total_repair_in_word
+msgid "Amount total repair in word"
+msgstr "Amount total repair in word"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_value_aws
+msgid "Answer Input"
+msgstr "Câu trả lời"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_configuration
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.bave_account_supplier_form_inherit
+msgid "Ask Refund"
+msgstr "Hoàn tiền"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_user_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_user_id
+msgid "Assign To"
+msgstr "Nhân viên"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_user_id
+msgid "Assigned To"
+msgstr "Nhân viên bán hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Assigned to"
+msgstr "Phân công cho"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Assignee"
+msgstr "Phân công"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_workorder_assignee_line_user
+msgid "Assignee Work Orders"
+msgstr "Phân công công việc"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Axit"
+msgstr "Axit"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Battery"
+msgstr "Ắc quy"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_bave_configuration
+msgid "Bave Configuration"
+msgstr "Cấu hình Bave"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.bave_order_form
+msgid "Bave Order"
+msgstr "Hóa đơn của Bave"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Bave's Products"
+msgstr "VT-HH của Bave"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.be_dynamic_mapping_action
+#: model:ir.ui.menu,name:car_repair_industry.be_dynamic_mapping_menu
+msgid "Be dynamic mapping"
+msgstr "Be dynamic mapping"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.menu_quotation
+msgid "Billing"
+msgstr "Hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Biển số:"
+msgstr "Biển số:"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_brand_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_fleet_vehicle_brand_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_fleet_vehicle_brand_id
+msgid "Brand"
+msgstr "Hãng"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle_model_brand
+msgid "Brand model of the vehicle"
+msgstr "Brand model of the vehicle"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_brand_ids
+msgid "Brands"
+msgstr "Hãng"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_sale_order_tree_filtered
+msgid "Báo Giá/Đơn Hàng"
+msgstr "Báo Giá/Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_diagnose.py:252
+#: code:addons/car_repair_industry/models/fleet_repair.py:267
+#: code:addons/car_repair_industry/models/fleet_repair.py:525
+#, python-format
+msgid "Báo giá"
+msgstr "Báo giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "Báo giá /"
+msgstr "Báo giá /"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_repair_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_set_line_user_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_configuration
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Cancel Invoice"
+msgstr "Hủy hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Cancel Order"
+msgstr "Hủy"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_cancel_date
+msgid "Cancel date"
+msgstr "Cancel date"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+#: selection:fleet.workorder,state:0
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_coupon_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_reason_form
+msgid "Cancelled"
+msgstr "Hủy"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_fleet_id
+msgid "Car"
+msgstr "Xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_car_color
+msgid "Car Color"
+msgstr "Màu Xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_receipt_date
+msgid "Car Delivery Time"
+msgstr "Thời gian hẹn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_diagnose_id
+msgid "Car Diagnose"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_diagnose_tree_view
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_diagnose_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_diagnose_id
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+msgid "Car Diagnosis"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_car_image
+msgid "Car Image"
+msgstr "Ảnh xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_fleet_repair_line
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_fleet_repair_line
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_car_info
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_fleet_repair_line
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_fleet_ids
+msgid "Car Information"
+msgstr "Thông tin xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_car_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_car_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_car_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_car_name
+msgid "Car Name"
+msgstr "Tên Xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_date_receipt
+msgid "Car Pick Up Date"
+msgstr "Ngày nhận xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_fleet_repair_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_fleet_repair_id
+#: model:ir.module.category,name:car_repair_industry.module_category_fleet_repair
+#: model:ir.ui.menu,name:car_repair_industry.menu_base_fleet_repair
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_tree
+msgid "Car Repair"
+msgstr "Sửa chữa xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_workorder_id
+msgid "Car Work Order"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_car_color
+#: model:ir.ui.menu,name:car_repair_industry.menu_action_car_color
+msgid "Car color"
+msgstr "Màu xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_tree
+msgid "Car in date"
+msgstr "Ngày xe vào"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_tree
+msgid "Car out date"
+msgstr "Ngày xe ra"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_vin_sn
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_vin_sn
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_chassis_number
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_vin_sn
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_vin_sn
+msgid "Chassis Number"
+msgstr "Số khung"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:651
+#, python-format
+msgid "Click exit to come back!"
+msgstr "Nhấn \"Quay lại\" để trở lại màn hình lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.bave_delivery_picking
+msgid "Click here to create a new transfer."
+msgstr "Nhấn để tạo một dịch chuyển."
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_invoice_tree1
+msgid "Click to create a customer invoice."
+msgstr "Nhấn để tạo một hóa đơn."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_client_id
+msgid "Client"
+msgstr "Khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_code
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_code
+#: model:ir.ui.view,arch_db:car_repair_industry.car_res_partner_form_view
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Code"
+msgstr "Mã"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_car_color_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_id_8387
+#: model:ir.model.fields,field_description:car_repair_industry.field_survey_label_color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_color_code
+msgid "Color code"
+msgstr "Mã màu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_model_car_color_ids
+msgid "Colors"
+msgstr "Màu xe"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_company_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_company_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,state:0
+msgid "Complete"
+msgstr "Hoàn thành"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_compute_vehicle_model
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_compute_vehicle_model
+msgid "Compute vehicle model"
+msgstr "Compute vehicle model"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_compute_vehicle_model_brand
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_compute_vehicle_model_brand
+msgid "Compute vehicle model brand"
+msgstr "Compute vehicle model brand"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.menu_fleet_config_menu
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_notification_form
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_repair_configuration
+#: model:ir.ui.menu,name:car_repair_industry.menu_action_repair_configuration
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_configuration
+msgid "Configure Repair"
+msgstr "Cấu hình sửa chữa"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Confirm Sale"
+msgstr "Xác nhận"
+
+#. module: car_repair_industry
+#: selection:sale.order,invoice_state:0
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_contact_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_contact_name
+msgid "Contact Name"
+msgstr "Tên liên hệ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.done_picking_workorder_confirm_repair_view_form
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Contracts"
+msgstr "Các hợp đồng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_copy_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_is_copy
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_copy_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_is_copy
+msgid "Copy"
+msgstr "Sao chép"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Costs"
+msgstr "Các chi phí"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_coupon_code
+msgid "Coupon Code"
+msgstr "Mã giảm giá"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Create"
+msgstr "Tạo"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_common.js:66
+#, python-format
+msgid "Create \"<strong>%s</strong>\""
+msgstr "Tạo \"<strong>%s</strong>\""
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Create Invoice"
+msgstr "Chốt lệnh"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+msgid "Create Quotation"
+msgstr "Tạo báo giá"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_saleorder1
+#: model:ir.actions.act_window,help:car_repair_industry.custom_action_quotations
+msgid "Create a Quotation, the first step of a new sale."
+msgstr "Tạo mới một báo giá, bước đầu tiên của một lệnh bán hàng mới"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_common.js:77
+#, python-format
+msgid "Create and Edit..."
+msgstr "Tạo và sửa..."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_create_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_create_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Creator"
+msgstr "Người tạo"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_current_user
+msgid "Current user"
+msgstr "Người dùng hiện tại"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.car_repair_menu_partner_form
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+#: model:ir.ui.view,arch_db:car_repair_industry.voucher_label_tree_inherit
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.res_partner_quick_form
+msgid "Customer Code"
+msgstr "Mã khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_invoice_tree1
+msgid "Customer Invoices"
+msgstr "Hóa đơn khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_client_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_client_id
+#: model:ir.ui.view,arch_db:car_repair_industry.res_partner_quick_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Customer Name"
+msgstr "Tên khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Customer Phone"
+msgstr "Số điện thoại khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_description
+msgid "Customer Request"
+msgstr "Ghi chú"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_description
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_description
+msgid "Customer Requests"
+msgstr "Ghi chú"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_fleet.py:281
+#, python-format
+msgid "Các dịch vụ"
+msgstr "Các dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "Công việc"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: selection:survey.label,color:0
+msgid "Danger"
+msgstr "Danger"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:211
+#, python-format
+msgid "Dat Hang"
+msgstr "Đặt hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_base_config_settings_bave_db
+msgid "Database Name"
+msgstr "Tên CSDL"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Date finished greater than or equal to"
+msgstr "Ngày giao xe lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Date finished less than or equal to"
+msgstr " Ngày giao xe nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_receipt_date
+msgid "Date of Receipt"
+msgstr "Ngày nhận xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Date receive car greater than or equal to"
+msgstr "Ngày xe vào lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Date receive car less than or equal to"
+msgstr "Ngày xe vào nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Date start greater than or equal to"
+msgstr "Ngày bắt đầu lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Date start less than or equal to"
+msgstr "Ngày bắt đầu nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_day_order
+msgid "Day order"
+msgstr "Day order"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_day_validity
+msgid "Day validity"
+msgstr "Day validity"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Default"
+msgstr "Mặc định"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_configuration
+msgid "Delivery"
+msgstr "Phiếu xuất kho"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_date_finished
+msgid "Delivery Date"
+msgstr "Ngày giao xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.car_delivery_request
+msgid "Delivery Requests"
+msgstr "Phiếu xuất kho"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_description
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_description
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_description
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_description
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_filter
+msgid "Diagnose"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Diagnosis Complete"
+msgstr "Hoàn thành khám xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_diagnose_id
+msgid "Diagnosis ID"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_dig_count
+msgid "Diagnosis Orders"
+msgstr "Đơn khám xe"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,fuel_type:0
+#: selection:fleet.workorder,fuel_type:0
+msgid "Diesel"
+msgstr "Dầu Diesel"
+
+#. module: car_repair_industry
+#: model:res.groups,name:car_repair_industry.group_fleet_repair_directeur_commercial
+msgid "Directeur Commercial"
+msgstr "Giám đốc thương mại"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_discount_value
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_discount_value
+msgid "Discount value"
+msgstr "Giá trị CK"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_diagn_req_temp_id_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_rep_label_temp_id_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_repa_rece_temp_id_display_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "District"
+msgstr "Quận/Huyện"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,kanban_state:0
+#: selection:fleet.repair,state:0
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+#: selection:repair.order.line,repair_state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_done_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_done_date
+msgid "Done date"
+msgstr "Ngày hoàn thành"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,state:0
+#: selection:fleet.workorder,state:0
+#: selection:repair.order.line,repair_state:0
+msgid "Draft"
+msgstr "Mới"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Duration"
+msgstr "Khoảng thời gian"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_service_type
+msgid "Dịch vụ"
+msgstr "Dịch vụ"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Edit"
+msgstr "Sửa"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,fuel_type:0
+#: selection:fleet.workorder,fuel_type:0
+msgid "Electric"
+msgstr "Điện tử"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_client_email
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_client_email
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_client_email
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Đồ thuật soạn email"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:127
+#: code:addons/car_repair_industry/models/custom_sale.py:137
+#: code:addons/car_repair_industry/models/fleet_repair.py:208
+#: code:addons/car_repair_industry/models/fleet_repair.py:220
+#, python-format
+msgid "Email format invalid. Please enter again!"
+msgstr "Định dạng email không hợp lệ, vui lòng nhập lại!"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+msgid "Email:"
+msgstr "Email:"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_date_planned_end
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Engine Options"
+msgstr "Thông tin kỹ thuật"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_repair_coupon
+msgid "Enter & Check coupon code"
+msgstr "Nhập và kiểm tra mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Enter Coupon"
+msgstr "Nhập mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_reason_form
+msgid "Enter Reason Cancel"
+msgstr "Nhập lý do hủy"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_coupon_form
+msgid "Enter Value Voucher"
+msgstr "Nhập giá trị mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_repair_reason
+msgid "Enter reason code"
+msgstr "Nhập mã lý do"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_erp_model
+msgid "Erp model"
+msgstr "Erp model"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_erp_ref_id
+msgid "Erp ref id"
+msgstr "Erp ref id"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_est_ser_hour
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_est_ser_hour
+msgid "Estimated Sevice Hours"
+msgstr "Ước tính giờ làm việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.done_picking_workorder_confirm_repair_view_form
+msgid "Exit"
+msgstr "Quay lại"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+msgid "Fax:"
+msgstr "Fax: "
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Finish Order"
+msgstr "Kết thúc lệnh"
+
+#. module: car_repair_industry
+#: selection:fleet.workorder,state:0
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Finished"
+msgstr "Hoàn thành"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_account_invoice_create_form_fleet
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_create_form_fleet
+#: model:ir.model.fields,field_description:car_repair_industry.field_stock_picking_create_from_fleet
+msgid "Fleet"
+msgstr "Quản lý xe"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle_version
+msgid "Fleet Vehicle Version"
+msgstr "Dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_workorder_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_workorder_id
+msgid "Fleet WorkOrder"
+msgstr "Lệnh làm việc"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle_type
+msgid "Fleet vehicle type"
+msgstr "Loại xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_fleet_vehicles
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_fleet_vehicles
+msgid "Fleet vehicles"
+msgstr "Quản lý xe"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,guarantee_type:0
+msgid "Free"
+msgstr "Miễn phí"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Fuel"
+msgstr "Nhiên liệu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_fuel_type
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_fuel_type
+msgid "Fuel Type"
+msgstr "Loại nhiên liệu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_diagnose_fuel_type
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_workorder_fuel_type
+msgid "Fuel Used by the vehicle"
+msgstr "Nhiên liệu sử dụng cho xe"
+
+#. module: car_repair_industry
+#: model:res.groups,name:car_repair_industry.group_gara_director
+msgid "Gara director"
+msgstr "Gara director"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Gas"
+msgstr "Nhiên liệu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_gas_number
+msgid "Gas number"
+msgstr "Mức nhiên liệu"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,fuel_type:0
+#: selection:fleet.workorder,fuel_type:0
+msgid "Gasoline"
+msgstr "Gasoline"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "General Properties"
+msgstr "Thông tin chung"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_diagnose_state
+msgid "Gives the status of the fleet Diagnosis."
+msgstr "Gives the status of the fleet Diagnosis."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_repair_state
+msgid "Gives the status of the fleet repairing."
+msgstr "Cung cấp cho trạng thái sửa chữa xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_survey_question_group
+msgid "Group"
+msgstr "Nhóm"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_guarantee_type
+msgid "Guarantee Type"
+msgstr "Kiểu bảo hành"
+
+#. module: car_repair_industry
+#: model:res.groups,name:car_repair_industry.group_fleet_repair_head_technician
+msgid "Head Technician"
+msgstr "Trưởng bộ phận"
+
+#. module: car_repair_industry
+#: model:ir.module.category,description:car_repair_industry.module_category_fleet_repair
+msgid "Helps you manage your Car Repairing."
+msgstr "Giúp bạn quản lý quy trình sửa chữa xe."
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,priority:0
+#: selection:fleet.repair,priority:0
+#: selection:fleet.workorder,priority:0
+msgid "High"
+msgstr "Cao"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_hours_worked
+msgid "Hours Worked"
+msgstr "Giờ làm việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "Hoàn Thành"
+msgstr "Hoàn Thành"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,fuel_type:0
+#: selection:fleet.workorder,fuel_type:0
+msgid "Hybrid"
+msgstr "Hybrid"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_diagnose.py:295
+#, python-format
+msgid "Hóa đơn"
+msgstr "Hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "Hạng mục"
+msgstr "Hạng mục"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_diagn_req_temp_id_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_rep_label_temp_id_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_repa_rece_temp_id_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_id
+msgid "ID"
+msgstr "ID"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_base_config_settings_bave_ip
+msgid "IP"
+msgstr "IP"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "In Diagnosis"
+msgstr "Đang khám xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_order_filter
+msgid "In Garage"
+msgstr "Xe trong Gara"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,state:0
+#: selection:fleet.workorder,state:0
+msgid "In Progress"
+msgstr "Đang thực hiện"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.bave_delivery_picking
+msgid "In/Out Document"
+msgstr "Chứng từ nhập xuất"
+
+#. module: car_repair_industry
+#: selection:survey.label,color:0
+msgid "Info"
+msgstr "Thông tin"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle
+msgid "Information on a vehicle"
+msgstr "Thông tin trên một xe"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/wizard/repair_coupon.py:78
+#, python-format
+msgid "Invalid coupon code. Check again, please!"
+msgstr "Mã giảm giá không hợp lệ. Vui lòng kiểm tra lại!"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Inventory Warning"
+msgstr "Cảnh báo tồn kho"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_inv_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_inv_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_count_dig
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_count_fleet_repair
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Chi tiết hoá đơn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_invoice_lines
+msgid "Invoice Lines"
+msgstr "Chi tiết hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_invoice_confirmed
+msgid "Invoice confirmed"
+msgstr "Hóa đơn đã xác nhận"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1701
+#: code:addons/car_repair_industry/models/custom_sale.py:1713
+#, python-format
+msgid "Invoice must be in draft or Pro-forma state in order to validate it."
+msgstr "Hóa đơn phải ở trạng thái nháp hoặc hóa đơn tạm để xác nhận."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_invoice_state
+msgid "Invoice state"
+msgstr "Trạng thái hóa đơn"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Invoiced"
+msgstr "Xuất hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.menu_sale_order_sub1
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+msgid "Invoices"
+msgstr "Các hoá đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Invoicing"
+msgstr "Thông tin hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_is_service_package
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_is_service_package
+msgid "Is service package"
+msgstr "là gói dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_upsell
+msgid "Is upsell"
+msgstr "Lệnh sửa chữa upsell"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "KT Viên"
+msgstr "KT Viên"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "KT viên"
+msgstr "KT viên"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_kanban_state
+msgid "Kanban State"
+msgstr "Trạng thái dạng lưới"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.fleet_diagnostic_result_report_id
+msgid "Kết quả lệnh khám xe"
+msgstr "Kết quả lệnh khám xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_label_id
+msgid "Label"
+msgstr "Nhãn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_diagn_req_temp_id___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_rep_label_temp_id___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_report_fleet_repair_industry_machi_repa_rece_temp_id___last_update
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_write_uid
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_coupon_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_write_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_account_invoice_license_plate
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_license_plate
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_license_plate
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_license_plate
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_license_plate
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+#: model:ir.ui.view,arch_db:car_repair_industry.picking_custom_search
+msgid "License Plate"
+msgstr "Biển số xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_plates
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_plates
+#: model:ir.model.fields,field_description:car_repair_industry.field_stock_picking_license_plate
+msgid "License plate"
+msgstr "Biển số xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_diagnose_license_plate
+msgid "License plate number of the vehicle (ie: plate number for a car)"
+msgstr "Biển số xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_listen_search
+msgid "Listen"
+msgstr "Nghe"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:341
+#, python-format
+msgid "Log out"
+msgstr "Thoát"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Lot Split"
+msgstr "Tách Lô"
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,priority:0
+#: selection:fleet.repair,priority:0
+#: selection:fleet.workorder,priority:0
+msgid "Low"
+msgstr "Thấp"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_menu_pos_loyalty_history
+msgid "Loyalty History"
+msgstr "Lịch sử tích điểm"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.loyalty_management_inherit
+msgid "Loyalty History Form"
+msgstr "Lịch sử điểm mua hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_wk_loyalty_parent_menu_id
+msgid "Loyalty Management"
+msgstr "Quản lý điểm thưởng"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_wk_loyalty_rules_menu_id
+msgid "Loyalty Rules"
+msgstr "Luật tích điểm"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "LỆNH PHỤ TÙNG"
+msgstr "LỆNH PHỤ TÙNG"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_workorder_tree_filtered
+msgid "Lệnh Làm Việc"
+msgstr "Lệnh Làm Việc"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_diagnose.py:234
+#, python-format
+msgid "Lệnh khám xe"
+msgstr "Lệnh khám xe"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1338
+#: code:addons/car_repair_industry/models/fleet_repair.py:249
+#, python-format
+msgid "Lệnh làm việc"
+msgstr "Lệnh làm việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.res_partner_quick_form
+msgid "MST"
+msgstr "MST"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+msgid "MST:"
+msgstr "MST:"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_pos_loyalty_history
+msgid "Manage the POS loyalty point history"
+msgstr "Quản lý lịch sử điểm tích lũy của khách hàng"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Mark Lost"
+msgstr "Đánh dấu thua"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Mark Win"
+msgstr "Đánh dấu thắng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_message_error_picking_workorder
+msgid "Message error picking workorder"
+msgstr "Tin nhắn lỗi giao hàng và công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_client_mobile
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_client_mobile
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_client_mobile
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_model_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_model_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_vehicle_model_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_vehicle_model_id
+msgid "Model"
+msgstr "Dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "Dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_diagnose_model_id
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_repair_model_id
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_vehicle_brand_id
+msgid "Model of the vehicle"
+msgstr "Dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_car_vehicle_model_ids
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_model_ids
+msgid "Models"
+msgstr "Các dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Modify"
+msgstr "Điều chỉnh"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1617
+#, python-format
+msgid "Must be done picking before confirm."
+msgstr "Bạn cần hoàn thành việc xuất/nhập kho trước khi chốt lệnh."
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1613
+#, python-format
+msgid "Must be done work order before confirm."
+msgstr "Bạn cần chuyển trạng thái công việc sang hoàn thành trước khi chốt lệnh."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "My Orders"
+msgstr "Đơn hàng của tôi"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_sale_order_code_used
+msgid "Mã giảm giá được sử dụng trong đơn bán hàng"
+msgstr "Mã giảm giá được sử dụng trong đơn bán hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "Mã số"
+msgstr "Mã số"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Mã vật tư"
+msgstr "Mã vật tư"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_repair_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Mô tả"
+msgstr "Mô tả"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_color_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_version_name
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_service_type_ids
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_service_type_ids
+msgid "Nature of Service"
+msgstr "Dịch vụ"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:36
+#: code:addons/car_repair_industry/models/custom_sale.py:823
+#: code:addons/car_repair_industry/models/custom_sale.py:825
+#: code:addons/car_repair_industry/models/custom_sale.py:827
+#, python-format
+msgid "New"
+msgstr "Mới"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Ngày..........tháng..........năm..........."
+msgstr "Ngày..........tháng..........năm..........."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "Nhân viên"
+msgstr "Nhân viên"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,guarantee:0
+msgid "No"
+msgstr "Không"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_common.js:90
+#, python-format
+msgid "No results to show..."
+msgstr "Không có kết quả hiển thị..."
+
+#. module: car_repair_industry
+#: selection:fleet.diagnose,priority:0
+#: selection:fleet.repair,priority:0
+#: selection:fleet.workorder,priority:0
+msgid "Normal"
+msgstr "Thông thường"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,kanban_state:0
+msgid "Not Work"
+msgstr "Chưa làm"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_saleorder1
+#: model:ir.actions.act_window,help:car_repair_industry.custom_action_quotations
+msgid "Note that once a Quotation becomes a Sale Order, it will be moved\n"
+"                from the Quotations list to the Sales Order list."
+msgstr "Chú ý rằng, khi một Báo giá được xác nhận thành một Lệnh sửa chữa, nó sẽ được chuyển \n"
+"                từ danh sách Báo giá sang danh sách Lệnh sửa chữa."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_noti_line_ids
+msgid "Noti line ids"
+msgstr "Dòng thông báo"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_noti_id
+msgid "Notification"
+msgstr "Thông báo"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_notification
+msgid "Notification Config"
+msgstr "Cấu hình thông báo"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.fleet_notification_config
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_notification_form
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_notification_tree
+msgid "Notification Configuration"
+msgstr "Cấu hình thông báo"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_cycle
+msgid "Number of Cycles"
+msgstr "Number of Cycles"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_hour
+msgid "Number of Hours"
+msgstr "Số giờ làm việc dự kiến"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Nội dung câu hỏi khảo sát"
+msgstr "Nội dung câu hỏi khảo sát"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "Nội dung sửa chữa"
+msgstr "Nội dung sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Odometer"
+msgstr "Số đồng hồ"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_invoice_tree1
+msgid "Odoo's electronic invoicing allows to ease and fasten the\n"
+"                collection of customer payments. Your customer receives the\n"
+"                invoice by email and he can pay online and/or import it\n"
+"                in his own system."
+msgstr "Hóa đơn điện tử của Odoo cho phép dễ dàng và nhanh chóng thu thập các khoản thanh toán\n"
+"                của khách hàng.  Khách hàng của bạn nhận được hóa đơn qua email\n"
+"                và anh ấy có thể thanh toán trực tuyến và / hoặc nhập nó vào hệ thống\n"
+"                của riêng mình."
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:52
+#, python-format
+msgid "Ok"
+msgstr "Ok"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:418
+#, python-format
+msgid "Open: Car Information"
+msgstr "Mở: Thông tin chi tiết xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Operations"
+msgstr "Hoạt động"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:214
+#: model:ir.model.fields,field_description:car_repair_industry.field_account_invoice_order_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_stock_picking_order_id
+#, python-format
+msgid "Order"
+msgstr "Đặt hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_order_lines
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_service_lines
+msgid "Order Line"
+msgstr "Chi tiết VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_order_line_add
+msgid "Order Lines"
+msgstr "Chi tiết Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Order Lines - Products"
+msgstr "Danh sách VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Order Lines - Services"
+msgstr "Danh sách dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_order_line_service
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_order_line_service_add
+msgid "Order Lines Service"
+msgstr "Chi tiết dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Order Month"
+msgstr "Tháng đặt hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_pos_loyalty_history_order_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_order_id
+msgid "Order Reference"
+msgstr "Tham chiếu đơn hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_repair_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Ordered Qty"
+msgstr "SL đặt"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Ordered Quantity"
+msgstr "Số lượng đặt"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/wizard/repair_coupon.py:85
+#, python-format
+msgid "Orders"
+msgstr "Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_origin_id
+msgid "Origin order"
+msgstr "Lệnh sửa chữa nguồn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Other Information"
+msgstr "Thông tin khác"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "PRO-FORMA"
+msgstr "Hóa đơn tạm"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Package To Move"
+msgstr "Gói để Dịch chuyển"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_page_id
+msgid "Page"
+msgstr "Trang"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.external_layout_footer
+msgid "Page:"
+msgstr "Trang:"
+
+#. module: car_repair_industry
+#: selection:sale.order,invoice_state:0
+msgid "Paid"
+msgstr "Paid"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Paint type"
+msgstr "Kiểu sơn"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_res_partner
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_purchase_order_partner_code
+#: model:ir.ui.view,arch_db:car_repair_industry.purchase_order_form_change_add_code_adress
+msgid "Partner Code"
+msgstr "Mã NCC"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_res_partner_form_view
+msgid "Partner group"
+msgstr "Nhóm khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_base_config_settings_bave_password
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Pause Work Order"
+msgstr "Tạm dừng"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: car_repair_industry
+#: selection:fleet.workorder,state:0
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Pending"
+msgstr "Dừng"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_diagnose_tree_filtered
+msgid "Phiếu Khám"
+msgstr "Phiếu Khám"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_repair.py:231
+#: code:addons/car_repair_industry/models/fleet_repair.py:584
+#, python-format
+msgid "Phiếu khám"
+msgstr "Phiếu khám"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_workorder.py:154
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_tree
+#, python-format
+msgid "Phiếu khám xe"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.receipts_from_account_invoice_btek
+msgid "Phiếu thu"
+msgstr "Phiếu thu"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1325
+#: code:addons/car_repair_industry/models/fleet_diagnose.py:215
+#: code:addons/car_repair_industry/models/fleet_workorder.py:135
+#, python-format
+msgid "Phiếu yêu cầu"
+msgstr "Phiếu yêu cầu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_client_phone
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_client_phone
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_client_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Phone Number"
+msgstr "Số điện thoại khách hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+msgid "Phone:"
+msgstr "Điện thoại: "
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_picking_auto_done
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_company_picking_auto_done
+msgid "Picking auto done"
+msgstr "Tự động hoàn thành giao hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.bave_vpicktree
+msgid "Picking list"
+msgstr "Bảng kế hàng giao nhận"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.picking_custom_search
+msgid "Plan date greater than or equal to"
+msgstr "Ngày theo kế hoạch lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.picking_custom_search
+msgid "Plan date less than or equal to"
+msgstr "Ngày theo kế hoạch nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Planned Date"
+msgstr "Kế hoạch"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:649
+#, python-format
+msgid "Please click \"continue\" to automatic process done {}"
+msgstr "Nhấn \"Tiếp tục\" để  tự động hoàn thành {}"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_base_config_settings_bave_port
+msgid "Port"
+msgstr "Cổng"
+
+#. module: car_repair_industry
+#: selection:survey.label,color:0
+msgid "Primary"
+msgstr "Primary"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Print"
+msgstr "In"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Print Order"
+msgstr "In đơn hàng"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.report_repair_order_menu
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Print Repair Order"
+msgstr "In lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.fleet_workorder_report_id
+msgid "Print WorkOrder"
+msgstr "In Phiếu Công Việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Print quotation"
+msgstr "In báo giá"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_priority
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_priority
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_done_picking_workorder_confirm_repair
+msgid "Process picking & workorder confirm"
+msgstr "Xử lý phiếu giao hàng và công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_model_brand_product_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_model_product_ids
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_product_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_product_ids
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_product_outside
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_product_template_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_product_template
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+#: model:ir.ui.view,arch_db:car_repair_industry.voucher_voucher_inherit_view
+msgid "Products"
+msgstr "VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Products List"
+msgstr "Danh sách VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_promotion_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_promotion_id
+msgid "Promotion"
+msgstr "CTKM"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Province/City"
+msgstr "Tỉnh/Thành phố"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn hàng Mua"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_bave_order_quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_question_id
+msgid "Question ID"
+msgstr "Id câu hỏi"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.report_sale_order_quotation
+msgid "Quotation"
+msgstr "Báo giá"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Quotation Approved"
+msgstr "Bán hàng"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Quotation Sent"
+msgstr "Gửi báo giá"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.custom_action_quotations
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_quotation_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_quotation_count
+#: model:ir.ui.menu,name:car_repair_industry.menu_quotation_sub
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+msgid "Quotations"
+msgstr "Báo giá"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_property_quotes_note
+msgid "Quotes note print"
+msgstr "Ghi chú báo giá"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_real_finish_date_date
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_real_start_date
+msgid "Real Date"
+msgstr "Ngày thực tế"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_reason_text
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_reason_cancel
+msgid "Reason"
+msgstr "Lý do"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:901
+#, python-format
+msgid "Reason Cancel"
+msgstr "Lý do hủy Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_receipt_template_view
+msgid "Receipt"
+msgstr "Phiếu thu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_service_rec_no
+msgid "Receipt No"
+msgstr "Số hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_order_filter
+msgid "Receipt date greater than or equal to"
+msgstr "Ngày xe vào lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_order_filter
+msgid "Receipt date less than or equal to"
+msgstr "Ngày xe vào nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Received"
+msgstr "Đã nhận"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Recompute"
+msgstr "Tính toán lại"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Refund Invoice"
+msgstr "Hóa đơn hoàn tiền"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.bank_action_account_invoice_payment
+msgid "Register Bank Payment"
+msgstr "Thanh toán ngân hàng"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.cash_action_account_invoice_payment
+msgid "Register Cash Payment"
+msgstr "Thanh toán tiền mặt"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Register Payment"
+msgstr "Thanh toán"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_check_signup
+msgid "Registration CarGO"
+msgstr "Đăng ký CarGO"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Repair Order"
+msgstr "Phiếu yêu cầu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_account_invoice_line_repair_line_ids
+msgid "Repair Order Lines"
+msgstr "Chi tiết đơn đặt hàng dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_fleet_repair_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_count_fleet_repair
+msgid "Repair Orders"
+msgstr "Đơn đặt hàng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_workorder_id
+msgid "Repair Work Order"
+msgstr "Công việc sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_repair_state
+msgid "Repair state"
+msgstr "Trạng thái sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: car_repair_industry
+#: model:ir.actions.report.xml,name:car_repair_industry.fleet_repair_label_id
+msgid "Request Service"
+msgstr "Phiếu yêu cầu"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Reset to Draft"
+msgstr "Chuyển về nháp"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Resume"
+msgstr "Khôi phục"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Resume Work Order"
+msgstr "Tiếp tục công việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.survey_question_form_inherit
+msgid "Row1"
+msgstr "Row1"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "SL"
+msgstr "SL"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "STT"
+msgstr "STT"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_saleorder_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_saleorder_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_saleorder_count
+msgid "Sale Order"
+msgstr "Đơn hàng"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Hoá đơn thanh toán tạm ứng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Sales Information"
+msgstr "Các thông tin Bán hàng"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_saleorder1
+#: model:ir.model,name:car_repair_industry.model_sale_order
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_sale_order_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_sale_order_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_sale_order_id
+#: model:ir.ui.menu,name:car_repair_industry.menu_sale_order_sub
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Sales Order"
+msgstr "Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng hàng của Đơn hàng bán"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Sales Order Lines"
+msgstr "Chi tiết Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Sales Order Lines Service"
+msgstr "Chi tiết dịch vụ đơn bán hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_tree
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Sales Orders"
+msgstr "Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Salesperson"
+msgstr "Nhân viên bán hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_add_repair_order_line_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_set_line_user_form
+msgid "Save"
+msgstr "Lưu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_date_planned
+msgid "Scheduled Date"
+msgstr "Ngày dự kiến"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_filter
+msgid "Search Car Diagnoses"
+msgstr "Tìm kiếm lệnh khám xe"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_common.js:50
+#, python-format
+msgid "Search More..."
+msgstr "Tìm kiếm thêm..."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_order_filter
+msgid "Search Repair Order"
+msgstr "Tìm kiếm phiếu yêu cầu sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Search Sales Order"
+msgstr "Tìm kiếm Đơn hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "Search fleet WorkOrder"
+msgstr "Tìm kiếm công việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+msgid "Send by Email"
+msgstr "Gửi qua Email"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_sequence
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_sequence
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_service_type
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_service_type_ids
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Service"
+msgstr "Gói dịch vụ"
+
+#. module: car_repair_industry
+#: model:res.groups,name:car_repair_industry.group_fleet_repair_service_manager
+msgid "Service Manager"
+msgstr "Quản lý dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_service_name
+msgid "Service Name"
+msgstr "Tên dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_service_type_ids
+msgid "Service Package"
+msgstr "Gói dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_service_product_id
+msgid "Service Product"
+msgstr "VT-HH dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_service_product_price
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_service_product_price
+msgid "Service Product Price"
+msgstr "Giá VT-HH dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_stock_picking_repair_id
+msgid "Service Request"
+msgstr "Yêu cầu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.menu_fleet_repair_submenu
+msgid "Service Requests"
+msgstr "Yêu cầu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_product_service_type_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_product_template_service_type_id
+#: model:ir.ui.view,arch_db:car_repair_industry.view_service_type_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_service_type_tree
+msgid "Service Type"
+msgstr "Kiểu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_service_lines_state_assignee
+msgid "Service lines state assignee"
+msgstr "Phân công chi tiết công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_service_lines_state_pause
+msgid "Service lines state pause"
+msgstr "Dừng chi tiết công việc"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_repair_tree_view
+msgid "Service request"
+msgstr "Yêu cầu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Services List"
+msgstr "Danh sách dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.menu_fleet_service_type
+msgid "Services Type"
+msgstr "Các kiểu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Set Draft"
+msgstr "Chuyển mới"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Setup default terms and conditions in your company settings."
+msgstr "Cài đặt chính sách mặc định và điều kiện trong cấu hình công ty."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "Show the services logs for this vehicle"
+msgstr "Hiển thị lịch sử sửa chữa xe"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:214
+#, python-format
+msgid "So Luong:"
+msgstr "Số lượng:"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_fleet_repair_id
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_date_start
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Start Working"
+msgstr "Đang làm việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_state
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_state
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_state
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_parent_state
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_parent_state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Stock In"
+msgstr "Nhập kho"
+
+#. module: car_repair_industry
+#: selection:fleet.notification.line,type:0
+msgid "Stock Out"
+msgstr "Xuất kho"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_sub_price_after_tax_discount
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_sub_price_after_tax_discount
+msgid "Subtotal after tax and discount"
+msgstr "Subtotal after tax and discount"
+
+#. module: car_repair_industry
+#: selection:survey.label,color:0
+msgid "Success"
+msgstr "Thành công"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_order_line_suggest_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_line_suggest_id
+msgid "Suggest Product"
+msgstr "VT-HH gợi ý"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_survey_question_product_ids
+#: model:ir.ui.view,arch_db:car_repair_industry.survey_question_form_inherit
+msgid "Suggest products"
+msgstr "Các VT-HH gợi ý"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Sum"
+msgstr "Tổng"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_survey_survey
+#: model:ir.model.fields,field_description:car_repair_industry.field_diagnose_user_input_survey_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_survey_ids
+msgid "Survey"
+msgstr "Khảo sát"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_survey_label
+msgid "Survey Label"
+msgstr "Nhãn Khảo sát"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_survey_question
+msgid "Survey Question"
+msgstr "Câu hỏi Khảo sát"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_service_type_survey_ids
+msgid "Surveys"
+msgstr "Khám xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Số khung:"
+msgstr "Số khung:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_workorder_template_view
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_notification_line_model_id
+msgid "Table"
+msgstr "Bảng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Tax Number"
+msgstr "MST"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "Tax value"
+msgstr "Giá trị thuế"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_tax_repair
+msgid "Taxes"
+msgstr "Thuế"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_user_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_user_id
+msgid "Technician"
+msgstr "Nhân viên"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:276
+#, python-format
+msgid "Tham chiếu nội bộ"
+msgstr "Tham chiếu nội bộ"
+
+#. module: car_repair_industry
+#: sql_constraint:res.partner:0
+msgid "The code must be unique !"
+msgstr "Mã khách hàng phải là duy nhất !"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_invoice_tree1
+msgid "The discussions with your customer are automatically displayed at\n"
+"                the bottom of each invoice."
+msgstr "Các cuộc thảo luận với khách hàng của bạn được tự động hiển thị\n"
+"                ở cuối mỗi hóa đơn."
+
+#. module: car_repair_industry
+#: sql_constraint:fleet.vehicle:0
+msgid "The license plate is already in your system. Please check your system again!"
+msgstr "Biển số vừa nhập đã tồn tại. Vui lòng kiểm tra lại thông tin trên hệ thống!"
+
+#. module: car_repair_industry
+#: sql_constraint:res.partner:0
+msgid "The mobile must be unique !"
+msgstr "Số điện thoại di dộng phải là duy nhất!"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_upsell
+msgid "There are no upsell."
+msgstr "Không có upsell."
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1067
+#: code:addons/car_repair_industry/models/custom_sale.py:1071
+#, python-format
+msgid "There is no invoicable line."
+msgstr "Không có chi tiết hóa đơn."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Thành tiền"
+msgstr "Thành tiền"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "Thời hạn hoàn ứng"
+msgstr "Thời hạn hoàn ứng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "Time create"
+msgstr "Thời gian tạo"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Tire size"
+msgstr "Cỡ lốp"
+
+#. module: car_repair_industry
+#: selection:survey.question,group:0
+msgid "Tire type"
+msgstr "Kiểu lốp"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Tiền bán"
+msgstr "Tiền bán"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_total_repair
+msgid "Total"
+msgstr "Tổng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_total_discount
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_total_discount_repair
+msgid "Total Discount"
+msgstr "Tổng CK"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_tree
+msgid "Total Tax Included"
+msgstr "Tổng tiền sau thuế"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_product
+msgid "Total product"
+msgstr "Total product"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_price_after_tax_discount
+msgid "Total product after tax and discount"
+msgstr "Total product after tax and discount"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_price_before_tax_discount
+msgid "Total product before tax and discount"
+msgstr "Total product before tax and discount"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_product_discount
+msgid "Total product discount"
+msgstr "Total product discount"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_product_tax
+msgid "Total product tax"
+msgstr "Total product tax"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_total_service
+msgid "Total service"
+msgstr "Total service"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Trạng thái"
+msgstr "Trạng thái"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_type_id_8382
+msgid "Type"
+msgstr "Loại"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Tên KH:"
+msgstr "Tên KH:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+msgid "Tên gọi"
+msgstr "Tên gọi"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Tên kiểu xe:"
+msgstr "Tên kiểu xe:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Tên vật tư"
+msgstr "Tên vật tư"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:297
+#, python-format
+msgid "Tạo Sản Phẩm"
+msgstr "Tạo VT-HH"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_guarantee
+msgid "Under Guarantee?"
+msgstr "Bảo hành?"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,help:car_repair_industry.field_fleet_diagnose_vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr "Số VIN là duy nhất trên mỗi xe (Số VIN/SN)"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Unread Messages"
+msgstr "Thông điệp chưa đọc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_amount_untaxed_repair
+msgid "Untaxed Amount"
+msgstr "Giá trị trước thuế"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_repair.py:285
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_upsell_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_upsell_id
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_upsell_ids
+#: model:ir.ui.view,arch_db:car_repair_industry.car_res_partner_form_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_sales_order_filter
+#, python-format
+msgid "Upsell"
+msgstr "Upsell"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_partner_upsell_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_users_upsell_count
+msgid "Upsell count"
+msgstr "Upsell count"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_upsell
+#: model:ir.ui.menu,name:car_repair_industry.menu_upsell
+msgid "Upselling"
+msgstr "Upselling"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/wizard/repair_coupon.py:26
+#, python-format
+msgid "Used coupon code. Check again, please!"
+msgstr "Mã giảm giá đã sử dụng. Vui lòng kiểm tra lại!"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_base_config_settings_bave_user
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+#: model:ir.ui.view,arch_db:car_repair_industry.picking_custom_search
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "VIN Number"
+msgstr "Số VIN"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:285
+#, python-format
+msgid "VND"
+msgstr "VND"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+#: model:ir.ui.view,arch_db:car_repair_industry.custom_view_invoice_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_coupon_form
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1537
+#, python-format
+msgid "Validity date can not less than date order."
+msgstr "Ngày xe ra không thể trước  ngày xe vào."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Validity date greater than or equal to"
+msgstr "Ngày xe ra lớn hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.sale_order_from_car_repair_search
+msgid "Validity date less than or equal to"
+msgstr "Ngày xe ra nhỏ hơn hoặc bằng"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.btek_product_normal_form_view
+#: model:ir.ui.view,arch_db:car_repair_industry.btek_product_template_form_view
+msgid "Vehicle Brand"
+msgstr "Hãng xe"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_vehicle_color
+msgid "Vehicle Color"
+msgstr "Màu xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.btek_product_normal_form_view
+#: model:ir.ui.view,arch_db:car_repair_industry.btek_product_template_form_view
+msgid "Vehicle Model"
+msgstr "Dòng xe"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_vehicle_model_vehicle_version_id
+msgid "Vehicle Version"
+msgstr "Phiên bản xe"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_vehicle_type
+#: model:ir.ui.menu,name:car_repair_industry.menu_action_fleet_vehicle_type
+msgid "Vehicle type"
+msgstr "Loại xe"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_vehicle_version
+#: model:ir.ui.menu,name:car_repair_industry.menu_action_fleet_vehicle_version
+#: model:ir.ui.view,arch_db:car_repair_industry.btek_fleet_vehicle_model_view_form
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_vehicle_version_form_view
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_vehicle_version_tree_view
+msgid "Vehicle version"
+msgstr "Đời xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.car_fleet_vehicles_root
+msgid "Vehicles Management"
+msgstr "Quản lý xe"
+
+#. module: car_repair_industry
+#: model:res.groups,name:car_repair_industry.group_fleet_repair_technician
+msgid "View Sale"
+msgstr "View Sale"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "View Work Order"
+msgstr "Xem công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_view_code
+msgid "View code"
+msgstr "Xem mã"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_view_ref_id
+msgid "View ref id"
+msgstr "View ref id"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_be_dynamic_mapping_view_type
+msgid "View type"
+msgstr "View type"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_code_used
+msgid "Voucher Code"
+msgstr "Mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_voucher_history_menu_id
+msgid "Voucher History"
+msgstr "Lịch sử sử dụng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_tree
+msgid "Voucher number"
+msgstr "Số phiếu"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_voucher_voucher
+msgid "Vouchers"
+msgstr "Mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.voucher_voucher_root_repair
+msgid "Vouchers & Coupons"
+msgstr "Phiếu giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.menu,name:car_repair_industry.repair_voucher_config_form_menu_id
+msgid "Vouchers Config"
+msgstr "Cấu hình phiếu giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.customer_search
+msgid "Ward"
+msgstr "Phường/Xã"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/js/form_widgets.js:26
+#: selection:survey.label,color:0
+#, python-format
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.company_information_logo
+msgid "Website:"
+msgstr "Website: "
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Work Completed"
+msgstr "Sửa chữa xong"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Work List"
+msgstr "Danh sách công việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+msgid "Work List Form"
+msgstr "Danh sách làm việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_name
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_diagnose_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_form
+msgid "Work Order"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,name:car_repair_industry.action_fleet_workorder_tree_view
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_workorder_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_workorder_count
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_workorder_count
+#: model:ir.ui.menu,name:car_repair_industry.menu_fleet_workorder_submenu
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_tree
+msgid "Work Orders"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,state:0
+msgid "Work in Progress"
+msgstr "Đang sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_workorder_filter
+msgid "WorkOrder Name"
+msgstr "Tên công việc"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,kanban_state:0
+#: selection:repair.order.line,repair_state:0
+msgid "Working"
+msgstr "Đang làm"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_delay
+msgid "Working Hours"
+msgstr "Số giờ làm việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_repair_configuration
+msgid "Workorder"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_is_workorder_created
+#: model:ir.model.fields,field_description:car_repair_industry.field_sale_order_is_workorder_created
+msgid "Workorder Created"
+msgstr "Tạo công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_repair_config_settings_workorder_auto_done
+#: model:ir.model.fields,field_description:car_repair_industry.field_res_company_workorder_auto_done
+msgid "Workorder auto done"
+msgstr "Tự động hoàn thành công việc"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,guarantee:0
+msgid "Yes"
+msgstr "Có"
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.bave_delivery_picking
+msgid "You can either do it immediately or mark it as Todo for future processing. Use your scanner to validate the transferred quantity quicker."
+msgstr "Hoặc bạn có thể thực hiện ngay lập tức hoặc đánh dấu nó là việc Cần làm để xử lý sau. Hãy sử dụng máy quét để xác nhận số lượng dịch chuyển nhanh hơn."
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_workorder.py:189
+#, python-format
+msgid "You can not cancel Work Order when completed Work Order detail!"
+msgstr "Không thể hủy công việc khi chi tiết công việc đã hoàn thành!"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:893
+#, python-format
+msgid "You can not cancel repair request when Invoice state in done"
+msgstr "Bạn không thể hủy yêu cầu sửa chữa khi hóa đơn đã hoàn thành"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:887
+#, python-format
+msgid "You can not cancel repair request when Work Order state in done"
+msgstr "Bạn không thể hủy yêu cầu sửa chữa khi công việc ở trạng thái hoàn thành"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/stock_picking.py:56
+#, python-format
+msgid "You can not confirm a picking when sale order is cancel!"
+msgstr "Không thể xuất kho khi Lệnh sửa chữa đã hủy!"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_repair.py:690
+#: code:addons/car_repair_industry/models/fleet_repair.py:698
+#, python-format
+msgid "You can not delete a car repair that is already in progress!"
+msgstr "Bạn không thể xóa phiếu sửa chữa khi lệnh đang trong quá trình sửa chữa!"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1745
+#, python-format
+msgid "You can not refund more than the amount paid. Please check invoice refund again. Must be delete invoice refund have state is draft to create new invoice refund."
+msgstr "Bạn không thể hoàn tiền lớn hơn số tiền đã thanh toán. Vui lòng kiểm tra lại hóa đơn. Có thể phải xóa các hóa đơn hoàn tiền có trạng thái là dự thảo để tạo  hóa đơn hoàn tiền mới."
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1733
+#, python-format
+msgid "You can not refund unpaid invoices."
+msgstr "Không thể hoàn tiền hóa đơn chưa thanh toán."
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_repair.py:508
+#, python-format
+msgid "You cannot print report without Car details"
+msgstr "Không thể in mẫu in bên ngoài chi tiết xe"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:1591
+#, python-format
+msgid "You must done {} before ordered!"
+msgstr "You must done {} before ordered!"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:647
+#, python-format
+msgid "You need done {} before ordered."
+msgstr "Bạn cần hoàn thành {} trước khi chốt lệnh."
+
+#. module: car_repair_industry
+#: model:ir.actions.act_window,help:car_repair_industry.action_saleorder1
+#: model:ir.actions.act_window,help:car_repair_industry.custom_action_quotations
+msgid "Your next actions should flow efficiently: confirm the Quotation\n"
+"                to a Sale Order, then create the Invoice and collect the Payment."
+msgstr "Các hành động tiếp theo của bạn sẽ tiếp diễn hiệu quả theo chu trình: xác nhận Báo giá thành Lệnh sửa chữa, rồi tạo hoá đơn và thu thập các khoản thanh toán liên quan."
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_base_config_settings
+msgid "base.config.settings"
+msgstr "base.config.settings"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_bave_order
+msgid "bave.order"
+msgstr "bave.order"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_be_dynamic_mapping
+msgid "be.dynamic.mapping"
+msgstr "be.dynamic.mapping"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_btek_partner_group
+msgid "btek.partner.group"
+msgstr "btek.partner.group"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "chẵn."
+msgstr "chẵn."
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_confirm_sale_order
+msgid "confirm sale order"
+msgstr "xác nhận lệnh sửa chữa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_view_order_form
+msgid "days"
+msgstr "ngày"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:643
+#: code:addons/car_repair_industry/models/custom_sale.py:1587
+#, python-format
+msgid "delivery"
+msgstr "Phiếu giao hàng"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:639
+#: code:addons/car_repair_industry/models/custom_sale.py:1583
+#, python-format
+msgid "delivery and workorder"
+msgstr "Phiếu giao hàng và công việc"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_diagnose_user_input
+msgid "diagnose.user.input"
+msgstr "diagnose.user.input"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_diagnose
+msgid "fleet.diagnose"
+msgstr "Phiếu khám xe"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_notification
+msgid "fleet.notification"
+msgstr "fleet.notification"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_notification_line
+msgid "fleet.notification.line"
+msgstr "fleet.notification.line"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_repair
+msgid "fleet.repair"
+msgstr "Yêu cầu dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_repair_coupon
+msgid "fleet.repair.coupon"
+msgstr "Mã giảm giá"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_repair_reason
+msgid "fleet.repair.reason"
+msgstr "fleet.repair.reason"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_fleet_workorder
+msgid "fleet.workorder"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_diagnose_is_invoiced
+msgid "invoice Created"
+msgstr "Tạo hóa đơn"
+
+#. module: car_repair_industry
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_repair_confirm_sale_order
+#: model:ir.model.fields,field_description:car_repair_industry.field_fleet_workorder_confirm_sale_order
+msgid "is confirm"
+msgstr "Đã xác nhận báo giá"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "of"
+msgstr "của"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_coupon_form
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_reason_form
+msgid "or"
+msgstr "hoặc"
+
+#. module: car_repair_industry
+#: selection:fleet.repair,guarantee_type:0
+msgid "paid"
+msgstr "đã trả"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_repair_config_settings
+msgid "repair.config.settings"
+msgstr "repair.config.settings"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_repair_order_line
+msgid "repair.order.line"
+msgstr "Chi tiết lệnh sửa chữa dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_report_fleet_repair_industry_machi_diagn_req_temp_id
+msgid "report.fleet_repair_industry.machi_diagn_req_temp_id"
+msgstr "report.fleet_repair_industry.machi_diagn_req_temp_id"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_report_fleet_repair_industry_machi_rep_label_temp_id
+msgid "report.fleet_repair_industry.machi_rep_label_temp_id"
+msgstr "report.fleet_repair_industry.machi_rep_label_temp_id"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_report_fleet_repair_industry_machi_repa_rece_temp_id
+msgid "report.fleet_repair_industry.machi_repa_rece_temp_id"
+msgstr "report.fleet_repair_industry.machi_repa_rece_temp_id"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:227
+#, python-format
+msgid "search...."
+msgstr "tìm kiếm...."
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_service_type
+msgid "service.type"
+msgstr "Loại dịch vụ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "show all the costs for this vehicle"
+msgstr "hiển thị tất cả chi phí của xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "show the contract for this vehicle"
+msgstr "hiển thị hợp đồng của xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "show the fuel logs for this vehicle"
+msgstr "show the fuel logs for this vehicle"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "show the odometer logs for this vehicle"
+msgstr "hiển thị lịch sử đồng hồ số của xe"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_fleet_vehicle_view_form
+msgid "show the services logs for this vehicle"
+msgstr "hiển thị lịch sử các dịch vụ sửa chữa của xe"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:216
+#, python-format
+msgid "so luong"
+msgstr "số lượng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "to"
+msgstr "đến"
+
+#. module: car_repair_industry
+#: model:ir.model,name:car_repair_industry.model_voucher_history
+msgid "voucher.history"
+msgstr "voucher.history"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/custom_sale.py:641
+#: code:addons/car_repair_industry/models/custom_sale.py:1585
+#, python-format
+msgid "workorder"
+msgstr "Công việc"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_repair_label_template_view
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+msgid "ĐVT"
+msgstr "ĐVT"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "Đang Chờ"
+msgstr "Đang Chờ"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.view_fleet_repair_kanban
+msgid "Đang Sửa"
+msgstr "Đang Sửa"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Điện Thoại:"
+msgstr "Điện Thoại:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Đvt"
+msgstr "Đvt"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.report_receipts_from_account_invoice
+msgid "Đã nhận đủ số tiền (viết bằng chữ):.............................................................................................................."
+msgstr "Đã nhận đủ số tiền (viết bằng chữ):.............................................................................................................."
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.repair_order_document
+#: model:ir.ui.view,arch_db:car_repair_industry.report_accessories
+msgid "Đơn giá"
+msgstr "Đơn giá"
+
+#. module: car_repair_industry
+#: code:addons/car_repair_industry/models/fleet_diagnose.py:270
+#: code:addons/car_repair_industry/models/fleet_repair.py:304
+#: code:addons/car_repair_industry/models/fleet_repair.py:541
+#: code:addons/car_repair_industry/models/fleet_workorder.py:172
+#, python-format
+msgid "Đơn hàng"
+msgstr "Lệnh sửa chữa"
+
+#. module: car_repair_industry
+#. openerp-web
+#: code:addons/car_repair_industry/static/src/xml/base.xml:296
+#, python-format
+msgid "Đặt Hàng"
+msgstr "Đặt Hàng"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.fleet_diagnostic_result_template_view
+msgid "Địa chỉ:"
+msgstr "Địa chỉ:"
+
+#. module: car_repair_industry
+#: model:ir.ui.view,arch_db:car_repair_industry.car_stock_picking_form_inherit2
+msgid "↳Put in Pack"
+msgstr "↳Đóng vào Gói"
+

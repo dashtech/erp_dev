@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="inventory_s11_form">
+            <field name="name">Bảng tổng hợp chi tiết hàng hóa</field>
+            <field name="model">stock.inventory.nxt</field>
+            <field name="arch" type="xml">
+                <form string="Report">
+                    <group>
+                        <group>
+                            <field name="res_company_id" string="Company"/>
+                            <field name="account_account_id" string="Tài khoản"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                        <group col="4">
+                            <field name="warehouse_id" invisible="1"></field>
+                            <field name="location_id" invisible="1"></field>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_print" string="In" class="oe_highlight oe_right" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="inventory_s11_act" model="ir.actions.act_window">
+            <field name="name">Bảng tổng hợp chi tiết hàng hóa</field>
+            <field name="res_model">stock.inventory.nxt</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="inventory_s11_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Bảng tổng hợp chi tiết hàng hóa"
+                  id="stock_inventory_nxt_menu"
+                  sequence="3"
+                  parent="baocaoketoananhtt"
+                  action="inventory_s11_act"
+        />
+
+        <report id="stock_inventory_nxt_report"
+                model="stock.inventory.nxt"
+                string="Bangtonghopchitiet"
+                report_type="xlsx"
+                name="btek_report_stock.stock_inventory_nxt"
+                file="btek_report_stock.stock_inventory_nxt"
+                attachment_use="False"/>
+
+    </data>
+</odoo>

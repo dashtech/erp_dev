@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="theme_homestore_product_item" inherit_id="website_sale.products_item">
+		<xpath expr="//section/h5" position="replace">
+			<div style="height:31px;overflow:hidden;margin-bottom:20px;">
+						<center>
+							<h6>
+									<a itemprop="name"
+										t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))"
+										t-field="product.name" />
+							
+							</h6>
+						</center>
+		   </div>
+		</xpath>
+		<xpath expr="//section" position="attributes">
+			<attribute name="class">carousel-bg</attribute>
+			<attribute name="id">product-name</attribute>
+		</xpath>
+	</template> 
+	
+	<!-- Product Template Pager -->
+	 <template id="pager_inherit" inherit_id="website.pager">
+            <xpath expr="//li[1]/a" position="replace">
+                   	<a
+						t-att-href=" pager['page_previous']['url'] if pager['page']['num'] != 1 else ''">
+						<i class="fa fa-angle-left fa-lg"></i>
+					</a>
+            </xpath>
+            
+            <xpath expr="//li[2]/a" position="replace">
+                    <a
+                        t-att-href="pager['page_next']['url'] if pager['page']['num'] != pager['page_count'] else ''">
+                        <i class="fa fa-angle-right fa-lg"></i>
+
+                    </a>
+            </xpath>
+        </template>
+</odoo>

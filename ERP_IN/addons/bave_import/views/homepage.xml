@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="template_home" model="home.import">
+        <field name="name">Hướng dẫn</field>
+    </record>
+
+    <record id="homepage_bave_import" model="ir.ui.view">
+        <field name="name">homepage_bave_import</field>
+        <field name="model">home.import</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false" edit="false" duplicate="false">
+                <field name="name" invisible="True"/>
+                <field name="index" nolabel="True" readonly="1"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_homepage" model="ir.actions.act_window">
+        <field name="name">Import Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">home.import</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="template_home"/>
+        <!--<field name="target">new</field>-->
+    </record>
+
+</odoo>

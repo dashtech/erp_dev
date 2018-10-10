@@ -1,0 +1,64 @@
+<odoo>
+	<data>
+        <record id="btek_bang_cdps_form" model="ir.ui.view">
+            <field name="name">Form</field>
+            <field name="model">bang.can.doi.phat.sinh</field>
+            <field name="arch" type="xml">
+                 <form string="BẢNG CÂN ĐỐI PHÁT SINH">
+                     <group>
+                         <group>
+                             <field name="company_id" string="Công ty"/>
+                             <field name="display_account" string="Data type"/>
+                             <field name="type_entries" string="Loại"/>
+                         </group>
+                         <group>
+                             <field name="start_date" string="Từ ngày" required="1"/>
+                             <field name="end_date" string="Đến ngày" required="1"/>
+                         </group>
+                    </group>
+                    <!--<notebook name="Filter" colspan="4">-->
+                        <!--<page string="Bộ lọc">-->
+                            <!--<group col="4"-->
+                                   <!--&gt;-->
+
+
+                            <!--</group>-->
+                        <!--</page>-->
+                    <!--</notebook>-->
+                    <footer>
+                        <button name="action_print" string="Export Excel"
+                                class="oe_highlight" type="object"/>
+                        |
+                        <button name="action_view" string="Preview Excel"
+                                class="oe_highlight" type="object"/>
+                        |
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="bang_can_doi_phat_sinh_report_act_anhtt" model="ir.actions.act_window">
+            <field name="name">Bảng cân đối phát sinh</field>
+            <field name="res_model">bang.can.doi.phat.sinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_bang_cdps_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_bao_cao_cdps_report" name="Bảng cân đối phát sinh"
+                  sequence="2" parent="account.menu_finance_reports"
+                  action="bang_can_doi_phat_sinh_report_act_anhtt"
+                  groups="account.group_account_user,account.group_account_invoice"/>
+
+        <report id="bang_can_doi_phat_sinh_report"
+                model="bang.can.doi.phat.sinh"
+                string="BangCanDoiPhatSinh"
+                report_type="xlsx"
+                name="btek_report_accounting.bangcandoiphatsinh_report"
+                file="btek_report_accounting.BC_bang_cdps"
+                attachment_use="False"/>
+
+    </data>
+</odoo>

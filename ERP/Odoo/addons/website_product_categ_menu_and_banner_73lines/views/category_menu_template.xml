@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Category Menu Template -->
+    <template id="website_category_menu" inherit_id="website.layout" customize_show="True" active="False"
+              name="Show Category Menu">
+        <xpath expr="//ul[@id='top_menu']/t" position="before">
+            <li class="dropdown hidden-xs bg-primary" id="all_cate_menu">
+                <a href="#" class="dropdown-toggle menu-cate-link" data-toggle="dropdown">
+                    <i class="fa fa-bars" style="margin:0px 3px;"/>
+                    <span>ALL CATEGORIES</span>
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <t t-set="categories" t-value="website.get_categories() if website else None"/>
+                    <t t-if="categories">
+                        <t t-foreach="categories['categories']" t-as="categ">
+                              <t t-call="website_product_categ_menu_and_banner_73lines.menu_categories_recursive"/>
+                        </t>
+                    </t>
+                </ul>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Child Category Template -->
+    <template id="menu_categories_recursive" name="Menu Category list">
+        <li class="dropdown dropdown-submenu">
+            <a t-att-href="'/shop/category/%s' % (categ.id)" t-field="categ.name"></a>
+            <i t-if="categ.child_id"
+               class="fa fa-caret-right text-primary caret-icon-pos"/>
+            <ul t-if="categ.child_id"
+                class="dropdown-menu">
+                <t t-foreach="categ.child_id" t-as="categ">
+                    <t t-call="website_product_categ_menu_and_banner_73lines.menu_categories_recursive"/>
+                </t>
+            </ul>
+        </li>
+    </template>
+
+</odoo>

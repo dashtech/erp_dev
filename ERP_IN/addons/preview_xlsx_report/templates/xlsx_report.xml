@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="preview_xlsx_report_template">
+        <link rel="stylesheet"
+              href="/preview_xlsx_report/static/src/css/style.css"/>
+        <title><t t-esc="title"/></title>
+        <!--<t t-call="website.layout">-->
+            <!--<div class="oe_structure">-->
+                <!--<div class="container container-summary-report">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</t>-->
+        <div id="button_list">
+            <t t-set="index" t-value="0"/>
+            <t t-foreach="sheets" t-as="sheet">
+                <t t-set="index" t-value="index + 1"/>
+                <input type="button"
+                       t-att-class="index==1 and 'sheet-button selected_button' or 'sheet-button'"
+                       t-att-id="'sheet' + str(index)"
+                       t-att-value="sheet['name']"/>
+            </t>
+            <a t-att-href="u'/download-xlsx-report/{}/{}'.format(file_name, report_name)">
+                <img src="/preview_xlsx_report/static/src/icon/download.jpg" height="3%"/>
+            </a>
+        </div>
+        <div id="content_sheet">
+            <t t-set="index" t-value="0"/>
+            <t t-foreach="sheets" t-as="sheet">
+                <t t-set="index" t-value="index + 1"/>
+                <div t-att-id="'content_sheet' + str(index)"
+                     t-att-class="index==1 and 'sheet-content' or 'sheet-content hidden-panel'">
+                    <t t-raw="sheet['html']"/>
+                </div>
+            </t>
+        </div>
+
+        <script type="text/javascript"
+                src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript"
+                src="/preview_xlsx_report/static/src/js/preview_excel.js"/>
+    </template>
+</odoo>

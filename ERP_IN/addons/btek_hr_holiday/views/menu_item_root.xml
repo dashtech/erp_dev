@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <menuitem
+                name="Leaves"
+                id="hr_holidays.menu_hr_holidays_root"
+                sequence="95"
+                web_icon="hr_holidays,static/description/icon.png"
+                groups="btek_hr_holiday.group_hr_user_internal"/>
+
+        <menuitem
+            id="mail.mail_channel_menu_root_chat"
+            name="Discuss"
+            action="mail.mail_channel_action_client_chat"
+            web_icon="mail,static/description/icon.png"
+            groups="btek_hr_holiday.group_hr_user_internal"
+            sequence="1"/>
+
+        <menuitem
+                id="hr.menu_hr_root"
+                name="Employees"
+                groups="btek_hr_holiday.group_hr_user_internal"
+                web_icon="hr,static/description/icon.png"
+                sequence="75"/>
+    </data>
+
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Four Image Block" id="snippet_four_image">
+			<section class="mt16 mb16 four-image">
+				<div class="container ">
+					<div class="row">
+						<div class="col-md-4 col-sm-4">
+							<div class="mb16 pad0 s_img_1">
+								<a href="#">
+									<img src="/theme_homestore/static/src/image/image1.jpg"
+										class="img img-responsive" />
+								</a>
+							</div>
+
+							<div class="mb16 pad0">
+								<a href="#">
+									<img src="/theme_homestore/static/src/image/image2.jpg"
+										class="img img-responsive" />
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 mb16">
+							<a href="#">
+								<img src="/theme_homestore/static/src/image/image3.jpg"
+									class="img img-responsive" />
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-4 ">
+							<a href="#">
+								<img src="/theme_homestore/static/src/image/image4.jpg"
+									class="img img-responsive" />
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+		</template>
+</odoo>
+		
+		

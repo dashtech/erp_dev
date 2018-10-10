@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+
+    <record id="related_person_form_view" model="ir.ui.view">
+            <field name="name">related_person_form_view</field>
+            <field name="model">btek.related.person</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="birthday" required="0"/>
+                                <field name="gender" required="0"/>
+                                <field name="relation" required="1"/>
+                                <field name="date_begin" required="1"/>
+                            </group>
+                            <group>
+                                <field name="x_identity_number" required="1"/>
+                                <field name="identity_date" required="0"/>
+                                <field name="identity_place" required="0"/>
+                                <field name="mobile" required="0"/>
+                            </group>
+                        </group>
+                            <notebook>
+                                <page string="Các file đính kèm" >
+                                    <field name="attachment" context="{'default_name': 'docs'}">
+                                        <tree editable="bottom">
+                                            <field name="datas" required="1" filename="datas_fname"/>
+                                            <field name="datas_fname" invisible="1"/>
+                                            <field name="name" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+</odoo>

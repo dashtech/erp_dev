@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bave_store
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-08 06:48+0000\n"
+"PO-Revision-Date: 2018-10-08 13:50+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: bave_store
+#: model:ir.ui.view,arch_db:bave_store.view_purchase_order_filter_change
+msgid "Bave store order"
+msgstr "Đơn hàng bave store"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_expiration_date
+msgid "Expiration date"
+msgstr "Ngày hết hạn"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_purchase_order_is_bave_store_order
+msgid "Is bave store order"
+msgstr "Đơn hàng bave store"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: bave_store
+#: model:ir.model,name:bave_store.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn mua hàng"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_ids
+msgid "Token ids"
+msgstr "Token"
+
+#. module: bave_store
+#: model:ir.model.fields,field_description:bave_store.field_res_users_token_user_id
+msgid "User"
+msgstr "Người sử dụng"
+
+#. module: bave_store
+#: model:ir.model,name:bave_store.model_res_users
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: bave_store
+#: model:ir.model,name:bave_store.model_res_users_token
+msgid "res.users.token"
+msgstr "res.users.token"

@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+body.o_connected_user {
+  padding-top: 46px !important; }
+  body.o_connected_user.editor_enable {
+    padding-top: 34px !important; }
+
+.o_main_navbar {
+  background-color: #30466d;
+  height: 46px;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .o_main_navbar > ul > li > a {
+    display: block;
+    height: 45px;
+    padding: 7px 10px !important; }
+  .o_main_navbar .o_menu_systray .o_mobile_preview a {
+    padding: 7px 10px !important; }
+  .o_main_navbar .o_menu_systray .progress {
+    padding: 13px 10px !important; }
+  .o_main_navbar .o_mobile_menu_toggle {
+    display: none !important; }
+
+#oe_main_menu_navbar .btek-nav .app-drawer-toggle {
+  cursor: pointer; }
+  #oe_main_menu_navbar .btek-nav .app-drawer-toggle span {
+    display: none; }
+  #oe_main_menu_navbar .btek-nav .app-drawer-toggle i.app-drawer-icon-open {
+    padding: 16px;
+    padding-left: 14px;
+    color: #fff; }
+    #oe_main_menu_navbar .btek-nav .app-drawer-toggle i.app-drawer-icon-open:hover {
+      background-color: #5f5e97; }
+
+#oe_main_menu_navbar.active {
+  color: #666666; }
+  #oe_main_menu_navbar.active .btek-nav .app-drawer-toggle {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    cursor: pointer; }
+    #oe_main_menu_navbar.active .btek-nav .app-drawer-toggle i.app-drawer-icon-open {
+      font-size: 22px;
+      line-height: 0.75em;
+      vertical-align: -15%;
+      color: #ffffff; }
+      #oe_main_menu_navbar.active .btek-nav .app-drawer-toggle i.app-drawer-icon-open:hover {
+        background: none; }
+      #oe_main_menu_navbar.active .btek-nav .app-drawer-toggle i.app-drawer-icon-open:before {
+        content: "\f00d"; }
+  #oe_main_menu_navbar.active .o_menu_sections, #oe_main_menu_navbar.active .o_menu_systray {
+    display: none; }
+
+.app-drawer-nav .app-drawer-icon-app {
+  border-radius: 3%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  width: 100%;
+  max-width: 6em;
+  max-height: 6em;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center; }
+
+.app-drawer-nav .panel-body {
+  margin: auto;
+  max-width: 768px;
+  margin-top: 0 !important;
+  padding: 0 !important;
+  width: 90%; }
+
+.app-drawer-nav .app-drawer-title {
+  float: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45); }
+
+#nav-content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: none;
+  z-index: -999;
+  background-color: #394563;
+  /*background: transparent url('/backend_theme_v10/static/src/img/material-background.jpg') no-repeat scroll center center / cover;*/ }
+  #nav-content .bave-logo {
+    text-align: center; }
+    #nav-content .bave-logo img {
+      padding: 25px 0; }
+  #nav-content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.95);*/ }
+  #nav-content.active {
+    display: block; }
+    #nav-content.active .btek-nav i.app-drawer-icon-open {
+      padding: 16px;
+      padding-left: 14px;
+      color: #fff; }
+      #nav-content.active .btek-nav i.app-drawer-icon-open:hover {
+        background-color: #5f5e97; }
+  #nav-content img.app-drawer-icon-app {
+    width: 78px;
+    height: 78px; }
+
+.oe_website_login_container {
+  background-image: url("/btek_website_menu/static/src/img/erp_web_login_background.jpg");
+  background-size: cover; }
+
+.oe_login_form {
+  font-family: "Roboto", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: none;
+  background-color: #fff;
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .oe_login_form .left-col {
+    background-color: #2ebc61;
+    color: #fff;
+    min-height: 380px;
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    padding: 40px; }
+    .oe_login_form .left-col .login-title {
+      font-size: 20px;
+      line-height: 1.9; }
+    .oe_login_form .left-col .login-gara-name {
+      font-size: 20px;
+      line-height: 1.9;
+      font-weight: bold; }
+    .oe_login_form .left-col ul {
+      list-style: none;
+      padding: 50px 0 0 0; }
+      .oe_login_form .left-col ul li {
+        padding: 6px 0; }
+        .oe_login_form .left-col ul li img {
+          padding-right: 10px; }
+    .oe_login_form .left-col img {
+      max-width: 100%; }
+  .oe_login_form .right-col {
+    padding: 60px 80px; }
+    .oe_login_form .right-col .login-title {
+      font-size: 24px;
+      font-weight: 500;
+      color: #222222;
+      padding-bottom: 20px; }
+    .oe_login_form .right-col .form-group .control-label {
+      display: none; }
+    .oe_login_form .right-col .form-group .form-control {
+      border: 0;
+      border-bottom: 1px solid #e1e1e1;
+      border-radius: 0;
+      -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+      padding: 10px 10px 10px 30px; }
+    .oe_login_form .right-col .form-group input[name="login"] {
+      background-color: white !important;
+      background-image: url("/btek_website_menu/static/src/img/group-15.png") !important;
+      background-position: 6px 6px;
+      background-repeat: no-repeat; }
+    .oe_login_form .right-col .form-group input[name="password"] {
+      background-color: white !important;
+      background-image: url("/btek_website_menu/static/src/img/group-16.png") !important;
+      background-position: 6px 6px;
+      background-repeat: no-repeat; }
+    .oe_login_form .right-col .oe_login_buttons {
+      text-align: center; }
+      .oe_login_form .right-col .oe_login_buttons button {
+        letter-spacing: 1px;
+        background-color: #2ebc61;
+        border: none;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: bold;
+        border-radius: 2px;
+        padding: 10px;
+        width: 100%;
+        text-transform: uppercase;
+        -webkit-box-shadow: 0px 8px 15px rgba(0, 152, 229, 0.3);
+        box-shadow: 0px 8px 15px rgba(0, 152, 229, 0.3);
+        color: #fff; }
+
+.oe_menu_bave_store {
+  cursor: pointer; }
+  .oe_menu_bave_store .oe_menu_bave_store_submit {
+    float: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    background: transparent;
+    border: none;
+    text-align: center; }
+
+@media screen and (max-width: 767px) {
+  .oe_login_form {
+    margin: 50px auto; }
+  a.navbar-brand img {
+    margin-top: 8px !important; }
+  .navbar-default .navbar-nav .divider {
+    display: none !important; }
+  #nav-content {
+    overflow: scroll; }
+  .o_main_navbar {
+    overflow: inherit; }
+    .o_main_navbar > ul.o_menu_sections {
+      display: none; }
+  .o_mobile_menu_opened .o_main_navbar > ul.o_menu_sections {
+    display: block; }
+  footer #footer .copyright {
+    text-align: center; }
+  footer #footer .contact-info {
+    display: table;
+    margin: 0 auto; }
+    footer #footer .contact-info ul li {
+      padding-right: 10px !important; }
+      footer #footer .contact-info ul li img {
+        padding-right: 6px !important; } }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+
+/* Home Page */
+header a.navbar-brand img {
+  margin-top: 12px; }
+
+header .navbar-default {
+  background: #30466d; }
+  header .navbar-default .navbar-nav .dropdown .dropdown-toggle {
+    padding: 14px 15px 0; }
+  header .navbar-default .navbar-nav .divider {
+    margin-top: 20px;
+    border: none !important;
+    padding-left: 30px; }
+  header .navbar-default .navbar-nav > li > a {
+    background: none !important;
+    letter-spacing: 1px; }
+
+header .img-avt {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  max-width: 35px; }
+
+footer #footer {
+  background-color: #fff;
+  padding-top: 23px !important;
+  padding-bottom: 10px;
+  color: #5a657b;
+  letter-spacing: 1px; }
+  footer #footer .contact-info {
+    text-align: center; }
+    footer #footer .contact-info ul {
+      padding: 0;
+      list-style: none;
+      float: right; }
+      footer #footer .contact-info ul li {
+        float: left;
+        padding-right: 20px; }
+        footer #footer .contact-info ul li:last-child {
+          padding-right: 0; }
+        footer #footer .contact-info ul li img {
+          padding-right: 10px; }
+
+#products_grid table {
+  background-color: #ffffff; }
+
+#wrapwrap, #wrapwrap h1, #wrapwrap h2, #wrapwrap h3, #wrapwrap h4, #wrapwrap h5, #wrapwrap h6 {
+  /*font-family: initial !important;*/ }

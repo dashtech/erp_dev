@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Car repair-->
+    <record id="repair_view_order_tree_basic" model="ir.ui.view">
+        <field name="name">repair.sale.order.tree.basic</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="car_repair_industry.repair_view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">true</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="repair_view_order_form_basic" model="ir.ui.view">
+        <field name="name">repair.sale.order.form.basic</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="car_repair_industry.repair_view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">true</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name=%(car_repair_industry.action_fleet_repair_coupon)d]"
+                   position="replace">
+            </xpath>
+
+            <xpath expr="//button[@name='bave_print_saleorder']" position="after">
+                <button name="print_work_order" string="Print work order"
+                        type="object" class="oe_highlight oe_read_only"
+                        states="sale,done"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_view_work_order']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[4]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!--<xpath expr="//button[@name='button_view_workorder']"-->
+                   <!--position="attributes">-->
+                <!--<attribute name="invisible">1</attribute>-->
+            <!--</xpath>-->
+
+            <xpath expr="//button[@name='pre_ordered']" position="replace">
+                <button name="pre_ordered" string="Ordered" type="object" class="btn-primary oe_read_only"
+                        attrs="{'invisible': ['|',('invoice_status', '!=', 'to invoice'),('state', '=', 'done')]}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line_service']//tree//button[@name='action_upsell']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//group/group[1]/field[@name='service_type_ids']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <!--<attribute name="readonly">[('state', '!=', 'draft')]</attribute>-->
+            </xpath>
+            <xpath expr="//group/group[2]/field[@name='user_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <!--<attribute name="readonly">[('state','=', 'done')]</attribute>-->
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']//tree//button[@name='action_upsell']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="car_repair_industry.action_saleorder1"
+            model="ir.actions.act_window">
+        <field name="domain">[('consignment', '=', False),('create_form_fleet','=',True)]</field>
+        <field name="context">{'upsell':True, 'default_create_form_fleet':True}</field>
+    </record>
+
+    <!--Sale...............................................-->
+    <!--bán hàng/bảng thông tin-->
+    <record id="sales_team.menu_sales_team_act" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Quy trình của tôi-->
+    <record id="crm.menu_crm_opportunities" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Hoạt động tiếp theo-->
+    <record id="crm.crm_lead_menu_activities" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Đơn hàng ký gửi-->
+    <record id="btek_sale.menu_action_consignment_order" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Báo giá-->
+    <record id="sale.menu_sale_quotations" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Sản phẩm-->
+    <record id="sale.menu_product_template_action" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--Bán hàng/Bán hàng/Biến thể Sản phẩm-->
+    <record id="sale.menu_products" model="ir.ui.menu">
+        <field name="name">Products</field>
+        <field name="groups_id" eval="[(6, False, [])]"/>
+    </record>
+
+    <record id="product.product_normal_action_sell"
+            model="ir.actions.act_window">
+        <field name="name">Products</field>
+    </record>
+
+    <!--Bán hàng/Hoá đơn-->
+    <record id="sale.menu_sale_invoicing" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <!--Bán hàng/Phiếu giảm giá-->
+    <record id="wk_coupons.id_parent_voucher_voucher" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <!--Bán hàng/Báo cáo-->
+    <record id="sales_team.menu_sale_report" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="sale.menu_sale_order" model="ir.ui.menu">
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="view_order_tree_change" model="ir.ui.view">
+        <field name="name">view.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_id']" position="replace">
+            </xpath>
+
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="partner_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!--order form-->
+    <record id="view_order_form_change_change" model="ir.ui.view">
+        <field name="name">view.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="btek_sale.view_order_form_change"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='consignment']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_basic_change" model="ir.ui.view">
+        <field name="name">view.order.basic.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='date_order']" position="attributes">
+                <attribute name="attrs">{'readonly':[('state', '!=', 'draft')]}</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='date_order']" position="after">
+                <field name="done_date"/>
+            </xpath>
+
+            <xpath expr="//field[@name='validity_date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='confirmation_date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='client_order_ref']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//group[@name='sale_pay']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_confirm'][@states='draft']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_confirm'][@states='draft']" position="after">
+                <button name="pre_confirm_sale" type="object" string="Confirm"
+                        class="oe_highlight" states="draft"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_quotation_send']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']//tree/field[@name='product_id']" position="attributes">
+                <attribute name="context">{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id, 'only_show_name':True}</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']" position="attributes">
+                <attribute name="context">{'only_show_name':True}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="sale.action_orders" model="ir.actions.act_window">
+        <field name="context">{'only_show_name': True}</field>
+    </record>
+
+    <record id="view_order_form_inherit_sale_stock_basic_change" model="ir.ui.view">
+        <field name="name">view.order.basic.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="sale_stock.view_order_form_inherit_sale_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='incoterm']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_view_inherit123_basic_change" model="ir.ui.view">
+        <field name="name">view.order.basic.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id"
+               ref="sale_crm.sale_view_inherit123"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree_basic_change" model="ir.ui.view">
+        <field name="name">view.partner.tree.basic</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id"
+               ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="street"/>
+            </xpath>
+
+            <xpath expr="//field[@name='email']" position="attributes">
+                <attribute name="string">Email</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_product_tree_view_basic_change" model="ir.ui.view">
+        <field name="name">product.product.tree.view.basic</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id"
+               ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='attribute_value_ids']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='barcode']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='lst_price']"
+                   position="after">
+                <field name="standard_price"/>
+                <field name="categ_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='default_code']" position="attributes">
+                <attribute name="string">Product code</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!--basic hide buton-->
+    <record id="basic_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">basic_invoice_form_inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id"
+               ref="car_repair_industry.custom_view_invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_invoice_sent'][@class='oe_highlight']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_invoice_sent'][2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pre_comfirm_sale_form" model="ir.ui.view">
+        <field name="name">pre_comfirm_sale_form</field>
+        <field name="model">sale.order</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <form >
+                <field name="pre_order_html" widget="html"/>
+                <footer>
+                    <button name="basic_ordered" class="oe_highlight" type="object" string="Confirm"/>
+                    |
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pre_confirm_so" model="ir.actions.act_window">
+        <field name="name">Warning</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_basic.pre_comfirm_sale_form'}</field>
+    </record>
+
+    <record id="pre_comfirm_car_repair_form" model="ir.ui.view">
+        <field name="name">pre_comfirm_sale_form</field>
+        <field name="model">sale.order</field>
+        <field name="priority">102</field>
+        <field name="arch" type="xml">
+            <form >
+                <field name="pre_order_html" widget="html"/>
+                <footer>
+                    <button name="ordered" class="oe_highlight" type="object" string="Confirm"/>
+                    |
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pre_confirm_cso" model="ir.actions.act_window">
+        <field name="name">Warning</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_basic.pre_comfirm_car_repair_form'}</field>
+    </record>
+
+</odoo>

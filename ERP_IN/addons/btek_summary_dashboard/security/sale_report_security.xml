@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="bave_sale_report_company_rule" model="ir.rule">
+        <field name="name">Bave sale report company</field>
+        <field name="model_id" ref="model_bave_sale_report"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <record id="bave_sale_order_report_company_rule" model="ir.rule">
+        <field name="name">Bave sale order report company</field>
+        <field name="model_id" ref="model_bave_sale_order_report"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+</odoo>

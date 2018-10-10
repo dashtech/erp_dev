@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_to_financial_statement_account_code_all,to_financial_statement_account_code_all,model_to_financial_statement_account_code,,1,1,1,1
+
+access_btek_export_account,btek_export_account,model_btek_export_account,,1,1,1,1

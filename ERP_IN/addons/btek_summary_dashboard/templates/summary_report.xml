@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="summary_report_cash_book_text_block_template">
+        <div class="col-md-6 col-sm-6 text-block-left">
+            <div class="white-box">
+                <h3 class="text-box-title">
+                    <t t-esc="cash_book['title']['label']"/>
+                    <span class="text-box-value">
+                        <t t-esc="cash_book['title']['value']"/>
+                    </span>
+                </h3>
+                <div class="content-box">
+                    <ul class="list-left-right">
+                        <t t-foreach="cash_book['item']" t-as="item">
+                            <li>
+                                <span class="icon dat_class_o_day"></span>
+                                <t t-esc="item['label']"/>
+                                <span>
+                                    <t t-esc="item['value']"/>
+                                </span>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="summary_report_debt_text_block_template">
+        <div class="col-md-6 col-sm-6 text-block-right">
+            <div class="white-box">
+                <h3 class="text-box-title">
+                    <t t-esc="debt['title']['label']"/>
+                    <span class="text-box-value">
+                        <t t-esc="debt['title']['value']"/>
+                    </span>
+                </h3>
+                <div class="content-box">
+                    <ul class="list-left-right">
+                        <t t-foreach="debt['item']" t-as="item">
+                            <li>
+                                <span class="icon dat_class_o_day"></span>
+                                <t t-esc="item['label']"/>
+                                <span>
+                                    <t t-esc="item['value']"/>
+                                </span>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="temporary_revenue">
+         <div class="white-box">
+             <h3 class="text-box-title">
+                Doanh thu tạm tính
+             </h3>
+             <div class="content-box">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <t t-if="compare_revenue == 'greater'">
+                            <div class="item-color-compare greater-than">
+                                Doanh thu hôm nay
+                                <span>
+                                    <t t-esc="compare_revenue_today_lastday"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <t t-esc="current_day_temp_revenue"/>
+                                </span>
+                            </div>
+                        </t>
+                        <t t-if="compare_revenue == 'equal'">
+                            <div class="item-color-compare equal">
+                                Doanh thu hôm nay
+                                <span>
+                                    <t t-esc="compare_revenue_today_lastday"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <t t-esc="current_day_temp_revenue"/>
+                                </span>
+                            </div>
+                        </t>
+                        <t t-if="compare_revenue == 'less'">
+                            <div class="item-color-compare less-than">
+                                Doanh thu hôm nay
+                                <span>
+                                    <t t-esc="compare_revenue_today_lastday"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <t t-esc="current_day_temp_revenue"/>
+                                </span>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="text-center">
+                            Doanh thu hôm qua <br/>
+                            <span style="font-size: 26px;font-family: Times New Roman;">
+                                <t t-esc="last_day_temp_revenue"/>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="text-center">
+                            Lũy kế tháng <br/>
+                            <span style="font-size: 26px;font-family: Times New Roman;">
+                                <t t-esc="current_month_temp_revenue"/>
+                            </span>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-4 col-sm-4 col-xs-6">-->
+                        <!--<div class="text-center">-->
+                            <!--Doanh thu năm nay <br/>-->
+                            <!--<span style="font-size: 26px;font-family: Times New Roman;">-->
+                                <!--<t t-esc="current_years_temp_revenue"/>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+         </div>
+    </template>
+
+    <template id="current_day_block">
+        <div class="white-box">
+            <h3 class="text-box-title">
+                Hôm Nay
+                <!--<span class="text-box-value">-->
+                    <!--<span class="label">Doanh thu:</span> <t t-esc="current_day['revenue']"/> Triệu-->
+                <!--</span>-->
+            </h3>
+            <div class="content-box">
+                <div class="row">
+                    <!--<div class="col-md-3 col-sm-3 col-xs-6">-->
+                        <!--<div class="item-circle car-in-gara">-->
+                            <!--<span>-->
+                                <!--<t t-esc="current_day['car_in_gara']"/>-->
+                            <!--</span>-->
+                            <!--Xe tại gara-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3 col-sm-3 col-xs-6">-->
+                        <!--<div class="item-circle car-has-been-repair">-->
+                            <!--<span>-->
+                                <!--<t t-esc="current_day['has_been_repair']"/>-->
+                            <!--</span>-->
+                            <!--Đã xong-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3 col-sm-3 col-xs-6">-->
+                        <!--<div class="item-circle car-repairing">-->
+                            <!--<span>-->
+                                <!--<t t-esc="current_day['repairing']"/>-->
+                            <!--</span>-->
+                            <!--Đang sửa-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-3 col-sm-3 col-xs-6">-->
+                        <!--<div class="item-circle car-waiting">-->
+                            <!--<span>-->
+                                <!--<t t-esc="current_day['waiting']"/>-->
+                            <!--</span>-->
+                            <!--Đang chờ-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="item-circle car-has-been-repair">
+                            <span>
+                                <t t-esc="current_day['car_into_gara_today']"/>
+                            </span>
+                            Xe vào hôm nay
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="item-circle car-repairing">
+                            <span>
+                                <t t-esc="current_day['car_out_gara_today']"/>
+                            </span>
+                            Xe ra hôm nay
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="item-circle car-in-gara">
+                            <span>
+                                <t t-esc="current_day['car_in_gara']"/>
+                            </span>
+                            Xe tại gara
+                        </div>
+                    </div>
+                </div>
+
+               <!--  <div class="col-md-3 item-value">
+                    <p class="no-order">
+                        <t t-esc="current_day['not_order']"/>
+                    </p>
+                    <p class="no-order-label">
+                        Chưa có đơn hàng
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </template>
+
+    <template id="company_selectbox_block">
+        <div class="container">
+            <div class="company-selectbox-block row btek-area">
+                <div class="col-md-4">
+                    <select id="company_selectbox"
+                            class="form-control col-md-4"
+                            name="company_selectbox">
+                        <t t-foreach="user_companys['companys']" t-as="company">
+                            <t t-if="company[0] == user_companys['company_id']">
+                                <option t-att-value="company[0]"
+                                    selected="1">
+                                    <t t-esc="company[1]"/>
+                                </option>
+                            </t>
+                            <t t-if="company[0] != user_companys['company_id']">
+                                <option t-att-value="company[0]">
+                                    <t t-esc="company[1]"/>
+                                </option>
+                            </t>
+                        </t>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="choose_block">
+        <div class="container">
+            <div class="choose-block btek-area">
+                <input type="button" id="summary_block_button"
+                       value="TỔNG QUAN"
+                       class="choose_block_button selected_button"/>
+                <input type="button" id="customer_block_button"
+                       value="KHÁCH HÀNG"
+                       class="choose_block_button"/>
+                <input type="button" id="product_and_service_block_button"
+                       value="SẢN PHẨM &amp; DỊCH VỤ"
+                       class="choose_block_button"/>
+                <input type="button" id="inventory_block_button"
+                       value="TỒN KHO"
+                       class="choose_block_button"/>
+                <input type="button" id="purchase_block_button"
+                       value="MUA HÀNG"
+                       class="choose_block_button"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="revenue_cost_block">
+        <div id="revenue-cost" class="btek-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="revenue-cost">
+                        <t t-if="type == 'revenue'">
+                            <div class="revenue-cost-title nav-tab">
+                                <div class="selected_tab nav-button-tab">
+                                    <input type="button" class="revenue selected_button" id="revenue" value="DOANH THU"> </input>
+                                </div>
+                                <div class="not_selected_tab nav-button-tab">
+                                    <input type="button" class="cost" id="cost" value="CHI PHÍ"> </input>
+                                </div>
+                            </div>
+                        </t>
+
+                        <t t-if="type == 'cost'">
+                            <div class="revenue-cost-title nav-tab">
+                                <div class="not_selected_tab nav-button-tab">
+                                    <input type="button" class="revenue" id="revenue" value="DOANH THU"></input>
+                                </div>
+                                <div class="selected_tab nav-button-tab">
+                                    <input type="button" class="cost selected_button" id="cost" value="CHI PHÍ"> </input>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+
+                    <div class="white-box">
+                        <div id="revenue_tab">
+                            <t t-call="btek_summary_dashboard.revenue_tab_template"/>
+                        </div>
+
+                        <div id="cost_tab" class="hidden-panel">
+                            <t t-call="btek_summary_dashboard.cost_tab_template"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- summary report -->
+    <template id="summary_report_template">
+        <link rel="stylesheet"
+              href="/btek_summary_dashboard/static/src/css/summary_dashboard_style.css"/>
+        <!-- Resources -->
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <title>Summary report</title>
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <t t-call="btek_summary_dashboard.company_selectbox_block"/>
+                <t t-call="btek_summary_dashboard.choose_block"/>
+
+                <div class="container container-summary-report">
+                    <div id="summary_block" class="summary_block">
+                        <div id="btek-temporary-revenue" class="btek-area">
+                            <t t-call="btek_summary_dashboard.temporary_revenue"/>
+                        </div>
+
+                        <div id="btek-today" class="btek-area">
+                            <t t-call="btek_summary_dashboard.current_day_block"/>
+                        </div>
+
+                        <div id="btek-money" class="btek-area">
+                            <div class="row">
+                                <t t-call="btek_summary_dashboard.summary_report_cash_book_text_block_template"/>
+                                <t t-call="btek_summary_dashboard.summary_report_debt_text_block_template"/>
+                            </div>
+                        </div>
+
+                        <t t-call="btek_summary_dashboard.revenue_cost_block"/>
+                        <t t-call="btek_summary_dashboard.btek-stock-summary"/>
+                        <t t-call="btek_summary_dashboard.btek-bottom"/>
+                    </div>
+
+                    <div id="customer_block"
+                         class="customer_block hidden-panel">
+                        <t t-call="btek_summary_dashboard.customer_template"/>
+                        <t t-call="btek_summary_dashboard.car_in_template"/>
+
+                        <t t-call="btek_summary_dashboard.top_current_day_customer_template"/>
+
+                        <t t-call="btek_summary_dashboard.return_customer_rate"/>
+                    </div>
+
+                    <div id="product_and_service_block"
+                         class="product_and_service_block hidden-panel">
+                        <t t-call="btek_summary_dashboard.product_and_service"/>
+                    </div>
+
+                    <div id="inventory_block"
+                         class="inventory_block hidden-panel">
+                        <t t-call="btek_summary_dashboard.inventory_block_template"/>
+                    </div>
+
+                    <div id="purchase_block"
+                         class="purchase_block hidden-panel">
+                        <t t-call="btek_summary_dashboard.purchase_block_template"/>
+
+                        <t t-call="btek_summary_dashboard.supplier_block_template"/>
+
+                        <t t-call="btek_summary_dashboard.top_sale_again_delivery_block_template"/>
+                    </div>
+                </div>
+            </div>
+        </t>
+
+        <!--<script type="text/javascript"-->
+                <!--src="/btek_summary_dashboard/static/src/js/Chart.min.js"/>-->
+        <script type="text/javascript"
+                src="/btek_summary_dashboard/static/src/js/Chart.js-2.7.2/dist/Chart.bundle.js"></script>
+        <script type="text/javascript"
+                src="/btek_summary_dashboard/static/src/js/Chart.js-2.7.2/dist/Chart.bundle.min.js"></script>
+        <script type="text/javascript"
+                src="/btek_summary_dashboard/static/src/js/Chart.js-2.7.2/dist/Chart.js"></script>
+        <script type="text/javascript"
+                src="/btek_summary_dashboard/static/src/js/Chart.js-2.7.2/dist/Chart.min.js"></script>
+
+        <script type="text/javascript"
+                src="/btek_summary_dashboard/static/src/js/chart.js"/>
+
+    </template>
+
+    <template id="revenue_tab_template">
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                DOANH THU NĂM TRƯỚC
+                <span class="text-box-value">
+                    <t t-esc="revenue['last_year_revenue']"/>
+                </span>
+            </h3>
+        </div>
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                DOANH THU NĂM NAY
+                <span class="text-box-value">
+                    <t t-esc="revenue['current_year_revenue']"/>
+                </span>
+            </h3>
+        </div>
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                NĂM NAY/NĂM TRƯỚC
+                <span class="text-box-value">
+                    <t t-esc="revenue['over_percent']"/>
+                    (<t t-esc="revenue['over_total']"/>)
+                </span>
+            </h3>
+        </div>
+        <div class="content-box">
+            <div class="row">
+                <h3 class="text-box-title">
+                    <div id="period_revenue_value">Doanh thu tuần: <t t-esc="revenue['period_value']"/> <t t-esc="over_percent_revenue['over_percent']"/></div>
+                    <span class="text-box-button">
+                        <t t-if="revenue['type'] == 'week'">
+                            <button type="button"
+                                    id="week_revenue_button"
+                                    class="selected_button revenue_week">
+                                Tuần</button>
+                        </t>
+                        <t t-if="revenue['type'] != 'week'">
+                            <button type="button"
+                                    id="week_revenue_button"
+                                    class="not_selected_button revenue_week">
+                                Tuần</button>
+                        </t>
+
+                        <t t-if="revenue['type'] == 'month'">
+                            <button type="button"
+                                    id="month_revenue_button"
+                                    class="selected_button revenue_month">
+                                Tháng</button>
+                        </t>
+                        <t t-if="revenue['type'] != 'month'">
+                            <button type="button"
+                                    id="month_revenue_button"
+                                    class="not_selected_button revenue_month">
+                                Tháng</button>
+                        </t>
+
+                        <t t-if="revenue['type'] == 'quarter'">
+                            <button type="button"
+                                    id="quarter_revenue_button"
+                                    class="selected_button revenue_quarter">
+                                Quý</button>
+                        </t>
+                        <t t-if="revenue['type'] != 'quarter'">
+                            <button type="button"
+                                    id="quarter_revenue_button"
+                                    class="not_selected_button revenue_quarter">
+                                Quý</button>
+                        </t>
+
+                        <t t-if="revenue['type'] == 'year'">
+                            <button type="button"
+                                    id="year_revenue_button"
+                                    class="selected_button revenue_year">
+                                Năm</button>
+                        </t>
+                        <t t-if="revenue['type'] != 'year'">
+                            <button type="button"
+                                    id="year_revenue_button"
+                                    class="not_selected_button revenue_year">
+                                Năm</button>
+                        </t>
+
+                        <div class="text-right form-group hidden-panel">
+                            <select id="revenue_period_week_month_quarter"
+                                    class="form-control"
+                                    name="revenue_period_week_month_quarter">
+                                <option value="week">
+                                    Tuần
+                                </option>
+                                <option value="month">
+                                    Tháng
+                                </option>
+                                <option value="quarter">
+                                    Quý
+                                </option>
+                                <option value="year">
+                                    Năm
+                                </option>
+                            </select>
+                        </div>
+                    </span>
+                </h3>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6 revenue-chart">
+                    <canvas id="revenue-line-chart"></canvas>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <canvas id="revenue_product_type_pie_chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="cost_tab_template">
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                Chi phí năm trước
+                <span class="text-box-value">
+                    <t t-esc="cost['last_year_revenue']"/>
+                </span>
+            </h3>
+        </div>
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                Chi phí năm nay
+                <span class="text-box-value">
+                    <t t-esc="cost['current_year_revenue']"/>
+                </span>
+            </h3>
+        </div>
+        <div class="col-md-4 col-sm-4 featured">
+            <h3 class="text-box-title">
+                Năm nay/Năm trước
+                <span class="text-box-value">
+                    <t t-esc="cost['over_percent']"/>
+                    (<t t-esc="cost['over_total']"/>)
+                </span>
+            </h3>
+        </div>
+        <div class="content-box">
+            <div class="row">
+                <h3 class="text-box-title">
+                    <div id="period_cost_value">Chi phí tuần: <t t-esc="cost['period_value']"/> <t t-esc="over_percent_cost['over_percent']"/></div>
+                    <span class="text-box-button">
+                        <t t-if="cost['type'] == 'week'">
+                            <button type="button"
+                                    id="week_cost_button"
+                                    class="selected_button cost_week">
+                                Tuần</button>
+                        </t>
+                        <t t-if="cost['type'] != 'week'">
+                            <button type="button"
+                                    id="week_cost_button"
+                                    class="not_selected_button cost_week">
+                                Tuần</button>
+                        </t>
+
+                        <t t-if="cost['type'] == 'month'">
+                            <button type="button"
+                                    id="month_cost_button"
+                                    class="selected_button cost_month">
+                                Tháng</button>
+                        </t>
+                        <t t-if="cost['type'] != 'month'">
+                            <button type="button"
+                                    id="month_cost_button"
+                                    class="not_selected_button cost_month">
+                                Tháng</button>
+                        </t>
+
+                        <t t-if="cost['type'] == 'quarter'">
+                            <button type="button"
+                                    id="quarter_cost_button"
+                                    class="selected_button cost_quarter">
+                                Quý</button>
+                        </t>
+                        <t t-if="cost['type'] != 'quarter'">
+                            <button type="button"
+                                    id="quarter_cost_button"
+                                    class="not_selected_button cost_quarter">
+                                Quý</button>
+                        </t>
+
+                        <t t-if="cost['type'] == 'year'">
+                            <button type="button"
+                                    id="year_cost_button"
+                                    class="selected_button cost_year">
+                                Năm</button>
+                        </t>
+                        <t t-if="cost['type'] != 'year'">
+                            <button type="button"
+                                    id="year_cost_button"
+                                    class="not_selected_button cost_year">
+                                Năm</button>
+                        </t>
+                    </span>
+                    <span class="text-box-button hidden-panel">
+                        <select id="cost_period_week_month_quarter"
+                                class="form-control"
+                                name="cost_period_week_month_quarter">
+                            <option value="week">
+                                Tuần
+                            </option>
+                            <option value="month">
+                                Tháng
+                            </option>
+                            <option value="quarter">
+                                Quý
+                            </option>
+                            <option value="year">
+                                Năm
+                            </option>
+                        </select>
+                    </span>
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 cost-chart">
+                    <div>
+                        <canvas id="cost-line-chart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <canvas id="cost_product_type_pie_chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="customer_template">
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            KHÁCH HÀNG
+                            <span class="text-box-value">
+                                Tổng <t t-esc="customer['total']"/>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div id="customer_pie_chart"></div>
+                                <ul class="list-left-right">
+                                    <t t-foreach="customer['types']"
+                                       t-as="customer_type">
+                                        <li>
+                                            <t t-esc="customer_type[0]"/>
+                                            <span>
+                                                <t t-esc="customer_type[1]"/>
+                                            </span>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Biểu đồ khách hàng
+                            <span>
+                                <div class="form-group">
+                                    <select id="customer_multi_line_period"
+                                            class="form-control"
+                                            name="customer_multi_line_period">
+                                        <option value="week">
+                                            Tuần này
+                                        </option>
+                                        <option value="month">
+                                            Tháng này
+                                        </option>
+                                        <option value="quarter">
+                                            Quý này
+                                        </option>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div>
+                                    <canvas id="customer-multi-line-chart"></canvas>
+                                </div>
+                                <div id="customer-multi-line-item"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="car_in_template">
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Top thương hiệu doanh thu cao nhất
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div>
+                                    <canvas id="car_in_pie_chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 customer-chart">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            BIỂU ĐỒ XE ĐẾN
+                            <span class="text-box-button hidden-panel">
+                                <button type="button" id="week_car_in_button" class="car_in_week selected_button" value="TUẦN">Tuần
+                                </button>
+                                <button type="button" id="month_car_in_button" class="car_in_month" value="THÁNG">Tháng
+                                </button>
+                                <button type="button" id="quarter_car_in_button" class="car_in_quarter" value="QUÝ">Quý
+                                </button>
+                            </span>
+                            <span>
+                                <div class="form-group">
+                                    <select id="car_in_period"
+                                            class="form-control"
+                                            name="car_in_period">
+                                        <option value="week">
+                                            Tuần này
+                                        </option>
+                                        <option value="month">
+                                            Tháng này
+                                        </option>
+                                        <option value="quarter">
+                                            Quý này
+                                        </option>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div>
+                                    <canvas id="car-in-line-chart"></canvas>
+                                </div>
+                                <div id="car-in-line-chart-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </template>
+
+    <template id="btek-stock-summary">
+        <div id="btek-statistic-stock" class="btek-area">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="white-box">
+                        <div class="content-box inventory">
+                            NHẬP TRONG NGÀY <br/>
+                            <img src="/btek_summary_dashboard/static/src/icon/in_pr_in.svg"/>
+                            <span>
+                                <t t-esc="goods_receipt"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="white-box">
+                        <div class="content-box inventory">
+                            XUẤT TRONG NGÀY <br/>
+                            <img src="/btek_summary_dashboard/static/src/icon/in_pr_out.svg"/>
+                            <span>
+                                <t t-esc="goods_issue"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-md-4 col-sm-4">-->
+                    <!--<div class="white-box">-->
+                        <!--<div class="content-box inventory">-->
+                            <!--TỒN KHO-->
+                            <!--<img src="/btek_summary_dashboard/static/src/icon/store.png"/>-->
+                            <!--<span>-->
+                                <!--<t t-esc="inventory"/>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </template>
+
+    <template id="btek-bottom">
+        <div id="btek-statistic" class="btek-area">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="white-box">
+                        <div class="content-box employee">
+                            NHÂN VIÊN
+                            <img src="/btek_summary_dashboard/static/src/icon/user.png"/>
+                            <span>
+                                <t t-esc="employee"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="white-box">
+                        <div class="content-box num_invoice">
+                            SỐ HÓA ĐƠN
+                            <img src="/btek_summary_dashboard/static/src/icon/invoice.png"/>
+                            <span>
+                                <t t-esc="num_invoice"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="white-box">
+                        <div class="content-box inventory">
+                            TỒN KHO
+                            <img src="/btek_summary_dashboard/static/src/icon/store.png"/>
+                            <span>
+                                <t t-esc="inventory"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="top_current_day_customer_template">
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Top Khách hàng mới nhất
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <ul class="list-left-right">
+                                    <t t-foreach="top_current_day_customer" t-as="item">
+                                        <li>
+                                            <t t-esc="item['name']"/>
+                                            <t t-esc="item['revenue']"/>
+                                            <span>
+                                                <t t-esc="item['categ']"/>
+                                            </span>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Top Khách hàng có doanh thu cao nhất
+                            <span>
+                                <div class="form-group">
+                                    <select class="form-control"
+                                        id="top_revenue_customer_period">
+                                        <option value="week">
+                                            Tuần này
+                                        </option>
+                                        <option value="month">
+                                            Tháng này
+                                        </option>
+                                        <option value="quarter">
+                                            Quý này
+                                        </option>
+                                        <option value="year">
+                                            Năm nay
+                                        </option>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div id="top_revenue_customer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </template>
+
+    <template id="return_customer_rate">
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Tỷ lệ khách hàng quay lại(3 tháng gần đây)
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div>
+                                    <canvas id="return-customer-rate-bar-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Thống kê tỷ lệ theo số lần khách hàng tới
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <canvas id="customer-number-times"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="product_and_service">
+        <h3 class="text-box-title">
+            SẢN PHẨM &amp; DỊCH VỤ
+            <select class="form-control" id="product_and_service_period" style="display: inline-block; width: 10%;">
+                <option value="week">
+                    Tuần này
+                </option>
+                <option value="month">
+                    Tháng này
+                </option>
+                <option value="quarter">
+                    Quý này
+                </option>
+                <option value="year">
+                    Năm nay
+                </option>
+            </select>
+        </h3>
+        
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Tỷ trọng sản phẩm / dịch vụ
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <canvas id="product_service_rate"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Tỷ trọng top 10 gói dịch vụ
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <canvas id="top10_service_package_rate"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Tỷ trọng top 10 dịch vụ
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <canvas id="top10_service_rate"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Tỷ trọng top 10 sản phẩm
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <canvas id="top10_product_rate"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="inventory_block_template">
+        <h3>TỒN KHO</h3>
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white-box">
+                        <h3 class="text-box-title">
+                            Tỷ trọng hàng tồn theo kho
+                        </h3>
+                        <div class="content-box">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="qty_inventory_by_warehouse_rate_label">
+                                        Theo số lượng
+                                    </div>
+                                    <div>
+                                        <canvas id="qty_inventory_by_warehouse_rate"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="qty_inventory_by_warehouse_rate_label">
+                                        Theo giá trị
+                                    </div>
+                                    <div>
+                                        <canvas id="value_inventory_by_warehouse_rate"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Top hàng hóa tồn
+                            <span>
+                                <div class="form-group">
+                                    <select id="stock_location_selection"
+                                            class="form-control">
+                                        <t t-foreach="stock_location_list" t-as="location">
+                                            <option t-att-value="str(location['id'])">
+                                                <t t-esc="location['name']"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>Theo số lượng</div>
+                                    <div>
+                                        <canvas id="top_inventory_qty"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div>Theo giá trị</div>
+                                    <div>
+                                        <canvas id="top_inventory_value"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="purchase_block_template">
+        <div>
+            <h3>
+                MUA HÀNG
+            </h3>
+        </div>
+        <div class="btek-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Hàng hóa mua nhiều nhất
+                            <span>
+                                <div class="form-group">
+                                    <select id="top_purchase_qty_period"
+                                            class="form-control">
+                                        <option value="week">
+                                            Tuần này
+                                        </option>
+                                        <option value="month">
+                                            Tháng
+                                        </option>
+                                        <option value="quarter">
+                                            Quý
+                                        </option>
+                                        <option value="year">
+                                            Năm
+                                        </option>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div>
+                                    <canvas id="top_purchase_qty_chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="white-box widget-client">
+                        <h3 class="text-box-title">
+                            Hàng hóa mua chi phí mua cao nhất
+                            <span>
+                                <div class="form-group">
+                                    <select id="top_purchase_value_period"
+                                            class="form-control">
+                                        <option value="week">
+                                            Tuần này
+                                        </option>
+                                        <option value="month">
+                                            Tháng
+                                        </option>
+                                        <option value="quarter">
+                                            Quý
+                                        </option>
+                                        <option value="year">
+                                            Năm
+                                        </option>
+                                    </select>
+                                </div>
+                            </span>
+                        </h3>
+                        <div class="content-box">
+                            <div class="btek-maxhieght">
+                                <div id="top_purchase_value_item">
+                                    <div class="item-top-purchase title">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                Hàng hóa
+                                            </div>
+                                            <div class="col-md-2">
+                                                Số lượng
+                                            </div>
+                                            <div class="col-md-4">
+                                                Giá trị
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="supplier_block_template">
+        <div class="btek-area">
+            <div class="white-box">
+                <h3 class="text-box-title">
+                    Top nhà cung cấp
+                    <span>
+                        <div class="form-group">
+                            <select id="top_supplier_period"
+                                    class="form-control col-md-3">
+                                <option value="week">
+                                    Tuần này
+                                </option>
+                                <option value="month">
+                                    Tháng
+                                </option>
+                                <option value="quarter">
+                                    Quý
+                                </option>
+                                <option value="year">
+                                    Năm
+                                </option>
+                            </select>
+                        </div>
+                    </span>
+                </h3>
+                <div class="content-box">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                Theo số lượng
+                            </div>
+                            <div>
+                                <canvas id="top_supplier_qty_chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div>
+                                Theo giá trị
+                            </div>
+                            <div>
+                                <canvas id="top_supplier_value_chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="top_sale_again_delivery_block_template">
+        <div class="btek-area">
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="white-box widget-client">
+                            <h3 class="text-box-title">
+                                Top hàng hóa được mua lại nhiều nhất
+                                <span>
+                                    <div class="form-group">
+                                        <select id="top_sale_again_period"
+                                                class="form-control"
+                                                name="top_sale_again_period">
+                                            <option value="week">
+                                                Tuần
+                                            </option>
+                                            <option value="month">
+                                                Tháng
+                                            </option>
+                                            <option value="quarter">
+                                                Quý
+                                            </option>
+                                            <option value="year">
+                                                Năm
+                                            </option>
+                                        </select>
+                                    </div>
+                                </span>
+                            </h3>
+
+                            <div class="content-box">
+                                <div class="btek-maxhieght">
+                                    <ul id="top_sale_again" class="list-left-right">
+                                        <li class="title">
+                                            Hàng hóa
+                                            <span>
+                                                Số lượng
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="white-box widget-client">
+                            <h3 class="text-box-title">
+                                Top hàng hóa thời gian đáp ứng nhanh nhất
+                                <span>
+                                    <div class="form-group">
+                                        <select id="top_delivery_period"
+                                                class="form-control"
+                                                name="top_sale_again_period">
+                                            <option value="week">
+                                                Tuần
+                                            </option>
+                                            <option value="month">
+                                                Tháng
+                                            </option>
+                                            <option value="quarter">
+                                                Quý
+                                            </option>
+                                            <option value="year">
+                                                Năm
+                                            </option>
+                                        </select>
+                                    </div>
+                                </span>
+                            </h3>
+                            <div class="content-box">
+                                <div class="btek-maxhieght">
+                                    <ul id="top_delivery" class="list-left-right">
+                                        <li class="title">
+                                            Hàng hóa
+                                            <span>
+                                                Thời gian đáp ứng
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

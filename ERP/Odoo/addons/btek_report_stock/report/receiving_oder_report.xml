@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_receiving_oder">
+        <body>
+            <t t-foreach="docs" t-as="o">
+            <div class="page" style="color: black;font-size: 18px;font-family: Times New Roman;">
+                <!--<style type="text/css">-->
+                    <!--.pages {-->
+                    <!--font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;-->
+                    <!--font-size: 12px;-->
+                    <!--}-->
+                <!--</style>-->
+                <div style="color: black;font-size: 18px;font-family: Times New Roman;">
+                    <div class="row" style="color: black;font-family: inherit; font-size: 18px!important;">
+                        <div class="col-xs-8" style="float:left">
+                            <p>
+                                <b><span style="font-family: inherit; font-size: 30px!important;" t-esc="res_company.name"/></b>
+                                <br/>
+                            </p>
+                            <p style="font-family: inherit; font-size: 18px!important;">
+                                <t t-if="res_company.street"><i><span t-field="res_company.street"/></i></t>
+
+                                <t t-if="res_company.street2 and res_company.street">-</t>
+                                <t t-if="res_company.street2"><i><span t-field="res_company.street2"/></i></t>
+
+                                <t t-if="res_company.city and res_company.street2 or res_company.city and res_company.street">-</t>
+                                <t t-if="res_company.city"><i><span t-field="res_company.city"/></i></t>
+
+                                <t t-if="res_company.state_id and res_company.city or res_company.state_id and res_company.street2 or res_company.state_id and res_company.street">-</t>
+                                <t t-if="res_company.state_id"><i><span t-field="res_company.state_id.name"/></i></t>
+                            </p>
+                        </div>
+                        <div class="col-xs-4" style="float:right;font-family: inherit;font-size:18px;">
+                            <p class="text-center" style="text-align: center;">
+
+                            </p>
+                            <p style="font-style: italic;text-align: center"
+                               class="text-center"><b>Mẫu số 01-VT</b><br/>
+                                (Ban hành theo TT số 200/2014/TT-BTC<br />
+                                Ngày 22/12/2014 của Bộ Tài Chính)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 18px!important; line-height: 100%;padding-top: 8px;">
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-4" style="text-align: center;">
+                                <p>
+                                    <b>
+                                        <span style="font-family: inherit;font-size: 34px!important;">
+                                            PHIẾU NHẬP KHO
+                                        </span>
+                                    </b>
+                                </p>
+                                <p>
+                                    <t t-if="o.min_date">
+                                        <span t-esc="o.get_min_date_word()"/>
+                                    </t>
+                                    <t t-if="not o.min_date">
+                                        <span>Ngày.....tháng.....năm.....</span>
+                                    </t>
+                                </p>
+                                <p>
+                                    <span>Số: <b><t t-esc="o.name"/></b></span>
+                                </p>
+                            </div>
+                            <div class="col-xs-4" style="font-family: inherit; font-size: 18px!important;text-align: center;">
+                                <br/>
+                                <br/>
+                                <p>Nợ: .........................</p>
+                                <p>Có: .........................</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span>Người giao hàng:</span>
+                        </div>
+                        <div>
+                            <div class="col-xs-4">
+                                <span>Theo số:</span>
+                                <span><t t-esc="o.name"/></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <span>Nhập tại kho:</span>
+                            <span><t t-esc="o.location_dest_id.name"/></span>
+                        </div>
+                    </div>
+                    <div style="padding-top: 8px;">
+                        <table class="table table-bordered"
+                               style="font-family: inherit; font-size: 18px!important;border: 1px solid black !important;"
+                               t-if="o.move_lines">
+                            <thead>
+                                <tr style="border: 1px solid black !important; height: 5px!important;">
+                                    <th class="text-center" style="width:2%;border: 1px solid black !important;line-height: 10px;" rowspan="2">STT</th>
+                                    <th class="text-center" style="border: 1px solid black !important;line-height: 10px;" rowspan="2">Mã kho</th>
+                                    <th class="text-center" style="border: 1px solid black !important;line-height: 10px;" rowspan="2">Tên VT-HH</th>
+                                    <!--<th class="text-center" style="border: 1px solid black !important;">Mã xe</th>-->
+                                    <!--<th class="text-center" style="border: 1px solid black !important;">Tk</th>-->
+                                    <th class="text-center" style="width:5%;border: 1px solid black !important;line-height: 10px;" rowspan="2">Đvt</th>
+                                    <th class="text-center" style="border: 1px solid black !important;line-height: 10px;" colspan="2">Số lượng</th>
+                                    <th class="text-center" style="width:12%;border: 1px solid black !important;line-height: 10px;" rowspan="2">Đơn giá</th>
+                                    <th class="text-center" style="width:12%;border: 1px solid black !important;line-height: 10px;" rowspan="2">Thành tiền</th>
+                                </tr>
+                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                    <th class="text-center"
+                                        style="width:9%;border: 1px solid black !important;line-height: 10px;">
+                                        Chứng từ</th>
+                                    <th class="text-center"
+                                        style="width:10%;border: 1px solid black !important;line-height: 10px;">
+                                        Thực nhập</th>
+                                </tr>
+                            </thead>
+                            <t t-if="not o.pack_operation_ids">
+                                <t t-set="stt" t-value="0"/>
+                                <t t-set="in_total" t-value="True"/>
+                                <t t-set="move_line_total" t-value="0"/>
+                                <t t-foreach="o.move_lines" t-as="move_line">
+                                    <t t-set="stt" t-value="stt+1"/>
+                                    <t t-if="not move_line.price_unit">
+                                        <t t-set="in_total" t-value="False"/>
+                                    </t>
+                                    <t t-set="move_line_total" t-value="move_line_total + (move_line.product_uom_qty * move_line.price_unit)"/>
+                                    <tr style="border: 1px solid black !important; height: 5px!important;">
+                                        <td class="text-center" style="border: 1px solid black !important;line-height: 10px;">
+                                            <span style="line-height: 10px;" t-raw="stt"/>
+                                        </td>
+                                        <td class="text-center" style="border: 1px solid black !important;line-height: 10px;">
+                                            <t t-if="move_line.location_dest_id!=False">
+                                                <span style="line-height: 10px;" t-esc="move_line.location_dest_id.name" />
+                                            </t>
+                                        </td>
+                                        <td style="border: 1px solid black !important;line-height: 10px;">
+                                            <t style="line-height: 10px;" t-esc="move_line.product_id.default_code or ''"/>
+                                            <t style="line-height: 10px;" t-esc="move_line.product_id.default_code and '_' or ''"/>
+                                            <t style="line-height: 10px;" t-esc="move_line.product_id.name"/>
+                                        </td>
+                                        <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                            <t style="line-height: 10px;">
+                                                <span style="line-height: 10px;" t-field="move_line.product_uom"></span>
+                                            </t>
+                                        </td>
+                                        <!--<td class="text-center" style="border: 1px solid black !important;">-->
+                                            <!--<t t-if="move_line.product_id.property_account_expense_id!=False">-->
+                                                <!--<span t-esc="move_line.product_id.property_account_expense_id.code" />-->
+                                            <!--</t>-->
+                                        <!--</td>-->
+
+                                        <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                            <span style="line-height: 10px;" t-esc="move_line.product_uom_qty"/>
+                                        </td>
+                                        <td class="text-left" style="border: 1px solid black !important;line-height: 10px;"></td>
+                                        <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                            <!--<t t-if="move_line.price_unit">-->
+                                                <!--<span t-esc="move_line.price_unit"/>-->
+                                            <!--</t>-->
+                                        </td>
+                                        <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                            <!--<t t-if="move_line.price_unit">-->
+                                                <!--<span t-esc="move_line.product_uom_qty * move_line.price_unit"/>-->
+                                            <!--</t>-->
+                                        </td>
+                                    </tr>
+                                </t>
+                                <!--<tr style="border: 1px solid black !important;">-->
+                                    <!--<td colspan="8" class="text-right" style="border: 1px solid black !important;">Tổng cộng tiền hàng :</td>-->
+                                    <!--<td class="text-right" style="border: 1px solid black !important;">-->
+                                        <!--&lt;!&ndash;<t t-if="move_line_total > 0 and in_total is True">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<span t-raw="move_line_total"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</t>&ndash;&gt;-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr style="border: 1px solid black !important;">-->
+                                    <!--<td colspan="8" class="text-right" style="border: 1px solid black !important;">Chi phí :</td>-->
+                                    <!--<td class="text-right" style="border: 1px solid black !important;">-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr style="border: 1px solid black !important;">-->
+                                    <!--<td colspan="8" class="text-right" style="border: 1px solid black !important;">Thuế giá trị gia tăng :</td>-->
+                                    <!--<td class="text-right" style="border: 1px solid black !important;">-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                    <td colspan="7" class="text-left" style="border: 1px solid black !important;line-height: 10px;"><strong style="line-height: 10px;">Cộng</strong></td>
+                                    <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                    </td>
+                                </tr>
+                            </t>
+
+                            <t t-if="o.pack_operation_ids">
+                                <t t-set="stt" t-value="0"/>
+                                <t t-foreach="o.pack_operation_ids" t-as="pack_operation">
+                                    <t t-set="stt" t-value="stt+1"/>
+                                    <tr style="border: 1px solid black !important;height: 5px!important;">
+                                        <td class="text-center"
+                                            style="border: 1px solid black !important;line-height: 10px;">
+                                            <span t-raw="stt"/>
+                                        </td>
+                                        <td class="text-center"
+                                            style="border: 1px solid black !important;line-height: 10px;">
+                                            <t t-if="pack_operation.location_id!=False">
+                                                <span style="line-height: 10px;" t-esc="pack_operation.location_id.name" />
+                                            </t>
+                                        </td>
+                                        <td style="border: 1px solid black !important;line-height: 10px;">
+                                            <t style="line-height: 10px;" t-esc="pack_operation.product_id.default_code or ''"/>
+                                            <t style="line-height: 10px;" t-esc="pack_operation.product_id.default_code and '_' or ''"/>
+                                            <t style="line-height: 10px;" t-esc="pack_operation.product_id.name"/>
+                                        </td>
+                                        <td class="text-right"
+                                            style="border: 1px solid black !important;line-height: 10px;">
+                                            <t style="line-height: 10px;">
+                                                <span style="line-height: 10px;" t-field="pack_operation.product_uom_id"></span>
+                                            </t>
+                                        </td>
+                                        <td class="text-right"
+                                            style="border: 1px solid black !important;line-height: 10px;">
+                                            <span style="line-height: 10px;" t-esc="pack_operation.product_qty"/>
+                                        </td>
+
+                                        <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                            <t style="line-height: 10px;">
+                                                <span style="line-height: 10px;" t-esc="pack_operation.qty_done"/>
+                                            </t>
+                                        </td>
+                                        <td class="text-right"
+                                            style="border: 1px solid black !important;line-height: 10px;"></td>
+                                        <td style="border: 1px solid black !important;line-height: 10px;"
+                                            class="text-right"></td>
+                                    </tr>
+                                </t>
+                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                    <td colspan="7" class="text-left" style="border: 1px solid black !important;line-height: 10px;"><strong style="line-height: 10px;">Cộng</strong></td>
+                                    <td class="text-right" style="border: 1px solid black !important;line-height: 10px;">
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+
+                    <div>
+                        <table width="100%">
+                            <tr style="text-align: right;margin-right: 5%;font-family: inherit; font-size: 18px!important;">
+                                <p style="text-align: right;margin-right: 5%;">
+                                    <b>.............., Ngày..........tháng..........năm <span><t t-esc="time.strftime('%Y')"/></span></b>
+                                </p>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div style="color: black;font-family: inherit; font-size: 18px!important;page-break-inside: avoid;">
+                        <table width="100%" style="color: black;font-family: inherit; font-size: 17!important;page-break-inside: avoid;">
+                            <tr style="page-break-inside: avoid;">
+                                <td style="text-align: center;" width="25%">
+                                    <span style="padding-top: 8px;">
+                                        <b>NGƯỜI LẬP PHIẾU</b>
+                                    </span>
+
+                                </td>
+                                <td style="text-align: center;" width="25%">
+                                    <span style="padding-top: 8px;">
+                                        <b>NGƯỜI GIAO HÀNG</b>
+                                    </span>
+                                </td>
+                                <td style="text-align: center;" width="25%">
+                                    <span style="padding-top: 8px;">
+                                        <b>THỦ KHO</b>
+                                    </span>
+                                </td>
+                                <td style="text-align: center;" width="25%">
+                                    <span style="padding-top: 8px;">
+                                        <b>KẾ TOÁN TRƯỞNG</b>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="line-height: 100%;color: black;font-family: inherit; font-size: 16px!important;page-break-inside: avoid;">
+                                <td style="text-align: center;">
+                                    <span><i>(Ký, họ tên)</i></span>
+                                    <br/>
+                                    <br/>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span><i>(Ký, họ tên)</i></span>
+                                    <br/>
+                                    <br/>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span><i>(Ký, họ tên)</i></span>
+                                    <br/>
+                                    <br/>
+                                </td>
+                                <td style="text-align: center;">
+                                    <span><i>(Ký, họ tên)</i></span>
+                                    <br/>
+                                    <br/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </t>
+        </body>
+    </template>
+</odoo>
+

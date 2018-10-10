@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="question_1_0" model="survey.question">
+        <field name="question">Hoạt động của còi, đèn chiếu sáng bên ngoài, đèn xi nhan, đèn cảnh báo nguy hiểm, đèn phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_1_0"/>
+    </record>
+
+    <record id="question_1_1" model="survey.question">
+        <field name="question">Kính chắn gió bị nứt, tróc, sứt</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_1_0"/>
+    </record>
+
+    <record id="question_2_0" model="survey.question">
+        <field name="question">Thân xe</field>
+        <field name="type">textbox</field>
+        <field name="group">paint</field>
+        <field name="page_id" ref="page_2_0"/>
+    </record>
+
+    <record id="question_3_0" model="survey.question">
+        <field name="question">Mức nước AXIT</field>
+        <field name="type">textbox</field>
+        <field name="group">axit</field>
+        <field name="page_id" ref="page_3_0"/>
+    </record>
+    <record id="question_3_1" model="survey.question">
+        <field name="question">Tình trạng Acquy</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_3_0"/>
+    </record>
+
+    <record id="question_4_0" model="survey.question">
+        <field name="question">Mức xăng</field>
+        <field name="type">textbox</field>
+        <field name="group">gas</field>
+        <field name="page_id" ref="page_4_0"/>
+    </record>
+
+    <record id="question_5_0" model="survey.question">
+        <field name="question">Thông tin kích cỡ lốp</field>
+        <field name="type">textbox</field>
+        <field name="group">tire_size</field>
+        <field name="page_id" ref="page_5_0"/>
+    </record>
+
+    <record id="question_5_10" model="survey.question">
+        <field name="question">Độ mòn</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_1"/>
+    </record>
+    <record id="question_5_11" model="survey.question">
+        <field name="question">Áp suất lốp (Theo tiêu chuẩn của nhà sản xuất)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_1"/>
+    </record>
+    <record id="question_5_12" model="survey.question">
+        <field name="question">Độ dày má/Guốc phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_1"/>
+    </record>
+    <record id="question_5_13" model="survey.question">
+        <field name="question">Hãng</field>
+        <field name="type">simple_choice</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_1"/>
+    </record>
+
+    <record id="question_5_20" model="survey.question">
+        <field name="question">Độ mòn</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_2"/>
+    </record>
+    <record id="question_5_21" model="survey.question">
+        <field name="question">Áp suất lốp (Theo tiêu chuẩn của nhà sản xuất)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_2"/>
+    </record>
+    <record id="question_5_22" model="survey.question">
+        <field name="question">Độ dày má/Guốc phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_2"/>
+    </record>
+    <record id="question_5_23" model="survey.question">
+        <field name="question">Hãng</field>
+        <field name="type">simple_choice</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_2"/>
+    </record>
+
+    <record id="question_5_30" model="survey.question">
+        <field name="question">Độ mòn</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_3"/>
+    </record>
+    <record id="question_5_31" model="survey.question">
+        <field name="question">Áp suất lốp (Theo tiêu chuẩn của nhà sản xuất)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_3"/>
+    </record>
+    <record id="question_5_32" model="survey.question">
+        <field name="question">Độ dày má/Guốc phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_3"/>
+    </record>
+    <record id="question_5_33" model="survey.question">
+        <field name="question">Hãng</field>
+        <field name="type">simple_choice</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_3"/>
+    </record>
+
+    <record id="question_5_40" model="survey.question">
+        <field name="question">Độ mòn</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_4"/>
+    </record>
+    <record id="question_5_41" model="survey.question">
+        <field name="question">Áp suất lốp (Theo tiêu chuẩn của nhà sản xuất)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_4"/>
+    </record>
+    <record id="question_5_42" model="survey.question">
+        <field name="question">Độ dày má/Guốc phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_4"/>
+    </record>
+    <record id="question_5_43" model="survey.question">
+        <field name="question">Hãng</field>
+        <field name="type">simple_choice</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_5_4"/>
+    </record>
+
+    <record id="question_6_0" model="survey.question">
+        <field name="question">Quạt gió điều hòa</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_6_0"/>
+    </record>
+    <record id="question_6_1" model="survey.question">
+        <field name="question">Đèn trong xe</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_6_0"/>
+    </record>
+    <record id="question_6_2" model="survey.question">
+        <field name="question">Hoạt động của ly hợp nếu được trang bị</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_6_0"/>
+    </record>
+
+    <record id="question_7_0" model="survey.question">
+        <field name="question">Hoạt động của cần gạt mưa</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_7_0"/>
+    </record>
+    <record id="question_7_1" model="survey.question">
+        <field name="question">Lưỡi gạt mưa</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_7_0"/>
+    </record>
+
+    <record id="question_8_0" model="survey.question">
+        <field name="question">Dầu phanh</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_1" model="survey.question">
+        <field name="question">Dầu ly hợp</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_2" model="survey.question">
+        <field name="question">Dầu vi sai/hộp số phụ</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_3" model="survey.question">
+        <field name="question">Nước rửa kính</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_4" model="survey.question">
+        <field name="question">Nước làm mát</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_5" model="survey.question">
+        <field name="question">Dầu hộp số</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_6" model="survey.question">
+        <field name="question">Bình nước phụ</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+    <record id="question_8_7" model="survey.question">
+        <field name="question">Dầu trợ lực lái</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_8_0"/>
+    </record>
+
+    <record id="question_9_0" model="survey.question">
+        <field name="question">Hệ thống điều hòa và đường ống bị rò rỉ, hư hỏng</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_9_0"/>
+    </record>
+    <record id="question_9_1" model="survey.question">
+        <field name="question">Hệ thống làm mát động cơ, két nước, đường ống và kẹp</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_9_0"/>
+    </record>
+    <record id="question_9_2" model="survey.question">
+        <field name="question">Dây đai dẫn động hệ thống phụ trợ</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_9_0"/>
+    </record>
+
+    <record id="question_10_0" model="survey.question">
+        <field name="question">Hệ thống phanh (Bao gồm các đường ống và phanh đỗ)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_10_0"/>
+    </record>
+
+    <record id="question_11_0" model="survey.question">
+        <field name="question">Bơm trợ lực thước lái và thanh dẫn động</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_11_0"/>
+    </record>
+    <record id="question_11_1" model="survey.question">
+        <field name="question">Rô tuyn lái</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_11_0"/>
+    </record>
+    <record id="question_11_2" model="survey.question">
+        <field name="question">Rô tuyn cân bằng</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_11_0"/>
+    </record>
+    <record id="question_11_11" model="survey.question">
+        <field name="question">Ống nhún và các phộ phận giảm xóc bị rỉ dầu, hư hỏng, hoạt động kém</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_11_1"/>
+    </record>
+
+    <record id="question_12_0" model="survey.question">
+        <field name="question">Hệ thống ống xả (Rò rỉ, hư hỏng, lỏng chi tiết)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_12_0"/>
+    </record>
+
+    <record id="question_12_10" model="survey.question">
+        <field name="question">Cao su che bụi trục lắp (nếu được trang bị)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_12_1"/>
+    </record>
+    <record id="question_12_11" model="survey.question">
+        <field name="question">Trục lắp, hộp số, khớp các đăng và thanh dẫn truyền số (Nếu được trang bị) và bôi trơn (Nếu cần)</field>
+        <field name="type">matrix_input</field>
+        <field name="group">default</field>
+        <field name="page_id" ref="page_12_1"/>
+    </record>
+</odoo>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_basic" model="ir.ui.view">
+        <field name="name">purchase_order_form_basic</field>
+        <field name="model">purchase.order</field>
+        <field name="priority">160</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[1]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[2]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[3]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[4]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[5]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[6]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//header/button[8]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+
+            <xpath expr="//group/group[1]/field[@name='partner_ref']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//group/group[1]/field[@name='consignment']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//group/group[1]/field[@name='requisition_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+
+            <xpath expr="//header/button[6]" position="after">
+                <button name="pre_confirm_order" type="object" class="oe_highlight" string="Confirm" states="draft,sent"/>
+            </xpath>
+            <xpath expr="//group/group[1]/field[@name='currency_id']" position="replace">
+            </xpath>
+            <xpath expr="//group/group/field[@name='date_order']" position="after">
+                <field name="currency_id"/>
+            </xpath>
+
+            <!--Deliveries & Invoices-->
+            <xpath expr="//notebook/page[2]/group/group[1]/field[@name='picking_type_id']" position="attributes">
+                <attribute name="domain">[('code','=','incoming')]</attribute>
+                <attribute name="options">{'no_create': True}</attribute>
+                <attribute name="groups">stock.group_stock_multi_locations</attribute>
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[1]/field[@name='picking_type_id']" position="replace">
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[1]/field[@name='dest_address_id']" position="after">
+                <field name="picking_type_id"/>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[1]/field[@name='dest_address_id']" position="attributes">
+                <!--<attribute name="groups"></attribute>-->
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[1]/field[@name='incoterm_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//notebook/page[2]/group/group[2]/field[@name='invoice_status']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[2]/field[@name='payment_term_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[2]/field[@name='date_approve']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[2]/field[@name='fiscal_position_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <!--<xpath expr="//notebook/page[2]/group/group[1]/field[@name='picking_type_id']" position="before">-->
+                <!--<field name="dest_address_id"/>-->
+            <!--</xpath>-->
+        </field>
+    </record>
+
+    <record id="purchase.purchase_form_action" model="ir.actions.act_window">
+            <field name="domain">[]</field>
+    </record>
+
+    <record id="pre_comfirm_order_form" model="ir.ui.view">
+        <field name="name">pre_comfirm_order_form</field>
+        <field name="model">purchase.order</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <form >
+                <field name="html" widget="html"/>
+                <footer>
+                    <button name="auto_confirm_purchase" class="oe_highlight" type="object" string="Confirm"/>
+                    |
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pre_confirm_po" model="ir.actions.act_window">
+        <field name="name">Warning</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_basic.pre_comfirm_order_form'}</field>
+    </record>
+</odoo>

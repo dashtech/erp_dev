@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="view_fleet_repair_reason_form" model="ir.ui.view">
+            <field name="name">fleet.repair.reason.form</field>
+            <field name="model">fleet.repair.reason</field>
+            <field name="arch" type="xml">
+                <form string="Enter Reason Cancel">
+                    <group>
+                        <field name="text" style="width: 70%"/>
+                    </group>
+                    <footer>
+                        <button name="add_reason" string="Add reason" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelled" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_fleet_repair_reason" model="ir.actions.act_window">
+            <field name="name">Enter reason code</field>
+            <field name="res_model">fleet.repair.reason</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+			<field name="view_id" ref="view_fleet_repair_reason_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>

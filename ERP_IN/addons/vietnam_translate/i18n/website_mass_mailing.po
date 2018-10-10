@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_mass_mailing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-08 09:56+0000\n"
+"PO-Revision-Date: 2018-09-08 09:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
+msgid "&amp;times;"
+msgstr "&amp;times;"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
+msgid "<strong>Newsletter Popup!</strong> The newsletter popup snippet effect is active on this page. Click"
+msgstr "<strong>Newsletter Popup!</strong> The newsletter popup snippet effect is active on this page. Click"
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:15
+#, python-format
+msgid "Add a Newsletter Subscribe Button"
+msgstr "Thêm một nút Newsletter Subscribe"
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:49
+#, python-format
+msgid "Add a Newsletter Subscribe Popup"
+msgstr "Add a Newsletter Subscribe Popup"
+
+#. module: website_mass_mailing
+#: selection:mass.mailing.config.settings,group_website_popup_on_exit:0
+msgid "Allow the use of a pop-up snippet on website to encourage visitors to sign up on a mass mailing list"
+msgstr "Cho phép sử dụng đoạn mã bật lên trên trang web để khuyến khích khách truy cập đăng ký danh sách gửi thư hàng loạt"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
+msgid "Change Newsletter"
+msgstr "Đổi Newsletter"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.unsubscribe
+msgid "Choose your mailing subscriptions."
+msgstr "Choose your mailing subscriptions."
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_mail_block_footer_social
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_mail_block_footer_social_left
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: website_mass_mailing
+#: selection:mass.mailing.config.settings,group_website_popup_on_exit:0
+msgid "Do not add extra content on website pages to encourage visitors to sign up"
+msgstr "Không thêm nội dung bổ sung trên các trang của trang web để khuyến khích khách truy cập đăng ký"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
+msgid "Here To Edit Dialog Content"
+msgstr "Here To Edit Dialog Content"
+
+#. module: website_mass_mailing
+#: model:ir.model,name:website_mass_mailing.model_mail_mass_mailing_list
+msgid "Mailing List"
+msgstr "Danh sách thư"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.unsubscribe
+#: model:ir.ui.view,arch_db:website_mass_mailing.unsubscribed
+msgid "Mailing Subscriptions"
+msgstr "Mailing Subscriptions"
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:22
+#, python-format
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.view_mail_mass_mailing_list_form
+msgid "Popup Content"
+msgstr "Popup Content"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
+msgid "Subscribe"
+msgstr "Đăng ký"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form
+msgid "Thanks"
+msgstr "Cám ơn"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form
+msgid "Thanks for your subscription!"
+msgstr "Cám ơn đã đăng ký!"
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:80
+#, python-format
+msgid "Type Here ..."
+msgstr "Type Here ..."
+
+#. module: website_mass_mailing
+#: model:res.groups,name:website_mass_mailing.group_website_popup_on_exit
+msgid "Use subscription pop up on the website"
+msgstr "Use subscription pop up on the website"
+
+#. module: website_mass_mailing
+#: model:ir.model.fields,field_description:website_mass_mailing.field_mass_mailing_config_settings_group_website_popup_on_exit
+msgid "Website Pop-up"
+msgstr "Trang web bật lên"
+
+#. module: website_mass_mailing
+#: model:ir.model.fields,field_description:website_mass_mailing.field_mail_mass_mailing_list_popup_content
+msgid "Website Popup Content"
+msgstr "Website Popup Content"
+
+#. module: website_mass_mailing
+#: model:ir.model.fields,field_description:website_mass_mailing.field_mail_mass_mailing_list_popup_redirect_url
+msgid "Website Popup Redirect URL"
+msgstr "Website Popup Redirect URL"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.unsubscribe
+msgid "You are not subscribed to any of our mailing list."
+msgstr "You are not subscribed to any of our mailing list."
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.js:154
+#: model:ir.ui.view,arch_db:website_mass_mailing.unsubscribed
+#, python-format
+msgid "Your changes have been saved."
+msgstr "Your changes have been saved."
+
+#. module: website_mass_mailing
+#. openerp-web
+#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.js:157
+#, python-format
+msgid "Your changes have not been saved, try again later."
+msgstr "Your changes have not been saved, try again later."
+
+#. module: website_mass_mailing
+#: model:ir.model,name:website_mass_mailing.model_mass_mailing_config_settings
+msgid "mass.mailing.config.settings"
+msgstr "mass.mailing.config.settings"
+
+#. module: website_mass_mailing
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form
+#: model:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
+msgid "your email..."
+msgstr "email của bạn..."
+

@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <record id="to_account_common_report_form" model="ir.ui.view">
+			<field name="name">TO Account Common Report Form</field>
+			<field name="model">to.balance.sheet</field>
+			<field name="inherit_id" ref="account.account_common_report_view"></field>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='target_move']" position="after">
+                    <field name="to_decision"/>
+                </xpath>
+				<!--<xpath expr="//field[@name='date_to']" position="after">-->
+					<!--<field name="chart_account_id"/>-->
+                <!--</xpath>-->
+
+				<xpath expr="//footer" position="replace">
+                    <footer>
+						<button name="print_excel" string="Print"
+								type="object" class="oe_highlight"/>
+						or
+						<button name="preview_excel" string="Preview"
+								type="object" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+            		</footer>
+                </xpath>
+				<xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+				<xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+				<xpath expr="//field[@name='journal_ids']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+			</field>
+		</record>
+        <!-- Balance Sheet -->
+
+		<record id="balance_sheet_report_action" model="ir.actions.act_window">
+			<field name="name">Bảng cân đối kế toán</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">to.balance.sheet</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="context">{'default_to_report_type': 'balance_sheet'}</field>
+			<field name="view_id" ref="to_account_common_report_form"/>
+			<field name="target">new</field>
+		</record>
+
+        <menuitem name="Bảng Cân đối kế toán" sequence="1"
+			action="balance_sheet_report_action" id="menu_to_balance_sheet"
+			parent="menu_financial_report" groups="account.group_account_user,account.group_account_manager" />
+
+        <report id="balance_sheet_report"
+                model="to.balance.sheet"
+                string="Bảng Cân đối kế toán"
+                report_type="xlsx"
+                name="btek_financial_report.bs_report"
+                file="btek_financial_report.BalanceSheetReport"
+                attachment_use="False"/>
+
+    </data>
+</odoo>

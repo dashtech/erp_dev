@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report id="bave_fleet_repair"
+                model="fleet.repair"
+                string="Mẫu in phiếu yêu cầu"
+                report_type="xlsx"
+                name="car_repair_industry.fleet_repair_xlsx"
+                file="car_repair_industry.fleet_repair_xlsx"
+                attachment_use="False"/>
+    </data>
+</odoo>

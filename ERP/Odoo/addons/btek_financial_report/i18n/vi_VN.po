@@ -1,0 +1,1309 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_financial_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180918\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-08 02:01+0000\n"
+"PO-Revision-Date: 2018-10-08 02:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_411a
+msgid " - Cổ phiếu phổ thông có quyền biểu quyết"
+msgstr " - Cổ phiếu phổ thông có quyền biểu quyết"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_411b
+msgid " - Cổ phiếu ưu đãi"
+msgstr " - Cổ phiếu ưu đãi"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_23
+msgid " - Trong đó chi phí lãi vay"
+msgstr " - Trong đó chi phí lãi vay"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_223
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_226
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_229
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_232
+msgid "- Giá trị hao mòn lũy kế (*)"
+msgstr "- Giá trị hao mòn lũy kế (*)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_421b
+msgid "- LNST chưa phân phối kỳ này"
+msgstr "- LNST chưa phân phối kỳ này"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_421a
+msgid "- LNST chưa phân phối lũy kế đến cuối kỳ trước"
+msgstr "- LNST chưa phân phối lũy kế đến cuối kỳ trước"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_222
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_225
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_228
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_231
+msgid "- Nguyên giá"
+msgstr "- Nguyên giá"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_241
+msgid "1. Chi phí sản xuất, kinh doanh dở dang dài hạn"
+msgstr "1. Chi phí sản xuất, kinh doanh dở dang dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_261
+msgid "1. Chi phí trả trước dài hạn"
+msgstr "1. Chi phí trả trước dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_151
+msgid "1. Chi phí trả trước ngắn hạn"
+msgstr "1. Chi phí trả trước ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_121
+msgid "1. Chứng khoán kinh doanh"
+msgstr "1. Chứng khoán kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_01
+msgid "1. Doanh thu bán hàng và cung cấp dịch vụ"
+msgstr "1. Doanh thu bán hàng và cung cấp dịch vụ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_141
+msgid "1. Hàng tồn kho"
+msgstr "1. Hàng tồn kho"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_431
+msgid "1. Nguồn kinh phí"
+msgstr "1. Nguồn kinh phí"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_211
+msgid "1. Phải thu dài hạn của khách hàng"
+msgstr "1. Phải thu dài hạn của khách hàng"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_131
+msgid "1. Phải thu ngắn hạn của khách hàng"
+msgstr "1. Phải thu ngắn hạn của khách hàng"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_331
+msgid "1. Phải trả người bán dài hạn"
+msgstr "1. Phải trả người bán dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_311
+msgid "1. Phải trả người bán ngắn hạn"
+msgstr "1. Phải trả người bán ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_111
+msgid "1. Tiền"
+msgstr "1. Tiền"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_21
+msgid "1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác"
+msgstr "1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_01
+msgid "1. Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác"
+msgstr "1. Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_31
+msgid "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+msgstr "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_221
+msgid "1. Tài sản cố định hữu hình (221 = 222 + 223)"
+msgstr "1. Tài sản cố định hữu hình (221 = 222 + 223)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_411
+msgid "1. Vốn góp của chủ sở hữu"
+msgstr "1. Vốn góp của chủ sở hữu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_251
+msgid "1. Đầu tư vào công ty con"
+msgstr "1. Đầu tư vào công ty con"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_340
+msgid "10. Cổ phiếu ưu đãi"
+msgstr "10. Cổ phiếu ưu đãi"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_30
+msgid "10. Lợi nhuận thuần từ hoạt động kinh doanh (30 = 20 + (21 - 22) - (24 + 25))"
+msgstr "10. Lợi nhuận thuần từ hoạt động kinh doanh (30 = 20 + (21 - 22) - (24 + 25))"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_420
+msgid "10. Quỹ khác thuộc vốn chủ sở hữu"
+msgstr "10. Quỹ khác thuộc vốn chủ sở hữu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_320
+msgid "10. Vay và nợ thuê tài chính ngắn hạn"
+msgstr "10. Vay và nợ thuê tài chính ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_321
+msgid "11. Dự phòng phải trả ngắn hạn khác"
+msgstr "11. Dự phòng phải trả ngắn hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_421
+msgid "11. Lợi nhuận sau thuế chưa phân phối"
+msgstr "11. Lợi nhuận sau thuế chưa phân phối"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_31
+msgid "11. Thu nhập khác"
+msgstr "11. Thu nhập khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_341
+msgid "11. Thuế thu nhập hoãn lại phải trả"
+msgstr "11. Thuế thu nhập hoãn lại phải trả"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_342
+msgid "12. Dự phòng phải trả dài hạn"
+msgstr "12. Dự phòng phải trả dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_422
+msgid "12. Nguồn vốn đầu tư XDCB"
+msgstr "12. Nguồn vốn đầu tư XDCB"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_322
+msgid "12. Quỹ khen thưởng, phúc lợi"
+msgstr "12. Quỹ khen thưởng, phúc lợi"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_32
+msgid "13. Chi phí khác"
+msgstr "13. Chi phí khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_40
+msgid "13. Lợi nhuận khác (40 = 31 - 32)"
+msgstr "13. Lợi nhuận khác (40 = 31 - 32)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_323
+msgid "13. Quỹ bình ổn giá"
+msgstr "13. Quỹ bình ổn giá"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_343
+msgid "13. Quỹ phát triển khoa học và công nghệ"
+msgstr "13. Quỹ phát triển khoa học và công nghệ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_324
+msgid "14. Giao dịch mua bán lại trái phiếu chính phủ"
+msgstr "14. Giao dịch mua bán lại trái phiếu chính phủ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_50
+msgid "14. Tổng lợi nhuận kế toán trước thuế (50 = 30 + 40)"
+msgstr "14. Tổng lợi nhuận kế toán trước thuế (50 = 30 + 40)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_51
+msgid "16. Chi phí thuế thu nhập doanh nghiệp hiện hành"
+msgstr "16. Chi phí thuế thu nhập doanh nghiệp hiện hành"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_52
+msgid "17. Chi phí thuế thu nhập doanh nghiệp hoãn lại"
+msgstr "17. Chi phí thuế thu nhập doanh nghiệp hoãn lại"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_60
+msgid "17. Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50 - 51 - 52)"
+msgstr "17. Lợi nhuận sau thuế thu nhập doanh nghiệp (60 = 50 - 51 - 52)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_70
+msgid "19. Lãi suy giảm trên cổ phiếu"
+msgstr "19. Lãi suy giảm trên cổ phiếu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_242
+msgid "2. Chi phí xây dựng cơ bản dở dang"
+msgstr "2. Chi phí xây dựng cơ bản dở dang"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_02
+msgid "2. Các khoản giảm trừ doanh thu"
+msgstr "2. Các khoản giảm trừ doanh thu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_112
+msgid "2. Các khoản tương đương tiền"
+msgstr "2. Các khoản tương đương tiền"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_122
+msgid "2. Dự phòng giảm giá chứng khoán kinh doanh (*)"
+msgstr "2. Dự phòng giảm giá chứng khoán kinh doanh (*)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_149
+msgid "2. Dự phòng giảm giá hàng tồn kho"
+msgstr "2. Dự phòng giảm giá hàng tồn kho"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_432
+msgid "2. Nguồn kinh phí đã hình thành TSCĐ"
+msgstr "2. Nguồn kinh phí đã hình thành TSCĐ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_332
+msgid "2. Người mua trả tiền trước dài hạn"
+msgstr "2. Người mua trả tiền trước dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_312
+msgid "2. Người mua trả tiền trước ngắn hạn"
+msgstr "2. Người mua trả tiền trước ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_152
+msgid "2. Thuế GTGT được khấu trừ"
+msgstr "2. Thuế GTGT được khấu trừ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_412
+msgid "2. Thặng dư vốn cổ phần"
+msgstr "2. Thặng dư vốn cổ phần"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_02
+msgid "2. Tiền chi trả cho người cung cấp hàng hóa, dịch vụ"
+msgstr "2. Tiền chi trả cho người cung cấp hàng hóa, dịch vụ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_32
+msgid "2. Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
+msgstr "2. Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_22
+msgid "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác"
+msgstr "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_212
+msgid "2. Trả trước cho người bán dài hạn"
+msgstr "2. Trả trước cho người bán dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_132
+msgid "2. Trả trước cho người bán ngắn hạn"
+msgstr "2. Trả trước cho người bán ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_224
+msgid "2. Tài sản cố định thuê tài chính (224 = 225 + 226)"
+msgstr "2. Tài sản cố định thuê tài chính (224 = 225 + 226)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_262
+msgid "2. Tài sản thuế thu nhập hoãn lại"
+msgstr "2. Tài sản thuế thu nhập hoãn lại"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_252
+msgid "2. Đầu tư vào công ty liên kết, liên doanh"
+msgstr "2. Đầu tư vào công ty liên kết, liên doanh"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_decision:0
+#: selection:to.account.common.report,to_decision:0
+#: selection:to.balance.sheet,to_decision:0
+#: selection:to.cash.flow,to_decision:0
+#: selection:to.income.statement,to_decision:0
+msgid "200/2014/TT-BTC"
+msgstr "200/2014/TT-BTC"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_333
+msgid "3. Chi phí phải trả dài hạn"
+msgstr "3. Chi phí phải trả dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_10
+msgid "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02)"
+msgstr "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ (10 = 01 - 02)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_133
+msgid "3. Phải thu nội bộ ngắn hạn"
+msgstr "3. Phải thu nội bộ ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_413
+msgid "3. Quyền chọn chuyển đổi trái phiếu"
+msgstr "3. Quyền chọn chuyển đổi trái phiếu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_263
+msgid "3. Thiết bị, vật tư, phụ tùng thay thế dài hạn"
+msgstr "3. Thiết bị, vật tư, phụ tùng thay thế dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_313
+msgid "3. Thuế và các khoản phải nộp nhà nước"
+msgstr "3. Thuế và các khoản phải nộp nhà nước"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_153
+msgid "3. Thuế và các khoản phải thu Nhà nước"
+msgstr "3. Thuế và các khoản phải thu Nhà nước"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_23
+msgid "3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác"
+msgstr "3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_03
+msgid "3. Tiền chi trả cho người lao động"
+msgstr "3. Tiền chi trả cho người lao động"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_33
+msgid "3. Tiền thu từ đi vay"
+msgstr "3. Tiền thu từ đi vay"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_227
+msgid "3. Tài sản cố định vô hình (227 = 228 + 229)"
+msgstr "3. Tài sản cố định vô hình (227 = 228 + 229)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_213
+msgid "3. Vốn kinh doanh ở đơn vị trực thuộc"
+msgstr "3. Vốn kinh doanh ở đơn vị trực thuộc"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_253
+msgid "3. Đầu tư góp vốn vào đơn vị khác"
+msgstr "3. Đầu tư góp vốn vào đơn vị khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_123
+msgid "3. Đầu tư nắm giữ đến ngày đáo hạn"
+msgstr "3. Đầu tư nắm giữ đến ngày đáo hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_254
+msgid "4. Dự phòng đầu tư tài chính dài hạn (*)"
+msgstr "4. Dự phòng đầu tư tài chính dài hạn (*)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_154
+msgid "4. Giao dịch mua bán lại trái phiếu chính phủ"
+msgstr "4. Giao dịch mua bán lại trái phiếu chính phủ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_11
+msgid "4. Giá vốn hàng bán"
+msgstr "4. Giá vốn hàng bán"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_214
+msgid "4. Phải thu nội bộ dài hạn"
+msgstr "4. Phải thu nội bộ dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_134
+msgid "4. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+msgstr "4. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_314
+msgid "4. Phải trả người lao động"
+msgstr "4. Phải trả người lao động"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_334
+msgid "4. Phải trả nội bộ về vốn kinh doanh"
+msgstr "4. Phải trả nội bộ về vốn kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_34
+msgid "4. Tiền chi trả nợ gốc vay"
+msgstr "4. Tiền chi trả nợ gốc vay"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_04
+msgid "4. Tiền lãi vay đã trả"
+msgstr "4. Tiền lãi vay đã trả"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_24
+msgid "4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác"
+msgstr "4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_268
+msgid "4. Tài sản dài hạn khác"
+msgstr "4. Tài sản dài hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_414
+msgid "4. Vốn khác của chủ sở hữu"
+msgstr "4. Vốn khác của chủ sở hữu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_315
+msgid "5. Chi phí phải trả ngắn hạn"
+msgstr "5. Chi phí phải trả ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_415
+msgid "5. Cổ phiếu quỹ"
+msgstr "5. Cổ phiếu quỹ"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_20
+msgid "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20 = 10 - 11)"
+msgstr "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (20 = 10 - 11)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_215
+msgid "5. Phải thu về cho vay dài hạn"
+msgstr "5. Phải thu về cho vay dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_135
+msgid "5. Phải thu về cho vay ngắn hạn"
+msgstr "5. Phải thu về cho vay ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_335
+msgid "5. Phải trả nội bộ dài hạn"
+msgstr "5. Phải trả nội bộ dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_05
+msgid "5. Thuế thu nhập doanh nghiệp đã nộp"
+msgstr "5. Thuế thu nhập doanh nghiệp đã nộp"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_35
+msgid "5. Tiền chi trả nợ thuê tài chính"
+msgstr "5. Tiền chi trả nợ thuê tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_25
+msgid "5. Tiền chi đầu tư góp vốn vào đơn vị khác"
+msgstr "5. Tiền chi đầu tư góp vốn vào đơn vị khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_155
+msgid "5. Tài sản ngắn hạn khác"
+msgstr "5. Tài sản ngắn hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_255
+msgid "5. Đầu tư nắm giữ đến ngày đáo hạn"
+msgstr "5. Đầu tư nắm giữ đến ngày đáo hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_416
+msgid "6. Chênh lệch đánh giá lại"
+msgstr "6. Chênh lệch đánh giá lại"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_36
+msgid "6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
+msgstr "6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_336
+msgid "6. Doan thu chưa thực hiện dài hạn"
+msgstr "6. Doan thu chưa thực hiện dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_21
+msgid "6. Doanh thu hoạt động tài chính"
+msgstr "6. Doanh thu hoạt động tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_216
+msgid "6. Phải thu dài hạn khác"
+msgstr "6. Phải thu dài hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_136
+msgid "6. Phải thu ngắn hạn khác"
+msgstr "6. Phải thu ngắn hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_316
+msgid "6. Phải trả nội bộ ngắn hạn"
+msgstr "6. Phải trả nội bộ ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_26
+msgid "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác"
+msgstr "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_06
+msgid "6. Tiền thu khác từ hoạt động kinh doanh"
+msgstr "6. Tiền thu khác từ hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_22
+msgid "7. Chi phí tài chính"
+msgstr "7. Chi phí tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_417
+msgid "7. Chênh lệch tỷ giá hối đoái"
+msgstr "7. Chênh lệch tỷ giá hối đoái"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_219
+msgid "7. Dự phòng phải thu dài hạn khó đòi (*)"
+msgstr "7. Dự phòng phải thu dài hạn khó đòi (*)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_137
+msgid "7. Dự phòng phải thu ngắn hạn khó đòi"
+msgstr "7. Dự phòng phải thu ngắn hạn khó đòi"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_337
+msgid "7. Phải trả dài hạn khác"
+msgstr "7. Phải trả dài hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_317
+msgid "7. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+msgstr "7. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_07
+msgid "7. Tiền chi khác cho hoạt động kinh doanh"
+msgstr "7. Tiền chi khác cho hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_27
+msgid "7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia"
+msgstr "7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_24
+msgid "8. Chi phí bán hàng"
+msgstr "8. Chi phí bán hàng"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_318
+msgid "8. Doanh thu chưa thực hiện ngắn hạn"
+msgstr "8. Doanh thu chưa thực hiện ngắn hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_418
+msgid "8. Quỹ đầu tư phát triển"
+msgstr "8. Quỹ đầu tư phát triển"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_139
+msgid "8. Tài sản thiếu chờ xử lý"
+msgstr "8. Tài sản thiếu chờ xử lý"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_338
+msgid "8. Vay và nợ thuê tài chính dài hạn"
+msgstr "8. Vay và nợ thuê tài chính dài hạn"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_is_200_25
+msgid "9. Chi phí quản lý doanh nghiệp"
+msgstr "9. Chi phí quản lý doanh nghiệp"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_319
+msgid "9. Phải trả ngắn hạn khác"
+msgstr "9. Phải trả ngắn hạn khác"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_419
+msgid "9. Quỹ dự hỗ trợ sắp xếp doanh nghiệp"
+msgstr "9. Quỹ dự hỗ trợ sắp xếp doanh nghiệp"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_339
+msgid "9. Trái phiếu chuyển đổi"
+msgstr "9. Trái phiếu chuyển đổi"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_100
+msgid "A - TÀI SẢN NGẮN HẠN (100 = 110 + 120 + 130 + 140 + 150)"
+msgstr "A - TÀI SẢN NGẮN HẠN (100 = 110 + 120 + 130 + 140 + 150)"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_account_account
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_account_id
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_report_type:0
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Account Balance Sheet"
+msgstr "Account Balance Sheet"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_account_financial_report
+msgid "Account Report"
+msgstr "Báo cáo Tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_200
+msgid "B - TÀI SẢN DÀI HẠN (200 = 210 + 220 + 240 + 250 + 260)"
+msgstr "B - TÀI SẢN DÀI HẠN (200 = 210 + 220 + 240 + 250 + 260)"
+
+#. module: btek_financial_report
+#: model:ir.actions.report.xml,name:btek_financial_report.income_statement_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_income_statement_report
+msgid "BC Kết quả HĐSXKD"
+msgstr "BC Kết quả HĐSXKD"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.cash_flow_report_action
+#: model:ir.actions.report.xml,name:btek_financial_report.cash_flow_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_to_cash_flow
+msgid "BC Lưu chuyển tiền tệ"
+msgstr "BC Lưu chuyển tiền tệ"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_balance_type:0
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_financial_statement:0
+#: selection:account.financial.report,to_report_type:0
+#: model:ir.actions.act_window,name:btek_financial_report.action_balance_sheet_tree_view
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Balance Sheet"
+msgstr "Bảng cân đối kế toán"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_to_balance_sheet
+msgid "Balance Sheet Report"
+msgstr "Balance Sheet Report"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_balance_type
+msgid "Balance Type"
+msgstr "Kiểu số dư"
+
+#. module: btek_financial_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_to_income_statement_config
+msgid "Báo cáo kết quả hoạt động kinh doanh"
+msgstr "Báo cáo kết quả hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_to_cash_flow_config
+msgid "Báo cáo lưu chuyển tiền tệ"
+msgstr "Báo cáo lưu chuyển tiền tệ"
+
+#. module: btek_financial_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_financial_report
+msgid "Báo cáo tài chính"
+msgstr "Báo cáo tài chính"
+
+#. module: btek_financial_report
+#: model:ir.actions.report.xml,name:btek_financial_report.balance_sheet_report
+#: model:ir.ui.menu,name:btek_financial_report.menu_to_balance_sheet
+msgid "Bảng Cân đối kế toán"
+msgstr "Bảng Cân đối kế toán"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.balance_sheet_report_action
+#: model:ir.ui.menu,name:btek_financial_report.menu_to_balance_sheet_config
+msgid "Bảng cân đối kế toán"
+msgstr "Bảng cân đối kế toán"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_300
+msgid "C - NỢ PHẢI TRẢ (300 = 310 + 330)"
+msgstr "C - NỢ PHẢI TRẢ (300 = 310 + 330)"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.setup_btek_financial_statement_account_code_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_account_common_report_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_cash_flow_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_income_statement_form_excel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_financial_statement:0
+#: model:ir.actions.act_window,name:btek_financial_report.action_cash_flow_tree_view
+msgid "Cash Flow"
+msgstr "Cash Flow"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_balance_type:0
+msgid "Cash Flow Opening"
+msgstr "Số dư đầu kì"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_to_cash_flow
+msgid "Cash Flow Report"
+msgstr "Cash Flow Report"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_report_type:0
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Cash Flow Statement"
+msgstr "Cash Flow Statement"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.view_company_form_change
+msgid "Config accounting"
+msgstr "Cài đặt kế toán"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_counterpart_accounts
+msgid "Counterpart Accounts"
+msgstr "Tài khoản đối ứng"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_create_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_create_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_balance_type:0
+msgid "Credit"
+msgstr "Có"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_company_id
+msgid "Công ty"
+msgstr "Công ty"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_400
+msgid "D - VỐN CHỦ SỞ HỮU (400 = 410 + 430)"
+msgstr "D - VỐN CHỦ SỞ HỮU (400 = 410 + 430)"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_balance_type:0
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_decision
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_to_decision
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_to_decision
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_to_decision
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_to_decision
+msgid "Decision / Circular"
+msgstr "Quyết định / Thông tư"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_display_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_date_to
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_date_to
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_excluded_accounts
+msgid "Excluded Accounts"
+msgstr "Tài khoản loại trừ"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.export_account_account_form
+msgid "Export"
+msgstr "Xuất Excel"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.export_account_account
+msgid "Export Account"
+msgstr "Xuất tài khoản kế toán"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.export_account_account_view_act
+msgid "Export Account Account"
+msgstr "Export Account Account"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_data
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_data
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_data
+msgid "File"
+msgstr "Tập tin"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_name
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_name
+msgid "Filename"
+msgstr "Filename"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_financial_statement
+#: model:ir.ui.view,arch_db:btek_financial_report.btek_financial_statement_account_code_form
+#: model:ir.ui.view,arch_db:btek_financial_report.btek_financial_statement_account_code_tree
+msgid "Financial Statement"
+msgstr "Financial Statement"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_to_financial_statement_account_code
+msgid "Financial Statement Account Code"
+msgstr "Financial Statement Account Code"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.btek_fs_config_form_view
+#: model:ir.ui.view,arch_db:btek_financial_report.btek_fs_config_tree_view
+msgid "Financial Statement Configuration"
+msgstr "Financial Statement Configuration"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_from_company_id
+msgid "From company"
+msgstr "Từ công ty"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_210
+msgid "I. Các khoản phải thu dài hạn (210 = 211 + 212 + 213 + 214 + 215 + 216 + 219)"
+msgstr "I. Các khoản phải thu dài hạn (210 = 211 + 212 + 213 + 214 + 215 + 216 + 219)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_I
+msgid "I. Lưu chuyển tiền từ hoạt động kinh doanh"
+msgstr "I. Lưu chuyển tiền từ hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_310
+msgid "I. Nợ ngắn hạn (310 = 311 + 312 + 313 + 314 + 315 + 316 + 317 + 318 + 319 + 320 + 321 + 322 + 323 + 324)"
+msgstr "I. Nợ ngắn hạn (310 = 311 + 312 + 313 + 314 + 315 + 316 + 317 + 318 + 319 + 320 + 321 + 322 + 323 + 324)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_110
+msgid "I. Tiền và các khoản tương đương tiền (110 = 111 + 121)"
+msgstr "I. Tiền và các khoản tương đương tiền (110 = 111 + 121)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_410
+msgid "I. Vốn chủ sở hữu (410 = 411 + 412 + 413 + 414 + 415 + 416 + 417 + 418 + 419 + 420 + 421 + 422)"
+msgstr "I. Vốn chủ sở hữu (410 = 411 + 412 + 413 + 414 + 415 + 416 + 417 + 418 + 419 + 420 + 421 + 422)"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_II
+msgid "II. Lưu chuyển tiền từ hoạt động đầu tư"
+msgstr "II. Lưu chuyển tiền từ hoạt động đầu tư"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_430
+msgid "II. Nguồn kinh phí và quỹ khác (430 = 431 + 432)"
+msgstr "II. Nguồn kinh phí và quỹ khác (430 = 431 + 432)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_330
+msgid "II. Nợ dài hạn (330 = 331 + 332 + 333 + 334 + 335 + 336 + 337 + 338 + 339 + 340 + 341 + 342 + 343)"
+msgstr "II. Nợ dài hạn (330 = 331 + 332 + 333 + 334 + 335 + 336 + 337 + 338 + 339 + 340 + 341 + 342 + 343)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_220
+msgid "II. Tài sản cố định (220 = 221 + 224 + 227 + 230)"
+msgstr "II. Tài sản cố định (220 = 221 + 224 + 227 + 230)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_120
+msgid "II. Đầu tư tài chính ngắn hạn (120 = 121 + 122 + 123)"
+msgstr "II. Đầu tư tài chính ngắn hạn (120 = 121 + 122 + 123)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_230
+msgid "III. Bất động sản đầu tư (230 = 231 + 232)"
+msgstr "III. Bất động sản đầu tư (230 = 231 + 232)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_130
+msgid "III. Các khoản phải thu ngắn hạn (130 = 131 + 132 + 133 + 134 + 135 + 136 + 137 + 139)"
+msgstr "III. Các khoản phải thu ngắn hạn (130 = 131 + 132 + 133 + 134 + 135 + 136 + 137 + 139)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_III
+msgid "III. Lưu chuyển tiền từ hoạt động tài chính"
+msgstr "III. Lưu chuyển tiền từ hoạt động tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_140
+msgid "IV. Hàng tồn kho (140 = 141 + 149)"
+msgstr "IV. Hàng tồn kho (140 = 141 + 149)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_240
+msgid "IV. Tài sản dở dang dài hạn (240 = 241 + 242)"
+msgstr "IV. Tài sản dở dang dài hạn (240 = 241 + 242)"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_included_accounts
+msgid "Included Accounts"
+msgstr "Tài khoản bao gồm"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_financial_statement:0
+#: selection:account.financial.report,to_report_type:0
+#: model:ir.actions.act_window,name:btek_financial_report.action_income_statement_tree_view
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Income Statement"
+msgstr "Báo cáo kết quả hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_to_income_statement
+msgid "Income Statement Report"
+msgstr "Báo cáo kết quả hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.income_statement_report_action
+msgid "KẾT QUẢ HĐSX KINH DOANH"
+msgstr "KẾT QUẢ HĐSX KINH DOANH"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code___last_update
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_write_uid
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_write_date
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_50
+msgid "Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40)"
+msgstr "Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_20
+msgid "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
+msgstr "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_40
+msgid "Lưu chuyển tiền thuần từ hoạt động tài chính"
+msgstr "Lưu chuyển tiền thuần từ hoạt động tài chính"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_30
+msgid "Lưu chuyển tiền thuần từ hoạt động đầu tư"
+msgstr "Lưu chuyển tiền thuần từ hoạt động đầu tư"
+
+#. module: btek_financial_report
+#: code:addons/btek_financial_report/models/income_statement_report.py:62
+#, python-format
+msgid "Lỗi: Chỉ tiêu \"{}\" cấu hình thiếu!"
+msgstr "Lỗi: Chỉ tiêu \"{}\" cấu hình thiếu!"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_btek_export_account_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_notes
+msgid "Notes"
+msgstr "Ghi chú"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_report_type:0
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Notes of The Financial Statement"
+msgstr "Notes of The Financial Statement"
+
+#. module: btek_financial_report
+#: code:addons/btek_financial_report/models/financial_config.py:174
+#, python-format
+msgid "Payslip"
+msgstr "Payslip"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.to_account_common_report_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_cash_flow_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_income_statement_form_excel
+msgid "Preview"
+msgstr "Xem trước"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.to_account_common_report_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_cash_flow_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_income_statement_form_excel
+msgid "Print"
+msgstr "In"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_account_financial_report_to_report_type
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_account_common_report_to_report_type
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_to_report_type
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_to_report_type
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_to_report_type
+msgid "Report Type"
+msgstr "Report Type"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_balance_sheet_res_company_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_res_company_id
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_res_company_id
+msgid "Res company id"
+msgstr "Res company id"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.to_financial_statement_account_code_filter
+msgid "Search Financial Statement"
+msgstr "Search Financial Statement"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.setup_btek_financial_statement_account_code_form
+msgid "Setup"
+msgstr "Cài đặ"
+
+#. module: btek_financial_report
+#: model:ir.actions.act_window,name:btek_financial_report.action_setup_btek_financial_statement_account_code
+#: model:ir.ui.view,arch_db:btek_financial_report.view_company_form_change
+msgid "Setup statement account"
+msgstr "Cài đặt sao chép tài khoản"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_res_company_short_name
+msgid "Short name"
+msgstr "Tên viết tắt"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_cash_flow_date_from
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_income_statement_date_from
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_report_type:0
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Tax Input"
+msgstr "Tax Input"
+
+#. module: btek_financial_report
+#: selection:account.financial.report,to_report_type:0
+#: selection:to.account.common.report,to_report_type:0
+#: selection:to.balance.sheet,to_report_type:0
+#: selection:to.cash.flow,to_report_type:0
+#: selection:to.income.statement,to_report_type:0
+msgid "Tax Output"
+msgstr "Tax Output"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_70
+msgid "Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61)"
+msgstr "Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_60
+msgid "Tiền và tương đương tiền đầu kỳ"
+msgstr "Tiền và tương đương tiền đầu kỳ"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_setup_btek_financial_statement_account_code_company_id
+msgid "To company"
+msgstr "To company"
+
+#. module: btek_financial_report
+#: sql_constraint:setup.btek.financial.statement.account.code:0
+msgid "To company must be different from company!"
+msgstr "To company must be different from company!"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_440
+msgid "TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)"
+msgstr "TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_270
+msgid "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)"
+msgstr "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_250
+msgid "V. Các khoản đầu tư tài chính dài hạn (250 = 251 + 252 + 253 + 254 + 255)"
+msgstr "V. Các khoản đầu tư tài chính dài hạn (250 = 251 + 252 + 253 + 254 + 255)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_150
+msgid "V. Tài sản ngắn hạn khác (150 = 151 + 152 + 153 + 154 + 155)"
+msgstr "V. Tài sản ngắn hạn khác (150 = 151 + 152 + 153 + 154 + 155)"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_bs_200_260
+msgid "VI. Tài sản dài hạn khác (260 = 261 + 262 + 263 + 268)"
+msgstr "VI. Tài sản dài hạn khác (260 = 261 + 262 + 263 + 268)"
+
+#. module: btek_financial_report
+#: model:ir.actions.report.xml,name:btek_financial_report.excel_account_xlsx
+msgid "account_account"
+msgstr "account_account"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_btek_export_account
+msgid "btek.export.account"
+msgstr "btek.export.account"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_btek_export_account_account
+msgid "btek.export.account.account"
+msgstr "btek.export.account.account"
+
+#. module: btek_financial_report
+#: model:ir.model.fields,field_description:btek_financial_report.field_to_financial_statement_account_code_name
+msgid "code"
+msgstr "code"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.export_account_account_form
+msgid "export_account_form"
+msgstr "export_account_form"
+
+#. module: btek_financial_report
+#: model:ir.ui.view,arch_db:btek_financial_report.to_account_common_report_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_cash_flow_form
+#: model:ir.ui.view,arch_db:btek_financial_report.to_income_statement_form_excel
+msgid "or"
+msgstr "hoặc"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_setup_btek_financial_statement_account_code
+msgid "setup.btek.financial.statement.account.code"
+msgstr "setup.btek.financial.statement.account.code"
+
+#. module: btek_financial_report
+#: model:ir.model,name:btek_financial_report.model_to_account_common_report
+msgid "to.account.common.report"
+msgstr "to.account.common.report"
+
+#. module: btek_financial_report
+#: model:account.financial.report,name:btek_financial_report.to_fs_config_cf_200_61
+msgid "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+msgstr "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="btek_contact_tree" model="ir.ui.view">
+        <field name="name">btek.contact.tree</field>
+        <field name="model">mail.mass_mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_contact_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="mobile"/>
+                <field name="zalo_id"/>
+                <field name="viber_id"/>
+                <field name="facebook_id"/>
+                <field name="is_invite_zalo"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

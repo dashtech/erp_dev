@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_asset_category_form_view" model="ir.ui.view">
+        <field name="name">import.asset.category.form.view</field>
+        <field name="model">import.account.asset.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible ="1" attrs="{'value':'Customer'}"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname" invisible="1"/>
+                    <field name="datas" filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_asset_category" type="object"
+                            string="Import asset category"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_asset_category" model="ir.actions.act_window">
+        <field name="name">Import asset category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.account.asset.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="import_asset_category_menu"-->
+              <!--name="Import asset category"-->
+              <!--action="action_import_asset_category"-->
+              <!--parent="btek_account.accounting_taisan" sequence="10"/>-->
+</odoo>

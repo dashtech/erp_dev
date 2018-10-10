@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend_change" name="width_column_tree" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+        <link href="bave_import/static/src/css/purchase.css" rel="stylesheet" type="text/css"/>
+    </xpath>
+</template>
+</odoo>

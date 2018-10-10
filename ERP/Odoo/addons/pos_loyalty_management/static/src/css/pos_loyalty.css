@@ -1,0 +1,54 @@
+.customer-redeem-header {
+    background-color: #C3D6E6;
+    height: 13%;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+#pos-customer-redemption-summary {
+    margin-left: -35%;
+}
+
+.pos .modal-dialog .popup-pos-redeem-point {
+    height: 180px;
+    width: 350px;
+}
+
+.test_button {
+    float: left;
+    font-size: 20px !important;
+    height: 47px;
+}
+
+.test_button:active {
+    background: #7F82AC;
+    border: solid 1px #7F82AC;
+    color: white;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.pos .order .summary .loyalty-points {
+    position: absolute;
+    left: 20px;
+    padding: 10px;
+    max-width: 216px;
+    text-align: left;
+    color: #5B7641;
+    background: rgba(110, 200, 155, 0.17);
+    border-radius: 3px;
+}
+
+.rightpane-header1 {
+    padding: 0;
+    border-bottom: 1px solid #c7c7c7;
+    background: #d3d3d3;
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_sale_to_excel_xlsx"
+        model="report.sale.to.excel"
+        string="Sale to excel"
+        report_type="xlsx"
+        name="btek_summary_dashboard.report.sale.to.excel.xlsx"
+        file="btek_summary_dashboard.report.sale.to.excel.xlsx"
+        attachment_use="False"/>
+
+    <record id="report_sale_to_excel_form" model="ir.ui.view">
+        <field name="name">report.sale.to.excel.form</field>
+        <field name="model">report.sale.to.excel</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    <group>
+                        <field name="group_by"/>
+                        <field name="type" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="export_report" type="object"
+                            string="Export report" class="oe_highlight"/>
+                    <button name="preview_report" type="object"
+                            string="Preview report"
+                            class="oe_highlight"/>
+                    <button name="view_report" type="object"
+                            string="View report"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_bave_sale_in_report_to_excel"
+            model="ir.actions.act_window">
+        <field name="name">Sales report in</field>
+        <field name="res_model">report.sale.to.excel</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="action_bave_sale_in_report_to_excel"
+              id="menu_action_bave_sale_in_report_to_excel"
+              parent="sale_in_report" sequence="120"/>
+
+    <record id="action_bave_sale_out_report_to_excel"
+            model="ir.actions.act_window">
+        <field name="name">Sales report out</field>
+        <field name="res_model">report.sale.to.excel</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_type':'out'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem action="action_bave_sale_out_report_to_excel"
+              id="menu_action_bave_sale_out_report_to_excel"
+              parent="sale_out_report" sequence="120"/>
+</odoo>

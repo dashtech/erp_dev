@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="fleet_repair_label_template_view">
+            <t t-call="report.external_layout">
+            <div class="page" style="color: black;font-size: 18px;font-family: Times New Roman;">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="row">
+                        <div class="col-xs-12" style="color: black;font-size: 18px;font-family: Times New Roman;">
+                            <h3 class="text-center">
+                                <b>
+                                    <span style="font-size: 30px !important;">PHIẾU YÊU CẦU</span>
+                                </b>
+                            </h3>
+                            <div style="padding-bottom: 5px;">
+                                <div class="col-xs-4">
+                                    <strong>Mã phiếu: </strong>
+                                    <strong t-field="doc.sequence"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <strong>Cố vấn dịch vụ: </strong>
+                                    <strong t-field="doc.user_id.name"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <strong>Ngày: </strong>
+                                    <strong t-field="doc.create_date"/>
+                                </div>
+                            </div>
+                            <div class="col-xs-7" style="padding-top: 5px; border: 1.5px solid black !important; border-radius: 5px; border-right: 0 !important; color: black;font-family: inherit; font-size: 18px!important;">
+                                <div>
+                                    <span>Mã KH:</span>
+                                    <span><t t-esc="doc.client_id.code"/></span>
+                                </div>
+                                <div>
+                                    <span>Tên KH:</span>
+                                    <span><t t-esc="doc.client_id.name"/></span>
+                                </div>
+                                <div>
+                                    <span>Địa chỉ:</span>
+                                    <span>
+                                        <span t-field="doc.client_id.street"/>
+                                        <span t-field="doc.client_id.state_id.name"/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>Điện Thoại:</span>
+                                    <span><t t-esc="doc.client_id.phone"/> - <t t-esc="doc.client_id.mobile"/></span>
+                                </div>
+                                <div>
+                                    <span>Lái xe:</span>
+                                    <span><t t-esc="doc.fleet_repair_line[0].driver_id.name"/></span>
+                                    <span style="padding-left: 40px">Điện thoại:</span>
+                                    <span><t t-esc="doc.fleet_repair_line[0].driver_id.phone"/> - <t t-esc="doc.fleet_repair_line[0].driver_id.mobile"/></span>
+                                </div>
+                                <br/>
+                            </div>
+                            <div class="col-xs-5" style="border: 1.5px solid black !important; border-radius: 5px; color: black; font-family: inherit; font-size: 18px!important;">
+                                <div>
+                                    <span>Biển số:</span>
+                                    <span><t t-esc="doc.license_plate"/></span>
+                                </div>
+                                <div>
+                                    <span>Mã kiểu xe:</span>
+                                    <span><t t-esc="doc.car_name"/></span>
+                                </div>
+                                <div>
+                                    <span>Tên kiểu xe:</span>
+                                    <span><t t-esc="doc.car_name"/></span>
+                                </div>
+                                <div>
+                                    <span>Số khung:</span>
+                                    <span><t t-esc="doc.fleet_repair_line[0].chassis_number"/></span>
+                                </div>
+                                <div>
+                                    <span>Số máy:</span>
+                                    <span><t t-esc="doc.fleet_repair_line[0].vin_sn"/></span>
+                                    <span style="padding-left: 60px">Số km:</span>
+                                    <span><t t-esc="'......'"/></span>
+                                </div>
+                                <div style="padding-bottom: 5px">
+                                    <span>Loại SC:</span>
+                                    <span><t t-esc="'......'"/></span>
+                                    <span style="padding-left: 40px">Số km cũ:</span>
+                                    <span><t t-esc="doc.fleet_repair_line[0].odometer"/></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 18px!important;">
+                            <div class="text-center" style="padding-top: 5px;">
+                                <span>Thời gian vào xưởng:</span> <span t-field="doc.create_date"/>
+                                <span> Ngày giao xe: </span><t t-esc="datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')"/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="col-xs-7" style="border: 1px solid black !important; border-radius: 5px; color: black;font-family: inherit; font-size: 18px!important;">
+                                <br/>
+                                <strong>Yêu cầu khách hàng:</strong><br/>
+                                - <span t-field="doc.description"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                            <div class="col-xs-5" style="border: 1px solid black !important; border-radius: 5px;font-family: inherit; font-size: 18px!important;">
+                                <br/>
+                                <strong>Ghi chú: </strong>
+                                ............................................................<br/>
+                                ............................................................<br/>
+                                <br/>
+                                <span>Mức nhiên liệu:</span>
+                                <br/>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12" style="padding-top: 5px;">
+                            <t t-foreach="doc.workorder_lines_layouted()" t-as="page">
+                                <table class="table table-bordered" style="border: 1px solid black !important; color: black;font-family: inherit; font-size: 16px!important;">
+                                    <thead>
+                                        <tr style="border: 1px solid black !important;">
+                                            <th class="text-center" style="border: 1px solid black !important;">Mã số</th>
+                                            <th class="text-center" style="border: 1px solid black !important;">Tên gọi</th>
+                                            <th class="text-center" style="border: 1px solid black !important;">ĐVT</th>
+                                            <th class="text-center" style="border: 1px solid black !important;">Số lượng</th>
+                                            <th class="text-center" style="border: 1px solid black !important;">Nhân viên</th>
+                                        </tr>
+                                    </thead>
+                                    <tr style="border: 1px solid black !important;">
+                                        <td style="border: 1px solid black !important; border-right: 0 !important;">
+                                            <strong>Phần sửa chữa chung</strong>
+                                        </td>
+                                        <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                    </tr>
+                                    <t t-foreach="page" t-as="obj">
+                                        <t t-foreach="obj['repair_line']" t-as="w">
+                                            <tr style="border: 1px solid black !important;">
+                                                <td class="text-center" style="border: 1px solid black !important;"><span t-field="w.product_id.default_code"/></td>
+                                                <td class="text-left" style="border: 1px solid black !important;"><span t-field="w.name"/></td>
+                                                <td class="text-center" style="border: 1px solid black !important;"><span t-field="w.product_uom"/></td>
+                                                <td class="text-center" style="border: 1px solid black !important;"><span t-field="w.product_uom_qty"/></td>
+                                                <td class="text-center" style="border: 1px solid black !important;">
+                                                        <span t-field="w.user_id.name"/>
+                                                </td>
+                                           </tr>
+                                       </t>
+                                   </t>
+                                   <tr style="border: 1px solid black !important;">
+                                       <td style="border: 1px solid black !important; border-right: 0 !important;">
+                                           <strong>Phần vật tư phụ tùng</strong>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                       <td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-top: 0 !important;">
+                                           <span t-esc="' '"/>
+                                       </td>
+                                   </tr>
+                                   <t t-foreach="page" t-as="obj">
+                                       <t t-foreach="obj['so_lines']" t-as="l">
+                                           <tr style="border: 1px solid black !important;">
+                                               <td class="text-center" style="border: 1px solid black !important;"><span t-field="l.product_id.default_code"/></td>
+                                               <td class="text-left" style="border: 1px solid black !important;"><span t-field="l.name"/></td>
+                                               <td class="text-center" style="border: 1px solid black !important;"><span t-field="l.product_uom"/></td>
+                                               <td class="text-center" style="border: 1px solid black !important;"><span t-field="l.product_uom_qty"/></td>
+                                               <td class="text-center" style="border: 1px solid black !important;">
+                                                    <span t-field="l.user_id.name"/>
+                                                </td>
+                                           </tr>
+                                       </t>
+                                   </t>
+                                   <t t-foreach="page" t-as="obj">
+                                       <tr style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">
+                                           <!--<td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                           <!--<td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                           <!--<td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                           <!--<td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                           <!--<td class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                       </tr>
+                                   </t>
+                                </table>
+                            </t>
+                        </div>
+                        <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 16px!important;">
+                            <div class="col-xs-8" style="border: 1px solid black !important; border-radius: 5px;">
+                                <br/>
+                                <div>
+                                    <span>Các công việc cần làm sớm: ....................................................................</span>
+                                    <br/>
+                                        ................................................................................................................<br/>
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 16px!important;">
+                            <div class="col-xs-12">
+                                <div>
+                                    <span>* Tôi đồng ý cho gara sửa chữa xe và chạy thử xe trên đường.</span>
+                                </div>
+                                <div style="padding-bottom: 5px; padding-top: 5px">
+                                    <span >* Vật tư, phụ tùng được bảo hành ... tháng.</span>
+                                </div>
+                                <div>
+                                    <span>* Công ty không chịu trách nhiệm về tài sản trên xe nếu quý khách không bàn giao.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 2px solid black;"></div>
+                        </div>
+                        <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 18px!important;">
+                            <table width="100%" style="color: black;font-family: inherit; font-size: 18px!important;">
+                                <tr>
+                                    <td style="text-align: center;" width="33%">
+                                        <span style="padding-top: 8px;">
+                                            <b>KHÁCH HÀNG</b>
+                                        </span>
+
+                                    </td>
+                                    <td style="text-align: center;" width="33%">
+                                        <span style="padding-top: 8px;">
+                                            <b>NGƯỜI LẬP PHIẾU</b>
+                                        </span>
+                                    </td>
+                                    <td style="text-align: center;" width="34%">
+                                        <span style="padding-top: 8px;">
+                                            <b>GIÁM ĐỐC GARA</b>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr style="line-height: 100%;color: black;font-family: inherit; font-size: 16px!important;">
+                                    <td style="text-align: center;" width="33%">
+                                        <span><i>(Ký, họ tên)</i></span>
+                                    </td>
+                                    <td style="text-align: center;" width="33%">
+                                        <span><i>(Ký, họ tên)</i></span>
+                                    </td>
+                                    <td style="text-align: center;" width="34%">
+                                        <span><i>(Ký, họ tên)</i></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="oe_structure"/>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </template>
+        <template id="machi_rep_label_temp_id">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="car_repair_industry.fleet_repair_label_template_view" t-lang="o.client_id.lang"/>
+            </t>
+        </template>
+	</data>
+</openerp>

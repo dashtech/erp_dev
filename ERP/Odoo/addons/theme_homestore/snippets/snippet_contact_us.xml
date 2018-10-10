@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Conatct Us Block" id="snippet_contact_us">
+			<section style="background-color:#fff;">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12">
+									<div class="col-lg-6 col-md-6 col-sm-6 add-contact">
+										<div class="title-contact-index">
+											<h2>Contact Us</h2>
+											<p>We Will Give You the Answer You Expect.</p>
+										</div>
+										<ul class="list-contact-info">
+											<li class="item-contact-info">
+												<div class="icon-contact-info">
+													<div class="fa fa-map-marker">
+														<span class="hidden">Address</span>
+													</div>
+												</div>
+
+												<div class="info-contact-item">
+													<h3>Address</h3>
+													<p>10700 World Trade Blvd, Raleigh City, North Carolina </p>
+												</div>
+											</li>
+
+											<li class="item-contact-info">
+												<div class="icon-contact-info">
+													<div class="fa fa-phone">
+														<span class="hidden">Address</span>
+													</div>
+												</div>
+
+												<div class="info-contact-item">
+													<h3>Phone / Fax</h3>
+													<p>
+														<span>+1 555 123 8069</span>
+													</p>
+												</div>
+											</li>
+
+											<li class="item-contact-info">
+												<div class="icon-contact-info">
+													<div class="fa fa-envelope-o"></div>
+												</div>
+
+												<div class="info-contact-item">
+													<h3>Email</h3>
+													<p>
+														<span>info@yourcompany.example.com</span>
+													</p>
+												</div>
+											</li>
+
+											<li class="item-contact-info">
+												<div class="icon-contact-info">
+													<div class="fa fa-clock-o">
+														<span class="hidden">Address</span>
+													</div>
+												</div>
+
+												<div class="info-contact-item">
+													<h3>Office Hours</h3>
+													<p>Mon / Friday 09:00 - 13.00 / 14:00 - 18:00</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<div class="col-lg-6 col-md-6 col-sm-6">
+
+
+										<div class="headlines text-center">
+											<h2>
+												What
+												Client’s Say
+											</h2>
+											<p>Why Our Clients Are Our Biggest Fans</p>
+										</div>
+
+										<div class="mt48 mb48 text-center">
+
+											<div class="carousel slide" id="fade-testimonial-carousel"
+												data-ride="carousel" data-interval="3000">
+
+												<!-- Carousel items -->
+												<div class="carousel-inner">
+													<div class="active item">
+														<div class="profile-circle">
+															<img
+																src="/theme_homestore/static/src/image/client-testi1.jpg"
+																class="img img-responsive" alt="Venus" />
+														</div>
+
+														<div class="info-client">
+															<h2 class="client-name">John</h2>
+															<div class="client-site">
+																<a href="#">www.domain.com</a>
+															</div>
+														</div>
+
+														<div class="comment">
+															<span class="fa fa-quote-left">
+															</span>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+															Ut
+															id urna ac sapien dictum varius in quis ante. Aliquam
+															id
+															ullamcorper nunc. Sed porttitor ornare ultricies.
+															Integer
+															auctor laoreet dolor lacinia elementum.
+															<span class="fa fa-quote-right">
+															</span>
+														</div>
+
+													</div>
+
+													<div class="item">
+														<div class="profile-circle">
+															<img
+																src="/theme_homestore/static/src/image/client-testi2.jpeg"
+																class="img img-responsive" alt="Venus" />
+														</div>
+
+														<div class="info-client">
+															<h2 class="client-name">John</h2>
+															<div class="client-site">
+																<a href="#">www.domain.com</a>
+															</div>
+														</div>
+
+														<div class="comment">
+															<span class="fa fa-quote-left">
+															</span>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+															Ut
+															id urna ac sapien dictum varius in quis ante. Aliquam
+															id
+															ullamcorper nunc. Sed porttitor ornare ultricies.
+															Integer
+															auctor laoreet dolor lacinia elementum.
+
+															<span class="fa fa-quote-right">
+															</span>
+														</div>
+
+													</div>
+
+
+													<div class="item">
+														<div class="profile-circle">
+															<img
+																src="/theme_homestore/static/src/image/client-testi3.jpg"
+																class="img img-responsive" alt="Venus" />
+														</div>
+
+														<div class="info-client">
+															<h2 class="client-name">John</h2>
+															<div class="client-site">
+																<a href="#">www.domain.com</a>
+															</div>
+														</div>
+
+														<div class="comment">
+															<span class="fa fa-quote-left">
+															</span>
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+															Ut
+															id urna ac sapien dictum varius in quis ante. Aliquam
+															id
+															ullamcorper nunc. Sed porttitor ornare ultricies.
+															Integer
+															auctor laoreet dolor lacinia elementum.
+
+															<span class="fa fa-quote-right">
+															</span>
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</section>
+		</template>
+</odoo>

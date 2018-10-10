@@ -1,0 +1,389 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_account_journal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-05 03:41+0000\n"
+"PO-Revision-Date: 2018-09-05 10:43+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "(Cập nhât thuế)"
+msgstr "(Cập nhât thuế)"
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_account_move
+msgid "Account Entry"
+msgstr "Bút toán kế toán"
+
+#. module: btek_account_journal
+#: sql_constraint:res.partner.bank:0
+msgid "Account Number must be unique"
+msgstr "Số tài khoản phải là duy nhất."
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Biên lai kế toán"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tienmat
+msgid "Amount"
+msgstr "Tổng tiền"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_inherit_tree
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Are you sure you want to cancel this receipt?"
+msgstr "Bạn chắc chắn muốn hủy bỏ biên lai này?"
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Tài khoản ngân hàng"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,name:btek_account_journal.action_sale_receipt_baoco
+#: model:ir.ui.menu,name:btek_account_journal.menu_action_sale_receipt_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+msgid "Báo có"
+msgstr "Báo có"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,name:btek_account_journal.action_sale_receipt_baono
+#: model:ir.ui.menu,name:btek_account_journal.menu_action_sale_receipt_baono
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Báo nợ"
+msgstr "Báo nợ"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Bảng thuế"
+msgstr "Bảng thuế"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Cancel Receipt"
+msgstr "Hủy Biên lai"
+
+#. module: btek_account_journal
+#: selection:account.journal,x_type:0
+#: code:addons/btek_account_journal/models/btek_account_journal.py:10
+#, python-format
+msgid "Chi tiền"
+msgstr "Chi tiền"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tiengui
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tienmat
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tiengui
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tienmat
+msgid "Click to register a payment"
+msgstr "Nhấn vào để đăng ký thanh toán"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Cost item"
+msgstr "Hạng mục"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_account_move_filter_inherit
+msgid "Date date less than or equal to"
+msgstr "Ngày tháng nhỏ hơn hoặc bằng"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_account_move_filter_inherit
+msgid "Date greater than or equal to"
+msgstr "Ngày tháng lớn hơn hoặc bằng"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Internal Notes"
+msgstr "Ghi chú nội bộ"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Invoices"
+msgstr "Các hóa đơn"
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tienmat
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_account_move_line
+msgid "Journal Item"
+msgstr "Chứng từ"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Journal Items"
+msgstr "Phát sinh"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,name:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tiengui
+#: model:ir.actions.act_window,name:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tienmat
+#: model:ir.ui.menu,name:btek_account_journal.menu_action_kh_thanhtoan_tienmat_form
+#: model:ir.ui.menu,name:btek_account_journal.menu_btek_view_account_payment_form_kh_thanhtoan_tiengui
+msgid "Khách hàng thanh toán"
+msgstr "Khách hàng thanh toán"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_journal_x_type
+msgid "Kiểu"
+msgstr "Loại"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_payment_x_name
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Lý do"
+msgstr "Lý do"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_move_x_voucher_day
+msgid "Ngày chứng từ"
+msgstr "Ngày chứng từ"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_payment_recipient_pay
+msgid "Người nhận, nộp"
+msgstr "Người nhận, nộp"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Nhóm hóa đơn"
+msgstr "Nhóm hóa đơn"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_move_line_x_account_groups
+msgid "Nhóm tài khoản"
+msgstr "Nhóm tài khoản"
+
+#. module: btek_account_journal
+#: model:ir.model.fields,field_description:btek_account_journal.field_account_payment_number
+msgid "Number"
+msgstr "Số"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_inherit_tree
+msgid "Number invoice"
+msgstr "Số chứng từ"
+
+#. module: btek_account_journal
+#: model:ir.model,name:btek_account_journal.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tiengui
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_kh_thanhtoan_tienmat
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tiengui
+#: model:ir.actions.act_window,help:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tienmat
+msgid ""
+"Payments are used to register liquidity movements (send, collect or transfer money).\n"
+"                  You can then process those payments by your own means or by using installed facilities."
+msgstr ""
+"Thanh toán được sử dụng để ghi nhận các biến động nợ (gửi, thu nhận hoặc chuyển tiền).\n"
+"                  Sau đó bạn có thể xử lý các khoản thanh toán này bằng các công cụ của riêng bạn hoặc các tính năng đã được trang bị."
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_inherit_form
+msgid "Print"
+msgstr "In"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+msgid "Print Credit"
+msgstr "In báo có"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Print Debit"
+msgstr "In báo nợ"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Print Payment"
+msgstr "In Phiếu Chi"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+msgid "Print Receipts"
+msgstr "In Phiếu Thu"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Recompute taxes"
+msgstr "Recompute taxes"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Register Payment"
+msgstr "Thanh toán"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Sales Information"
+msgstr "Các thông tin Bán hàng"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Sales Receipt"
+msgstr "Phiếu thu"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_kh_thanhtoan_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tienmat
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_inherit_tree
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Taxes"
+msgstr "% Thuế"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,name:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tiengui
+msgid "Thanh toán NCC"
+msgstr "Thanh toán NCC"
+
+#. module: btek_account_journal
+#: model:ir.actions.act_window,name:btek_account_journal.btek_action_account_payments_thanhtoan_ncc_tienmat
+#: model:ir.ui.menu,name:btek_account_journal.menu_btek_view_account_payment_form_thanhtoan_ncc_tiengui
+#: model:ir.ui.menu,name:btek_account_journal.menu_btek_view_account_payment_form_thanhtoan_ncc_tienmat
+msgid "Thanh toán nhà cung cấp"
+msgstr "Thanh toán nhà cung cấp"
+
+#. module: btek_account_journal
+#: selection:account.journal,x_type:0
+#: code:addons/btek_account_journal/models/btek_account_journal.py:11
+#, python-format
+msgid "Thu tiền"
+msgstr "Thu tiền"
+
+#. module: btek_account_journal
+#: model:ir.ui.menu,name:btek_account_journal.master_tiengui_accounting
+msgid "Tiền gửi ngân hàng"
+msgstr "Tiền gửi ngân hàng"
+
+#. module: btek_account_journal
+#: model:ir.ui.menu,name:btek_account_journal.master_tienmat_accounting
+msgid "Tiền mặt (Quỹ)"
+msgstr "Tiền mặt (Quỹ)"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Validate"
+msgstr "Xác nhận"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tiengui
+#: model:ir.ui.view,arch_db:btek_account_journal.btek_view_account_payment_tree_thanhtoan_ncc_tienmat
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baoco
+#: model:ir.ui.view,arch_db:btek_account_journal.view_sale_receipt_form_baono
+msgid "Voucher Lines"
+msgstr "Chi tiết biên lai (voucher)"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_inherit
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_sale_inherit
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_vendor_inherit
+msgid "Voucher date greater than or equal to"
+msgstr "Ngày hóa đơn lớn hơn hoặc bằng"
+
+#. module: btek_account_journal
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_inherit
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_sale_inherit
+#: model:ir.ui.view,arch_db:btek_account_journal.view_voucher_filter_vendor_inherit
+msgid "Voucher date less than or equal to"
+msgstr "Ngày hóa đơn nhỏ hơn hoặc bằng"

@@ -1,0 +1,568 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_report_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-23 10:13+0000\n"
+"PO-Revision-Date: 2018-08-23 10:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "(Ký, ghi rõ họ, tên)"
+msgstr "(Ký, ghi rõ họ, tên)"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "(Ký, họ tên)"
+msgstr "(Ký, họ tên)"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<b>Mẫu số 02-VT</b><br/>\n"
+"                                (Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                Ngày 22/12/2014 của Bộ Tài Chính)"
+msgstr "<b>Mẫu số 02-VT</b><br/>\n"
+"                                (Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                Ngày 22/12/2014 của Bộ Tài Chính)"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<b>Nhập ngày........tháng.......năm........</b>"
+msgstr "<b>Nhập ngày........tháng.......năm........</b>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<span><b>Người giao hàng</b></span>"
+msgstr "<span><b>Người giao hàng</b></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<span><b>Người nhận</b></span>"
+msgstr "<span><b>Người nhận</b></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<span><b>Nội dung</b></span>"
+msgstr "<span><b>Nội dung</b></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<span><b>Địa chỉ</b></span>"
+msgstr "<span><b>Địa chỉ</b></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Người giao hàng: </strong></span>"
+msgstr "<span><strong>Người giao hàng: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Nội dung: </strong></span>"
+msgstr "<span><strong>Nội dung: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Số hóa đơn: </strong></span>"
+msgstr "<span><strong>Số hóa đơn: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Tài khoản có: </strong></span>"
+msgstr "<span><strong>Tài khoản có: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Đơn vị: </strong></span>"
+msgstr "<span><strong>Đơn vị: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span><strong>Địa chỉ: </strong></span>"
+msgstr "<span><strong>Địa chỉ: </strong></span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span>Bằng chữ :</span>"
+msgstr "<span>Bằng chữ :</span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<span>                             \n"
+"                                            <strong>Seri: </strong>                          \n"
+"                                            <strong>Ngày: </strong>           \n"
+"                                        </span>"
+msgstr "<span>                             \n"
+"                                            <strong>Seri: </strong>                          \n"
+"                                            <strong>Ngày: </strong>           \n"
+"                                        </span>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>NGƯỜI GIAO HÀNG</strong>"
+msgstr "<strong>NGƯỜI GIAO HÀNG</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>NGƯỜI NHẬN HÀNG</strong>"
+msgstr "<strong>NGƯỜI NHẬN HÀNG</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>PHIẾU NHẬP KHO</strong>"
+msgstr "<strong>PHIẾU NHẬP KHO</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<strong>PHIẾU XUẤT KHO</strong>"
+msgstr "<strong>PHIẾU XUẤT KHO</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "<strong>PHỤ TRÁCH BỘ PHẬN SỬ DỤNG</strong>"
+msgstr "<strong>PHỤ TRÁCH BỘ PHẬN SỬ DỤNG</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>THỦ KHO</strong>"
+msgstr "<strong>THỦ KHO</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>TRƯỞNG VHTK</strong>"
+msgstr "<strong>TRƯỞNG VHTK</strong>"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "<strong>Tổng cộng tiền thanh toán :</strong>"
+msgstr "<strong>Tổng cộng tiền thanh toán :</strong>"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_account_account_id
+msgid "Account account id"
+msgstr "Account account id"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.stock_inventory_nxt_report
+msgid "Bangtonghopchitiet"
+msgstr "Bangtonghopchitiet"
+
+#. module: btek_report_stock
+#: model:ir.ui.menu,name:btek_report_stock.baocaoketoananhtt
+msgid "Báo cáo kho"
+msgstr "Báo cáo kho"
+
+#. module: btek_report_stock
+#: model:ir.actions.act_window,name:btek_report_stock.inventory_card_account_act
+msgid "Báo cáo thẻ kho kế toán"
+msgstr "Báo cáo thẻ kho kế toán"
+
+#. module: btek_report_stock
+#: model:ir.actions.act_window,name:btek_report_stock.stock_inout_report_form_nhap_act
+msgid "Bảng kê nhập"
+msgstr "Bảng kê nhập"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.stock_report_in_report
+#: model:ir.ui.menu,name:btek_report_stock.menu_stock_inout_report_form_nhap
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_nhap
+msgid "Bảng kê phiếu nhập"
+msgstr "Bảng kê phiếu nhập"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.stock_report_out_report
+#: model:ir.ui.menu,name:btek_report_stock.menu_stock_inout_report_form_xuat
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_xuat
+msgid "Bảng kê phiếu xuất"
+msgstr "Bảng kê phiếu xuất"
+
+#. module: btek_report_stock
+#: model:ir.actions.act_window,name:btek_report_stock.stock_inout_report_form_xuat_act
+msgid "Bảng kê xuất"
+msgstr "Bảng kê xuất"
+
+#. module: btek_report_stock
+#: model:ir.actions.act_window,name:btek_report_stock.inventory_s11_act
+#: model:ir.ui.menu,name:btek_report_stock.stock_inventory_nxt_menu
+msgid "Bảng tổng hợp chi tiết hàng hóa"
+msgstr "Bảng tổng hợp chi tiết hàng hóa"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_nhap
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_xuat
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Chi phí :"
+msgstr "Chi phí :"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_company_id
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_s11_form
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_nhap
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_xuat
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_create_uid
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_create_uid
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_create_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_create_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_report_stock
+#: selection:stock.inventory.nxt,filter:0
+msgid "Date"
+msgstr "Date"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.delivery_oder_report_btek
+msgid "Delivery voucher"
+msgstr "Phiếu xuất kho"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_display_name
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_display_name
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_end_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_end_date
+msgid "End date"
+msgstr "Ngày Kết thúc"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_filter
+msgid "Filter by"
+msgstr "Lọc theo"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_id
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_id
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_card_account_form
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_s11_form
+msgid "In"
+msgstr "In"
+
+#. module: btek_report_stock
+#: model:ir.model,name:btek_report_stock.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Tồn kho"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_card_account_form
+msgid "Inventory Report"
+msgstr "Inventory Report"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_warehouse
+msgid "Kho"
+msgstr "Kho"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account___last_update
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt___last_update
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_write_uid
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_write_uid
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_write_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_write_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_lot_stock_id
+msgid "Location Stock"
+msgstr "Địa điểm Kho"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_location_id
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Mã kho"
+msgstr "Mã kho"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Mã xe"
+msgstr "Mã xe"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Mẫu số 01-VT<br/>\n"
+"                                (Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                Ngày 22/12/2014 của Bộ Tài Chính)"
+msgstr "Mẫu số 01-VT<br/>\n"
+"                                (Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"                                Ngày 22/12/2014 của Bộ Tài Chính)"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_product_category
+msgid "Nhóm sản phẩm"
+msgstr "Nhóm VT-HH"
+
+#. module: btek_report_stock
+#: selection:stock.inventory.nxt,filter:0
+msgid "No Filters"
+msgstr "No Filters"
+
+#. module: btek_report_stock
+#: selection:stock.inventory.nxt,filter:0
+msgid "Periods"
+msgstr "Periods"
+
+#. module: btek_report_stock
+#: code:addons/btek_report_stock/stock_inventory_account.py:254
+#, python-format
+msgid "Please select recipients."
+msgstr "Please select recipients."
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_nhap
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_xuat
+#: model:ir.ui.view,arch_db:btek_report_stock.view_stock_picking_btek_inherit
+msgid "Print"
+msgstr "In"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_product_category_id
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.receiving_oder_report_btek
+msgid "Receiving voucher"
+msgstr "Phiếu nhập kho"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_s11_form
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_res_company_id
+msgid "Res company id"
+msgstr "Res company id"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "STT"
+msgstr "STT"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "STT1"
+msgstr "STT1"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_start_date
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_start_date
+msgid "Start date"
+msgstr "Ngày Bắt đầu"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "Số phiếu yêu cầu:"
+msgstr "Số phiếu yêu cầu:"
+
+#. module: btek_report_stock
+#: model:ir.actions.report.xml,name:btek_report_stock.stock_inventory_account_report
+msgid "TheKhoKT"
+msgstr "TheKhoKT"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Thuế giá trị gia tăng :"
+msgstr "Thuế giá trị gia tăng :"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Thành tiền"
+msgstr "Thành tiền"
+
+#. module: btek_report_stock
+#: model:ir.ui.menu,name:btek_report_stock.inventory_card_report_account_menu
+msgid "Thẻ kho kế toán"
+msgstr "Thẻ kho kế toán"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Tk"
+msgstr "Tk"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "Tk có"
+msgstr "Tk có"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "Tk nợ"
+msgstr "Tk nợ"
+
+#. module: btek_report_stock
+#: model:ir.model,name:btek_report_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Chuyển hàng"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_account_account_id
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_card_account_form
+#: model:ir.ui.view,arch_db:btek_report_stock.inventory_s11_form
+msgid "Tài khoản"
+msgstr "Tài khoản"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Tên vật tư"
+msgstr "Tên vật tư"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Tổng cộng tiền hàng :"
+msgstr "Tổng cộng tiền hàng :"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_from_date
+msgid "Từ ngày"
+msgstr "Từ ngày"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_product
+msgid "Vật tư"
+msgstr "Vật tư"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_location
+msgid "Vị trí"
+msgstr "Vị trí"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_nxt_warehouse_id
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_report_inout_warehouse_id
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+msgid "Xuất ngày..........tháng..........năm..........."
+msgstr "Xuất ngày..........tháng..........năm..........."
+
+#. module: btek_report_stock
+#: code:addons/btek_report_stock/stock_inventory_nxt.py:172
+#, python-format
+msgid "You can not choose a date in the future ."
+msgstr "Không thể chọn ngày bắt đầu là một ngày trong tương lai."
+
+#. module: btek_report_stock
+#: code:addons/btek_report_stock/stock_inventory_nxt.py:169
+#, python-format
+msgid "You can not choose start date greater than to date."
+msgstr "Không thể chọn ngày bắt đầu sau ngày kết thúc."
+
+#. module: btek_report_stock
+#: selection:stock.report.inout,type:0
+msgid "choose"
+msgstr "choose"
+
+#. module: btek_report_stock
+#: selection:stock.report.inout,type:0
+msgid "get"
+msgstr "get"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_nhap
+#: model:ir.ui.view,arch_db:btek_report_stock.stock_inout_report_form_xuat
+msgid "or"
+msgstr "hoặc"
+
+#. module: btek_report_stock
+#: model:ir.model,name:btek_report_stock.model_stock_inventory_account
+msgid "stock.inventory.account"
+msgstr "stock.inventory.account"
+
+#. module: btek_report_stock
+#: model:ir.model,name:btek_report_stock.model_stock_inventory_nxt
+msgid "stock.inventory.nxt"
+msgstr "stock.inventory.nxt"
+
+#. module: btek_report_stock
+#: model:ir.model,name:btek_report_stock.model_stock_report_inout
+msgid "stock.report.inout"
+msgstr "stock.report.inout"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_delivery_oder
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Đvt"
+msgstr "Đvt"
+
+#. module: btek_report_stock
+#: model:ir.ui.view,arch_db:btek_report_stock.report_receiving_oder
+msgid "Đơn giá"
+msgstr "Đơn giá"
+
+#. module: btek_report_stock
+#: model:ir.model.fields,field_description:btek_report_stock.field_stock_inventory_account_to_date
+msgid "Đến ngày"
+msgstr "Đến ngày"
+

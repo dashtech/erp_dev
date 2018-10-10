@@ -1,0 +1,463 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_hr_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-28 04:52+0000\n"
+"PO-Revision-Date: 2018-03-28 12:01+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d10
+msgid "10"
+msgstr "10"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d11
+msgid "11"
+msgstr "11"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d12
+msgid "12"
+msgstr "12"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d13
+msgid "13"
+msgstr "13"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d14
+msgid "14"
+msgstr "14"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d15
+msgid "15"
+msgstr "15"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d16
+msgid "16"
+msgstr "16"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d17
+msgid "17"
+msgstr "17"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d18
+msgid "18"
+msgstr "18"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d19
+msgid "19"
+msgstr "19"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d20
+msgid "20"
+msgstr "20"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d21
+msgid "21"
+msgstr "21"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d22
+msgid "22"
+msgstr "22"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d23
+msgid "23"
+msgstr "23"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d24
+msgid "24"
+msgstr "24"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d25
+msgid "25"
+msgstr "25"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d26
+msgid "26"
+msgstr "26"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d27
+msgid "27"
+msgstr "27"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d28
+msgid "28"
+msgstr "28"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d29
+msgid "29"
+msgstr "29"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d30
+msgid "30"
+msgstr "30"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_d31
+msgid "31"
+msgstr "31"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "April"
+msgstr "Tháng 4"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_name
+msgid "Attachment Name"
+msgstr "Tên đính kèm"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_local_url
+msgid "Attachment URL"
+msgstr "Đường dẫn tệp đính kèm"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.hr_worked_day_form
+msgid "Attendance"
+msgstr "Điểm danh"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "August"
+msgstr "Tháng 8"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.import_attendace_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_checksum
+msgid "Checksum/SHA1"
+msgstr "Checksum/SHA1"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_create_uid
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_create_date
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.import_attendace_form
+msgid "Danh sách checkin/checkout"
+msgstr "Danh sách checkin/checkout"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_attachment_id
+msgid "Danh sách ra vào"
+msgstr "Danh sách ra vào"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_db_datas
+msgid "Database Data"
+msgstr "Database Data"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "December"
+msgstr "Tháng 12"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_display_name
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_display_name
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_read_excel_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_employee_id
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "February"
+msgstr "Tháng 2"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_datas
+msgid "File Content"
+msgstr "Nội dung tập tin"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_datas_fname
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_file_size
+msgid "File Size"
+msgstr "Dung lượng file"
+
+#. module: btek_hr_attendance
+#: code:addons/btek_hr_attendance/models/read_excel.py:35
+#, python-format
+msgid "File format incorrect, please upload file *.xlsx format"
+msgstr "Định dạng file không chính xác, vui lòng tải file định dạng *. xlsx"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.import_attendace_form
+msgid "File mẫu"
+msgstr "File mẫu"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_id
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_id
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_read_excel_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.import_attendace_form
+msgid "Import"
+msgstr "Nhập vào"
+
+#. module: btek_hr_attendance
+#: model:ir.actions.act_window,name:btek_hr_attendance.import_attendance_action
+msgid "Import Atendance"
+msgstr "Nhập vào điểm danh"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.menu,name:btek_hr_attendance.import_attendance_menu
+msgid "Import Attendance"
+msgstr "Nhập vào điểm danh"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_index_content
+msgid "Indexed Content"
+msgstr "Indexed Content"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_public
+msgid "Is public document"
+msgstr "Là tài liệu công khai"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "January"
+msgstr "Tháng 1"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "July"
+msgstr "Tháng 7"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "June"
+msgstr "Tháng 6"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import___last_update
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day___last_update
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_read_excel___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_write_uid
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_write_date
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_leap_year
+msgid "Leap year"
+msgstr "Năm nhuận"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "March"
+msgstr "Tháng 3"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "May"
+msgstr "Tháng 5"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_mimetype
+msgid "Mime Type"
+msgstr "Mime Type"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "November "
+msgstr "Tháng 11"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "October"
+msgstr "Tháng 10"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_res_field
+msgid "Resource Field"
+msgstr "Resource Field"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_res_id
+msgid "Resource ID"
+msgstr "ID Tài nguyên"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_res_model
+msgid "Resource Model"
+msgstr "Resource Model"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_res_name
+msgid "Resource Name"
+msgstr "Tên Tài nguyên"
+
+#. module: btek_hr_attendance
+#: selection:hr.worked.day,month:0
+msgid "September"
+msgstr "Tháng 9"
+
+#. module: btek_hr_attendance
+#: code:addons/btek_hr_attendance/models/read_excel.py:44
+#, python-format
+msgid "Sheet name incorrect, please upload file has sheet name {}"
+msgstr "Sheet name incorrect, please upload file has sheet name {}"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_store_fname
+msgid "Stored Filename"
+msgstr "Tên tệp tin được lưu trữ"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_template_file
+msgid "Template file"
+msgstr "Template file"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,help:btek_hr_attendance.field_hr_attendance_import_res_model
+msgid "The database object this attachment will be attached to."
+msgstr "The database object this attachment will be attached to."
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,help:btek_hr_attendance.field_hr_attendance_import_res_id
+msgid "The record id this is attached to."
+msgstr "The record id this is attached to."
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_total_day
+msgid "Total day"
+msgstr "Tổng số ngày"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_attendance_import_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_hr_attendance
+#: model:ir.actions.act_window,name:btek_hr_attendance.worked_day_action
+#: model:ir.ui.menu,name:btek_hr_attendance.worked_day_main_menu
+#: model:ir.ui.menu,name:btek_hr_attendance.worked_day_menu
+msgid "Worked Day"
+msgstr "Ngày làm việc"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,field_description:btek_hr_attendance.field_hr_worked_day_year
+msgid "Year"
+msgstr "Năm"
+
+#. module: btek_hr_attendance
+#: model:ir.model.fields,help:btek_hr_attendance.field_hr_attendance_import_type
+msgid "You can either upload a file from your computer or copy/paste an internet link to your file."
+msgstr "You can either upload a file from your computer or copy/paste an internet link to your file."
+
+#. module: btek_hr_attendance
+#: model:ir.model,name:btek_hr_attendance.model_hr_attendance_import
+msgid "hr.attendance.import"
+msgstr "hr.attendance.import"
+
+#. module: btek_hr_attendance
+#: model:ir.model,name:btek_hr_attendance.model_hr_worked_day
+msgid "hr.worked.day"
+msgstr "hr.worked.day"
+
+#. module: btek_hr_attendance
+#: model:ir.ui.view,arch_db:btek_hr_attendance.import_attendace_form
+msgid "or"
+msgstr "hoặc"
+
+#. module: btek_hr_attendance
+#: model:ir.model,name:btek_hr_attendance.model_read_excel
+msgid "read.excel"
+msgstr "read.excel"
+
+#. module: btek_hr_attendance
+#: code:addons/btek_hr_attendance/models/read_excel.py:11
+#, python-format
+msgid "xlrd is required to install this module"
+msgstr "xlrd is required to install this module"

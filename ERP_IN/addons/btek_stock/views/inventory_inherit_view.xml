@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_warehouse_orderpoint_form_inherit" model="ir.ui.view">
+        <field name="name">view_warehouse_orderpoint_form_inherit</field>
+        <field name="model">stock.warehouse.orderpoint</field>
+        <field name="inherit_id" ref="stock.view_warehouse_orderpoint_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/div/button[2]" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group[2]/field[@name='warehouse_id']" position="attributes">
+                <attribute name="groups"></attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group[2]/field[@name='product_uom']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group[2]/field[@name='group_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group[2]/field[@name='location_id']" position="attributes">
+                <attribute name="groups"></attribute>
+                <attribute name="domain">[('usage', '=', 'internal')]</attribute>
+            </xpath>
+            <xpath expr="//sheet/group[2]/group[1]/field[@name='product_max_qty']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//sheet/group[2]/group[1]/field[@name='qty_multiple']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="bave_view_picking_form" model="ir.ui.view">
+        <field name="name">bave.stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="min_date" position="before">
+                <field name="check_return" invisible="1"/>
+                <field name="is_return" invisible="1"/>
+            </field>
+            <xpath expr="//button[8]" position="replace">
+                <button name="%(stock.act_stock_return_picking)d" string="Return" states="done" type="action"
+                        groups="base.group_user"
+                        attrs="{'invisible': ['|', '|', ('check_return','=',True), ('is_return', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='force_assign']" position="replace">
+                    <button name="force_assign" states="confirmed,waiting,partially_available"
+                            string="Force Availability" type="object"
+                            groups="stock.group_stock_manager,car_repair_industry.group_fleet_repair_head_technician"/>
+            </xpath>
+            <xpath expr="//button[@name='button_scrap']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_inventory_filter_inherit" model="ir.ui.view">
+        <field name="name">view.inventory.filter.inherit</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date']" position="replace">
+                <field name="date"
+                       string="Stock check date greater than or equal to"
+                       filter_domain="[('date', '&gt;=', self)]"/>
+                <field name="date"
+                       string="Stock check date less than or equal to"
+                       filter_domain="[('date', '&lt;=', self)]"/>
+                <field name="accounting_date"
+                       string="Accounting date greater than or equal to"
+                       filter_domain="[('accounting_date', '&gt;=', self)]"/>
+                <field name="accounting_date"
+                       string="Accounting date less than or equal to"
+                       filter_domain="[('accounting_date', '&lt;=', self)]"/>
+            </xpath>
+        </field>
+     </record>
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for sale.order from car repair -->
+        <record id="seq_sale_order_x" model="ir.sequence">
+            <field name="name">Car Repair</field>
+            <field name="code">car.repair.ord</field>
+            <field name="prefix">CSO</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="property_quotes_note_id" model="ir.property">
+            <field name="name">property_quotes_note</field>
+            <field name="fields_id" ref="car_repair_industry.field_sale_order_property_quotes_note"/>
+            <field name="type">text</field>
+            <field name="value_text">&lt;p&gt;* Báo giá này có giá trị từ ngày ........................ đến ngày .........................&lt;/p&gt;
+                &lt;p&gt;Mọi phát sinh trong quá trình sửa chữa chúng tôi sẽ thông báo sau.&lt;/p&gt;
+                &lt;p&gt;*Trước khi đem xe đến sửa chữa bảo dưỡng xin quý khách hãy liên hệ với cố vấn dịch vụ.&lt;/p&gt;
+                &lt;p&gt;* Để được phục vụ ngay xin quý khách hàng hãy đặt trước ít nhất một ngày.&lt;/p&gt;
+            </field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

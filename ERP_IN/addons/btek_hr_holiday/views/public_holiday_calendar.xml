@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_public_holiday_calendar" model="ir.ui.view">
+        <field name="name">view_public_holiday_calendar</field>
+        <field name="model">btek.hr.public.holiday.line</field>
+        <field name="arch" type="xml">
+            <calendar string="Public Holidays" color="name"
+                      date_start="date" mode="month"
+                      quick_add="False">
+                <field name="name"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="public_holiday_action" model="ir.actions.act_window">
+        <field name="name">Public Holidays Calendar</field>
+        <field name="res_model">btek.hr.public.holiday.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">calendar</field>
+    </record>
+
+    <menuitem id="menu_public_holiday_calendar"
+              groups="hr_holidays.group_hr_holidays_manager,hr_holidays.group_hr_holidays_user"
+              name="Public Holiday Calendar"
+              parent="menu_public_holiday_settings"
+              action="public_holiday_action"
+              />
+
+</odoo>

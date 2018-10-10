@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_accessories">
+        <body>
+            <t t-foreach="docs" t-as="o">
+                <div class="page" style="color: black;font-size: 13px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                    <style type="text/css">
+                        .pages {
+                        font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+                        font-size: 16px;
+                        }
+                        .table-bordered {
+                        border-color: #010000;
+                        border: 1px solid black !important;
+                        }
+                    </style>
+                    <t class="pages" style="color: black;font-size: 13px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                        <div style="color: black;font-size: 13px;font-family: Times New Roman, Times, Baskerville, Georgia, serif;">
+                            <div style="width:55%;float:left;line-height: 15px;">
+                                <p>
+                                    <b><span t-esc="res_company.name" /></b>
+                                </p>
+                                <p>
+                                    <span t-esc="res_company.street" />
+                                    <!--<t t-if="res_company.ward_id!=False">-->
+                                        <!--<span t-esc="res_company.ward_id.name" />-->
+                                    <!--</t>-->
+                                    <!--<t t-if="res_company.district_id!=False">-->
+                                        <!--<span t-esc="res_company.district_id.name" /></t>-->
+                                    <t t-if="res_company.state_id!=False">
+                                        <span t-esc="res_company.state_id.name" />
+                                    </t>
+                                    <span t-esc="res_company.country_id.name"/>
+                                </p>
+                            </div>
+                            <div style="width:20%;float:left"> </div>
+                            <div style="width:25%;float:right;font-size:13px;">
+                                <p>
+                                    <strong>
+                                        <span>SĐT :</span>
+                                    </strong>
+                                    <span t-esc="res_company.phone"/>
+                                </p>
+                                <p>
+                                    <strong>
+                                        <span>MST:</span>
+                                    </strong>
+                                    <span t-esc="res_company.vat"/>
+                                </p>
+                            </div>
+                        </div>
+                        <div style="clear:both;padding-top:10px"></div>
+                        <div style="font-size:13px;">
+                            <table style="width:100%;color: black;font-size: 26px;font-family: Times New Roman, Times, Baskerville, Georgia, serif; line-height: 100%;">
+                                <tr>
+                                    <td width="30%"></td>
+                                    <td width="33%" style="text-align: center;font-style:24px;">
+                                        <p>
+                                            <h3>LỆNH PHỤ TÙNG</h3>
+                                        </p>
+                                    </td>
+                                    <td width="6%"></td>
+                                    <td width="22%">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width:100%;color: black;font-size: 13px;font-family: Times New Roman, Times, Baskerville, Georgia, serif; line-height: 100%;">
+                                <tr>
+                                    <td width="30%"></td>
+                                    <td style="font-style:13px; text-align: center;">
+                                        <t>
+                                            <span><b>Ngày: </b></span>
+                                            <span t-field="o.confirmation_date"/>
+                                        </t>
+                                    </td>
+                                     <td width="6%"></td>
+                                    <td width="22%">
+                                        <str>Số: <b><t t-esc="o.name"/></b>
+                                        </str>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="clear:both;padding-top:10px"></div>
+                            <div class="content" style="width:100%;float:left;">
+                            <table style="width:100%;">
+                                <tr style="width:100%;">
+                                    <td style="width:100%;">
+                                        <table style="line-height: 200%;color: black;font-size: 13px;font-family: Times New Roman, Times, Baskerville, Georgia, serif; line-height: 30px;">
+                                            <tr>
+                                                <td width="25%">
+                                                    <span><b>Đơn vị</b></span>
+                                                </td>
+                                                <td width="5%">:</td>
+                                                <td>
+                                                    <t t-if="o.partner_id">
+                                                        <span t-esc="o.partner_id.name"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%">
+                                                    <span><b>Địa chỉ</b></span>
+                                                </td>
+                                                <td width="5%">:</td>
+                                                <td>
+                                                    <span t-esc="o.partner_id.address"/>
+                                                </td>
+                                            </tr>
+                                            <tr style="line-height: 30px;">
+                                                <td width="25%">
+                                                    <span><b>Nội dung</b></span>
+                                                </td>
+                                                <td width="5%">:</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td>
+                                        <table class="table table-bordered"
+                                               style="font-size: 13px;border-color: #010000;border: 1px solid black !important;">
+                                            <thead>
+                                                <tr style="border: 1px solid black !important;">
+                                                    <th class="text-center"
+                                                        style="width:2%;border: 1px solid black !important;">
+                                                        STT</th>
+                                                    <th class="text-center"
+                                                        style="width:12%;border: 1px solid black !important;">
+                                                        Mã vật tư</th>
+                                                    <th class="text-center"
+                                                        style="width:25%;border: 1px solid black !important;">
+                                                        Tên vật tư</th>
+                                                    <th class="text-center"
+                                                        style="width:9%;border: 1px solid black !important;">
+                                                        Đvt</th>
+                                                    <th class="text-center"
+                                                        style="width:12%;border: 1px solid black !important;">
+                                                        Đơn giá</th>
+                                                    <th class="text-center"
+                                                        style="width:6%;border: 1px solid black !important;">
+                                                        SL</th>
+                                                    <th class="text-center"
+                                                        style="width:12%;border: 1px solid black !important;">
+                                                        Thành tiền</th>
+                                                    <th class="text-center"
+                                                        style="width:5%;border: 1px solid black !important;">
+                                                        %Thuế</th>
+                                                    <th class="text-center"
+                                                        style="width:5%;border: 1px solid black !important;">
+                                                        %GG</th>
+                                                    <th class="text-center"
+                                                        style="width:12%;border: 1px solid black !important;">
+                                                        Tiền bán</th>
+                                                </tr>
+                                            </thead>
+                                            <t t-set="stt" t-value="0"/>
+                                            <t t-foreach="o.order_line" t-as="line">
+                                                <t t-set="stt" t-value="stt+1"/>
+                                                <tr style="border: 1px solid black !important;">
+                                                    <td class="text-center"
+                                                        style="border: 1px solid black !important;">
+                                                        <span t-raw="stt"/>
+                                                    </td>
+                                                    <td style="border: 1px solid black !important;">
+                                                        <t t-if="line.product_id.default_code">
+                                                            <span t-esc="line.product_id.default_code" />
+                                                        </t>
+                                                        <t t-if="not line.product_id.default_code">
+                                                            <span t-esc="line.product_id.hs_code or ''" />
+                                                        </t>
+                                                    </td>
+                                                    <td style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.product_id.name"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.product_id.uom_id"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.price_unit"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.product_uom_qty"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.price_subtotal"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.tax_id.amount"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.discount"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="border: 1px solid black !important;">
+                                                        <t>
+                                                            <span t-field="line.sub_price_after_tax_discount"></span>
+                                                        </t>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                            <tr style="border: 1px solid black !important;">
+                                                <td colspan="8"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <strong>Cộng :</strong>
+                                                </td>
+                                                <td colspan="2"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <t>
+                                                        <span t-field="o.total_price_before_tax_discount"></span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr style="border: 1px solid black !important;">
+                                                <td colspan="8"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <strong>GG :</strong>
+                                                </td>
+                                                <td colspan="2"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <t>
+                                                        <span t-field="o.total_product_discount"></span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr style="border: 1px solid black !important;">
+                                                <td colspan="8"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <strong>Thuế :</strong>
+                                                </td>
+                                                <td colspan="2"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <t>
+                                                        <span t-field="o.total_product_tax"></span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                            <tr style="border: 1px solid black !important;">
+                                                <td colspan="8"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <strong>Tổng cộng :</strong>
+                                                </td>
+                                                <td colspan="2"
+                                                    class="text-right"
+                                                    style="border: 1px solid black !important;">
+                                                    <t>
+                                                        <span t-field="o.total_price_after_tax_discount"></span>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <div style="clear:both;padding-top:20px"></div>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <table width="100%">
+                                                <tr style="text-align: right;margin-right: 5%;font-size: 13px; line-height: 15px;">
+                                                    <p style="text-align: right;margin-right: 5%;">
+                                                        Ngày..........tháng..........năm...........
+                                                    </p>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <div style="clear:both;padding-top:20px"></div>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <table width="100%" style="font-size: 13px; line-height: 15px;">
+                                                <tr>
+                                                    <td style="text-align: center;" width="33%">
+                                                        <p>
+                                                            <strong>KHÁCH HÀNG</strong>
+                                                        </p>
+                                                        <p style="font-style: italic;">(Ký, ghi rõ họ, tên)</p>
+                                                    </td>
+                                                    <td style="text-align: center;" width="5%"></td>
+
+                                                    <td style="text-align: center;" width="33%">
+                                                        <p>
+                                                            <strong>NHÂN VIÊN PHỤ TÙNG</strong>
+                                                        </p>
+                                                        <p style="font-style: italic;">(Ký, ghi rõ họ, tên)</p>
+                                                    </td>
+                                                    <td style="text-align: center;" width="34%">
+                                                        <p>
+                                                            <strong>GIÁM ĐỐC DỊCH VỤ</strong>
+                                                        </p>
+                                                        <p style="font-style: italic;">(Ký, ghi rõ họ, tên)</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </body>
+    </template>
+</odoo>

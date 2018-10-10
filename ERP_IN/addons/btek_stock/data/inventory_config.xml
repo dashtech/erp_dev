@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="inventory_config_view" model="btek.inventory.config">
+        <field name="mailling_list">..//</field>
+    </record>
+</odoo>

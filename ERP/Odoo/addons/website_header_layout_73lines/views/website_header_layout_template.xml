@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Remove Default My Account Link -->
+    <template id="website_portal.my_account_link" name="Link to frontend portal" inherit_id="website.layout">
+    </template>
+
+    <!-- Remove Current Position of Language Flag that comes from module website_language_flag -->
+    <template id="website_language_flag_73lines.top_menu_flags" inherit_id="website.layout" name="Language Flag"
+              active="False" customize_show="False">
+    </template>
+
+    <!-- Remove Default Sign In feature -->
+    <template id="website.show_sign_in" customize_show="False" active="False" inherit_id="website.layout" name="Show Sign In">
+    </template>
+
+    <!-- Remove Default My cart feature -->
+    <template id="website_sale.header" inherit_id="website.layout" name="Header Shop My Cart Link">
+    </template>
+    
+    <!-- Remove Default Show Logo Option -->
+    <template id="website.layout_logo_show" inherit_id="website.layout" customize_show="False" active="False" name="Show Logo">
+    </template>
+
+    <!-- Remove Default User-Menu DropDown & Remove My Website Link -->
+    <template id="remove_drop_down_my_acc" name="Remove My Acc Menu and My Website Link" inherit_id="website.layout">
+        <xpath expr="//li[@class='dropdown']" position="replace">
+        </xpath>
+        <xpath expr="//li[@class='divider']" position="replace">
+        </xpath>
+        <xpath expr="//a[@t-field='website.name']" position="replace">
+        </xpath>
+    </template>
+
+    <!-- Remove Default PriceList Option - Product -->
+    <template id="remove_pricelist_show_product" inherit_id="website_sale.product">
+        <xpath expr="//t[@t-call='website_sale.pricelist_list']" position="replace">
+        </xpath>
+    </template>
+
+    <!-- Remove Default PriceList Option - Products -->
+    <template id="remove_pricelist_show_products" inherit_id="website_sale.products">
+        <xpath expr="//t[@t-call='website_sale.pricelist_list']" position="replace">
+        </xpath>
+    </template>
+
+    <!-- Website Header Layout Template -->
+    <template id="mid_header" name="Header Layout">
+        <div id="mid-header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 oe_structure mb8 mt8" id="mid-header-top-left">
+                    </div>
+                    <div class="col-md-4 oe_structure mb8 mt8" id="mid-header-top-center">
+                    </div>
+                    <div class="col-md-4 oe_structure mb8 mt8" id="mid-header-top-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mid-header-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 oe_structure" id="mid-header-bottom-left">
+                    </div>
+                    <div class="col-md-4 oe_structure" id="mid-header-bottom-center">
+                    </div>
+                    <div class="col-md-4 oe_structure" id="mid-header-bottom-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Option to Show Header Layout Menu -->
+    <template id="navbar_mid_menu" inherit_id="website.layout" name="Header Layout Menu"
+              active="True" customize_show="False">
+        <xpath expr="//div[@id='wrapwrap']/header/div[contains(@class, 'navbar navbar-default navbar-static-top')]"
+               position="before">
+            <t t-call="website_header_layout_73lines.mid_header" />
+        </xpath>
+    </template>
+
+    <!-- Header Layout Add to Cart Option -->
+    <template id="website_mid_header_add_to_cart" name="Mid Header My Cart">
+        <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+        <div t-att-class="'' if website_sale_order and website_sale_order.cart_quantity else ''">
+            <a href="/shop/cart" class="mid_header_shopping_cart" data-toggle="tooltip" title="My Cart">
+                <i class="fa fa-shopping-cart fa_user_menu"></i>
+                <sup t-attf-class="my_cart_quantity label label-primary"
+                     t-esc="website_sale_order and website_sale_order.cart_quantity or '0'" />
+            </a>
+        </div>
+    </template>
+
+    <!-- Header Layout Company Contact Info -->
+    <template id="website_user_company_contact_mid_header" inherit_id="website_header_layout_73lines.mid_header"
+              name="Mid Header Company Contact">
+        <xpath expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-left']" position="inside">
+            <div class="col-md-12 text-center" id="company-contact" t-ignore="true">
+                <i class="fa fa-phone"></i>
+                <span t-field="res_company.phone"></span>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-center']" position="inside">
+            <div class="col-md-12 text-center" id="company-email" t-ignore="true">
+                <i class="fa fa-envelope"></i>
+                <span t-field="res_company.email"></span>
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-right']" position="inside">
+            <div class="col-md-12 text-center" id="company-profiles" t-ignore="true">
+                <a t-att-href="website.social_facebook" t-if="website.social_facebook" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-facebook-square share_facebook fa_company_contact_info"/>
+                </a>
+                <a t-att-href="website.social_twitter" t-if="website.social_twitter" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-twitter share_twitter fa_company_contact_info"/>
+                </a>
+                <a t-att-href="website.social_linkedin" t-if="website.social_linkedin" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-linkedin share_linkedin fa_company_contact_info"/>
+                </a>
+                <a t-att-href="website.social_youtube" t-if="website.social_youtube" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-youtube-play share_youtube fa_company_contact_info"/>
+                </a>
+                <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-google-plus-square share_googleplus fa_company_contact_info"/>
+                </a>
+                <a t-att-href="website.social_github" t-if="website.social_github" class="fa_company_contact_links" target="_blank">
+                    <i class="fa fa-github share_github fa_company_contact_info"/>
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="website_user_access_mid_header" inherit_id="website_header_layout_73lines.mid_header" name="Header Layout User ShortCut Options">
+        <xpath expr="//div[@id='mid-header-bottom']/div/div/div[@id='mid-header-bottom-right']" position="inside">
+            <div class="mt16 mb16" id="user_access_shortcuts">
+                <!-- User LogIn -->
+                <t t-if="website.user_id != user_id">
+                    <div class="col-md-2 mt8 mb8 text-center" id="user_wishlist">
+                    </div>
+                    <div class="col-md-3 mt8 mb8 user_add_to_cart" id="user_add_to_cart_login">
+                        <t t-call="website_header_layout_73lines.website_mid_header_add_to_cart"/>
+                    </div>
+                    <div class="col-md-5 mt8 mb8 text-right" id="user_name">
+                        <b>
+                            <a t-attf-href="/my/home" role="menuitem" data-toggle="tooltip" title="My Account" class="my_acc">
+                                <span t-esc="(len(user_id.name)&gt;20) and (user_id.name[:17]+'...') or user_id.name" />
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col-md-2 mt8 mb8 text-center" id="user_logout">
+                        <a t-attf-href="/web/session/logout?redirect=/" role="menuitem" data-toggle="tooltip" title="Sign Out">
+                            <span class="fa fa-sign-out fa_user_menu"/>
+                        </a>
+                    </div>
+                </t>
+                <!-- User LogOut -->
+                <t t-if="website.user_id == user_id">
+                    <div class="col-md-offset-3  col-md-3 mt8 mb8 user_add_to_cart" id="user_add_to_cart_without_login">
+                        <t t-call="website_header_layout_73lines.website_mid_header_add_to_cart"/>
+                    </div>
+                    <div class="col-md-3 mb8" id="user_sign_in" groups="base.group_public">
+                    </div>
+                    <div class="col-md-3 mb8" id="user_register">
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Header Layout Sign In Option -->
+    <template id="website_sign_in_mid_header" inherit_id="website_header_layout_73lines.website_user_access_mid_header"
+              name="Show Sign In" active="True" customize_show="True">
+        <xpath expr="//div[@id='user_sign_in']" position="inside">
+            <a href="/web/login" role="menuitem">
+                <button class="btn btn-default">Sign In</button>
+            </a>
+        </xpath>
+    </template>
+
+    <!-- Header Layout Register Option -->
+    <template id="website_register_mid_header" inherit_id="website_header_layout_73lines.website_user_access_mid_header"
+              name="Show Register" active="False" customize_show="True">
+        <xpath expr="//div[@id='user_register']" position="inside">
+            <a href="/web/signup" role="menuitem">
+                <button class="btn btn-info">Register</button>
+            </a>
+        </xpath>
+    </template>
+
+    <!-- Header Layout WishList Option -->
+    <template id="website_wishlist_mid_header" inherit_id="website_header_layout_73lines.website_user_access_mid_header" name="Show WishList"
+              active="True" customize_show="True">
+        <xpath expr="//div[@id='user_wishlist']" position="inside">
+            <a t-attf-href="/my/wish-list" role="menuitem" data-toggle="tooltip" title="WishList">
+                <span class="fa fa-heart fa_user_menu"/>
+            </a>
+        </xpath>
+    </template>
+
+    <!-- Header Layout Language Flag Option -->
+    <template id="website_language_flag_mid_header" inherit_id="website.layout" name="Show Language Flag"
+              active="False" customize_show="True">
+        <xpath expr="//div[@class='navbar-header']" position="inside">
+            <div class="lang_flag text-center">
+                <t t-call="website_language_flag_73lines.language_flags"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Header Layout Pricelist List Option -->
+    <template id="website_pricelist_list_mid_header" inherit_id="website.layout" name="Show Pricelist"
+              active="True" customize_show="True">
+        <xpath expr="//div[@class='navbar-header']" position="inside">
+            <div class="pricelist_lst text-center">
+                <t t-call="website_sale.pricelist_list"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Mid Header Show Logo Option -->
+    <template id="website_logo_show_mid_header" inherit_id="website_header_layout_73lines.mid_header"
+              customize_show="True" active="True" name="Show Logo">
+        <xpath expr="//div[@id='mid-header-bottom']/div/div/div[@id='mid-header-bottom-left']" position="inside">
+            <div class="col-md-12 mt8 mb8 text-center">
+                <a href="/" class="navbar-brand logo">
+                    <img src="/logo.png" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

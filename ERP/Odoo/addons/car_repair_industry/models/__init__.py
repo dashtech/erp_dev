@@ -1,0 +1,15 @@
+import survey
+import custom_sale
+import fleet_repair
+import fleet_diagnose
+import fleet_workorder
+import fleet_fleet
+import voucher
+import bus
+import product
+import be_dynamic_mapping
+import notification_config
+import purchase
+import stock_picking
+import res_users
+import config

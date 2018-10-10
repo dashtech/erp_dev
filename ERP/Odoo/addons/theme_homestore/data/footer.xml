@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<data>
+
+		<template id="website.footer_custom" inherit_id="website.layout"
+			name="Footer">
+			<xpath expr="//div[@id='footer']" position="replace">
+				<div class="oe_content" id="footer">
+					<div class="footer-container">
+						<div class="footer-top">
+							<div class="container">
+								<div class="row">
+									<div class="about-us-footer">
+										<img src="/theme_homestore/static/src/image/footer_logo.png"
+											class="img img-responsive" />
+										<p>
+											Excepteur sint occaecat cupidatat non proident, sunt in
+											culpa
+											qui officia deserunt mollit anim id est laborum. Sed
+											ut
+											<br />
+											perspiciatis unde omnis iste natus error sit voluptatem
+											accusantium doloremque laudantium
+										</p>
+									</div>
+
+									<div class="social-footer">
+										<div class="socials-wrap">
+
+
+											<ul>
+												<li class="li-social facebook-social">
+													<a t-att-href="website.social_facebook" t-if="website.social_facebook">
+														<span class="fa fa-facebook icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social twitter-social">
+													<a t-att-href="website.social_twitter" t-if="website.social_twitter">
+														<span class="fa fa-twitter icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social google-social">
+													<a t-att-href="website.social_googleplus" t-if="website.social_googleplus"
+														rel="publisher">
+														<span class="fa fa-google-plus icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social linkedin-social">
+													<a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+														<span class="fa fa-linkedin icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social pinterest-social">
+													<a t-att-href="website.social_youtube" t-if="website.social_youtube">
+														<span class="fa fa-pinterest icon-social"></span>
+
+													</a>
+												</li>
+											</ul>
+
+
+
+
+										</div>
+
+									</div>
+
+									<div class="support-footer">
+										<ul class="list-support">
+											<li>
+												<a href="#" title="Information">Information</a>
+											</li>
+											<li>
+												<a href="#" title="Support Center">Support Center</a>
+											</li>
+											<li>
+												<a href="#" title="Shipping Info ">Shipping Info </a>
+											</li>
+											<li>
+												<a href="#" title="My Account">My Account</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+					<div id="back-top">
+					<a class="img-square" href="#wrap">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+				</div>
+				</div>
+			</xpath>
+		</template>
+
+
+		<template id="website.footer_default" inherit_id="website.footer_custom"
+			customize_show="False" active="False" name="Automatic Footer">
+			<xpath expr="//div[@id='footer']" position="replace">
+				<div id="footer" class="container hidden-print">
+					<div class="row">
+						<div class="col-md-4 col-lg-3">
+							<h4>Our products &amp; Services</h4>
+							<ul class="list-unstyled" id="products">
+								<li>
+									<a href="/">Home</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-4  col-lg-3" id="info">
+							<h4>Connect with us</h4>
+							<ul class="list-unstyled">
+								<li>
+									<a href="/page/website.contactus">Contact us</a>
+								</li>
+							</ul>
+							<ul class="list-unstyled">
+								<li t-ignore="true">
+									<i class="fa fa-phone"></i>
+									<span t-field="res_company.phone"></span>
+								</li>
+								<li t-ignore="true">
+									<i class="fa fa-envelope"></i>
+									<span t-field="res_company.email"></span>
+								</li>
+							</ul>
+							<h2>
+								<a t-att-href="website.social_facebook" t-if="website.social_facebook">
+									<i class="fa fa-facebook-square" />
+								</a>
+								<a t-att-href="website.social_twitter" t-if="website.social_twitter">
+									<i class="fa fa-twitter" />
+								</a>
+								<a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+									<i class="fa fa-linkedin" />
+								</a>
+								<a t-att-href="website.social_youtube" t-if="website.social_youtube">
+									<i class="fa fa-youtube-play" />
+								</a>
+								<a t-att-href="website.social_googleplus" t-if="website.social_googleplus"
+									rel="publisher">
+									<i class="fa fa-google-plus-square" />
+								</a>
+								<a t-att-href="website.social_github" t-if="website.social_github">
+									<i class="fa fa-github" />
+								</a>
+							</h2>
+						</div>
+						<div class="col-md-4 col-lg-5 col-lg-offset-1">
+							<h4>
+								<span t-field="res_company.name" />
+								<small>
+									-
+									<a href="/page/website.aboutus">About us</a>
+								</small>
+							</h4>
+							<div>
+								<p>
+									We are a team of passionate people whose goal is to improve
+									everyone's
+									life through disruptive products. We build great
+									products to solve
+									your
+									business problems.
+								</p>
+								<p>
+									Our products are designed for small to medium size companies
+									willing to optimize
+									their performance.
+								</p>
+							</div>
+							<t t-call="website.language_selector" />
+						</div>
+					</div>
+				</div>
+
+				<div id="back-top">
+					<a class="img-square" href="#wrap">
+						<i class="fa fa-chevron-up"></i>
+					</a>
+				</div>
+
+			</xpath>
+		</template>
+
+		<!-- copy right -->
+		<template id="website.layout_footer_copyright" inherit_id="website.layout"
+			name="Footer Copyright">
+			<xpath expr="//div[contains(@id, 'footer')]" position="inside">
+				<section id="section3" class="footer-bottom-padding">
+					<div class="container mt16 mb8">
+						<div class=" pull-right" t-ignore="true" t-if="not editable">
+							Create a
+							<a href="http://www.odoo.com/page/website-builder">free website</a>
+							with
+							<a class="label label-danger" href="http://www.odoo.com/page/website-builder">Odoo</a>
+						</div>
+						<div class="pull-left text-muted" itemscope="itemscope"
+							itemtype="http://schema.org/Organization">
+							Copyright &amp;copy;
+							<span t-field="res_company.name" itemprop="name">Company name
+							</span>
+						</div>
+
+						<div class="pull-right">
+							<t t-call="website.language_selector" />
+						</div>
+					</div>
+				</section>
+			</xpath>
+		</template>
+	</data>
+</odoo>

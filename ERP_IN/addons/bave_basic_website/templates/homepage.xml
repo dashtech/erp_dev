@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="basic_remove_btek_show_sign_in" customize_show="True"
+              inherit_id="btek_website_menu.btek_show_sign_in"
+              name="Show Sign In" active="True">
+        <xpath expr="//a[@t-attf-href='/web/login']" position="replace">
+        </xpath>
+    </template>
+
+    <template id="basic_remove_footer_custom" customize_show="True"
+              inherit_id="btek_website_menu.footer_custom"
+              name="Show Sign In" active="True">
+        <xpath expr="//div[@class='contact-info']//ul" position="replace">
+        </xpath>
+    </template>
+
+    <template id="basic_remove_layout_change_header"
+              customize_show="True"
+              inherit_id="btek_website_menu.layout_change_header"
+              name="Show Sign In" active="True">
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id']" position="replace">
+        </xpath>
+    </template>
+
+</odoo>

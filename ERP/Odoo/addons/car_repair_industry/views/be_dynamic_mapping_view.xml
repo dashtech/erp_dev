@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="be_dynamic_mapping_form" model="ir.ui.view">
+        <field name="name">be.dynamic.mapping.form</field>
+        <field name="model">be.dynamic.mapping</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="view_type"/>
+                            <field name="view_code"/>
+                            <field name="view_ref_id"/>
+                            <field name="erp_model"/>
+                        </group>
+                        <group>
+                            <field name="erp_ref_id"/>
+                            <field name="value"/>
+                            <field name="state"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="be_dynamic_mapping_tree" model="ir.ui.view">
+        <field name="name">be.dynamic.mapping.tree</field>
+        <field name="model">be.dynamic.mapping</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="view_type"/>
+                <field name="view_code"/>
+                <field name="view_ref_id"/>
+                <field name="erp_model"/>
+                <field name="erp_ref_id"/>
+                <field name="value"/>
+                <field name="state"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="be_dynamic_mapping_action"
+        model="ir.actions.act_window">
+        <field name="name">Be dynamic mapping</field>
+        <field name="res_model">be.dynamic.mapping</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="be_dynamic_mapping_menu" sequence="20"
+              parent="car_repair_industry.menu_fleet_config_menu"
+              action="be_dynamic_mapping_action"
+              groups="base.group_no_one"/>
+
+</odoo>

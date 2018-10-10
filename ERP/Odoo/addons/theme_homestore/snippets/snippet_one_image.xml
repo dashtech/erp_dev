@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="One Image Block" id="snippet_one_image">
+			<section class="mt32 mb32 section-img">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<img src="/theme_homestore/static/src/image/image5.jpg"
+								class="img img-responsive" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</template>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="car_repair_industry.menu_fleet_repair_submenu"
+            model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [])]"/>
+    </record>
+
+    <record id="car_repair_industry.menu_quotation_sub"
+            model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="car_repair_industry.menu_upsell"
+            model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="car_repair_industry.menu_fleet_workorder_submenu"
+            model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="purchase.menu_purchase_rfq" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <record id="purchase.product_product_menu" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [])]"/>
+    </record>
+
+    <record id="purchase.menu_procurement_partner_contact_form" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <!--<record id="purchase.menu_procurement_management_supplier_name" model="ir.ui.menu">-->
+        <!--<field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>-->
+    <!--</record>-->
+    <record id="purchase_requisition.menu_purchase_requisition_pro_mgt" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <record id="purchase.menu_product_pricelist_action2_purchase" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <record id="purchase.menu_purchase_control" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+    <record id="purchase.menu_purchase_config" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <record id="purchase.menu_procurement_management_supplier_name" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, False, [])]"/>
+    </record>
+
+</odoo>

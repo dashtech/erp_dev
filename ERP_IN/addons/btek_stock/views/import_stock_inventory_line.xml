@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="import_stock_inventory_line_form_view" model="ir.ui.view">
+        <field name="name">import.stock.inventory.line.form.view</field>
+        <field name="model">import.stock.inventory.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible="1"/>
+                    <field name="stock_inventory_id" invisible="1"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname"
+                           invisible="1"/>
+                    <field name="datas"
+                           filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_stock_inventory_line" type="object"
+                            string="Import stock inventory line"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_stock_inventory_line" model="ir.actions.act_window">
+        <field name="name">Import stock inventory line</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.stock.inventory.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="stock_inventory_form_change" model="ir.ui.view">
+        <field name="name">stock.inventory.form.change</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='line_ids']" position="before">
+                <button name="open_wizard_import_stock_inventory_line"
+                        type="object"
+                        string="Import Product"
+                        class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[1]/field[@name='line_ids']/tree" position="attributes">
+                <attribute name="class">col_size</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+		<!-- Category Menu -->
+		<template id="website_product_categ_menu_and_banner_73lines.website_category_menu"  inherit_id="website.layout" customize_show="False" active="False"
+              name="Show Category Menu"></template>
+		
+		<!-- Company Info -->
+        <template
+            id="website_header_layout_73lines.website_user_company_contact_mid_header"
+            inherit_id="website_header_layout_73lines.mid_header" name="Mid Header Company Contact">
+            <xpath
+                expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-left']"
+                position="inside">
+
+            </xpath>
+            <xpath
+                expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-center']"
+                position="inside">
+            </xpath>
+            <xpath
+                expr="//div[@id='mid-header-top']/div/div/div[@id='mid-header-top-right']"
+                position="inside">
+            </xpath>
+        </template>
+        
+         <template id="theme_homestore_mid_header" inherit_id="website_header_layout_73lines.mid_header">
+            <xpath expr="//div[@id='mid-header-top-left']"
+                position="attributes">
+                <attribute name="class">col-md-4 col-sm-3 hidden-xs
+                </attribute>
+            </xpath>
+            <xpath expr="//div[@id='mid-header-top-center']"
+                position="attributes">
+                <attribute name="class">display:none</attribute>
+            </xpath>
+            <xpath expr="//div[@id='mid-header-top-right']"
+                position="attributes">
+                <attribute name="class">col-md-7 col-xs-12 pull-right pad0 col-sm-7 mt8
+                </attribute>
+            </xpath>
+            <xpath expr="//div[@id='mid-header-bottom']" position="attributes">
+            	<attribute name="style">display:none;</attribute>
+            </xpath>
+        </template>
+
+		<!-- User Access -->
+		<template id="website_header_layout_73lines.website_user_access_mid_header"
+			inherit_id="website_header_layout_73lines.mid_header" name="Header Layout User ShortCut Options">
+			<xpath expr="//div[@id='mid-header-top-right']" position="inside">
+				
+				<div class="text-center" id="user_access">
+					
+					<t t-if="website.user_id != user_id">
+						
+						<div class="col-md-3 col-sm-3 col-xs-12 pad05 " id="user_name">
+							<b>
+								<span
+									t-esc="(len(user_id.name)&gt;25) and (user_id.name[:23]+'...') or user_id.name" />
+							</b>
+						</div>
+
+						<div class="col-md-2 col-sm-2 col-xs-4 display-header  pad05" id="user_account">
+							<a href="/my/home">Account</a>
+						</div>
+						<div class="col-md-2 col-sm-2 col-xs-4 display-header  pad05" id="user_wishlist">
+							
+						</div>
+						<div class="col-md-2 col-sm-2 display-header col-xs-4   pad0" id="user_logout">
+							<a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a>
+						</div>
+					</t>
+					<t t-if="website.user_id == user_id">
+						
+						<div class="col-md-3 col-sm-2 display-header  pad05" id="user_sign_in" groups="base.group_public">
+							
+						</div>
+						<div class="col-md-2 col-sm-2 display-header  pad05" id="user_register">
+							
+						</div>
+						<div class="col-md-2 col-sm-2 display-header  pad05" id="user_account">
+							<a href="/my/home">Account</a>
+						</div>
+					</t>
+				</div>
+			</xpath>
+		</template>
+		<!-- Language -->
+
+		<template id="website_header_layout_73lines.website_language_flag_mid_header"
+			inherit_id="website_header_layout_73lines.mid_header" name="Show Language Flag"
+			active="True" customize_show="True" priority="90">
+			<xpath expr="//div[@id='mid-header-top-right']" position="inside">
+				<div class=" pull-right" id="language_flag">
+					<div>
+						 <t t-call="website_language_flag_73lines.language_flags"/>
+					</div>
+				</div>
+				
+			</xpath>
+		</template>
+		<template id="theme_homestore_language" inherit_id="website_language_flag_73lines.language_flags">
+			<xpath expr="//t/img" position="replace">
+				<span t-field="lg.name" />
+			</xpath>
+			<xpath expr="//t/li/a/img" position="replace">
+				<span t-field="lg.name" />
+			</xpath>
+			
+		</template>
+		<!-- Price LIst -->
+		 <template id="website_header_layout_73lines.website_pricelist_list_mid_header" inherit_id="website_header_layout_73lines.mid_header" name="Show Pricelist"
+              active="True" customize_show="True">
+        <xpath expr="//div[@id='mid-header-top-right']" position="inside">
+           <div class=" pull-right" id="currency">
+                <t t-call="website_sale.pricelist_list"/>
+            </div>
+        </xpath>
+    </template>
+		
+		<!-- Logo in Navbar -->
+
+
+		 <template id="website_header_layout_73lines.website_logo_show_mid_header" inherit_id="website_header_layout_73lines.mid_header"
+              customize_show="False" active="False" name="Show Logo">
+        
+         </template>
+     <template
+            id="theme_homestore_show_logo"
+            inherit_id="website.layout" customize_show="True" active="True"
+            name="Show Logo">
+            <xpath expr="//div[@class='navbar-header']"
+                position="inside">
+                <a href="/" class="logo">
+                    <img class="img img-responsive" src="/logo.png" t-att-alt="'Logo of %s' % res_company.name"
+                        t-att-title="res_company.name" />
+                </a>
+            </xpath>
+        </template>
+		 <template id="nav_left" inherit_id="website.layout" name="Navbar Right" priority="100">
+			 <xpath
+                expr="//div[@class='collapse navbar-collapse navbar-top-collapse']/ul[1]"
+                position="before">
+				<ul class="nav navbar-nav navbar-right cart" id="nav_right">
+					<li class="dropdown">
+						 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="fa fa-search"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+								<li>
+								  <t t-call="website_sale.search" />
+								</li>
+						</ul> 
+					</li>
+					<li>
+						 <t t-call="website_header_layout_73lines.website_mid_header_add_to_cart"/>
+					</li>
+				</ul>
+			</xpath>
+		</template> 
+		 <template name="Search hidden fields" id="website_sale.search">
+            <form action="/shop" method="get" t-att-class="search_class">
+                <t t-if="attrib_values">
+                    <t t-foreach="attrib_values" t-as="a">
+                        <input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+                    </t>
+                </t>
+                <t t-call="website.website_search_box" />
+            </form>
+        </template>
+		 <template id="theme_homestore_sign_in" inherit_id="website_header_layout_73lines.website_sign_in_mid_header">
+            <xpath expr="//div[@id='user_sign_in']/a" position="replace">
+                <a href="/web/login">Sign in</a>
+            </xpath>
+        </template>
+        
+        <template id="theme_homestore_register" inherit_id="website_header_layout_73lines.website_register_mid_header">
+            <xpath expr="//div[@id='user_register']/a" position="replace">
+                <a href="/web/signup">Register</a>
+            </xpath>
+        </template>
+        
+        <template id="theme_homestore_whishlist" inherit_id="website_header_layout_73lines.website_wishlist_mid_header">
+            <xpath expr="//div[@id='user_wishlist']/a" position="replace">
+                <a t-attf-href="/my/wish-list" role="menuitem" data-toggle="tooltip" title="WishList">
+                    Whishlist
+                </a>
+            </xpath>
+        </template>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Give Space besides Add to Cart button -->
+    <template id="product_side_block" inherit_id="website_sale.product" name="Product Side Block" active="False" customize_show="True">
+        <xpath expr="//div[contains(@class, 'col-sm-7')]" position="attributes">
+            <attribute name="class">col-sm-5</attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="class">col-sm-5 col-lg-3 col-lg-offset-1</attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']/div[2]" position="inside">
+            <div class="col-sm-2 col-lg-3 oe_structure">
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Description & Added again with Some Style :D -->
+    <template id="product_description_new_style" inherit_id="website_sale.product" name="Product Info Tabs">
+        <xpath expr="//div[@t-field='product.website_description']" position="replace"></xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="data-name">product_details</attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']" position="inside">
+            <div id="product_description_reviews" class="mt8">
+                <ul class="nav nav-tabs">
+                    <li class="active" id="li-full-desc">
+                        <a href="#full-desc" data-toggle="tab"><strong>Description</strong></a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="full-desc">
+                        <div itemprop="description" t-field="product.website_description" class="oe_structure mt16" id="product_full_description" />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Remove Default Product Discussion & Rating -->
+    <template id="website_sale.product_comment" inherit_id="website_sale.product" active="False" customize_show="False" name="Discussion and Rating">
+    </template>
+
+    <!-- Added Discussion & Rating Option in Customize & Display it in Tabs Style -->
+    <template id="product_comment_new" inherit_id="website_product_page_layout_73lines.product_description_new_style"
+              active="False" customize_show="True" name="Discussion and Rating">
+        <xpath expr="//div[@data-name='product_details']" position="inside">
+            <t t-call="rating.rating_card">
+                <t t-set="rating_stat" t-value="rating_product"/>
+                <t t-set="max_rate" t-value="5"/>
+                <t t-set="min_rate" t-value="1"/>
+            </t>
+        </xpath>
+        <xpath expr="//li[@id='li-full-desc']" position="after">
+            <li id="li-comment">
+                <a href="#full-comment" data-toggle="tab"><strong>Discussion and Rating</strong></a>
+            </li>
+        </xpath>
+        <xpath expr="//div[@id='full-desc']" position="after">
+            <div class="tab-pane fade" id="full-comment">
+                <div class="row col-md-10 col-md-offset-1">
+                    <div class="text-muted">
+                        <h3 class="fa fa-comment-o">
+                            <a id="comments">
+                                <t t-if="len(product.website_message_ids) &lt;= 1" ><t t-esc="len(product.website_message_ids)"/> comment</t>
+                                <t t-if="len(product.website_message_ids) > 1"><t t-esc="len(product.website_message_ids)"/> comments</t>
+                            </a>
+                        </h3>
+                    </div>
+                    <t t-call="website_mail.message_thread">
+                        <t t-set="object" t-value="product"/>
+                        <t t-set="chatter_mode" t-value="'json'"/>
+                        <t t-set="rating_enable" t-value="True"/>
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

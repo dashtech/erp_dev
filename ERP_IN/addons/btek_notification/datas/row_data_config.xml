@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="only_general_notify_configuration"
+            model="general.notify.configuration">
+    </record>
+
+    <record id="send_notify_message_cron" model="ir.cron">
+            <field name="name">Send notify message</field>
+            <field eval="True" name="active" />
+            <field name="user_id" ref="base.user_root" />
+            <field name="interval_number">2</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall" />
+            <field name="model"><notify class="model configurati"></notify>on</field>
+            <field name="function">run_and_send</field>
+            <field name="args">()</field>
+        </record>
+
+    <record id="done_worker" model="ir.model">
+        <field name="name">done workorder</field>
+        <field name="model_id" ref="model_fleet_workorder" />
+        <field name="log_type" eval="full" />
+        <field name="action_id" ref="model_fleet_workorder" />
+        <field name="log_read" eval="False" />
+        <field name="log_write" eval="True" />
+        <field name="log_delete" eval="True" />
+        <field name="log_create" eval="True" />
+        <field name="model">notify.model.configuration</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,1 @@
+import wizard_setup_consignment

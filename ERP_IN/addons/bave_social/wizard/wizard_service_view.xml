@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_service_form" model="ir.ui.view">
+        <field name="name">wizard_service_form</field>
+        <field name="model">wizard.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="product_ids" nolable="True" domain="[('type', '=', 'service')]"/>
+                </group>
+                <footer>
+                    <button name="action_ok" type="object"  string="Done" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel" class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_service" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">wizard.service</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="wizard_service_form"/>
+        <field name="domain">[]</field>
+    </record>
+
+</odoo>

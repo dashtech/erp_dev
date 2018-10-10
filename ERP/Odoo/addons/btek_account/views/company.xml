@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="res_company_setup_account_form_view">
+        <field name="name">res.company.setup.account.form.view</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page" position="after">
+                <page name="setup_account" string="Setup account">
+                    <group>
+                        <group>
+                            <button name="open_setup_account_account"
+                                    type="object" class="oe_link"
+                                    string="Copy account from other company"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="wizard_setup_account_account_form_view">
+        <field name="name">wizard.setup.account.account.form.view</field>
+        <field name="model">wizard.setup.account.account</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="from_company_id"/>
+                        <field name="to_company_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="setup_account_account"
+                            class="oe_highlight"
+                            string="Copy" type="object"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_setup_account_account_action" model="ir.actions.act_window">
+        <field name="name">Copy account from other company</field>
+        <field name="res_model">wizard.setup.account.account</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
+
+

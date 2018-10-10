@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="to_income_statement_form_excel" model="ir.ui.view">
+            <field name="name">To Income Statement Form Excel</field>
+            <field name="model">to.income.statement</field>
+            <field name="inherit_id" ref="account.account_common_report_view"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='target_move']" position="after">
+                    <field name="to_decision"/>
+                </xpath>
+                <xpath expr="//footer" position="replace">
+                    <footer>
+						<button name="print_excel" string="Print"
+                                type="object" class="oe_highlight"/>
+						or
+                        <button name="preview_excel" string="Preview"
+                                type="object" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel" />
+            		</footer>
+                </xpath>
+                <xpath expr="//field[@name='journal_ids']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+            </field>
+        </record>
+
+        <record id="income_statement_report_action" model="ir.actions.act_window">
+            <field name="name">KẾT QUẢ HĐSX KINH DOANH</field>
+            <field name="res_model">to.income.statement</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_to_report_type': 'income_statement'}</field>
+            <field name="view_id" ref="to_income_statement_form_excel"/>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="menu_financial_report" name="Báo cáo tài chính"
+                  sequence="4" parent="account.menu_finance_reports"
+                  groups="account.group_account_user"/>
+        <menuitem id="menu_income_statement_report" name="BC Kết quả HĐSXKD"
+                  sequence="1" parent="menu_financial_report"
+                  action="income_statement_report_action" groups="account.group_account_user"/>
+        <report id="income_statement_report"
+                model="to.income.statement"
+                string="BC Kết quả HĐSXKD"
+                report_type="xlsx"
+                name="btek_financial_report.is_report"
+                file="btek_financial_report.IncomeStatementReport"
+                attachment_use="False"/>
+
+    </data>
+</odoo>

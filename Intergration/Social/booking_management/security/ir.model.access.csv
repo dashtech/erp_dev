@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_booking_group_garage,booking_group_garage,model_booking,cargo_management.group_garage,1,1,0,0

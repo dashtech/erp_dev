@@ -1,0 +1,1090 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bave_social
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-16 03:48+0000\n"
+"PO-Revision-Date: 2018-04-16 11:21+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_abount_me
+msgid "Abount me"
+msgstr "Thông tin về tôi"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_active
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_active
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_active
+#: model:ir.model.fields,field_description:bave_social.field_free_service_active
+#: model:ir.model.fields,field_description:bave_social.field_member_active
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_active
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_active
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_active
+#: model:ir.model.fields,field_description:bave_social.field_services_active
+#: model:ir.model.fields,field_description:bave_social.field_voucher_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_address
+#: model:ir.model.fields,field_description:bave_social.field_member_address
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_agent_numeric
+msgid "Agent numeric"
+msgstr "Agent numeric"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_album
+#: model:ir.model.fields,field_description:bave_social.field_images_album_id
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Album"
+msgstr "Album"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_album_ids
+msgid "Albums"
+msgstr "Albums"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_attachment_ids
+msgid "Attachments"
+msgstr "Đính kèm"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_avatar
+#: model:ir.model.fields,field_description:bave_social.field_free_service_avatar
+#: model:ir.model.fields,field_description:bave_social.field_free_service_avatar_medium
+#: model:ir.model.fields,field_description:bave_social.field_member_avatar
+#: model:ir.model.fields,field_description:bave_social.field_member_avatar_medium
+#: model:ir.model.fields,field_description:bave_social.field_member_banner_medium
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_avatar
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_avatar_medium
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_avatar
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_avatar_medium
+#: model:ir.model.fields,field_description:bave_social.field_services_avatar
+#: model:ir.model.fields,field_description:bave_social.field_services_avatar_medium
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_avatar_medium
+msgid "Avatar medium"
+msgstr "Avatar medium"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_avatar_small
+#: model:ir.model.fields,field_description:bave_social.field_free_service_avatar_small
+#: model:ir.model.fields,field_description:bave_social.field_member_avatar_small
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_avatar_small
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_avatar_small
+#: model:ir.model.fields,field_description:bave_social.field_services_avatar_small
+msgid "Avatar small"
+msgstr "Avatar small"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_banner
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_banner
+#: model:ir.model.fields,field_description:bave_social.field_voucher_banner
+msgid "Banner"
+msgstr "Banner"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_voucher_banner_medium
+msgid "Banner medium"
+msgstr "Banner medium"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_banner_small
+#: model:ir.model.fields,field_description:bave_social.field_voucher_banner_small
+msgid "Banner small"
+msgstr "Banner small"
+
+#. module: bave_social
+#: model:ir.module.category,description:bave_social.module_category_social
+msgid "Bave social."
+msgstr "Mạng xã hội Bave."
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_booking
+#: model:ir.ui.menu,name:bave_social.menu_action_booking
+#: model:ir.ui.menu,name:bave_social.root_menu_booking
+msgid "Booking Management"
+msgstr "Quản lý đặt lịch"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_booking
+msgid "Booking management"
+msgstr "Quản lý đặt lịch"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_booking_time
+msgid "Booking time"
+msgstr "Thời gian đặt lịch"
+
+#. module: bave_social
+#: selection:booking,channel:0
+msgid "Call"
+msgstr "Gọi điện"
+
+#. module: bave_social
+#: selection:booking,state:0
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+#: model:ir.ui.view,arch_db:bave_social.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_cancel_datetime
+msgid "Cancel datetime"
+msgstr "Thời gian hủy"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Car Vehicle Model"
+msgstr "Dòng xe"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_vehicle_id
+msgid "Car plate"
+msgstr "Biển số xe"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_search_view
+msgid "Car vehicle model"
+msgstr "Dòng xe"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_car_vehicle_model_id
+msgid "Car vehicle model id"
+msgstr "Dòng xe"
+
+#. module: bave_social
+#: selection:booking,channel:0
+msgid "Cargo"
+msgstr "Cargo"
+
+#. module: bave_social
+#: selection:voucher,type:0
+msgid "Cash"
+msgstr "Tiền mặt"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_services_service_catalog_id
+msgid "Catalog"
+msgstr "Danh mục"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_channel
+#: model:ir.ui.view,arch_db:bave_social.booking_search_view
+msgid "Channel"
+msgstr "Kênh"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_closetime
+msgid "Closetime"
+msgstr "Thời gian đóng cửa"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_car_color_id
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_commentcount
+msgid "Commentcount"
+msgstr "Số bình luận"
+
+#. module: bave_social
+#: selection:booking,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Confirm booking"
+msgstr "Xác nhận đặt lịch"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Connect Customer"
+msgstr "Kết nối với khách hàng"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_user_id
+msgid "Corresponding users"
+msgstr "Người tiếp nhận"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_country_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_country_id
+msgid "Country id"
+msgstr "Quốc gia"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.customer_feedback_search_view
+msgid "Create date"
+msgstr "Ngày tạo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_booking_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_free_service_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_images_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_member_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_services_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_create_uid
+#: model:ir.model.fields,field_description:bave_social.field_voucher_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_create_date
+#: model:ir.model.fields,field_description:bave_social.field_booking_create_date
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_create_date
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_create_date
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_create_date
+#: model:ir.model.fields,field_description:bave_social.field_free_service_create_date
+#: model:ir.model.fields,field_description:bave_social.field_images_create_date
+#: model:ir.model.fields,field_description:bave_social.field_member_create_date
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_create_date
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_create_date
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_create_date
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_create_date
+#: model:ir.model.fields,field_description:bave_social.field_services_create_date
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_create_date
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_create_date
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_create_date
+#: model:ir.model.fields,field_description:bave_social.field_voucher_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_member_id
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_customer_feedback
+msgid "Customer Feedback"
+msgstr "Phản hồi của khách hàng"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_customer_feedback
+#: model:ir.ui.menu,name:bave_social.menu_action_customer_feedback
+msgid "Customer Feedback Management"
+msgstr "Quản lý phản hồi của khách hàng"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_db
+msgid "Db"
+msgstr "Db"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_description
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_description
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_description
+#: model:ir.model.fields,field_description:bave_social.field_free_service_description
+#: model:ir.model.fields,field_description:bave_social.field_images_description
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_description
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_description
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_description
+#: model:ir.model.fields,field_description:bave_social.field_services_description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_detail
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_device_id
+msgid "Device id"
+msgstr "Thiết bị"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_device_model
+msgid "Device model"
+msgstr "Dòng thiết bị"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_display_name
+#: model:ir.model.fields,field_description:bave_social.field_booking_display_name
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_display_name
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_display_name
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_display_name
+#: model:ir.model.fields,field_description:bave_social.field_free_service_display_name
+#: model:ir.model.fields,field_description:bave_social.field_images_display_name
+#: model:ir.model.fields,field_description:bave_social.field_member_display_name
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_display_name
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_display_name
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_display_name
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_display_name
+#: model:ir.model.fields,field_description:bave_social.field_services_display_name
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_display_name
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_display_name
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_display_name
+#: model:ir.model.fields,field_description:bave_social.field_voucher_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_district_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_district_id
+msgid "District"
+msgstr "Quận/Huyện"
+
+#. module: bave_social
+#: selection:booking,state:0
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+#: model:ir.ui.view,arch_db:bave_social.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_done_datetime
+msgid "Done datetime"
+msgstr "Thời gian hoàn thành"
+
+#. module: bave_social
+#: selection:booking,state:0 selection:request.quotation,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_email
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_voucher_end_date
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: bave_social
+#: selection:booking,gender:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_first_name
+msgid "First name"
+msgstr "Tên"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_free_service
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_free_service_ids
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Free service"
+msgstr "Dịch vụ miễn phí"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_full_name
+msgid "Full name"
+msgstr "Tên đầy đủ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_g_place_id
+msgid "G place id"
+msgstr "G place id"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_id_8841
+msgid "Gara type"
+msgstr "Loại gara"
+
+#. module: bave_social
+#: model:res.groups,name:bave_social.group_garage
+msgid "Garage"
+msgstr "Garage"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_gender
+#: model:ir.ui.view,arch_db:bave_social.booking_search_view
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: bave_social
+#: selection:voucher,type:0
+msgid "Gift"
+msgstr "Quà tặng"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_search_view
+#: model:ir.ui.view,arch_db:bave_social.customer_feedback_search_view
+msgid "Group by"
+msgstr "Nhóm theo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_high_school
+msgid "High school"
+msgstr "Trường học"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_home_url
+msgid "Home url"
+msgstr "Đường dẫn trang chủ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_hotline
+msgid "Hotline"
+msgstr "Hotline"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_id
+#: model:ir.model.fields,field_description:bave_social.field_booking_id
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_id
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_id
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_id
+#: model:ir.model.fields,field_description:bave_social.field_free_service_id
+#: model:ir.model.fields,field_description:bave_social.field_images_id
+#: model:ir.model.fields,field_description:bave_social.field_member_id
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_id
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_services_id
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_id
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_id
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_id
+#: model:ir.model.fields,field_description:bave_social.field_voucher_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.album_form
+msgid "Image"
+msgstr "Ảnh"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_images_image
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_image_ids
+#: model:ir.ui.view,arch_db:bave_social.request_quotation_form
+msgid "Images"
+msgstr "Ảnh"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_introduction
+msgid "Introduction"
+msgstr "Giới thiệu"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_job_title
+msgid "Job title"
+msgstr "vị trí nghề nghiệp"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album___last_update
+#: model:ir.model.fields,field_description:bave_social.field_booking___last_update
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer___last_update
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model___last_update
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback___last_update
+#: model:ir.model.fields,field_description:bave_social.field_free_service___last_update
+#: model:ir.model.fields,field_description:bave_social.field_images___last_update
+#: model:ir.model.fields,field_description:bave_social.field_member___last_update
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation___last_update
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog___last_update
+#: model:ir.model.fields,field_description:bave_social.field_service_provider___last_update
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ___last_update
+#: model:ir.model.fields,field_description:bave_social.field_services___last_update
+#: model:ir.model.fields,field_description:bave_social.field_social_connect___last_update
+#: model:ir.model.fields,field_description:bave_social.field_social_setting___last_update
+#: model:ir.model.fields,field_description:bave_social.field_vehicle___last_update
+#: model:ir.model.fields,field_description:bave_social.field_voucher___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_booking_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_free_service_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_images_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_member_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_services_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_write_uid
+#: model:ir.model.fields,field_description:bave_social.field_voucher_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_write_date
+#: model:ir.model.fields,field_description:bave_social.field_booking_write_date
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_write_date
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_write_date
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_write_date
+#: model:ir.model.fields,field_description:bave_social.field_free_service_write_date
+#: model:ir.model.fields,field_description:bave_social.field_images_write_date
+#: model:ir.model.fields,field_description:bave_social.field_member_write_date
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_write_date
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_write_date
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_write_date
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_write_date
+#: model:ir.model.fields,field_description:bave_social.field_services_write_date
+#: model:ir.model.fields,field_description:bave_social.field_social_connect_write_date
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_write_date
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_write_date
+#: model:ir.model.fields,field_description:bave_social.field_voucher_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_last_name
+msgid "Last name"
+msgstr "Họ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_latitude
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_latitude
+msgid "Latitude"
+msgstr "Vĩ độ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_like_count
+msgid "Like count"
+msgstr "Số lượt thích"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_likecount
+msgid "Likecount"
+msgstr "Số lượt thích"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_login
+msgid "Login"
+msgstr "Đăng nhập"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_logo
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_logo
+msgid "Logo"
+msgstr "Biểu tượng"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_logo_medium
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_logo_medium
+msgid "Logo medium"
+msgstr "Logo medium"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_logo_small
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_logo_small
+msgid "Logo small"
+msgstr "Logo small"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_longitude
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_longitude
+msgid "Longitude"
+msgstr "Longitude"
+
+#. module: bave_social
+#: selection:booking,gender:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_manufacturer_id
+msgid "Manufacturer"
+msgstr "Nhà sản xuất"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Manufacturers"
+msgstr "Các nhà sản xuất"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_member
+#: model:ir.model.fields,field_description:bave_social.field_booking_member_id
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_member_id
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_member_id
+#: model:ir.model.fields,field_description:bave_social.field_voucher_member_ids
+#: model:ir.ui.view,arch_db:bave_social.booking_search_view
+#: model:ir.ui.view,arch_db:bave_social.customer_feedback_search_view
+msgid "Member"
+msgstr "Thành viên"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.voucher_form
+msgid "Members"
+msgstr "Thành viên"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_mobile_phone
+#: model:ir.model.fields,field_description:bave_social.field_member_mobile_phone
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_mobile_phone
+msgid "Mobile phone"
+msgstr "Số di động"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_model_id
+msgid "Model"
+msgstr "Dòng xe"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_model_ids
+msgid "Models"
+msgstr "Các dòng xe"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_images
+msgid "Multi Images"
+msgstr "Multi Images"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_name
+#: model:ir.model.fields,field_description:bave_social.field_car_manufacturer_name
+#: model:ir.model.fields,field_description:bave_social.field_car_vehicle_model_name
+#: model:ir.model.fields,field_description:bave_social.field_free_service_name
+#: model:ir.model.fields,field_description:bave_social.field_member_name
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_name
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_categ_name
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_name
+#: model:ir.model.fields,field_description:bave_social.field_services_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_notify
+msgid "Notify"
+msgstr "Thông báo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_notify_email
+msgid "Notify email"
+msgstr "Thông báo thư điện tử"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_notify_mobile
+msgid "Notify mobile"
+msgstr "Thông báo qua di động"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_notify_time
+msgid "Notify time"
+msgstr "Thời gian thông báo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_notify_type
+msgid "Notify type"
+msgstr "Loại thông báo"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_opentime
+msgid "Opentime"
+msgstr "Thời gian mở cửa"
+
+#. module: bave_social
+#: selection:booking,channel:0 selection:booking,gender:0
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Other"
+msgstr "Khác"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_parent_id
+msgid "Parent"
+msgstr "Danh mục cha"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_password
+msgid "Password"
+msgstr "Mật khẩu"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_phone
+msgid "Phone"
+msgstr "Điện thoại"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_vehicle_id
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_plate
+msgid "Plate"
+msgstr "Biển số"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_plate_search
+msgid "Plate search"
+msgstr "Plate search"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_player_id
+msgid "Player id"
+msgstr "Player id"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_price
+#: model:ir.model.fields,field_description:bave_social.field_services_price
+msgid "Price"
+msgstr "Giá"
+
+#. module: bave_social
+#: selection:voucher,type:0
+msgid "Product"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_promotion_number
+msgid "Promotion number"
+msgstr "Promotion number"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_voucher
+#: model:ir.ui.menu,name:bave_social.menu_action_voucher
+#: model:ir.ui.menu,name:bave_social.root_menu_promotions
+msgid "Promotions"
+msgstr "Khuyến mại"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_provider_id
+msgid "Provider"
+msgstr "Provider"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_state_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_state_id
+msgid "Province"
+msgstr "Tỉnh/TP"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_province_id
+msgid "Province id"
+msgstr "Tỉnh"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_ranking
+#: model:ir.model.fields,field_description:bave_social.field_member_ranking
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_ranking
+#: model:ir.ui.view,arch_db:bave_social.customer_feedback_search_view
+msgid "Ranking"
+msgstr "Xếp hạng"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_ratecount
+msgid "Ratecount"
+msgstr "Số đánh giá"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Repair History"
+msgstr "Lịch sử sửa chữa"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.request_quotation_form
+#: selection:request.quotation,state:0
+msgid "Replied"
+msgstr "Đã trả lời"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_replied_datetime
+msgid "Replied datetime"
+msgstr "Thời gian trả lời"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_replied_user_id
+msgid "Replied user"
+msgstr "Người trả lời"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_request
+msgid "Request"
+msgstr "Yêu cầu"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_request_quotation
+#: model:ir.model,name:bave_social.model_request_quotation
+#: model:ir.ui.menu,name:bave_social.menu_action_request_quotation
+#: model:ir.ui.menu,name:bave_social.root_menu_request_quotation
+msgid "Request quotation"
+msgstr "Yêu cầu báo giá"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_name
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_name
+msgid "STT"
+msgstr "STT"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_services_ids
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_services_catalog_ids
+msgid "Service Catalog"
+msgstr "Danh mục dịch vụ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_customer_feedback_service_provider_id
+msgid "Service Provider"
+msgstr "Nhà cung cấp dịch vụ"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_service_catalog
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_service_catalog_ids
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Service catalog"
+msgstr "Danh mục dịch vụ"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_service_provider
+#: model:ir.model.fields,field_description:bave_social.field_booking_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_free_service_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_services_service_provider_id
+#: model:ir.model.fields,field_description:bave_social.field_voucher_service_provider_id
+#: model:ir.ui.menu,name:bave_social.menu_service_provider
+#: model:ir.ui.menu,name:bave_social.root_menu_service_provider
+msgid "Service provider"
+msgstr "Nhà cung cấp dịch vụ"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_services
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_service_ids
+#: model:ir.model.fields,field_description:bave_social.field_service_catalog_service_names
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_service_ids
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.booking_form_view
+msgid "Services catalog"
+msgstr "Danh mục dịch vụ"
+
+#. module: bave_social
+#: model:ir.ui.view,arch_db:bave_social.service_provider_form
+msgid "Sevices"
+msgstr "Các dịch vụ"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_sharecount
+msgid "Sharecount"
+msgstr "Số lượt chia sẻ"
+
+#. module: bave_social
+#: model:ir.module.category,name:bave_social.module_category_social
+#: model:ir.ui.menu,name:bave_social.root_menu_social
+msgid "Social"
+msgstr "Mạng xã hội"
+
+#. module: bave_social
+#: model:ir.actions.act_window,name:bave_social.action_social_setting
+#: model:ir.ui.menu,name:bave_social.menu_social
+msgid "Social setting"
+msgstr "Thiết lập mạng xã hội"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_spo_id
+msgid "Spo id"
+msgstr "Spo id"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_voucher_start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_state
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_voucher_stt
+msgid "Stt"
+msgstr "Stt"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_study_at
+msgid "Study at"
+msgstr "Học tập tại"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_study_degree
+msgid "Study degree"
+msgstr "Bằng cấp"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_title
+#: model:ir.model.fields,field_description:bave_social.field_voucher_title
+msgid "Title"
+msgstr "Tiêu đề"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_type
+#: model:ir.model.fields,field_description:bave_social.field_voucher_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_uid
+msgid "Uid"
+msgstr "Uid"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_social_setting_url
+msgid "Url"
+msgstr "Url"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_voucher_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_vehicle
+msgid "Vehicle"
+msgstr "Phương tiện"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_vehicle_number
+msgid "Vehicle number"
+msgstr "Số của phương tiện"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_request_quotation_vehicle_type
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_vehicle_type
+msgid "Vehicle type"
+msgstr "Loại phương tiện"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_album_view_count
+msgid "View count"
+msgstr "Số lượt xem"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_viewcount
+msgid "Viewcount"
+msgstr "Số lượt xem"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_vin_number
+msgid "Vin number"
+msgstr "Vin number"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_booking_ward_id
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_ward_id
+msgid "Ward"
+msgstr "Xã/phường"
+
+#. module: bave_social
+#: selection:booking,channel:0
+msgid "Web"
+msgstr "Web"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_service_provider_website
+msgid "Website"
+msgstr "Trang web"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_member_work_for
+msgid "Work for"
+msgstr "Làm việc cho"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_vehicle_year
+msgid "Year"
+msgstr "Năm"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_car_manufacturer
+msgid "car.manufacturer"
+msgstr "car.manufacturer"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_car_vehicle_model
+msgid "car.vehicle.model"
+msgstr "car.vehicle.model"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_images
+msgid "images"
+msgstr "Các ảnh"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_ir_attachment
+msgid "ir.attachment"
+msgstr "ir.attachment"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_service_provider
+msgid "service.provider"
+msgstr "service.provider"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_service_provider_categ
+msgid "service.provider.categ"
+msgstr "service.provider.categ"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_social_connect
+msgid "social.connect"
+msgstr "social.connect"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_social_setting
+msgid "social.setting"
+msgstr "social.setting"
+
+#. module: bave_social
+#: model:ir.model.fields,field_description:bave_social.field_images_title
+msgid "title"
+msgstr "Tiêu đề"
+
+#. module: bave_social
+#: model:ir.model,name:bave_social.model_voucher
+msgid "voucher"
+msgstr "voucher"

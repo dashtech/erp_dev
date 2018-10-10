@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="btek_function_form_view" model="ir.ui.view">
+        <field name="name">btek.function.form</field>
+        <field name="model">btek.function</field>
+        <field name="arch" type="xml">
+            <form string="Function">
+                <sheet>
+                    <group cosplan="4" col ="4">
+                        <field name="name" string="Function"/>
+                        <field name="active" string="Active"/>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="btek_function_tree_view" model="ir.ui.view">
+        <field name="name">btek.function.tree</field>
+        <field name="model">btek.function</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Function"/>
+                <field name="active" string="Active"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_function" model="ir.actions.act_window">
+        <field name="name">Btek Function</field>
+        <field name="res_model">btek.function</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_btek_function"
+              id="action_menu_action_btek_function" name="Btek Function"
+              parent="sales_team.menu_config_address_book"
+              sequence="2"/>
+
+    <record id="btek_career_form" model="ir.ui.view">
+        <field name="name">btek.career.form</field>
+        <field name="model">btek.career</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group cosplan="4" col ="4">
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="btek_career_tree" model="ir.ui.view">
+        <field name="name">btek.career.tree</field>
+        <field name="model">btek.career</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_career" model="ir.actions.act_window">
+        <field name="name">Btek Career</field>
+        <field name="res_model">btek.career</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_btek_career"
+              id="action_menu_action_btek_career" name="Btek Career"
+              parent="sales_team.menu_config_address_book"
+              sequence="4"/>
+
+</odoo>

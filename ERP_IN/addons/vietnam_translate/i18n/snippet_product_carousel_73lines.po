@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* snippet_product_carousel_73lines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-14 04:21+0000\n"
+"PO-Revision-Date: 2018-07-14 04:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.new_mini_products_add_to_cart
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.new_products_add_to_cart
+msgid "Add to Cart"
+msgstr "Thêm vào giỏ"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.s_object_carousel_customize_options
+msgid "Hide Add to Cart"
+msgstr "Hide Add to Cart"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.s_object_carousel_customize_options
+msgid "Hide Price"
+msgstr "Hide Price"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.s_object_carousel_customize_options
+msgid "Hide User Ratings"
+msgstr "Hide User Ratings"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.s_object_carousel_customize_options
+msgid "Hide WishList"
+msgstr "Hide WishList"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_product_is_best_seller
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_template_is_best_seller
+msgid "Is Best Seller ?"
+msgstr "Bán chạy nhất?"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_product_is_new
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_template_is_new
+msgid "Is New ?"
+msgstr "Mới ?"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_product_is_trending
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_template_is_trending
+msgid "Is Trending ?"
+msgstr "Xu hướng ?"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_product_is_on_sale
+#: model:ir.model.fields,field_description:snippet_product_carousel_73lines.field_product_template_is_on_sale
+msgid "Is on sale"
+msgstr "Đang được bán"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.filters,name:snippet_product_carousel_73lines.filter_new_product
+msgid "New Products"
+msgstr "VT-HH mới"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.filters,name:snippet_product_carousel_73lines.filter_on_sale_product
+msgid "On Sale Products"
+msgstr "On Sale Products"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.model,name:snippet_product_carousel_73lines.model_product_template
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.filters,name:snippet_product_carousel_73lines.filter_service_product
+msgid "Service Products"
+msgstr "Service Products"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.product_tab_carousel
+msgid "Tab 1"
+msgstr "Tab 1"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.product_tab_carousel
+msgid "Tab 2"
+msgstr "Tab 2"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.product_tab_carousel
+msgid "Tab 3"
+msgstr "Tab 3"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.filters,name:snippet_product_carousel_73lines.filter_trending_product
+msgid "Trending Products"
+msgstr "Trending Products"
+
+#. module: snippet_product_carousel_73lines
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.new_products_item_inherit
+#: model:ir.ui.view,arch_db:snippet_product_carousel_73lines.new_products_item_mini_inherit
+msgid "WishList"
+msgstr "WishList"
+

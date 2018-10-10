@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+        id="import_failed_xlsx"
+        model="hr.working.day.import"
+        string="Import failed"
+        report_type="xlsx"
+        name="btek_hr_working_day.import_failed.xlsx"
+        file="btek_hr_working_day.import_failed.xlsx"
+        attachment_use="False"/>
+</odoo>

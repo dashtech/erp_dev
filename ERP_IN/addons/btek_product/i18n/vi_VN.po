@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-17 10:33+0000\n"
+"PO-Revision-Date: 2018-09-17 10:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "<span class=\"o_stat_text\"> Products</span>"
+msgstr "<span class=\"o_stat_text\"> Vật tư - Hàng hóa</span>"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_form_view_inherit
+msgid "Account Income"
+msgstr "TK phải thu"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account Properties"
+msgstr "Tài sản tài khoản"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account Stock Properties"
+msgstr "Thuộc tính tài khoản kho"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_form_view_inherit
+msgid "Account defference"
+msgstr "TK chênh lệch giá"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_form_view_inherit
+msgid "Account expense"
+msgstr "TK chi phí"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account expense category"
+msgstr "TK TG Chi phí"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account input stock"
+msgstr "TK TG Kho"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account output stock"
+msgstr "TK Giá vốn"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Account stock valuation"
+msgstr "TK Kho"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_addr
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Category Type"
+msgstr "Kiểu Danh mục"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Category name"
+msgstr "Tên nhóm VT-HH"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_product_is_cost_item
+#: model:ir.model.fields,field_description:btek_product.field_product_template_is_cost_item
+msgid "Cost Item"
+msgstr "Hạng mục chi phí"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.view_product_account_purchase_inherit
+msgid "Customer tax"
+msgstr "TK thuế cho KH"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_product_form_view_change_hscode
+#: model:ir.ui.view,arch_db:btek_product.product_template_only_form_view_change_suggest
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_product_form_view_change_hscode
+#: model:ir.ui.view,arch_db:btek_product.product_template_only_form_view_change_suggest
+msgid "HS Code"
+msgstr "Mã nhà cung cấp"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_product_hs_code
+#: model:ir.model.fields,field_description:btek_product.field_product_template_hs_code
+msgid "Hs code"
+msgstr "Mã nhà cung cấp"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Inventory Valuation"
+msgstr "Định giá tồn kho"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Logistics"
+msgstr "Dịch vụ giao vận"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_origin_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "Other info"
+msgstr "Thông tin khác"
+
+#. module: btek_product
+#: model:ir.model,name:btek_product.model_product_product
+msgid "Product"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: btek_product
+#: model:ir.model,name:btek_product.model_product_category
+msgid "Product Category"
+msgstr "Nhóm VT-HH"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_form_view_inherit
+msgid "Product Code"
+msgstr "Mã sản phẩm"
+
+#. module: btek_product
+#: sql_constraint:product.product:0
+#: sql_constraint:product.template:0
+msgid "Product Code Must Be Unique !!!"
+msgstr "Mã sản phẩm đã tồn tại, bạn nên chọn mã khác !!!"
+
+#. module: btek_product
+#: model:ir.actions.act_window,name:btek_product.product_origin_action
+#: model:ir.ui.menu,name:btek_product.product_origin_action_menu
+msgid "Product Origin"
+msgstr "Nơi sản xuất"
+
+#. module: btek_product
+#: model:ir.model,name:btek_product.model_product_template
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_product_product_origin_id
+#: model:ir.model.fields,field_description:btek_product.field_product_template_product_origin_id
+msgid "Product origin"
+msgstr "Nơi sản xuất"
+
+#. module: btek_product
+#: model:ir.model.fields,field_description:btek_product.field_product_product_suggest_ids
+#: model:ir.model.fields,field_description:btek_product.field_product_template_suggest_ids
+msgid "Suggest product"
+msgstr "Sản phẩm gợi ý"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_only_form_view_change_suggest
+msgid "Suggest products"
+msgstr "Các VT-HH gợi ý"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.product_template_form_view_inherit
+msgid "Supplier tax"
+msgstr "TK thuế cho NCC"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "The following routes will apply to the products in this category taking into account parent categories:"
+msgstr "Bộ định tuyến (tuyến đường) dưới đây sẽ áp dụng cho các VT-HH trong nhóm này, có xem xét đến bộ định tuyến của nhóm cha:"
+
+#. module: btek_product
+#: model:ir.ui.view,arch_db:btek_product.bave_product_category_form_view
+msgid "e.g. Lamps"
+msgstr "ví dụ: Đèn"
+
+#. module: btek_product
+#: model:ir.model,name:btek_product.model_product_origin
+msgid "product.origin"
+msgstr "product.origin"
+

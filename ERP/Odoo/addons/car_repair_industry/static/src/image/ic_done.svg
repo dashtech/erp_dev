@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="29px" viewBox="0 0 27 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_done</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Tablet" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-QUAN-LY-SUA-CHUA" transform="translate(-960.000000, -155.000000)">
+            <g id="Group-9" transform="translate(297.000000, 155.000000)">
+                <g id="Group-11">
+                    <g id="Group-4" transform="translate(350.000000, 0.000000)">
+                        <g id="Group-3">
+                            <g id="Group-2">
+                                <g id="ic_done" transform="translate(326.500000, 14.500000) scale(1, -1) translate(-326.500000, -14.500000) translate(313.000000, 0.000000)">
+                                    <g id="Group-15">
+                                        <polygon id="Path-2" fill="#16C188" points="0 28.8686776 26.9610872 28.8686776 26.9610872 0"></polygon>
+                                        <polyline id="Path-3" stroke="#FFFFFF" stroke-width="2" transform="translate(18.974976, 19.530518) scale(1, -1) translate(-18.974976, -19.530518) " points="13.8881836 18.9448242 17.9863281 23.0197754 24.0617676 16.0412598"></polyline>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

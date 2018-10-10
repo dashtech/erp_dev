@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <record id="filter_service_product" model="ir.filters">
+        <field name="name">Service Products</field>
+        <field name="model_id">product.template</field>
+        <field name="domain">[('type', '=', 'service'), ('website_published', '=', True)]</field>
+        <field name="user_id" eval="False" />
+        <field name="context">{}</field>
+    </record>
+
+    <record id="filter_new_product" model="ir.filters">
+        <field name="name">New Products</field>
+        <field name="model_id">product.template</field>
+        <field name="domain">[('is_new', '=', True), ('website_published', '=', True)]</field>
+        <field name="user_id" eval="False" />
+        <field name="context">{}</field>
+    </record>
+
+    <record id="filter_on_sale_product" model="ir.filters">
+        <field name="name">Best Seller Products</field>
+        <field name="model_id">product.template</field>
+        <field name="domain">[('is_best_seller', '=', True), ('website_published', '=', True)]</field>
+        <field name="user_id" eval="False" />
+        <field name="context">{}</field>
+    </record>
+
+    <record id="filter_trending_product" model="ir.filters">
+        <field name="name">Trending Products</field>
+        <field name="model_id">product.template</field>
+        <field name="domain">[('is_trending', '=', True), ('website_published', '=', True)]</field>
+        <field name="user_id" eval="False" />
+        <field name="context">{}</field>
+    </record>
+
+    <record id="filter_on_sale_product" model="ir.filters">
+        <field name="name">On Sale Products</field>
+        <field name="model_id">product.template</field>
+        <field name="domain">[('is_on_sale', '=', True), ('website_published', '=', True)]</field>
+        <field name="user_id" eval="False" />
+        <field name="context">{}</field>
+    </record>
+
+</odoo>

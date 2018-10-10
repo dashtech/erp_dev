@@ -1,0 +1,699 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_account_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 08:08+0000\n"
+"PO-Revision-Date: 2018-09-18 15:10+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"(Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"\t\t\t\t\t\t\t\t\tNgày 22/12/2014 của Bộ Tài Chính)"
+msgstr ""
+"(Ban hành theo TT số 200/2014/TT-BTC<br/>\n"
+"\t\t\t\t\t\t\t\t\tNgày 22/12/2014 của Bộ Tài Chính)"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "(Cập nhât thuế)"
+msgstr "(Cập nhât thuế)"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "+ Số tiền quy đổi:"
+msgstr "+ Số tiền quy đổi:"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "+ Tỷ giá ngoại tệ (vàng, bạc, đá quý):"
+msgstr "+ Tỷ giá ngoại tệ (vàng, bạc, đá quý):"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+msgid ""
+"0\n"
+"\t\t\t\t\t\t\t\t\t\t\tchứng từ gốc."
+msgstr ""
+"0\n"
+"\t\t\t\t\t\t\t\t\t\t\tchứng từ gốc."
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "0 chứng từ gốc."
+msgstr "0 chứng từ gốc."
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<b>Ngày........tháng.......năm..........</b>"
+msgstr "<b>Ngày........tháng.......năm..........</b>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+msgid "<b>TK Có:</b>"
+msgstr "<b>TK Có:</b>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+msgid "<b>TK Nợ:</b>"
+msgstr "<b>TK Nợ:</b>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Giám đốc</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Giám đốc</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Kế toán trưởng</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Kế toán trưởng</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Người lập phiếu</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Người lập phiếu</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Người nhận tiền</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Người nhận tiền</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Thủ quỹ</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+msgstr ""
+"<span>\n"
+"\t\t\t\t\t\t\t\t\t\t\t<b>Thủ quỹ</b>\n"
+"\t\t\t\t\t\t\t\t\t\t</span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<span><b>Số phiếu nhập: </b></span>"
+msgstr "<span><b>Số phiếu nhập: </b></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<span><b>Số phiếu: </b></span>"
+msgstr "<span><b>Số phiếu: </b></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<span><b>TK Có:</b></span>"
+msgstr "<span><b>TK Có:</b></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<span><b>TK Nợ:</b></span>"
+msgstr "<span><b>TK Nợ:</b></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span><i>\n"
+"\t\t\t\t\t\t\tĐã nhận đủ số tiền (viết bằng chữ): .....................................................................................................\n"
+"\t\t\t\t\t\t\t</i></span>\n"
+"\t\t\t\t\t\t\t<span><i>\n"
+"\t\t\t\t\t\t\t...............................................................................................................................................................\n"
+"\t\t\t\t\t\t\t</i></span>"
+msgstr ""
+"<span><i>\n"
+"\t\t\t\t\t\t\tĐã nhận đủ số tiền (viết bằng chữ): .....................................................................................................\n"
+"\t\t\t\t\t\t\t</i></span>\n"
+"\t\t\t\t\t\t\t<span><i>\n"
+"\t\t\t\t\t\t\t...............................................................................................................................................................\n"
+"\t\t\t\t\t\t\t</i></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "<span><i>(Ký, họ tên)</i></span>"
+msgstr "<span><i>(Ký, họ tên)</i></span>"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid ""
+"<span><i>(Ký, họ tên, đóng dấu)</i></span>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+"<span><i>(Ký, họ tên, đóng dấu)</i></span>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\t\t\t<br/>"
+
+#. module: btek_account_payment
+#: model:ir.model,name:btek_account_payment.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Biên lai kế toán"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_amount
+msgid "Amount"
+msgstr "Giá trị"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_x_amount_untax
+msgid "Amount Untaxed"
+msgstr "Giá trị trước thuế"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_amount_in_word
+msgid "Amount in word"
+msgstr "Bằng chữ"
+
+#. module: btek_account_payment
+#: code:addons/btek_account_payment/models/account_payment.py:14
+#, python-format
+msgid "Amount payment can not large amount total invoice"
+msgstr "Số tiền thanh toán không được lớn hơn số tiền phải trả"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_base
+msgid "Base"
+msgstr "Cơ sở tính thuế"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_base_code_id
+msgid "Base Code"
+msgstr "Mã cơ sở"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_base_amount
+msgid "Base Code Amount"
+msgstr "Base Code Amount"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Bảng thuế"
+msgstr "Bảng thuế"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Bằng chữ"
+msgstr "Bằng chữ"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_check_tax
+msgid "Check tax"
+msgstr "Check tax"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Cost item"
+msgstr "Hạng mục"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_account_payment
+#: model:ir.model,name:btek_account_payment.model_res_currency
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_res_currency_currency_text
+msgid "Currency Text"
+msgstr "Currency Text"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_line_x_description
+msgid "Diễn giải"
+msgstr "Diễn giải"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "GIẤY BÁO CÓ"
+msgstr "GIẤY BÁO CÓ"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "GIẤY BÁO NỢ"
+msgstr "GIẤY BÁO NỢ"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,help:btek_account_payment.field_x_account_voucher_tax_sequence
+msgid "Gives the sequence order when displaying a list of voucher tax."
+msgstr "Gives the sequence order when displaying a list of voucher tax."
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "Khách hàng"
+msgstr "Khách hàng"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Kèm theo"
+msgstr "Kèm theo"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_x_invoice_symbol
+msgid "Ký hiệu hóa đơn"
+msgstr "Ký hiệu hóa đơn"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "Loại tiền"
+msgstr "Loại tiền"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_x_name
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "Lý do"
+msgstr "Lý do"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Lý do chi"
+msgstr "Lý do chi"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Lý do nộp"
+msgstr "Lý do nộp"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_manual
+msgid "Manual"
+msgstr "Thủ công"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_factor_tax
+msgid "Multipication factor Tax code"
+msgstr "Multipication factor Tax code"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_factor_base
+msgid "Multipication factor for Base code"
+msgstr "Multipication factor for Base code"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Mẫu số 01-TT"
+msgstr "Mẫu số 01-TT"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Mẫu số 02-TT"
+msgstr "Mẫu số 02-TT"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Ngày :"
+msgstr "Ngày :"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_x_registration_date
+msgid "Ngày hóa đơn"
+msgstr "Ngày hóa đơn"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_x_date_invoice
+msgid "Ngày hạch toán"
+msgstr "Ngày hạch toán"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+msgid "Ngày:"
+msgstr "Ngày:"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "Ngân hàng"
+msgstr "Ngân hàng"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Người nhận tiền"
+msgstr "Người nhận tiền"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_recipient_pay
+msgid "Người nhận, nộp"
+msgstr "Người nhận, nộp"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Người nộp tiền"
+msgstr "Người nộp tiền"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Nhóm hóa đơn"
+msgstr "Nhóm hóa đơn"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "PHIẾU CHI"
+msgstr "PHIẾU CHI"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "PHIẾU THU"
+msgstr "PHIẾU THU"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.view_account_payment_search_inherit
+msgid "Payment date date less than or equal to"
+msgstr "Ngày thanh toán nhỏ hơn hoặc bằng"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.view_account_payment_search_inherit
+msgid "Payment date greater than or equal to"
+msgstr "Ngày thanh toán lớn hơn hoặc bằng"
+
+#. module: btek_account_payment
+#: model:ir.model,name:btek_account_payment.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.view_account_payment_tree_inherit
+msgid "Print"
+msgstr "In"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Print Payment"
+msgstr "In Phiếu Chi"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+msgid "Print Receipts"
+msgstr "In Phiếu Thu"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Recompute taxes"
+msgstr "Recompute taxes"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_line_x_supplier_invoice_number
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_x_supplier_invoice_number
+msgid "Số hóa đơn"
+msgstr "Số hóa đơn"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Số tiền"
+msgstr "Số tiền"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+msgid "Số tài khoản"
+msgstr "Số tài khoản"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_account_id
+msgid "Tax Account"
+msgstr "Tài khoản Thuế"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_tax_code_id
+msgid "Tax Code"
+msgstr "Tax Code"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_tax_amount
+msgid "Tax Code Amount"
+msgstr "Tax Code Amount"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_name
+msgid "Tax Description"
+msgstr "Mô tả thuế"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_x_voucher_tax_line
+msgid "Tax Lines"
+msgstr "Chi tiết Thuế"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_sale_receipt_inherit_btek
+#: model:ir.ui.view,arch_db:btek_account_payment.account_voucher_view_purchase_receipt_form_inherit_btek
+msgid "Taxes"
+msgstr "% Thuế"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_text_date
+msgid "Text date"
+msgstr "Text date"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_text_month
+msgid "Text month"
+msgstr "Text month"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_text_year
+msgid "Text year"
+msgstr "Text year"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,help:btek_account_payment.field_x_account_voucher_tax_base_code_id
+msgid "The account basis of the tax declaration."
+msgstr "The account basis of the tax declaration."
+
+#. module: btek_account_payment
+#: model:ir.model.fields,help:btek_account_payment.field_res_currency_currency_text
+msgid "The full text of the currency, e.g. United State Dollar, Vietnam Dong, etc"
+msgstr "The full text of the currency, e.g. United State Dollar, Vietnam Dong, etc"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,help:btek_account_payment.field_x_account_voucher_tax_x_supplier_invoice_number
+msgid "The reference of this invoice as provided by the supplier."
+msgstr "The reference of this invoice as provided by the supplier."
+
+#. module: btek_account_payment
+#: model:ir.model.fields,help:btek_account_payment.field_x_account_voucher_tax_tax_code_id
+msgid "The tax basis of the tax declaration."
+msgstr "The tax basis of the tax declaration."
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Thời hạn hoàn ứng"
+msgstr "Thời hạn hoàn ứng"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_account_voucher_line_x_rounding_price_tax
+msgid "Tiền thuế"
+msgstr "Tiền thuế"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Tên khách"
+msgstr "Tên khách"
+
+#. module: btek_account_payment
+#: model:ir.actions.report.xml,name:btek_account_payment.account_payment_btek
+msgid "Voucher"
+msgstr "Voucher"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_voucher_id
+msgid "Voucher Line"
+msgstr "Voucher Line"
+
+#. module: btek_account_payment
+#: model:ir.model,name:btek_account_payment.model_account_voucher_line
+msgid "Voucher Lines"
+msgstr "Chi tiết biên lai (voucher)"
+
+#. module: btek_account_payment
+#: model:ir.model,name:btek_account_payment.model_x_account_voucher_tax
+msgid "Voucher Tax"
+msgstr "Voucher Tax"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_voucher_line_id
+msgid "Voucher line id"
+msgstr "Voucher line id"
+
+#. module: btek_account_payment
+#: model:ir.actions.report.xml,name:btek_account_payment.account_voucher_btek
+msgid "Vouchers"
+msgstr "Mã giảm giá"
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "chẵn."
+msgstr "chẵn."
+
+#. module: btek_account_payment
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_bank
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_payment_cash
+#: model:ir.ui.view,arch_db:btek_account_payment.report_account_voucher_cash
+msgid "Địa chỉ"
+msgstr "Địa chỉ"
+
+#. module: btek_account_payment
+#: model:ir.model.fields,field_description:btek_account_payment.field_x_account_voucher_tax_x_partner_id
+msgid "Đối tượng"
+msgstr "Đối tượng"

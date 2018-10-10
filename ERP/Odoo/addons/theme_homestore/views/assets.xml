@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+		<template id="demo_frontend_style" name="Theme Shop style"
+			inherit_id="website.assets_frontend" active="True" priority="1">
+			<xpath expr="." position="inside">
+				
+				
+				<link
+					href="/theme_homestore/static/src/less/options/colors/homestore_main_colors.less"
+					type="text/less" rel="stylesheet" />
+					
+				<link
+					href="/theme_homestore/static/src/less/options/colors/customize_modal.less"
+					type="text/less" rel="stylesheet" />
+			
+				<link
+					href="/theme_homestore/static/src/less/carousel_banner.less"
+					type="text/less" rel="stylesheet" />
+					
+				<link
+					href="/theme_homestore/static/src/less/padding.less"
+					type="text/less" rel="stylesheet" />
+				
+				<link
+					href="/theme_homestore/static/src/less/general.less"
+					type="text/less" rel="stylesheet" />
+					
+				<link
+					href="/theme_homestore/static/src/less/s_product_carousel.less"
+					type="text/less" rel="stylesheet" />
+					
+				
+				<link
+					href="/theme_homestore/static/src/less/custom_owl.less"
+					type="text/less" rel="stylesheet" />
+					
+				<link
+					href="/theme_homestore/static/src/less/s_blocks.less"
+					type="text/less" rel="stylesheet" />
+					
+					
+			   <link
+					href="/theme_homestore/static/src/less/s_tabbed_carousel.less"
+					type="text/less" rel="stylesheet" />
+					
+				 <link
+					href="/theme_homestore/static/src/less/s_count_down.less"
+					type="text/less" rel="stylesheet" />
+					
+				 <link
+					href="/theme_homestore/static/src/less/s_mid_header.less"
+					type="text/less" rel="stylesheet" />
+					
+				 <link
+					href="/theme_homestore/static/src/less/s_accordion.less"
+					type="text/less" rel="stylesheet" />
+				<link
+					href="/theme_homestore/static/src/less/s_product_detail.less"
+					type="text/less" rel="stylesheet" />
+				
+				<link
+					href="/theme_homestore/static/src/less/s_product.less"
+					type="text/less" rel="stylesheet" />
+					
+				<link
+					href="/theme_homestore/static/src/less/s_product_tab.less"
+					type="text/less" rel="stylesheet" /> 
+				
+				<link
+					href="/theme_homestore/static/src/less/footer.less"
+					type="text/less" rel="stylesheet" /> 
+					
+				<link
+					href="/theme_homestore/static/src/less/s_megamenu.less"
+					type="text/less" rel="stylesheet" /> 
+				
+				<script type="text/javascript"
+					src="/theme_homestore/static/src/js/navbarfix.js" />	
+				<script type="text/javascript"
+					src="/theme_homestore/static/src/js/website_sale.js" />	
+				<script type="text/javascript"
+					src="/theme_homestore/static/src/js/custom.js" />	
+					
+			
+			</xpath>
+		</template>
+		
+		
+		<template id="place_into_bar" inherit_id="website.snippets"
+			name="Place into bar">
+			<xpath expr="//div[@id='snippet_structure']" position="inside">
+				<div class="o_panel_body">
+					<t t-snippet="theme_homestore.snippet_home_banner" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_four_image" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_happy_customer" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_sale_off" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_one_image" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_contact_us" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					<t t-snippet="theme_homestore.snippet_footer" t-thumbnail="/theme_homestore/static/src/image/s-icon.png" />
+					
+				</div>
+			</xpath>
+		</template>
+		
+		
+		<!-- Color Scheme Assets -->
+
+		<template id="colors_homestore" name="option_colors_homestore"
+			inherit_id="website.assets_frontend" active="True" customize_show="True">
+			<xpath expr="." position="inside">
+				<link
+					href="/theme_homestore/static/src/less/options/colors/colors_homestore.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+</odoo>

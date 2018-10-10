@@ -1,0 +1,951 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_summary_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-28 07:35+0000\n"
+"PO-Revision-Date: 2018-09-28 14:37+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_amount_tax_repair
+msgid "Amount tax repair"
+msgstr "Tổng thuế"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_amount_total_discount_repair
+msgid "Amount total discount repair"
+msgstr "Tổng CK"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_amount_total_repair
+msgid "Amount total repair"
+msgstr "Tổng tiền"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_amount_untaxed_repair
+msgid "Amount untaxed repair"
+msgstr "Giá trị trước thuế"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_user_id
+msgid "Assignee"
+msgstr "Phân công cho"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+msgid "BIỂU ĐỒ XE ĐẾN"
+msgstr "BIỂU ĐỒ XE ĐẾN"
+
+#. module: btek_summary_dashboard
+#: model:ir.model,name:btek_summary_dashboard.model_bave_sale_order_report
+msgid "Bave sale order report"
+msgstr "Bave sale order report"
+
+#. module: btek_summary_dashboard
+#: model:ir.model,name:btek_summary_dashboard.model_bave_sale_report
+msgid "Bave sale report"
+msgstr "Báo cáo bán hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+msgid "Biểu đồ khách hàng"
+msgstr "Biểu đồ khách hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.report_sale_to_excel_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_order_in_report
+msgid "Car in revenue"
+msgstr "Báo cáo doanh thu xe vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_order_out_report
+#: model:ir.actions.server,name:btek_summary_dashboard.open_bave_sale_order_out_report_server_action
+msgid "Car out revenue"
+msgstr "Báo cáo doanh thu xe ra"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+msgid "Chi phí năm nay"
+msgstr "Chi phí năm nay"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+msgid "Chi phí năm trước"
+msgstr "Chi phí năm trước"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+msgid "Chi phí tuần:"
+msgstr "Chi phí tuần:"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_company_id
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_company_id
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_summary_dashboard
+#: selection:bave.sale.order.report,invoice_state:0
+#: selection:bave.sale.report,invoice_state:0
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_cost_price
+msgid "Cost price"
+msgstr "Đơn giá vốn"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_cost_total
+msgid "Cost total"
+msgstr "Tiền vốn"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+#: selection:report.sale.to.excel,group_by:0
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "DOANH THU NĂM NAY"
+msgstr "DOANH THU NĂM NAY"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "DOANH THU NĂM TRƯỚC"
+msgstr "DOANH THU NĂM TRƯỚC"
+
+#. module: btek_summary_dashboard
+#: selection:report.sale.to.excel,group_by:0
+msgid "Date"
+msgstr "Ngày"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_date_date_order
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_date_date_order_str
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_date_order
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_date_date_order
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_date_date_order_str
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_date_order
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Date order"
+msgstr "Ngày đơn hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_default_code
+msgid "Default code"
+msgstr "Mã VT-HH"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:267
+#, python-format
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_discount_total
+msgid "Discount total"
+msgstr "Giảm giá"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_display_name
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_display_name
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_display_name
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_summary_report_api_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.temporary_revenue
+msgid "Doanh thu hôm nay <br/>"
+msgstr "Doanh thu hôm nay <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.temporary_revenue
+msgid "Doanh thu hôm qua <br/>"
+msgstr "Doanh thu hôm qua <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.temporary_revenue
+msgid "Doanh thu năm nay <br/>"
+msgstr "Doanh thu năm nay <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.temporary_revenue
+msgid "Doanh thu tháng này <br/>"
+msgstr "Doanh thu tháng này <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Doanh thu tuần:"
+msgstr "Doanh thu tuần:"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.temporary_revenue
+msgid "Doanh thu tạm tính"
+msgstr "Doanh thu tạm tính"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Dịch vụ"
+msgstr "Dịch vụ"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.report_sale_to_excel_form
+msgid "Export report"
+msgstr "Xuất BC"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: btek_summary_dashboard
+#: sql_constraint:report.sale.to.excel:0
+msgid "From date must be less than or equal to date!"
+msgstr "Từ ngày phải nhỏ hơn hoặc bằng đến ngày!"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "Giá trị"
+msgstr "Giá trị"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:595
+#, python-format
+msgid "Group"
+msgstr "Nhóm theo"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_group_by
+msgid "Group by"
+msgstr "Nhóm theo"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "Hàng hóa"
+msgstr "Hàng hóa"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid ""
+"Hàng hóa\n"
+"                                            <span>\n"
+"                                                Số lượng\n"
+"                                            </span>"
+msgstr ""
+"Hàng hóa\n"
+"                                            <span>\n"
+"                                                Số lượng\n"
+"                                            </span>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid ""
+"Hàng hóa\n"
+"                                            <span>\n"
+"                                                Thời gian đáp ứng\n"
+"                                            </span>"
+msgstr ""
+"Hàng hóa\n"
+"                                            <span>\n"
+"                                                Thời gian đáp ứng\n"
+"                                            </span>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "Hàng hóa mua chi phí mua cao nhất"
+msgstr "Hàng hóa mua chi phí mua cao nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "Hàng hóa mua nhiều nhất"
+msgstr "Hàng hóa mua nhiều nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.current_day_block
+msgid "Hôm Nay"
+msgstr "Hôm Nay"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_id
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_id
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_id
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_summary_report_api_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_summary_dashboard
+#: selection:report.sale.to.excel,type:0
+msgid "In"
+msgstr "In"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_invoice_confirmed
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_invoice_confirmed
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Invoice confirmed"
+msgstr "Hóa đơn đã xác nhận"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Invoice not confirmed"
+msgstr "Hóa đơn chưa xác nhận"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_invoice_state
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_invoice_state
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Invoice state"
+msgstr "Trạng thái hóa đơn"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_invoice_status
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Invoice status"
+msgstr "Trạng thái xuất hóa đơn"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+msgid "KHÁCH HÀNG"
+msgstr "KHÁCH HÀNG"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "LOẠI"
+msgstr "LOẠI"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report___last_update
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report___last_update
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel___last_update
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_summary_report_api___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_license_plate
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_license_plate
+msgid "License plate"
+msgstr "Biển số xe"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "MUA HÀNG"
+msgstr "MUA HÀNG"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_mobile
+msgid "Mobile"
+msgstr "Số di động"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.btek-bottom
+msgid "NHÂN VIÊN"
+msgstr "NHÂN VIÊN"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.btek-stock-summary
+msgid "NHẬP TRONG NGÀY <br/>"
+msgstr "NHẬP TRONG NGÀY <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_name
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "NĂM NAY/NĂM TRƯỚC"
+msgstr "NĂM NAY/NĂM TRƯỚC"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Năm"
+msgstr "Năm"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Năm nay"
+msgstr "Năm nay"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+msgid "Năm nay/Năm trước"
+msgstr "Năm nay/Năm trước"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_name
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_order_id
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+#: selection:report.sale.to.excel,group_by:0
+msgid "Order"
+msgstr "Đặt hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Order date great than or equal"
+msgstr "Ngày đơn hàng lớn hơn hoặc bằng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Order date less than or equal"
+msgstr "Ngày đơn hàng nhỏ hơn hoặc bằng"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/summary_report_api_for_mobile.py:878
+#: code:addons/btek_summary_dashboard/models/summary_report_api_for_mobile.py:1955
+#: code:addons/btek_summary_dashboard/models/summary_report_api_for_mobile.py:2040
+#, python-format
+msgid "Other"
+msgstr "Khác"
+
+#. module: btek_summary_dashboard
+#: selection:report.sale.to.excel,type:0
+msgid "Out"
+msgstr "Ra"
+
+#. module: btek_summary_dashboard
+#: selection:bave.sale.order.report,invoice_state:0
+#: selection:bave.sale.report,invoice_state:0
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.report_sale_to_excel_form
+msgid "Preview report"
+msgstr "Xem trước báo cáo"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_price_tax
+msgid "Price tax"
+msgstr "Thuế"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_price_unit
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: btek_summary_dashboard
+#: selection:bave.sale.report,product_type:0
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_product_id
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "Product"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_product_categ_id
+#: selection:report.sale.to.excel,group_by:0
+msgid "Product category"
+msgstr "Nhóm vt-hh"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_product_type
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+#: selection:report.sale.to.excel,group_by:0
+msgid "Product type"
+msgstr "Loại VT-HH"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_product_uom
+msgid "Product uom"
+msgstr "Đơn vị tính"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_product_uom_qty
+msgid "Product uom qty"
+msgstr "Số lượng"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_profit
+msgid "Profit"
+msgstr "Lợi nhuận"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_qty
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Quý"
+msgstr "Quý"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Quý này"
+msgstr "Quý này"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.menu,name:btek_summary_dashboard.fleet_repair_report
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_report_root
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.menu,name:btek_summary_dashboard.sale_in_report
+msgid "Sale in report"
+msgstr "Báo cáo bán hàng vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.menu,name:btek_summary_dashboard.sale_out_report
+msgid "Sale out report"
+msgstr "Báo cáo bán hàng ra"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.menu,name:btek_summary_dashboard.sale_report
+msgid "Sale report"
+msgstr "Báo cáo bán hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.report.xml,name:btek_summary_dashboard.report_sale_to_excel_xlsx
+msgid "Sale to excel"
+msgstr "Báo cáo bán hàng excel"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:207
+#, python-format
+msgid "Sale to excel {}"
+msgstr "Báo cáo tổng hợp doanh thu xe {}"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_user_id
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+#: selection:report.sale.to.excel,group_by:0
+msgid "Saleman"
+msgstr "Nhân viên bán hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_order_report_sales_funnel
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_order_report_sales_funnel
+msgid "Sales Funnel"
+msgstr "Theo trạng thái đơn hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_order_report_by_product
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_order_report_by_product
+msgid "Sales by product"
+msgstr "Theo VT-HH"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_order_report_by_team
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_order_report_by_team
+msgid "Sales by team"
+msgstr "Theo nhóm bán hàng"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_order_report_by_user
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_order_report_by_user
+msgid "Sales by user"
+msgstr "Theo người bán"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_in_report_to_excel
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_bave_sale_in_report_to_excel
+msgid "Sales report in"
+msgstr "Báo cáo doanh thu xe vào"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_in_report
+msgid "Sales report in detail"
+msgstr "Báo cáo doanh thu xe vào chi tiết"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_in_by_order_report
+msgid "Sales report in summary"
+msgstr "Báo cáo doanh thu xe vào tổng quan"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_out_report_to_excel
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_bave_sale_out_report_to_excel
+msgid "Sales report out"
+msgstr "Báo cáo doanh thu xe ra"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_out_report
+msgid "Sales report out detail"
+msgstr "Báo cáo doanh thu xe ra chi tiết"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,name:btek_summary_dashboard.action_bave_sale_out_summary_report
+msgid "Sales report out summary"
+msgstr "Báo cáo danh thu xe ra tổng quan"
+
+#. module: btek_summary_dashboard
+#: selection:bave.sale.report,product_type:0
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_state
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_state
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_search
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_price_subtotal
+msgid "Subtotal with discount"
+msgstr "Sau chiết khấu"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_subtotal_with_out_discount
+msgid "Subtotal with out discount"
+msgstr "Thành tiền"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.bave_sale_report_tree
+msgid "Sum"
+msgstr "Tổng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.menu,name:btek_summary_dashboard.menu_action_open_summry_report
+msgid "Summary report"
+msgstr "Báo cáo tổng quan"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_url,name:btek_summary_dashboard.action_open_summry_report
+msgid "Summry report"
+msgstr "Báo cáo tổng quan"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:46
+#, python-format
+msgid "Synthesis report revenue car {}.xlsx"
+msgstr "Synthesis report revenue car {}.xlsx"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+msgid "SẢN PHẨM &amp; DỊCH VỤ"
+msgstr "VT-HH &amp; DỊCH VỤ"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Sản phẩm"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.btek-bottom
+msgid "SỐ HÓA ĐƠN"
+msgstr "SỐ HÓA ĐƠN"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.inventory_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+msgid "Theo giá trị"
+msgstr "Theo giá trị"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.inventory_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+msgid "Theo số lượng"
+msgstr "Theo số lượng"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_bave_sale_in_by_order_report
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_bave_sale_in_report
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_bave_sale_out_report
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_bave_sale_out_summary_report
+msgid "This report performs analysis on your quotations and sales orders"
+msgstr "This report performs analysis on your quotations and sales orders"
+
+#. module: btek_summary_dashboard
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_order_report_by_product
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_order_report_by_team
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_order_report_by_user
+#: model:ir.actions.act_window,help:btek_summary_dashboard.action_order_report_sales_funnel
+msgid "This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application."
+msgstr "Báo cáo này thực hiện việc phân tích trên báo giá và đơn hàng của bạn. Kiểm tra doanh thu bán hàng và sắp xếp nó theo tiêu chí nhóm khác nhau (nhân viên bán hàng, đối tác, VT-HH,...). Sử dụng báo cáo này để thực hiện phân tích trên đơn hàng mà chưa xuất hóa đơn. Nếu bạn muốn phân tích đơn hàng đã xuất hóa đơn, bạn nên sử dụng báo cáo Phân tích hóa đơn trong ứng dụng Kế toán."
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Tháng"
+msgstr "Tháng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Tháng này"
+msgstr "Tháng này"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.return_customer_rate
+msgid "Thống kê tỷ lệ theo số lần khách hàng tới"
+msgstr "Thống kê tỷ lệ theo số lần khách hàng tới"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_to_date
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Top Khách hàng có doanh thu cao nhất"
+msgstr "Top Khách hàng có doanh thu cao nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Top Khách hàng mới nhất"
+msgstr "Top Khách hàng mới nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Top hàng hóa thời gian đáp ứng nhanh nhất"
+msgstr "Top hàng hóa thời gian đáp ứng nhanh nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.inventory_block_template
+msgid "Top hàng hóa tồn"
+msgstr "Top hàng hóa tồn"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Top hàng hóa được mua lại nhiều nhất"
+msgstr "Top hàng hóa được mua lại nhiều nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+msgid "Top nhà cung cấp"
+msgstr "Top nhà cung cấp"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+msgid "Top thương hiệu doanh thu cao nhất"
+msgstr "Top thương hiệu doanh thu cao nhất"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_sub_price_after_tax_discount
+msgid "Total"
+msgstr "Tổng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Triệu"
+msgstr "Triệu"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Triệu)"
+msgstr "Triệu)"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_sale_again_delivery_block_template
+msgid "Tuần"
+msgstr "Tuần"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.car_in_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.purchase_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.supplier_block_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.top_current_day_customer_template
+msgid "Tuần này"
+msgstr "Tuần này"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_report_sale_to_excel_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Tất cả"
+msgstr "Tất cả"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.btek-bottom
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.inventory_block_template
+msgid "TỒN KHO"
+msgstr "TỒN KHO"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.customer_template
+msgid "Tổng"
+msgstr "Tổng"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.cost_tab_template
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.revenue_tab_template
+msgid "Tổng theo loại"
+msgstr "Tổng theo loại"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.return_customer_rate
+msgid "Tỷ lệ khách hàng quay lại(3 tháng gần đây)"
+msgstr "Tỷ lệ khách hàng quay lại(3 tháng gần đây)"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.inventory_block_template
+msgid "Tỷ trọng hàng tồn theo kho"
+msgstr "Tỷ trọng hàng tồn theo kho"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+msgid "Tỷ trọng sản phẩm / dịch vụ"
+msgstr "Tỷ trọng VT-HH / dịch vụ"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+msgid "Tỷ trọng top 10 dịch vụ"
+msgstr "Tỷ trọng top 10 dịch vụ"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+msgid "Tỷ trọng top 10 gói dịch vụ"
+msgstr "Tỷ trọng top 10 gói dịch vụ"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.product_and_service
+msgid "Tỷ trọng top 10 sản phẩm"
+msgstr "Tỷ trọng top 10 VT-HH"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:168
+#: code:addons/btek_summary_dashboard/models/summary_report_api_for_mobile.py:2401
+#, python-format
+msgid "Undefine"
+msgstr "Không xác định"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_order_report_upsell
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_upsell
+msgid "Upsell"
+msgstr "Upsell"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.report_sale_to_excel_form
+msgid "View report"
+msgstr "Xem báo cáo"
+
+#. module: btek_summary_dashboard
+#: model:ir.model.fields,field_description:btek_summary_dashboard.field_bave_sale_report_workorder_user_id
+#: selection:report.sale.to.excel,group_by:0
+msgid "Workorder user"
+msgstr "Cố vấn kỹ thuật"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.btek-stock-summary
+msgid "XUẤT TRONG NGÀY <br/>"
+msgstr "XUẤT TRONG NGÀY <br/>"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.current_day_block
+msgid "Xe ra hôm nay"
+msgstr "Xe ra hôm nay"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.current_day_block
+msgid "Xe tại gara"
+msgstr "Xe tại gara"
+
+#. module: btek_summary_dashboard
+#: model:ir.ui.view,arch_db:btek_summary_dashboard.current_day_block
+msgid "Xe vào hôm nay"
+msgstr "Xe vào hôm nay"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:45
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:199
+#, python-format
+msgid "in"
+msgstr "vào"
+
+#. module: btek_summary_dashboard
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:45
+#: code:addons/btek_summary_dashboard/models/report_sale_to_excel.py:201
+#, python-format
+msgid "out"
+msgstr "ra"
+
+#. module: btek_summary_dashboard
+#: model:ir.model,name:btek_summary_dashboard.model_report_sale_to_excel
+msgid "report.sale.to.excel"
+msgstr "report.sale.to.excel"
+
+#. module: btek_summary_dashboard
+#: model:ir.model,name:btek_summary_dashboard.model_summary_report_api
+msgid "summary.report.api"
+msgstr "summary.report.api"

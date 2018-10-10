@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <delete model="ir.actions.report.xml" id="account.account_invoice_action_report_duplicate"/>
+        <delete model="ir.actions.report.xml" id="account.account_invoices"/>
+        <!--<delete model="ir.actions.report.xml" id="sale.report_sale_order"/>-->
+
+        <!--<report-->
+        <!--id="btek_account_invoices"-->
+        <!--model="account.invoice"-->
+        <!--string="Print Invoices"-->
+        <!--report_type="qweb-pdf"-->
+        <!--name="account.report_invoice"-->
+        <!--file="account.report_invoice"-->
+        <!--attachment_use="True"-->
+        <!--attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"-->
+        <!--/>-->
+
+        <record id="bave_view_order_form_change" model="ir.ui.view">
+            <field name="name">bave.view.order.form.change</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='print_quotation'][2]" position="replace">
+                </xpath>
+            </field>
+        </record>
+
+        <record id="bave_order_form" model="ir.ui.view">
+            <field name="name">bave.order.form</field>
+            <field name="model">bave.order</field>
+            <field name="arch" type="xml">
+                <form string="Bave Order">
+                    <sheet>
+                        <group>
+                            <field name="quantity"/>
+                            <field name="partner_id" context="{'bave_order': True}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product.product_template_action_all" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_type">form</field>
+            <field name="context">{"search_default_filter_to_sell":1}</field>
+            <field name="search_view_id" ref="product.product_template_search_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new product.
+                </p>
+            </field>
+        </record>
+
+        <record id="car_partner_tree_inherit" model="ir.ui.view">
+            <field name="name">car_partner_tree_inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="before">
+                    <field name="plates"/>
+                </xpath>
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="mobile"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="car_res_partner_form_view" model="ir.ui.view">
+            <field name="name">car.res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/div[2]/h1" position="after">
+                    <h4>
+                        <field name="code" string="Code" placeholder="Code" required="1"/>
+                    </h4>
+                    <field name="fleet_vehicles" invisible="0" readonly="1" widget="many2many_tags"/>
+                </xpath>
+                <div name="button_box" position="inside">
+                    <button type="object" name="button_view_upsell"
+                            class="oe_stat_button" icon="fa-gbp"
+                            attrs="{'invisible': [('upsell_count', '=', 0)]}"
+                            groups="base.group_user">
+                        <field name="upsell_count" widget="statinfo" string="Upsell"/>
+                    </button>
+                </div>
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="widget">regex_mask</attribute>
+                    <attribute name="data-inputmask-regex">[0-9+*()]+\.[0-9]{8,15}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='mobile']" position="attributes">
+                    <attribute name="widget">regex_mask</attribute>
+                    <attribute name="data-inputmask-regex">[0-9+*()]+\.[0-9]{8,15}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="group_user" string="Partner group"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="car_res_partner_kanban_view" model="ir.ui.view">
+            <field name="name">car.res.partner.kanban.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="color" position="after">
+                    <field name="name"/>
+                </field>
+                <xpath expr="//div[@class='oe_kanban_details']/strong/field[@name='display_name']" position="replace">
+                    <field name="name"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id='btek_fleet_vehicle_model_brand_view_form' model='ir.ui.view'>
+            <field name="name">btek_fleet_vehicle_model_brand_view_form</field>
+            <field name="model">fleet.vehicle.model.brand</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_model_brand_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="product_id" invisible="True"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id='btek_fleet_vehicle_model_view_form' model='ir.ui.view'>
+            <field name="name">btek_fleet_vehicle_model_view_form</field>
+            <field name="model">fleet.vehicle.model</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="before">
+                    <group>
+                        <field name="vehicle_version_id" string="Vehicle version"/>
+                        <field name="product_ids" widget="many2many_tags"/>
+                        <field name="car_color_ids" widget="many2many_tags"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id='btek_fleet_vehicle_model_view_tree' model='ir.ui.view'>
+            <field name="name">fleet_vehicle_model_view_tree</field>
+            <field name="model">fleet.vehicle.model</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="vehicle_version_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="btek_product_template_form_view" model="ir.ui.view">
+            <field name="name">btek_product_template_form_view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[1]/group/group[1]/field[@name='type']" position="after">
+                    <field name="service_type_id" widget="many2many_tags"
+                           attrs="{'invisible': [('type', 'not in', ['service'])]}"/>
+                    <!--<label for="fleet_vehicle_brand_id" string="Vehicle Model" />-->
+                    <!--<div>-->
+                    <field name="fleet_vehicle_brand_id" widget="many2many_tags" string="Vehicle Brand"/>
+                    <field name="vehicle_model_id" context="{'from_vehicle': True}"
+                           domain="[('brand_id', 'in', fleet_vehicle_brand_id)]"
+                           string="Vehicle Model" widget="many2many_tags"/>
+                    <!--</div>-->
+                </xpath>
+            </field>
+        </record>
+
+        <record id="btek_product_normal_form_view" model="ir.ui.view">
+            <field name="name">btek_product_normal_form_view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="fleet_vehicle_brand_id" widget="many2many_tags"
+                           string="Vehicle Brand" invisible="True"/>
+                    <field name="vehicle_model_id" context="{'from_vehicle': True}"
+                           domain="[('brand_id', 'in', fleet_vehicle_brand_id)]"
+                           string="Vehicle Model" widget="many2many_tags" invisible="True"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--<record id="btek_fleet_vehicle_view_form" model="ir.ui.view">-->
+        <!--<field name="name">btek_fleet_vehicle_view_form</field>-->
+        <!--<field name="model">fleet.vehicle</field>-->
+        <!--<field name="mode">primary</field>-->
+        <!--<field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<xpath expr="//sheet" position="inside">-->
+        <!--<separator string="Product"/>-->
+        <!--<field name="product_ids" widget="many2many_tags" />-->
+        <!--</xpath>-->
+        <!--</field>-->
+        <!--</record>-->
+
+        <record id="fleet_vehicle_model_quick_form" model="ir.ui.view">
+            <field name="name">fleet.vehicle.model.quick.form</field>
+            <field name="model">fleet.vehicle.model</field>
+            <field name="priority">1368</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="brand_id"/>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="fleet_vehicle_quick_form" model="ir.ui.view">
+            <field name="name">fleet.vehicle.quick.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="priority">1644</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="brand_id"/>
+                            <field name="model_id"
+                                   domain="[('brand_id', '=', brand_id)]"
+                                   context="{'default_brand_id': brand_id, 'form_view_ref': 'car_repair_industry.fleet_vehicle_model_quick_form'}"/>
+                            <field name="license_plate"/>
+                            <field name="driver_id"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!--Custom Sale Order View-->
+        <record id="repair_view_order_form" model="ir.ui.view">
+            <field name="name">repair.sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <form string="Sales Order" create="false"
+                      class="o_sale_order">
+                    <header>
+                        <button name="%(car_repair_industry.report_sale_order_quotation)d"
+                                string="Print quotation" type="action"
+                                class="oe_read_only btn-primary"
+                                attrs="{'invisible': [('order_line', '=', []), ('order_line_service', '=', [])]}"/>
+                        
+                        <button name="%(sale.report_sale_order)d"
+                                string="Print Order" type="action"
+                                class="oe_read_only btn-primary"
+                                attrs="{'invisible': [('order_line', '=', []), ('order_line_service', '=', [])]}"/>
+
+                        <button name="bave_print_saleorder" string="Print Repair Order"
+                                type="object" states="sale,done"
+                                class="oe_read_only btn-primary"/>
+                        <button name="pre_ordered" string="Create Invoice"
+                                type="object" class="oe_read_only btn-primary"
+                                attrs="{'invisible': [('invoice_status', '!=', 'to invoice')]}"/>
+                        <button name="pre_ordered_again"
+                                string="Create Invoice" type="object"
+                                class="oe_read_only"
+                                attrs="{'invisible': ['|', ('invoice_status', '!=', 'no'), ('state', '!=', 'sale')]}"/>
+                        <!--<button name="action_quotation_send" string="Send by Email" type="object" states="draft" class="btn-primary"/>-->
+                        <!--<button name="print_quotation" string="Print" type="object" states="draft" class="btn-primary"/>-->
+                        <button name="action_view_work_order"
+                                string="View Work Order" type="object"
+                                attrs="{'invisible': [('workorder_id', '=', False)]}"
+                                style="float:left;"/>
+                        <button name="repair_action_confirm" states="sent"
+                                string="Confirm Sale"
+                                class="oe_read_only btn-primary o_sale_confirm"
+                                type="object"/>
+                        <button name="action_confirm" states="draft"
+                                string="Confirm Sale" class="oe_read_only o_sale_confirm"
+                                type="object"/>
+                        <!--<button name="print_quotation" string="Print Quotation" type="object" states="draft"/>-->
+                        <!--<button name="action_quotation_send" string="Send by Email" type="object" states="sent,sale"/>-->
+                        <!--<button name="action_cancel" states="draft,sent,sale" type="object" string="Cancel"/>-->
+                        <button name="action_cancel" class="oe_read_only"
+                                states="draft,sent,manual,sale,workorder"
+                                string="Cancel Order" type="object"/>
+                        <button name="%(car_repair_industry.action_fleet_repair_coupon)d"
+                                string="Enter Coupon" type="action"
+                                class="btn-primary" states="sale"/>
+                        <!--<button name="action_draft" states="cancel"-->
+                        <!--type="object" string="Set to Quotation"/>-->
+                        <!--<button name="action_done" type="object" string="Done" states="sale"-->
+                        <!--help="If the sale is locked, you can not modify it anymore. However, you will still be able to invoice or deliver."/>-->
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,sent,sale"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoice"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-pencil-square-o"
+                                    attrs="{'invisible': [('invoice_count', '=', 0)]}">
+                                <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                            </button>
+                            <button type="object"
+                                    name="action_view_delivery"
+                                    class="oe_stat_button"
+                                    icon="fa-truck"
+                                    attrs="{'invisible': [('delivery_count', '=', 0)]}" groups="base.group_user">
+                                <field name="delivery_count" widget="statinfo" string="Delivery"/>
+                            </button>
+                            <button type="object"
+                                    name="button_view_repair"
+                                    class="oe_stat_button"
+                                    icon="fa-truck"
+                                    attrs="{'invisible': [('count_fleet_repair', '=', 0)]}" groups="base.group_user">
+                                <field name="count_fleet_repair" widget="statinfo" string="Repair Order"/>
+                            </button>
+                            <button type="object"
+                                    name="button_view_workorder"
+                                    class="oe_stat_button"
+                                    icon="fa-wrench"
+                                    attrs="{'invisible': [('workorder_count', '=', 0)]}">
+                                <field name="workorder_count" widget="statinfo" string="Work Order"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" domain="[('customer','=',True)]"
+                                       context="{'search_default_customer':1, 'show_address': 1, 'form_view_ref': 'car_repair_industry.res_partner_quick_form'}"
+                                       options='{"always_reload": True}'
+                                       attrs="{'readonly':['|',('state', 'in', ('done')), ('fleet_repair_id', '!=', False)]}"/>
+                                <field name="partner_invoice_id"
+                                       invisible="1" attrs="{'readonly':[('state', 'in', ('done'))]}"
+                                       context="{'default_type':'invoice'}"/>
+                                <field name="partner_shipping_id"
+                                       invisible="1" attrs="{'readonly':[('state', 'in', ('done'))]}"
+                                       context="{'default_type':'delivery'}"/>
+                                <field name="code_used" readonly="1"
+                                       invisible="1"/>
+                                <field name="mobile"/>
+                                <field name="service_type_ids" widget="many2many_tags"
+                                       invisible="True"
+                                       attrs="{'readonly':[('state', 'in', ('done'))]}"/>
+                                <field name="description" attrs="{'readonly': [('state', 'in', ('done'))]}"/>
+                                <field name="reason_cancel"
+                                       attrs="{'invisible': [('state', 'not in', 'cancel')], 'readonly': [('state', 'not in', 'draft')]}"/>
+                                <field name="property_quotes_note" widget="html" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="create_form_fleet" invisible="1"/>
+                                <field name="fleet_ids" widget="many2many_tags" required="True"
+                                       attrs="{'readonly': ['|', ('state', 'in', ('done','cancel')), ('fleet_repair_id', '!=', False)]}"
+                                       context="{'priority_partner_id': partner_id, 'form_view_ref': 'car_repair_industry.fleet_vehicle_quick_form','default_driver_id': partner_id}"/>
+                                <field name="model_ids"
+                                       widget="many2many_tags" invisible="1"/>
+                                <field name="brand_ids"
+                                       widget="many2many_tags" invisible="1"/>
+
+                                <field name="date_order"
+                                       string="Car in date"
+                                       attrs="{'readonly': [('state', 'in', ['done', 'cancel'])]}"/>
+                                <field name="day_order" invisible="1"/>
+                                <field name="diagnose_id" invisible="1"/>
+                                <field name="workorder_id" invisible="1"/>
+                                <field name="fleet_repair_id" invisible="1"/>
+                                <field name="confirmation_date" invisible="1"/>
+                                <field name="validity_date"
+                                       string="Car out date"
+                                       attrs="{'readonly': [('state', 'in', ['done'])]}"/>
+                                <field name="day_validity" invisible="1"/>
+                                <field name="pricelist_id" invisible="1"
+                                       groups="product.group_sale_pricelist"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="payment_term_id" invisible="1"
+                                       options="{'no_create': True}"/>
+                                <field name="user_id" string="Assigned to" invisible="True"
+                                       attrs="{'readonly':[('state','in', ['done'])]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Order Lines - Services">
+                                <!--<button name="open_add_repair_order_line"-->
+                                <!--type="object" string="Add service"-->
+                                <!--class="oe_highlight"-->
+                                <!--attrs="{'invisible':['|',('state', 'not in', ('sale','sent')),('invoice_count','&lt;', 0)]}"/>-->
+                                <field name="order_line_service" context="{'only_show_name':True}"
+                                       mode="tree" options="{'reload_on_button': true}"
+                                       attrs="{'readonly': [('state', 'in', ('done','cancel'))]}">
+                                    <form string="Sales Order Lines Service">
+                                        <group>
+                                            <group>
+                                                <field name="product_id" string="Service"
+                                                       context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id, 'default_type':'service','only_show_name':True}"
+                                                       attrs="{'readonly': ['|', ('qty_invoiced', '&gt;', 0), ('procurement_ids', '!=', [])]}"/>
+                                                <field name="layout_category_id" groups="sale.group_sale_layout"/>
+                                                <field name="invoice_status" invisible="1"/>
+                                                <field name="qty_to_invoice" invisible="1"/>
+                                                <field name="qty_delivered_updateable" invisible="1"/>
+                                                <field name="procurement_ids" invisible="1"/>
+                                                <field name="price_subtotal" invisible="1"/>
+                                                <label for="product_uom_qty" string="Ordered Quantity"/>
+                                                <div>
+                                                    <field
+                                                            context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}"
+                                                            name="product_uom_qty" class="oe_inline"/>
+                                                    <field name="product_uom" groups="product.group_uom"
+                                                           class="oe_inline oe_no_button"
+                                                           attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"/>
+                                                </div>
+                                                <!--<label for="qty_delivered" string="Delivered Quantity" invisible="context.get('hide_sale')"/>-->
+                                                <!--<div invisible="context.get('hide_sale')">-->
+                                                <!--<field name="qty_delivered" attrs="{'readonly': [('qty_delivered_updateable', '=', False)]}"/>-->
+                                                <!--</div>-->
+                                                <!--<label for="qty_invoiced" string="Invoiced Quantity" invisible="context.get('hide_sale')"/>-->
+                                                <!--<div invisible="context.get('hide_sale')">-->
+                                                <field name="qty_invoiced" invisible="1"/>
+                                                <!--"invisible=context.get('hide_sale')"/>-->
+                                                <!--</div>-->
+                                                <field name="price_unit"/>
+                                                <label for="discount"/>
+                                                <div name="discount">
+                                                    <field name="discount" class="oe_inline"/>
+                                                    %%
+                                                </div>
+                                                <field name="discount_value"/>
+                                            </group>
+                                            <group>
+                                                <!--<label for="name"/>-->
+                                                <field name="name"/>
+                                                <field name="tax_id" widget="many2many_tags"
+                                                       domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                                                       attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                                <field name="price_tax" string="Tax value"/>
+                                                <label for="customer_lead"/>
+                                                <div>
+                                                    <field name="customer_lead" class="oe_inline"/>
+                                                    days
+                                                </div>
+                                                <label for="analytic_tag_ids"
+                                                       groups="analytic.group_analytic_accounting"/>
+                                                <div>
+                                                    <field name="analytic_tag_ids" widget="many2many_tags"
+                                                           groups="analytic.group_analytic_accounting"/>
+                                                </div>
+                                            </group>
+                                        </group>
+                                        <!--<label for="name"/>-->
+                                        <!--<field name="name"/>-->
+                                        <div groups="base.group_no_one">
+                                            <label for="invoice_lines"/>
+                                            <field name="invoice_lines"/>
+                                        </div>
+                                        <field name="state" invisible="1"/>
+                                    </form>
+                                    <tree string="Sales Order Lines" editable="bottom"
+                                          class="th_size" decoration-info="invoice_status=='to invoice'">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id" string="Service"
+                                               domain="[('compute_vehicle_model', 'in', parent.model_ids and parent.model_ids[0][2] or []),('compute_vehicle_model_brand', 'in', parent.brand_ids and parent.brand_ids[0][2] or []),('sale_ok', '=', True), ('type', '=', 'service')]"
+                                               attrs="{'readonly': ['|', ('qty_invoiced', '&gt;', 0), ('procurement_ids', '!=', [])]}"
+                                               context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id, 'default_type': 'service', 'only_show_name':True}"
+                                        />
+                                        <field name="layout_category_id" groups="sale.group_sale_layout"/>
+                                        <field name="name" string="Mô tả"/>
+                                        <field name="product_uom_qty"
+                                               string="Ordered Qty"
+                                               context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"
+                                        />
+                                        <!--<field name="qty_delivered" invisible="context.get('hide_sale')"-->
+                                        <!--attrs="{'readonly': [('qty_delivered_updateable', '=', False)]}"/>-->
+                                        <field name="qty_invoiced" invisible="1"/>
+                                        <!--invisible="context.get('hide_sale')"/>-->
+                                        <!--<field name="qty_to_invoice" invisible="1"/>-->
+                                        <field name="product_uom"
+                                               attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"
+                                               context="{'company_id': parent.company_id}"
+                                               options='{"no_open": True}'/>
+                                        <field name="analytic_tag_ids" groups="analytic.group_analytic_accounting"
+                                               widget="many2many_tags"/>
+                                        <field name="price_unit"
+                                               attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                        <field name="discount"/>
+                                        <field name="discount_value"/>
+                                        <field name="tax_id" widget="many2many_tags"
+                                               domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                                               attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                        <field name="price_tax" string="Tax value"/>
+                                        <!--Thuytd comment hide field promotion_id-->
+                                        <field name="promotion_id" invisible="1"/>
+                                        <field name="price_subtotal" widget="monetary"
+                                               sum="Sum"/>
+                                        <field name="price_total" widget="monetary"
+                                               groups="sale.group_show_price_total"/>
+                                        <field name="qty_delivered_updateable" invisible="1"/>
+                                        <field name="procurement_ids" invisible="1"/>
+                                        <field name="state" invisible="1"/>
+                                        <field name="invoice_status" invisible="1"/>
+                                        <field name="customer_lead" invisible="1"/>
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="parent_state" invisible="1"/>
+                                        <button name="action_upsell" type="object"
+                                                string="Upsell" icon="fa-mail-forward"
+                                                attrs="{'invisible':[('parent_state', '!=', 'draft')]}"/>
+                                    </tree>
+                                    <kanban class="o_kanban_mobile">
+                                        <field name="product_id"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="product_uom" groups="product.group_uom"/>
+                                        <field name="price_subtotal"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <strong>
+                                                                <span>
+                                                                    <t t-esc="record.product_id.value"/>
+                                                                </span>
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-8 text-muted">
+                                                            <span>
+                                                                <t t-esc="record.product_uom_qty.value"/>
+                                                                <t t-esc="record.product_uom.value"/>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-4 text-muted">
+                                                            <span class="pull-right text-right">
+                                                                <t t-esc="record.price_subtotal.value"/>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                    <field name="amount_untaxed_repair" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_total_discount_repair" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_tax_repair" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                        <label for="amount_total_repair"/>
+                                        <button name="button_dummy"
+                                                states="draft,sent" string="(update)" type="object"
+                                                class="oe_edit_only oe_link"/>
+                                    </div>
+                                    <field name="amount_total_repair" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_total_repair_in_word" invisible="1"/>
+                                </group>
+                                <field name="note" class="oe_inline"
+                                       placeholder="Setup default terms and conditions in your company settings."/>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Order Lines - Products">
+                                <!--<button name="open_add_order_line"-->
+                                <!--type="object" string="Add product"-->
+                                <!--class="oe_highlight"-->
+                                <!--attrs="{'invisible':['|',('state', 'not in', ('sale','sent')),('invoice_count','&lt;', 0)]}"/>-->
+
+                                <field name="order_line" mode="tree,kanban"
+                                       context="{'default_type':'product','only_show_name':True}"
+                                       options="{'reload_on_button': true}"
+                                       attrs="{'readonly': [('state', 'in', ('done','cancel'))]}">
+                                    <form string="Sales Order Lines">
+                                        <group>
+                                            <group>
+                                                <field name="product_id"
+                                                       context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id, 'only_show_name':True}"
+                                                       attrs="{'readonly': ['|', ('qty_invoiced', '&gt;', 0), ('procurement_ids', '!=', [])]}"
+                                                />
+                                                <field name="layout_category_id" groups="sale.group_sale_layout"/>
+                                                <field name="invoice_status" invisible="1"/>
+                                                <field name="qty_to_invoice" invisible="1"/>
+                                                <field name="qty_delivered_updateable" invisible="1"/>
+                                                <field name="procurement_ids" invisible="1"/>
+                                                <field name="price_subtotal" invisible="1"/>
+                                                <label for="product_uom_qty" string="Ordered Quantity"/>
+                                                <div>
+                                                    <field
+                                                            context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}"
+                                                            name="product_uom_qty" class="oe_inline"/>
+                                                    <field name="product_uom" groups="product.group_uom"
+                                                           class="oe_inline oe_no_button"
+                                                           attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"/>
+                                                </div>
+                                                <!--<label for="qty_delivered" string="Delivered Quantity" invisible="context.get('hide_sale')"/>-->
+                                                <!--<div invisible="context.get('hide_sale')">-->
+                                                <field name="qty_delivered" invisible="1"/>
+                                                <!--attrs="{'readonly': [('qty_delivered_updateable', '=', False)]}"/>-->
+                                                <!--</div>-->
+                                                <!--<label for="qty_invoiced" string="Invoiced Quantity" invisible="context.get('hide_sale')"/>-->
+                                                <!--<div invisible="context.get('hide_sale')">-->
+                                                <field name="qty_invoiced" invisible="1"/>
+                                                <!--invisible="context.get('hide_sale')"/>-->
+                                                <!--</div>-->
+                                                <field name="price_unit"/>
+                                                <label for="discount"/>
+                                                <div name="discount">
+                                                    <field name="discount" class="oe_inline"/>
+                                                    %%
+                                                </div>
+                                                <field name="discount_value"/>
+                                            </group>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="tax_id" widget="many2many_tags"
+                                                       domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                                                       attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                                <field name="price_tax" string="Tax value"/>
+                                                <label for="customer_lead"/>
+                                                <div>
+                                                    <field name="customer_lead" class="oe_inline"/>
+                                                    days
+                                                </div>
+                                                <label for="analytic_tag_ids"
+                                                       groups="analytic.group_analytic_accounting"/>
+                                                <div>
+                                                    <field name="analytic_tag_ids" widget="many2many_tags"
+                                                           groups="analytic.group_analytic_accounting"/>
+                                                </div>
+                                            </group>
+                                        </group>
+                                        <!--<label for="name"/>-->
+                                        <!--<field name="name"/>-->
+                                        <div groups="base.group_no_one">
+                                            <label for="invoice_lines"/>
+                                            <field name="invoice_lines"/>
+                                        </div>
+                                        <field name="state" invisible="1"/>
+                                    </form>
+                                    <tree string="Sales Order Lines" class="th_size"
+                                          editable="bottom" decoration-info="invoice_status=='to invoice'">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id"
+                                               domain="[('compute_vehicle_model', 'in', parent.model_ids and parent.model_ids[0][2] or []),('compute_vehicle_model_brand', 'in', parent.brand_ids and parent.brand_ids[0][2] or []),('sale_ok', '=', True), ('type', 'in', ('product', 'consu'))]"
+                                               attrs="{'readonly': ['|', ('qty_invoiced', '&gt;', 0), ('procurement_ids', '!=', [])]}"
+                                               context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id, 'default_type': 'product', 'only_show_name':True}"
+                                        />
+                                        <field name="layout_category_id" groups="sale.group_sale_layout"/>
+                                        <field name="name"/>
+                                        <field name="product_uom_qty"
+                                               string="Ordered Qty"
+                                               context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"
+                                        />
+                                        <field name="qty_delivered" invisible="1"/>
+                                        <!--invisible="context.get('hide_sale')" attrs="{'readonly': [('qty_delivered_updateable', '=', False)]}"/>-->
+                                        <field name="qty_invoiced" invisible="1"/>
+                                        <!--invisible="context.get('hide_sale')"/>-->
+                                        <field name="qty_to_invoice" invisible="1"/>
+                                        <field name="product_uom"
+                                               attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"
+                                               context="{'company_id': parent.company_id}"
+                                               options='{"no_open": True}'/>
+                                        <field name="analytic_tag_ids" groups="analytic.group_analytic_accounting"
+                                               widget="many2many_tags"/>
+                                        <field name="price_unit"
+                                               attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                        <field name="discount"/>
+                                        <field name="discount_value"/>
+                                        <field name="tax_id" widget="many2many_tags"
+                                               domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                                               attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+                                        <field name="price_tax" string="Tax value"/>
+                                        <field name="price_subtotal" widget="monetary"
+                                               sum="Sum"/>
+                                        <field name="price_total" widget="monetary"
+                                               groups="sale.group_show_price_total"/>
+                                        <field name="qty_delivered_updateable" invisible="1"/>
+                                        <field name="procurement_ids" invisible="1"/>
+                                        <field name="state" invisible="1"/>
+                                        <field name="invoice_status" invisible="1"/>
+                                        <field name="customer_lead" invisible="1"/>
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="parent_state" invisible="1"/>
+                                        <button name="action_upsell" type="object"
+                                                string="Upsell" icon="fa-mail-forward"
+                                                attrs="{'invisible':[('parent_state', '!=', 'draft')]}"/>
+                                    </tree>
+                                    <kanban class="o_kanban_mobile">
+                                        <field name="product_id"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="product_uom" groups="product.group_uom"/>
+                                        <field name="price_subtotal"/>
+                                        <templates>
+                                            <t t-name="kanban-box">
+                                                <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <strong>
+                                                                <span>
+                                                                    <t t-esc="record.product_id.value"/>
+                                                                </span>
+                                                            </strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-8 text-muted">
+                                                            <span>
+                                                                <t t-esc="record.product_uom_qty.value"/>
+                                                                <t t-esc="record.product_uom.value"/>
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-4 text-muted">
+                                                            <span class="pull-right text-right">
+                                                                <t t-esc="record.price_subtotal.value"/>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </templates>
+                                    </kanban>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                    <field name="amount_untaxed" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_total_discount" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="amount_tax" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                        <label for="amount_total"/>
+                                        <button name="button_dummy"
+                                                states="draft,sent" string="(update)" type="object"
+                                                class="oe_edit_only oe_link"/>
+                                    </div>
+                                    <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                </group>
+                                <field name="note" class="oe_inline"
+                                       placeholder="Setup default terms and conditions in your company settings."/>
+                                <div class="oe_clear"/>
+                            </page>
+                            <page string="Bave's Products" myid="car_repair" invisible="1">
+                                <field name="product_outside" widget="my_kanban"/>
+                            </page>
+                            <page string="Other Information">
+                                <group>
+                                    <group string="Sales Information" name="sales_person">
+                                        <field name="team_id" options="{'no_create': True}"/>
+                                        <field name="client_order_ref"/>
+                                        <field name="company_id" options="{'no_create': True}"
+                                               groups="base.group_multi_company"/>
+                                        <field name="project_id" attrs="{'invisible':[('state','=','sale')]}"
+                                               context="{'default_partner_id':partner_invoice_id, 'default_name':name}"
+                                               groups="analytic.group_analytic_accounting"/>
+                                        <field name="related_project_id"
+                                               attrs="{'readonly': ['|',('project_id','!=',False),('invoice_count','!=',0),('state','=','sale')],'invisible':[('state','!=','sale')]}"
+                                               context="{'default_partner_id':partner_invoice_id, 'default_name':name}"
+                                               groups="analytic.group_analytic_accounting"/>
+                                        <field name="origin_id"/>
+                                        <field name="upsell_id"/>
+                                    </group>
+                                    <group name="sale_pay" string="Invoicing">
+                                        <field name="fiscal_position_id" options="{'no_create': True}"/>
+                                        <field name="invoice_status"
+                                               attrs="{'invisible': [('state', 'not in', ('sale','done'))]}"/>
+                                    </group>
+                                    <group string="Reporting" name="technical" groups="base.group_no_one">
+                                        <field groups="base.group_no_one" name="origin"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="repair_view_sale_order_kanban" model="ir.ui.view">
+            <field name="name">repair.sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="priority">1</field>
+            <field name="inherit_id" ref="sale.view_sale_order_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="done_picking_workorder_confirm_repair_view_form"
+                model="ir.ui.view">
+            <field name="name">done.picking.workorder.confirm.repair.form</field>
+            <field name="model">sale.order</field>
+            <field name="priority">3100</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="message_error_picking_workorder"
+                           readonly="1" nolabel="1"/>
+                    <footer>
+                        <button name="auto_done_picking_workorder_without_config"
+                                type="object" string="Continue" class="oe_highlight"/>
+                        <button special="cancel" string="Exit"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_done_picking_workorder_confirm_repair"
+                model="ir.actions.act_window">
+            <field name="name">Process picking &amp; workorder confirm</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'form_view_ref':
+                'car_repair_industry.done_picking_workorder_confirm_repair_view_form'}
+            </field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="repair_view_order_tree" model="ir.ui.view">
+            <field name="name">repair.sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Sales Orders" create="false"
+                      decoration-bf="message_needaction==True"
+                      decoration-muted="state=='cancel'">
+                    <field name="message_needaction" invisible="1"/>
+                    <field name="name" string="Voucher number"/>
+                    <field name="license_plate"/>
+                    <field name="partner_id"/>
+                    <field name="mobile"/>
+                    <field name="date_order" string="Car in date"/>
+                    <field name="validity_date" string="Car out date"/>
+                    <field name="user_id" invisible="1"/>
+                    <field name="amount_total"
+                           sum="Total Tax Included"
+                           widget="monetary"/>
+                    <!--<field name="upsell"-->
+                    <!--invisible="not context.get('upsell', False)"/>-->
+                    <field name="currency_id" invisible="1"/>
+                    <field name="invoice_status" invisible="1"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_sales_order_filter" model="ir.ui.view">
+            <field name="name">sale.order.filter</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id"
+                   ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='message_needaction']"
+                       position="after">
+                    <filter name="upsell_filter" string="Upsell"
+                            domain="[('upsell', '=', True)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="cash_action_account_invoice_payment" model="ir.actions.act_window">
+            <field name="name">Register Cash Payment</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.view_account_payment_invoice_form"/>
+            <field name="context">{'default_invoice_ids': [(4, active_id, None)], 'cash': 1}</field>
+            <field name="target">new</field>
+        </record>
+        <record id="bank_action_account_invoice_payment" model="ir.actions.act_window">
+            <field name="name">Register Bank Payment</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.view_account_payment_invoice_form"/>
+            <field name="context">{'default_invoice_ids': [(4, active_id, None)], 'bank': 1}</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="custom_account_invoice_tree" model="ir.ui.view">
+            <field name="name">custom_account_invoice_tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='partner_id']" position="before">
+                    <field name="license_plate"/>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="replace">
+                </xpath>
+                <xpath expr="//tree/field[@name='date_due']" position="replace">
+                </xpath>
+                <!--<xpath expr="//tree/field[@name='origin']" position="replace">-->
+                <!--</xpath>-->
+                <xpath expr="//tree/field[@name='residual_signed']" position="replace">
+                    <field name="residual"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="custom_view_invoice_form" model="ir.ui.view">
+            <field name="name">account.invoice.form.custom</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <button name="action_invoice_sent" type="object" string="Send by Email"
+                                attrs="{'invisible':['|',('sent','=',True), ('state', '!=', 'open')]}"
+                                class="oe_highlight"
+                                groups="base.group_user,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <button name="invoice_print" string="Print" type="object"
+                                class="oe_highlight"
+                                groups="base.group_user,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <button name="action_invoice_sent" type="object" string="Send by Email"
+                                attrs="{'invisible':['|',('sent','=',False), ('state', '!=', 'open')]}"
+                                groups="base.group_user,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <!--<button name="invoice_print" string="Print Invoice" type="object" attrs="{'invisible':['|',('sent','=',False), ('state', '!=', 'open')]}"-->
+                        <!--groups="base.group_user,car_repair_industry.group_fleet_repair_head_technician"/>-->
+                        <button name="%(account.action_account_invoice_payment)d" type="action" states="open"
+                                string="Register Payment"
+                                groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician"
+                                class="oe_highlight"/>
+                        <button name="action_invoice_open" type="object" states="draft" string="Validate"
+                                class="oe_highlight"
+                                groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <button name="action_invoice_open" type="object" states="proforma2" string="Validate"
+                                groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <button name="action_invoice_proforma2" type="object" states="draft" string="PRO-FORMA"
+                                groups="account.group_proforma_invoices,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <!--<button name="%(account.action_account_invoice_refund)d" type='action' string='Refund Invoice'-->
+                        <!--groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician" attrs="{'invisible': ['|',('type', '=', 'out_refund'), ('state', 'not in', ('open','proforma2','paid'))]}"/>-->
+                        <button name="action_account_invoice_refund" type='object' string='Refund Invoice'
+                                groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician"
+                                attrs="{'invisible': ['|',('type', '=', 'out_refund'), ('state', 'not in', ('open','proforma2','paid'))]}"/>
+                        <button name="action_invoice_cancel" type="object" states="draft,proforma2,open"
+                                string="Cancel Invoice"/>
+                        <button name="action_invoice_draft" states="cancel" string="Reset to Draft" type="object"
+                                groups="account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician"/>
+                        <field name="state" widget="statusbar" nolabel="1" statusbar_visible="draft,open,paid"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="create_form_fleet" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[2]/group/group[2]/field[@name='name']" position="after">
+                    <field name="order_id"/>
+                </xpath>
+                <!--<xpath expr="//header/button[5]" position="attributes">-->
+                <!--<attribute name="groups">account.group_account_invoice,car_repair_industry.group_fleet_repair_service_manager</attribute>-->
+                <!--</xpath>-->
+                <!--<xpath expr="//header/button[9]" position="attributes">-->
+                <!--<attribute name="groups">account.group_account_invoice,car_repair_industry.group_fleet_repair_service_manager</attribute>-->
+                <!--</xpath>-->
+            </field>
+        </record>
+
+        <record id="bave_account_supplier_form_inherit" model="ir.ui.view">
+            <field name="name">bave_account_supplier_form_inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="priority">100</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='%(account.action_account_invoice_refund)d']" position="replace">
+                    <button name="action_account_invoice_refund" type='object' string='Ask Refund'
+                            groups="account.group_account_invoice"
+                            attrs="{'invisible': ['|',('type', 'in', ['in_refund','out_refund']),('state','not in',('open','paid'))]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_form_cancel_inherit_add_group" model="ir.ui.view">
+            <field name="name">invoice_form_cancel_inherit_add_group</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_cancel.invoice_form_cancel_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_invoice_cancel']" position="attributes">
+                    <attribute name="groups">
+                        account.group_account_invoice,car_repair_industry.group_fleet_repair_head_technician
+                    </attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="custom_action_quotation_tree_view" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="sale.view_quotation_tree"/>
+            <field name="act_window_id" ref="sale.action_quotations"/>
+        </record>
+
+        <record id="custom_action_quotations" model="ir.actions.act_window">
+            <field name="name">Quotations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="repair_view_order_tree"/>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field name="context">{'hide_sale': True,}</field>
+            <field name="domain">[('state','in',('draft','sent','cancel')),('upsell', '=', False),('consignment', '=',
+                False), ('create_form_fleet','=',True)]
+            </field>
+            <field name="search_view_id" ref="car_repair_industry.sale_order_from_car_repair_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Quotation, the first step of a new sale.
+                </p>
+                <p>
+                    Your next actions should flow efficiently: confirm the Quotation
+                    to a Sale Order, then create the Invoice and collect the Payment.
+                </p>
+                <p>
+                    Note that once a Quotation becomes a Sale Order, it will be moved
+                    from the Quotations list to the Sales Order list.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_quotation_tree_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="repair_view_order_tree"/>
+            <field name="act_window_id" ref="custom_action_quotations"/>
+        </record>
+
+        <record id="action_quotation_form_view11" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="repair_view_order_form"/>
+            <field name="act_window_id" ref="custom_action_quotations"/>
+        </record>
+
+        <record id="action_saleorder1" model="ir.actions.act_window">
+            <field name="name">Sales Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="repair_view_order_tree"/>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field name="context">{'upsell':True, 'default_create_form_fleet':True}</field>
+            <field name="domain">[('state','in',('sale','done','cancel')),('consignment', '=', False),
+                ('create_form_fleet','=',True)]
+            </field>
+            <field name="search_view_id" ref="car_repair_industry.sale_order_from_car_repair_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Quotation, the first step of a new sale.
+                </p>
+                <p>
+                    Your next actions should flow efficiently: confirm the Quotation
+                    to a Sale Order, then create the Invoice and collect the Payment.
+                </p>
+                <p>
+                    Note that once a Quotation becomes a Sale Order, it will be moved
+                    from the Quotations list to the Sales Order list.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_saleorder_tree_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="repair_view_order_tree"/>
+            <field name="act_window_id" ref="action_saleorder1"/>
+        </record>
+        <record id="action_saleorder_form_view11" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="repair_view_order_form"/>
+            <field name="act_window_id" ref="action_saleorder1"/>
+        </record>
+
+        <!--<record id="car_product_product_tree_view" model="ir.ui.view">-->
+        <!--<field name="name">car_product_product_tree_view</field>-->
+        <!--<field name="model">product.product</field>-->
+        <!--<field name="inherit_id" ref="product.product_product_tree_view" />-->
+        <!--<field name="arch" type="xml">-->
+        <!--<xpath expr="//field[@name='default_code']" position="before">-->
+        <!--<field name="ticked" invisible="context.get('from_sale', True)" />-->
+        <!--</xpath>-->
+        <!--</field>-->
+        <!--</record>-->
+
+        <record id="custom_view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form.custom</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="amount_untaxed" position="after">
+                    <field name="amount_total_discount" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                </field>
+                <xpath expr="//sheet/notebook/page[1]/field/form/group/group[1]/div[4]" position="after">
+                    <field name="discount_value"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/form/label[@for='name']" position="replace">
+                    <field name="state" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/form/field[@name='name']" position="replace">
+                    <field name="invoice_status" invisible="1"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/form//group/group[2]/field[@name='tax_id']"
+                       position="before">
+                    <field name="name"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/form//group/group[2]/field[@name='tax_id']"
+                       position="after">
+                    <field name="price_tax" string="Tax value"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/tree/field[@name='qty_delivered']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/tree/field[@name='qty_invoiced']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/tree/field[@name='discount']" position="replace">
+                    <field name="price_tax" string="Tax value"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page[1]/field/tree/field[@name='price_unit']" position="after">
+                    <field name="discount"/>
+                    <field name="discount_value"/>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="view_bave_configuration" model="ir.ui.view">
+            <field name="name">view_bave_configuration</field>
+            <field name="model">base.config.settings</field>
+            <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='google']" position="before">
+                    <group string="Bave Configuration" name="bave">
+                        <label for="bave_ip"/>
+                        <div>
+                            <field name="bave_ip" class="oe_inline"/>
+                        </div>
+                        <label for="bave_port"/>
+                        <div>
+                            <field name="bave_port" class="oe_inline"/>
+                        </div>
+                        <label for="bave_db"/>
+                        <div>
+                            <field name="bave_db" class="oe_inline"/>
+                        </div>
+                        <label for="bave_user"/>
+                        <div>
+                            <field name="bave_user" class="oe_inline"/>
+                        </div>
+                        <label for="bave_password"/>
+                        <div>
+                            <field name="bave_password" class="oe_inline"/>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_saleorder_tree_view_base" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="sale.view_order_tree"/>
+            <field name="act_window_id" ref="sale.action_orders"/>
+        </record>
+        <record id="action_saleorder_form_view_base" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale.view_order_form"/>
+            <field name="act_window_id" ref="sale.action_orders"/>
+        </record>
+
+        <record id="action_quotation_form_view_base" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale.view_order_form"/>
+            <field name="act_window_id" ref="sale.action_quotations"/>
+        </record>
+
+        <record id="action_invoice_tree1" model="ir.actions.act_window">
+            <field name="name">Customer Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('create_form_fleet','=',True),('type','in',('out_invoice', 'out_refund'))]</field>
+            <field name="context">{'type':'out_invoice', 'journal_type': 'sale', 'default_create_form_fleet': True}
+            </field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a customer invoice.
+                </p>
+                <p>
+                    Odoo's electronic invoicing allows to ease and fasten the
+                    collection of customer payments. Your customer receives the
+                    invoice by email and he can pay online and/or import it
+                    in his own system.
+                </p>
+                <p>
+                    The discussions with your customer are automatically displayed at
+                    the bottom of each invoice.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_invoice_tree1_view11" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="act_window_id" ref="action_invoice_tree1"/>
+        </record>
+
+        <record id="action_invoice_tree1_view22" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.invoice_form"/>
+            <field name="act_window_id" ref="action_invoice_tree1"/>
+        </record>
+
+
+        <menuitem name="Billing"
+                  id="menu_quotation"
+                  parent="menu_base_fleet_repair"
+                  sequence="4"/>
+        <menuitem name="Quotations"
+                  id="menu_quotation_sub"
+                  parent="menu_base_fleet_repair"
+                  action="custom_action_quotations"
+                  groups="group_fleet_repair_directeur_commercial,group_fleet_repair_service_manager,group_fleet_repair_head_technician"
+                  sequence="3"/>
+
+        <menuitem name="Sales Order"
+                  id="menu_sale_order_sub"
+                  parent="menu_base_fleet_repair"
+                  action="action_saleorder1"
+                  groups="group_fleet_repair_directeur_commercial,group_fleet_repair_service_manager,group_fleet_repair_head_technician"
+                  sequence="4"/>
+
+        <menuitem name="Invoices"
+                  id="menu_sale_order_sub1"
+                  parent="menu_base_fleet_repair"
+                  action="action_invoice_tree1"
+                  groups="group_fleet_repair_directeur_commercial,group_fleet_repair_service_manager,group_fleet_repair_head_technician"
+                  sequence="7"/>
+
+        <record id="action_sale_order_tree_filtered_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="car_repair_industry.repair_view_order_tree"/>
+            <field name="act_window_id" ref="action_sale_order_tree_filtered"/>
+        </record>
+
+        <record id="action_sale_order_tree_filtered_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="car_repair_industry.repair_view_order_form"/>
+            <field name="act_window_id" ref="action_sale_order_tree_filtered"/>
+        </record>
+
+        <record id="action_upsell" model="ir.actions.act_window">
+            <field name="name">Upselling</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="repair_view_order_tree"/>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field name="context">{'form_view_ref':'car_repair_industry.repair_view_order_form'}</field>
+            <field name="domain">[('state','in',('draft','sent','cancel')),('upsell', '=', True)]</field>
+            <field name="search_view_id" ref="sale.view_sales_order_filter"/>
+            <field name="help" type="html">
+                <p>
+                    There are no upsell.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_upsell" action="action_upsell"
+                  parent="menu_base_fleet_repair" sequence="3"
+                  groups="group_fleet_repair_directeur_commercial,group_fleet_repair_service_manager,group_fleet_repair_head_technician"/>
+
+
+        <record id="repair_view_order_add_repair_order_line_form"
+                model="ir.ui.view">
+            <field name="name">sale.order.add.repair.order.line.form</field>
+            <field name="model">sale.order</field>
+            <field name="priority">1099</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="partner_id" invisible="1"/>
+                    <field name="pricelist_id" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <field name="order_line_service_add"
+                           nolabel="1">
+                        <tree delete="false"
+                              editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="product_id"
+                                   context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"/>
+                            <field name="layout_category_id"
+                                   groups="sale.group_sale_layout"/>
+                            <field name="name" string="Mô tả"/>
+                            <field name="product_uom_qty"
+
+                                   string="Ordered Qty"
+                                   context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"/>
+                            <!--<field name="qty_delivered" invisible="context.get('hide_sale')"-->
+                            <!--attrs="{'readonly': [('qty_delivered_updateable', '=', False)]}"/>-->
+                            <field name="qty_invoiced"
+                                   invisible="context.get('hide_sale')"/>
+                            <field name="qty_to_invoice" invisible="1"/>
+                            <field name="product_uom"
+
+                                   context="{'company_id': parent.company_id}"
+                                   groups="product.group_uom"
+                                   options="{&quot;no_open&quot;: True}"/>
+                            <field name="analytic_tag_ids"
+
+                                   groups="analytic.group_analytic_accounting"
+                                   widget="many2many_tags"/>
+                            <field name="price_unit"
+                            />
+                            <field name="tax_id" widget="many2many_tags"
+                                   domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                            />
+                            <field name="discount"/>
+                            <field name="price_subtotal" widget="monetary"
+
+                                   groups="sale.group_show_price_subtotal"/>
+                            <field name="price_total" widget="monetary"
+                                   groups="sale.group_show_price_total"/>
+                            <field name="qty_delivered_updateable" invisible="1"/>
+                            <field name="procurement_ids" invisible="1"/>
+                            <field name="state" invisible="1"/>
+                            <field name="invoice_status" invisible="1"/>
+                            <field name="customer_lead" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="save" type="object"
+                                string="Save" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sale_order_add_repair_order_line"
+                model="ir.actions.act_window">
+            <field name="name">Add service</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'form_view_ref':'car_repair_industry.repair_view_order_add_repair_order_line_form'}
+            </field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="repair_view_order_add_order_line_form"
+                model="ir.ui.view">
+            <field name="name">sale.order.add.order.line.form</field>
+            <field name="model">sale.order</field>
+            <field name="priority">1100</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="partner_id" invisible="1"/>
+                    <field name="pricelist_id" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <field name="order_line_add"
+                           nolabel="1">
+                        <tree delete="false"
+                              editable="bottom">
+                            <field name="sequence" widget="handle"
+                            />
+                            <field name="product_id"
+                            />
+                            <field name="layout_category_id"
+
+                                   groups="sale.group_sale_layout"/>
+                            <field name="name"/>
+                            <field name="product_uom_qty" string="Ordered Qty"
+
+                                   context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}"/>
+                            <field name="qty_delivered"
+
+                                   invisible="context.get('hide_sale')"/>
+                            <field name="qty_invoiced"
+
+                                   invisible="context.get('hide_sale')"/>
+                            <field name="qty_to_invoice" invisible="1"/>
+                            <field name="product_uom"
+
+                                   context="{'company_id': parent.company_id}"
+                                   groups="product.group_uom"
+                                   options="{&quot;no_open&quot;: True}"/>
+                            <field name="analytic_tag_ids"
+
+                                   groups="analytic.group_analytic_accounting"
+                                   widget="many2many_tags"/>
+                            <field name="price_unit"
+                            />
+                            <field name="tax_id" widget="many2many_tags"
+                                   domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                            />
+                            <field name="discount"/>
+                            <field name="price_subtotal" widget="monetary"
+                                   groups="sale.group_show_price_subtotal"/>
+                            <field name="price_total" widget="monetary"
+                                   groups="sale.group_show_price_total"/>
+                            <field name="qty_delivered_updateable" invisible="1"/>
+                            <field name="procurement_ids" invisible="1"/>
+                            <field name="state" invisible="1"/>
+                            <field name="invoice_status" invisible="1"/>
+                            <field name="customer_lead" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="save" type="object"
+                                string="Save" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sale_order_add_order_line"
+                model="ir.actions.act_window">
+            <field name="name">Add product</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'form_view_ref':'car_repair_industry.repair_view_order_add_order_line_form'}</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="res_partner_quick_form" model="ir.ui.view">
+            <field name="name">res.partner.quick.form</field>
+            <field name="model">res.partner</field>
+            <field name="priority">1368</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <div class="oe_title">
+                                <field name="company_type" widget="radio" class="oe_edit_only"
+                                       options="{'horizontal': true}"/>
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name" required="1" string="Customer Name"/>
+                            <field name="code" required="1" string="Customer Code"/>
+                            <field name="mobile"/>
+                        </group>
+                        <group>
+                            <field name="street" string="Address"/>
+                            <field name="vat" string="MST"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>        

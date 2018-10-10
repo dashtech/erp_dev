@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="bave_product_category_form_view_change">
+            <field name="name">product.category.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id"
+                   ref="btek_product.bave_product_category_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_account_income_categ_id']" position="after">
+                   <!--<field name="x_property_account_refund_categ"  groups="account.group_account_user"/>-->
+                   <field name="x_property_account_refund_categ" domain="[('user_type_id.type','&lt;&gt;','view'),('user_type_id.type','&lt;&gt;','consolidation')]" groups="account.group_account_user"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

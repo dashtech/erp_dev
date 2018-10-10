@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_supplier_tree_inherit" model="ir.ui.view">
+        <field name="name">account_supplier_tree_inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='reference']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='date_due']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='number']" position="attributes">
+                <attribute name="string">Invoice number</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_supplier_form_inherit" model="ir.ui.view">
+        <field name="name">account_supplier_form_inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page[1]" position="attributes">
+                <attribute name="string">Material info</attribute>
+            </xpath>
+            <xpath expr="//field[@name='asset_category_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='discount']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='invoice_line_tax_ids']" position="attributes">
+                <attribute name="string">% Tax</attribute>
+            </xpath>
+            <xpath expr="//field[@name='x_rounding_price_tax']" position="attributes">
+                <attribute name="string">Tax value</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='price_subtotal']" position="attributes">
+                <attribute name="string">Money product</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="invoice_form_inherit" model="ir.ui.view">
+        <field name="name">invoice_form_inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='invoice_line_tax_ids']" position="attributes">
+                <attribute name="string">% Tax</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[1]/field/tree/field[@name='price_subtotal']" position="attributes">
+                <attribute name="string">Money product</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

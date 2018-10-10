@@ -1,0 +1,757 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-25 07:45+0000\n"
+"PO-Revision-Date: 2018-09-25 14:47+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_action
+msgid "Action"
+msgstr "Hành động"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_action_code
+msgid "Action code"
+msgstr "Action code"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_active_11595
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+#: selection:notify.model.configuration,state:0
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: btek_notification
+#: selection:notify.model.configuration.line,andor:0
+msgid "And"
+msgstr "Và"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_andor
+msgid "Andor"
+msgstr "Và/hoặc"
+
+#. module: btek_notification
+#: selection:priority.chanel.send.message.line,chanel:0
+msgid "App"
+msgstr "Ứng dụng"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_template_form_view
+msgid "Arch"
+msgstr "Kiến trúc"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_arch_db_11590
+msgid "Arch Blob"
+msgstr "Arch Blob"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_arch_fs_11597
+msgid "Arch Filename"
+msgstr "Arch Filename"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_auditlog_log
+msgid "Auditlog - Log"
+msgstr "Auditlog - Log"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_blacklist
+msgid "Black list"
+msgstr "Danh sách chặn"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_callback_token
+msgid "Callback token"
+msgstr "Callback token"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_callback_url
+msgid "Callback url"
+msgstr "Callback url"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_form_view
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_search_view
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_tree_view
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+#: selection:notify.message,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_chanel
+#: model:ir.ui.view,arch_db:btek_notification.priority_chanel_send_message_form_view
+msgid "Chanel"
+msgstr "Kênh"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_field_parent_11582
+msgid "Child Field"
+msgstr "Child Field"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+msgid "Conditions"
+msgstr "Điều kiện"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_config_notify_to_partner
+msgid "Config notify to partner"
+msgstr "Cấu hình thông báo tới đối tác"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_configuration_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_configuration_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_configuration_id
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: btek_notification
+#: sql_constraint:notify.blacklist:0
+msgid "Configuration, user must be unique!"
+msgstr "Cấu hình, người dùng phải là duy nhất"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_content
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_content
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: btek_notification
+#: selection:notify.model.configuration,action:0
+msgid "Create"
+msgstr "Tạo"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_create_uid
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_create_date
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_datas
+msgid "Datas"
+msgstr "Datas"
+
+#. module: btek_notification
+#: selection:notify.model.configuration,action:0
+msgid "Delete"
+msgstr "Xóa"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_display_name
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_search_view
+#: selection:notify.message,state:0
+#: selection:notify.model.configuration,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: btek_notification
+#: selection:priority.chanel.send.message.line,chanel:0
+msgid "Email"
+msgstr "Thư điện tử"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_sequence
+msgid "Extend ID"
+msgstr "Extend ID"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_xml_id_11574
+msgid "External ID"
+msgstr "External ID"
+
+#. module: btek_notification
+#: selection:notify.message,state:0
+msgid "Fail"
+msgstr "Thất bại"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_fail_reason
+msgid "Fail reason"
+msgstr "Lý do thất bại"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_field_id
+msgid "Field"
+msgstr "Trường"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_general_notify_configuration
+#: model:ir.ui.menu,name:btek_notification.menu_action_general_notify_configuration
+msgid "General notify configuration"
+msgstr "Cấu hình tin nhắn thông báo"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_groups_id_11573
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_group_ids
+msgid "Groups"
+msgstr "Nhóm"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_header_authorization
+msgid "Header authorization"
+msgstr "Header authorization"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_id_11581
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_id
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_id
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_id
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_id
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_notification
+#: model:ir.model.fields,help:btek_notification.field_notify_message_template_xml_id_11574
+msgid "ID of the view defined in xml file"
+msgstr "ID of the view defined in xml file"
+
+#. module: btek_notification
+#: model:ir.model.fields,help:btek_notification.field_notify_message_template_groups_id_11573
+msgid "If this field is empty, the view applies to all users. Otherwise, the view applies to the users of those groups only."
+msgstr "If this field is empty, the view applies to all users. Otherwise, the view applies to the users of those groups only."
+
+#. module: btek_notification
+#: model:ir.model.fields,help:btek_notification.field_notify_message_template_active_11595
+msgid ""
+"If this view is inherited,\n"
+"* if True, the view always extends its parent\n"
+"* if False, the view currently does not extend its parent but can be enabled\n"
+"         "
+msgstr ""
+"If this view is inherited,\n"
+"* if True, the view always extends its parent\n"
+"* if False, the view currently does not extend its parent but can be enabled\n"
+"         "
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+msgid "In active"
+msgstr "Không có hiệu lực"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_inherit_id_11591
+msgid "Inherited View"
+msgstr "Inherited View"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_key_11576
+msgid "Key"
+msgstr "Khóa"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play___last_update
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_write_uid
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_write_date
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_last_run
+msgid "Last run"
+msgstr "Lần chạy cuối"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_ids
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_ids
+msgid "Lines"
+msgstr "Các dòng"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_log_line_ids
+msgid "Log lines"
+msgstr "Các dòng nhật ký"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_log_ids
+msgid "Logs"
+msgstr "Các nhật ký"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_mail_message
+msgid "Message"
+msgstr "Thông điệp"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_message_ids
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_message_ids
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_model_11603
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_model_id
+msgid "Model"
+msgstr "Mô hình"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_model_data_id_11586
+msgid "Model Data"
+msgstr "Model Data"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_model_ids_11598
+msgid "Model ids"
+msgstr "Model ids"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_name
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_new_value
+msgid "New value"
+msgstr "Giá trị mới"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_notify_blacklist
+#: model:ir.ui.menu,name:btek_notification.menu_action_notify_blacklist
+msgid "Notify blacklist"
+msgstr "Danh sách chặn gửi thông báo"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_notify_model_configuration
+#: model:ir.ui.menu,name:btek_notification.menu_action_notify_model_configuration
+msgid "Notify configuration"
+msgstr "Cấu hình gửi thông báo"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_notify_message
+#: model:ir.ui.menu,name:btek_notification.menu_action_notify_message
+msgid "Notify message"
+msgstr "Tin nhắn thông báo"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_notify_message_template
+#: model:ir.ui.menu,name:btek_notification.menu_action_notify_message_template
+msgid "Notify message template"
+msgstr "Mẫu tin nhắn thông báo"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_notify_to_partner
+msgid "Notify to partner"
+msgstr "Thông báo tới đối tác"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_old_value
+msgid "Old value"
+msgstr "Giá trị cũ"
+
+#. module: btek_notification
+#: model:ir.model.fields,help:btek_notification.field_notify_message_template_mode_11600
+msgid ""
+"Only applies if this view inherits from an other one (inherit_id is not False/Null).\n"
+"\n"
+"* if extension (default), if this view is requested the closest primary view\n"
+"is looked up (via inherit_id), then all views inheriting from it with this\n"
+"view's model are applied\n"
+"* if primary, the closest primary view is fully resolved (even if it uses a\n"
+"different model than this one), then this view's inheritance specs\n"
+"(<xpath/>) are applied, and the result is used as if it were this view's\n"
+"actual arch.\n"
+msgstr ""
+"Only applies if this view inherits from an other one (inherit_id is not False/Null).\n"
+"\n"
+"* if extension (default), if this view is requested the closest primary view\n"
+"is looked up (via inherit_id), then all views inheriting from it with this\n"
+"view's model are applied\n"
+"* if primary, the closest primary view is fully resolved (even if it uses a\n"
+"different model than this one), then this view's inheritance specs\n"
+"(<xpath/>) are applied, and the result is used as if it were this view's\n"
+"actual arch.\n"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_open_url
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_open_url
+msgid "Open url"
+msgstr "Open url"
+
+#. module: btek_notification
+#: selection:notify.model.configuration.line,andor:0
+msgid "Or"
+msgstr "Hoặc"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_res_partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_partner_field
+msgid "Partner field"
+msgstr "Thông tin đối tác"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_partner_ids
+msgid "Partners"
+msgstr "Đối tác"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_ids
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_name
+#: model:ir.ui.view,arch_db:btek_notification.view_users_form_change
+msgid "Play ID"
+msgstr "Play ID"
+
+#. module: btek_notification
+#: code:addons/btek_notification/models/res_users.py:18
+#, python-format
+msgid "Play ID must be unique per user !"
+msgstr "Play ID phải là duy nhất với mỗi người dùng !"
+
+#. module: btek_notification
+#: sql_constraint:res.users.play:0
+msgid "Play ID phải là duy nhất với mỗi người dùng !"
+msgstr "Play ID phải là duy nhất với mỗi người dùng !"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_priority_id
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_priority_chanel_send_message
+#: model:ir.ui.menu,name:btek_notification.menu_action_priority_chanel_send_message
+msgid "Priority chanel send message"
+msgstr "Thứ tự ưu tiên kênh gửi thông báo"
+
+#. module: btek_notification
+#: sql_constraint:priority.chanel.send.message.line:0
+msgid ""
+"Priority chanel send message wrong, \n"
+"sequence, chanel must be per user!"
+msgstr ""
+"Thứ tự ưu tiên kênh gửi tin nhắn sai, \n"
+"thứ tự, kênh phải duy nhất trên mỗi người dùng!"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_auditlog_log_proccessed
+msgid "Proccessed"
+msgstr "Đã xử lý"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_mail_compose_message_readed
+#: model:ir.model.fields,field_description:btek_notification.field_mail_mail_readed
+#: model:ir.model.fields,field_description:btek_notification.field_mail_message_readed
+#: model:ir.model.fields,field_description:btek_notification.field_survey_mail_compose_message_readed
+msgid "Read"
+msgstr "Đọc"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_res_users_play
+msgid "ResUsersPlay"
+msgstr "ResUsersPlay"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_result
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_result_error
+msgid "Result error"
+msgstr "Lỗi xử lý kết quả"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+msgid "Run"
+msgstr "Chạy"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_form_view
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_tree_view
+#: model:ir.ui.view,arch_db:btek_notification.notify_model_configuration_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_send_notify_message_log_send_error
+msgid "Send error"
+msgstr "Lỗi khi gửi"
+
+#. module: btek_notification
+#: model:ir.actions.act_window,name:btek_notification.action_send_notify_message_log
+#: model:ir.ui.menu,name:btek_notification.menu_action_send_notify_message_log
+msgid "Send notify message log"
+msgstr "Nhật ký gửi tin nhắn thông báo"
+
+#. module: btek_notification
+#: selection:notify.message,state:0
+msgid "Sending"
+msgstr "Đang gửi"
+
+#. module: btek_notification
+#: model:ir.ui.view,arch_db:btek_notification.notify_message_search_view
+#: selection:notify.message,state:0
+msgid "Sent"
+msgstr "Đã gửi"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_mail_compose_message_sent
+#: model:ir.model.fields,field_description:btek_notification.field_mail_mail_sent
+#: model:ir.model.fields,field_description:btek_notification.field_mail_message_sent
+#: model:ir.model.fields,field_description:btek_notification.field_survey_mail_compose_message_sent
+msgid "Sent to mobile"
+msgstr "Sent to mobile"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_priority_11605
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_line_sequence
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_line_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_customize_show
+msgid "Show As Optional Inherit"
+msgstr "Show As Optional Inherit"
+
+#. module: btek_notification
+#: selection:priority.chanel.send.message.line,chanel:0
+msgid "Sms"
+msgstr "Sms"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_state
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_id
+#: model:ir.model.fields,field_description:btek_notification.field_notify_model_configuration_template_id
+msgid "Template"
+msgstr "Mẫu"
+
+#. module: btek_notification
+#: code:addons/btek_notification/models/notify_configuration.py:552
+#, python-format
+msgid ""
+"Template message error:\n"
+"{}"
+msgstr ""
+"Mẫu tin nhắn lỗi:\n"
+"{}"
+
+#. module: btek_notification
+#: selection:notify.model.configuration,action:0
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_general_notify_configuration_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_blacklist_user_id
+#: model:ir.model.fields,field_description:btek_notification.field_priority_chanel_send_message_user_id
+#: model:ir.model.fields,field_description:btek_notification.field_res_users_play_user_id
+msgid "User"
+msgstr "Người sử dụng"
+
+#. module: btek_notification
+#: sql_constraint:priority.chanel.send.message:0
+msgid "User already exists!"
+msgstr "Người dùng đã có cấu hình!"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_res_users
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_user_ids
+msgid "Users"
+msgstr "Người dùng"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_view_id
+msgid "View"
+msgstr "View"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_arch_11596
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_arch_base_11577
+msgid "View Architecture"
+msgstr "Kiến trúc Xem"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_name
+msgid "View Name"
+msgstr "View Name"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_type_11589
+msgid "View Type"
+msgstr "View Type"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_mode_11600
+msgid "View inheritance mode"
+msgstr "View inheritance mode"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_inherit_children_ids_11601
+msgid "Views which inherit from this one"
+msgstr "Views which inherit from this one"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_website_id
+msgid "Website"
+msgstr "Trang web"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_website_meta_description
+msgid "Website meta description"
+msgstr "Thẻ meta mô tả web"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_website_meta_keywords
+msgid "Website meta keywords"
+msgstr "Website meta keywords"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_website_meta_title
+msgid "Website meta title"
+msgstr "Website meta title"
+
+#. module: btek_notification
+#: model:ir.model.fields,field_description:btek_notification.field_notify_message_template_page
+msgid "Whether this view is a web page template (complete)"
+msgstr "Whether this view is a web page template (complete)"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_general_notify_configuration
+msgid "general.notify.configuration"
+msgstr "general.notify.configuration"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_notify_blacklist
+msgid "notify.blacklist"
+msgstr "notify.blacklist"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_notify_message
+msgid "notify.message"
+msgstr "notify.message"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_notify_message_template
+msgid "notify.message.template"
+msgstr "notify.message.template"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_notify_model_configuration
+msgid "notify.model.configuration"
+msgstr "notify.model.configuration"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_notify_model_configuration_line
+msgid "notify.model.configuration.line"
+msgstr "notify.model.configuration.line"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_priority_chanel_send_message
+msgid "priority.chanel.send.message"
+msgstr "priority.chanel.send.message"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_priority_chanel_send_message_line
+msgid "priority.chanel.send.message.line"
+msgstr "priority.chanel.send.message.line"
+
+#. module: btek_notification
+#: model:ir.model,name:btek_notification.model_send_notify_message_log
+msgid "send.notify.message.log"
+msgstr "send.notify.message.log"

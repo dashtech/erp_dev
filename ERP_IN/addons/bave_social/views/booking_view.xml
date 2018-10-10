@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="booking_tree_view" model="ir.ui.view">
+        <field name="name">booking.tree</field>
+        <field name="model">booking</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="false">
+                <field name="service_provider_id"/>
+                <field name="member_id"/>
+                <field name="mobile_phone"/>
+                <field name="channel"/>
+                <field name="booking_time"/>
+                <field name="services_ids"/>
+                <field name="services_package_ids"/>
+                <field name="state"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="booking_form_view" model="ir.ui.view">
+        <field name="name">booking.form</field>
+        <field name="model">booking</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false">
+                <header>
+                    <button name="action_confirm"
+                            states="draft,contacted"
+                            type="object"
+                            class="oe_highlight" string="Confirm booking"/>
+                    <button name="action_done" states="confirm"
+                            type="object" class="oe_highlight" string="Done"/>
+                    <button name="action_cancel"
+                            states="confirm" type="object"
+                            class="oe_highlight" string="Cancel"/>
+                    <button name="action_connect"
+                            states="draft" type="object"
+                            class="oe_highlight" string="Connect Customer"/>
+                    <field name="state" readonly="1" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <field name="avatar_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                    <group>
+                        <group>
+                            <field name="service_provider_id"
+                                   readonly="True"/>
+                            <field name="member_id"/>
+                            <field name="mobile_phone"/>
+                            <field name="gender"/>
+                            <field name="address"/>
+                            <field name="booking_time"/>
+                            <field name="sale_order_id"/>
+                        </group>
+                        <group>
+                            <field name="vehicle_id"/>
+                            <!--<field name="car_plate"/>-->
+                            <field name="car_vehicle_model_id" string="Car Vehicle Model"/>
+                            <field name="promotion_number"/>
+                            <field name="channel"/>
+                            <field name="type"/>
+                            <field name="notif"/>
+                            <field name="fleet_repair_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                    <notebook>
+                        <page string="Services">
+                            <field name="services_ids"
+                                   domain="[('service_provider_id', '=', service_provider_id)]">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="service_catalog_id"/>
+                                    <field name="price"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Services package">
+                            <field name="services_package_ids"
+                                   domain="[('service_provider_id', '=', service_provider_id)]">
+                                <tree>
+                                    <field name="name"/>
+                                    <!--<field name="price"/>-->
+                                    <!--<field name="parent_id"/>-->
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Repair History">
+
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="booking_search_view" model="ir.ui.view">
+        <field name="name">booking.search</field>
+        <field name="model">booking</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="member_id"/>
+                <field name="mobile_phone"/>
+                <field name="gender"/>
+                <field name="booking_time"/>
+                <field name="vehicle_id"/>
+                <field name="car_vehicle_model_id"/>
+                <field name="promotion_number"/>
+                <field name="channel"/>
+                <group string="Group by">
+                    <filter name="member_filter" string="Member"
+                            context="{'group_by':'member_id'}"/>
+                    <filter name="gender_filter" string="Gender"
+                            context="{'group_by':'gender'}"/>
+                    <filter name="car_vehicle_model_id_filter" string="Car vehicle model"
+                            context="{'group_by':'car_vehicle_model_id'}"/>
+                    <filter name="channel_filter" string="Channel"
+                            context="{'group_by':'channel'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_calendar_booking" model="ir.ui.view">
+      <field name="model">booking</field>
+      <field name="arch" type="xml">
+        <calendar date_start="booking_time" color="state" display="[member_id]: [car_vehicle_model_id]. [note]" >
+          <!-- Fields used for the display text -->
+          <field name="member_id"/>
+          <field name="car_vehicle_model_id"/>
+          <field name="note"/>
+        </calendar>
+      </field>
+    </record>
+
+    <record id="action_booking" model="ir.actions.act_window">
+        <field name="name">Booking Management</field>
+        <field name="res_model">booking</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,search,calendar</field>
+    </record>
+
+
+    <menuitem id="root_menu_booking"
+              name="Booking Management"
+              parent="root_menu_social"
+              sequence="20" groups="group_garage"/>
+
+    <menuitem id="menu_action_booking"
+              parent="root_menu_booking"
+              action="action_booking"
+              sequence="10" groups="group_garage"/>
+
+</odoo>

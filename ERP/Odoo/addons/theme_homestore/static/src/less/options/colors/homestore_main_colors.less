@@ -1,0 +1,47 @@
+/* MAIN Colors
+   ========================================================================== */
+
+@homestore-primary: #07a989;
+@homestore-success: #F06262;
+@homestore-info: #505050;
+@homestore-warning: #ed3737;
+@homestore-danger: #FF0000;
+
+#wrapwrap {
+	[class *= "bg-"].automatic-color , .automatic-color {
+		color: @gray-darker;
+	}
+
+	.bg-white [class *= "bg-"] .text-white , [class *= "bg-"].text-white , .text-white {
+		color: #fff;
+	}
+
+	.bg-gray-lighter [class *= "bg-"] .text-gray-lighter , [class *= "bg-"].text-gray-lighter , .text-gray-lighter {
+		color: @gray-lighter;
+	}
+
+	.bg-gray [class *= "bg-"] .text-gray , [class *= "bg-"].text-gray , .text-gray {
+		color: @gray;
+	}
+
+	.bg-gray-darker [class *= "bg-"] .text-gray-darker , [class *= "bg-"].text-gray-darker , .text-gray-darker {
+		color: @gray-darker;
+	}
+
+	.bg-primary [class *= "bg-"] .text-primary , [class *= "bg-"].text-primary , .text-primary {
+		color: @color-primary;
+	}
+}
+
+.bg-gray-light {
+	background-color: @gray-light;
+}
+
+.bg-gray-dark {
+	background-color: @gray-dark;
+}
+
+.bg-black {
+	background-color: #000;
+}
+

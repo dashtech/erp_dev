@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="btek_purchase_oder">
+        <t t-call="report.external_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page" style="color: black;font-size: 17px;font-family: Times New Roman;">
+                    <t t-call="car_repair_industry.company_information_logo"/>
+                        <div class="row">
+                            <div class="row">
+                                 <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 17!important;">
+                                    <div class="text-center">
+                                        <span style="font-family: inherit; font-size: 30px!important;"><b>ĐƠN ĐẶT HÀNG</b></span>
+                                    </div>
+                                    <t>
+                                        <div class="col-xs-12" style="border: 1.5px solid black !important; border-radius: 5px; font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                            <div class="col-xs-7" style="padding-top: 5px;color: black;font-family: inherit; font-size: 17px!important;">
+                                                <div>
+                                                    <span>Nhà Cung cấp:</span>
+                                                    <span><t t-esc="doc.partner_id.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Mã NCC:</span>
+                                                    <span><t t-esc="doc.partner_id.code"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Điện thoại:</span>
+                                                    <span>
+                                                        <t t-if="doc.partner_id.phone"><span t-field="doc.partner_id.phone"/></t>
+                                                        <t t-if="doc.partner_id.mobile and doc.partner_id.phone">-</t>
+                                                        <t t-if="doc.partner_id.mobile"><span t-field="doc.partner_id.mobile"/></t>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>Địa chỉ:</span>
+                                                    <span>
+                                                        <t t-if="doc.partner_id.street"><span t-field="doc.partner_id.street"/></t>
+                                                        <t t-if="doc.partner_id.ward_id and doc.partner_id.street">-</t>
+                                                        <t t-if="doc.partner_id.ward_id"><span t-field="doc.partner_id.ward_id.name"/></t>
+                                                        <t t-if="doc.partner_id.district_id and doc.partner_id.ward_id or doc.partner_id.district_id and doc.partner_id.street">-</t>
+                                                        <t t-if="doc.partner_id.district_id"><span t-field="doc.partner_id.district_id.name"/></t>
+                                                        <t t-if="doc.partner_id.state_id and doc.partner_id.district_id or doc.partner_id.state_id and doc.partner_id.ward_id or doc.partner_id.state_id and doc.partner_id.street">-</t>
+                                                        <t t-if="doc.partner_id.state_id"><span t-field="doc.partner_id.state_id.name"/></t>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>Ghi chú:</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5" style="padding-top: 5px; color: black;font-family: inherit; font-size: 17px!important;">
+                                                <div>
+                                                    <span>Người lập phiếu: </span>
+                                                    <span><t t-esc="doc.create_uid.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Số phiếu:</span>
+                                                    <span><t t-esc="doc.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Ngày lập phiếu:</span>
+                                                    <span><t t-esc="doc.real_date_order"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Ngày dự kiến:</span>
+                                                    <span><t t-esc="doc.real_date_planned"/></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </t>
+        
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12" style="padding-top: 5px; font-family: inherit; font-size: 17px!important;">
+                                    <table class="table table-bordered"
+                                           style="width: 100%;font-family: inherit; font-size: 17px!important;border-color: #010000;border: 1px solid black !important;"
+                                           t-if="doc.order_line">
+                                        <thead>
+                                            <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                <th class="text-center" style="width:2%;border: 1px solid black !important;line-height: 17px;">STT</th>
+                                                <th class="text-center" style="width:16%;border: 1px solid black !important;line-height: 17px;">Mã vật tư, hàng hóa</th>
+                                                <th class="text-center" style="width:30%;border: 1px solid black !important;line-height: 17px;">Tên vật tư, hàng hóa</th>
+                                                <th class="text-center" style="width:6%;border: 1px solid black !important;line-height: 17px;">Đvt</th>
+                                                <th class="text-center" style="width:7%;border: 1px solid black !important;line-height: 17px;">Số lượng</th>
+                                                <th class="text-center" style="width:13%;border: 1px solid black !important;line-height: 17px;">Đơn giá</th>
+                                                <th class="text-center" style="width:12%;border: 1px solid black !important;line-height: 17px;">Thuế</th>
+                                                <th class="text-center" style="width:14%;border: 1px solid black !important;line-height: 17px;">Thành tiền</th>
+                                            </tr>
+                                        </thead>
+                                        <t t-set="stt" t-value="0"/>
+                                        <t t-foreach="doc.order_line" t-as="order_line">
+                                            <t t-set="stt" t-value="stt+1"/>
+                                            <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                <td class="text-center" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <span style="line-height: 17px;" t-raw="stt"/>
+                                                </td>
+                                                <td class="text-left" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-esc="order_line.product_id.default_code"/>
+                                                    </t>
+                                                </td>
+                                                <td class="text-left" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-esc="order_line.product_id.name"/>
+                                                    </t>
+                                                </td>
+                                                <td class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-field="order_line.product_uom"></span>
+                                                    </t>
+                                                </td>
+                                                <td class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-esc="order_line.product_qty"/>
+                                                    </t>
+                                                </td>
+                                                <td class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-field="order_line.price_unit"/>
+                                                    </t>
+                                                </td>
+                                                <td class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t t-foreach="order_line.taxes_id" t-as="line_tax">
+                                                        <t>
+                                                            <span style="line-height: 17px;" t-esc="line_tax.name"/><span>,&#160;</span>
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                                <td class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                    <t>
+                                                        <span style="line-height: 17px;" t-field="order_line.price_subtotal"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                            <td colspan="6" class="text-right" style="border: 1px solid black !important;line-height: 17px;"><b>Tổng trước thuế :</b></td>
+                                            <td colspan="2" class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                <t>
+                                                    <b><span style="line-height: 17px;" t-field="doc.amount_untaxed"/></b>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                            <td colspan="6" class="text-right" style="border: 1px solid black !important;line-height: 17px;"><b>Tổng thuế :</b></td>
+                                            <td colspan="2" class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                <t>
+                                                    <b><span style="line-height: 17px;" t-field="doc.amount_tax"/></b>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                            <td colspan="6" class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                <b>Tổng giá trị đơn hàng :</b></td>
+                                            <td colspan="2" class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                <t>
+                                                    <b><span style="line-height: 17px;" t-field="doc.amount_total"/></b>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                            <td colspan="8" class="text-right" style="border: 1px solid black !important;line-height: 17px;">
+                                                <b>Số tiền bằng chữ:</b>
+                                                <b>
+                                                    <t t-if="doc.amount_total_in_word">
+                                                        <t>
+                                                            <i>
+                                                                <span style="line-height: 17px;" t-esc="doc.amount_total_in_word" />
+                                                                <t t-if="doc.currency_id.currency_text" t-esc="doc.currency_id.currency_text" />&#160;chẵn.
+                                                            </i>
+                                                        </t>
+                                                    </t>
+                                                </b>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+    
+                            <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 17px!important;page-break-inside: avoid;line-height: 80%;">
+                                <div class="col-xs-6" style="page-break-inside: avoid;line-height: 80%;">
+                                    <p class="text-center"><strong>&#160;</strong></p>
+                                    <p class="text-center"><strong>Nhà cung cấp</strong></p>
+                                    <p class="text-center"><i>(Ký, ghi rõ họ tên)</i></p>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                </div>
+
+                                <div class="col-xs-6" style="page-break-inside: avoid;line-height: 80%;">
+                                    <p class="text-center"><b>.........., Ngày..........tháng..........năm <span><t t-esc="time.strftime('%Y')"/></span></b></p>
+                                    <p class="text-center"><strong>Người lập phiếu</strong></p>
+                                    <p class="text-center"><i>(Ký, ghi rõ họ tên)</i></p>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                </div>
+                            </div>
+                            <div class="oe_structure"/>
+                        </div>
+                    
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="action_btek_purchase_oder_report"
+        model="purchase.order"
+        string="Purchase Order"
+        report_type="qweb-pdf"
+        name="btek_purchase.btek_purchase_oder"
+        file="btek_purchase.btek_purchase_oder"
+        attachment_use="False"
+    />
+
+
+    <record id="action_btek_purchase_oder_report" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="purchase_quotation_paper_format"/>
+    </record>
+
+    <delete model="ir.actions.report.xml" id="purchase.report_purchaseorder"/>
+
+</odoo>

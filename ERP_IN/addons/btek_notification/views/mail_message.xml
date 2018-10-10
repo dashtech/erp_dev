@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_message_form_change" model="ir.ui.view">
+        <field name="name">view.message.form.change</field>
+        <field name="model">mail.message</field>
+        <field name="inherit_id" ref="mail.view_message_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='subtype_id']"
+                   position="after">
+                <field name="sent"/>
+                <field name="readed"/>
+            </xpath>
+
+            <!--<xpath expr="//sheet" position="before">-->
+                <!--<header>-->
+                    <!--<button name="get_message"-->
+                            <!--type="object" string="get_unsent_message"/>-->
+                <!--</header>-->
+            <!--</xpath>-->
+        </field>
+    </record>
+</odoo>

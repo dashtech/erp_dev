@@ -1,0 +1,643 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pos_loyalty_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-16 04:49+0000\n"
+"PO-Revision-Date: 2018-07-16 04:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_pos_category_form_loyalty_added_form_id
+msgid "(Point(s) given as a loyalty points to the customer if he/she purchased product under this category on your POS)"
+msgstr "(Điểm thưởng sẽ được tích lũy khi khách hàng mua VT-HH, dịch vụ của cửa hàng)"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_form_id
+msgid ": 1 reward point ="
+msgstr ": 1 điểm thưởng ="
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "<span>Point(s)</span>"
+msgstr "<span>Điểm thưởng</span>"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_config_active
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_config_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_active_rule
+msgid "Active Rule"
+msgstr "Kích hoạt luật tính điểm"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:75
+#, python-format
+msgid "CANCEL"
+msgstr "Hủy"
+
+#. module: pos_loyalty_management
+#: model:ir.actions.act_window,help:pos_loyalty_management.wk_redeem_rule_list_action_id
+msgid "Click to create a Redemption Rule."
+msgstr "Nhấn để tạo một cách tính điểm mới."
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: pos_loyalty_management
+#: model:ir.actions.act_window,help:pos_loyalty_management.wk_redeem_rule_list_action_id
+msgid "Create New Point Rules Redemption version and assign it inside Loyalty Rule. After that point discount calcualtion will work according to it."
+msgstr "Create New Point Rules Redemption version and assign it inside Loyalty Rule. After that point discount calcualtion will work according to it."
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_create_uid
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_create_uid
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_create_date
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_create_date
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+#: selection:pos.loyalty.history,tx_type:0
+msgid "Credit"
+msgstr "Có"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_currency_id
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_loyalty_management_currency_id
+#: model:ir.model.fields,help:pos_loyalty_management.field_redeem_rule_list_currency_id
+msgid "Currency of your Company."
+msgstr "Currency of your Company."
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_remain_points
+msgid "Current Points"
+msgstr "Điểm hiện tại"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_customer_id
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "Customer will be awarded"
+msgstr "Khách hàng sẽ được cộng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+#: selection:pos.loyalty.history,tx_type:0
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_discount
+msgid "Discount"
+msgstr "Chiết khấu"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_display_name
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_display_name
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:81
+#, python-format
+msgid "Failed to fetch Loyalty Product, Configure Loyalty Rules!!!"
+msgstr "Failed to fetch Loyalty Product, Configure Loyalty Rules!!!"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:90
+#, python-format
+msgid "Failed to fetch customer loyalty points"
+msgstr "Failed to fetch customer loyalty points"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "For a Purchase of every"
+msgstr "Giá trị mua hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.menu,name:pos_loyalty_management.id_parent_pos_coupons
+msgid "Gift Coupons"
+msgstr "Mã giảm giá"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_pos_category_wk_point_for_loyalty
+msgid "How many loyalty points are given to the customer by product sold under this category."
+msgstr "Bao nhiêu điểm thưởng được cộng cho khách hàng khi mua VT-HH của nhóm sản phầm này."
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_product_product_wk_point_for_loyalty
+#: model:ir.model.fields,help:pos_loyalty_management.field_product_template_wk_point_for_loyalty
+msgid "How many loyalty points are given to the customer by product sold."
+msgstr "Bao nhiêu điểm thưởng được công bởi VT-HH được bán."
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_id
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_id
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management___last_update
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history___last_update
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_write_uid
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_write_uid
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_write_date
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_write_date
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_points_from
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_points_to
+msgid "Loyality Points"
+msgstr "Điểm thưởng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_product_template_form_loyalty_added_form_id
+#: model:product.category,name:pos_loyalty_management.wk_loyalty_product_category_id
+msgid "Loyalty"
+msgstr "Tích điểm"
+
+#. module: pos_loyalty_management
+#: model:product.product,name:pos_loyalty_management.wk_loyalty_product_id
+#: model:product.template,name:pos_loyalty_management.wk_loyalty_product_id_product_template
+msgid "Loyalty Benefit"
+msgstr "Lợi ích tích điểm"
+
+#. module: pos_loyalty_management
+#: model:ir.actions.act_window,name:pos_loyalty_management.action_pos_loyalty_history
+#: model:ir.ui.menu,name:pos_loyalty_management.menu_pos_loyalty_history
+msgid "Loyalty History"
+msgstr "Lịch sử tích điểm"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.pos_loyalty_history_form
+msgid "Loyalty History Form"
+msgstr "Lịch sử điểm mua hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.pos_loyalty_history_tree
+msgid "Loyalty History Tree"
+msgstr "Loyalty History Tree"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.menu,name:pos_loyalty_management.wk_loyalty_parent_menu_id
+msgid "Loyalty Management"
+msgstr "Quản lý điểm thưởng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "Loyalty Management Form"
+msgstr "Loyalty Management Form"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_tree_id
+msgid "Loyalty Management Tree"
+msgstr "Loyalty Management Tree"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:40
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_category_wk_point_for_loyalty
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_order_wk_loyalty_points
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_product_product_wk_point_for_loyalty
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_product_template_wk_point_for_loyalty
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_res_partner_wk_loyalty_points
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_res_users_wk_loyalty_points
+#, python-format
+msgid "Loyalty Points"
+msgstr "Số điểm thưởng"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_loyality_product_id
+msgid "Loyalty Product"
+msgstr "VT-HH thưởng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_pos_order_loyalty_added_form_id
+msgid "Loyalty Programs"
+msgstr "Chương trình thưởng"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:146
+#, python-format
+msgid "Loyalty Redemption Error"
+msgstr "Loyalty Redemption Error"
+
+#. module: pos_loyalty_management
+#: model:ir.actions.act_window,name:pos_loyalty_management.wk_loyalty_managment_action_id
+msgid "Loyalty Rule Management"
+msgstr "Quản lý luật tích điểm"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.menu,name:pos_loyalty_management.wk_loyalty_rules_menu_id
+msgid "Loyalty Rules"
+msgstr "Luật tích điểm"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_pos_loyalty_history
+msgid "Manage the POS loyalty point history"
+msgstr "Quản lý lịch sử điểm tích lũy của khách hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "Minimum Purchase"
+msgstr "Giá trị mua nhỏ nhất"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_minimum_purchase
+msgid "Minimum Purchase amount for which the points can be awarded"
+msgstr "Giá trị mua nhỏ nhất cho mỗi điểm thưởng được cộng cho khách hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_loyalty_management_minimum_purchase
+msgid "Minimum Purchase amount for which the points can be awarded."
+msgstr "Giá trị mua nhỏ nhất cho mỗi điểm thưởng được cộng cho khách hàng."
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_name
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:24
+#, python-format
+msgid "OK"
+msgstr "OK"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_loyalty_base
+msgid "On the Basis"
+msgstr "Dựa theo"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_pos_order_id
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Order Reference"
+msgstr "Tham chiếu đơn hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "POS Loyalty History"
+msgstr "Lịch sử điểm thưởng tại POS"
+
+#. module: pos_loyalty_management
+#: selection:loyalty.management,loyalty_base:0
+msgid "POS Product Categories"
+msgstr "Danh mục VT-HH POS"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_loyalty_management
+msgid "POS loyalty Configration"
+msgstr "Cấu hình trung thành POS"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_res_partner
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:131
+#, python-format
+msgid "Please add some Product(s) First !!!"
+msgstr "Vui lòng thêm một vài VT-HH đầu tiên !!!"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:135
+#, python-format
+msgid "Please select the Customer"
+msgstr "Vui lòng lựa chọn khách hàng"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:61
+#, python-format
+msgid "Point Redemption"
+msgstr "Point Redemption"
+
+#. module: pos_loyalty_management
+#: selection:pos.loyalty.history,source:0
+msgid "Point of Sale"
+msgstr "Point of Sale"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Đơn hàng PoS"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_points
+msgid "Points"
+msgstr "Điểm thưởng"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "Points Calculation"
+msgstr "Cách tính điểm"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:7
+#, python-format
+msgid "Points."
+msgstr "Points."
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_product_template
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_pos_category
+msgid "Public Category"
+msgstr "Nhóm công cộng"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_purchase
+msgid "Purchase"
+msgstr "Mua hàng"
+
+#. module: pos_loyalty_management
+#: selection:loyalty.management,loyalty_base:0
+msgid "Purchase Amount"
+msgstr "Giá trị mua hàng"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:72
+#, python-format
+msgid "REDEEM NOW"
+msgstr "REDEEM NOW"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:53
+#, python-format
+msgid "Redeem"
+msgstr "Redeem"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "Redemption Calculation"
+msgstr "Cấu hình luật tích điểm"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_form_id
+msgid "Redemption Computation"
+msgstr "Redemption Computation"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_redeem_rule_list
+msgid "Redemption Rule List"
+msgstr "Redemption Rule List"
+
+#. module: pos_loyalty_management
+#: model:ir.actions.act_window,name:pos_loyalty_management.wk_redeem_rule_list_action_id
+msgid "Redemption Rule Version"
+msgstr "Redemption Rule Version"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_form_id
+msgid "Rule :  Points Between"
+msgstr "Rule :  Points Between"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_form_id
+msgid "Rule List Form"
+msgstr "Rule List Form"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_tree_id
+msgid "Rule List Tree"
+msgstr "Rule List Tree"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_redeem_rule_list_rule_name
+msgid "Rule Name"
+msgstr "Tên quy tắc"
+
+#. module: pos_loyalty_management
+#: selection:pos.loyalty.history,source:0
+msgid "Sale Order"
+msgstr "Đơn hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_salesman_id
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Salesman"
+msgstr "Nhân viên bán hàng"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_session_id
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Session"
+msgstr "Phiên"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:122
+#, python-format
+msgid "Sorry No Active Loyalty Rule Found. Please Create  Loyalty Rule First !!!"
+msgstr "Không tìm thấy luật tích điểm được kích hoạt. Vui lòng tạo mới luật tích điểm !!!"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:117
+#, python-format
+msgid "Sorry No Redemption Calculation Found in Loyalty Rule. Please Add Redemption Rule First !!!"
+msgstr "Sorry No Redemption Calculation Found in Loyalty Rule. Please Add Redemption Rule First !!!"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:110
+#, python-format
+msgid "Sorry You Cannot Redeem, Because Customer Has 0 Points!!!"
+msgstr "Sorry You Cannot Redeem, Because Customer Has 0 Points!!!"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:125
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:129
+#, python-format
+msgid "Sorry You Have Already Redeemed Fidelity points for this customer!!!"
+msgstr "Sorry You Have Already Redeemed Fidelity points for this customer!!!"
+
+#. module: pos_loyalty_management
+#: code:addons/pos_loyalty_management/models/pos_loyalty_management.py:75
+#: code:addons/pos_loyalty_management/models/pos_loyalty_management.py:119
+#, python-format
+msgid "Sorry, Only one active configuration is allowed."
+msgstr "Sorry, Only one active configuration is allowed."
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:113
+#, python-format
+msgid "Sorry, You don`t have enough points to redeem !!!"
+msgstr "Sorry, You don`t have enough points to redeem !!!"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_source
+#: model:ir.ui.view,arch_db:pos_loyalty_management.view_loyalty_history_filter
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_loyalty_management_start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_pos_order_wk_loyalty_points
+msgid "The amount of Loyalty points the customer won or lost with this order"
+msgstr "The amount of Loyalty points the customer won or lost with this order"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_res_partner_wk_loyalty_points
+#: model:ir.model.fields,help:pos_loyalty_management.field_res_users_wk_loyalty_points
+msgid "The loyalty points the user won as part of a Loyalty Program"
+msgstr "The loyalty points the user won as part of a Loyalty Program"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,help:pos_loyalty_management.field_loyalty_management_loyality_product_id
+msgid "This Product is used as a Loyalty Product."
+msgstr "This Product is used as a Loyalty Product."
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:68
+#, python-format
+msgid "Total Discount :"
+msgstr "Tổng chiết khấu :"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:65
+#, python-format
+msgid "Total Earned Points :"
+msgstr "Total Earned Points :"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:89
+#, python-format
+msgid "Total Earned Points:"
+msgstr "Total Earned Points:"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:9
+#, python-format
+msgid "Total:&nbsp;"
+msgstr "Total:&nbsp;"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_tx_points
+msgid "Transaction Points"
+msgstr "Điểm giao dịch"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_tx_date
+msgid "Transaction Time"
+msgstr "Số lần giao dịch"
+
+#. module: pos_loyalty_management
+#: model:ir.model.fields,field_description:pos_loyalty_management.field_pos_loyalty_history_tx_type
+msgid "Transaction Type"
+msgstr "Kiểu giao dịch"
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_loyalty_management_form_id
+msgid "VND"
+msgstr "VND"
+
+#. module: pos_loyalty_management
+#: selection:pos.loyalty.history,source:0
+msgid "Website"
+msgstr "Website"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/xml/pos_loyalty.xml:62
+#, python-format
+msgid "Welcome"
+msgstr "Welcome"
+
+#. module: pos_loyalty_management
+#. openerp-web
+#: code:addons/pos_loyalty_management/static/src/js/pos_loyalty.js:136
+#, python-format
+msgid "You need to select the customer before redeeming the loyalty points."
+msgstr "You need to select the customer before redeeming the loyalty points."
+
+#. module: pos_loyalty_management
+#: model:ir.ui.view,arch_db:pos_loyalty_management.wk_redeem_rule_list_form_id
+msgid "and"
+msgstr "và"
+
+#. module: pos_loyalty_management
+#: model:ir.model,name:pos_loyalty_management.model_redeem_rule_list
+msgid "redeem.rule.list"
+msgstr "redeem.rule.list"
+

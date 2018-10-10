@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="service_provider_form"
+            model="ir.ui.view">
+        <field name="name">service.provider.form</field>
+        <field name="model">service.provider</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="logo_medium" widget="image"
+                               class="oe_avatar"
+                               options="{&quot;preview_image&quot;: &quot;logo_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group colspan="8" col="8">
+                    <group colspan="4" col="4">
+                        <field name="name" colspan="4" col="4"/>
+                        <field name="code" colspan="4" col="4"/>
+                        <field name="address" colspan="4" col="4"/>
+                        <field name="latitude" string="Coordinates" colspan="2"/>
+                        <field name="longitude" nolabel="1" colspan="2"/>
+                        <field name="country_id" colspan="4" col="4"/>
+                        <field name="state_id" colspan="4" col="4"
+                               domain="[('country_id', '=', country_id)]"/>
+                        <field name="district_id" colspan="4" col="4"
+                               domain="[('state_id', '=', state_id)]"/>
+                        <field name="email" colspan="4" col="4"/>
+                        <field name="phone" colspan="4" col="4"/>
+                        <field name="categ_ids" widget="many2many_tags" colspan="4" col="4"/>
+                        <field name="user_id" colspan="4" col="4"/>
+                        <field name="facebook" colspan="4" col="4"/>
+                    </group>
+                    <group colspan="4" col="4">
+                        <field name="description" colspan="4" col="4"/>
+                        <field name="ranking" widget="priority"
+                               colspan="4" col="4"/>
+                        <field name="opentime_show" string="Opentime" style="width:90%;"
+                               widget="float_time" colspan="3"/>
+                        <field name="closetime_show" string="Closetime" style="width:90%;"
+                               nolabel="1" widget="float_time" colspan="1"/>
+                         <field name="opentime" style="width:90%;"
+                               colspan="3" invisible="1"/>
+                        <field name="closetime" style="width:90%;"
+                               nolabel="1" colspan="1" invisible="1"/>
+                        <field name="avatar_medium" widget="image"
+                               colspan="4" col="4"/>
+                        <field name="banner_medium" widget="image" colspan="4" col="4"/>
+                        <field name="maps_img" widget="image" colspan="4" col="4"/>
+
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Manufacturers">
+                        <field name="manufacturer_ids">
+                            <tree create="true" delete="true">
+                                <!--<field name="manufacturer_id"/>-->
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Service catalog">
+                        <field name="service_catalog_ids">
+                            <tree create="true"
+                                  delete="true" edit="true">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="service_names"/>
+                                <!--<field name="avatar" widget="image"/>-->
+                                <field name="active"/>
+                            </tree>
+                            <form>
+                                <field name="avatar_medium" widget="image"
+                                       class="oe_avatar"
+                                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <!--<field name="price"/>-->
+                                        <field name="active"/>
+                                    </group>
+                                    <group>
+                                        <field name="parent_id"/>
+                                        <field name="description"/>
+                                    </group>
+                                </group>
+                                <notebook>
+                                    <page string="Sevices">
+                                        <field name="service_ids">
+                                            <tree editable="bottom">
+                                                <field name="name"/>
+                                                <field name="avatar_medium"
+                                                       widget="image"/>
+                                                <field name="description"/>
+                                                <field name="price"/>
+                                                <field name="active"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Service package">
+                        <field name="service_package_ids">
+                            <tree create="true"
+                                  delete="true" edit="true">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="price"/>
+                                <!--<field name="service_names"/>-->
+                                <!--<field name="avatar" widget="image"/>-->
+                                <field name="active"/>
+                            </tree>
+                            <form>
+                                <field name="avatar_medium" widget="image"
+                                       class="oe_avatar"
+                                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="price"/>
+                                    </group>
+                                    <group>
+                                        <!--<field name="parent_id"/>-->
+                                        <field name="description"/>
+                                        <field name="active"/>
+                                    </group>
+                                </group>
+                                <notebook>
+                                    <page string="Sevices">
+                                        <field name="service_ids">
+                                            <tree editable="bottom">
+                                                <field name="name"/>
+                                                <field name="avatar_medium"
+                                                       widget="image"/>
+                                                <field name="description"/>
+                                                <field name="price"/>
+                                                <field name="active"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Service">
+                        <field name="service_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <!--<field name="service_catalog_id"/>-->
+                                <field name="description"/>
+                                <field name="price"/>
+                                <!--<field name="avatar_medium"-->
+                                       <!--widget="image"/>-->
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Free service">
+                        <field name="free_service_ids">
+                            <tree create="true" delete="true"
+                                  edit="true" editable="bottom">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="icon"
+                                       widget="image"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Album">
+                        <field name="album_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="title"/>
+                                <field name="description"/>
+                                <field name="view_count"/>
+                                <field name="like_count"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Other">
+                        <group>
+                            <group>
+                                <field name="type"/>
+                                <!--<field name="code"/>-->
+
+                                <field name="banner"/>
+                                <field name="phone"/>
+                                <field name="website"/>
+                                <field name="introduction"/>
+                                <field name="likecount"/>
+                                <field name="viewcount"/>
+
+                                <field name="sharecount"/>
+                                <field name="commentcount"/>
+                                <!--<field name="ranking"/>-->
+                            </group>
+                            <group>
+
+                                <!--<field name="longitude"/>-->
+                                <!--<field name="latitude"/>-->
+                                <field name="notify"/>
+                                <field name="notify_type"/>
+                                <field name="notify_mobile"/>
+                                <field name="notify_email"/>
+                                <field name="notify_time"/>
+                                <field name="g_place_id"/>
+                                <!--<field name="country_id"/>-->
+                                <!--<field name="province_id"/>-->
+                                <field name="ratecount"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="service_provider_tree"
+            model="ir.ui.view">
+        <field name="name">service.provider.tree</field>
+        <field name="model">service.provider</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="spo_id"/>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="code"/>
+                <field name="description"/>
+                <field name="address"/>
+                <field name="avatar"
+                       widget="image"/>
+                <field name="banner"/>
+                <field name="phone"/>
+                <field name="website"/>
+                <field name="introduction"/>
+                <field name="likecount"/>
+                <field name="viewcount"/>
+
+                <field name="sharecount"/>
+                <field name="commentcount"/>
+                <field name="ranking"/>
+                <field name="opentime"/>
+                <field name="closetime"/>
+                <field name="longitude"/>
+                <field name="latitude"/>
+                <field name="notify"/>
+                <field name="notify_type"/>
+                <field name="notify_mobile"/>
+                <field name="notify_email"/>
+                <field name="notify_time"/>
+                <field name="g_place_id"/>
+                <field name="country_id"/>
+                <field name="province_id"/>
+                <field name="ratecount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_service_provider"
+            model="ir.actions.act_window">
+        <field name="name">Service provider</field>
+        <field name="res_model">service.provider</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--<menuitem id="root_menu_social"-->
+              <!--name="Social"/>-->
+
+    <menuitem id="root_menu_service_provider"
+              name="Service provider"
+              parent="root_menu_social"
+              sequence="10"/>
+
+    <menuitem id="menu_service_provider"
+              parent="root_menu_service_provider"
+              action="action_service_provider"
+              sequence="10"/>
+
+    <record id="service_provider_categ_form"
+            model="ir.ui.view">
+        <field name="name">service.provider.categ.form</field>
+        <field name="model">service.provider.categ</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                            <field name="icon" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="service_provider_categ_tree"
+            model="ir.ui.view">
+        <field name="name">service.provider.categ.tree</field>
+        <field name="model">service.provider.categ</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_service_provider_categ"
+            model="ir.actions.act_window">
+        <field name="name">Service provider categ</field>
+        <field name="res_model">service.provider.categ</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_service_provider_categ"
+              parent="root_menu_service_provider"
+              action="action_service_provider_categ"
+              sequence="20"/>
+
+    <record id="car_manufacturer_form"
+            model="ir.ui.view">
+        <field name="name">car.manufacturer.form</field>
+        <field name="model">car.manufacturer</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="logo_medium" widget="image" class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;logo_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="avatar_medium" widget="image"/>
+                    </group>
+                </group>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="car_manufacturer_tree"
+            model="ir.ui.view">
+        <field name="name">car.manufacturer.tree</field>
+        <field name="model">car.manufacturer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_car_manufacturer"
+            model="ir.actions.act_window">
+        <field name="name">Car manufacturer</field>
+        <field name="res_model">car.manufacturer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_car_manufacturer"
+              parent="root_menu_service_provider"
+              action="action_car_manufacturer"
+              sequence="30"/>
+
+    <record id="car_color_form" model="ir.ui.view">
+        <field name="name">car.color.form</field>
+        <field name="model">car.color</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="car_color_tree" model="ir.ui.view">
+        <field name="name">car.color.tree</field>
+        <field name="model">car.color</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_car_color"
+            model="ir.actions.act_window">
+        <field name="name">Car Color</field>
+        <field name="res_model">car.color</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_car_color"
+              parent="root_menu_service_provider"
+              action="action_car_color"
+              sequence="35"/>
+
+    <record id="car_vehicle_model_form"
+            model="ir.ui.view">
+        <field name="name">car.vehicle.model.form</field>
+        <field name="model">car.vehicle.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="full_name"/>
+                </group>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="manufacturer_id"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="active"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="car_color_ids" widget="many2many_tags"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="car_vehicle_model_tree"
+            model="ir.ui.view">
+        <field name="name">car.vehicle.model.tree</field>
+        <field name="model">car.vehicle.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="manufacturer_id"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_car_vehicle_model"
+            model="ir.actions.act_window">
+        <field name="name">Car vehicle model</field>
+        <field name="res_model">car.vehicle.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_car_vehicle_model"
+              parent="root_menu_service_provider"
+              action="action_car_vehicle_model"
+              sequence="40"/>
+
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_supplier_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">account_supplier_payment_tree_inherit</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_supplier_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='partner_id']" position="replace">
+            </xpath>
+            <xpath expr="//tree/field[@name='payment_date']" position="replace">
+            </xpath>
+            <xpath expr="//tree/field[@name='name']" position="attributes">
+                <attribute name="string">Invoice number</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='name']" position="before">
+                <field name="payment_date" string="Date invoice"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='payment_date']" position="before">
+                <field name="partner_id" string="Vendor"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='journal_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='payment_method_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="bave_view_account_payment_invoice_form" model="ir.ui.view">
+        <field name="name">bave.view.account.payment.invoice.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_invoice_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='amount_div']" position="after">
+                <field name="amount_text" string="In word"/>
+            </xpath>
+            <button name="post" position="replace">
+                <button string='Validate' name="pre_post" type="object" class="btn-primary"/>
+            </button>
+        </field>
+    </record>
+
+    <record id="pre_comfirm_account_payment_form" model="ir.ui.view">
+        <field name="name">pre_comfirm_account_payment_form</field>
+        <field name="model">account.payment</field>
+        <field name="priority">102</field>
+        <field name="arch" type="xml">
+            <form >
+                <field name="pre_order_html" widget="html"/>
+                <footer>
+                    <button name="post" class="btn-primary" type="object" string="Confirm"/>
+                    ||
+                    <button string="Cancel" name="account_cancel" class="btn-default" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pre_confirm_account_payment" model="ir.actions.act_window">
+        <field name="name">Warning</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'btek_account.pre_comfirm_account_payment_form'}</field>
+    </record>
+</odoo>

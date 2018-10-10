@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 10:04+0000\n"
+"PO-Revision-Date: 2018-09-21 10:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.make_consignment_po_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_sale
+#: selection:repair.order.line,invoice_state:0
+#: selection:sale.order.line,invoice_state:0
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_purchase_order_consignment
+#: model:ir.model.fields,field_description:btek_sale.field_sale_order_consignment
+#: model:ir.model.fields,field_description:btek_sale.field_stock_location_consignment
+msgid "Consignment"
+msgstr "Ký gửi"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_product_product_consignment_available
+#: model:ir.model.fields,field_description:btek_sale.field_product_template_consignment_available
+msgid "Consignment available"
+msgstr "Consignment available"
+
+#. module: btek_sale
+#: model:ir.actions.act_window,name:btek_sale.action_consignment_order
+#: model:ir.ui.menu,name:btek_sale.menu_action_consignment_order
+msgid "Consignment order"
+msgstr "Đơn hàng ký gửi"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_sale_order_consignment_po_ids
+msgid "Consignment purchase order"
+msgstr "Đơn mua hàng ký gửi"
+
+#. module: btek_sale
+#: code:addons/btek_sale/wizard/models/wizard_setup_consignment.py:23
+#, python-format
+msgid "Consignment warehouse"
+msgstr "Consignment warehouse"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_order_form_change
+msgid "Create consignment PO"
+msgstr "Tạo đơn mua hàng ký gửi"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_create_uid
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_create_date
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_order_product_search_inherit
+msgid "Date date less than or equal to"
+msgstr "Ngày tháng nhỏ hơn hoặc bằng"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_order_product_search_inherit
+msgid "Date greater than or equal to"
+msgstr "Ngày tháng lớn hơn hoặc bằng"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_sales_order_filter_inherit
+msgid "Date order greater than or equal to"
+msgstr "Ngày đặt hàng lớn hơn hoặc bằng"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_sales_order_filter_inherit
+msgid "Date order less than or equal to"
+msgstr "Ngày đặt hàng nhỏ hơn hoặc bằng"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:259
+#, python-format
+msgid "Discount greater 100%"
+msgstr "Chiết khấu không được lớn hơn 100%"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_display_name
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:66
+#, python-format
+msgid "Error: Cannot find consignment location!"
+msgstr "Lỗi:Không tìm thấy kho hàng ký gửi!"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:76
+#, python-format
+msgid "Error: invalid config picking type!"
+msgstr "Lỗi: cấu hình loại giao nhận không đúng!"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:162
+#, python-format
+msgid "Error: order has no consignment product!"
+msgstr "Lỗi: đơn hàng không có VT-HH ký gửi nào!"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:88
+#, python-format
+msgid "Error: you have to enter the full supplier before!"
+msgstr "Lỗi: bạn phải nhập đầy đủ nhà cung cấp trước !"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_id
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Tồn kho"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_repair_order_line_invoice_confirmed
+#: model:ir.model.fields,field_description:btek_sale.field_sale_order_line_invoice_confirmed
+msgid "Invoice confirmed"
+msgstr "Hóa đơn đã xác nhận"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_repair_order_line_invoice_state
+#: model:ir.model.fields,field_description:btek_sale.field_sale_order_line_invoice_state
+msgid "Invoice state"
+msgstr "Trạng thái hóa đơn"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po___last_update
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_write_uid
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_write_date
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_ids
+msgid "Lines"
+msgstr "Các dòng"
+
+#. module: btek_sale
+#: model:ir.actions.act_window,name:btek_sale.action_make_consignment_po_form
+msgid "Make consignment purchase order"
+msgstr "Tạo đơn mua hàng ký gửi"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.make_consignment_po_form
+msgid "Make purchase order"
+msgstr "Tạo đơn mua hàng"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_order_id
+msgid "Order"
+msgstr "Đặt hàng"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_order_line_id
+msgid "Order line id"
+msgstr "Order line id"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_product_uom_qty
+msgid "Order qty"
+msgstr "Số lượng đặt"
+
+#. module: btek_sale
+#: selection:repair.order.line,invoice_state:0
+#: selection:sale.order.line,invoice_state:0
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_price_unit
+msgid "Price unit"
+msgstr "Đơn giá"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_order_form_change
+msgid "Print Order"
+msgstr "In đơn hàng"
+
+#. module: btek_sale
+#: model:ir.ui.view,arch_db:btek_sale.view_order_form_change
+msgid "Print quotation"
+msgstr "In báo giá"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_product_id
+msgid "Product"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_product_template
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn hàng Mua"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Chi tiết đơn mua hàng"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_product_qty
+msgid "Purchase qty"
+msgstr "Số lượng mua"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn đặt hàng"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng hàng của Đơn hàng bán"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_show_all_partner
+msgid "Show all partner"
+msgstr "Xem tất cả khách hàng"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_partner_id
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_partner_ids
+msgid "Supplier"
+msgstr "Nhà cung cấp"
+
+#. module: btek_sale
+#: code:addons/btek_sale/models/sale.py:258
+#, python-format
+msgid "Warning for discount"
+msgstr "Cảnh báo CK"
+
+#. module: btek_sale
+#: model:ir.model.fields,field_description:btek_sale.field_make_consignment_po_line_wizard_id
+msgid "Wizard id"
+msgstr "Wizard id"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_make_consignment_po
+msgid "make.consignment.po"
+msgstr "make.consignment.po"
+
+#. module: btek_sale
+#: model:ir.model,name:btek_sale.model_make_consignment_po_line
+msgid "make.consignment.po.line"
+msgstr "make.consignment.po.line"
+

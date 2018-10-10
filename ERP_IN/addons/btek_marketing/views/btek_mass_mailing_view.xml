@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--locct add more field to res partner form-->
+    <!--<record id="btek_mail_mass_mailing_form" model="ir.ui.view">-->
+        <!--<field name="name">btek.mail.mass_mailing.form</field>-->
+        <!--<field name="model">mail.mass_mailing</field>-->
+        <!--<field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<xpath expr="//label[@for='mailing_model']" position="before">-->
+                <!--<label for="chanel" string="Chanel"/>-->
+                <!--<div>-->
+                    <!--<field name="chanel" nolabel="1"/>-->
+                <!--</div>-->
+            <!--</xpath>-->
+            <!--<xpath expr="//group[1]" position="after">-->
+                <!--<group>-->
+                    <!--<label for="mailing_condition_ids" string="Thuộc tính"></label>-->
+                    <!--<div>-->
+                    <!--<field name="mailing_condition_ids">-->
+                        <!--<tree string="Mass Mailing Condition" editable="bottom">-->
+                            <!--<field name="condition_lines" string="Điều kiện"/>-->
+                            <!--<field name="compare"/>-->
+                            <!--<field name="value"/>-->
+                        <!--</tree>-->
+                    <!--</field>-->
+                <!--</div>-->
+                <!--</group>-->
+            <!--</xpath>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <record id="action_view_multi_sms_from_campaign" model="ir.actions.act_window">
+            <field name="name">View Multi Message From Campaign</field>
+            <field name="res_model">btek.multi.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('mass_mailing_campaign_id', '=', active_id), ('channel', '=', 'sms')]</field>
+            <field name="help" type="html">
+<p class="oe_view_nocontent_create">
+    Click here to create a new message.
+</p><p>
+    Multi messages allows you to to easily design and send message to your contacts, customers or leads using contact lists.
+</p></field>
+        </record>
+
+    <record id="action_view_multi_zalo_from_campaign" model="ir.actions.act_window">
+            <field name="name">View Multi Message From Campaign</field>
+            <field name="res_model">btek.multi.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('mass_mailing_campaign_id', '=', active_id), ('channel', '=', 'zalo')]</field>
+            <field name="help" type="html">
+<p class="oe_view_nocontent_create">
+    Click here to create a new message.
+</p><p>
+    Multi messages allows you to to easily design and send message to your contacts, customers or leads using contact lists.
+</p></field>
+        </record>
+
+    <record id="action_create_multi_message_from_campaign" model="ir.actions.act_window">
+            <field name="name">Multi Message</field>
+            <field name="res_model">btek.multi.message</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,kanban,tree</field>
+            <field name="context">{
+                'search_default_mass_mailing_campaign_id': [active_id],
+                'default_mass_mailing_campaign_id': active_id,
+            }
+            </field>
+            <field name="help" type="html">
+<p class="oe_view_nocontent_create">
+    Click here to create a new message.
+</p><p>
+    Multi messages allows you to to easily design and send message to your contacts, customers or leads using contact lists.
+</p></field>
+        </record>
+
+    <record id="btek_mail_mass_mailing_campaign_form" model="ir.ui.view">
+        <field name="name">mail.mass_mailing.campaign.form</field>
+        <field name="model">mail.mass_mailing.campaign</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_campaign_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/span/field[@name='stage_id']" position="before">
+                <button name="%(action_create_multi_message_from_campaign)d" type="action" class="oe_highlight" string="Send new Message"/>
+            </xpath>
+            <xpath expr="//sheet/div[@name='button_box']" position="attributes">
+                <attribute name="attrs">{'invisible': [('total', '&lt;', 0), ('total_mailings', '=', 0)]}</attribute>
+            </xpath>
+            <xpath expr="//sheet/div/button[6]" position="after">
+                <div class="oe_button_box" name="button_box_2"
+                     attrs="{'invisible': [('total_sms', '=', 0)]}">
+                    <button name="%(action_view_multi_sms_from_campaign)d"
+                            type="action" class="oe_stat_button" icon="fa-envelope-o">
+                        <field name="total_sms" widget="statinfo" string="SMS"/>
+                    </button>
+                    <button name="%(action_view_multi_sms_from_campaign)d" type="action"
+                            icon="fa-envelope-o" class="oe_stat_button">
+                        <field name="total_contact_sms" string="Contact Send" widget="statinfo"/>
+                    </button>
+                    <button name="%(action_view_multi_sms_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="sms_success_ratio" widget="percentpie" string="SMS success"/>
+                    </button>
+                    <button name="%(action_view_multi_sms_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="sms_fail_ratio" widget="percentpie" string="SMS fail"/>
+                    </button>
+                    <button name="%(action_view_multi_sms_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="sms_invalid_ratio" widget="percentpie" string="SMS invalid"/>
+                    </button>
+                </div>
+                <div class="oe_button_box" name="button_box_3"
+                     attrs="{'invisible': [('total_zalo', '=', 0)]}">
+                    <button name="%(action_view_multi_zalo_from_campaign)d"
+                            type="action" class="oe_stat_button" icon="fa-envelope-o">
+                        <field name="total_zalo" widget="statinfo" string="Zalo"/>
+                    </button>
+                    <button name="%(action_view_multi_zalo_from_campaign)d" type="action"
+                            icon="fa-envelope-o" class="oe_stat_button">
+                        <field name="total_contact_zalo" string="Contact Send" widget="statinfo"/>
+                    </button>
+                    <button name="%(action_view_multi_zalo_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="zalo_success_ratio" widget="percentpie" string="Zalo success"/>
+                    </button>
+                    <button name="%(action_view_multi_zalo_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="zalo_fail_ratio" widget="percentpie" string="Zalo fail"/>
+                    </button>
+                    <button name="%(action_view_multi_zalo_from_campaign)d"
+                            type="action" class="oe_stat_button">
+                        <field name="zalo_invalid_ratio" widget="percentpie" string="Zalo invalid"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//notebook/page[2]" position="after">
+                <page string="Multi Messages">
+                    <field name="multi_message_ids" readonly="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="channel"/>
+                            <field name="sent_date"/>
+                            <field name="state"/>
+                            <field name="total" string="Toatal contact"/>
+                            <field name="message_success"/>
+                            <field name="message_fail"/>
+                            <button name="action_duplicate" type="object" string="Duplicate"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="btek_mail_mass_mailing_campaign_kanban" model="ir.ui.view">
+        <field name="name">mail.mass_mailing.campaign.kanban</field>
+        <field name="model">mail.mass_mailing.campaign</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_campaign_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mass_mailing_ids']" position="after">
+                <field name="multi_message_ids"/>
+                <field name="total_contact_sms"/>
+                <field name="total_contact_zalo"/>
+            </xpath>
+            <xpath expr="//templates/t/div//div[2]/div/a" position="attributes">
+                <attribute name="attrs">{'invisible': [('mass_mailing_ids', '=', [])]}</attribute>
+            </xpath>
+            <xpath expr="//templates/t/div//div[2]/div[3]" position="attributes">
+                <attribute name="attrs">{'invisible': [('mass_mailing_ids', '=', [])]}</attribute>
+            </xpath>
+            <xpath expr="//templates/t/div//div[2]" position="after">
+                <a name="%(action_view_multi_sms_from_campaign)d"
+                   type="action" class="oe_mailings"
+                   attrs="{'invisible': [('total_sms', '=', 0)]}">
+                    <h4 class="oe_margin_top_8"><field name="total_sms"/>  SMS </h4>
+                </a>
+                <div class="oe_clear"></div>
+                <div attrs="{'invisible': [('total_sms', '=', 0)]}">
+                    <div style="display: inline-block">
+                        <field name="sms_success" string="Delivered" widget="gauge" style="width:120px; height: 90px;"
+                            options="{'max_field': 'total_contact_sms'}"/>
+                    </div>
+                    <div style="display: inline-block; vertical-align: top;">
+                        <strong>Success</strong> <field name="sms_success_ratio"/> %<br />
+                        <strong>Fail</strong> <field name="sms_fail_ratio"/> % <br />
+                        <strong>Invalid</strong> <field name="sms_invalid_ratio"/> % <br />
+                    </div>
+                </div>
+
+                <a name="%(action_view_multi_zalo_from_campaign)d"
+                   type="action" class="oe_mailings"
+                   attrs="{'invisible': [('total_zalo', '=', 0)]}">
+                    <h4 class="oe_margin_top_8"><field name="total_zalo"/>  Zalo </h4>
+                </a>
+                <div class="oe_clear"></div>
+                <div attrs="{'invisible': [('total_zalo', '=', 0)]}">
+                    <div style="display: inline-block">
+                        <field name="zalo_success" string="Delivered" widget="gauge" style="width:120px; height: 90px;"
+                            options="{'max_field': 'total_contact_zalo'}"/>
+                    </div>
+                    <div style="display: inline-block; vertical-align: top;">
+                        <strong>Success</strong> <field name="zalo_success_ratio"/> %<br />
+                        <strong>Fail</strong> <field name="zalo_fail_ratio"/> % <br />
+                        <strong>Invalid</strong> <field name="zalo_invalid_ratio"/> % <br />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+
+
+

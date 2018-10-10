@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_repair_configuration" model="ir.ui.view">
+        <field name="name">repair.res.config.view</field>
+        <field name="model">repair.config.settings</field>
+        <field name="arch" type="xml">
+            <form string="Configure Repair" class="oe_form_configuration">
+                <header>
+                    <button string="Apply" type="object"
+                            name="execute" class="oe_highlight"/>
+                    <button string="Cancel" type="object"
+                            name="cancel" class="oe_link" special="cancel"/>
+                </header>
+                <group string="Delivery">
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                        <field name="picking_auto_done"/>
+                    </group>
+                </group>
+                <group string="Workorder">
+                    <group>
+                        <field name="workorder_auto_done"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_repair_configuration" model="ir.actions.act_window">
+        <field name="name">Configure Repair</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">repair.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+    <menuitem id="menu_action_repair_configuration"
+              action="action_repair_configuration"
+              parent="car_repair_industry.menu_fleet_config_menu"
+              sequence="0" groups="base.group_no_one"/>
+</odoo>

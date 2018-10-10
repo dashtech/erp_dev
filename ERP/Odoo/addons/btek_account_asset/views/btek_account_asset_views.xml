@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="btek_view_account_asset_asset_form" model="ir.ui.view">
+            <field name="name">btek.account.asset.asset.form</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="year_of_manufacture"/>
+                    <field name="country_of_manufacture"/>
+                    <field name="day_of_purchase"/>
+                </xpath>
+                <xpath expr="//page[1]" position="replace">
+                    <page string="Depreciation Information">
+                        <group>
+                            <field name="method" widget="radio" attrs="{'invisible': [('type','=','sale')]}"/>
+                            <field name="method_progress_factor"
+                                   attrs="{'invisible':[('method','=','linear')], 'required':[('method','=','degressive')]}"/>
+                            <field name="method_time" string="Time Method Based On" widget="radio"
+                                   attrs="{'invisible': [('type','!=','purchase')]}"/>
+                            <field name="prorata" attrs="{'invisible': [('method_time','=','end')]}"/>
+                        </group>
+                        <group>
+                            <field name="method_number"
+                                   attrs="{'invisible':[('method_time','=','end')], 'required':[('method_time','=','number')]}"/>
+                            <field name="method_period"/>
+                            <field name="method_end"
+                                   attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//page[2]" position="replace">
+                    <page string="Depreciation Board">
+                        <field name="depreciation_line_ids" mode="tree" options="{'reload_whole_on_button': true}">
+                            <tree string="Depreciation Lines" decoration-info="(move_check == False)" create="false">
+                                <field name="depreciation_date"/>
+                                <field name="depreciated_value" readonly="1"/>
+                                <field name="amount" widget="monetary" string="Depreciation"/>
+                                <field name="remaining_value" readonly="1" widget="monetary" string="Residual"/>
+                                <field name="move_check" invisible="1"/>
+                                <field name="move_posted_check" invisible="1"/>
+                                <field name="parent_state" invisible="1"/>
+                                <button name="create_move" type="object" widget="widgetonbutton"/>
+                            </tree>
+                            <form string="Depreciation Lines">
+                                <group>
+                                    <group>
+                                        <field name="parent_state" invisible="1"/>
+                                        <field name="name"/>
+                                        <field name="sequence"/>
+                                        <field name="move_id"/>
+                                        <field name="move_check"/>
+                                        <field name="parent_state" invisible="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="amount" widget="monetary"/>
+                                        <field name="depreciation_date"/>
+                                        <field name="depreciated_value"/>
+                                        <field name="remaining_value"/>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page[2]" position="after">
+                     <page string="Phụ tùng kèm theo">
+                            <field name="accessary_asset_ids" groups="base.group_user" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="x_name" string="Tên"
+                                           groups="account.group_account_user" style="width:350px;"/>
+                                    <field name="x_product_uom" string="Đơn vị tính"
+                                           groups="account.group_account_user" style="width:150px;"/>
+                                    <field name="x_qty" string="Số lượng"
+                                           groups="account.group_account_user"/>
+                                    <field name="x_price" string="Đơn giá"
+                                           groups="account.group_account_user"/>
+                                </tree>
+                            </field>
+                        <group>
+                        </group>
+                    </page>
+                    <page string="Ghi chú">
+                        <field name="note" placeholder="Add an internal note here..."/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_account_asset_search_inherit" model="ir.ui.view">
+            <field name="name">view.account.asset.search.inherit</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="date"
+                           string="Start date of depreciation greater than or equal to"
+                           filter_domain="[('date', '&gt;=', self)]"/>
+                    <field name="date"
+                           string="Start date of depreciation less than or equal to"
+                           filter_domain="[('date', '&lt;=', self)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

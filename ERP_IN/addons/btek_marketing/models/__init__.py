@@ -1,0 +1,10 @@
+import btek_auto_condition
+import btek_res_partner
+import btek_partner_source
+import btek_function
+import btek_multi_message_config
+import btek_multi_message
+import btek_mass_mailing
+import btek_contact
+import btek_auto_send_mail
+import btek_auto_send

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="survey_label_tree_inherit">
+            <field name="name">survey_label_tree_inherit</field>
+            <field name="model">survey.label</field>
+            <field name="inherit_id" ref="survey.survey_label_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='value']" position="after">
+                    <field name="color"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_question_form_inherit">
+            <field name="name">survey_question_form_inherit</field>
+            <field name="model">survey.question</field>
+            <field name="inherit_id" ref="survey.survey_question_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='labels_ids']/tree/field[@name='value']" position="after">
+                    <field name="color"/>
+                </xpath>
+                <xpath expr="//div[@class='col-md-6 col-md-offset-3 o_preview_questions']" position="inside">
+                    <div attrs="{'invisible': [('type', '!=', 'matrix_input')]}">
+                        <div class="row o_matrix_row" style="border-top: none;">
+                            <div class="col-md-2">Row1</div>
+                            <div class="col-md-3"><input type="text" /></div>
+                            <div class="col-md-2"><i class="fa fa-circle-o fa-lg"/></div>
+                            <div class="col-md-2"><i class="fa fa-dot-circle-o fa-lg"/></div>
+                            <div class="col-md-2"><i class="fa fa-circle-o fa-lg"/></div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='labels_ids']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in', ['simple_choice', 'multiple_choice', 'matrix_input', 'matrix_row'])], 'required': [('type', 'in', ['matrix_input', 'matrix_row'])]}</attribute>
+                </xpath>
+                <xpath expr="//label[@for='labels_ids_2']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in', ['matrix_input', 'matrix_row'])], 'required': [('type', 'in', ['matrix_input', 'matrix_row'])]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='labels_ids_2']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type', 'not in', ['matrix_input', 'matrix_row'])], 'required': [('type', 'in', ['matrix_input', 'matrix_row'])]}</attribute>
+                </xpath>
+                <xpath expr="//sheet//group/group" position="after">
+                    <group name="group_type">
+                        <field name="group"/>
+                    </group>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page name="product_ids"
+                          string="Suggest products">
+                        <field name="product_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>        

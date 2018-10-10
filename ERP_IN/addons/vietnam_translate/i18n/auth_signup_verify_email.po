@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* auth_signup_verify_email
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-05 09:03+0000\n"
+"PO-Revision-Date: 2017-09-05 09:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: auth_signup_verify_email
+#: code:addons/auth_signup_verify_email/controllers/main.py:54
+#: code:addons/auth_signup_verify_email/tests/test_verify_email.py:30
+#, python-format
+msgid "Check your email to activate your account!"
+msgstr "Kiểm tra email của bạn để kích hoạt tài khoản!"
+
+#. module: auth_signup_verify_email
+#: code:addons/auth_signup_verify_email/controllers/main.py:50
+#: code:addons/auth_signup_verify_email/tests/test_verify_email.py:28
+#, python-format
+msgid "Something went wrong, please try again later or contact us."
+msgstr "Đã xảy ra sự cố, vui lòng thử lại sau hoặc liên hệ với chúng tôi."
+
+#. module: auth_signup_verify_email
+#: code:addons/auth_signup_verify_email/controllers/main.py:31
+#: code:addons/auth_signup_verify_email/tests/test_verify_email.py:27
+#, python-format
+msgid "That does not seem to be an email address."
+msgstr "Đó không phải là địa chỉ email."

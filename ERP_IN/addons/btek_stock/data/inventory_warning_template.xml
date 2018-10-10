@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate='0'>
+    <record id="inventory_warning_templates" model="mail.template">
+        <field name="name">Email template: Stock product min quantity warning</field>
+        <field name="email_from"></field>
+        <field name="subject">Thông báo tồn kho</field>
+        <field name="email_to">${object.mailling_list|safe}</field>
+        <field name="lang"></field>
+        <field name="model_id" ref="btek_stock.model_btek_inventory_config"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html">
+            <![CDATA[
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <p><span style="font-size:18px;">Email thông báo sản phẩm có số lượng tồn kho nhỏ hơn số lượng tồn kho tối thiểu.</em></span></p>
+        <table style="border-collapse: collapse; border: 1px solid blue; width: 90%;">
+            <tbody>
+                <tr>
+                    <th style="border: 1px solid blue;">Sản phẩm</th>
+                    <th style="border: 1px solid blue;">Kho</th>
+                    <th style="border: 1px solid blue;">Tồn kho tối thiểu</th>
+                    <th style="border: 1px solid blue;">Tồn kho thực tế</th>
+                    <th style="border: 1px solid blue;">Chênh lệch</th>
+                </tr>
+                % if object.check_inventory():
+                    % for line in object.check_inventory()
+                    <tr>
+                        <td style="border: 1px solid blue; padding: 5px 10px;">${line['product']}</td>
+                        <td style="border: 1px solid blue; padding: 5px 10px;">${line['location']}</td>
+                        <td style="border: 1px solid blue; padding: 5px 10px;">${line['min_qty']}</td>
+                        <td style="border: 1px solid blue; padding: 5px 10px;">${line['product_qty']}</td>
+                        <td style="border: 1px solid blue; padding: 5px 10px;">${line['check']}</td>
+                    </tr>
+                    % endfor
+                    % endif
+            </tbody>
+        </table>
+      ]]>
+        </field>
+    </record>
+
+</odoo>

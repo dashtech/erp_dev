@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="btek_sms_config_form_view" model="ir.ui.view">
+        <field name="name">btek.sms.config.form</field>
+        <field name="model">btek.sms.config</field>
+        <field name="arch" type="xml">
+            <form string="SMS Config">
+                <sheet>
+                    <group cosplan="4" col ="4">
+                        <field name="sms_supplier"
+                               required="1"
+                               string="SMS Supplier"/>
+                        <field name="name"/>
+                    </group>
+                    <group cosplan="4" col ="4">
+                        <field name="sms_type" string="SMS Type"
+                               attrs="{'invisible': [('sms_supplier', '!=', 'eSMS')]}"/>
+                        <field name="url" required="1"/>
+                    </group>
+                    <group cosplan="4" col ="4">
+                        <field name="api_key" required="1"/>
+                        <field name="secret_key" required="1" password="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="btek_sms_config_tree_view" model="ir.ui.view">
+        <field name="name">btek.sms.config.tree</field>
+        <field name="model">btek.sms.config</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="api_key"/>
+                <field name="secret_key" invisible="1" password="1"/>
+                <field name="url"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_sms_config" model="ir.actions.act_window">
+        <field name="name">Btek SMS Config</field>
+        <field name="res_model">btek.sms.config</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="menu_action_btek_sms_config"
+              name="SMS Brandname"
+              action="action_btek_sms_config"
+              parent="mass_mailing.menu_mass_mailing_configuration"
+              sequence="7"/>
+
+    <record id="btek_zalo_config_form_view" model="ir.ui.view">
+        <field name="name">btek.zalo.config.form</field>
+        <field name="model">btek.zalo.config</field>
+        <field name="arch" type="xml">
+            <form string="Zalo Config" create="false" delete="false">
+                <sheet>
+                    <group>
+                        <field name="spcode" required="1"/>
+                        <field name="url" required="1"/>
+                        <field name="total_follow" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--<record id="btek_zalo_config_tree_view" model="ir.ui.view">-->
+        <!--<field name="name">btek.zalo.config.tree</field>-->
+        <!--<field name="model">btek.zalo.config</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<tree>-->
+                <!--<field name="spcode" required="1"/>-->
+                <!--<field name="url" required="1"/>-->
+            <!--</tree>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <record id="action_btek_zalo_config" model="ir.actions.act_window">
+        <field name="name">Btek Zalo Config</field>
+        <field name="res_model">btek.zalo.config</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="btek_marketing.btek_zalo_config_override"/>
+    </record>
+
+    <menuitem id="menu_action_btek_zalo_config"
+              name="Zalo Config"
+              action="action_btek_zalo_config"
+              parent="mass_mailing.menu_mass_mailing_configuration"
+              sequence="9"/>
+</odoo>

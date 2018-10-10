@@ -1,0 +1,77 @@
+.o_content {
+  background-color: #EBF1F5; }
+
+.btek-repair {
+  margin: 10px !important;
+  padding: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background: none !important; }
+  .btek-repair .header {
+    padding: 10px;
+    background-color: #fbfdff;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #e9ebf0;
+    -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1); }
+    .btek-repair .header h3 {
+      font-family: 'Arial';
+      font-size: 16px;
+      margin: 0;
+      color: #1e283a;
+      font-weight: bold;
+      padding: 2px 0; }
+    .btek-repair .header .o_kanban_image img {
+      border: 1px solid #d4d9e3;
+      border-radius: 5px; }
+    .btek-repair .header .license_plate {
+      font-family: 'Arial';
+      color: #0099e5;
+      font-weight: bold;
+      padding: 2px 0; }
+    .btek-repair .header .o_priority {
+      font-size: 10px; }
+    .btek-repair .header .btek-timer img {
+      margin-top: -4px;
+      padding-right: 5px; }
+  .btek-repair ul li {
+    display: block;
+    font-family: 'Arial';
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000; }
+    .btek-repair ul li strong {
+      font-weight: normal;
+      color: #666666; }
+  .btek-repair .content {
+    padding: 10px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1); }
+  .btek-repair .footer > div {
+    width: 100%;
+    float: left;
+    background-color: #cdcdcd;
+    border-radius: 0 0 5px 5px !important;
+    -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    text-align: center;
+    font-family: 'Arial';
+    font-size: 14px;
+    font-weight: bolder; }
+    .btek-repair .footer > div.oe_kanban_status_done {
+      background-color: #16c188;
+      color: #ffffff; }
+    .btek-repair .footer > div.oe_kanban_status_working {
+      background-color: #f5a623;
+      color: #ffffff; }
+    .btek-repair .footer > div.oe_kanban_status_pending {
+      background-color: #ebf1f5;
+      color: #404858; }
+    .btek-repair .footer > div img {
+      padding-right: 5px; }
+  @media (max-width: 767px) {
+    .btek-repair {
+      margin: 0 !important;
+      padding: 10px !important; } }

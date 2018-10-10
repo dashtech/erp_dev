@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="inventory_card_account_form">
+            <field name="name">Thẻ kho kế toán</field>
+            <field name="model">stock.inventory.account</field>
+           <field name="arch" type="xml">
+                <form string="Inventory Report">
+                    <group>
+                        <group>
+                            <field name="from_date"/>
+                            <field name="to_date"/>
+                        </group>
+                        <group>
+                            <field name="product" required="1" domain="[('type','=','product')]"/>
+                            <field name="lot_id" domain = "[('product_id','=', product)]" invisible="1"/>
+                            <field name="warehouse" domain="[('usage','=','view'),('location_id', '!=', None)]" />
+                            <field name="account_account_id" string="Tài khoản"/>
+
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_print" string="In" class="oe_highlight oe_right" type="object"/>
+                    </footer>
+                </form>
+             </field>
+        </record>
+
+        <record id="inventory_card_account_act" model="ir.actions.act_window">
+            <field name="name">Báo cáo thẻ kho kế toán</field>
+            <field name="res_model">stock.inventory.account</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="inventory_card_account_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Báo cáo kho"
+                  id="baocaoketoananhtt"
+                  sequence="3"
+                  parent="account.menu_finance_reports"
+                />
+
+        <menuitem name="Thẻ kho kế toán"
+                  id="inventory_card_report_account_menu"
+                  sequence="3"
+                  parent="baocaoketoananhtt"
+                  action="inventory_card_account_act"
+                />
+
+        <report id="stock_inventory_account_report"
+                model="stock.inventory.account"
+                string="TheKhoKT"
+                report_type="xlsx"
+                name="btek_report_stock.stock_inventory_account"
+                file="btek_report_stock.stock_inventory_account"
+                attachment_use="False"/>
+
+    </data>
+</odoo>

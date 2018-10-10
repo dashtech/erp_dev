@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="only_general_notify_configuration"
+            model="general.notify.configuration">
+    </record>
+
+    <record id="send_notify_message_cron" model="ir.cron">
+            <field name="name">Send notify message</field>
+            <field eval="True" name="active" />
+            <field name="user_id" ref="base.user_root" />
+            <field name="interval_number">2</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall" />
+            <field name="model">notify.model.configuration</field>
+            <field name="function">run_and_send</field>
+            <field name="args">()</field>
+        </record>
+</odoo>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="voucher_form"
+            model="ir.ui.view">
+        <field name="name">voucher.form</field>
+        <field name="model">voucher</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="banner_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;banner_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group>
+                    <group>
+                        <field name="stt"/>
+                        <field name="service_provider_id"/>
+                        <field name="type"/>
+                        <field name="title"/>
+                    </group>
+                    <group>
+                        <field name="value"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="banner" widget="image"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Members">
+                        <field name="member_ids"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="voucher_tree"
+            model="ir.ui.view">
+        <field name="name">voucher.tree</field>
+        <field name="model">voucher</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="stt"/>
+                <field name="service_provider_id"/>
+                <field name="title"/>
+                <field name="value"/>
+                <field name="create_date"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_voucher"
+            model="ir.actions.act_window">
+        <field name="name">Promotions</field>
+        <field name="res_model">voucher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="root_menu_promotions"
+              name="Promotions"
+              parent="root_menu_social"
+              sequence="40"/>
+
+    <menuitem id="menu_action_voucher"
+              parent="root_menu_promotions"
+              action="action_voucher"
+              sequence="10"/>
+</odoo>
+

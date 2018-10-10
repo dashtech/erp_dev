@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="btek_zalo_config_override" model="btek.zalo.config">
+        <field name="spcode">..//</field>
+        <field name="url">..//</field>
+    </record>
+</odoo>

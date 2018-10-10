@@ -1,0 +1,265 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* booking_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-12 04:03+0000\n"
+"PO-Revision-Date: 2018-04-12 11:11+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_address
+msgid "Address"
+msgstr "Địa chỉ"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_avatar
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_avatar_medium
+msgid "Avatar medium"
+msgstr "Avatar medium"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_avatar_small
+msgid "Avatar small"
+msgstr "Avatar small"
+
+#. module: booking_management
+#: model:ir.actions.act_window,name:booking_management.action_booking
+#: model:ir.ui.menu,name:booking_management.menu_action_booking
+#: model:ir.ui.menu,name:booking_management.root_menu_booking
+msgid "Booking Management"
+msgstr "Quản lý đặt lịch"
+
+#. module: booking_management
+#: model:ir.model,name:booking_management.model_booking
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Booking management"
+msgstr "Quản lý đặt lịch"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_booking_time
+msgid "Booking time"
+msgstr "Thời gian đặt"
+
+#. module: booking_management
+#: selection:booking,channel:0
+msgid "Call"
+msgstr "Call"
+
+#. module: booking_management
+#: selection:booking,state:0
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Car Vehicle Model"
+msgstr "Dòng xe"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_car_plate
+msgid "Car plate"
+msgstr "Biển số"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_search_view
+msgid "Car vehicle model"
+msgstr "Dòng xe"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_car_vehicle_model_id
+msgid "Car vehicle model id"
+msgstr "Car vehicle model id"
+
+#. module: booking_management
+#: selection:booking,channel:0
+msgid "Cargo"
+msgstr "Cargo"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_channel
+#: model:ir.ui.view,arch_db:booking_management.booking_search_view
+msgid "Channel"
+msgstr "Kênh"
+
+#. module: booking_management
+#: selection:booking,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Confirm booking"
+msgstr "Xác nhận đặt lịch"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Connect Customer"
+msgstr "Liên hệ khách hàng"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_country_id
+msgid "Country id"
+msgstr "Country id"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_district_id
+msgid "District"
+msgstr "Quận/Huyện"
+
+#. module: booking_management
+#: selection:booking,state:0
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Done"
+msgstr "Hoàn Thành"
+
+#. module: booking_management
+#: selection:booking,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: booking_management
+#: selection:booking,gender:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_gender
+#: model:ir.ui.view,arch_db:booking_management.booking_search_view
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_search_view
+msgid "Group by"
+msgstr "Group by"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_id
+msgid "ID"
+msgstr "ID"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: booking_management
+#: selection:booking,gender:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_search_view
+msgid "Member"
+msgstr "Thành viên"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_member_id
+msgid "Member id"
+msgstr "Member id"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_mobile_phone
+msgid "Mobile phone"
+msgstr "Điện thoại"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: booking_management
+#: selection:booking,channel:0 selection:booking,gender:0
+msgid "Other"
+msgstr "Khác"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_promotion_number
+msgid "Promotion number"
+msgstr "Số KM"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_state_id
+msgid "Province"
+msgstr "Province"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Repair History"
+msgstr "Lịch sử sửa chữa"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Services"
+msgstr "Các dịch vụ"
+
+#. module: booking_management
+#: model:ir.ui.view,arch_db:booking_management.booking_form_view
+msgid "Services catalog"
+msgstr "Gói dịch vụ"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_services_catalog_ids
+msgid "Services catalog ids"
+msgstr "Services catalog ids"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_services_ids
+msgid "Services ids"
+msgstr "Services ids"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_state
+msgid "State"
+msgstr "Tỉnh/Thành phố"
+
+#. module: booking_management
+#: model:ir.model.fields,field_description:booking_management.field_booking_ward_id
+msgid "Ward"
+msgstr "Phường/Xã"
+
+#. module: booking_management
+#: selection:booking,channel:0
+msgid "Web"
+msgstr "Web"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem action="procurement.action_compute_schedulers" id="stock.menu_stock_proc_schedulers" parent="stock.menu_stock_sched" sequence="1" groups="stock.group_stock_user"/>
+    <menuitem id="stock.menu_warehouse_report" name="Reports" sequence="99" parent="stock.menu_stock_root" groups="stock.group_stock_user"/>
+    <menuitem action="procurement.procurement_order_action_exceptions" id="stock.menu_stock_procurement_action" parent="stock.menu_warehouse_report" sequence="150" groups="stock.group_stock_user"/>
+    <menuitem id="stock.menu_stock_config_settings" name="Configuration" parent="stock.menu_stock_root"
+        sequence="100" groups="stock.group_stock_user"/>
+
+    <menuitem id="stock.menu_warehouse_config" name="Warehouse Management" parent="stock.menu_stock_config_settings" groups="stock.group_stock_user" sequence="1"/>
+
+    <record id="stock.menu_product_variant_config_stock" model="ir.ui.menu">
+        <!--<field name="sequence" eval="3"/>-->
+        <!--<field name="parent" ref="stock.menu_stock_inventory_control"/>-->
+        <!--<field name="action" ref="product.product_template_action_product"/>-->
+        <field name="groups_id" eval="[(6, False, [ref('base.group_no_one')])]"/>
+    </record>
+
+    <!--sản phẩm-->
+    <record id="stock.product_product_menu" model="ir.ui.menu">
+        <field name="sequence" eval="2"/>
+        <field name="parent" ref="stock.menu_stock_inventory_control"/>
+        <field name="action" ref="product.product_normal_action"/>
+        <field name="groups_id" eval="[(6, False, [])]"/>
+    </record>
+
+</odoo>

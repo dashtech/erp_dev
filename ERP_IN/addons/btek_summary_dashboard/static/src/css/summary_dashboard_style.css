@@ -1,0 +1,366 @@
+main {
+  background-color: #e9ecf1;
+  color: #646e83; }
+
+.btek-area {
+  padding: 15px 0; }
+  .btek-area .white-box {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px; }
+    .btek-area .white-box .text-box-title {
+      padding: 15px;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 15px;
+      line-height: 24px;
+      background-color: #f8fafc;
+      border-radius: 5px 5px 0px 0px;
+      -moz-border-radius: 5px 5px 0px 0px;
+      -webkit-border-radius: 5px 5px 0px 0px;
+      letter-spacing: 1px; }
+      .btek-area .white-box .text-box-title span {
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        text-transform: none; }
+        .btek-area .white-box .text-box-title span span {
+          font-weight: normal;
+          float: left;
+          font-size: 14px;
+          line-height: 24px;
+          color: #016823; }
+        .btek-area .white-box .text-box-title span .form-group {
+          margin-top: -5px; }
+    .btek-area .white-box .content-box {
+      padding: 15px; }
+      .btek-area .white-box .content-box .btek-maxhieght ul.list-left-right li > span {
+        padding-right: 5px; }
+        .btek-area .white-box .content-box .btek-maxhieght ul.list-left-right li > span .form-group {
+          margin-top: -8px;
+          margin-bottom: 0; }
+      .btek-area .white-box .content-box ul.list-left-right {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0; }
+        .btek-area .white-box .content-box ul.list-left-right li {
+          padding-bottom: 5px; }
+          .btek-area .white-box .content-box ul.list-left-right li > span {
+            float: right; }
+        .btek-area .white-box .content-box ul.list-left-right.type .form-group {
+          margin-bottom: 0; }
+          .btek-area .white-box .content-box ul.list-left-right.type .form-group .form-control {
+            margin-top: -10px; }
+      .btek-area .white-box .content-box.employee, .btek-area .white-box .content-box.inventory, .btek-area .white-box .content-box.num_invoice {
+        font-size: 15px;
+        padding: 20px !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 1px; }
+        .btek-area .white-box .content-box.employee img, .btek-area .white-box .content-box.inventory img, .btek-area .white-box .content-box.num_invoice img {
+          max-width: 80px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%; }
+        .btek-area .white-box .content-box.employee span, .btek-area .white-box .content-box.inventory span, .btek-area .white-box .content-box.num_invoice span {
+          font-size: 25px;
+          font-weight: bold;
+          color: #000; }
+
+.choose-block input {
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  outline: none; }
+  .choose-block input:hover, .choose-block input.selected_button {
+    background-color: #0099e5;
+    color: #fff; }
+
+button.car_in_week,
+button.car_in_month,
+button.car_in_quarter,
+button.revenue_week,
+button.revenue_month,
+button.revenue_quarter,
+button.revenue_year,
+button.cost_week,
+button.cost_month,
+button.cost_quarter,
+button.cost_year {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-size: 14px;
+  border: 1px solid #e6eaf0;
+  border-radius: 4px;
+  outline: none;
+  padding: 4px 15px;
+  background-color: #fff; }
+  button.car_in_week.selected_button,
+  button.car_in_month.selected_button,
+  button.car_in_quarter.selected_button,
+  button.revenue_week.selected_button,
+  button.revenue_month.selected_button,
+  button.revenue_quarter.selected_button,
+  button.revenue_year.selected_button,
+  button.cost_week.selected_button,
+  button.cost_month.selected_button,
+  button.cost_quarter.selected_button,
+  button.cost_year.selected_button {
+    background-color: #0099e5;
+    color: #fff; }
+
+.widget-today .content-box .current-car {
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+  color: #000; }
+  .widget-today .content-box .current-car span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    color: #646e83; }
+
+.widget-today .content-box ul.list-left-right li {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px; }
+  .widget-today .content-box ul.list-left-right li span {
+    font-size: 14px;
+    font-weight: normal; }
+  .widget-today .content-box ul.list-left-right li.has_been_repair {
+    color: #16c188; }
+    .widget-today .content-box ul.list-left-right li.has_been_repair span {
+      color: #646e83; }
+  .widget-today .content-box ul.list-left-right li.repairing {
+    color: #ffb02e; }
+    .widget-today .content-box ul.list-left-right li.repairing span {
+      color: #646e83; }
+
+.widget-today .footer-box {
+  background-color: #16c188;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px; }
+
+#revenue-cost .white-box {
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  clear: both; }
+  #revenue-cost .white-box .text-box-title {
+    background: none; }
+  #revenue-cost .white-box .content-box {
+    padding-top: 0px; }
+  #revenue-cost .white-box .btek-maxhieght {
+    height: 184px;
+    -webkit-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow: auto; }
+
+.widget-client ul.list-left-right li {
+  border-bottom: 1px dashed #e6eaf0;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+.widget-client .btek-maxhieght {
+  height: 262px;
+  -webkit-flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: auto;
+  overflow-x: hidden; }
+
+.hidden-panel {
+  display: none; }
+
+.nav-tab {
+  width: 100%;
+  float: left;
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px; }
+  .nav-tab .nav-button-tab {
+    width: 50%;
+    float: left; }
+    .nav-tab .nav-button-tab input {
+      width: 100%;
+      padding: 20px;
+      background-color: #f8fafc;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: #646e83;
+      letter-spacing: 1px; }
+      .nav-tab .nav-button-tab input.revenue {
+        border-radius: 5px 0px 0px 0px;
+        -moz-border-radius: 5px 0px 0px 0px;
+        -webkit-border-radius: 5px 0px 0px 0px; }
+      .nav-tab .nav-button-tab input.cost {
+        border-radius: 0px 5px 0px 0px;
+        -moz-border-radius: 0px 5px 0px 0px;
+        -webkit-border-radius: 0px 5px 0px 0px; }
+      .nav-tab .nav-button-tab input.selected_button {
+        background-color: #0099e5;
+        color: #fff; }
+
+#revenue_tab .featured, #cost_tab .featured {
+  border: 1px solid #e6eaf0;
+  border-right: 0;
+  text-align: center; }
+  #revenue_tab .featured:first-child, #cost_tab .featured:first-child {
+    border-left: 0; }
+  #revenue_tab .featured .text-box-title, #cost_tab .featured .text-box-title {
+    font-weight: normal; }
+    #revenue_tab .featured .text-box-title span, #cost_tab .featured .text-box-title span {
+      padding-top: 5px;
+      display: block;
+      float: none; }
+
+#revenue_tab .content-box, #cost_tab .content-box {
+  clear: both; }
+
+#revenue_tab div#period_revenue_value, #revenue_tab div#period_cost_value, #cost_tab div#period_revenue_value, #cost_tab div#period_cost_value {
+  line-height: 34px;
+  display: initial; }
+
+#revenue_tab ul.list-left-right.total, #revenue_tab ul.list-left-right.total label, #cost_tab ul.list-left-right.total, #cost_tab ul.list-left-right.total label {
+  font-weight: bold; }
+
+#revenue_tab ul.list-left-right li, #cost_tab ul.list-left-right li {
+  border-bottom: 1px dashed #e6eaf0;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+#revenue_tab label, #cost_tab label {
+  max-width: 75%;
+  font-weight: normal;
+  margin-bottom: 0; }
+
+.customer-chart span.text-box-button {
+  margin-top: -5px; }
+
+#customer_pie_chart {
+  height: 262px; }
+  #customer_pie_chart .amcharts-chart-div > a {
+    display: none !important; }
+
+.item-circle {
+  text-align: center; }
+  .item-circle span {
+    width: 100px;
+    height: 100px;
+    line-height: 95px;
+    border-radius: 50%;
+    /* the magic */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 auto 10px;
+    display: block;
+    border: 3px solid #cdcdcd; }
+  .item-circle.car-in-gara span {
+    border-color: #566783;
+    color: #566783; }
+  .item-circle.car-has-been-repair span {
+    border-color: #16c188;
+    color: #16c188; }
+  .item-circle.car-repairing span {
+    border-color: #ffb02e;
+    color: #ffb02e; }
+  .item-circle.car-waiting span {
+    border-color: #0099e5;
+    color: #0099e5; }
+
+.item-top-purchase {
+  border-bottom: 1px dashed #e6eaf0;
+  padding-bottom: 5px;
+  margin-bottom: 10px; }
+
+@media screen and (max-width: 1160px) {
+  #revenue-cost .white-box .btek-maxhieght {
+    height: 138px; }
+  .widget-client .btek-maxhieght {
+    height: 212px; } }
+
+@media screen and (max-width: 1023px) {
+  #revenue-cost .white-box .btek-maxhieght {
+    height: 238px; } }
+
+@media screen and (max-width: 799px) {
+  .btek-area #revenue_tab .text-box-title, .btek-area #cost_tab .text-box-title {
+    padding: 10px; }
+  .btek-area #revenue_tab .featured .text-box-title, .btek-area #cost_tab .featured .text-box-title {
+    padding: 10px 0; }
+  .btek-area > .row > div {
+    padding-top: 30px; }
+    .btek-area > .row > div:first-child {
+      padding-top: 0; }
+  #btek-money > .row > div, #btek-statistic > .row > div {
+    padding-top: 0; }
+  #revenue_tab .content-box .revenue-chart, #cost_tab .content-box .cost-chart {
+    padding-bottom: 30px; } }
+
+@media screen and (max-width: 767px) {
+  #btek-today .row > div:nth-of-type(1n+3) {
+    padding-top: 30px; }
+  #btek-money > .row > div, #btek-statistic > .row > div {
+    padding-top: 30px; }
+    #btek-money > .row > div:first-child, #btek-statistic > .row > div:first-child {
+      padding-top: 0; }
+  #revenue_tab .featured, #cost_tab .featured {
+    border: none;
+    border-bottom: 1px solid #e6eaf0; } }
+
+@media screen and (max-width: 375px) {
+  .btek-area .white-box .text-box-title span.text-box-button {
+    float: left;
+    padding-top: 30px; }
+  #revenue_tab label, #cost_tab label {
+    max-width: 70%; } }
+
+
+.item-color-compare {
+    text-align: center;  }
+  .item-color-compare.less-than span {
+    text-align: center;
+    color: red;
+    font-size: 26px;
+    font-family: Times New Roman;
+    }
+  .item-color-compare.greater-than span {
+    text-align: center;
+    color: green;
+    font-size: 26px;
+    font-family: Times New Roman;
+    }
+  .item-color-compare.equal span {
+    text-align: center;
+    color: #FF9900;
+    font-size: 26px;
+    font-family: Times New Roman;
+    }
+
+

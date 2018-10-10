@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- ======== Product Category Carousel ======== -->
+
+    <!-- Category Main Snippet's Body -->
+    <template id="s_product_category_carousel_header" name="Product's Category Carousel Slider">
+        <section class="s_product_category_carousel mb8">
+            <div class="container">
+                <div class="js_get_objects" data-loading="true"
+                     data-template="snippet_product_category_carousel_73lines.product_category_list_template_header"
+                     data-object_name="product.public.category" />
+            </div>
+        </section>
+    </template>
+
+    <!-- Category's Template Outer Layout -->
+    <template id="product_category_list_template_header">
+        <div class="headline">
+            <h2 t-esc="title"></h2>
+            <hr class="mt0 mb0"/>
+        </div>
+        <div class="product-category-list owl-carousel owl-theme mb8 mt8">
+            <t t-foreach="objects" t-as="obj">
+                <div class="item product-category-single">
+                    <t t-foreach="obj" t-as="category">
+                        <t t-call="snippet_product_category_carousel_73lines.new_category_item" />
+                    </t>
+                </div>
+            </t>
+        </div>
+    </template>
+
+    <!-- Category's Template Inner Layout -->
+    <template id="new_category_item" name="Category item">
+        <div class="oe_category_image">
+            <a t-att-href="'/shop/category/%s' % slug(category)">
+                <span itemprop="image" t-field="category.image"
+                      t-options="{'widget': 'image', 'resize': None if image else '300x300'}"
+                      t-att-alt="category.name" />
+            </a>
+            <h5 class="text-center">
+                <strong>
+                    <a itemprop="name" t-att-href="'/shop/category/%s' % slug(category)"
+                       t-field="category.name" />
+                </strong>
+            </h5>
+        </div>
+    </template>
+
+</odoo>

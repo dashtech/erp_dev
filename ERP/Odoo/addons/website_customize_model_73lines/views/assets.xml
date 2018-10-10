@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Jump to website after theme installation -->
+    <data noupdate="1">
+        <record id="base.open_menu" model="ir.actions.todo">
+            <field name="action_id" ref="website.action_website" />
+            <field name="state">open</field>
+        </record>
+    </data>
+
+    <!-- LESS -->
+
+    <template id="demo_frontend_style" name="Style" inherit_id="website.assets_frontend" active="True" priority="1">
+        <xpath expr="." position="inside">
+            <!-- Customized Model -->
+            <link href="/website_customize_model_73lines/static/less/colors.less"
+                  rel="stylesheet" type="text/less" />
+            <link href="/website_customize_model_73lines/static/less/mixins.less"
+                  rel="stylesheet" type="text/less" />
+            <link href="/website_customize_model_73lines/static/less/customize_modal.less"
+                  rel="stylesheet" type="text/less" />
+            <link href="/website_customize_model_73lines/static/less/switcher.less"
+                  rel="stylesheet" type="text/less" />
+            <link href="/website_customize_model_73lines/static/less/fonts.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!-- pattern less -->
+    <template id="bg_pattern_1" name="bg_pattern_1" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_1.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_2" name="bg_pattern_2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_2.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_3" name="bg_pattern_3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_3.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_4" name="bg_pattern_4" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_4.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_5" name="bg_pattern_5" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_5.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_6" name="bg_pattern_6" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_6.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="bg_pattern_7" name="bg_pattern_7" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/patterns/bg_pattern_7.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!-- font less -->
+    <template id="font_oxygen" name="font_oxygen" inherit_id="website.assets_frontend" active="True" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_oxygen.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_roboto_slab" name="font_roboto_slab" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_roboto_slab.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_dosis" name="font_dosis" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_dosis.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_lato" name="font_lato" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_lato.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_nunito" name="font_nunito" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_nunito.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_oswald_lato" name="font_oswald_lato" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_oswald_lato.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_raleway" name="font_raleway" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_raleway.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_bitter" name="font_bitter" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_bitter.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_poppins" name="font_poppins" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_poppins.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_comic_sans" name="font_comic_sans" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_comic_sans.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_gruppo" name="font_gruppo" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_gruppo.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_handlee" name="font_handlee" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_handlee.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="font_varela_round" name="font_varela_round" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/fonts/font_varela_round.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!-- header color -->
+    <template id="header_white" name="header_white" inherit_id="website.assets_frontend" active="True" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/header_white.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="header_light" name="header_light" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/header_light.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="header_dark" name="header_dark" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/header_dark.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!-- footer color -->
+    <template id="footer_white" name="footer_white" inherit_id="website.assets_frontend" active="True" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/footer_white.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="footer_light" name="footer_light" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/footer_light.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="footer_dark" name="footer_dark" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/layouts/footer_dark.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!-- main color schema -->
+    <template id="colors_mango" name="option_colors_mango" inherit_id="website.assets_frontend" active="True" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_mango.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_moon" name="option_colors_moon" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_moon.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_star" name="option_colors_star" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_star.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_pluto" name="option_colors_pluto" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_pluto.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_tiptop" name="option_colors_tiptop" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_tiptop.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_sun" name="option_colors_sun" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_sun.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_leo" name="option_colors_leo" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_leo.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <template id="colors_libra" name="option_colors_libra" inherit_id="website.assets_frontend" active="False" customize_show="False">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/options/colors/colors_libra.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+    <!--Layouts Start  -->
+    <template id="layout_boxed" name="boxed layout" inherit_id="website.assets_frontend" active="False" customize_show="True">
+        <xpath expr="." position="inside">
+            <link href="/website_customize_model_73lines/static/less/layouts/layout_boxed.less"
+                  rel="stylesheet" type="text/less" />
+        </xpath>
+    </template>
+
+</odoo>

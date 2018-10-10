@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_clients_tree" model="ir.ui.view">
+        <field name="name">res.users.oauth_access_token</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="auth_oauth.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='oauth_access_token']"
+                   position="attributes">
+                <attribute name="readonly">False</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

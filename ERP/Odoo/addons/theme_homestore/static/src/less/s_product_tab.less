@@ -1,0 +1,164 @@
+#product_description_reviews{
+	background-color:white;
+}
+
+ol, ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-container .nav-tabs {
+    border-bottom: none;
+}
+.tab-container.left, .tab-container.right {
+    border: 1px solid #dddddd;
+}
+.tab-container.left .nav-tabs {
+    background: #f1f1f1;
+    border-right: 1px solid #dddddd;
+}
+.tab-container.right .nav-tabs {
+    background: #f1f1f1;
+    border-left: 1px solid #dddddd;
+}
+.tab-container.left .nav-tabs {
+    float: left;
+    border-bottom: none;
+}
+.tab-container.right .nav-tabs {
+    float: right;
+    border-bottom: none;
+}
+.tab-container .nav-tabs>li {
+    font-weight: 700;
+    font-size: 16px;
+    line-height:20px;
+    color: @color-info !important;
+    text-transform: uppercase;
+    border-right: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+}
+
+
+
+.tab-container .nav-tabs>li :hover{
+	color:@color-primary !important;
+}
+
+.tab-container .nav-tabs>li:first-child {
+    border-left: 1px solid #dddddd;
+}
+.tab-container.left .nav-tabs>li, .tab-container.right .nav-tabs>li {
+    float: none;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+.tab-container.left .nav-tabs>li:first-child, .tab-container.right .nav-tabs>li:first-child {
+    border-left-color: #dddddd;
+}
+.tab-container .nav-tabs>li>a {
+    display: block;
+    padding: 20px 20px 20px 30px;
+    margin-right: 0;
+    line-height: inherit;
+    border: 1px solid #dddddd;
+    border-bottom-color: #dddddd;
+    border-radius: 0;
+    color: #333333 !important;
+    background: #f1f1f1;
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    -ms-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+.tab-container .nav-tabs.nav-justified>li >a {
+    border-bottom: none;
+}
+.tab-container .nav-tabs.nav-justified>li.active, .tab-container .nav-tabs.nav-justified>li.active>a {
+    border-bottom-color: transparent;
+    margin-bottom: -1px;
+}
+.tab-container.left .nav-tabs>li>a, .tab-container.right .nav-tabs>li>a {
+    min-width: 280px;
+}
+.tab-container .nav-tabs>li>a:hover {
+    background: #f1f1f1;
+    
+}
+.tab-container .nav-tabs>li.active>a, .tab-container .nav-tabs>li.active>a:focus, .tab-container .nav-tabs>li.active>a:hover {
+    color: @color-primary !important;
+    cursor: default;
+    background: #fff;
+    border: 1px solid transparent;
+    border-right-color: #dddddd;
+}
+.tab-container .nav-tabs>li.active {
+    border-right: none;
+}
+.tab-container.reverse .nav-tabs>li.active {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0;
+    margin-top: -1px;
+}
+.tab-container.left .nav-tabs>li.active>a, .tab-container.right .nav-tabs>li.active>a {
+    border-bottom-color:#dddddd;
+}
+.tab-container.left .nav-tabs>li.active, .tab-container.left .nav-tabs>li.active>a {
+    border-right: none;
+    margin-right: -1px;
+}
+.tab-container.right .nav-tabs>li.active, .tab-container.right .nav-tabs>li.active>a {
+    border-left: none;
+    border-right-color: transparent;
+    margin-left: -1px;
+}
+.tab-container.left .nav-tabs li:last-child, .tab-container.right .nav-tabs li:last-child {
+    margin-bottom: 0;
+}
+.tab-container .tab-content {
+    padding: 0 50px;
+    width: 100%;
+    
+    border: 1px solid #dddddd;
+}
+.tab-container.left .tab-content {
+    padding: 0 50px 0 330px;
+    border: none;
+}
+.tab-container.right .tab-content {
+    padding: 0 330px 0 50px;
+    border: none;
+}
+.tab-container .tab-content .tab-pane {
+    padding: 20px 0;
+}
+
+#discussion > section > form > div > button.btn{
+	background-color:@color-warning !important;
+	border-color:@color-warning !important;
+}
+
+#discussion > section > form > div > button.btn:hover{
+	color:@color-warning !important;
+	background-color:transparent !important;
+	border-color:@color-warning !important;
+	
+}
+
+
+
+
+@media (max-width: 400px){
+.tab-container .tab-content {
+    padding: 0 12px; 
+	}
+	
+ #discussion > section > form > div > textarea{
+	width:164px;
+
+ }
+ 
+
+}

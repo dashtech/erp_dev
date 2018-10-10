@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+		<template id="theme_homestore_product_carousel" inherit_id="snippet_product_carousel_73lines.new_products_item">
+			<xpath expr="//section" position="attributes">
+				<attribute name="class">text-center</attribute>
+				<attribute name="id">product-name-carousel</attribute>
+			</xpath>
+			
+			
+			<xpath expr="//section" position="after">
+				<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+                         class="product_price easy-shortcuts-price text-center product-price-carousel" t-if="product.product_variant_ids">
+                        <b>
+                            <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.1  and website.get_current_pricelist().discount_policy=='without_discount'">
+                                <del class="text-danger mr8" style="white-space: nowrap;"
+                                     t-esc="compute_currency(product.website_public_price)"
+                                     t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+                            </t>
+
+                            <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" />
+                            <span itemprop="price" style="display:none;" t-esc="product.price" />
+                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+                        </b>
+                    </div>
+			</xpath>
+			
+			
+			<xpath expr="//div[@class='product_price easy-shortcuts-price text-center product-price-carousel']" position="before">
+				 <div class="text-center easy-shortcuts-user-rating">
+                    <t t-call="rating.rating_card">
+                        <t t-set="rating_stat" t-value="get_rating_stat(product)" />
+                        <t t-set="max_rate" t-value="5" />
+                        <t t-set="min_rate" t-value="1" />
+                    </t>
+                </div>
+			</xpath>
+			<xpath expr="//div[@class='product_price easy-shortcuts-price']" position="replace"></xpath>
+			<xpath expr="//div[@class='text-left easy-shortcuts-user-rating']" position="replace"></xpath>
+		</template>
+		
+		<template id="snippet_product_carousel_73lines.new_products_add_to_cart" inherit_id="theme_homestore.theme_homestore_product_carousel"
+              name="Product Carousel Add to Cart">
+        <xpath expr="//div[contains(@class, 'product_price easy-shortcuts-price text-center product-price-carousel')]" position="inside">
+            <input name="product_id" t-att-value="product.product_variant_ids[0].id" type="hidden"/>
+            <t t-if="len(product.product_variant_ids) == 1">
+                <button type="submit" class="btn btn-default btn-xs easy-shortcuts-add-to-cart" formaction="/shop/cart/update_continue"
+                        data-toggle="tooltip" title="Add to Cart">
+                    <span class="fa fa-shopping-cart"/>
+                </button>
+            </t>
+            <t t-if="len(product.product_variant_ids) &gt; 1">
+                <a class="btn btn-default btn-xs easy-shortcuts-add-to-cart" t-att-href="'/shop/product/%s' % slug(product)">
+                    <span class="fa fa-shopping-cart"/>
+                </a>
+            </t>
+        </xpath>
+    </template>
+	<!-- Latest blogs's Template -->
+		
+		
+		<template id="theme_homestore_blog_header" inherit_id="snippet_blog_carousel_73lines.blog_list_template">
+			<xpath expr="//div[@class='headline']" position="replace">
+				<div class="headline-blog">
+				<h2 t-esc="title">Blogs</h2>
+			</div>
+			</xpath>
+		
+		</template>
+		
+		<template id="theme_homestore_blog" inherit_id="snippet_blog_carousel_73lines.new_blog_item">
+			<xpath expr="//div[@class='post-thumb']" position="before">
+				<div class="date-blog">
+
+				<span t-field="blog.create_date" t-field-options='{"format": "MMMM d, yyyy"}' />
+			</div>
+			</xpath>
+			
+			<xpath expr="//span[@class='entry-date']" position="replace"></xpath>
+			<xpath expr="//div[@class='post-excerpt']" position="replace"></xpath>
+			<xpath expr="//div[@class='post-meta']" position="after">
+				<div class="post-excerpt mt8 mb8">
+						<p t-field="blog.subtitle" />
+					</div>
+			</xpath>
+			<xpath expr="//div[@class='latest-blog-info']" position="after">
+				<div class="action-post">
+					<a class="btn-readmore" title="Read More" href="#">Read More</a>
+				</div>
+			</xpath>
+			
+		</template>
+		
+		
+		<!-- Latest brands's Template -->
+		
+		
+		<template id="theme_homestore_brand_header" inherit_id="snippet_product_brand_carousel_73lines.brand_list_template_header">
+			<xpath expr="//div[@class='headline']" position="replace">
+				<div class="headline-blog">
+				<h2 t-esc="title">Brands</h2>
+			</div>
+			</xpath>
+		
+		</template>
+</odoo>

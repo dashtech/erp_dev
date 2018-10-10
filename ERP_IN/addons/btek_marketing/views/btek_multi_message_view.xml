@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <!--view btek_message_template-->
+    <record id="btek_message_template_form_view" model="ir.ui.view">
+        <field name="name">btek.message.template.form</field>
+        <field name="model">btek.message.template</field>
+        <field name="arch" type="xml">
+            <form string="Message Template">
+                <sheet>
+                    <group cosplan="4" col ="4">
+                        <field name="name"/>
+                        <field name="channel"/>
+                    </group>
+                    <group>
+                        <field name="message"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="btek_message_template_tree_view" model="ir.ui.view">
+        <field name="name">btek.message.template.tree</field>
+        <field name="model">btek.message.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="channel"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_message_template" model="ir.actions.act_window">
+        <field name="name">Message Template</field>
+        <field name="res_model">btek.message.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_btek_message_template" name="Message Template"
+              action="action_btek_message_template"
+              parent="mass_mailing.menu_mass_mailing_configuration"
+              sequence="5"/>
+
+    <!--view btek_sms_log-->
+    <record id="btek_sms_log_tree_view" model="ir.ui.view">
+        <field name="name">btek.sms.log.tree</field>
+        <field name="model">btek.sms.log</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false">
+                <field name="name"/>
+                <field name="mobile"/>
+                <field name="zalo_id"/>
+                <field name="result"/>
+                <field name="reason"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_sms_log_tree_success" model="ir.actions.act_window">
+        <field name="name">SMS Log</field>
+        <field name="res_model">btek.sms.log</field>
+        <field name="domain">[('btek_multi_message_id', '=', active_id), ('result', '=', True)]</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="action_btek_sms_log_tree_fail" model="ir.actions.act_window">
+        <field name="name">SMS Log</field>
+        <field name="res_model">btek.sms.log</field>
+        <field name="domain">[('btek_multi_message_id', '=', active_id), ('result', '=', False), ('reason', '=', 'fail')]</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="action_btek_sms_log_tree_mobile_syntax" model="ir.actions.act_window">
+        <field name="name">SMS Log</field>
+        <field name="res_model">btek.sms.log</field>
+        <field name="domain">[('btek_multi_message_id', '=', active_id), ('result', '=', False), ('reason', '=', 'mobile_syntax')]</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!--view btek_multi_message-->
+    <record id="btek_multi_message_kanban_view" model="ir.ui.view">
+            <field name="name">btek.multi.message.kanban</field>
+            <field name="model">btek.multi.message</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by='state'>
+                    <field name="channel"/>"
+                    <field name='color'/>
+                    <field name="sent_date"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_card oe_kanban_global_click oe_kanban_mass_mailing">
+                                <div class="o_dropdown_kanban dropdown">
+
+                                    <a class="dropdown-toggle btn" data-toggle="dropdown" href="#" >
+                                        <span class="fa fa-bars fa-lg"/>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <t t-if="widget.deletable">
+                                            <li><a type="delete">Delete</a></li>
+                                        </t>
+                                    </ul>
+                                </div>
+                                <div class="oe_kanban_content">
+                                    <h6><field name="channel"/></h6>
+                                    <h3><field name="name"/></h3>
+                                    <div attrs="{'invisible': [('sent_date', '=', False)]}">
+                                        <field name="sent_date"/>
+                                    </div>
+                                    <div attrs="{'invisible': [('sent_date', '=', False)]}">
+                                        <t t-if="record.sent_date">
+                                            <div style="display: inline-block">
+                                                <field name="message_success" string="Delivered" widget="gauge" style="width:120px; height: 90px;" options="{'max_field': 'total'}"/>
+                                            </div>
+                                            <div style="display: inline-block; vertical-align: top;">
+                                                <div class="row">
+                                                <div class="col-xs-8">
+                                                    <a>Contact</a>
+                                                </div>
+                                                <div class="col-xs-4 text-right">
+                                                    <field name="total"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <a>Success</a>
+                                                </div>
+                                                <div class="col-xs-4 text-right">
+                                                    <field name="message_success"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-8">
+                                                    <a>Fail</a>
+                                                </div>
+                                                <div class="col-xs-4 text-right">
+                                                    <field name="message_fail"/>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                                <div class="oe_clear"></div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+    </record>
+
+    <record id="btek_multi_message_graph" model="ir.ui.view">
+            <field name="name">btek.multi.message.graph</field>
+            <field name="model">btek.multi.message</field>
+            <field name="arch" type="xml">
+                <graph string="Send multi Message" type="bar">
+                    <field name="state" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+    <record id="btek_multi_message_form_view" model="ir.ui.view">
+        <field name="name">btek.multi.message.form</field>
+        <field name="model">btek.multi.message</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="put_in_queue"
+                            states="draft" type="object"
+                            attrs="{'invisible': ['|', ('state', 'in', ('in_queue', 'done'))]}"
+                            class="oe_highlight" string="Send to All"
+                            confirm="This will send the message to all recipients. Do you still want to proceed ?"/>
+                    <button name="cancel_send_message"
+                            type="object"
+                            attrs="{'invisible': [('state', '!=', 'in_queue')]}"
+                            class="oe_highlight" string="Cancel"/>
+                    <button name="re_send_message"
+                            states="error" type="object"
+                            attrs="{'invisible': ['|', ('state', 'in', ('in_queue', 'done', 'draft', 'sending'))]}"
+                            class="oe_highlight" string="Resend"
+                            confirm="This will resend the message to all recipients. Sure that you have checked error log before proceed?"/>
+                    <field name="state" readonly="1" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <field name="SMS_send_status" invisible="1"/>
+                    <div class="oe_button_box" name="button_box" attrs="{'invisible': [('state', 'in', ('draft','test'))]}">
+                        <button name="total" type="action" icon="fa-envelope-o" class="oe_stat_button">
+                                <field name="total" string="Contact Sent" widget="statinfo"/>
+                        </button>
+                        <button name="%(action_btek_sms_log_tree_success)d"
+                                type="action" icon="fa-check-square-o" class="oe_stat_button">
+                                <field name="message_success" string="Success" widget="statinfo"/>
+                        </button>
+                        <button name="%(action_btek_sms_log_tree_fail)d"
+                                type="action" icon="fa-exclamation-circle" class="oe_stat_button">
+                                <field name="message_fail" string="Fail" widget="statinfo"/>
+                        </button>
+                        <button name="%(action_btek_sms_log_tree_mobile_syntax)d"
+                                type="action" icon="fa-exclamation-circle" class="oe_stat_button" attrs="{'invisible': [('SMS_send_status', '!=', 5)]}">
+                                <field name="mobile_syntax" string="Mobile Syntax" widget="statinfo"/>
+                        </button>
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div>
+                    <label for="name" string="Subject"/>
+                    <div>
+                        <field name="name" nolabel="1"/>
+                    </div>
+                    <group>
+                        <field name="channel" widget="radio" options="{'horizontal': true}"/>
+                        <field name="brand_name" attrs="{'invisible': [('channel', '!=', 'sms')]}"/>
+                        <field name="zalo_url_id" string="OA" placeholder="Official account"
+                               attrs="{'invisible': [('channel', '!=', 'zalo')], 'required': [('channel', '=', 'zalo')]}"/>
+                        <field name="sms_type" invisible="1"/>
+                        <field name="accent_vietnamese"
+                               widget="radio" options="{'horizontal': true}"
+                               attrs="{'invisible': ['|', ('channel', '!=', 'sms'), ('sms_type', '!=', '3')]}"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="1"
+                                   attrs="{'invisible': [('create_date', '=', False)]}"/>
+                        </group>
+                        <group>
+                            <field name="sent_date" readonly="1"
+                                   attrs="{'invisible': [('sent_date', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <!--<field name="recipients" widget="radio" options="{'horizontal': true}"/>-->
+                        <group>
+                            <label for="message_model" string="Recipients"/>
+                            <div>
+                                <field name="message_model" widget="radio" options="{'horizontal': true}"/>
+
+                                <field name="message_domain" widget="char_domain"
+                                    placeholder="Select recipients"
+                                    attrs="{'invisible': [('message_model', '=', 'mail.mass_mailing.contact')]}"
+                                    options="{'model_field': 'message_model', 'model_domain': 'message_domain'}"
+                                    context="{'search_default_not_opt_out':1}"/>
+                                <div attrs="{'invisible': [('message_model', '&lt;&gt;', 'mail.mass_mailing.contact')]}">
+                                    <label for="contact_list_ids" string="Select contact lists:" class="oe_edit_only"/>
+                                    <field name="contact_list_ids" widget="many2many_tags"
+                                        placeholder="Select contact lists..." class="oe_inline"/>
+                                </div>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="sms_charge_person"
+                                   string="SMS Charged/Person"
+                                   attrs="{'invisible': [('channel', '!=', 'sms')]}"/>
+                            <field name="sms_charge_total"
+                                   string="SMS Charged/Total"
+                                   attrs="{'invisible': [('channel', '!=', 'sms')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Message">
+                            <field name="message_template_id"
+                                   domain="[('channel', '=', channel)]"
+                                   style="width:20%" widget="radio"/>
+                            <field name="message" style="width:80%"/>
+                        </page>
+                        <page string="Option">
+                            <group>
+                                <group>
+                                    <field name="schedule_date" />
+                                </group>
+                                <group>
+                                    <field name="mass_mailing_campaign_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Error Log" attrs="{'invisible': [('state', '!=', 'error')]}">
+                            <field name="multi_sms_log"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="btek_multi_message_tree_view" model="ir.ui.view">
+        <field name="name">btek.multi.message.tree</field>
+        <field name="model">btek.multi.message</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Subject"/>
+                <field name="channel"/>
+                <field name="create_date"/>
+                <field name="sent_date"/>
+                <field name="state"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_btek_multi_message" model="ir.actions.act_window">
+        <field name="name">Send multi Message</field>
+        <field name="res_model">btek.multi.message</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form,graph</field>
+        <field name="help" type="html">
+<p class="oe_view_nocontent_create">
+    Click here to create a new multi message.
+</p><p>
+    Send multi message allows you to to easily design and send message to your contacts, customers or leads using contact lists.
+</p></field>
+    </record>
+
+    <menuitem id="menu_action_btek_multi_message" name="Send multi Message"
+              action="action_btek_multi_message"
+              parent="mass_mailing.mass_mailing_menu"
+              sequence="5"/>
+
+    <record id="mass_mailing.menu_email_mass_mailing_lists" model="ir.ui.menu">
+        <field name="sequence">8</field>
+    </record>
+
+    <record id="mass_mailing.menu_email_mass_mailing_contacts" model="ir.ui.menu">
+        <field name="sequence">11</field>
+    </record>
+</odoo>

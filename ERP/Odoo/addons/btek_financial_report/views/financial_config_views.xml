@@ -1,0 +1,192 @@
+<odoo>
+    <data>
+        <record id="btek_financial_statement_account_code_tree" model="ir.ui.view">
+            <field name="name">to.financial.statement.account.code.tree</field>
+            <field name="model">to.financial.statement.account.code</field>
+            <field name="priority">4</field>
+            <field name="arch" type="xml">
+                <tree string="Financial Statement">
+                    <field name="account_id"/>
+                    <field name="name"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_financial_statement_account_code_form" model="ir.ui.view">
+            <field name="name">to.financial.statement.account.code.form</field>
+            <field name="model">to.financial.statement.account.code</field>
+            <field name="priority">4</field>
+            <field name="arch" type="xml">
+                <form string="Financial Statement">
+                    <group>
+                        <field name="account_id" context="{'show_all': True, 'show_parent_account': True}"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="company_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="to_financial_statement_account_code_filter" model="ir.ui.view">
+            <field name="name">to.financial.statement.account.code.select</field>
+            <field name="model">to.financial.statement.account.code</field>
+            <field name="arch" type="xml">
+                <search string="Search Financial Statement">
+                    <field name="account_id" operator="child_of" context="{'show_all': True}"/>
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+                    <field name="company_id" operator="child_of"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="btek_fs_config_tree_view" model="ir.ui.view">
+            <field name="name">to.fs.config.tree</field>
+            <field name="model">account.financial.report</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Financial Statement Configuration">
+                    <field name="to_code"/>
+                    <field name="name"/>
+                    <field name="to_notes"/>
+                    <field name="to_decision"/>
+                    <field name="to_financial_statement" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_fs_config_form_view" model="ir.ui.view">
+            <field name="name">to.fs.config.form</field>
+            <field name="model">account.financial.report</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Financial Statement Configuration">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="to_code"/>
+                                <field name="name"/>
+                                <field name="parent_id"/>
+                                <field name="to_notes"/>
+                                <field name="to_decision"/>
+                                <field name="to_financial_statement" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="to_balance_type"/>
+                                <field name="type"/>
+                                <field name="to_included_accounts" widget="many2many_tags"/>
+                                <field name="to_excluded_accounts" widget="many2many_tags"/>
+                                <field name="to_counterpart_accounts" widget="many2many_tags"/>
+                                <field name="sign"/>
+                                <field name="style_overwrite"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Balance Sheet -->
+
+        <record model="ir.actions.act_window" id="action_balance_sheet_tree_view">
+            <field name="name">Balance Sheet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.financial.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="btek_fs_config_tree_view"/>
+            <field name="domain">[('to_financial_statement','=','balance_sheet')]
+            </field>
+            <field name="context">{'default_to_financial_statement': 'balance_sheet'}
+            </field>
+        </record>
+
+        <!-- Income Statement -->
+
+        <record model="ir.actions.act_window" id="action_income_statement_tree_view">
+            <field name="name">Income Statement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.financial.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="btek_fs_config_tree_view"/>
+            <field name="domain">[('to_financial_statement','=','income_statement')]
+            </field>
+            <field name="context">{'default_to_financial_statement':
+                'income_statement'}
+            </field>
+        </record>
+
+        <!-- Cash Flow -->
+
+        <record model="ir.actions.act_window" id="action_cash_flow_tree_view">
+            <field name="name">Cash Flow</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.financial.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="btek_fs_config_tree_view"/>
+            <field name="domain">[('to_financial_statement','=','cash_flow')]
+            </field>
+            <field name="context">{'default_to_financial_statement': 'cash_flow'}
+            </field>
+        </record>
+
+        <act_window id="export_account_account"
+                    name="Export Account"
+                    src_model="account.account"
+                    res_model="btek.export.account"
+                    view_type="form" view_mode="form"
+                    key2="client_action_multi" target="new"/>
+
+        <report
+                id="excel_account_xlsx"
+                model="btek.export.account"
+                string="account_account"
+                report_type="xlsx"
+                name="export_excel_account"
+                file="export_excel_account"
+                attachment_use="False"
+        />
+
+        <record id="export_account_account_view_act" model="ir.actions.act_window">
+            <field name="name">Export Account Account</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">btek.export.account</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="export_account_account_form" model="ir.ui.view">
+            <field name="name">Export Account Account</field>
+            <field name="model">btek.export.account</field>
+            <field name="arch" type="xml">
+                <form string="export_account_form">
+                    <footer>
+                        <button name="account_account" type="object" string="Export"
+                                class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Financial Statement Configuration -->
+        <!-- Balance Sheet -->
+        <menuitem id="menu_to_balance_sheet_config" name="Bảng cân đối kế toán"
+                  action="action_balance_sheet_tree_view" parent="account.menu_account_reports"
+                  groups="account.group_account_manager"/>
+
+        <!-- Income Statement -->
+        <menuitem id="menu_to_income_statement_config" name="Báo cáo kết quả hoạt động kinh doanh"
+                  action="action_income_statement_tree_view" parent="account.menu_account_reports"
+                  groups="account.group_account_manager"/>
+
+        <!-- Cash Flow -->
+        <menuitem id="menu_to_cash_flow_config" name="Báo cáo lưu chuyển tiền tệ"
+                  action="action_cash_flow_tree_view" parent="account.menu_account_reports"
+                  groups="account.group_account_manager"/>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Show product ribbon in website -->
+    <template id="product_ribbon_style" inherit_id="website_sale.products_item"
+        name="Product Ribbon Style">
+        <xpath expr="//div[@class='ribbon-wrapper']" position="replace">
+            <div class="ribbon-wrap">
+                <div class="ribbon" t-attf-style="background-color:#{product.ribbon_id.ribbon_color_back or product.ribbon_id.ribbon_color_back};color:#{product.ribbon_id.ribbon_color_text or product.ribbon_id.ribbon_color_text};"><span t-esc="product.ribbon_id.name"></span></div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- @todo Check with Odoo's by-default Styles Option -->
+    <!-- Remove Customize Options Styles -->
+    <template id="product_style_drop" inherit_id="website_sale.website_sale">
+        <xpath expr="//li[a[text() = 'Styles']]" position="replace">
+        </xpath>
+    </template>
+
+</odoo>

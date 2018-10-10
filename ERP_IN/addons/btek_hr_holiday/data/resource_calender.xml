@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo noupdate="0">
+<!-- Resource Calendar -->
+    <record id="rc_fulltime" model="resource.calendar">
+        <field name="name">Fulltime</field>
+    </record>
+
+    <!-- Resource Calendar attendance -->
+    <record id="t2" model="resource.calendar.attendance">
+        <field name="name">T2</field>
+        <field name="dayofweek">0</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t2p" model="resource.calendar.attendance">
+        <field name="name">T2C</field>
+        <field name="dayofweek">0</field>
+        <field name="hour_from">13.5</field>
+        <field name="hour_to">17.5</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t3" model="resource.calendar.attendance">
+        <field name="name">T3</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t3p" model="resource.calendar.attendance">
+        <field name="name">T3C</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from">13.5</field>
+        <field name="hour_to">17.5</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t4" model="resource.calendar.attendance">
+        <field name="name">T4</field>
+        <field name="dayofweek">2</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t4p" model="resource.calendar.attendance">
+        <field name="name">T4C</field>
+        <field name="dayofweek">2</field>
+        <field name="hour_from">13.5</field>
+        <field name="hour_to">17.5</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t5" model="resource.calendar.attendance">
+        <field name="name">T5</field>
+        <field name="dayofweek">3</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t5p" model="resource.calendar.attendance">
+        <field name="name">T5C</field>
+        <field name="dayofweek">3</field>
+        <field name="hour_from">13.5</field>
+        <field name="hour_to">17.5</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t6" model="resource.calendar.attendance">
+        <field name="name">T6</field>
+        <field name="dayofweek">4</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t6p" model="resource.calendar.attendance">
+        <field name="name">T6C</field>
+        <field name="dayofweek">4</field>
+        <field name="hour_from">13.5</field>
+        <field name="hour_to">17.5</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+    <record id="t7" model="resource.calendar.attendance">
+        <field name="name">T7</field>
+        <field name="dayofweek">5</field>
+        <field name="hour_from">8</field>
+        <field name="hour_to">12</field>
+        <field name="calendar_id" ref="rc_fulltime"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Part of Odoo Module Developed by 73lines See LICENSE file for full copyright 
+	and licensing details. -->
+<odoo>
+
+	<template id="quick_assets_frontend" name="Quick View Frontend Assets"
+		inherit_id="website.assets_frontend">
+		<xpath expr="." position="inside">
+			<link rel='stylesheet'
+				href='/website_product_quick_view_73lines/static/less/quick_view.less' />
+		</xpath>
+	</template>
+
+
+
+	<template id="quick_view_products_item" inherit_id="website_sale.products_item" active="True" customize_show="True" name="Product Quick View">
+		<xpath expr="//div[@class='oe_product_image']/a[1]" position="after">
+			<div class="quick">
+				<div class="quick-view-bgr">
+					<a class="quick-view btn btn-primary" t-attf-href="##{ product.id }" role="button"
+						data-toggle="modal" title="Quick view">
+						<i class="fa fa-eye"></i>
+					</a>
+				</div>
+
+			</div>
+			<div t-att-id="product.id" class="modal fade in" aria-hidden="true"
+				role="dialog" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">X
+							</button>
+							<h1 id="myModalLabel">
+								<strong t-field="product.display_name" />
+							</h1>
+						</div>
+						<div class="modal-body col-md-12">
+							<div class="col-md-6">
+								<span itemprop="image" t-field="product.image"
+									t-options='{"widget": "image", "class": "quick-view-product"}'
+									t-att-alt="product.name" />
+								
+							</div>
+							<div class="col-md-6">
+								<div class="col-md-12 mt16 text-left">
+									<h2><strong t-field="product.display_name" class="mt16 mb16" /></h2>
+									<div class="text-muted">
+										<div t-field="product.description_sale" class="mt16 mb16" />
+										<div class="js_attributes" />
+									</div>
+								</div>
+								<div class="col-md-12 mt16 mb16">
+									<div class="css_quantity input-group oe_website_spinner"
+										contenteditable="false">
+										<a t-attf-href="#" class="mb8 input-group-addon js_add_cart_json">
+											<i class="fa fa-minus"></i>
+										</a>
+										<input type="text" class="form-control" data-min="1"
+											name="add_qty" value="1" />
+										<a t-attf-href="#"
+											class="mb8 input-group-addon float_left js_add_cart_json">
+											<i class="fa fa-plus"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-12 text-left">
+									<form action="/shop/cart/update" class="js_add_cart_variants"
+										t-att-data-attribute_value_ids="product.product_variant_ids.ids"
+										method="POST">
+										<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+										<div class="js_product" t-if="product.product_variant_ids">
+											<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">
+						                        <b>
+						                            <t t-if="(compute_currency(product.lst_price) - product.website_price ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+						                                <del class="text-danger mr8" style="white-space: nowrap;" t-esc="compute_currency(product.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+						                            </t>
+						
+						                            <span t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+						                            <span itemprop="price" style="display:none;" t-esc="product.website_price" />
+						                            <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
+						                        </b>
+                    						</div>
+											<p t-if="len(product.product_variant_ids) &gt; 1" class="css_not_available_msg bg-danger"
+												style="padding: 15px;">Product not available</p>
+											<a id="add_to_cart" class="btn btn-primary btn-md mt8 a-submit" href="#">Add to Cart</a>
+											<a class="btn btn-success btn-md mt8" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']&gt;1 else None))">
+												More Details
+											</a>	
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Add WishList Options in My Menu -->
+    <template id="wishlist_account_link" name="Wist List Link" inherit_id="website_portal_sale.portal_my_home_menu_sale">
+        <xpath expr="//li[last()]" position="after">
+            <li>
+                <a href="/my/wish-list">WishList</a>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Add WishList Options in Menu List -->
+    <template id="portal_home_my_wishlist" name="Portal My Wish List" inherit_id="website_portal_sale.portal_my_home_sale">
+        <xpath expr="//h3[last()]" position="after">
+            <h3 class="page-header">
+                <a href="/my/wish-list">Your WishList
+                    <small class="ml8">
+                        <span class='badge'><t t-esc="wishlist_count"/></span>
+                    </small>
+                </a>
+            </h3>
+        </xpath>
+    </template>
+
+    <!-- WishList Menu Template -->
+    <template id="portal_my_wishlist" name="My WishList">
+        <t t-call="website_portal.portal_layout">
+            <h3 class="page-header">Your WishList</h3>
+            <t t-if="not wish_list">
+                <p>Your wish list is empty.</p>
+            </t>
+            <t t-if="wish_list">
+                <table class="table table-hover o_my_status_table">
+                    <thead>
+                      <tr class="active">
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th></th>
+                        </tr>
+                    </thead>
+                    <t t-foreach="wish_list" t-as="wish_list_item">
+                        <tr>
+                            <td>
+                                <a t-attf-href="/shop/product/#{ slug(wish_list_item.product_template_id)}">
+                                    <span itemprop="image" t-field="wish_list_item.product_template_id.image_small"
+                                          t-options='{"widget": "image"}' />
+                                </a>
+                            </td>
+                            <td>
+                                <a t-attf-href="/shop/product/#{ slug(wish_list_item.product_template_id)}">
+                                    <span t-field="wish_list_item.product_template_id.name" />
+                                </a>
+                            </td>
+                            <td>
+                              <a class="remove-wishlist" data-toggle="tooltip" title="Remove" t-att-id="wish_list_item.product_template_id.id">
+                                    <i class="fa fa-remove"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </t>
+                </table>
+                <div t-if="pager" class="o_portal_pager text-center">
+                  <t t-call="website.pager"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

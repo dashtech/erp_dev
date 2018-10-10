@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record id="hr_employee_form_extend" model="ir.ui.view">
+            <field name="name">hr_employee_form_extend</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/field[@name='category_ids']" position="before">
+                    <group>
+                        <group>
+                    <!--<label for="code_name" class="oe_edit_only"/>-->
+                            <field name="code_name" required="1"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook/page[2]/group/group[2]/field[@name='address_home_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[2]/group/group[2]/field[@name='address_home_id']" position="after">
+                    <field name="home_addr"/>
+                    <field name="id_date"/>
+                    <field name="id_location"/>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Người phụ thuộc">
+                        <notebook>
+                            <page string="Người phụ thuộc">
+                                <field name="related_person_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="gender"/>
+                                        <field name="x_identity_number"/>
+                                        <field name="relation"/>
+                                        <field name="date_begin"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Con">
+                                <field name="related_child_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="birthday" required="1"/>
+                                        <field name="gender"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[2]/group/group[3]/field[@name='marital']" position="after">
+                    <field name="related_person"/>
+                    <field name="related_person_payslip" invisible="1"/>
+                </xpath>
+                <xpath expr="//notebook/page[1]/group/group[2]/field[@name='department_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[1]/group/group[1]/field[@name='mobile_phone']" position="attributes">
+                    <attribute name="widget">regex_mask</attribute>
+                    <attribute name="data-inputmask-regex">[0-9+*()]+\.[0-9]{8,15}</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[1]/group/group[1]/field[@name='work_phone']" position="attributes">
+                    <attribute name="widget">regex_mask</attribute>
+                    <attribute name="data-inputmask-regex">[0-9+*()]+\.[0-9]{8,15}</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[1]/group/group[1]/field[@name='address_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+            </field>
+    </record>
+
+    <record id="view_partner_bank_form_inherit" model="ir.ui.view">
+        <field name="name">view_partner_bank_form_inherit</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="replace">
+                <field name="name"/>
+                <!--<attribute name="invisible">1</attribute>-->
+            </xpath>
+        </field>
+    </record>
+</odoo>

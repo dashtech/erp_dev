@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+    	 <!-- POSTS -->
+        <record id="blog_post_3" model="blog.post">
+            <field name="name">Fresh Fruits and Vegetables</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo ,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">The Sugar Hit</field>
+            <field name="website_meta_description">The Sugar Hit,Bakery</field>
+            <field name="cover_properties">{"background-image": "url(/theme_homestore/static/src/image/blog1.jpg)", "opacity": "1.0", "resize_class": "cover cover_full"}</field>
+            <field name="content"><![CDATA[
+				   <section class="readable">
+			    <div class="container">
+            	<div class="row">
+            		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+            			. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+            			. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+            			. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+            	</div>
+            </div>
+        </section>
+		]]>
+		</field>
+        </record>
+        
+        <record id="blog_post_4" model="blog.post">
+            <field name="name">Branded Foods Online</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Love, Cake, Bakery</field>
+            <field name="website_meta_description">>Love, Cake</field>
+            <field name="cover_properties">{"background-image": "url(/theme_homestore/static/src/image/blog2.jpg)", "opacity": "1.0", "resize_class": "cover cover_full"}</field>
+            <field name="content"><![CDATA[
+			    <section class="readable">
+			    <div class="container">
+            	<div class="row">
+            		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+            	</div>
+            </div>
+        </section>
+        
+		]]>
+		</field>
+        </record>
+        
+        
+        <record id="blog_post_5" model="blog.post">
+            <field name="name">Dairy Products Online</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Lovin' From the Oven,Bakery</field>
+            <field name="website_meta_description">Lovin' From the Oven</field>
+            <field name="cover_properties">{"background-image": "url(/theme_homestore/static/src/image/blog3.jpg)", "opacity": "1.0", "resize_class": "cover cover_full"}</field>
+            <field name="content"><![CDATA[
+			    <section class="readable">
+			    <div class="container">
+            	<div class="row">
+            		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+            	</div>
+            </div>
+        </section>
+        
+		]]>
+		</field>
+       </record>
+       
+       
+       
+     
+        
+        
+    </data>
+</odoo>

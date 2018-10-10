@@ -1,0 +1,752 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-12 03:03+0000\n"
+"PO-Revision-Date: 2018-09-12 03:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_stock
+#: model:mail.template,body_html:btek_stock.inventory_warning_templates
+msgid "\n"
+"            \n"
+"            <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n"
+"        <p><span style=\"font-size:18px;\">Email thông báo sản phẩm có số lượng tồn kho nhỏ hơn số lượng tồn kho tối thiểu.</em></span></p>\n"
+"        <table style=\"border-collapse: collapse; border: 1px solid blue; width: 90%;\">\n"
+"            <tbody>\n"
+"                <tr>\n"
+"                    <th style=\"border: 1px solid blue;\">Sản phẩm</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Kho</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Tồn kho tối thiểu</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Tồn kho thực tế</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Chênh lệch</th>\n"
+"                </tr>\n"
+"                % if object.check_inventory():\n"
+"                    % for line in object.check_inventory()\n"
+"                    <tr>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['product']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['location']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['min_qty']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['product_qty']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['check']}</td>\n"
+"                    </tr>\n"
+"                    % endfor\n"
+"                    % endif\n"
+"            </tbody>\n"
+"        </table>\n"
+"      \n"
+"        "
+msgstr "\n"
+"            \n"
+"            <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n"
+"        <p><span style=\"font-size:18px;\">Email thông báo sản phẩm có số lượng tồn kho nhỏ hơn số lượng tồn kho tối thiểu.</em></span></p>\n"
+"        <table style=\"border-collapse: collapse; border: 1px solid blue; width: 90%;\">\n"
+"            <tbody>\n"
+"                <tr>\n"
+"                    <th style=\"border: 1px solid blue;\">Sản phẩm</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Kho</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Tồn kho tối thiểu</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Tồn kho thực tế</th>\n"
+"                    <th style=\"border: 1px solid blue;\">Chênh lệch</th>\n"
+"                </tr>\n"
+"                % if object.check_inventory():\n"
+"                    % for line in object.check_inventory()\n"
+"                    <tr>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['product']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['location']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['min_qty']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['product_qty']}</td>\n"
+"                        <td style=\"border: 1px solid blue; padding: 5px 10px;\">${line['check']}</td>\n"
+"                    </tr>\n"
+"                    % endfor\n"
+"                    % endif\n"
+"            </tbody>\n"
+"        </table>\n"
+"      \n"
+"        "
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.view_inventory_filter_inherit
+msgid "Accounting date greater than or equal to"
+msgstr "Ngày ghi sổ lớn hơn hoặc bằng"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.view_inventory_filter_inherit
+msgid "Accounting date less than or equal to"
+msgstr "Ngày ghi sổ nhỏ hơn hoặc bằng"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_name
+msgid "Attachment Name"
+msgstr "Tên đính kèm"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_local_url
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_website_url
+msgid "Attachment URL"
+msgstr "URL Đính kèm"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_attachment_id
+msgid "Automatically created field to link to parent ir.attachment"
+msgstr "Automatically created field to link to parent ir.attachment"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_beginning_period_inventory
+msgid "Beginning period inventory"
+msgstr "Tồn kho đầu kỳ"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_beginning_period_value
+msgid "Beginning period value"
+msgstr "Gái trị đầu kỳ"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:68
+#: sql_constraint:stock.warehouse.orderpoint:0
+#, python-format
+msgid "Can not create Reordering Rules, product with location existed!"
+msgstr "Không thể tạo bản ghi, sản phầm và kho đã tồn tại!"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.detail_import_export_by_product_form
+#: model:ir.ui.view,arch_db:btek_stock.import_stock_inventory_line_form_view
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_import_export_form
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_stock_inventory_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:56
+#, python-format
+msgid "Cannot import empty file!"
+msgstr "Không thể nhập từ tập tin trống!"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_categ_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_categ_id
+#: model:ir.ui.view,arch_db:btek_stock.synthesis_stock_inventory_search
+msgid "Category"
+msgstr "Chuyên mục"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_checksum
+msgid "Checksum/SHA1"
+msgstr "Checksum/SHA1"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_code
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_company_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_company_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:24
+#: model:btek.inventory.config,name:btek_stock.inventory_config_view
+#, python-format
+msgid "Configure"
+msgstr "Cấu hình"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.view_inventory_config
+msgid "Configure Mailling List"
+msgstr "Cài đặt danh sách gửi mail"
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_synthesis_stock_inventory_standard_price
+msgid "Cost of the product template used for standard stock valuation in accounting and used as a base price on purchase orders. Expressed in the default unit of measure of the product."
+msgstr "Cost of the product template used for standard stock valuation in accounting and used as a base price on purchase orders. Expressed in the default unit of measure of the product."
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_create_uid
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_create_uid
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_create_uid
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_create_uid
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_create_date
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_create_date
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_create_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_create_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_db_datas
+msgid "Database Data"
+msgstr "Database Data"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_stock
+#: code:addons/btek_stock/report/detail_import_export_by_product.py:171
+#: code:addons/btek_stock/report/synthesis_import_export.py:325
+#: code:addons/btek_stock/report/synthesis_stock_inventory.py:417
+#, python-format
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: btek_stock
+#: code:addons/btek_stock/report/detail_import_export_by_product.py:166
+#: model:ir.actions.act_window,name:btek_stock.action_detail_import_export_by_product
+#: model:ir.actions.report.xml,name:btek_stock.report_detail_import_export_by_product_xlsx
+#: model:ir.ui.menu,name:btek_stock.menu_action_detail_import_export_by_product
+#, python-format
+msgid "Detail import export by product"
+msgstr "Chi tiết xuất nhập theo VT-HH"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_display_name
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_btek_inventory_config_mailling_list
+msgid "Email been delimited by mark ;"
+msgstr "Email được phân cách bởi dấu ;"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_ending_period_inventory
+msgid "Ending period inventory"
+msgstr "Tồn kho cuối kỳ"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_ending_period_value
+msgid "Ending period value"
+msgstr "Giá trị cuối kỳ"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:127
+#, python-format
+msgid "Error: row {} price invalid!"
+msgstr "Lỗi: Dòng {}: giá trị tồn kho không chính xác!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:109
+#: code:addons/btek_stock/models/stock_inventory.py:115
+#, python-format
+msgid "Error: row {} product code invalid!"
+msgstr "Lỗi: Dòng {}: mã VT-HH không chính xác!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:121
+#, python-format
+msgid "Error: row {} qty invalid!"
+msgstr "Lỗi: Dòng {}: số lượng VT-HH không chính xác!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:192
+#, python-format
+msgid "Error: row {} stock location empty !"
+msgstr "Error: Dòng {}: Kho không được điền giá trị!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:189
+#, python-format
+msgid "Error: row {} stock location invalid !"
+msgstr "Error: Dòng {}:  Kho hàng không chính xác!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:177
+#, python-format
+msgid "Error: row {}: cannot find product with product code =\"{}\""
+msgstr "Error: Dòng {}: Không tìm thấy VT-HH có mã =\"{}\""
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_export_qty
+msgid "Export qty"
+msgstr "Số lượng xuất"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.detail_import_export_by_product_form
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_import_export_form
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_stock_inventory_form
+msgid "Export report"
+msgstr "Xuất BC"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_export_value
+msgid "Export value"
+msgstr "Giá trị xuất"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_datas
+msgid "File Content"
+msgstr "Nội dung tập tin"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_datas_fname
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_file_size
+msgid "File Size"
+msgstr "Dung lượng file"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.bave_view_picking_form
+msgid "Force Availability"
+msgstr "Xem như khả dụng"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_inventory.py:63
+#, python-format
+msgid "Format file incorrect, you must import file have at least {} column!"
+msgstr "Định dạng file không đúng, bạn phải nhập file có ít nhất {} cột!"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_from_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_import_stock_inventory_line_priority
+msgid "Gives the sequence order when displaying a list of tasks."
+msgstr "Chỉ ra thứ tự sắp xếp khi hiển thị danh sách nhiệm vụ."
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_id
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_id
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_id
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_id
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.stock_inventory_form_change
+msgid "Import Product"
+msgstr "Nhập VT-HH"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_import_qty
+msgid "Import qty"
+msgstr "Số lượng nhập"
+
+#. module: btek_stock
+#: model:ir.actions.act_window,name:btek_stock.action_import_stock_inventory_line
+#: model:ir.ui.view,arch_db:btek_stock.import_stock_inventory_line_form_view
+msgid "Import stock inventory line"
+msgstr "Nhập VT-HH tồn kho"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_import_value
+msgid "Import value"
+msgstr "Giá trị nhập"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_index_content
+msgid "Indexed Content"
+msgstr "Indexed Content"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_inventory
+msgid "Inventory"
+msgstr "Tồn kho"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_public
+msgid "Is public document"
+msgstr "Là tài liệu công khai"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_stock_picking_is_return
+msgid "Is return picking"
+msgstr "Là đơn trả hàng"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export___last_update
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_write_uid
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_write_uid
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_write_uid
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_write_uid
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_write_date
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_write_date
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_write_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_write_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_location_id
+#: model:ir.ui.view,arch_db:btek_stock.synthesis_stock_inventory_search
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_location_ids
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_location_ids
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_location_ids
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_mailling_list
+msgid "Mailing list"
+msgstr "Danh sách gửi mail"
+
+#. module: btek_stock
+#: model:ir.actions.act_window,name:btek_stock.action_inventory_config
+#: model:ir.ui.menu,name:btek_stock.menu_inventory_config
+msgid "Mailling List Settings"
+msgstr "Cài đặt danh sách gửi mail"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_mimetype
+msgid "Mime Type"
+msgstr "Mime Type"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "Quy tắc tồn kho tối thiểu"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_btek_inventory_config_name
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_name
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_pack_operation
+msgid "Packing Operation"
+msgstr "Hoạt động đóng gói"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_standard_price
+msgid "Price"
+msgstr "Giá"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_price_total
+msgid "Price total"
+msgstr "Tổng tiền"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_product_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_product_id
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_product_id
+#: model:ir.ui.view,arch_db:btek_stock.synthesis_stock_inventory_search
+msgid "Product"
+msgstr "Vật tư - hàng hóa"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_categ_ids
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_category_ids
+msgid "Product categories"
+msgstr "Các nhóm VT-HH"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_product_ids
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_product_ids
+msgid "Products"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_stock_inventory_qty
+msgid "Qty"
+msgstr "Số lượng"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_res_field
+msgid "Resource Field"
+msgstr "Resource Field"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_res_id
+msgid "Resource ID"
+msgstr "ID Tài nguyên"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_res_model
+msgid "Resource Model"
+msgstr "Resource Model"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_res_name
+msgid "Resource Name"
+msgstr "Tên Tài nguyên"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.bave_view_picking_form
+msgid "Return"
+msgstr "Trả hàng"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Trả hàng"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_stock_picking_check_return
+msgid "Returned"
+msgstr "Được trả lại"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:13
+#, python-format
+msgid "Sequence PNK"
+msgstr "Sequence PNK"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:14
+#, python-format
+msgid "Sequence PXK"
+msgstr "Sequence PXK"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:17
+#, python-format
+msgid "Sequence internal"
+msgstr "Sequence internal"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:15
+#, python-format
+msgid "Sequence packing"
+msgstr "Sequence packing"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/inventory_schedule.py:16
+#, python-format
+msgid "Sequence picking"
+msgstr "Sequence picking"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_stock_picking_source_picking
+#: model:ir.model.fields,field_description:btek_stock.field_stock_return_picking_source_picking
+msgid "Source Picking"
+msgstr "Phiếu xuất kho gốc"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.view_inventory_filter_inherit
+msgid "Stock check date greater than or equal to"
+msgstr "Ngày kiểm kho lớn hơn hoặc bằng"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.view_inventory_filter_inherit
+msgid "Stock check date less than or equal to"
+msgstr "Ngày kiểm kho nhỏ hơn hoặc bằng"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_stock_inventory_id
+msgid "Stock inventory id"
+msgstr "Stock inventory id"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_store_fname
+msgid "Stored Filename"
+msgstr "Tên tệp tin được lưu trữ"
+
+#. module: btek_stock
+#: code:addons/btek_stock/report/synthesis_import_export.py:320
+#: model:ir.actions.act_window,name:btek_stock.action_synthesis_import_export
+#: model:ir.actions.act_window,name:btek_stock.action_wizard_synthesis_import_export
+#: model:ir.ui.menu,name:btek_stock.menu_action_wizard_synthesis_import_export
+#, python-format
+msgid "Synthesis import export"
+msgstr "Tổng hợp nhập xuất"
+
+#. module: btek_stock
+#: code:addons/btek_stock/report/synthesis_stock_inventory.py:412
+#: model:ir.actions.act_window,name:btek_stock.action_synthesis_stock_inventory
+#: model:ir.actions.act_window,name:btek_stock.action_wizard_synthesis_stock_inventory
+#: model:ir.ui.menu,name:btek_stock.menu_action_wizard_synthesis_stock_inventory
+#, python-format
+msgid "Synthesis stock inventory"
+msgstr "Tổng hợp tồn kho"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_template_file_url
+msgid "Template file url"
+msgstr "Liên kết tải tập tin mẫu"
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_import_stock_inventory_line_res_model
+msgid "The database object this attachment will be attached to."
+msgstr "The database object this attachment will be attached to."
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_import_stock_inventory_line_res_id
+msgid "The record id this is attached to."
+msgstr "The record id this is attached to."
+
+#. module: btek_stock
+#: model:mail.template,subject:btek_stock.inventory_warning_templates
+msgid "Thông báo tồn kho"
+msgstr "Thông báo tồn kho"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_detail_import_export_by_product_to_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_import_export_to_date
+#: model:ir.model.fields,field_description:btek_stock.field_wizard_synthesis_stock_inventory_to_date
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Dịch chuyển"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_synthesis_import_export_uom_id
+msgid "Uom"
+msgstr "ĐVT"
+
+#. module: btek_stock
+#: model:ir.model.fields,field_description:btek_stock.field_import_stock_inventory_line_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_stock
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_import_export_form
+#: model:ir.ui.view,arch_db:btek_stock.wizard_synthesis_stock_inventory_form
+msgid "View report"
+msgstr "Xem báo cáo"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: btek_stock
+#: model:ir.actions.report.xml,name:btek_stock.report_synthesis_import_export_xlsx
+msgid "Wizard synthesis import export"
+msgstr "BC tổng hợp nhập xuất"
+
+#. module: btek_stock
+#: model:ir.actions.report.xml,name:btek_stock.report_synthesis_stock_inventory_xlsx
+msgid "Wizard synthesis stock inventory"
+msgstr "BC tổng hợp tồn kho"
+
+#. module: btek_stock
+#: model:ir.model.fields,help:btek_stock.field_import_stock_inventory_line_type
+msgid "You can either upload a file from your computer or copy/paste an internet link to your file."
+msgstr "You can either upload a file from your computer or copy/paste an internet link to your file."
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_picking.py:54
+#, python-format
+msgid "You can not cancel picking when sale order state has done!"
+msgstr "Bạn không thể hủy phiếu xuất kho khi lệnh sửa chữa đã hoàn thành!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_pack_operation.py:14
+#, python-format
+msgid "You can not set quantity done greater quantity need move!"
+msgstr "Không thể nhập số lượng hoàn thành lớn hơn số lượng cần làm!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_picking.py:89
+#, python-format
+msgid "You can not set quantity return greater quantity move done!"
+msgstr "Không thể nhập số lượng trả lớn hơn số lượng đã xuất kho!"
+
+#. module: btek_stock
+#: code:addons/btek_stock/models/stock_picking.py:38
+#, python-format
+msgid "You plan to sell %s %s but you only have %s %s available!\n"
+"The stock on hand is %s %s."
+msgstr "Bạn định bán %s %s nhưng hệ thống đang có %s %s sẵn sàng!\n"
+"Số lượng thực tế là %s %s."
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_btek_inventory_config
+msgid "btek.inventory.config"
+msgstr "btek.inventory.config"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_detail_import_export_by_product
+msgid "detail.import.export.by.product"
+msgstr "detail.import.export.by.product"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_import_stock_inventory_line
+msgid "import.stock.inventory.line"
+msgstr "import.stock.inventory.line"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_stock_return_picking_line
+msgid "stock.return.picking.line"
+msgstr "stock.return.picking.line"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_synthesis_import_export
+msgid "synthesis.import.export"
+msgstr "synthesis.import.export"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_synthesis_stock_inventory
+msgid "synthesis.stock.inventory"
+msgstr "synthesis.stock.inventory"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_wizard_synthesis_import_export
+msgid "wizard.synthesis.import.export"
+msgstr "wizard.synthesis.import.export"
+
+#. module: btek_stock
+#: model:ir.model,name:btek_stock.model_wizard_synthesis_stock_inventory
+msgid "wizard.synthesis.stock.inventory"
+msgstr "wizard.synthesis.stock.inventory"
+

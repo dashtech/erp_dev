@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <!-- Less & Css & JS Assets -->
+    <template id="assets_frontend_js" name="Category Banner Assets"
+              inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link href="/website_product_categ_menu_and_banner_73lines/static/src/less/category_banner.less"
+                  rel="stylesheet" type="text/less"/>
+            <link href="/website_product_categ_menu_and_banner_73lines/static/src/less/category_menu.less"
+                  rel="stylesheet" type="text/less"/>
+        </xpath>
+    </template>
+</odoo>

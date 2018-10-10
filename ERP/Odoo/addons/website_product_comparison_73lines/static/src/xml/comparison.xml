@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<templates id="compare_product_template" xml:space="preserve">
+
+    <t t-name="product_feature_template">
+        <div class="o_product_feature_panel text-center css_editable_mode_hidden mt16"/>
+    </t>
+ 
+    <t t-name="product_comparison_template">
+        <span class="o_product_panel hidden-xs" id="comparelist">
+            <span class="o_product_panel_header">
+                <span class="o_product_icon"><i class="fa fa-exchange"/></span>
+                <span class="o_product_circle badge bg-primary">0</span>
+            </span>
+            <span class="o_product_panel_content">
+                <div class="o_text_headings text-muted text-center bg-primary ">
+                    <strong>COMPARE PRODUCTS</strong>
+                </div>
+                <div class="o_close_wrapper"><i class="fa fa-close"></i></div>
+                <div class="o_product_panel_empty text-left">
+                    <h4 class="text-muted">Click on <i class="fa fa-exchange" /> to add items to your comparison list</h4>
+                    <div class="o_panel_empty o_comparelist_empty"></div>
+                </div>
+                <div class="o_comparelist_products">
+                    <div class="o_comparelist_warning" style="display:none">
+                        <div class="o_shortlog">
+                            <span><i class="fa fa-warning" style="color:red"/> You can't compare <strong id="comaprelist_alert"></strong> with the below items as it's from different category.</span>
+                        </div>
+                    </div>
+                    <div class="o_comparelist_limit_warning" style="display:none">
+                        <div class="o_shortlog">
+                            <span><i class="fa fa-warning" style="color:red"/>You can compare only 4 products.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_comparelist_button">
+                    <a href="#" class="btn btn-success btn-block" target="_blank"><i class="fa fa-exchange" /> Compare selected products</a>
+                </div>
+            </span>
+        </span>
+    </t>
+ 
+    <t t-name="product_shortlist_template">
+        <span class="o_product_panel" id="shortlist">
+            <span class="o_product_panel_header">
+                <span class="o_product_icon"><i class="fa fa-heart"/></span>
+                <span class="o_product_text">My Shortlist</span>
+                <span class="o_product_circle badge bg-primary">0</span>
+            </span>
+            <span class="o_product_panel_content">
+                <div class="o_text_headings text-muted text-left">
+                    <strong>MY SHORTLIST</strong>
+                </div>
+                <div class="o_close_wrapper"><i class="fa fa-close"></i></div>
+                <div class="o_product_panel_empty text-left">
+                    <h4 class="text-muted">Click on <i class="fa fa-heart" /> to add items to your Shortlist</h4>
+                    <div class="o_panel_empty o_shortlist_empty"></div>
+                </div>
+                <div class="o_shortlist_products"></div>
+            </span>
+        </span>
+    </t>
+
+    <t t-name="product_template">
+        <div class="row mt8 o_product_row" t-att-data-category_ids="public_categ_ids">
+            <div class="col-sm-3 col-xs-3 mb8">
+                <img class="img img-responsive" t-attf-src="/web/image/product.template/#{id}/image_small" style="max-height: 50px;"/>
+            </div>
+            <div class="col-sm-7 col-xs-7 mb8 text-left">
+                <h5><strong><a t-attf-href="/shop/product/#{id}"><t t-esc="name"/></a></strong></h5>
+                <h5 class="mt0 mb0">
+                    <strong>
+                        <t t-if="(lst_price - price) &gt; 0.1">
+                            <del class="text-danger"><t t-esc="lst_price"/> <span t-esc="product_currency"/></del>
+                        </t>
+                        <t t-esc="price"/> <span t-esc="product_currency"/>
+                    </strong>
+                </h5>
+            </div>
+            <div class="col-sm-1 col-xs-1 mt16">
+                <a href="#" class="o_remove" title="Remove" t-att-data-template_id="id">
+                    <i class="fa fa-trash" />
+                </a>
+            </div>
+        </div>
+    </t>
+
+</templates>

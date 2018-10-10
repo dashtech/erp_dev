@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo noupdate="0">
+
+    <record id="hr_public_holiday_day" model="hr.holidays.status">
+            <field name="name">ANNUAL</field>
+            <field name="desc">Nghỉ lễ</field>
+            <field name="color_name">red</field>
+            <field name="limit">True</field>
+    </record>
+
+    <record id="hr_legal_day" model="hr.holidays.status">
+        <field name="name">LEGAL</field>
+            <field name="desc">Nghỉ phép</field>
+            <field name="color_name">blue</field>
+    </record>
+
+    <record id="hr_sick_day" model="hr.holidays.status">
+            <field name="name">SICK</field>
+            <field name="desc">Nghỉ ốm</field>
+            <field name="color_name">lightcyan</field>
+            <field name="limit">True</field>
+    </record>
+
+    <record id="hr_unpaid_day" model="hr.holidays.status">
+            <field name="name">UNPAID</field>
+            <field name="desc">Nghỉ không lương</field>
+            <field name="color_name">lightblue</field>
+            <field name="limit">True</field>
+    </record>
+
+</odoo>

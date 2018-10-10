@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="btek_assets_form" model="ir.ui.view">
+            <field name="name">Assets Report</field>
+            <field name="model">btek.assets.report</field>
+            <field name="arch" type="xml">
+                <form string="BÁO CÁO TĂNG GIẢM TÀI SẢN">
+                    <group col="4">
+                        <field name="res_company_id" string="Company"/>
+                        <field name="x_category_id"  string="Nhóm sản phẩm"/>
+                    </group>
+                    <notebook name="Filter" colspan="4">
+                        <page string="Filter">
+                            <group col="4"
+                                   string="Dates">
+                                <field name="start_date" string="Start Date"/>
+                                <field name="end_date" string="End Date"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="action_print" string="Print" class="oe_highlight" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="btek_assets_report_act" model="ir.actions.act_window">
+            <field name="name">BÁO CÁO TĂNG GIẢM TÀI SẢN</field>
+            <field name="res_model">btek.assets.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_assets_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_btek_assets_report" name="BC Tăng Giảm Và Khấu Hao Tài Sản"
+                  parent="account.menu_finance_reports" sequence="1"
+                  action="btek_assets_report_act" groups="account.group_account_user"/>
+
+        <report id="btek_asset_report"
+                model="btek.assets.report"
+                string="Báo cáo khấu hao TSCĐ"
+                report_type="xlsx"
+                name="btek_account_asset_report.assets_report"
+                file="btek_account_asset_report.AssetReport"
+                attachment_use="False"/>
+    </data>
+</odoo>

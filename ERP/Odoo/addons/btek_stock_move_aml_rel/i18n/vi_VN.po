@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_stock_move_aml_rel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-10 05:02+0000\n"
+"PO-Revision-Date: 2018-05-10 12:03+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: btek_stock_move_aml_rel
+#: model:ir.model,name:btek_stock_move_aml_rel.model_account_move_line
+msgid "Journal Item"
+msgstr "Chứng từ"
+
+#. module: btek_stock_move_aml_rel
+#: model:ir.model,name:btek_stock_move_aml_rel.model_stock_move
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: btek_stock_move_aml_rel
+#: model:ir.model.fields,field_description:btek_stock_move_aml_rel.field_account_move_line_x_stock_move_id
+msgid "Stock move id"
+msgstr "Mã kho"

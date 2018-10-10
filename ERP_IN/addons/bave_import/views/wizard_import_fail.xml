@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="import_product_failed_form" model="ir.ui.view">
+        <field name="name">import_product_failed_form</field>
+        <field name="model">import.product.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <!--<group>-->
+                        <!---->
+                    <!--</group>-->
+                    <!--<group>-->
+                    <field name="line_error" readonly="1"/>
+                    <field name="f_name" invisible="1"/>
+                    <field name="error_file" filename="f_name" readonly="1"/>
+                    <!--</group>-->
+                </group>
+                <footer>
+                    <button name="cancel" string="Cancel" special="cancel" class="oe_link oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="import_product_success_form" model="ir.ui.view">
+        <field name="name">import_product_success_form</field>
+        <field name="model">import.product.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="success" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="ok_act" string="OK" type="object" class="oe_link oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="import_product_failed_action" model="ir.actions.act_window">
+        <field name="name">Product Import Failed</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.product.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_import.import_product_failed_form'}</field>
+    </record>
+
+    <record id="import_product_success_action" model="ir.actions.act_window">
+        <field name="name">Product Import Success</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.product.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_import.import_product_success_form'}</field>
+    </record>
+
+</odoo>

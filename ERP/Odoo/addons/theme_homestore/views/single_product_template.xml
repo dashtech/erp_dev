@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template id="product_breadcrumb" inherit_id="website_sale.product"
+			name="Product Breadcrumb size">
+			<xpath
+				expr="//section[@id='product_detail']/div[1]/div[@class='col-sm-4']"
+				position="attributes">
+				<attribute name="class">col-sm-9</attribute>
+			</xpath>
+			
+			<xpath
+				expr="//section[@id='product_detail']/div[1]/div[@class='col-sm-3 mb8']"
+				position="replace">
+				
+			</xpath>
+			
+			<xpath expr="//section/div[2]" position="attributes">
+				<attribute name="class">row product_detail_background</attribute>
+			</xpath>
+			
+			
+			 <xpath expr="//div[@id='product_details']/hr[1]" position="replace"></xpath>
+			
+		</template>
+		
+		 <template id="website_product_page_layout_73lines.product_side_block"
+        inherit_id="website_sale.product" name="Product Side Block"
+        active="False" customize_show="True">
+        <xpath expr="//div[contains(@class, 'col-sm-7')]"
+            position="attributes">
+            <attribute name="class">col-sm-4 col-md-4 col-lg-4
+            </attribute>
+        </xpath>
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="class">col-sm-4 col-md-4 col-lg-4
+            </attribute>
+        </xpath>
+        <xpath expr="//section[@id='product_detail']/div[2]"
+            position="inside">
+            <div class="col-sm-4 col-md-4 col-lg-4 oe_structure">
+            	<section class="s_ecommerce_terms homepage-bar s_three_boxes_with_icon">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 col-xs-12 col-sm-12 feature-box mt8 ">
+										<div class="col-md-2 col-xs-2 col-sm-3 mt8 mb8 pad0">
+											<span class="fa fa-home fa-1x img-circle bg-primary"
+												style="" />
+										</div>
+										<div class="col-md-10 col-xs-10 col-sm-9  pad0">
+											<a href="#">
+												<h4 class="o_default_snippet_text">FREE SHIPPING &amp;amp; RETURN</h4>
+											</a>
+											<p class="o_default_snippet_text">Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+									<div class="col-md-12 col-xs-12 col-sm-12 feature-box mt8 ">
+										<div class="col-md-2 col-xs-2 col-sm-3 mt8 mb8 pad0">
+											<span class="fa fa-phone fa-1x img-circle bg-primary" />
+										</div>
+										<div class="col-md-10 col-xs-10 col-sm-9 co  pad0">
+											<a href="#">
+												<h4 class="o_default_snippet_text">CALL US NOW FOR MORE INFO</h4>
+											</a>
+											<p class="o_default_snippet_text">+91 1234567890</p>
+										</div>
+
+									</div>
+									<div class="col-md-12 col-xs-12 col-sm-12 feature-box mt8  ">
+										<div class="col-md-2  col-xs-2 col-sm-3 mt8 mb8 pad0">
+											<span class="fa fa-inr fa-1x img-circle bg-primary" />
+										</div>
+										<div class="col-md-10 col-xs-10 col-sm-9  pad0">
+											<a href="#">
+												<h4>MONEY BACK GUARANTEE</h4>
+											</a>
+											<p class="o_default_snippet_text">Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+									<div class="col-md-12 col-xs-12 col-sm-12 feature-box mt8  ">
+										<div class="col-md-2 col-xs-2  col-sm-3 mt8 mb8 pad0">
+											<span class="fa fa-life-ring fa-1x img-circle bg-primary"
+												style="" />
+										</div>
+										<div class="col-md-10 col-xs-10 col-sm-9  pad0">
+											<a href="#">
+												<h4 class="o_default_snippet_text">ONLINE SUPPORT 24/7</h4>
+											</a>
+											<p class="o_default_snippet_text">Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="s_product_carousel s_mini_carousel">
+					        <div class="container">
+					          <div class="js_get_objects product_carousel add_to_cart_hidden user_rating_hidden wishlist_hidden" data-loading="true" data-template="snippet_product_carousel_73lines.product_list_template_mini" data-object_name="product.template" data-custom_controller="1" data-filter_by_filter_id="15" data-objects_limit="4" data-objects_in_row="2" data-objects_in_slide="1"/>
+					        </div>
+					      </section>
+            </div>
+        </xpath>
+    </template>
+    
+     <!-- Rating -->
+
+    <template id="website_product_page_layout_73lines.product_comment_new"
+        inherit_id="website_product_page_layout_73lines.product_description_new_style"
+        active="True" customize_show="True" name="Discussion and Rating">
+        <xpath expr="//div[@id='product_details']/h1" position="after">
+            <t t-call="rating.rating_card">
+                <t t-set="rating_stat" t-value="rating_product" />
+                <t t-set="max_rate" t-value="5" />
+                <t t-set="min_rate" t-value="1" />
+            </t>
+        </xpath>
+        <xpath expr="//li[@id='li-full-desc']" position="after">
+            <li id="li-comment">
+                <a href="#full-comment" data-toggle="tab">
+                    <strong>Discussion and Rating</strong>
+                </a>
+            </li>
+        </xpath>
+        <xpath expr="//div[@id='full-desc']" position="after">
+            <div class="tab-pane fade" id="full-comment">
+                <div class="row">
+                    <div class="text-muted">
+                        <span class="fa fa-comment-o">
+                            <a id="comments">
+                                <t
+                                    t-if="len(product.website_message_ids) &lt;= 1">
+                                    <t
+                                        t-esc="len(product.website_message_ids)" />
+                                    comment
+                                </t>
+                                <t
+                                    t-if="len(product.website_message_ids) > 1">
+                                    <t
+                                        t-esc="len(product.website_message_ids)" />
+                                    comments
+                                </t>
+                            </a>
+                        </span>
+                    </div>
+                    <t t-call="website_mail.message_thread">
+                        <t t-set="object" t-value="product" />
+                        <t t-set="chatter_mode" t-value="'json'" />
+                        <t t-set="rating_enable" t-value="True" />
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+		
+	 <template id="theme_homestore_tab_detail"
+        inherit_id="website_product_page_layout_73lines.product_description_new_style">
+        <xpath
+            expr="//section[@id='product_detail']/div[@id='product_description_reviews']"
+            position="attributes">
+            <attribute name="class">tab-container clearfix row</attribute>
+        </xpath>
+    </template>
+</odoo>

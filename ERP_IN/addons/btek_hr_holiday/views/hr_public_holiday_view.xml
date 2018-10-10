@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_public_holiday_tree_view" model="ir.ui.view">
+        <field name="name">hr_public_holiday_tree_view</field>
+            <field name="model">btek.hr.public.holiday</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="year"/>
+                    <field name="hr_holiday_status"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="hr_public_holiday_from_view" model="ir.ui.view">
+        <field name="name">hr_public_holiday_from_view</field>
+            <field name="model">btek.hr.public.holiday</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="year" required="1"/>
+                            <field name="employee_tag" required="1"/>
+                            <field name="hr_holiday_status" required="1"/>
+                        </group>
+                    </group>
+                    <group string="Public Holidays">
+                        <field name="public_holiday_line" nolabel="1">
+                            <tree editable="top">
+                                <field name="name" required="1"/>
+                                <field name="date" required="1"/>
+                                <field name="desc"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+    </record>
+
+    <record id="hr_public_holiday_action" model="ir.actions.act_window">
+        <field name="name">Public Holidays</field>
+        <field name="res_model">btek.hr.public.holiday</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_public_holiday_settings"
+              groups="hr_holidays.group_hr_holidays_manager,hr_holidays.group_hr_holidays_user"
+              name="Public Holiday Setting"
+              parent="hr_holidays.menu_hr_holidays_root"
+              />
+
+    <menuitem id="menu_public_holiday"
+              groups="hr_holidays.group_hr_holidays_manager,hr_holidays.group_hr_holidays_user"
+              name="Public Holidays"
+              parent="menu_public_holiday_settings"
+              action="hr_public_holiday_action"/>
+
+
+</odoo>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="btek_report_invoice_document">
+        <t t-call="report.external_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page" style="color: black;font-size: 17px;font-family: Times New Roman;">
+                    <t t-call="car_repair_industry.company_information_logo" t-lang="doc.partner_id.lang"/>
+                        <div class="row">
+
+                            <div class="row">
+                                <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 17!important;">
+                                    <div class="text-center" style="font-family: inherit; font-size: 30px!important;">
+                                        <t t-if="doc.type == 'out_invoice'" style="font-family: inherit; font-size: 30px!important;"><b>HÓA ĐƠN BÁN HÀNG</b></t>
+                                        <t t-if="doc.type == 'in_invoice'" style="font-family: inherit; font-size: 30px!important;"><b>HÓA ĐƠN MUA HÀNG</b></t>
+                                        <t t-if="doc.type == 'out_refund'" style="font-family: inherit; font-size: 30px!important;"><b>HÓA ĐƠN HOÀN TIỀN KHÁCH HÀNG</b></t>
+                                        <t t-if="doc.type == 'in_refund'" style="font-family: inherit; font-size: 30px!important;"><b>HÓA ĐƠN HOÀN TIỀN NHÀ CUNG CẤP</b></t>
+                                    </div>
+
+                                    <div class="col-xs-12" style="border: 1.5px solid black !important; border-radius: 5px; font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                        <div class="col-xs-7" style="padding-top: 5px; color: black;font-family: inherit; font-size: 17!important;line-height: 120%;">
+                                            <t t-if="doc.type in ['out_invoice', 'out_refund']">
+                                                <div>
+                                                    <span>Khách hàng:</span>
+                                                    <span><t t-esc="doc.partner_id.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Mã KH:</span>
+                                                    <span><t t-esc="doc.partner_id.code"/></span>
+                                                </div>
+                                            </t>
+                                            <t t-if="doc.type in ['in_invoice', 'in_refund']">
+                                                <div>
+                                                    <span>Nhà cung cấp:</span>
+                                                    <span><t t-esc="doc.partner_id.name"/></span>
+                                                </div>
+                                                <div>
+                                                    <span>Mã NCC:</span>
+                                                    <span><t t-esc="doc.partner_id.code"/></span>
+                                                </div>
+                                            </t>
+                                            <div>
+                                                <span>Điện thoại:</span>
+                                                <span>
+                                                    <t t-if="doc.partner_id.phone"><span t-field="doc.partner_id.phone"/></t>
+
+                                                    <t t-if="doc.partner_id.mobile and doc.partner_id.phone">-</t>
+                                                    <t t-if="doc.partner_id.mobile"><span t-field="doc.partner_id.mobile"/></t>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span>Địa chỉ:</span>
+                                                <span>
+                                                    <t t-if="doc.partner_id.street"><span t-field="doc.partner_id.street"/></t>
+
+                                                    <t t-if="doc.partner_id.ward_id and doc.partner_id.street">-</t>
+                                                    <t t-if="doc.partner_id.ward_id"><span t-field="doc.partner_id.ward_id.name"/></t>
+                                                    <t t-if="doc.partner_id.district_id and doc.partner_id.ward_id or doc.partner_id.district_id and doc.partner_id.street">-</t>
+                                                    <t t-if="doc.partner_id.district_id"><span t-field="doc.partner_id.district_id.name"/></t>
+                                                    <t t-if="doc.partner_id.state_id and doc.partner_id.district_id or doc.partner_id.state_id and doc.partner_id.ward_id or doc.partner_id.state_id and doc.partner_id.street">-</t>
+                                                    <t t-if="doc.partner_id.state_id"><span t-field="doc.partner_id.state_id.name"/></t>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-5" style="padding-top: 5px; color: black;font-family: inherit; font-size: 17px!important;line-height: 120%;">
+                                            <t t-if="doc.license_plate">
+                                                <div>
+                                                    <span>Biển số: </span>
+                                                    <span><t t-esc="doc.license_plate"/></span>
+                                                </div>
+                                            </t>
+                                            <div>
+                                                <span>Số phiếu:</span>
+                                                <span><t t-esc="doc.number"/></span>
+                                            </div>
+                                            <div>
+                                                <span>Ngày lập phiếu:</span>
+                                                <span><t t-if="doc.real_date_invoice"/><t t-esc="doc.real_date_invoice"/></span>
+                                            </div>
+                                            <div>
+                                                <span>Ghi chú:</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12" style="padding-top: 5px; font-family: inherit; font-size: 17px!important;">
+                                    <t t-set="have_service" t-value="False"/>
+                                    <t t-foreach="doc.invoice_line_ids" t-as="invoice_line">
+                                        <t t-if="invoice_line.product_id.type == 'service'">
+                                            <t t-set="have_service" t-value="True"/>
+                                        </t>
+                                    </t>
+                                    <table class="table table-bordered" style="border: 1px solid black !important; color: black;font-family: inherit; font-size: 17px!important;height: 100%;">
+                                        <thead>
+                                            <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                <th class="text-center" style="width:2%;border: 1px solid black !important;line-height: 16px;">STT</th>
+                                                <th class="text-center col-xs-1" style="border: 1px solid black !important;line-height: 16px;">Mã số</th>
+                                                <th class="text-center col-xs-3" style="border: 1px solid black !important;line-height: 16px;">Hạng mục</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">ĐVT</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">SL</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">Đơn giá</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">%CK</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">%Thuế</th>
+                                                <th class="text-center" style="border: 1px solid black !important;line-height: 16px;">Thành tiền</th>
+                                                <!--<th class="text-center" style="border: 1px solid black !important;">KT viên</th>-->
+                                            </tr>
+                                       </thead>
+
+                                        <tr style="border: 1px solid black !important;height: 5px!important;">
+                                           <td colspan="9" style="border: 1px solid black !important;line-height: 16px;">
+                                               <strong style="line-height: 16px;">Vật tư hàng hóa</strong>
+                                           </td>
+                                       </tr>
+                                        <t t-set="stt" t-value="0"/>
+                                       <t t-foreach="doc.invoice_line_ids" t-as="invoice_line">
+                                           <t t-if="invoice_line.product_id.type != 'service'">
+                                               <t t-set="stt" t-value="stt+1"/>
+                                                <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                    <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                       <span style="line-height: 16px;" t-raw="stt"/>
+                                                    </td>
+                                                    <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-esc="invoice_line.product_id.default_code"/>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-esc="invoice_line.product_id.name"/>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-field="invoice_line.uom_id.name"></span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-esc="invoice_line.quantity"/>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-field="invoice_line.price_unit"/>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;" t-if="invoice_line.discount and invoice_line.discount > 0">
+                                                            <span style="line-height: 16px;" t-esc="invoice_line.discount"/><span>%</span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t t-foreach="invoice_line.invoice_line_tax_ids" t-as="line_tax">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-esc="line_tax.name"/><span>,&#160;</span>
+                                                            </t>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                        <t style="line-height: 16px;">
+                                                            <span style="line-height: 16px;" t-field="invoice_line.price_subtotal_not_discount_tax"/>
+                                                        </t>
+                                                    </td>
+                                                    <!--<td class="text-center" style="border: 1px solid black !important;">-->
+                                                        <!--<span t-field="doc.user_id.name"/>-->
+                                                    <!--</td>-->
+                                                </tr>
+                                            </t>
+                                       </t>
+
+                                       <tr style="border: 1px solid black !important;height: 5px!important;">
+                                           <td colspan="7" class="text-center" style="border: 1px solid black !important; border-right: 0 !important;line-height: 16px;">
+                                               <strong style="line-height: 16px;">Tổng cộng tiền VTHH:</strong>
+                                           </td>
+                                           <td colspan="2" class="text-right" style="border: 1px solid black !important;border-left: 0 !important;line-height: 16px;">
+                                               <b><span style="line-height: 16px;" t-field="doc.total_amount_product"
+                                                t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                               </b>
+                                           </td>
+                                           <!--<td colspan="2" class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important;">-->
+                                               <!--<span t-esc="' '"/>-->
+                                           <!--</td>-->
+                                       </tr>
+
+                                        <t t-if="have_service == True">
+                                           <tr style="border: 1px solid black !important;height: 5px!important;">
+                                               <td colspan="9" style="border: 1px solid black !important;line-height: 16px;">
+                                                   <strong style="line-height: 16px;">Phần sửa chữa chung</strong>
+                                               </td>
+                                           </tr>
+                                            <t t-set="stt_1" t-value="0"/>
+                                           <t t-foreach="doc.invoice_line_ids" t-as="invoice_line">
+                                               <t t-if="invoice_line.product_id.type == 'service'">
+                                                   <t t-set="stt_1" t-value="stt_1+1"/>
+                                                    <tr style="border: 1px solid black !important;height: 5px!important;">
+                                                        <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                           <span style="line-height: 16px;" t-raw="stt_1"/>
+                                                        </td>
+                                                        <td class="text-center" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-esc="invoice_line.product_id.default_code"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-left" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-esc="invoice_line.product_id.name"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-field="invoice_line.uom_id.name"></span>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-esc="invoice_line.quantity"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-field="invoice_line.price_unit"/>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t t-if="invoice_line.discount and invoice_line.discount > 0">
+                                                                <span style="line-height: 16px;" t-esc="invoice_line.discount"/><span>%</span>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t t-foreach="invoice_line.invoice_line_tax_ids" t-as="line_tax">
+                                                                <t style="line-height: 16px;">
+                                                                    <span style="line-height: 16px;" t-esc="line_tax.name"/><span>,&#160;</span>
+                                                                </t>
+                                                            </t>
+                                                        </td>
+                                                        <td class="text-right" style="border: 1px solid black !important;line-height: 16px;">
+                                                            <t style="line-height: 16px;">
+                                                                <span style="line-height: 16px;" t-field="invoice_line.price_subtotal_not_discount_tax"/>
+                                                            </t>
+                                                        </td>
+                                                        <!--<td class="text-center" style="border: 1px solid black !important;">-->
+                                                            <!--<span t-field="doc.user_id.name"/>-->
+                                                        <!--</td>-->
+                                                    </tr>
+                                                </t>
+                                           </t>
+                                           <tr style="border: 1px solid black !important;height: 5px!important;">
+                                               <td colspan="7" class="text-center" style="border: 1px solid black !important; border-right: 0 !important;line-height: 16px;">
+                                                   <strong style="line-height: 16px;">Tổng cộng tiền công:</strong></td>
+                                               <td colspan="2" class="text-right" style="border: 1px solid black !important;border-left: 0 !important;line-height: 16px;">
+                                                   <b><span style="line-height: 16px; " t-field="doc.total_amount_service"
+                                                    t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                                   </b>
+                                               </td>
+                                               <!--<td colspan="2" class="text-center" style="border: 1px solid black !important; border-right: 0 !important; border-left: 0 !important;">-->
+                                                   <!--<span t-esc="' '"/>-->
+                                               <!--</td>-->
+                                           </tr>
+                                        </t>
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row" style="page-break-inside: avoid!important;">
+                                <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 17px!important;page-break-inside: avoid!important;">
+                                    <div class="row">
+                                        <div class="col-xs-7" style="page-break-inside: avoid!important;">
+                                        </div>
+                                        <div class="col-xs-5" style="page-break-inside: avoid!important;">
+                                            <!--<div class="row" style="page-break-inside: avoid!important;">-->
+                                                <table class="table table-striped" style="font-family: inherit; font-size: 17!important;">
+                                                    <tr class="text-right" style="height: 5px!important;">
+                                                        <td style="line-height: 16px;"><strong style="line-height: 16px;">Giá trị trước thuế:</strong></td>
+                                                        <td style="line-height: 16px;">
+                                                            <b><span style="line-height: 16px;" t-field="doc.amount_untaxed"
+                                                                t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-right" style="height: 5px!important;">
+                                                        <td style="line-height: 16px;"><strong style="line-height: 16px;">Tổng chiết khấu:</strong></td>
+                                                        <td style="line-height: 16px;">
+                                                            <b><span style="line-height: 16px;" t-field="doc.discount_value"
+                                                                t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-right" style="height: 5px!important;">
+                                                        <td style="line-height: 16px;"><strong style="line-height: 16px;">Tổng thuế: </strong></td>
+                                                        <td>
+                                                            <b><span style="line-height: 16px;" t-field="doc.amount_tax"
+                                                                t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-right" style="height: 5px!important;">
+                                                        <td style="line-height: 16px;"><strong style="line-height: 16px;">Tổng cộng:</strong></td>
+                                                        <td style="line-height: 16px;">
+                                                            <b><span style="line-height: 16px;" t-field="doc.amount_total"
+                                                                t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                    <div style="text-align: right;color: black;font-family: inherit; font-size: 17!important;margin_right: 10px!important;page-break-inside: avoid!important;">
+                                        <span>Số tiền bằng chữ:</span>
+                                        <t t-if="doc.amount_total_in_word">
+                                            <t>
+                                                <i>
+                                                    <span t-esc="doc.amount_total_in_word" />
+                                                    <t t-if="doc.currency_id.currency_text" t-esc="doc.currency_id.currency_text"/>&#160;chẵn.
+                                                </i>
+                                            </t>
+                                        </t>
+                                    </div>
+                                    <div style="text-align: right;color: black;font-family: inherit; font-size: 17!important;margin-right: 5%;page-break-inside: avoid!important;">
+                                        <b>.........., Ngày..........tháng..........năm <span><t t-esc="time.strftime('%Y')"/></span></b>
+                                    </div>
+                                </div>
+                                <!--<div class="col-xs-12" style="padding-top:3px;padding-bottom:3px">-->
+                                     <!--<div style="border-bottom: 2px solid black;"></div>-->
+                                <!--</div>-->
+                                <div class="col-xs-12" style="color: black;font-family: inherit; font-size: 17px!important;page-break-inside: avoid;">
+                                    <table width="100%" style="color: black;font-family: inherit; font-size: 17px!important;page-break-inside: avoid;">
+                                            <tr style="page-break-inside: avoid;">
+                                                <td style="text-align: center;" width="32%">
+                                                    <span style="padding-top: 8px;">
+                                                        <b>KHÁCH HÀNG</b>
+                                                    </span>
+
+                                                </td>
+                                                <td style="text-align: center;" width="32%">
+                                                    <span style="padding-top: 8px;">
+                                                        <b>KẾ TOÁN</b>
+                                                    </span>
+
+                                                </td>
+                                                <td style="text-align: center;" width="36%">
+                                                    <span style="padding-top: 8px;">
+                                                        <b>NGƯỜI LẬP PHIẾU</b>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="line-height: 100%;color: black;font-family: inherit; font-size: 16px!important;">
+                                                <td style="text-align: center;" width="32%">
+                                                    <span><i>(Ký, họ tên)</i></span>
+                                                    <br/>
+                                                    <br/>
+                                                    <br/>
+                                                </td>
+                                                <td style="text-align: center;" width="32%">
+                                                    <span><i>(Ký, họ tên)</i></span>
+                                                    <br/>
+                                                    <br/>
+                                                    <br/>
+                                                </td>
+                                                <td style="text-align: center;" width="36%">
+                                                    <span><i>(Ký, họ tên)</i></span>
+                                                    <br/>
+                                                    <br/>
+                                                    <br/>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                    <div class="oe_structure"/>
+                                    </div>
+
+                                </div>
+                        </div>
+
+
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="btek_report_invoice"
+        model="account.invoice"
+        string="Print Invoice"
+        report_type="qweb-pdf"
+        name="btek_account.btek_report_invoice_document"
+        file="btek_account.btek_report_invoice_document"
+        attachment_use="False"
+        menu="False"
+    />
+
+    <record id="account_invoice_paper_format" model="report.paperformat">
+        <field name="name">Account invoice paper format</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">4</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">1</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="btek_report_invoice" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="account_invoice_paper_format"/>
+    </record>
+
+    <delete model="ir.actions.report.xml" id="account.report_invoice"/>
+    <record id="account.account_invoices" model="ir.actions.report.xml">
+        <field name="name">Invoices</field>
+        <field name="model">account.invoice</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">account.report_invoice</field>
+        <field name="menu">False</field>
+    </record>
+
+</odoo>

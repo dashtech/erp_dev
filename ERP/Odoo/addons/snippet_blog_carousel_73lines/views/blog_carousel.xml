@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <record id="btek_inherit_view_blog_post_form" model="ir.ui.view">
+        <field name="name">btek.blog.post.form</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="after">
+                <field name="image" widget="image" class="oe_avatar"/>
+            </div>
+        </field>
+    </record>
+
+    <!-- ======== Blog Carousel ======== -->
+
+    <!-- Snippet's Body -->
+    <template id="s_blog_carousel" name="Blog Carousel Slider">
+        <section class="s_blog_carousel">
+            <div class="container">
+                <div class="js_get_objects" data-loading="true"
+                     data-template="snippet_blog_carousel_73lines.blog_list_template"
+                     data-object_name="blog.post" />
+            </div>
+        </section>
+    </template>
+
+    <!-- Latest blogs's Template -->
+    <template id="blog_list_template">
+        <div class="headline">
+            <h2 t-esc="title"></h2>
+            <hr class="mt0 mb0"/>
+        </div>
+        <div class="blog-list owl-carousel owl-theme mb8 mt8">
+            <t t-foreach="objects" t-as="obj">
+                <div class="item blog-single " style="margin-right:20px;">
+                    <t t-foreach="obj" t-as="blog">
+                        <t t-call="snippet_blog_carousel_73lines.new_blog_item" />
+                    </t>
+                </div>
+            </t>
+        </div>
+    </template>
+
+    <!-- Blog Template -->
+    <template id="new_blog_item" name="Blog item">
+        <div class="post-thumb">
+            <a t-att-href="'/blog/%s/post/%s' % (blog.blog_id.id, blog.id)">
+                <t t-set="blog_post_cover_properties" t-value="get_property_value(blog)" />
+                <!--<div class="oe_blog_image" t-attf-src="/web/image/blog.post/#{blog.id}/image/100x100"-->
+                     <!--t-attf-style="background-image: #{blog_post_cover_properties.get('background-image', 'none')};  -webkit-background-size: cover; min-height:222px; opacity:1}"></div>-->
+                <img class="img-responsive" t-attf-src="/web/image/blog.post/#{blog.id}/image/200x200" t-attf-alt="blog.name"/>
+            </a>
+            <div class="latest-blog-info">
+                <a t-att-href="'/blog/%s/post/%s' % (blog.blog_id.id, blog.id)">
+                    <h4 t-field="blog.name"></h4>
+                </a>
+                <div class="post-excerpt">
+                    <p t-field="blog.subtitle" />
+                </div>
+                <div class="post-meta">
+                    <span class="entry-date">
+                        <i class="fa fa-calendar"></i>
+                        <span t-field="blog.create_date" t-field-options='{"format": "MMMM d, yyyy"}' />
+                    </span>
+                    <span class="entry-comment">
+                        <i class="fa fa-user"></i>
+                        <span t-field="blog.author_id" />
+                    </span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="website_blog.header_footer_custom" customize_show="True" inherit_id="website.layout" name="Show Sign In" active="False">
+    </template>
+
+    <template id="website_livechat.header_footer_custom" inherit_id="website.footer_default" customize_show="True" active="False">
+    </template>
+
+</odoo>

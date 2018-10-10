@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_detail_import_export_by_product_xlsx"
+        model="detail.import.export.by.product"
+        string="Detail import export by product"
+        report_type="xlsx"
+        name="btek_stock.detail.import.export.by.product.xlsx"
+        file="btek_stock.detail.import.export.by.product.xlsx"
+        attachment_use="False"/>
+
+    <record id="detail_import_export_by_product_form" model="ir.ui.view">
+        <field name="name">detail.import.export.by.product.form</field>
+        <field name="model">detail.import.export.by.product</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    <group>
+                        <field name="location_ids"
+                               widget="many2many_tags"/>
+                        <!--<field name="category_ids"-->
+                               <!--widget="many2many_tags"/>-->
+                        <!--<field name="product_ids"-->
+                               <!--widget="many2many_tags"-->
+                               <!--domain="category_ids and [('categ_id', 'in', category_ids[0][2]),('type','!=','service')] or [('type','!=','service')]"/>-->
+                        <field name="product_id"
+                               domain="[('type','!=','service')]"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="export_report" type="object"
+                            string="Export report" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_detail_import_export_by_product"
+            model="ir.actions.act_window">
+        <field name="name">Detail import export by product</field>
+        <field name="res_model">detail.import.export.by.product</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_action_detail_import_export_by_product"
+              parent="stock.menu_warehouse_report"
+              action="action_detail_import_export_by_product"
+              sequence="210"/>
+</odoo>

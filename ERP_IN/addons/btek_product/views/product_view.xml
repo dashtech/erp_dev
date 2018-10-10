@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_only_form_view_change_suggest"
+            model="ir.ui.view">
+        <field name="name">product.template.form.change</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id"
+               ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='variants']" position="after">
+                <page name="suggest"
+                      attrs="{'invisible':[('type','!=','service')]}"
+                      string="Suggest products">
+                    <field name="suggest_ids"
+                           domain="[('type', 'in', ('product','consu'))]"/>
+                </page>
+            </xpath>
+            <xpath expr="//notebook/page[1]/group/group[1]/field[@name='barcode']" position="before">
+                <field name="hs_code" string="HS Code"/>
+                <field name="product_origin_id" options="{'no_quick_create':True}"/>
+            </xpath>
+            <xpath expr="//notebook/page[1]/group/group[1]/field[@name='default_code']" position="replace">
+                <!--<attribute name="invisible">1</attribute>-->
+            </xpath>
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="description" string="Description"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_template_inherit2" model="ir.ui.view">
+        <field name="name">product_template_inherit2</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id"
+               ref="purchase.view_product_supplier_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='purchase_method']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_product_form_expiry_inherit" model="ir.ui.view">
+        <field name="name">view_product_form_expiry_inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id"
+               ref="product_expiry.view_product_form_expiry"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='expiry_and_lots']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_stock_form_inherit" model="ir.ui.view">
+        <field name="name">view_product_stock_form_inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.view_template_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_template_property_form_inherit" model="ir.ui.view">
+        <field name="name">view_template_property_form_inherit</field>
+        <field name="model">product.template</field>
+        <field name="priority">40</field>
+        <field name="inherit_id" ref="stock_account.view_template_property_form"/>
+         <field name="arch" type="xml">
+             <xpath expr="//field[@name='property_stock_account_input']" position="replace"></xpath>
+             <xpath expr="//field[@name='property_stock_account_output']" position="replace"></xpath>
+         </field>
+    </record>
+
+    <record id="product_template_form_view_inherit" model="ir.ui.view">
+        <field name="name">product_template_form_view_inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+             <xpath expr="//label[@for='name']" position="before">
+                <label class="oe_edit_only" for="default_code" string="Product Code"/>
+                <h1><field name="default_code" required="True" placeholder="Product Code"/></h1>
+             </xpath>
+            <xpath expr="//field[@name='property_account_income_id']" position="attributes">
+                <attribute name="string">Account Income</attribute>
+            </xpath>
+            <xpath expr="//field[@name='property_account_income_id']" position="after">
+                <field name="property_account_expense_id" domain="[('deprecated','=',False)]"
+                       attrs="{'readonly': [('purchase_ok', '=', 0)], 'required':[('is_cost_item','=',True)]}"
+                       groups="account.group_account_user" string="Account expense"/>
+                <field name="property_account_creditor_price_difference"
+                       domain="[('deprecated','=',False)]" string="Account defference"
+                       attrs="{'readonly':[('purchase_ok', '=', 0)]}" />
+            </xpath>
+            <xpath expr="//field[@name='taxes_id']" position="replace"></xpath>
+            <xpath expr="//field[@name='supplier_taxes_id']" position="attributes">
+                <attribute name="string">Supplier tax</attribute>
+            </xpath>
+            <xpath expr="//field[@name='supplier_taxes_id']" position="after">
+                <field name="property_stock_account_input" domain="[('deprecated', '=', False)]"/>
+                                <!--attrs="{'invisible':[ ('valuation', '!=', 'real_time')]}"-->
+
+                <field name="property_stock_account_output" domain="[('deprecated', '=', False)]"/>
+                                <!--attrs="{'invisible':[ ('valuation', '!=', 'real_time')]}"-->
+
+            </xpath>
+
+         </field>
+    </record>
+
+    <record id="bave_product_template_form_view" model="ir.ui.view">
+        <field name="name">bave_product_template_form_view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='purchase_ok']" position="after">
+                <div>
+                    <field name="is_cost_item"/>
+                    <label for="is_cost_item"/>
+                </div>
+            </xpath>
+            <xpath expr="//notebook/page[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//notebook/page[4]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_invoice_policy_inherit" model="ir.ui.view">
+        <field name="name">product_template_invoice_policy_inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="sale.product_template_form_view_invoice_policy"/>
+        <field name="priority">41</field>
+        <field name="arch" type="xml">
+            <xpath expr="//page/separator" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='invoice_policy']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='track_service']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+        </field>
+    </record>
+    <!---->
+    <record id="view_product_account_purchase_inherit" model="ir.ui.view">
+        <field name="name">view_product_account_purchase_inherit</field>
+        <field name="model">product.template</field>
+        <field name="priority">42</field>
+        <field name="inherit_id" ref="account.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='property_account_expense_id']" position="replace"></xpath>
+            <xpath expr="//field[@name='property_account_creditor_price_difference']" position="replace"></xpath>
+            <xpath expr="//field[@name='asset_category_id']" position="after">
+                <field name="taxes_id" widget="many2many_tags" string="Customer tax"/>
+            </xpath>
+
+
+        </field>
+    </record>
+
+    <record id="product_product_form_view_change_hscode"
+            model="ir.ui.view">
+        <field name="name">product.product.form.view.change.hscode</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id"
+               ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <!--<xpath expr="//notebook/page[1]/group/group[1]/field[@name='barcode']" position="before">-->
+                <!--<field name="hs_code" string="HS Code"/>-->
+            <!--</xpath>-->
+            <xpath expr="//notebook/page[1]/group/group[1]/field[@name='default_code']" position="replace">
+                <!--<attribute name="invisible">1</attribute>-->
+            </xpath>
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="description" string="Description"/>
+                <field name="hs_code" string="HS Code"/>
+            </xpath>
+
+            <xpath expr="//notebook/page[1]/group/group[1]/field[@name='barcode']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <!--<xpath expr="//label[@for='purchase_ok']" position="after">-->
+                <!--<div>-->
+                    <!--<field name="is_cost_item"/>-->
+                    <!--<label for="is_cost_item"/>-->
+                <!--</div>-->
+            <!--</xpath>-->
+        </field>
+    </record>
+
+    <record id="bave_product_category_form_view"
+            model="ir.ui.view">
+        <field name="name">product.category.form</field>
+        <field name="model">product.category</field>
+        <field name="priority">15</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                            name="%(product.product_normal_action_sell)d"
+                            icon="fa-th-list" type="action"
+                            context="{'search_default_categ_id': active_id}">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value"><field name="product_count"/></span>
+                                <span class="o_stat_text"> Products</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="Category name" class="oe_edit_only"/>
+                        <h1><field name="name" placeholder="e.g. Lamps"/></h1>
+                    </div>
+                    <group name="first" col="4" string="Category Type">
+                        <field name="parent_id"/>
+                        <field name="type"/>
+                    </group>
+                    <notebook>
+                        <page string="Other info">
+                            <group>
+                                <group string="Inventory Valuation">
+                                    <field name="property_cost_method"/>
+                                    <field name="property_valuation"/>
+                                </group>
+                            </group>
+                            <group name="account_property">
+                                <group string="Account Properties">
+                                    <field name="property_account_creditor_price_difference_categ"
+                                           domain="[('deprecated','=',False)]"/>
+                                    <field name="property_account_income_categ_id"
+                                           domain="[('internal_type','=','other'),('deprecated', '=', False)]"/>
+                                    <field name="property_account_expense_categ_id" string="Account expense category"
+                                           domain="[('internal_type','=','other'),('deprecated', '=', False)]"/>
+                                </group>
+
+                                <group name="account_stock_property" string="Account Stock Properties">
+                                    <field name="property_stock_account_input_categ_id" string="Account input stock"
+                                           domain="[('deprecated', '=', False)]"/>
+                                    <field name="property_stock_account_output_categ_id" string="Account output stock"
+                                           domain="[('deprecated', '=', False)]"/>
+                                    <field name="property_stock_valuation_account_id" string="Account stock valuation"
+                                           domain="[('deprecated', '=', False)]"/>
+                                    <field name="property_stock_journal"/>
+                                </group>
+
+                            </group>
+                        </page>
+                    </notebook>
+                    <group string="Logistics">
+                        <field name="route_ids" widget="many2many_tags"/>
+                        <div colspan="2" attrs="{'invisible': [('parent_id', '=', False)]}">
+                            The following routes will apply to the products in this category taking into account parent categories:
+                            <field name="total_route_ids" nolabel="1" widget="many2many_tags"/>
+                        </div>
+                        <field name="removal_strategy_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_product_product_accounting" name="Sellable Products"
+            parent="account.menu_finance_receivables"
+            action="product.product_normal_action" sequence="120"/>
+</odoo>

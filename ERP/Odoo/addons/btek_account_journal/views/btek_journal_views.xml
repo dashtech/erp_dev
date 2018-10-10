@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem parent="account.menu_finance" id="master_tienmat_accounting" sequence="4" name="Tiền mặt (Quỹ)" groups="account.group_account_user"/>
+        <menuitem parent="account.menu_finance" id="master_tiengui_accounting" sequence="4" name="Tiền gửi ngân hàng" groups="account.group_account_user"/>
+
+        <record id="btek_view_account_journal_form" model="ir.ui.view">
+            <field name="name">account.journal.form</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='type']" position="after">
+                    <field name="x_type" attrs = "{'invisible': [('type', 'not in', ['cash', 'bank'])], 'required': [('type', 'in', ['cash', 'bank'])]}"/>
+                    <!--<field name="x_type"/>-->
+                </xpath>
+                <field name="bank_acc_number" position="attributes">
+                    <attribute name="attrs">{'required': [('type', 'in', ['bank'])]}</attribute>
+                </field>
+                <field name="bank_id" position="attributes">
+                    <attribute name="attrs">{'required': [('type', 'in', ['bank'])]}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="btek_view_account_bank_journal_form"
+                model="ir.ui.view">
+            <field name="name">account.journal.form</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_bank_journal_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='bank_id']" position="replace">
+                    <field name="bank_id"/>
+                    <field name="default_debit_account_id"/>
+                    <field name="default_credit_account_id"/>
+                 </xpath>
+            </field>
+        </record>
+
+        <record id="account_voucher.action_sale_receipt" model="ir.actions.act_window">
+            <field name="domain">[('journal_id.type', '=', 'cash'), ('journal_id.x_type', '=', 'receipt')]</field>
+            <field name="context">{'default_pay_now': 'pay_now','visible': True, 'default_voucher_type': 'sale', 'journal_type': ['cash'], 'x_type': ['receipt']}</field>
+            <field name="name">Phiếu thu</field>
+        </record>
+
+        <record id="btek_view_account_vouchers_form" model="ir.ui.view">
+            <field name="name">expath.account.voucher.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='journal_id']" position="attributes">
+                    <attribute name="domain">[('type','=','cash'),('x_type','=','receipt')]</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                    <attribute name="context">{'default_is_cost_item': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_voucher.action_purchase_receipt" model="ir.actions.act_window">
+            <field name="domain">[('journal_id.type','=','cash'),('journal_id.x_type','=','payment')]</field>
+            <field name="context">{'default_pay_now': 'pay_now','default_voucher_type': 'purchase', 'voucher_type': 'purchase'}</field>
+            <field name="name">Phiếu chi</field>
+
+        </record>
+
+        <record id="btek_view_account_voucherss_form" model="ir.ui.view">
+            <field name="name">view.account.voucher.form</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_purchase_receipt_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='journal_id']" position="attributes">
+                    <attribute name="domain">[('type','=','cash'),('x_type','=','payment')]</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                    <attribute name="context">{'default_is_cost_item': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_voucher_filter_vendor_inherit" model="ir.ui.view">
+            <field name="name">view.voucher.filter.vendor.inherit</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_voucher_filter_vendor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="date"
+                           string="Voucher date greater than or equal to"
+                           filter_domain="[('date', '&gt;=', self)]"/>
+                    <field name="date"
+                           string="Voucher date less than or equal to"
+                           filter_domain="[('date', '&lt;=', self)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <record model="ir.ui.view" id="view_sale_receipt_form_baono">
+            <field name="name">account.voucher.sale.form</field>
+            <field name="model">account.voucher</field>
+            <field name="arch" type="xml">
+                <form string="Báo nợ">
+                <header>
+                    <button name="proforma_voucher" string="Validate" states="draft" class="oe_highlight" type="object"/>
+                    <button name="cancel_voucher" string="Cancel Receipt" type="object" states="draft,proforma"/>
+                    <button name="cancel_voucher" string="Cancel Receipt" type="object" states="posted" confirm="Are you sure you want to cancel this receipt?"/>
+                    <button name="action_cancel_draft" type="object" states="cancel" string="Set to Draft"/>
+                    <button name="%(btek_account_payment.account_voucher_btek)d" string="Print Debit" type="action"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+                </header>
+                <sheet string="Sales Receipt">
+                    <label for="number" string="Báo nợ"/>
+                    <h1>
+                        <field name="number" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="voucher_type" invisible="True"/>
+                            <field name="currency_id" invisible="True"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            <field name="partner_id" domain="[('customer','=',True)]" string="Customer" context="{'search_default_customer':1, 'show_address': 1}" options='{"always_reload": True}'/>
+                            <field name="pay_now" invisible="1"/>
+                            <field name="recipient_pay"/>
+                            <field name="x_name" string="Lý do"/>
+
+                        </group>
+                        <group>
+                            <field name="journal_id" domain="[('type','=','bank'),('x_type','=','payment')]" widget="selection" groups="account.group_account_user"/>
+                            <field name="account_id"/>
+                            <field name="date"/>
+                            <field name="date_due"/>
+                            <!--<field name="name" attrs="{'invisible': [('pay_now', '=', 'pay_later')]}"/>-->
+                            <field name="paid" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sales Information">
+                            <field name="line_ids">
+                                <tree string="Voucher Lines" editable="bottom">
+                                    <field name="product_id" string="Cost item" domain="[('is_cost_item', '=', True)]" context="{'default_is_cost_item': True}"/>
+                                    <field name="name"/>
+                                    <field name="x_description" invisible="1"/>
+                                    <field name="account_id"/>
+                                    <field name="account_analytic_id" domain="[('company_id', '=', parent.company_id)]" groups="analytic.group_analytic_accounting"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="tax_ids" widget="many2many_tags" domain="[('type_tax_use','=','sale')]"/>
+                                    <field name="price_subtotal"/>
+                                    <field name="x_rounding_price_tax"/>
+                                    <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                </tree>
+                            </field>
+			                <group>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="x_amount_untax"/>
+                                    <field name="tax_amount"/>
+                                    <field name="amount"/>
+                                </group>
+
+                                <separator string="Bảng thuế" invisible="1"/>
+                                    <div>
+                                        <button name="button_reset_taxes" states="draft,proforma"
+                                                string="(Cập nhât thuế)" class="oe_link oe_edit_only" type="object"
+                                                help="Recompute taxes" invisible="1"/>
+                                    </div>
+                                    <div style="width: 68%%">
+                                            <field name="x_voucher_tax_line" invisible="1">
+                                                <tree editable="bottom" string="Taxes">
+                                                    <field name="name"/>
+                                                    <field name="account_id" groups="account.group_account_invoice" />
+                                                    <field name="x_partner_id" />
+                                                    <field name="x_invoice_symbol" />
+                                                    <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+                                                    <field name="x_registration_date" />
+                                                    <field name="x_date_invoice" />
+                                                    <field name="base" readonly="1" />
+                                                    <field name="amount" />
+                                                    <field invisible="True" name="base_amount" />
+                                                    <field invisible="True" name="tax_amount" />
+                                                    <field name="factor_base" invisible="True" />
+                                                    <field name="factor_tax" invisible="True" />
+                                                </tree>
+                                            </field>
+                                        </div>
+
+                                <field name="narration" placeholder="Internal Notes" nolabel="1"/>
+			                </group>
+                        </page>
+                        <page string="Journal Items">
+                            <group>
+                                <field name="account_date"/>
+                                <field name="move_id" readonly="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sale_receipt_baono" model="ir.actions.act_window">
+            <field name="name">Báo nợ</field>
+            <field name="res_model">account.voucher</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban</field>
+            <field name="domain">[('journal_id.type','=','bank'),('journal_id.x_type','=','payment')]</field>
+            <field name="context">{'default_pay_now': 'pay_now','visible': True, 'default_voucher_type': 'purchase', 'journal_type': ['bank'], 'x_type': ['payment']}</field>
+            <!--<field name="view_id" eval="account_voucher.view_voucher_tree"/>-->
+            <!--<field name="search_view_id" ref="account_voucher.view_voucher_filter_sale"/>-->
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_sale_receipt_baono_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="action_sale_receipt_baono"/>
+        </record>
+        <record id="action_sale_receipt_baono_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_sale_receipt_form_baono"/>
+            <field name="act_window_id" ref="action_sale_receipt_baono"/>
+        </record>
+
+        <menuitem id="menu_action_sale_receipt_baono"
+            action="action_sale_receipt_baono"
+            parent="master_tiengui_accounting"
+            sequence="3"/>
+
+
+        <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <record model="ir.ui.view" id="view_sale_receipt_form_baoco">
+            <field name="name">account.voucher.sale.form</field>
+            <field name="model">account.voucher</field>
+            <field name="arch" type="xml">
+                <form string="Báo có">
+                <header>
+                    <button name="proforma_voucher" string="Validate" states="draft" class="oe_highlight" type="object"/>
+                    <button name="cancel_voucher" string="Cancel Receipt" type="object" states="draft,proforma"/>
+                    <button name="cancel_voucher" string="Cancel Receipt" type="object" states="posted" confirm="Are you sure you want to cancel this receipt?"/>
+                    <button name="action_cancel_draft" type="object" states="cancel" string="Set to Draft"/>
+                    <button name="%(btek_account_payment.account_voucher_btek)d" string="Print Credit" type="action"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,posted"/>
+                </header>
+                <sheet string="Sales Receipt">
+                    <label for="number" string="Báo có"/>
+                    <h1>
+                        <field name="number" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="voucher_type" invisible="True"/>
+                            <field name="currency_id" invisible="True"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            <field name="partner_id" domain="[('customer','=',True)]" string="Customer" context="{'search_default_customer':1, 'show_address': 1}" options='{"always_reload": True}'/>
+                            <field name="pay_now" invisible="1"/>
+                            <field name="recipient_pay"/>
+                            <field name="x_name" string="Lý do"/>
+
+                        </group>
+                        <group>
+                            <field name="journal_id" domain="[('type','=','bank'),('x_type','=','receipt')]" widget="selection" groups="account.group_account_user"/>
+                            <field name="account_id"/>
+                            <field name="date"/>
+                            <field name="date_due"/>
+                            <field name="name"/>
+                            <field name="paid" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sales Information">
+                            <field name="line_ids">
+                                <tree string="Voucher Lines" editable="bottom">
+                                    <field name="product_id" string="Cost item" domain="[('is_cost_item', '=', True)]" context="{'default_is_cost_item': True}"/>
+                                    <field name="name"/>
+                                    <field name="x_description" invisible="1"/>
+                                    <field name="account_id"/>
+                                    <field name="account_analytic_id" domain="[('company_id', '=', parent.company_id)]" groups="analytic.group_analytic_accounting"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="tax_ids" widget="many2many_tags" domain="[('type_tax_use','=','sale')]"/>
+                                    <field name="price_subtotal"/>
+                                    <field name="x_rounding_price_tax"/>
+                                    <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="company_id" invisible="1"/>
+                                </tree>
+                            </field>
+			                <group>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="x_amount_untax"/>
+                                    <field name="tax_amount"/>
+                                    <field name="amount"/>
+                                </group>
+
+                                <separator string="Bảng thuế" invisible="1"/>
+                                    <div>
+                                        <button name="button_reset_taxes" states="draft,proforma"
+                                                string="(Cập nhât thuế)" class="oe_link oe_edit_only" type="object"
+                                                help="Recompute taxes" invisible="1"/>
+                                    </div>
+                                    <div style="width: 68%%">
+                                            <field name="x_voucher_tax_line" invisible="1">
+                                                <tree editable="bottom" string="Taxes">
+                                                    <field name="name"/>
+                                                    <field name="account_id" groups="account.group_account_invoice" />
+                                                    <field name="x_partner_id" />
+                                                    <field name="x_invoice_symbol" />
+                                                    <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+                                                    <field name="x_registration_date" />
+                                                    <field name="x_date_invoice" />
+                                                    <field name="base" readonly="1" />
+                                                    <field name="amount" />
+                                                    <field invisible="True" name="base_amount" />
+                                                    <field invisible="True" name="tax_amount" />
+                                                    <field name="factor_base" invisible="True" />
+                                                    <field name="factor_tax" invisible="True" />
+                                                </tree>
+                                            </field>
+                                        </div>
+
+                                <field name="narration" placeholder="Internal Notes" nolabel="1"/>
+			                </group>
+                        </page>
+                        <page string="Journal Items">
+                            <group>
+                                <field name="account_date"/>
+                                <field name="move_id" readonly="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_sale_receipt_baoco" model="ir.actions.act_window">
+            <field name="name">Báo có</field>
+            <field name="res_model">account.voucher</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban</field>
+            <field name="domain">[('journal_id.type','=','bank'),('journal_id.x_type','=','receipt')]</field>
+            <field name="context">{'default_pay_now': 'pay_now','visible': True, 'default_voucher_type': 'sale', 'journal_type': ['bank'], 'x_type': ['receipt']}</field>
+            <!--<field name="view_id" eval="account_voucher.view_voucher_tree"/>-->
+            <!--<field name="search_view_id" ref="account_voucher.view_voucher_filter_sale"/>-->
+            <field name="target">current</field>
+        </record>
+
+        <record id="action_sale_receipt_baoco_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="action_sale_receipt_baoco"/>
+        </record>
+        <record id="action_sale_receipt_baoco_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_sale_receipt_form_baoco"/>
+            <field name="act_window_id" ref="action_sale_receipt_baoco"/>
+        </record>
+
+        <menuitem id="menu_action_sale_receipt_baoco"
+            action="action_sale_receipt_baoco"
+            parent="master_tiengui_accounting"
+            sequence="2"/>
+
+        <menuitem id="account_voucher.menu_action_sale_receipt"
+            action="account_voucher.action_sale_receipt"
+            parent="master_tienmat_accounting"
+            sequence="4"/>
+
+        <menuitem id="account_voucher.menu_action_purchase_receipt"
+            action="account_voucher.action_purchase_receipt" parent="master_tienmat_accounting" sequence="4"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,593 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_report_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-23 10:06+0000\n"
+"PO-Revision-Date: 2018-08-23 10:06+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_account_account
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_taikhoan
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_account_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_code
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_account_ids
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_account_ids
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_account_account_id
+msgid "Accounts"
+msgstr "Các tài khoản"
+
+#. module: btek_report_accounting
+#: selection:bang.can.doi.phat.sinh,display_account:0
+msgid "All"
+msgstr "Tất cả"
+
+#. module: btek_report_accounting
+#: selection:bang.can.doi.phat.sinh,type_entries:0
+#: selection:so.chi.tiet.congno,type_entries:0
+#: selection:so.quy.s07,type_entries:0
+msgid "All Entries"
+msgstr "Tất cả chứng từ"
+
+#. module: btek_report_accounting
+#: selection:bang.can.doi.phat.sinh,type_entries:0
+#: selection:so.chi.tiet.congno,type_entries:0
+#: selection:so.quy.s07,type_entries:0
+msgid "All Post Entries"
+msgstr "Tất cả chứng từ đã hạch toán"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_balance
+msgid "Balance"
+msgstr "Số dư"
+
+#. module: btek_report_accounting
+#: model:ir.actions.report.xml,name:btek_report_accounting.bang_can_doi_phat_sinh_report
+msgid "BangCanDoiPhatSinh"
+msgstr "BangCanDoiPhatSinh"
+
+#. module: btek_report_accounting
+#: code:addons/btek_report_accounting/models/so_quy.py:190
+#, python-format
+msgid "Bank book"
+msgstr "Sổ quỹ tiền gửi"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+msgid "BẢNG CÂN ĐỐI PHÁT SINH"
+msgstr "BẢNG CÂN ĐỐI PHÁT SINH"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.bang_can_doi_phat_sinh_report_act_anhtt
+#: model:ir.ui.menu,name:btek_report_accounting.menu_bao_cao_cdps_report
+msgid "Bảng cân đối phát sinh"
+msgstr "Bảng cân đối phát sinh"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.open_res_partner_so_chi_tiet_cong_no_action
+msgid "CREDIT MOVE LINES"
+msgstr "CÁC DÒNG BÚT TOÁN CÔNG NỢ"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.account_move_line_so_quy_s07_action
+msgid "Cash book"
+msgstr "Sổ quỹ tiền măt"
+
+#. module: btek_report_accounting
+#: model:ir.actions.server,name:btek_report_accounting.open_account_move_line_so_quy_s07_server_action
+msgid "Cash/bank"
+msgstr "Cash/bank"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_company_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_company_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_company_id
+msgid "Company id"
+msgstr "Company id"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_bc_so_cttk
+msgid "Create Report"
+msgstr "Tạo báo cáo"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_create_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_create_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_create_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_create_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_create_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_create_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_credit
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_credit
+#: model:ir.ui.view,arch_db:btek_report_accounting.account_move_line_so_cttk_form
+msgid "Credit"
+msgstr "Có"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_khachhang
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_ma_kh
+msgid "Customer code"
+msgstr "Mã khách hàng"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_name
+msgid "Customer name"
+msgstr "Tên khách hàng"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Công ty"
+msgstr "Công ty"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.account_move_line_so_cttk_action
+#: model:ir.actions.act_window,name:btek_report_accounting.open_account_move_so_cttk_action
+#: model:ir.actions.server,name:btek_report_accounting.open_account_move_so_cttk_server_action
+msgid "DETAIL ACCOUNT BOOK"
+msgstr "SỔ CHI TIẾT TÀI KHOẢN"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.res_partner_so_chi_tiet_cong_no_action
+#: model:ir.actions.server,name:btek_report_accounting.open_account_move_line_account_move_server_action
+#: model:ir.actions.server,name:btek_report_accounting.open_res_partner_so_chi_tiet_cong_no_server_action
+msgid "DETAIL CREDIT BOOK"
+msgstr "SỔ CHI TIẾT CÔNG NỢ"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+msgid "Data type"
+msgstr "Data type"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_dauky
+msgid "Dauky"
+msgstr "Dauky"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_debit
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_debit
+#: model:ir.ui.view,arch_db:btek_report_accounting.account_move_line_so_cttk_form
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_display_account
+msgid "Display Accounts"
+msgstr "Hiển thị tài khoản"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_display_name
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_cocuoiky
+msgid "End credit"
+msgstr "Dư có cuối kỳ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_end_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_end_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_end_date
+msgid "End date"
+msgstr "Ngày Kết thúc"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_nocuoiky
+msgid "End debit"
+msgstr "Dư nợ cuối kỳ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_diengiai
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_diengiai
+msgid "Explain"
+msgstr "Diễn giải"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Export Excel"
+msgstr "Xuất Excel"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_data
+msgid "File"
+msgstr "Tập tin"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_name
+msgid "Filename"
+msgstr "Filename"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.open_account_move_line_so_quy_s07_action
+msgid "Incurred"
+msgstr "Phát sinh"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_ngayhoadon
+msgid "Invoice date"
+msgstr "Ngày hóa đơn"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_supplier_invoice_number
+msgid "Invoice number"
+msgstr "Số hóa đơn"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "Chứng từ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno___last_update
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_write_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_write_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_write_uid
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_write_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_write_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_write_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+msgid "Loại"
+msgstr "Loại"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_move_id
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_move_id
+msgid "Move"
+msgstr "Dịch chuyển"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_chungtu
+msgid "Number"
+msgstr "Số"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_doituong
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_partner_id
+msgid "Partner id"
+msgstr "Partner id"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_result_selection
+msgid "Partner's"
+msgstr "Đối tượng"
+
+#. module: btek_report_accounting
+#: selection:so.chi.tiet.congno,result_selection:0
+msgid "Payable Accounts"
+msgstr "Tài khoản phải trả"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_credit
+msgid "Period credit"
+msgstr "Phát sinh có"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_debit
+msgid "Period debit"
+msgstr "Phát sinh nợ"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Preview Excel"
+msgstr "Xem báo cáo"
+
+#. module: btek_report_accounting
+#: selection:so.chi.tiet.congno,result_selection:0
+msgid "Receivable Accounts"
+msgstr "Tài khoản phải thu"
+
+#. module: btek_report_accounting
+#: selection:so.chi.tiet.congno,result_selection:0
+msgid "Receivable and Payable Accounts"
+msgstr "Tài khoản phải thu và phải trả"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_nguoinhannguoinop
+msgid "Receiver/payers"
+msgstr "Người nhận/nộp"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_res_company_id
+msgid "Res company id"
+msgstr "Res company id"
+
+#. module: btek_report_accounting
+#: model:ir.actions.report.xml,name:btek_report_accounting.so_chi_tiet_congno_report
+msgid "Sochitietcongno"
+msgstr "Sochitietcongno"
+
+#. module: btek_report_accounting
+#: model:ir.actions.report.xml,name:btek_report_accounting.so_chi_tiet_taikhoan_report
+msgid "Sochitiettaikhoan"
+msgstr "Sochitiettaikhoan"
+
+#. module: btek_report_accounting
+#: model:ir.actions.report.xml,name:btek_report_accounting.so_quy_s07_report
+msgid "SoquyS07"
+msgstr "SoquyS07"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_codauky
+msgid "Start credit"
+msgstr "Dư có đầu kỳ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_start_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_start_date
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_start_date
+msgid "Start date"
+msgstr "Ngày Bắt đầu"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_nodauky
+msgid "Start debit"
+msgstr "Dư nợ đầu kỳ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_quy_s07_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.so_chi_tiet_congno_report_act_anhtt
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+msgid "SỔ CHI TIẾT CÔNG NỢ"
+msgstr "SỔ CHI TIẾT CÔNG NỢ"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.so_chi_tiet_tk_report_action
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "SỔ CHI TIẾT TÀI KHOẢN"
+msgstr "SỔ CHI TIẾT TÀI KHOẢN"
+
+#. module: btek_report_accounting
+#: model:ir.ui.menu,name:btek_report_accounting.menu_so_chi_tiet_congno_report
+msgid "Sổ chi tiết công nợ"
+msgstr "Sổ chi tiết công nợ"
+
+#. module: btek_report_accounting
+#: model:ir.ui.menu,name:btek_report_accounting.menu_so_chi_tiet_report
+msgid "Sổ chi tiết tài khoản"
+msgstr "Sổ chi tiết tài khoản"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.so_quy_s07_report_act_anhtt_tiengui
+#: model:ir.ui.menu,name:btek_report_accounting.menu_so_quy_s07_report_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+msgid "Sổ ngân hàng"
+msgstr "Sổ ngân hàng"
+
+#. module: btek_report_accounting
+#: model:ir.actions.act_window,name:btek_report_accounting.so_quy_s07_report_act_anhtt_tienmat
+#: model:ir.ui.menu,name:btek_report_accounting.menu_so_quy_s07_report_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+msgid "Sổ quỹ tiền mặt"
+msgstr "Sổ quỹ tiền mặt"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bang_can_doi_phat_sinh_type_entries
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_chi_tiet_congno_type_entries
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_type_entries
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_so_quy_s07_type_report
+msgid "Type report"
+msgstr "Type report"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Tài khoản"
+msgstr "Tài khoản"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+msgid "Từ ngày"
+msgstr "Từ ngày"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "View Detail"
+msgstr "Xem chi tiết"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_ngaychungtu
+msgid "Voucher date"
+msgstr "Ngày chứng từ"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_account_move_line_so_cttk_name
+msgid "Voucher number"
+msgstr "Số chứng từ"
+
+#. module: btek_report_accounting
+#: selection:bang.can.doi.phat.sinh,display_account:0
+msgid "With balance is not equal to 0"
+msgstr "Với số dư khác 0"
+
+#. module: btek_report_accounting
+#: selection:bang.can.doi.phat.sinh,display_account:0
+msgid "With movements"
+msgstr "Có phát sinh"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_res_partner_so_chi_tiet_cong_no_wizard_id
+msgid "Wizard id"
+msgstr "Wizard id"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_account_move_line_so_cttk
+msgid "account.move.line.so.cttk"
+msgstr "account.move.line.so.cttk"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_account_move_line_so_quy_s07
+msgid "account.move.line.so.quy.s07"
+msgstr "account.move.line.so.quy.s07"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_bang_can_doi_phat_sinh
+msgid "bang.can.doi.phat.sinh"
+msgstr "bang.can.doi.phat.sinh"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_end_date
+msgid "end date"
+msgstr "Ngày kết thúc"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_res_partner_so_chi_tiet_cong_no
+msgid "res.partner.so.chi.tiet.cong.no"
+msgstr "res.partner.so.chi.tiet.cong.no"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_so_chi_tiet_congno
+msgid "so.chi.tiet.congno"
+msgstr "so.chi.tiet.congno"
+
+#. module: btek_report_accounting
+#: model:ir.model,name:btek_report_accounting.model_so_quy_s07
+msgid "so.quy.s07"
+msgstr "so.quy.s07"
+
+#. module: btek_report_accounting
+#: model:ir.model.fields,field_description:btek_report_accounting.field_bc_so_cttk_start_date
+msgid "start date"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_report_accounting
+#: selection:so.quy.s07,type_report:0
+msgid "tiengui"
+msgstr "tiengui"
+
+#. module: btek_report_accounting
+#: selection:so.quy.s07,type_report:0
+msgid "tienmat"
+msgstr "tienmat"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_bang_cdps_form
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tiengui
+#: model:ir.ui.view,arch_db:btek_report_accounting.btek_so_quy_report_form_tienmat
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_congno_report_form
+msgid "Đến ngày"
+msgstr "Đến ngày"
+
+#. module: btek_report_accounting
+#: model:ir.ui.view,arch_db:btek_report_accounting.so_chi_tiet_tk_report_form
+msgid "Đối tượng"
+msgstr "Đối tượng"
+

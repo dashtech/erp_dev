@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="quotation_request_form"
+            model="ir.ui.view">
+        <field name="name">quotation_request_form</field>
+        <field name="model">quotation.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="to_contacted" string="Contact" type="object"
+                            states="draft,seen" class="oe_highlight"/>
+                    <button name="draft_to_replied" string="Replied" type="object"
+                            states="contacted" class="oe_highlight"/>
+                    <button name="replied_to_done" string="Done" type="object"
+                            states="replied" class="oe_highlight"/>
+                    <button name="to_cancel" string="Cancel" type="object"
+                            states="draft,seen,replied"/>
+
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <group>
+                    <group>
+                        <field name="name" required="0"/>
+                        <field name="service_provider_id"/>
+                        <field name="member_id"/>
+                        <field name="mobile_phone"/>
+                        <field name="vehicle_id"
+                               domain="[('member_id', '=', member_id)]"/>
+                        <field name="vehicle_type"/>
+                        <field name="type"/>
+                    </group>
+                    <group>
+                        <field name="request"/>
+                        <field name="replied_datetime"/>
+                        <field name="replied_user_id"/>
+                        <field name="done_datetime"/>
+                        <field name="cancel_datetime"/>
+                        <field name="sale_order_id"/>
+                        <field name="notif"/>
+                        <field name="reply_content"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Quotation detail">
+                        <field name="quotation_detail">
+                            <tree editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="name" required="1"/>
+                                <field name="price" required="1"/>
+                                <field name="ref_id" required="0"/>
+                                <field name="cus_confirm" widget="checkbox"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Images">
+                        <field name="image_ids"
+                               widget="many2many_binary"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="quotation_request_tree"
+            model="ir.ui.view">
+        <field name="name">rquotation_request_tree</field>
+        <field name="model">quotation.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="service_provider_id"/>
+                <field name="member_id"/>
+                <field name="mobile_phone"/>
+                <field name="vehicle_id"/>
+                <field name="vehicle_type"/>
+                <field name="request"/>
+                <field name="replied_datetime"/>
+                <field name="replied_user_id"/>
+                <field name="done_datetime"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_quotation_request"
+            model="ir.actions.act_window">
+        <field name="name">Quotation request</field>
+        <field name="res_model">quotation.request</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="root_menu_quotation_request"
+              name="Quotation request"
+              parent="root_menu_social"
+              sequence="30"/>
+
+    <menuitem id="menu_action_quotation_request"
+              parent="root_menu_quotation_request"
+              action="action_quotation_request"
+              sequence="10"/>
+</odoo>
+

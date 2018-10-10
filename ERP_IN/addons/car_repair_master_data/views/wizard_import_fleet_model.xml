@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="wizard_import_fleet_model_form_view">
+        <field name="name">Import fleet model</field>
+        <field name="model">wizard.import.fleet.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="template_file_url" widget="url"/>
+                        <field name="datas" filename="datas_fname"/>
+                        <field name="datas_fname" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="import_fleet_model" type="object"
+                            string="Import" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_import_fleet_model_action" model="ir.actions.act_window">
+        <field name="name">Import fleet model</field>
+        <field name="res_model">wizard.import.fleet.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_name': 'import fleet model'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="fleet_import_master_data" parent="fleet.menu_root"-->
+              <!--sequence="100" name="Import master data"/>-->
+
+    <!--<menuitem id="wizard_import_fleet_model_menu"-->
+              <!--action="wizard_import_fleet_model_action"-->
+              <!--parent="fleet_import_master_data"-->
+              <!--sequence="200"/>-->
+    <record model="ir.ui.view" id="wizard_import_fleet_model_message_form_view">
+        <field name="name">Import fleet model message</field>
+        <field name="model">wizard.import.fleet.model</field>
+        <field name="priority">1999</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="message_success"/>
+                </group>
+                <footer>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_import_fleet_model_message_form_view_action"
+            model="ir.actions.act_window">
+        <field name="name">Import Fleet Vehicle Model</field>
+        <field name="res_model">wizard.import.fleet.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_name': 'Import Fleet Vehicle Model','form_view_ref':'car_repair_master_data.wizard_import_fleet_model_message_form_view'}</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

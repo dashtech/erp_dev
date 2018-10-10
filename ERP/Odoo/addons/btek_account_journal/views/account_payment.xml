@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="btek_view_account_payment_inherit_form" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/button[1]" position="after">
+                    <button name="%(btek_account_payment.account_payment_btek)d" string="Print" type="action" class="oe_highlight"/>
+                </xpath>
+                 <xpath expr="//group[1]/group[1]" position="replace">
+                    <group>
+                        <field name="payment_type" widget="radio" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="partner_type" widget="selection" string="" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="partner_id" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                        <field name="journal_id" domain="[('type','=','cash'),('x_type','=','receipt')]"
+                               options="{'no_create': True, 'no_create_edit': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="hide_payment_method" invisible="1"/>
+                        <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="payment_method_code" invisible="1"/>
+                        <field name="number"/>
+                        <field name="recipient_pay"/>
+                        <field name="x_name"/>
+                        <label for="amount"/>
+                        <div name="amount_div" class="o_row">
+                            <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </div>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--###################-->
+        <!--Khách hàng thanh toán-->
+        <!--####################-->
+        <record id="btek_view_account_payment_form_kh_thanhtoan_tienmat" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <header>
+                        <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="cancel" attrs="{'invisible': [('state', '=', 'draft')]}" string="Cancel" type="object"/>
+                        <button name="%(btek_account_payment.account_payment_btek)d" string="Print Receipts" type="action"/>
+                        <field name="state" widget="statusbar" statusbar_visible="posted,reconciled"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="button_journal_entries"
+                                    string="Journal Items" type="object"
+                                    groups="account.group_account_manager"
+                                    attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                            <field name="move_line_ids" invisible="1"/>
+                            <button class="oe_stat_button" name="button_invoices"
+                                    string="Invoices" type="object"
+                                    attrs="{'invisible':[('has_invoices','=',False)]}" icon="fa-bars"/>
+                            <field name="has_invoices" invisible="1"/>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_type" widget="selection" string="" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_id" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                                <field name="journal_id" domain="[('type','=','cash')]"
+                                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="payment_method_code" invisible="1"/>
+                                <field name="number"/>
+                                <field name="recipient_pay"/>
+                                <field name="x_name"/>
+                                <label for="amount"/>
+                                <div name="amount_div" class="o_row">
+                                    <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="communication" attrs="{'invisible': [('state', '!=', 'draft'), ('communication', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="btek_view_account_payment_tree_kh_thanhtoan_tienmat" model="ir.ui.view">
+            <field name="name">account.payment.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'" decoration-muted="state=='reconciled'" edit="false">
+                    <field name="payment_date"/>
+                    <field name="name" string="Number invoice"/>
+                    <field name="journal_id" string="Journal"/>
+                    <field name="payment_method_id" invisible="1"/>
+                    <field name="partner_id" string="Customer"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state" string="Status"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_action_account_payments_kh_thanhtoan_tienmat" model="ir.actions.act_window">
+            <field name="name">Khách hàng thanh toán</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{'default_payment_type': 'inbound', 'default_partner_type': 'customer','kh_tienmat': True, 'cash': True}</field>
+            <field name="domain">[('partner_type','=','customer'),('journal_id.type','=','cash'),('journal_id.x_type','=','receipt')]</field>
+            <field name="view_id" ref="btek_view_account_payment_tree_kh_thanhtoan_tienmat"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send, collect or transfer money).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_kh_thanhtoan_tienmat_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="btek_action_account_payments_kh_thanhtoan_tienmat"/>
+            <field name="view_id" ref="btek_view_account_payment_tree_kh_thanhtoan_tienmat"/>
+        </record>
+        <record id="action_kh_thanhtoan_tienmat_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_view_account_payment_form_kh_thanhtoan_tienmat"/>
+            <field name="act_window_id" ref="btek_action_account_payments_kh_thanhtoan_tienmat"/>
+        </record>
+
+        <menuitem id="menu_action_kh_thanhtoan_tienmat_form" name="Khách hàng thanh toán"
+            action="btek_action_account_payments_kh_thanhtoan_tienmat"
+            parent="master_tienmat_accounting"
+            sequence="10"/>
+
+
+        <!--###################-->
+        <!--Thanh toán nhà cung cấp-->
+        <!--####################-->
+        <record id="btek_view_account_payment_form_thanhtoan_ncc_tienmat" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <header>
+                        <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="cancel" attrs="{'invisible': [('state', '=', 'draft')]}" string="Cancel" type="object"/>
+                        <button name="%(btek_account_payment.account_payment_btek)d" string="Print Payment" type="action"/>
+                        <field name="state" widget="statusbar" statusbar_visible="posted,reconciled"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="button_journal_entries"
+                                    string="Journal Items" type="object"
+                                    groups="account.group_account_manager"
+                                    attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                            <field name="move_line_ids" invisible="1"/>
+                            <button class="oe_stat_button" name="button_invoices"
+                                    string="Invoices" type="object"
+                                    attrs="{'invisible':[('has_invoices','=',False)]}" icon="fa-bars"/>
+                            <field name="has_invoices" invisible="1"/>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_type" widget="selection" string="" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_id" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                                <field name="journal_id" domain="[('type','=','cash'),('x_type','=','payment')]"
+                                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="payment_method_code" invisible="1"/>
+                                <field name="number"/>
+                                <field name="recipient_pay"/>
+                                <field name="x_name"/>
+                                <label for="amount"/>
+                                <div name="amount_div" class="o_row">
+                                    <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="communication" attrs="{'invisible': [('state', '!=', 'draft'), ('communication', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="btek_view_account_payment_tree_thanhtoan_ncc_tienmat" model="ir.ui.view">
+            <field name="name">account.payment.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'" decoration-muted="state=='reconciled'" edit="false">
+                    <field name="payment_date"/>
+                    <field name="name" string="Number invoice"/>
+                    <field name="journal_id" string="Journal"/>
+                    <field name="payment_method_id" invisible="1"/>
+                    <field name="partner_id" string="Vendor"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state" string="Status"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_action_account_payments_thanhtoan_ncc_tienmat" model="ir.actions.act_window">
+            <field name="name">Thanh toán nhà cung cấp</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{'default_payment_type': 'outbound', 'default_partner_type': 'supplier', 'ncc_tienmat': True, 'cash': True}</field>
+            <field name="domain">[('partner_type','=','supplier'),('journal_id.type','=','cash'),('journal_id.x_type','=','payment')]</field>
+            <field name="view_id" ref="btek_view_account_payment_tree_thanhtoan_ncc_tienmat"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send, collect or transfer money).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_thanhtoan_ncc_tienmat_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="btek_action_account_payments_thanhtoan_ncc_tienmat"/>
+            <field name="view_id" ref="btek_view_account_payment_tree_thanhtoan_ncc_tienmat"/>
+        </record>
+        <record id="action_thanhtoan_ncc_tienmat_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_view_account_payment_form_thanhtoan_ncc_tienmat"/>
+            <field name="act_window_id" ref="btek_action_account_payments_thanhtoan_ncc_tienmat"/>
+        </record>
+
+        <menuitem id="menu_btek_view_account_payment_form_thanhtoan_ncc_tienmat" name="Thanh toán nhà cung cấp"
+            action="btek_action_account_payments_thanhtoan_ncc_tienmat"
+            parent="master_tienmat_accounting"
+            sequence="11"/>
+
+
+
+
+
+        <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+
+        <!--###################-->
+        <!--Khách hàng thanh toánh-->
+        <!--####################-->
+        <record id="btek_view_account_payment_form_kh_thanhtoan_tiengui" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <header>
+                        <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="cancel" attrs="{'invisible': [('state', '=', 'draft')]}" string="Cancel" type="object"/>
+                        <button name="%(btek_account_payment.account_payment_btek)d" string="Print Receipts" type="action"/>
+                        <field name="state" widget="statusbar" statusbar_visible="posted,reconciled"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="button_journal_entries"
+                                    string="Journal Items" type="object"
+                                    groups="account.group_account_manager"
+                                    attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                            <field name="move_line_ids" invisible="1"/>
+                            <button class="oe_stat_button" name="button_invoices"
+                                    string="Invoices" type="object"
+                                    attrs="{'invisible':[('has_invoices','=',False)]}" icon="fa-bars"/>
+                            <field name="has_invoices" invisible="1"/>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_type" widget="selection" string="" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_id" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                                <field name="journal_id" domain="[('type','=','bank'),('x_type','=','receipt')]"
+                                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="payment_method_code" invisible="1"/>
+                                <field name="number"/>
+                                <field name="recipient_pay"/>
+                                <field name="x_name"/>
+                                <label for="amount"/>
+                                <div name="amount_div" class="o_row">
+                                    <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="communication" attrs="{'invisible': [('state', '!=', 'draft'), ('communication', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="btek_view_account_payment_tree_kh_thanhtoan_tiengui" model="ir.ui.view">
+            <field name="name">account.payment.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'" decoration-muted="state=='reconciled'" edit="false">
+                    <field name="payment_date"/>
+                    <field name="name" string="Number invoice"/>
+                    <field name="journal_id" string="Journal"/>
+                    <field name="payment_method_id" invisible="1"/>
+                    <field name="partner_id" string="Customer"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state" string="Status"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_action_account_payments_kh_thanhtoan_tiengui" model="ir.actions.act_window">
+            <field name="name">Khách hàng thanh toán</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{'default_payment_type': 'inbound', 'default_partner_type': 'customer', 'kh_tienmat': True, 'bank': True}</field>
+            <field name="domain">[('partner_type','=','customer'),('journal_id.type','=','bank'),('journal_id.x_type','=','receipt')]</field>
+            <field name="view_id" ref="btek_view_account_payment_tree_kh_thanhtoan_tiengui"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send, collect or transfer money).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_kh_thanhtoan_tiengui_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="btek_action_account_payments_kh_thanhtoan_tiengui"/>
+            <field name="view_id" ref="btek_view_account_payment_tree_kh_thanhtoan_tiengui"/>
+        </record>
+        <record id="action_kh_thanhtoan_tiengui_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_view_account_payment_form_kh_thanhtoan_tiengui"/>
+            <field name="act_window_id" ref="btek_action_account_payments_kh_thanhtoan_tiengui"/>
+        </record>
+
+        <menuitem id="menu_btek_view_account_payment_form_kh_thanhtoan_tiengui" name="Khách hàng thanh toán"
+            action="btek_action_account_payments_kh_thanhtoan_tiengui"
+            parent="master_tiengui_accounting"
+            sequence="10"/>
+
+
+
+        <!--###################-->
+        <!--Thanh toán NCC-->
+        <!--####################-->
+        <record id="btek_view_account_payment_form_thanhtoan_ncc_tiengui" model="ir.ui.view">
+            <field name="name">account.payment.form</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment" version="7">
+                    <header>
+                        <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                        <button name="cancel" attrs="{'invisible': [('state', '=', 'draft')]}" string="Cancel" type="object"/>
+                        <button name="%(btek_account_payment.account_payment_btek)d" string="Print Payment" type="action"/>
+                        <field name="state" widget="statusbar" statusbar_visible="posted,reconciled"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="button_journal_entries"
+                                    string="Journal Items" type="object"
+                                    groups="account.group_account_manager"
+                                    attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                            <field name="move_line_ids" invisible="1"/>
+                            <button class="oe_stat_button" name="button_invoices"
+                                    string="Invoices" type="object"
+                                    attrs="{'invisible':[('has_invoices','=',False)]}" icon="fa-bars"/>
+                            <field name="has_invoices" invisible="1"/>
+                        </div>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="payment_type" widget="radio" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_type" widget="selection" string="" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="partner_id" attrs="{'required': [('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))], 'readonly': [('state', '!=', 'draft')]}" context="{'default_is_company': True, 'default_supplier': payment_type == 'outbound', 'default_customer': payment_type == 'inbound'}"/>
+                                <field name="journal_id" domain="[('type','=','bank'),('x_type','=','payment')]"
+                                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="destination_journal_id" widget="selection" attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="hide_payment_method" invisible="1"/>
+                                <field name="payment_method_id" string=" " widget="radio" attrs="{'invisible': [('hide_payment_method', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="payment_method_code" invisible="1"/>
+                                <field name="number"/>
+                                <field name="recipient_pay"/>
+                                <field name="x_name"/>
+                                <label for="amount"/>
+                                <div name="amount_div" class="o_row">
+                                    <field name="amount" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    <field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="payment_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="communication" attrs="{'invisible': [('state', '!=', 'draft'), ('communication', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="btek_view_account_payment_tree_thanhtoan_ncc_tiengui" model="ir.ui.view">
+            <field name="name">account.payment.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'" decoration-muted="state=='reconciled'" edit="false">
+                    <field name="payment_date"/>
+                    <field name="name" string="Number invoice"/>
+                    <field name="journal_id" string="Journal"/>
+                    <field name="payment_method_id" invisible="1"/>
+                    <field name="partner_id" string="Vendor"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="state" string="Status"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="partner_type" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="btek_action_account_payments_thanhtoan_ncc_tiengui" model="ir.actions.act_window">
+            <field name="name">Thanh toán NCC</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{'default_payment_type': 'outbound', 'default_partner_type': 'supplier', 'ncc_tienmat': True, 'bank': True}</field>
+            <field name="domain">[('partner_type','=','supplier'),('journal_id.type','=','bank'),('journal_id.x_type','=','payment')]</field>
+            <field name="view_id" ref="btek_view_account_payment_tree_thanhtoan_ncc_tiengui"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send, collect or transfer money).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_thanhtoan_ncc_tiengui_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="act_window_id" ref="btek_action_account_payments_thanhtoan_ncc_tiengui"/>
+            <field name="view_id" ref="btek_view_account_payment_tree_thanhtoan_ncc_tiengui"/>
+        </record>
+        <record id="action_thanhtoan_ncc_tiengui_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="btek_view_account_payment_form_thanhtoan_ncc_tiengui"/>
+            <field name="act_window_id" ref="btek_action_account_payments_thanhtoan_ncc_tiengui"/>
+        </record>
+
+        <menuitem id="menu_btek_view_account_payment_form_thanhtoan_ncc_tiengui" name="Thanh toán nhà cung cấp"
+            action="btek_action_account_payments_thanhtoan_ncc_tiengui"
+            parent="master_tiengui_accounting"
+            sequence="11"/>
+
+
+        <menuitem action="account.action_account_payments" id="account.menu_action_account_payments_receivable" parent="account.menu_finance_receivables" sequence="20"  groups="base.group_no_one"/>
+        <menuitem action="account.action_account_payments_payable" id="account.menu_action_account_payments_payable" parent="account.menu_finance_payables" sequence="20"  groups="base.group_no_one"/>
+
+        <!--<record id="action_vendor_payment_cash_tree" model="ir.actions.act_window.view">-->
+            <!--<field eval="1" name="sequence"/>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="act_window_id" ref="btek_action_account_payments_thanhtoan_ncc_tienmat"/>-->
+            <!--<field name="view_id" ref="btek_view_account_payment_tree_thanhtoan_ncc_tienmat"/>-->
+        <!--</record>-->
+    </data>
+</odoo>

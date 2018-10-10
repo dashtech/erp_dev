@@ -1,0 +1,74 @@
+.o_kanban_view.o_kanban_dashboard.o_fleet_repair_kanban {
+
+    .o_kanban_record {
+        .o-flex-display();
+        position: relative;
+    }
+
+    .o_fleet_repair_kanban_main {
+        .o-flex(0, 0, auto);
+        padding: @odoo-horizontal-padding;
+        width: 100%; // for IE11 overflow issue
+
+        // give space for manage section at the bottom
+        margin-bottom: @odoo-horizontal-padding/2 + 19px;
+
+        .o_kanban_card_content {
+            font-size: 12px;
+            .o_primary {
+                font-size: larger;
+            }
+        }
+
+        .o_fleet_repair_kanban_manage {
+            .o_left {
+                .o-position-absolute(@bottom: 0, @left: 0);
+                padding: @odoo-horizontal-padding/2 @odoo-horizontal-padding;
+            }
+            .o_right {
+                .o-position-absolute(@bottom: 0, @right: 30%);
+                padding: @odoo-horizontal-padding/2 @odoo-horizontal-padding;
+            }
+            .o_kanban_manage_toggle_button:not(:hover) {
+                color: @odoo-main-text-color;
+            }
+        }
+        .o_kanban_card_manage_pane .o_kanban_card_manage_title {
+            margin: 0;
+        }
+    }
+
+    .o_dashboard_star {
+            font-size: 16px;
+
+            &.fa-star-o {
+                color: @odoo-main-color-muted;
+                &:hover {
+                    color: gold;
+                }
+            }
+            &.fa-star {
+                color: gold;
+            }
+        }
+}
+
+.oe_fleet_kanban_status {
+    display: inline-block;
+    height: 29px;
+    width: 27px;
+    border-radius: 0px;
+
+    background-color: @odoo-brand-secondary;
+
+    &.oe_kanban_status_done {
+        //background-color: @brand-success;
+        background-image: url("/car_repair_industry/static/src/image/ic_done.svg");
+    }
+    &.oe_kanban_status_working {
+        background-image: url("/car_repair_industry/static/src/image/Icon.png");
+    }
+    &.oe_kanban_status_pending {
+        background-image: url("/car_repair_industry/static/src/image/Icon.png");
+    }
+}

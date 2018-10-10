@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_related_person,access_person,model_btek_related_person,hr.group_hr_manager,1,1,1,1
+access_related_person_hr_user,access_person_hr_user,model_btek_related_person,hr.group_hr_user,1,1,1,1
+access_related_person_user,access_person_user,model_btek_related_person,base.group_user,1,1,0,0
+
+access_related_attachment,access_related_attachment,model_btek_related_person_attachment,hr.group_hr_manager,1,1,1,1
+access_related_attachment_hr_user,access_related_attachment_hr_user,model_btek_related_person_attachment,hr.group_hr_user,1,1,1,1
+access_related_attachment_user,access_related_attachment_user,model_btek_related_person_attachment,base.group_user,1,1,1,1
+
+access_related_child,access_child,model_btek_related_child,hr.group_hr_manager,1,1,1,1
+access_related_child_hr,access_child_hr,model_btek_related_child,hr.group_hr_user,1,1,1,1
+access_related_child_user,access_child_user,model_btek_related_child,base.group_user,1,1,0,0
+
+access_contract_employee,access_contract_employee,model_hr_contract,base.group_user,1,0,0,0
+access_contract_config,access_contract_config,model_hr_contract_config,hr.group_hr_manager,1,1,1,1

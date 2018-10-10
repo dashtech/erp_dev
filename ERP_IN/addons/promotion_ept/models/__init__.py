@@ -1,0 +1,5 @@
+import promotion
+import sale_order
+import promotion_method_ruledbased
+import sale_config_setting
+import product

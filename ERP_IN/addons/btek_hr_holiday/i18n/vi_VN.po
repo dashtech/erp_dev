@@ -1,0 +1,924 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_hr_holiday
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180918\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-01 12:46+0000\n"
+"PO-Revision-Date: 2018-10-01 12:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_holidays_status_extend.py:24
+#, python-format
+msgid "%g remaining out of %g"
+msgstr "còn lại %g trong số %g"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Acc.Number</strong>"
+msgstr "<strong>Số TK</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Address</strong>"
+msgstr "<strong>Địa chỉ</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Authorized signature</strong>"
+msgstr "<strong>Chữ ký Người có thẩm quyền</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Bank</strong>"
+msgstr "<strong>Ngân hàng</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Date From</strong>"
+msgstr "<strong>Từ ngày</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Date To</strong>"
+msgstr "<strong>Đến ngày</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Email</strong>"
+msgstr "<strong>Email</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Identification No</strong>"
+msgstr "<strong>Số CMND</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+msgid "<strong>Job Posision</strong>"
+msgstr "<strong>Chức vụ</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Job Position</strong>"
+msgstr "<strong>Chức vụ</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Name</strong>"
+msgstr "<strong>Tên</strong>"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "<strong>Reference</strong>"
+msgstr "<strong>Tham chiếu</strong>"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,name:btek_hr_holiday.hr_public_holiday_day
+msgid "ANNUAL"
+msgstr "ANNUAL"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_account
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: btek_hr_holiday
+#: selection:config.payroll.day,state:0
+#: model:ir.ui.view,arch_db:btek_hr_holiday.config_payroll_day_form
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_amount
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "Amount"
+msgstr "Giá trị"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_amount_total
+msgid "Amount total"
+msgstr "Giá trị"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:159
+#, python-format
+msgid "Annual"
+msgstr "Nghỉ lễ"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "April"
+msgstr "Tháng 4"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "August"
+msgstr "Tháng 8"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.hr_bsc_department_action
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_hr_bsc_department
+msgid "BSC by Department"
+msgstr "BSC theo phòng ban"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_bsc_readonly
+msgid "BSC rate"
+msgstr "Chỉ số BSC"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_bsc_value
+msgid "Bsc value"
+msgstr "Giá trị BSC"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_bsc_department.py:58
+#: code:addons/btek_hr_holiday/models/hr_kpi_employee.py:69
+#, python-format
+msgid "Can not create because record existed"
+msgstr "Không thể tạo vì bản ghi đã tồn tại"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:443
+#, python-format
+msgid "Can not find your company configure payroll day"
+msgstr "Không tìm thấy cấu hình ngày tính lương của công ty"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_bsc_department.py:86
+#: code:addons/btek_hr_holiday/models/hr_kpi_employee.py:100
+#, python-format
+msgid "Can not save because record existed"
+msgstr "Không thể lưu vì bản ghi đã tồn tại"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.open_payment_insurance_form
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_insurance_form
+#: selection:payment.insurance,state:0
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_run_check_email
+msgid "Check email"
+msgstr "Check email"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_run_check_payment
+msgid "Check payment"
+msgstr "Đánh dấu tất cả"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_run_check_print
+msgid "Check print"
+msgstr "Check print"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "Code"
+msgstr "Mã"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_company_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_company_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_company_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_employees_company_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_run_company_id
+msgid "Company id"
+msgstr "Company id"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_config_id
+msgid "Config id"
+msgstr "Cấu hình"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_config_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_config_id
+msgid "Configure"
+msgstr "Cấu hình"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_name
+msgid "Configure Name"
+msgstr "Tên cấu hình"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.config_payroll_day_action
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_config_payroll_day
+msgid "Configure Payroll Day"
+msgstr "Cấu hình ngày tính lương"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_create_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_create_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_date_from
+msgid "Date from"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:449
+#, python-format
+msgid "Date from/date to in Period not match with your company configure"
+msgstr "Ngày bắt đầu/ngày kết thúc trong kỳ không khớp với cấu hình ngày tính lương"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:100
+#, python-format
+msgid "Date from/date to in Period not match with your company configure."
+msgstr "Ngày bắt đầu/ngày kết thúc trong kỳ không khớp với cấu hình ngày tính lương."
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:98
+#, python-format
+msgid "Date invaild!"
+msgstr "Ngày không hợp lệ!"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_date_payment
+msgid "Date payment"
+msgstr "Ngày thanh toán"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_date_to
+msgid "Date to"
+msgstr "Ngày kết thúc"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.config_payroll_day_form
+msgid "Date to Payroll"
+msgstr "Ngày tính lương"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/config_payroll_day.py:24
+#: code:addons/btek_hr_holiday/models/config_payroll_day.py:32
+#, python-format
+msgid "Day monthly payment must in range from 1 to 31"
+msgstr "Ngày thanh tóan hằng tháng phải trong khoảng từ 1 đến 31"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_day_monthly_payment
+msgid "Day of monthly payment"
+msgstr "Ngày thanh toán hằng tháng"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_day_to_payroll_ids
+msgid "Day to payroll ids"
+msgstr "Ngày tính lương"
+
+#. module: btek_hr_holiday
+#: selection:config.payroll.day,state:0
+#: model:ir.ui.view,arch_db:btek_hr_holiday.config_payroll_day_form
+msgid "Deactive"
+msgstr "Không hiệu lực"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "December"
+msgstr "Tháng 12"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_department_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_descript
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_descript
+msgid "Descript"
+msgstr "Mô tả"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_desc
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_ids
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+msgid "Details by Salary Rule Category"
+msgstr "Chi tiết theo nhóm quy tắc lương"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_display_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_report_btek_hr_holiday_report_payslipdetails_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_hr_holiday
+#: selection:payment.insurance,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: btek_hr_holiday
+#: selection:payment.insurance,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_employee_id
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_employee_tag
+msgid "Employee Tag"
+msgstr "Từ khóa nhân viên"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_employee_ids
+msgid "Employee ids"
+msgstr "Employee ids"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_end_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_end_date
+msgid "End date"
+msgstr "Ngày Kết thúc"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_end_date_readonly
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_end_date_readonly
+msgid "End date readonly"
+msgstr "End date readonly"
+
+#. module: btek_hr_holiday
+#: selection:payment.insurance,month:0
+msgid "February"
+msgstr "February"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+msgid "February "
+msgstr "Tháng 2 "
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.generate_payslips_inherit
+msgid "Generate Payslips"
+msgstr "Tạo phiếu lương"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "Tạo phiếu lương cho tất cả nhân viên được chọn"
+
+#. module: btek_hr_holiday
+#: model:ir.module.category,name:btek_hr_holiday.module_category_internal_system
+msgid "HR Internal"
+msgstr "HR Internal"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_report_btek_hr_holiday_report_payslipdetails_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_hr_holiday
+#: model:res.groups,name:btek_hr_holiday.group_hr_user_internal
+msgid "Internal"
+msgstr "Internal"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "January"
+msgstr "Tháng 1"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "July"
+msgstr "Tháng 7"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "June"
+msgstr "Tháng 6"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.hr_kpi_employee_action
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_hr_kpi_employee
+msgid "KPI Employee"
+msgstr "KPI Nhân viên"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_kpi
+msgid "Kpi"
+msgstr "KPI"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_kpi_id
+msgid "Kpi id"
+msgstr "Kpi id"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_kpi_readonly
+msgid "Kpi rate"
+msgstr "Chỉ số KPI"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,name:btek_hr_holiday.hr_legal_day
+msgid "LEGAL"
+msgstr "LEGAL"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail___last_update
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_report_btek_hr_holiday_report_payslipdetails___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_write_uid
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_write_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_holidays_status
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_hr_holiday_status
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_holidays_status_desc
+msgid "Leave Type"
+msgstr "Loại nghỉ"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_insurance_form
+msgid "Load Insurance"
+msgstr "Nhập bảo hiểm"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "March"
+msgstr "Tháng 3"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "May"
+msgstr "Tháng 5"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_calendar_event_type
+msgid "Meeting Type"
+msgstr "Kiểu cuộc gặp"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_month
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_month
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_month
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_date_to_payroll_name
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_name
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payment_insurance.py:63
+#: code:addons/btek_hr_holiday/models/hr_payment_insurance.py:98
+#, python-format
+msgid "Need setup account first!"
+msgstr "Cần cài đặt tài khoản trước!"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_net_wage
+msgid "Net wage"
+msgstr "Net wage"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,desc:btek_hr_holiday.hr_unpaid_day
+msgid "Nghỉ không lương"
+msgstr "Nghỉ không lương"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,desc:btek_hr_holiday.hr_public_holiday_day
+msgid "Nghỉ lễ"
+msgstr "Nghỉ lễ"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,desc:btek_hr_holiday.hr_legal_day
+msgid "Nghỉ phép"
+msgstr "Nghỉ phép"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,desc:btek_hr_holiday.hr_sick_day
+msgid "Nghỉ ốm"
+msgstr "Nghỉ ốm"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:216
+#, python-format
+msgid "Normal Working Days paid at 100%"
+msgstr "Ngày công quy định"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "November"
+msgstr "Tháng 11"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_payslip_form
+msgid "OR"
+msgstr "OR"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "October"
+msgstr "Tháng 10"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.payment_payslip_action
+#: model:ir.ui.view,arch_db:btek_hr_holiday.generate_payslips_inherit
+msgid "Options"
+msgstr "Tùy chọn"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_insurance_form
+msgid "Pay Insurance"
+msgstr "Thanh toán lương"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_payslip
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "Pay Slip"
+msgstr "Phiếu lương"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_payment
+#: model:ir.ui.view,arch_db:btek_hr_holiday.open_payment_insurance_form
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_payslip_form
+msgid "Payment"
+msgstr "Thanh toán"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.payment_insurance_action
+#: model:ir.ui.menu,name:btek_hr_holiday.payment_insurance_menu
+msgid "Payment Insurance"
+msgstr "Thanh toán bảo hiểm"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_payment_id
+msgid "Payment id"
+msgstr "Thanh toán"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.open_payment_insurance_action
+msgid "Paymnet Insurance"
+msgstr "Thanh toán bảo hiểm"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:622
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:662
+#: model:ir.actions.report.xml,name:btek_hr_holiday.action_report_payslip
+#: model:ir.actions.report.xml,name:btek_hr_holiday.bave_report_payslip
+#: model:ir.actions.report.xml,name:btek_hr_holiday.report_payslip_excel
+#, python-format
+msgid "Payslip"
+msgstr "Phiếu lương"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.report.xml,name:btek_hr_holiday.bave_report_payslip_detail
+msgid "Payslip Detail"
+msgstr "Phiếu lương chi tiết"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_payslip_run
+msgid "Payslip Run"
+msgstr "Payslip Run"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.hr_kpi_employee_form
+msgid "Period"
+msgstr "Chu kỳ"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_print_
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_payslip_form
+msgid "Print"
+msgstr "In"
+
+#. module: btek_hr_holiday
+#: model:ir.module.category,description:btek_hr_holiday.module_category_internal_system
+msgid "Provide role access HR Module"
+msgstr "Provide role access HR Module"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_public_holiday_calendar
+msgid "Public Holiday Calendar"
+msgstr "Public Holiday Calendar"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_public_holiday_settings
+msgid "Public Holiday Setting"
+msgstr "Cài đặt nghỉ lễ"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.hr_public_holiday_action
+#: model:ir.ui.menu,name:btek_hr_holiday.menu_public_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.hr_public_holiday_from_view
+#: model:ir.ui.view,arch_db:btek_hr_holiday.view_public_holiday_calendar
+msgid "Public Holidays"
+msgstr "Nghỉ lễ"
+
+#. module: btek_hr_holiday
+#: model:ir.actions.act_window,name:btek_hr_holiday.public_holiday_action
+msgid "Public Holidays Calendar"
+msgstr "Public Holidays Calendar"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_line_public_holiday_id
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_public_holiday_id
+msgid "Public holiday id"
+msgstr "Public holiday id"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_public_holiday_line
+msgid "Public holiday line"
+msgstr "Public holiday line"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_line_rate
+msgid "Rate"
+msgstr "Chỉ số"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_kpi_employee.py:75
+#: code:addons/btek_hr_holiday/models/hr_kpi_employee.py:106
+#, python-format
+msgid "Rate must in range 0 -> 100(%)"
+msgstr "Chỉ số phải trong khoảng 0 -> 100(%)"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,name:btek_hr_holiday.hr_sick_day
+msgid "SICK"
+msgstr "SICK"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_journal_id
+msgid "Salary Journal"
+msgstr "Sổ nhật ký lương"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+msgid "Salary Rule Category"
+msgstr "Nhóm quy tắc"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_payslip_email_
+msgid "Send Email"
+msgstr "Gửi email"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.payment_payslip_form
+msgid "Send mail"
+msgstr "Gửi email"
+
+#. module: btek_hr_holiday
+#: selection:hr.bsc.department,month:0
+#: selection:hr.kpi.employee,month:0
+#: selection:payment.insurance,month:0
+msgid "September"
+msgstr "Tháng 9"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_start_date
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_start_date
+msgid "Start date"
+msgstr "Ngày Bắt đầu"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_start_date_readonly
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_kpi_employee_start_date_readonly
+msgid "Start date readonly"
+msgstr "Start date readonly"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_state
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_detail_state_
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: btek_hr_holiday
+#: model:ir.ui.view,arch_db:btek_hr_holiday.bave_report_payslipdetails
+#: model:ir.ui.view,arch_db:btek_hr_holiday.report_payslip_custom
+msgid "Total"
+msgstr "Tổng"
+
+#. module: btek_hr_holiday
+#: model:hr.holidays.status,name:btek_hr_holiday.hr_unpaid_day
+msgid "UNPAID"
+msgstr "UNPAID"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_hr_bsc_department_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_bsc_department.py:61
+#: code:addons/btek_hr_holiday/models/hr_bsc_department.py:89
+#, python-format
+msgid "Value must in range 0 -> 100(%)"
+msgstr "Giá trị phải trong khoảng 0 -> 100(%)"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:175
+#, python-format
+msgid "Worked Day by Attendance"
+msgstr "Ngày làm việc theo chấm công"
+
+#. module: btek_hr_holiday
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_btek_hr_public_holiday_year
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_config_payroll_day_year
+#: model:ir.model.fields,field_description:btek_hr_holiday.field_payment_insurance_year
+msgid "Year"
+msgstr "Năm"
+
+#. module: btek_hr_holiday
+#: code:addons/btek_hr_holiday/models/hr_payslip_extend.py:465
+#, python-format
+msgid "You need setup account 3341 first!"
+msgstr "Bạn cần thiết lập tài khoản 3341!"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_btek_hr_public_holiday
+msgid "btek.hr.public.holiday"
+msgstr "btek.hr.public.holiday"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_btek_hr_public_holiday_line
+msgid "btek.hr.public.holiday.line"
+msgstr "btek.hr.public.holiday.line"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_config_payroll_day
+msgid "config.payroll.day"
+msgstr "config.payroll.day"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_date_to_payroll
+msgid "date.to.payroll"
+msgstr "date.to.payroll"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_bsc_department
+msgid "hr.bsc.department"
+msgstr "hr.bsc.department"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_kpi_employee
+msgid "hr.kpi.employee"
+msgstr "hr.kpi.employee"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_hr_kpi_employee_line
+msgid "hr.kpi.employee.line"
+msgstr "hr.kpi.employee.line"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_payment_insurance
+msgid "payment.insurance"
+msgstr "payment.insurance"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_payment_insurance_detail
+msgid "payment.insurance.detail"
+msgstr "payment.insurance.detail"
+
+#. module: btek_hr_holiday
+#: model:ir.model,name:btek_hr_holiday.model_report_btek_hr_holiday_report_payslipdetails
+msgid "report.btek_hr_holiday.report_payslipdetails"
+msgstr "report.btek_hr_holiday.report_payslipdetails"
+

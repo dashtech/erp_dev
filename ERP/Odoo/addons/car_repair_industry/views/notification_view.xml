@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="fleet_notification_tree" model="ir.ui.view">
+            <field name="name">fleet.notification.tree</field>
+            <field name="model">fleet.notification</field>
+            <field name="arch" type="xml">
+                <tree string="Notification Configuration">
+                    <field name="name"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="fleet_notification_form" model="ir.ui.view">
+            <field name="name">fleet.notification.form</field>
+            <field name="model">fleet.notification</field>
+            <field name="arch" type="xml">
+                <form string="Notification Configuration">
+                    <sheet>
+                        <group>
+							<group>
+								<field name="name"/>
+								<field name="active" />
+							</group>
+							<group>
+							</group>
+                        </group>
+                        <notebook>
+                            <page string="Configuration">
+                                <field name="noti_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence"/>
+								        <field name="model_id" />
+								        <field name="type" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_fleet_notification" model="ir.actions.act_window">
+            <field name="name">Notification Config</field>
+            <field name="res_model">fleet.notification</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Notification Configuration" parent="car_repair_industry.menu_fleet_config_menu"
+                  id="fleet_notification_config" sequence="20" action="action_fleet_notification"
+                  groups="car_repair_industry.group_fleet_repair_service_manager"/>
+    </data>
+</openerp>

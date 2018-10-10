@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="account_invoice_number_tree_view">
+            <field name="name">account_invoice_number_tree_view.form.view</field>
+            <field name="model">account.invoice.number</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Cấu hình hóa đơn" editable="bottom">
+                    <field name="template_symbol"/>
+                    <field name="invoice_symbol"/>
+                    <field name="company_id"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="account_invoice_number_act" model="ir.actions.act_window">
+            <field name="name">Cấu hình hóa đơn</field>
+            <field name="res_model">account.invoice.number</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="account_invoice_number_tree_view"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to record a new.
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+    <record id="account_invoice_number" model="ir.rule">
+            <field name="name">Account Invoice Number</field>
+            <field name="model_id" ref="model_account_invoice_number"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+    <menuitem name="Cấu hình mẫu, ký hiệu hóa đơn" id="account_invoice_number_menu" parent="account.account_account_menu" action="account_invoice_number_act"
+        sequence="10"/>
+
+    <record id="account_invoice_inherit_btek" model="ir.ui.view">
+        <field name="name">account.invoice.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='number']" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_invoice_customer_refund"
+                            type="object" icon="fa-list-alt" class="oe_stat_button"
+                            attrs="{'invisible': ['|', ('type', 'not in', ('out_invoice','in_invoice')), ('number_refund', '&lt;', 1)]}">
+                            <field name="number_refund" string="Customer Invoice Refund" widget="statinfo"/>
+                    </button>
+                    <button name="action_view_payment_form_invoice"
+                            type="object" icon="fa-list-alt" class="oe_stat_button"
+                            attrs="{'invisible': [('number_payment', '&lt;', 1), ('state', '!=', 'paid')]}">
+                            <field name="number_payment" string="Number Payment" widget="statinfo"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="root_invoice_id" readonly="1" invisible="1"/>
+                <field name="refund_invoice_ids" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="tax_code"/>
+                <field name="note" string="Ghi chú"/>
+            </xpath>
+
+            <xpath expr="//page/field/tree/field[@name='price_subtotal']" position="before">
+                <field name="x_rounding_price_tax" string="Tax value"/>
+                <!--<field name="price_subtotal_signed"/>-->
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']"
+                   position="after">
+                <field name="discount_value"/>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']"
+                   position="after">
+                <field name="price_subtotal_not_discount_tax"/>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button name="confirm_and_cash_payment"
+                        type="object" string="Confirm and cash payment"
+                        class="oe_highlight" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('type', 'in', ['in_refund', 'out_refund'])]}"/>
+                <!--<button name="confirm_and_bank_payment"-->
+                        <!--type="object" string="Confirm and bank payment"-->
+                        <!--class="oe_highlight" states="draft"/>-->
+            </xpath>
+
+            <xpath expr="//field[@name='amount_untaxed']" position="after">
+                <field name="amount_undiscount_untaxed"/>
+                <field name="discount_value"/>
+            </xpath>
+
+            <xpath expr="//field[@name='amount_untaxed']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="total_amount_service" invisible="1"/>
+                <field name="total_amount_product" invisible="1"/>
+                <field name="amount_total_in_word" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='payment_term_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='team_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='date_due']" position="after">
+                <field name="purchase_person"/>
+                <field name="vat_partner"/>
+            </xpath>
+            <xpath expr="//notebook/page[2]/group/group[2]/field[3]" position="after">
+                <field name="payment_term_id"/>
+                <field name="team_id"/>
+                <field name="template_symbol"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="account_supplier_inherit_btek" model="ir.ui.view">
+        <field name="name">account.invoice.supplier.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_invoice_open']" position="before">
+                <button name="invoice_print" string="Print" type="object" class="oe_highlight" groups="base.group_user"/>
+            </xpath>
+            <xpath expr="//field[@name='number']" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_invoice_supplier_refund"
+                            type="object" icon="fa-list-alt" class="oe_stat_button"
+                            attrs="{'invisible': ['|', ('type', 'not in', ('out_invoice','in_invoice')), ('number_refund', '&lt;', 1)]}">
+                            <field name="number_refund" string="Supplier Invoice Refund" widget="statinfo"/>
+                    </button>
+                    <button name="action_view_payment_form_invoice"
+                            type="object" icon="fa-list-alt" class="oe_stat_button"
+                            attrs="{'invisible': [('number_payment', '&lt;', 1)]}">
+                            <field name="number_payment" string="Number Payment" widget="statinfo"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="root_invoice_id" readonly="1" invisible="1"/>
+                <field name="refund_invoice_ids" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="tax_code"/>
+                <field name="note" string="Ghi chú"/>
+            </xpath>
+            <xpath expr="//page/field/tree/field[@name='price_subtotal']" position="before">
+                <field name="x_rounding_price_tax"/>
+                <!--<field name="price_subtotal_signed"/>-->
+            </xpath>
+            <xpath expr="//field[@name='date_due']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='reference']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="vat_partner"/>
+                <field name="reference"/>
+            </xpath>
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="date_due"/>
+                <field name="template_symbol"/>
+                <field name="invoice_symbol"/>
+                <field name="supplier_invoice_number"/>
+            </xpath>
+            <xpath expr="//field[@name='date_invoice']" position="after">
+                <field name="purchase_person"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="account.action_invoice_tree2" model="ir.actions.act_window">
+            <field name="name">Vendor Bills</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','in_invoice')]</field>
+            <field name="context">{'default_type': 'in_invoice', 'type': 'in_invoice', 'journal_type': 'purchase', 'search_default_ignore_cancel':1}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to record a new vendor bill.
+              </p><p>
+                You can control the invoice from your vendor according to
+                what you purchased or received.
+              </p>
+            </field>
+        </record>
+
+    <record id="action_invoice_supplier_refund_tree2" model="ir.actions.act_window">
+            <field name="name">Trả lại nhà cung cấp</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','in_refund')]</field>
+            <field name="context">{'default_type': 'in_refund', 'type': 'in_refund', 'journal_type': 'purchase_refund', 'refund_invoice_action': True}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to record a new vendor bill.
+              </p><p>
+                You can control the invoice from your vendor according to
+                what you purchased or received.
+              </p>
+            </field>
+        </record>
+
+    <record id="action_vendor_refund_tree1_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account.invoice_supplier_tree"/>
+            <field name="act_window_id" ref="action_invoice_supplier_refund_tree2"/>
+        </record>
+
+        <record id="action_vendor_refund_tree1_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.invoice_supplier_form"/>
+            <field name="act_window_id" ref="action_invoice_supplier_refund_tree2"/>
+        </record>
+
+    <menuitem action="action_invoice_supplier_refund_tree2" id="menu_action_vendor_refund_tree1" parent="account.menu_finance_payables" sequence="3"/>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+    <record id="account.action_invoice_tree1" model="ir.actions.act_window">
+            <field name="name">Customer Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','out_invoice')]</field>
+            <field name="context">{'type':'out_invoice', 'journal_type': 'sale'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a customer invoice.
+              </p><p>
+                Odoo's electronic invoicing allows to ease and fasten the
+                collection of customer payments. Your customer receives the
+                invoice by email and he can pay online and/or import it
+                in his own system.
+            </p>
+            <p>
+                The discussions with your customer are automatically displayed at
+                the bottom of each invoice.
+              </p>
+            </field>
+        </record>
+
+    <record id="action_invoice_refund_tree1" model="ir.actions.act_window">
+            <field name="name">Customer Refund</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,calendar,pivot,graph</field>
+            <field eval="False" name="view_id"/>
+            <field name="domain">[('type','=','out_refund')]</field>
+            <field name="context">{'default_type':'out_refund', 'type':'out_refund', 'journal_type': 'sale_refund', 'refund_invoice_action': True}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a customer invoice.
+              </p><p>
+                Odoo's electronic invoicing allows to ease and fasten the
+                collection of customer payments. Your customer receives the
+                invoice by email and he can pay online and/or import it
+                in his own system.
+              </p><p>
+                The discussions with your customer are automatically displayed at
+                the bottom of each invoice.
+              </p>
+            </field>
+        </record>
+
+    <record id="action_invoice_refund_tree1_view1" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="act_window_id" ref="action_invoice_refund_tree1"/>
+        </record>
+
+        <record id="action_invoice_refund_tree1_view2" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.invoice_form"/>
+            <field name="act_window_id" ref="action_invoice_refund_tree1"/>
+        </record>
+
+    <record id="view_account_invoice_search_filter" model="ir.ui.view">
+            <field name="name">account.invoice.search</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="field[@name='number']" position="after">
+                    <field name="supplier_invoice_number"/>
+                </xpath>
+                <xpath expr="//search/field[@name='number']" position="before">
+                    <field name="partner_id" string="License Plate"
+                           filter_domain="[('partner_id.fleet_vehicles.license_plate','ilike', self)]"/>
+                    <field name="partner_id" string="VIN Number"
+                           filter_domain="[('partner_id.fleet_vehicles.vin_sn','ilike', self)]"/>
+                </xpath>
+                <xpath expr="field[@name='date']" position="after">
+                    <field name="date_invoice"
+                           string="Date invoice greater than or equal to"
+                           filter_domain="[('date_invoice', '&gt;=', self)]"/>
+                    <field name="date_invoice"
+                           string="Date invoice less than or equal to"
+                           filter_domain="[('date_invoice', '&lt;=', self)]"/>
+                </xpath>
+            </field>
+        </record>
+
+
+    <menuitem action="action_invoice_refund_tree1" id="menu_action_invoice_refund_tree1" parent="account.menu_finance_receivables" sequence="3"/>
+
+</odoo>

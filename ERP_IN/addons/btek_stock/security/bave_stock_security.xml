@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+    <record id="group_bave_stock_sales_manager" model="res.groups">
+        <field name="name">Sales Manager</field>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user')), (4, ref('car_repair_industry.group_fleet_repair_technician'))]"/>
+        <field name="category_id" ref="base.module_category_warehouse_management"/>
+    </record>
+
+    <record id="group_bave_stock_service_director" model="res.groups">
+        <field name="name">Service Director</field>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="category_id" ref="base.module_category_warehouse_management"/>
+    </record>
+</data>
+</odoo>

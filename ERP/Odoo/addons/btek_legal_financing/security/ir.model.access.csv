@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_closing_entry_configs_all,closing_entry_configs_all,model_closing_entry_configs,,1,0,0,0
+access_closing_entry_configs_account_manager,closing_entry_configs_account_manager,model_closing_entry_configs,account.group_account_manager,1,1,1,1
+access_closing_entry_all,closing_entry_all,model_closing_entry,,1,0,0,0
+access_closing_entry_account_manager,closing_entry_account_manager,model_closing_entry,account.group_account_manager,1,1,1,1
+access_closing_entry_line_all,closing_entry_line_all,model_closing_entry_line,,1,0,0,0
+access_closing_entry_line_account_manager,closing_entry_line_account_manager,model_closing_entry_line,account.group_account_manager,1,1,1,1

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="btek_hr_employee_extend assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <!--<link rel="stylesheet" href="/btek_hr_employee_extend/static/src/less/timesheet.less"/>-->
+            <!--<script type="text/javascript" src="/btek_hr_working_day/static/src/js/bave_widget_base.js"></script>-->
+            <!--<script type="text/javascript" src="/btek_hr_working_day/static/src/js/bave_gui.js"></script>-->
+            <!--<script type="text/javascript" src="/btek_hr_working_day/static/src/js/bave_popups.js"></script>-->
+            <script type="text/javascript" src="/btek_hr_working_day/static/src/js/btek_timesheet.js"></script>
+        </xpath>
+    </template>
+</odoo>

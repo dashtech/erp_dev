@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+    	<record id="to_closing_entry_6111" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí mua nguyên liệu, vật liệu</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6111</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">1</field>
+    	</record>
+
+    	<record id="to_closing_entry_6112" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí mua hàng hóa</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6112</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">2</field>
+    	</record>
+
+    	<record id="to_closing_entry_621" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí mua nguyên liệu, vật liệu trực tiếp</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">621</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">3</field>
+    	</record>
+
+    	<record id="to_closing_entry_622" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí nhân công trực tiếp</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">622</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">4</field>
+    	</record>
+
+    	<record id="to_closing_entry_6231" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí nhân công</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6231</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">5</field>
+    	</record>
+
+    	<record id="to_closing_entry_6232" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí vật liệu</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6232</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">6</field>
+    	</record>
+
+    	<record id="to_closing_entry_6233" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dụng cụ sản xuất</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6233</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">7</field>
+    	</record>
+
+    	<record id="to_closing_entry_6234" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí khấu hao máy thi công</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6234</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">8</field>
+    	</record>
+
+    	<record id="to_closing_entry_6237" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dịch vụ mua ngoài</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6237</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">9</field>
+    	</record>
+
+    	<record id="to_closing_entry_6238" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bằng tiền khác</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6238</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">10</field>
+    	</record>
+
+    	<record id="to_closing_entry_6271" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí nhân công phân xưởng</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6271</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">11</field>
+    	</record>
+
+    	<record id="to_closing_entry_6272" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí nguyên, vật liệu</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6272</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">12</field>
+    	</record>
+
+    	<record id="to_closing_entry_6273" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dụng cụ sản xuất</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6273</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">13</field>
+    	</record>
+
+    	<record id="to_closing_entry_6274" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí khấu hao TSCĐ</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6274</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">14</field>
+    	</record>
+
+    	<record id="to_closing_entry_6277" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dịch vụ mua ngoài</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6277</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">15</field>
+    	</record>
+
+    	<record id="to_closing_entry_6278" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bằng tiền khác</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6278</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">16</field>
+    	</record>
+
+    	<record id="to_closing_entry_631" model="closing.entry.configs">
+    		<field name="name">Kết chuyển giá thành sản xuất</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">631</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">17</field>
+    	</record>
+
+    	<record id="to_closing_entry_632" model="closing.entry.configs">
+    		<field name="name">Kết chuyển giá vốn hàng bán</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">632</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">18</field>
+    	</record>
+
+    	<record id="to_closing_entry_6411" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí nhân viên</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6411</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">22</field>
+    	</record>
+
+    	<record id="to_closing_entry_6412" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí vật liệu, bao bì</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6412</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">23</field>
+    	</record>
+
+    	<record id="to_closing_entry_6413" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dụng cụ, đồ dùng</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6413</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">24</field>
+    	</record>
+
+    	<record id="to_closing_entry_6414" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí khấu hao TSCĐ</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6414</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">25</field>
+    	</record>
+
+    	<record id="to_closing_entry_6415" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bảo hành</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6415</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">26</field>
+    	</record>
+
+    	<record id="to_closing_entry_6417" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dịch vụ mua ngoài</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6417</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">27</field>
+    	</record>
+
+    	<record id="to_closing_entry_6418" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bằng tiền khác</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6418</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">28</field>
+    	</record>
+
+    	<record id="to_closing_entry_6421" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bán hàng</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6421</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">29</field>
+    	</record>
+
+    	<record id="to_closing_entry_6422" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí quản lý doanh nghiệp</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6422</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">30</field>
+    	</record>
+
+    	<record id="to_closing_entry_6423" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí đồ dùng văn phòng</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6423</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">31</field>
+    	</record>
+
+    	<record id="to_closing_entry_6424" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí khấu hao TSCĐ</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6424</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">32</field>
+    	</record>
+
+    	<record id="to_closing_entry_6425" model="closing.entry.configs">
+    		<field name="name">Kết chuyển thuế, phí và lệ phí</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6425</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">33</field>
+    	</record>
+
+    	<record id="to_closing_entry_6426" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dự phòng</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6426</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">34</field>
+    	</record>
+
+    	<record id="to_closing_entry_6427" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí dịch vụ mua ngoài</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6427</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">35</field>
+    	</record>
+
+    	<record id="to_closing_entry_6428" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chi phí bằng tiền khác</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">6428</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">36</field>
+    	</record>
+
+
+    	<record id="to_closing_entry_5111" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu bán hàng hóa</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5111</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">42</field>
+    	</record>
+
+    	<record id="to_closing_entry_5112" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu bán các thành phẩm</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5112</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">43</field>
+    	</record>
+
+    	<record id="to_closing_entry_5113" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu cung cấp dịch vụ</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5113</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">44</field>
+    	</record>
+
+    	<record id="to_closing_entry_5114" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu trợ cấp, trợ giá</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5114</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">45</field>
+    	</record>
+
+    	<record id="to_closing_entry_5117" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu kinh doanh bất động sản đầu tư</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5117</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">46</field>
+    	</record>
+
+    	<record id="to_closing_entry_5118" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu khác</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">5118</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">47</field>
+    	</record>
+
+
+    	<record id="to_closing_entry_515" model="closing.entry.configs">
+    		<field name="name">Kết chuyển doanh thu hoạt động tài chính khác</field>
+    		<field name="forward_type">db_cr</field>
+    		<field name="origin_account_code">515</field>
+    		<field name="forward_account_code">911</field>
+    		<field name="sequence">51</field>
+    	</record>
+
+
+    	<record id="to_closing_entry_profit_loss" model="closing.entry.configs">
+    		<field name="name">Kết chuyển lãi / lỗ</field>
+    		<field name="forward_type">mix</field>
+    		<field name="origin_account_code">911</field>
+    		<field name="forward_account_code">4212</field>
+    		<field name="profit_loss" eval="True"/>
+    		<field name="sequence">55</field>
+    	</record>
+
+
+    	<record id="to_closing_entry_cr_db_5213_5111" model="closing.entry.configs">
+    		<field name="name">Hàng bán bị trả lại</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">5213</field>
+    		<field name="forward_account_code">5111</field>
+    		<field name="profit_loss" eval="False"/>
+    		<field name="sequence">57</field>
+    	</record>
+
+    	<record id="to_closing_entry_cr_db_5211_5111" model="closing.entry.configs">
+    		<field name="name">Kết chuyển chiết khấu thương mại</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">5211</field>
+    		<field name="forward_account_code">5111</field>
+    		<field name="profit_loss" eval="False"/>
+    		<field name="sequence">58</field>
+    	</record>
+
+    	<record id="to_closing_entry_cr_db_5212_5111" model="closing.entry.configs">
+    		<field name="name">Kết chuyển giảm giá hàng bán</field>
+    		<field name="forward_type">cr_db</field>
+    		<field name="origin_account_code">5212</field>
+    		<field name="forward_account_code">5111</field>
+    		<field name="profit_loss" eval="False"/>
+    		<field name="sequence">59</field>
+    	</record>
+
+    </data>
+</odoo>

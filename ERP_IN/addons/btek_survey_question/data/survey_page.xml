@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="page_1_0" model="survey.page">
+        <field name="title">Đèn điện, kính chắn gió</field>
+        <field name="survey_id" ref="survey_1"/>
+    </record>
+
+    <record id="page_2_0" model="survey.page">
+        <field name="title">Khám thân xe</field>
+        <field name="survey_id" ref="survey_2"/>
+    </record>
+
+    <record id="page_3_0" model="survey.page">
+        <field name="title">Mức nước AXIT</field>
+        <field name="survey_id" ref="survey_3"/>
+    </record>
+    <record id="page_3_1" model="survey.page">
+        <field name="title">Tình trạng Acquy</field>
+        <field name="survey_id" ref="survey_3"/>
+    </record>
+
+    <record id="page_4_0" model="survey.page">
+        <field name="title">Mức xăng</field>
+        <field name="survey_id" ref="survey_4"/>
+    </record>
+
+    <record id="page_5_0" model="survey.page">
+        <field name="title">Size</field>
+        <field name="survey_id" ref="survey_5"/>
+    </record>
+    <record id="page_5_1" model="survey.page">
+        <field name="title">Phía trước bên trái</field>
+        <field name="survey_id" ref="survey_5"/>
+    </record>
+    <record id="page_5_2" model="survey.page">
+        <field name="title">Phía sau bên trái</field>
+        <field name="survey_id" ref="survey_5"/>
+    </record>
+    <record id="page_5_3" model="survey.page">
+        <field name="title">Phía trước bên phải</field>
+        <field name="survey_id" ref="survey_5"/>
+    </record>
+    <record id="page_5_4" model="survey.page">
+        <field name="title">Phía sau bên phải</field>
+        <field name="survey_id" ref="survey_5"/>
+    </record>
+
+    <record id="page_6_0" model="survey.page">
+        <field name="title">Nội thất</field>
+        <field name="survey_id" ref="survey_6"/>
+    </record>
+
+    <record id="page_7_0" model="survey.page">
+        <field name="title">Cần gạt mưa</field>
+        <field name="survey_id" ref="survey_7"/>
+    </record>
+
+    <record id="page_8_0" model="survey.page">
+        <field name="title">Mức chất lỏng</field>
+        <field name="survey_id" ref="survey_8"/>
+    </record>
+
+    <record id="page_9_0" model="survey.page">
+        <field name="title">Dây đai/Đường ống/Chắn đỡ</field>
+        <field name="survey_id" ref="survey_9"/>
+    </record>
+
+    <record id="page_10_0" model="survey.page">
+        <field name="title">Hệ thống phanh</field>
+        <field name="survey_id" ref="survey_10"/>
+    </record>
+
+    <record id="page_11_0" model="survey.page">
+        <field name="title">Hệ thống tay lái</field>
+        <field name="survey_id" ref="survey_11"/>
+    </record>
+    <record id="page_11_1" model="survey.page">
+        <field name="title">Hệ thống nhún</field>
+        <field name="survey_id" ref="survey_11"/>
+    </record>
+
+    <record id="page_12_0" model="survey.page">
+        <field name="title">Hệ thống ống xả</field>
+        <field name="survey_id" ref="survey_12"/>
+    </record>
+    <record id="page_12_1" model="survey.page">
+        <field name="title">Hệ thống truyền lực, trục lái</field>
+        <field name="survey_id" ref="survey_12"/>
+    </record>
+</odoo>

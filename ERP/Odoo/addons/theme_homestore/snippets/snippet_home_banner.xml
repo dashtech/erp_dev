@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Home-Banner" id="snippet_home_banner">
+			<section>
+
+				<div id="myCarousel1456834952810" class="carousel slide s_homestore oe_custom_bg"
+					data-interval="10000" style="height:auto;">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel1456834952810" data-slide-to="0" />
+						<li data-target="#myCarousel1456834952810" data-slide-to="1"
+							class="active" />
+					</ol>
+					<div class="carousel-inner">
+						<div class="item oe_img_bg oe_custom_bg">
+							<img src="/theme_homestore/static/src/image/banner-1.jpg"
+								class="img-responsive" />
+						</div>
+						<div class="item active oe_img_bg oe_custom_bg">
+							<img src="/theme_homestore/static/src/image/banner-2.jpg"
+								class="img-responsive" />
+						</div>
+					</div>
+					<div class="carousel-control left" data-target="#myCarousel1456834952810"
+						data-slide="prev" style="width: 10%" data-cke-saved-href="#myCarousel1456834952810">
+						<i class="fa fa-chevron-left" />
+					</div>
+					<div class="carousel-control right" data-target="#myCarousel1456834952810"
+						data-slide="next" style="width: 10%" data-cke-saved-href="#myCarousel1456834952810">
+						<i class="fa fa-chevron-right" />
+					</div>
+				</div>
+			</section>
+
+		</template>
+</odoo>

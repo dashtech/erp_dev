@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="btek_auto_condition_tree" model="ir.ui.view">
+        <field name="name">btek.auto.condition.tree</field>
+        <field name="model">btek.auto.condition</field>
+        <field name="arch" type="xml">
+            <tree string="Auto Send Condition">
+                <field name="name"/>
+                <field name="operator"/>
+                <field name="value_compare" invisible="1"/>
+                <field name="value_display"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="btek_auto_condition_form" model="ir.ui.view">
+        <field name="name">btek.auto.condition.form</field>
+        <field name="model">btek.auto.condition</field>
+        <field name="arch" type="xml">
+            <form string="Auto Send Condition">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="operator"/>
+                        <field name="option_date_define"/>
+                        <field name="numbers_days"
+                               attrs="{'invisible': [('option_date_define', 'not in', ['numbers_days_before', 'numbers_days_after'])],
+                               'required': [('option_date_define', 'in', ['numbers_days_before', 'numbers_days_after'])]}"/>
+                        <field name="value_compare" invisible="1"/>
+                        <field name="value_display" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_btek_auto_condition" model="ir.actions.act_window">
+        <field name="name">Auto Send Condition</field>
+        <field name="res_model">btek.auto.condition</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <!--<field name="view_id" ref="btek_auto_condition_tree"/>-->
+    </record>
+
+    <!--<menuitem id="menu_action_btek_auto_condition"-->
+              <!--name="Auto Condition"-->
+              <!--action="action_btek_auto_condition"-->
+              <!--parent="mass_mailing.menu_mass_mailing_configuration"-->
+              <!--sequence="11"/>-->
+
+</odoo>
+
+
+

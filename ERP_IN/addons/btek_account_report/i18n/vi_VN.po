@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_account_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20171015\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-25 07:34+0000\n"
+"PO-Revision-Date: 2018-04-25 14:35+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: btek_account_report
+#: model:ir.ui.view,arch_db:btek_account_report.wizard_report_revenue_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_account_report
+#: model:ir.ui.view,arch_db:btek_account_report.wizard_report_revenue_form
+msgid "Export report"
+msgstr "Xuất BC"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_from_date
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: btek_account_report
+#: code:addons/btek_account_report/wizard/models/wizard_report_revenue.py:39
+#, python-format
+msgid "From date must be less than or equal to date !"
+msgstr "Từ ngày phải nhỏ hơn hoặc bằng đến ngày !"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_product_categ_ids
+msgid "Product categories"
+msgstr "Các nhóm VT-HH"
+
+#. module: btek_account_report
+#: code:addons/btek_account_report/models/report_revenue.py:35
+#: code:addons/btek_account_report/wizard/models/wizard_report_revenue.py:54
+#: model:ir.actions.act_window,name:btek_account_report.report_revenue_action
+#: model:ir.ui.menu,name:btek_account_report.menu_report_revenue_action
+#, python-format
+msgid "Report revenue"
+msgstr "Báo cáo doanh thu"
+
+#. module: btek_account_report
+#: model:ir.actions.report.xml,name:btek_account_report.report_revenue_xlsx
+msgid "Revenue Report"
+msgstr "Báo cáo doanh thu"
+
+#. module: btek_account_report
+#: model:ir.model.fields,field_description:btek_account_report.field_wizard_report_revenue_to_date
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: btek_account_report
+#: sql_constraint:wizard.report.revenue:0
+msgid "Từ ngày phải nhỏ hơn hoặc bằng đến ngày !"
+msgstr "Từ ngày phải nhỏ hơn hoặc bằng đến ngày !"
+
+#. module: btek_account_report
+#: code:addons/btek_account_report/wizard/models/wizard_report_revenue.py:157
+#, python-format
+msgid "Undefine"
+msgstr "Không xác định"
+
+#. module: btek_account_report
+#: model:ir.model,name:btek_account_report.model_wizard_report_revenue
+msgid "wizard.report.revenue"
+msgstr "wizard.report.revenue"

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_voucher_sale_receipt_inherit_btek" model="ir.ui.view">
+        <field name="name">account.voucher.sale.receipt.form.inherit</field>
+        <field name="model">account.voucher</field>
+        <field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_cancel_draft']" position="after">
+                <button name="%(account_voucher_btek)d" string="Print Receipts" type="action"/>
+            </xpath>
+            <xpath expr="//notebook/page/field/tree/field[@name='product_id']" position="attributes">
+                <attribute name="domain">[('is_cost_item', '=', True)]</attribute>
+                <attribute name="string">Cost item</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="recipient_pay"/>
+                        <field name="x_name" string="Lý do"/>
+                </xpath>
+            <xpath expr="//page/field/tree/field[@name='name']" position="after">
+                <field name="x_description" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='account_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='journal_id']" position="after">
+                <field name="account_id"/>
+            </xpath>
+            <xpath expr="//field[@name='pay_now']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tax_amount']" position="before">
+                <field name="x_amount_untax"/>
+            </xpath>
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="amount_in_word" invisible="1"/>
+            </xpath>
+            <xpath expr="//page/field/tree/field[@name='price_subtotal']" position="after">
+                <field name="x_rounding_price_tax"/>
+                <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+            </xpath>
+
+            <xpath expr="//notebook/page/group/field[@name='narration']" position="before">
+                <separator string="Bảng thuế" invisible="1"/>
+                <div>
+                    <button name="button_reset_taxes" states="draft,proforma"
+                            string="(Cập nhât thuế)" class="oe_link oe_edit_only" type="object"
+                            help="Recompute taxes" invisible="1"/>
+                </div>
+                <div style="width: 68%%">
+						<field name="x_voucher_tax_line" invisible="1">
+							<tree editable="bottom" string="Taxes">
+								<field name="name"/>
+								<field name="account_id" groups="account.group_account_invoice" />
+								<field name="x_partner_id" />
+								<field name="x_invoice_symbol" />
+								<field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+								<field name="x_registration_date" />
+								<field name="x_date_invoice" />
+								<field name="base" readonly="1" />
+								<field name="amount" />
+								<field invisible="True" name="base_amount" />
+								<field invisible="True" name="tax_amount" />
+								<field name="factor_base" invisible="True" />
+								<field name="factor_tax" invisible="True" />
+							</tree>
+						</field>
+					</div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="account_voucher_view_purchase_receipt_form_inherit_btek" model="ir.ui.view">
+        <field name="name">account.voucher.sale.receipt.form.inherit</field>
+        <field name="model">account.voucher</field>
+        <field name="inherit_id" ref="account_voucher.view_purchase_receipt_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_cancel_draft']" position="after">
+                <button name="%(account_voucher_btek)d" string="Print Payment" type="action"/>
+            </xpath>
+            <xpath expr="//notebook/page/field/tree/field[@name='product_id']" position="attributes">
+                <attribute name="domain">[('is_cost_item', '=', True)]</attribute>
+                <attribute name="string">Cost item</attribute>
+            </xpath>
+            <xpath expr="//field[@name='reference']" position="after">
+                        <field name="recipient_pay"/>
+                        <field name="x_name" string="Lý do"/>
+                </xpath>
+            <xpath expr="//page/field/tree/field[@name='name']" position="after">
+                <field name="x_description" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='account_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='journal_id']" position="after">
+                <field name="account_id"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='name']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="before">
+                <field name="company_id"/>
+            </xpath>
+            <xpath expr="//field[@name='account_id']" position="after">
+                <field name="name"/>
+            </xpath>
+            <xpath expr="//field[@name='pay_now']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tax_amount']" position="before">
+                <field name="x_amount_untax"/>
+            </xpath>
+            <xpath expr="//page/field/tree/field[@name='price_subtotal']" position="after">
+                <field name="x_rounding_price_tax"/>
+                <field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+            </xpath>
+
+            <xpath expr="//notebook/page/group/field[@name='narration']" position="before">
+                <separator string="Bảng thuế" invisible="1"/>
+                <div>
+                    <button name="button_reset_taxes" states="draft,proforma"
+                            string="(Cập nhât thuế)" class="oe_link oe_edit_only" type="object"
+                            help="Recompute taxes" invisible="1"/>
+                </div>
+                <div style="width: 68%%">
+						<field name="x_voucher_tax_line" invisible="1">
+							<tree editable="bottom" string="Taxes">
+								<field name="name"/>
+								<field name="account_id" groups="account.group_account_invoice" />
+								<field name="x_partner_id" />
+								<field name="x_invoice_symbol" />
+								<field name="x_supplier_invoice_number" string="Nhóm hóa đơn"/>
+								<field name="x_registration_date" />
+								<field name="x_date_invoice" />
+								<field name="base" readonly="1" />
+								<field name="amount" />
+								<field invisible="True" name="base_amount" />
+								<field invisible="True" name="tax_amount" />
+								<field name="factor_base" invisible="True" />
+								<field name="factor_tax" invisible="True" />
+							</tree>
+						</field>
+					</div>
+            </xpath>
+            <xpath expr="//field[@name='tax_correction']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

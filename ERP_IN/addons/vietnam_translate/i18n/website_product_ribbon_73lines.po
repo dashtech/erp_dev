@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_product_ribbon_73lines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-14 04:11+0000\n"
+"PO-Revision-Date: 2018-07-14 04:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_ribbon_color_back
+msgid "Background Color"
+msgstr "Màu nền"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_ribbon_color_text
+msgid "Font Color"
+msgstr "Màu chữ"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_ribbon_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model,name:website_product_ribbon_73lines.model_product_ribbon
+msgid "Product Brand"
+msgstr "Product Brand"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_product_ribbon_id
+#: model:ir.model.fields,field_description:website_product_ribbon_73lines.field_product_template_ribbon_id
+#: model:ir.ui.view,arch_db:website_product_ribbon_73lines.product_ribbon_form_view
+msgid "Product Ribbon"
+msgstr "Ribbon sản phẩm"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.model,name:website_product_ribbon_73lines.model_product_template
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: website_product_ribbon_73lines
+#: model:ir.ui.view,arch_db:website_product_ribbon_73lines.product_ribbon_form_view
+msgid "You can add Color Name | Hex Code in Ribbon's Background | Font color field."
+msgstr "Bạn có thể thêm Tên màu | Mã Hex trong nền Ribbon | Trường màu phông chữ."
+

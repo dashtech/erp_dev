@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="member_form"
+            model="ir.ui.view">
+        <field name="name">member.form</field>
+        <field name="model">member</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="avatar_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="address"/>
+                        <field name="job_title"/>
+                        <field name="abount_me"/>
+                        <field name="mobile_phone"/>
+                        <field name="email"/>
+                        <field name="birthday"/>
+                        <field name="ranking"/>
+                        <field name="work_for"/>
+                        <field name="study_at"/>
+                    </group>
+                    <group>
+                        <field name="high_school"/>
+                        <field name="study_degree"/>
+                        <field name="home_url"/>
+                        <field name="longitude"/>
+                        <field name="latitude"/>
+                        <field name="hotline"/>
+                        <field name="agent_numeric"/>
+                        <field name="device_id"/>
+                        <field name="device_model"/>
+                        <field name="player_id"/>
+                        <field name="banner_medium"
+                               widget="image"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="member_tree"
+            model="ir.ui.view">
+        <field name="name">member.tree</field>
+        <field name="model">member</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="avatar_medium"
+                       widget="image"/>
+                <field name="name"/>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="address"/>
+                <field name="device_id"/>
+                <field name="device_model"/>
+                <field name="player_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_member"
+            model="ir.actions.act_window">
+        <field name="name">Member</field>
+        <field name="res_model">member</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="root_menu_memeber"
+              name="Memeber"
+              parent="root_menu_social"
+              sequence="60"/>
+
+    <menuitem id="menu_action_member"
+              parent="root_menu_memeber"
+              action="action_member"
+              sequence="10"/>
+</odoo>
+

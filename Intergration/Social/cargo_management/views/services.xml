@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="service_catalog_form"
+            model="ir.ui.view">
+        <field name="name">service.catalog.form</field>
+        <field name="model">service.catalog</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="avatar_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="service_provider_id"/>
+                        <field name="type"/>
+                    </group>
+                    <group>
+                        <field name="parent_id"/>
+                        <field name="description"/>
+                        <field name="highlight"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Package">
+                        <field name="package_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="price"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Sevices">
+                        <field name="service_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="price"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="service_catalog_tree"
+            model="ir.ui.view">
+        <field name="name">service.catalog.tree</field>
+        <field name="model">service.catalog</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="service_provider_id"/>
+                <field name="parent_id"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_service_catalog"
+            model="ir.actions.act_window">
+        <field name="name">Service catalog</field>
+        <field name="res_model">service.catalog</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="service_pack_tree" model="ir.ui.view">
+        <field name="name">service_pack_tree</field>
+        <field name="model">service.package</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="service_provider_id"/>
+                <field name="description"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="service_pack_form" model="ir.ui.view">
+        <field name="name">service_pack_form</field>
+        <field name="model">service.package</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="avatar_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="service_provider_id"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="price"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Sevices">
+                        <field name="service_ids">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="price"/>
+                                <field name="active"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="service_pack_action"
+            model="ir.actions.act_window">
+        <field name="name">Service package</field>
+        <field name="res_model">service.package</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="root_menu_social"
+              name="Social"/>
+
+    <menuitem id="root_menu_service"
+              name="Service"
+              parent="root_menu_social"
+              sequence="50"/>
+
+    <menuitem id="menu_action_service_catalog"
+              parent="root_menu_service"
+              action="action_service_catalog"
+              sequence="10"/>
+
+    <menuitem id="menu_service_package"
+              parent="root_menu_service"
+              action="service_pack_action"
+              sequence="11"/>
+
+    <record id="services_form"
+            model="ir.ui.view">
+        <field name="name">services.form</field>
+        <field name="model">services</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <field name="avatar_medium" widget="image"
+                       class="oe_avatar"
+                       options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="service_provider_id"/>
+                        <field name="price"/>
+                    </group>
+                    <group>
+                        <field name="service_catalog_id"/>
+                        <field name="description"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="services_tree"
+            model="ir.ui.view">
+        <field name="name">services.tree</field>
+        <field name="model">services</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <!--<field name="service_provider_id"/>-->
+                <field name="service_catalog_id"/>
+                <field name="price"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_services"
+            model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">services</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain"></field>
+    </record>
+
+    <menuitem id="menu_action_services"
+              parent="root_menu_service"
+              action="action_services"
+              sequence="20"/>
+
+    <record id="free_service_form"
+            model="ir.ui.view">
+        <field name="name">free.service.form</field>
+        <field name="model">free.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="oe_button_box" name="button_box">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                    </button>
+                </div>
+                <!--<field name="avatar_medium" widget="image"-->
+                       <!--class="oe_avatar"-->
+                       <!--options="{&quot;preview_image&quot;: &quot;avatar_medium&quot;, &quot;size&quot;: [90, 90]}"/>-->
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <!--<field name="service_provider_id"/>-->
+                    </group>
+                    <group>
+                        <field name="icon" widget="image"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="free_service_tree"
+            model="ir.ui.view">
+        <field name="name">free.service.tree</field>
+        <field name="model">free.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <!--<field name="service_provider_id"/>-->
+                <field name="avatar_medium"
+                       widget="image"/>
+                <field name="description"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_free_service"
+            model="ir.actions.act_window">
+        <field name="name">Free service</field>
+        <field name="res_model">free.service</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_free_service"
+              parent="root_menu_service"
+              action="action_free_service"
+              sequence="30"/>
+
+</odoo>

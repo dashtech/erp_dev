@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="working_day_import_failed_form" model="ir.ui.view">
+        <field name="name">working_day_import_failed_form</field>
+        <field name="model">hr.working.day.import</field>
+        <field name="arch" type="xml">
+            <form >
+                <group>
+                    <field name="error_log" nolabel="1" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="export_report" class="oe_highlight" type="object" string="Download"/> or
+                    <button name="cancel" string="Cancel" special="cancel" class="oe_link oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="working_day_import_failed_action" model="ir.actions.act_window">
+        <field name="name">Working Day Import Failed</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.working.day.import</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'btek_hr_working_day.working_day_import_failed_form'}</field>
+    </record>
+
+</odoo>

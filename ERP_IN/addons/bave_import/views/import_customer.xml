@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_customer_form_view" model="ir.ui.view">
+        <field name="name">import.customer.form.view</field>
+        <field name="model">import.customer</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible ="1" attrs="{'value':'Customer'}"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname" invisible="1"/>
+                    <field name="datas" filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_customer" type="object"
+                            string="Import customer"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_customer" model="ir.actions.act_window">
+        <field name="name">Import customer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.customer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="import_customer_menu"-->
+              <!--name="Import customer"-->
+              <!--action="action_import_customer"-->
+              <!--parent="bave_import.bave_import_menu_root" sequence="3"/>-->
+    <record model="ir.ui.view"
+            id="wizard_import_customer_return_error_form_view">
+        <field name="name">Import customer return error file</field>
+        <field name="model">import.customer</field>
+        <field name="priority">1999</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="f_name" invisible="1"/>
+                    <field name="return_error_file"
+                           filename="f_name" readonly="1"/>
+                </group>
+                <footer>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_import_customer_return_error_form_view_action"
+            model="ir.actions.act_window">
+        <field name="name">Import customer</field>
+        <field name="res_model">import.customer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_name': 'import customer','form_view_ref':'bave_import.wizard_import_customer_return_error_form_view'}</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

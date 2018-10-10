@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+    	<!-- Balance Sheet for Circular 200/2014/TT-BTC -->
+    	<!-- BEGIN -->    	
+    	<record id="to_fs_config_bs_200_270" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">62</field>
+    		<field name="name">TỔNG CỘNG TÀI SẢN (270 = 100 + 200)</field>
+    		<field name="to_code">270</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_100" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">1</field>
+    		<field name="name">A - TÀI SẢN NGẮN HẠN (100 = 110 + 120 + 130 + 140 + 150)</field>
+    		<field name="to_code">100</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_270" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_110" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">2</field>
+    		<field name="name">I. Tiền và các khoản tương đương tiền (110 = 111 + 121)</field>
+    		<field name="to_code">110</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_100" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_111" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">3</field>
+    		<field name="name">1. Tiền</field>
+    		<field name="to_code">111</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_110" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_112" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">4</field>
+    		<field name="name">2. Các khoản tương đương tiền</field>
+    		<field name="to_code">112</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_110" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1288'),
+    			ref('to_fs_account_code_1281'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_120" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">5</field>
+    		<field name="name">II. Đầu tư tài chính ngắn hạn (120 = 121 + 122 + 123)</field>
+    		<field name="to_code">120</field>
+    		<field name="to_notes">V.02</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_100" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_121" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">6</field>
+    		<field name="name">1. Chứng khoán kinh doanh</field>
+    		<field name="to_code">121</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_120" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1211'),
+    			ref('to_fs_account_code_1212'),
+    			ref('to_fs_account_code_1218'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_122" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">7</field>
+    		<field name="name">2. Dự phòng giảm giá chứng khoán kinh doanh (*)</field>
+    		<field name="to_code">122</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_120" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2291')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_123" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">8</field>
+    		<field name="name">3. Đầu tư nắm giữ đến ngày đáo hạn</field>
+    		<field name="to_code">123</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_120" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1281'),
+    			ref('to_fs_account_code_1282'),
+    			ref('to_fs_account_code_1288'),
+    			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_130" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">9</field>
+    		<field name="name">III. Các khoản phải thu ngắn hạn (130 = 131 + 132 + 133 + 134 + 135 + 136 + 137 + 139)</field>
+    		<field name="to_code">130</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_100" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_131" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">10</field>
+    		<field name="name">1. Phải thu ngắn hạn của khách hàng</field>
+    		<field name="to_code">131</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_131')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_132" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">11</field>
+    		<field name="name">2. Trả trước cho người bán ngắn hạn</field>
+    		<field name="to_code">132</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_331')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_133" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">12</field>
+    		<field name="name">3. Phải thu nội bộ ngắn hạn</field>
+    		<field name="to_code">133</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1362'),
+    			ref('to_fs_account_code_1363'),
+    			ref('to_fs_account_code_1368')
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_134" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">13</field>
+    		<field name="name">4. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng</field>
+    		<field name="to_code">134</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_337')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_135" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">14</field>
+    		<field name="name">5. Phải thu về cho vay ngắn hạn</field>
+    		<field name="to_code">135</field>
+    		<field name="to_notes">V.03</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1283')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_136" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">15</field>
+    		<field name="name">6. Phải thu ngắn hạn khác</field>
+    		<field name="to_code">136</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1385'),
+    			ref('to_fs_account_code_1388'),
+    			ref('to_fs_account_code_3341'),
+    			ref('to_fs_account_code_3342'),
+    			ref('to_fs_account_code_3381'),
+    			ref('to_fs_account_code_3382'),
+    			ref('to_fs_account_code_3383'),
+    			ref('to_fs_account_code_3384'),
+    			ref('to_fs_account_code_3385'),
+    			ref('to_fs_account_code_3386'),
+    			ref('to_fs_account_code_3387'),
+    			ref('to_fs_account_code_3388'),
+    			ref('to_fs_account_code_141'),
+    			ref('to_fs_account_code_244'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_137" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">16</field>
+    		<field name="name">7. Dự phòng phải thu ngắn hạn khó đòi</field>
+    		<field name="to_code">137</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2293')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_139" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">17</field>
+    		<field name="name">8. Tài sản thiếu chờ xử lý</field>
+    		<field name="to_code">139</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_130" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1381')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_140" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">18</field>
+    		<field name="name">IV. Hàng tồn kho (140 = 141 + 149)</field>
+    		<field name="to_code">140</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_100" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_141" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">19</field>
+    		<field name="name">1. Hàng tồn kho</field>
+    		<field name="to_code">141</field>
+    		<field name="to_notes">V.04</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_140" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_151'),
+    			ref('to_fs_account_code_152'),
+    			ref('to_fs_account_code_1531'),
+    			ref('to_fs_account_code_1532'),
+    			ref('to_fs_account_code_1533'),
+    			ref('to_fs_account_code_1534'),
+    			ref('to_fs_account_code_154'),
+    			ref('to_fs_account_code_155'),
+    			ref('to_fs_account_code_156'),
+    			ref('to_fs_account_code_157'),
+    			ref('to_fs_account_code_158'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_149" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">20</field>
+    		<field name="name">2. Dự phòng giảm giá hàng tồn kho</field>
+    		<field name="to_code">149</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_140" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2294')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_150" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">21</field>
+    		<field name="name">V. Tài sản ngắn hạn khác (150 = 151 + 152 + 153 + 154 + 155)</field>
+    		<field name="to_code">150</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_100" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_151" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">22</field>
+    		<field name="name">1. Chi phí trả trước ngắn hạn</field>
+    		<field name="to_code">151</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_150" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_242')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_152" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">23</field>
+    		<field name="name">2. Thuế GTGT được khấu trừ</field>
+    		<field name="to_code">152</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_150" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_133')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_153" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">24</field>
+    		<field name="name">3. Thuế và các khoản phải thu Nhà nước</field>
+    		<field name="to_code">153</field>
+    		<field name="to_notes">V.05</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_150" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_333')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_154" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">25</field>
+    		<field name="name">4. Giao dịch mua bán lại trái phiếu chính phủ</field>
+    		<field name="to_code">154</field>
+    		<field name="to_notes">V.05</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_150" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_171')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_155" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">26</field>
+    		<field name="name">5. Tài sản ngắn hạn khác</field>
+    		<field name="to_code">155</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_150" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2288')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_200" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">27</field>
+    		<field name="name">B - TÀI SẢN DÀI HẠN (200 = 210 + 220 + 240 + 250 + 260)</field>
+    		<field name="to_code">200</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_270" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_210" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">28</field>
+    		<field name="name">I. Các khoản phải thu dài hạn (210 = 211 + 212 + 213 + 214 + 215 + 216 + 219)</field>
+    		<field name="to_code">210</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_211" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">29</field>
+    		<field name="name">1. Phải thu dài hạn của khách hàng</field>
+    		<field name="to_code">211</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_131')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_212" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">30</field>
+    		<field name="name">2. Trả trước cho người bán dài hạn</field>
+    		<field name="to_code">212</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_331')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_213" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">31</field>
+    		<field name="name">3. Vốn kinh doanh ở đơn vị trực thuộc</field>
+    		<field name="to_code">213</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1361')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_214" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">32</field>
+    		<field name="name">4. Phải thu nội bộ dài hạn</field>
+    		<field name="to_code">214</field>
+    		<field name="to_notes">V.06</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1362'),
+    			ref('to_fs_account_code_1363'),
+    			ref('to_fs_account_code_1368'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_215" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">33</field>
+    		<field name="name">5. Phải thu về cho vay dài hạn</field>
+    		<field name="to_code">215</field>
+    		<field name="to_notes">V.07</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1283')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_216" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">34</field>
+    		<field name="name">6. Phải thu dài hạn khác</field>
+    		<field name="to_code">216</field>
+    		<field name="to_notes">V.07</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1385'),
+    			ref('to_fs_account_code_1388'),
+    			ref('to_fs_account_code_334'),
+    			ref('to_fs_account_code_338'),
+    			ref('to_fs_account_code_141'),
+    			ref('to_fs_account_code_244'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_219" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">35</field>
+    		<field name="name">7. Dự phòng phải thu dài hạn khó đòi (*)</field>
+    		<field name="to_code">219</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_210" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2293')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_220" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">36</field>
+    		<field name="name">II. Tài sản cố định (220 = 221 + 224 + 227 + 230)</field>
+    		<field name="to_code">220</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_221" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">37</field>
+    		<field name="name">1. Tài sản cố định hữu hình (221 = 222 + 223)</field>
+    		<field name="to_code">221</field>
+    		<field name="to_notes">V.08</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_220" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_222" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">38</field>
+    		<field name="name">- Nguyên giá</field>
+    		<field name="to_code">222</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_221" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_211')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_223" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">39</field>
+    		<field name="name">- Giá trị hao mòn lũy kế (*)</field>
+    		<field name="to_code">223</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_221" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2141')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_224" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">40</field>
+    		<field name="name">2. Tài sản cố định thuê tài chính (224 = 225 + 226)</field>
+    		<field name="to_code">224</field>
+    		<field name="to_notes">V.09</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_220" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_225" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">41</field>
+    		<field name="name">- Nguyên giá</field>
+    		<field name="to_code">225</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_224" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_212')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_226" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">42</field>
+    		<field name="name">- Giá trị hao mòn lũy kế (*)</field>
+    		<field name="to_code">226</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_224" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2142')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_227" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">43</field>
+    		<field name="name">3. Tài sản cố định vô hình (227 = 228 + 229)</field>
+    		<field name="to_code">227</field>
+    		<field name="to_notes">V.10</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_220" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_228" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">44</field>
+    		<field name="name">- Nguyên giá</field>
+    		<field name="to_code">228</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_227" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_213')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_229" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">45</field>
+    		<field name="name">- Giá trị hao mòn lũy kế (*)</field>
+    		<field name="to_code">229</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_227" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2143')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_230" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">46</field>
+    		<field name="name">III. Bất động sản đầu tư (230 = 231 + 232)</field>
+    		<field name="to_code">230</field>
+    		<field name="to_notes">V.12</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_231" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">47</field>
+    		<field name="name">- Nguyên giá</field>
+    		<field name="to_code">231</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_230" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_217')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_232" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">48</field>
+    		<field name="name">- Giá trị hao mòn lũy kế (*)</field>
+    		<field name="to_code">232</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_230" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2147')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_240" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">49</field>
+    		<field name="name">IV. Tài sản dở dang dài hạn (240 = 241 + 242)</field>
+    		<field name="to_code">240</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_241" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">50</field>
+    		<field name="name">1. Chi phí sản xuất, kinh doanh dở dang dài hạn</field>
+    		<field name="to_code">241</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_240" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_154')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_242" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">51</field>
+    		<field name="name">2. Chi phí xây dựng cơ bản dở dang</field>
+    		<field name="to_code">242</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_240" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_241')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_250" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">52</field>
+    		<field name="name">V. Các khoản đầu tư tài chính dài hạn (250 = 251 + 252 + 253 + 254 + 255)</field>
+    		<field name="to_code">250</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_251" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">53</field>
+    		<field name="name">1. Đầu tư vào công ty con</field>
+    		<field name="to_code">251</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_250" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_221')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_252" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">54</field>
+    		<field name="name">2. Đầu tư vào công ty liên kết, liên doanh</field>
+    		<field name="to_code">252</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_250" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_222')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_253" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">55</field>
+    		<field name="name">3. Đầu tư góp vốn vào đơn vị khác</field>
+    		<field name="to_code">253</field>
+    		<field name="to_notes">V.13</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_250" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2281')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_254" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">56</field>
+    		<field name="name">4. Dự phòng đầu tư tài chính dài hạn (*)</field>
+    		<field name="to_code">254</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_250" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="sign" eval="-1" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2292')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_255" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">57</field>
+    		<field name="name">5. Đầu tư nắm giữ đến ngày đáo hạn</field>
+    		<field name="to_code">255</field>
+    		<field name="to_notes">V.13</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_250" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_1281'),
+    			ref('to_fs_account_code_1282'),
+    			ref('to_fs_account_code_1288'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_260" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">57</field>
+    		<field name="name">VI. Tài sản dài hạn khác (260 = 261 + 262 + 263 + 268)</field>
+    		<field name="to_code">260</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_200" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_261" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">58</field>
+    		<field name="name">1. Chi phí trả trước dài hạn</field>
+    		<field name="to_code">261</field>
+    		<field name="to_notes">V.14</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_260" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_242')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_262" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">59</field>
+    		<field name="name">2. Tài sản thuế thu nhập hoãn lại</field>
+    		<field name="to_code">262</field>
+    		<field name="to_notes">V.21</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_260" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_243')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_263" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">60</field>
+    		<field name="name">3. Thiết bị, vật tư, phụ tùng thay thế dài hạn</field>
+    		<field name="to_code">263</field>
+    		<field name="to_notes">V.21</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_260" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_1534')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_268" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">61</field>
+    		<field name="name">4. Tài sản dài hạn khác</field>
+    		<field name="to_code">268</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_260" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_2288')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_440" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">114</field>
+    		<field name="name">TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400)</field>
+    		<field name="to_code">440</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_300" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">63</field>
+    		<field name="name">C - NỢ PHẢI TRẢ (300 = 310 + 330)</field>
+    		<field name="to_code">300</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_440" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_310" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">64</field>
+    		<field name="name">I. Nợ ngắn hạn (310 = 311 + 312 + 313 + 314 + 315 + 316 + 317 + 318 + 319 + 320 + 321 + 322 + 323 + 324)</field>
+    		<field name="to_code">310</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_300" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_311" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">65</field>
+    		<field name="name">1. Phải trả người bán ngắn hạn</field>
+    		<field name="to_code">311</field>
+    		<field name="to_notes">V.15</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_331')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_312" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">66</field>
+    		<field name="name">2. Người mua trả tiền trước ngắn hạn</field>
+    		<field name="to_code">312</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_131')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_313" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">67</field>
+    		<field name="name">3. Thuế và các khoản phải nộp nhà nước</field>
+    		<field name="to_code">313</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_333')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_314" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">68</field>
+    		<field name="name">4. Phải trả người lao động</field>
+    		<field name="to_code">314</field>
+    		<field name="to_notes">V.16</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_334')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_315" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">69</field>
+    		<field name="name">5. Chi phí phải trả ngắn hạn</field>
+    		<field name="to_code">315</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_335')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_316" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">70</field>
+    		<field name="name">6. Phải trả nội bộ ngắn hạn</field>
+    		<field name="to_code">316</field>
+    		<field name="to_notes">V.17</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_3362'),
+    			ref('to_fs_account_code_3363'),
+    			ref('to_fs_account_code_3368'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_317" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">71</field>
+    		<field name="name">7. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng</field>
+    		<field name="to_code">317</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_337')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_318" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">72</field>
+    		<field name="name">8. Doanh thu chưa thực hiện ngắn hạn</field>
+    		<field name="to_code">318</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3387')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_319" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">73</field>
+    		<field name="name">9. Phải trả ngắn hạn khác</field>
+    		<field name="to_code">319</field>
+    		<field name="to_notes">V.18</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_138'),
+    			ref('to_fs_account_code_338'),
+    			ref('to_fs_account_code_344')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_320" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">74</field>
+    		<field name="name">10. Vay và nợ thuê tài chính ngắn hạn</field>
+    		<field name="to_code">320</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_341'),
+    			ref('to_fs_account_code_34311'),])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_321" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">75</field>
+    		<field name="name">11. Dự phòng phải trả ngắn hạn khác</field>
+    		<field name="to_code">321</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_352'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_322" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">76</field>
+    		<field name="name">12. Quỹ khen thưởng, phúc lợi</field>
+    		<field name="to_code">322</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_353')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_323" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">77</field>
+    		<field name="name">13. Quỹ bình ổn giá</field>
+    		<field name="to_code">323</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_357')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_324" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">78</field>
+    		<field name="name">14. Giao dịch mua bán lại trái phiếu chính phủ</field>
+    		<field name="to_code">324</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_310" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_171')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_330" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">79</field>
+    		<field name="name">II. Nợ dài hạn (330 = 331 + 332 + 333 + 334 + 335 + 336 + 337 + 338 + 339 + 340 + 341 + 342 + 343)</field>
+    		<field name="to_code">330</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_300" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_331" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">80</field>
+    		<field name="name">1. Phải trả người bán dài hạn</field>
+    		<field name="to_code">331</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_331')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_332" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">81</field>
+    		<field name="name">2. Người mua trả tiền trước dài hạn</field>
+    		<field name="to_code">332</field>
+    		<field name="to_notes">V.19</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_131')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_333" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">82</field>
+    		<field name="name">3. Chi phí phải trả dài hạn</field>
+    		<field name="to_code">333</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_335')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_334" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">83</field>
+    		<field name="name">4. Phải trả nội bộ về vốn kinh doanh</field>
+    		<field name="to_code">334</field>
+    		<field name="to_notes">V.20</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3361')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_335" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">84</field>
+    		<field name="name">5. Phải trả nội bộ dài hạn</field>
+    		<field name="to_code">335</field>
+    		<field name="to_notes">V.21</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_3362')
+    			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_336" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">85</field>
+    		<field name="name">6. Doan thu chưa thực hiện dài hạn</field>
+    		<field name="to_code">336</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3387')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_337" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">86</field>
+    		<field name="name">7. Phải trả dài hạn khác</field>
+    		<field name="to_code">337</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[    			
+    			ref('to_fs_account_code_338'),
+    			ref('to_fs_account_code_344')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_338" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">87</field>
+    		<field name="name">8. Vay và nợ thuê tài chính dài hạn</field>
+    		<field name="to_code">338</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_341'),
+    			ref('to_fs_account_code_34312'),
+    			ref('to_fs_account_code_34313'),
+    		])]"/> 	
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_339" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">88</field>
+    		<field name="name">9. Trái phiếu chuyển đổi</field>
+    		<field name="to_code">339</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3432')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_340" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">89</field>
+    		<field name="name">10. Cổ phiếu ưu đãi</field>
+    		<field name="to_code">340</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_41112')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_341" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">90</field>
+    		<field name="name">11. Thuế thu nhập hoãn lại phải trả</field>
+    		<field name="to_code">341</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_347')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_342" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">91</field>
+    		<field name="name">12. Dự phòng phải trả dài hạn</field>
+    		<field name="to_code">342</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_352')
+    			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_343" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">92</field>
+    		<field name="name">13. Quỹ phát triển khoa học và công nghệ</field>
+    		<field name="to_code">343</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_330" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_356')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_400" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">93</field>
+    		<field name="name">D - VỐN CHỦ SỞ HỮU (400 = 410 + 430)</field>
+    		<field name="to_code">400</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_440" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_410" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">94</field>
+    		<field name="name">I. Vốn chủ sở hữu (410 = 411 + 412 + 413 + 414 + 415 + 416 + 417 + 418 + 419 + 420 + 421 + 422)</field>
+    		<field name="to_code">410</field>
+    		<field name="to_notes">V.22</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_400" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_411" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">95</field>
+    		<field name="name">1. Vốn góp của chủ sở hữu</field>
+    		<field name="to_code">411</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4111')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_411a" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">96</field>
+    		<field name="name"> - Cổ phiếu phổ thông có quyền biểu quyết</field>
+    		<field name="to_code">411a</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_411" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_41111')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_411b" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">97</field>
+    		<field name="name"> - Cổ phiếu ưu đãi</field>
+    		<field name="to_code">411b</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_411" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_41112')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_412" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">98</field>
+    		<field name="name">2. Thặng dư vốn cổ phần</field>
+    		<field name="to_code">412</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">bl</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4112')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_413" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">99</field>
+    		<field name="name">3. Quyền chọn chuyển đổi trái phiếu</field>
+    		<field name="to_code">413</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4113')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_414" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">100</field>
+    		<field name="name">4. Vốn khác của chủ sở hữu</field>
+    		<field name="to_code">414</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4118')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_415" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">101</field>
+    		<field name="name">5. Cổ phiếu quỹ</field>
+    		<field name="to_code">415</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="sign" eval="-1"/>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_419')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_416" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">102</field>
+    		<field name="name">6. Chênh lệch đánh giá lại</field>
+    		<field name="to_code">416</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">bl</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_412')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_417" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">103</field>
+    		<field name="name">7. Chênh lệch tỷ giá hối đoái</field>
+    		<field name="to_code">417</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">bl</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_413')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_418" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">104</field>
+    		<field name="name">8. Quỹ đầu tư phát triển</field>
+    		<field name="to_code">418</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_414')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_419" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">105</field>
+    		<field name="name">9. Quỹ dự hỗ trợ sắp xếp doanh nghiệp</field>
+    		<field name="to_code">419</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_417')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_420" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">106</field>
+    		<field name="name">10. Quỹ khác thuộc vốn chủ sở hữu</field>
+    		<field name="to_code">420</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_418')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_421" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">107</field>
+    		<field name="name">11. Lợi nhuận sau thuế chưa phân phối</field>
+    		<field name="to_code">421</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">bl</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_421')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_421a" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">108</field>
+    		<field name="name">- LNST chưa phân phối lũy kế đến cuối kỳ trước</field>
+    		<field name="to_code">421a</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_421" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">bl</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4211')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_421b" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">109</field>
+    		<field name="name">- LNST chưa phân phối kỳ này</field>
+    		<field name="to_code">421b</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_421" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_4212')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_422" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">110</field>
+    		<field name="name">12. Nguồn vốn đầu tư XDCB</field>
+    		<field name="to_code">422</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_410" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_441')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_430" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">111</field>
+    		<field name="name">II. Nguồn kinh phí và quỹ khác (430 = 431 + 432)</field>
+    		<field name="to_code">430</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_400" />
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_431" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">112</field>
+    		<field name="name">1. Nguồn kinh phí</field>
+    		<field name="to_code">431</field>
+    		<field name="to_notes">V.23</field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_430" />
+    		<field name="style_overwrite" eval="4" />
+    	</record>
+    	
+    	<record id="to_fs_config_bs_200_432" model="account.financial.report">
+    		<field name="to_financial_statement">balance_sheet</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">113</field>
+    		<field name="name">2. Nguồn kinh phí đã hình thành TSCĐ</field>
+    		<field name="to_code">432</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_bs_200_430" />
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_466')])]"/>
+    	</record>
+    	<!-- END -->
+    
+    </data>
+</odoo>

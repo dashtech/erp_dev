@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- WishList Tree View -->
+    <record id="user_wishlist_tree_view" model="ir.ui.view">
+        <field name="name">WishList Tree View</field>
+        <field name="model">user.wishlist</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Product WishList" editable="bottom">
+                <field name="user_id" options="{'no_create': True, 'no_open': True}"/>
+                <field name="product_template_id" options="{'no_create': True, 'no_open': True}"/>
+                <field name="qty" readonly="1" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- WishList Search View -->
+    <record id="user_wishlist_search_view" model="ir.ui.view">
+        <field name="name">WishList Search View</field>
+        <field name="model">user.wishlist</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="user_id" string="User" filter_domain="[()]" />
+                <field name="product_template_id" string="Product" filter_domain="[()]" />
+                <separator />
+                <group expand="0" string="Group By...">
+                    <filter string="Product" domain="[]" context="{'group_by':'product_template_id'}" />
+                    <filter string="User" domain="[]" context="{'group_by':'user_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- WishList Action -->
+    <record model="ir.actions.act_window" id="action_user_wishlist_tree_view">
+        <field name="name">WishList Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">user.wishlist</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="user_wishlist_search_view" />
+        <field name="context">{}</field>
+    </record>
+
+    <!-- WishList Menu -->
+    <menuitem action="action_user_wishlist_tree_view" id="menu_wishlist"
+              name="WishList Products" parent="website_sale.menu_ecommerce_settings"/>
+
+</odoo>

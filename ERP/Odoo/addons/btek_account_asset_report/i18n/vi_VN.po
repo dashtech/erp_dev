@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_account_asset_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-17 09:07+0000\n"
+"PO-Revision-Date: 2018-05-17 16:09+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#. module: btek_account_asset_report
+#: model:ir.model,name:btek_account_asset_report.model_btek_assets_report
+msgid "Assets Report"
+msgstr "Báo cáo tài sản"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.menu,name:btek_account_asset_report.menu_btek_assets_report
+msgid "BC Tăng Giảm Và Khấu Hao Tài Sản"
+msgstr "BC Tăng Giảm Và Khấu Hao Tài Sản"
+
+#. module: btek_account_asset_report
+#: model:ir.actions.act_window,name:btek_account_asset_report.btek_assets_report_act
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "BÁO CÁO TĂNG GIẢM TÀI SẢN"
+msgstr "BÁO CÁO TĂNG GIẢM TÀI SẢN"
+
+#. module: btek_account_asset_report
+#: model:ir.actions.report.xml,name:btek_account_asset_report.btek_asset_report
+msgid "Báo cáo khấu hao TSCĐ"
+msgstr "Báo cáo khấu hao TSCĐ"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Dates"
+msgstr "Ngày"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_end_date
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Filter"
+msgstr "Bộ lọc"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Nhóm sản phẩm"
+msgstr "Nhóm VT-HH"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Print"
+msgstr "In"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_res_company_id
+msgid "Res company id"
+msgstr "Res company id"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_account_asset_report
+#: model:ir.model.fields,field_description:btek_account_asset_report.field_btek_assets_report_x_category_id
+msgid "X category id"
+msgstr "X category id"
+
+#. module: btek_account_asset_report
+#: model:ir.ui.view,arch_db:btek_account_asset_report.btek_assets_form
+msgid "or"
+msgstr "hoặc"

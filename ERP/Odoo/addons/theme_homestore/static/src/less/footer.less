@@ -1,0 +1,138 @@
+.footer-container{
+	padding-top: 40px;
+}
+
+.footer-container .footer-top{
+    padding-bottom: 23px;
+    text-align:center;
+}
+
+.footer-top .about-us-footer img {
+    margin-bottom: 15px;
+    margin: 0px auto 15px auto;
+}
+
+.footer-top .social-footer {
+    margin-bottom: 25px;
+}
+
+.socials-wrap ul {
+    margin: 0;
+}
+
+.socials-wrap ul li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.socials-wrap ul li a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+   
+    font-size: 20px;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.socials-wrap ul li a:hover{
+	background-color:@color-primary;
+	border-color:@color-primary;
+	
+	
+}
+.support-footer .list-support {
+    margin: 0;
+}
+
+.support-footer .list-support li {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+}
+
+.list-support li:before {
+    width: 1px;
+    height: 11px;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    right: -3px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.list-support li a {
+    font-size: 107.69%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* -- Back To Top -- */
+#back-top{
+	bottom:40px;
+	position:fixed;
+	right:20px;
+	z-index:10000;
+}
+
+
+
+#back-top i{
+
+    line-height: 26px;
+	
+	}
+	
+#back-top div{
+
+    line-height: 13px;
+	
+	}	
+
+
+
+#back-top a {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    display: block;
+    color: #FFF !important;
+    text-align: center;
+    background: @color-primary;
+    font-size: 13px;
+    font-weight: 500;
+}
+#back-top a:hover{
+	color:#FFF;
+	
+}
+
+
+@media(max-width:500px){
+#section3 > div > div:nth-child(1){
+	float:none;
+}
+#section3 > div > div.text-muted{
+	text-align:center !important;
+	float:none !important;
+}
+
+#section3 > div > div:nth-child(3){
+	text-align:center !important;
+	float:none !important;
+
+}
+}
+@media(max-width:767px){
+	.list-support li:before{
+		content:none;
+	}
+}

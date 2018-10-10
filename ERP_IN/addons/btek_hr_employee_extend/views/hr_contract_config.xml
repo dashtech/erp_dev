@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="template_insurance" model="hr.contract.config">
+        <field name="name">Mức lương tính bảo hiểm</field>
+        <field name="insurance_salary_base">4300000</field>
+    </record>
+
+    <record id="hr_contract_config_form" model="ir.ui.view">
+        <field name="name">hr_contract_config_form</field>
+        <field name="model">hr.contract.config</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false" duplicate="false">
+                <header>
+                    <button name="set_base_ins" type="object" class="oe_highlight" string="Set base Insurance"/>
+                </header>
+                <group>
+                    <group>
+                        <field name="name" invisible="1"/>
+                        <field name="insurance_salary_base"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_contract_config_action" model="ir.actions.act_window">
+        <field name="name">Base Salary Insurance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.contract.config</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="template_insurance"/>
+    </record>
+
+    <menuitem id="hr_contract_config_menu" name="Base Salary Insurance"
+                  parent="hr.menu_hr_root" sequence="5"
+                  action="hr_contract_config_action"
+                  groups="hr.group_hr_manager"/>
+
+</odoo>

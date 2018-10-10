@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_new</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IC-ERP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1058.000000, -136.000000)">
+        <g id="ic_new" transform="translate(1057.844710, 136.000000)">
+            <g id="Group-23" transform="translate(1.000000, 0.000000)">
+                <circle id="Oval-2" fill="#A6B9C5" cx="12" cy="12" r="12"></circle>
+                <path d="M16.94,6.7575 C16.79,6.315 16.37,6 15.875,6 L7.625,6 C7.13,6 6.7175,6.315 6.56,6.7575 L5,11.25 L5,17.25 C5,17.6625 5.3375,18 5.75,18 L6.5,18 C6.9125,18 7.25,17.6625 7.25,17.25 L7.25,16.5 L16.25,16.5 L16.25,17.25 C16.25,17.6625 16.5875,18 17,18 L17.75,18 C18.1625,18 18.5,17.6625 18.5,17.25 L18.5,11.25 L16.94,6.7575 L16.94,6.7575 Z M7.625,14.25 C7.0025,14.25 6.5,13.7475 6.5,13.125 C6.5,12.5025 7.0025,12 7.625,12 C8.2475,12 8.75,12.5025 8.75,13.125 C8.75,13.7475 8.2475,14.25 7.625,14.25 L7.625,14.25 Z M15.875,14.25 C15.2525,14.25 14.75,13.7475 14.75,13.125 C14.75,12.5025 15.2525,12 15.875,12 C16.4975,12 17,12.5025 17,13.125 C17,13.7475 16.4975,14.25 15.875,14.25 L15.875,14.25 Z M6.5,10.5 L7.625,7.125 L15.875,7.125 L17,10.5 L6.5,10.5 L6.5,10.5 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

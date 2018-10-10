@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="import_attendace_form" model="ir.ui.view">
+        <field name="name">import_attendace_form</field>
+        <field name="model">hr.attendance.import</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" invisible="1" attrs="{'value':'attendance'}"/>
+                    <field name="datas" filename="datas_fname" string="Danh sách checkin/checkout"/>
+                    <field name="datas_fname" invisible="1"/>
+                    <field name="template_file" string="File mẫu" widget="url"/>
+                </group>
+                <footer>
+                    <button name="import_attendance" type="object" string="Import" class="oe_highlight"/> or
+                    <button name="cancel" string="Cancel" special="cancel" class="oe_link oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="import_attendance_action" model="ir.actions.act_window">
+        <field name="name">Import Atendance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.attendance.import</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'btek_hr_attendance.import_attendace_form'}</field>
+    </record>
+    <menuitem id="import_attendance_menu"
+              name="Import Attendance"
+              action="import_attendance_action"
+              parent="hr_attendance.menu_hr_attendance_manage_attendances"/>
+
+</odoo>

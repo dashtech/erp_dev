@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_bang_can_doi_phat_sinh,bang.can.doi.phat.sinh,model_bang_can_doi_phat_sinh,account.group_account_user,1,1,1,1
+access_so_quy_s07,so.quy.s07,model_so_quy_s07,account.group_account_user,1,1,1,1
+access_bc_so_cttk,bc_so_cttk,model_bc_so_cttk,account.group_account_user,1,1,1,1
+access_so_chi_tiet_congno,so.chi.tiet.congno,model_so_chi_tiet_congno,account.group_account_user,1,1,1,1
+access_account_move_line_so_cttk_group_account_user,account_move_line_so_cttk_group_account_user,model_account_move_line_so_cttk,account.group_account_user,1,0,0,0
+access_res_partner_so_chi_tiet_cong_no_group_account_user,res_partner_so_chi_tiet_cong_no_group_account_user,model_res_partner_so_chi_tiet_cong_no,account.group_account_user,1,0,0,0
+access_account_move_line_so_quy_s07_group_account_user,account_move_line_so_quy_s07_group_account_user,model_account_move_line_so_quy_s07,account.group_account_user,1,0,0,0

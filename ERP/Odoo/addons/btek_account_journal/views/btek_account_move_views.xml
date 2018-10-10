@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="btek_view_move_form" model="ir.ui.view">
+            <field name="name">btek.view.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="x_voucher_day"/>
+                </xpath>
+                <xpath expr="//field[@name='date_maturity']" position="after">
+                    <field name="x_account_groups"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_account_move_filter_inherit" model="ir.ui.view">
+            <field name="name">view.account.move.filter.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_move_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='dummy_account_id']" position="after">
+                    <field name="date"
+                           string="Date greater than or equal to"
+                           filter_domain="[('date', '&gt;=', self)]"/>
+                    <field name="date"
+                           string="Date date less than or equal to"
+                           filter_domain="[('date', '&lt;=', self)]"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

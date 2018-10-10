@@ -1,0 +1,17 @@
+#wrapwrap{
+  .navbar-default{
+    background-color: @gray-lighter;
+    .navbar-nav > li > a{
+      color: #444444;
+    }
+  }
+}
+
+.navbar-default .navbar-nav>.active>a{color: @color-primary !important; background-color: transparent;} 
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover 
+{
+    background-color: transparent;
+    color: @color-primary !important;
+  }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- ======== Brand Carousel With Header ======== -->
+
+    <!-- Snippet's Body -->
+    <template id="s_brand_carousel_header" name="Product's Brand Carousel Slider">
+        <section class="s_brand_carousel mb8">
+            <div class="container">
+                <div class="js_get_objects" data-loading="true"
+                     data-template="snippet_product_brand_carousel_73lines.brand_list_template_header"
+                     data-object_name="product.brand" />
+            </div>
+        </section>
+    </template>
+
+    <!-- Latest brands's Template -->
+    <template id="brand_list_template_header">
+        <div class="headline">
+            <h2 t-esc="title"></h2>
+            <hr class="mt0 mb0"/>
+        </div>
+        <div class="brand-list owl-carousel owl-theme mt8 mb8">
+            <t t-foreach="objects" t-as="obj">
+                <div class="item brand-single " style="margin-right:20px;">
+                    <t t-foreach="obj" t-as="brand">
+                        <t t-call="snippet_product_brand_carousel_73lines.new_brand_item" />
+                    </t>
+                </div>
+            </t>
+        </div>
+    </template>
+
+    <template id="new_brand_item" name="Brand item">
+        <div class="oe_brand_image">
+            <a itemprop="url" t-att-href="'/shop/?brands=%s-%s' % (brand.name, brand.id)"
+               data-toggle="tooltip" t-att-title="brand.name">
+                <span itemprop="image" t-field="brand.brand_image"
+                      t-options='{"widget": "image", "resize": None if brand_image else "300x300"}'
+                      t-att-alt="brand.name" />
+            </a>
+        </div>
+    </template>
+
+</odoo>

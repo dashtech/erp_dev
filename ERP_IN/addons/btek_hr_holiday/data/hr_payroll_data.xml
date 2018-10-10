@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+
+<odoo>
+
+<!-- HR SALARY STRUCTURE -->
+    <record id="hr_payroll_salary_structure_bave" model="hr.payroll.structure">
+        <field name="code">BAVE</field>
+        <field name="name">Cấu trúc lương</field>
+        <field name="parent_id"></field>
+        <field eval="[(6, 0, [
+        ref('btek_hr_payroll_data.hr_payroll_rules_wage'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhxh'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhyt'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhtn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_ttn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_gttcn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_tntt'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_ttncn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhxh'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhyt'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhtn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_pcn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_tl'),])]" name="rule_ids"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+    <record id="salary_structure_bave_ctv" model="hr.payroll.structure">
+        <field name="code">BAVE_CTV</field>
+        <field name="name">Cấu trúc lương CTV</field>
+        <field name="parent_id"></field>
+        <field eval="[(6, 0, [
+        ref('btek_hr_payroll_data.hr_payroll_rules_wage'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhxh'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhyt'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_bhtn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_ttn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhxh'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhyt'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_dnbhtn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_pcn'),
+        ref('btek_hr_payroll_data.hr_payroll_rules_tl'),])]" name="rule_ids"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

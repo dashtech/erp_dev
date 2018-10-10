@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem id="menu_base_fleet_repair" name="Car Repair" sequence="50"
+                  web_icon="car_repair_industry,static/description/Icon.png"
+                  groups="group_fleet_repair_technician,group_fleet_repair_head_technician,group_fleet_repair_service_manager"/>
+
+        <menuitem name="Sales"
+            id="sales_team.menu_base_partner"
+            web_icon="sale,static/description/icon.png" groups="base.group_no_one"/>
+
+        <menuitem name="Fleet" id="fleet.menu_root" sequence="51" groups="base.group_no_one"
+                  web_icon="car_repair_industry,static/description/fleet_icon.png"/>
+
+        <menuitem
+            id="point_of_sale.menu_point_root"
+            name="Point of Sale"
+            load_xmlid="True"
+            groups="base.group_no_one"
+            web_icon="point_of_sale,static/description/icon.png"
+            sequence="20"/>
+
+        <record id="view_service_type_tree" model="ir.ui.view">
+            <field name="name">service.type.tree</field>
+            <field name="model">service.type</field>
+            <field name="arch" type="xml">
+                <tree string="Service Type">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_service_type_form" model="ir.ui.view">
+            <field name="name">service.type.form</field>
+            <field name="model">service.type</field>
+            <field name="arch" type="xml">
+                <form string="Service Type">
+                    <sheet>
+                        <group>
+							<group>
+								<field name="name"/>
+								<field name="product_template_id" widget="many2many_tags" />
+								<field name="survey_ids" widget="many2many_tags" />
+							</group>
+							<group>
+							</group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_fleet_service_type" model="ir.actions.act_window">
+            <field name="name">Dịch vụ</field>
+            <field name="res_model">service.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem name="Configuration" parent="menu_base_fleet_repair"
+                  id="menu_fleet_config_menu" sequence="100"
+                  groups="group_fleet_repair_head_technician,group_fleet_repair_service_manager"/>
+
+        <menuitem name="Services Type" parent="menu_fleet_config_menu"
+                  id="menu_fleet_service_type" sequence="1"
+                  action="action_fleet_service_type"/>
+
+        <record id="action_fleet_diagnose_tree_filtered" model="ir.actions.act_window">
+            <field name="name">Phiếu Khám</field>
+            <field name="res_model">fleet.diagnose</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="search_view_id" ref="view_fleet_diagnose_filter"/>-->
+            <field name="context">{}</field>
+            <field name="domain">[('fleet_repair_id', '=', [active_id])]</field>
+        </record>
+        <record id="action_sale_order_tree_filtered" model="ir.actions.act_window">
+            <field name="name">Báo Giá/Đơn Hàng</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_type">form</field>
+            <!--<field name="view_id" ref="repair_view_order_tree"/>-->
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale"/>
+            <field name="context">{}</field>
+            <field name="domain">[('fleet_repair_id', '=', [active_id])]</field>
+        </record>
+
+        <record id="action_workorder_tree_filtered" model="ir.actions.act_window">
+            <field name="name">Lệnh Làm Việc</field>
+            <field name="res_model">fleet.workorder</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!--<field name="search_view_id" ref="view_fleet_workorder_filter"/>-->
+            <field name="context">{}</field>
+            <field name="domain">[('fleet_repair_id', '=', [active_id])]</field>
+        </record>
+        <record id="view_fleet_repair_kanban" model="ir.ui.view">
+            <field name="name">fleet.repair.kanban</field>
+            <field name="model">fleet.repair</field>
+            <field name="arch" type="xml">
+                <kanban class="o_fleet_repair_kanban">
+                    <field name="sequence"/>
+                    <field name="name"/>
+                    <field name="client_id"/>
+                    <field name="state"/>
+                    <field name="car_image"/>
+                    <field name="car_name"/>
+                    <field name="car_color"/>
+                    <field name="license_plate"/>
+                    <field name="saleorder_count"/>
+                    <field name="dig_count"/>
+                    <field name="workorder_count"/>
+                    <field name="receipt_date"/>
+                    <field name="kanban_state"/>
+                    <field name="company_id" invisible="0"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click o_fleet_repair_kanban btek-repair">
+                                <div class="header">
+                                    <div class="o_kanban_image">
+                                        <t t-if="record.car_image">
+                                            <img t-att-src="kanban_image('fleet.repair', 'car_image', record.id.value)"/>
+                                        </t>
+                                    </div>
+                                    <div class="oe_kanban_details">
+                                        <h3 class="oe_partner_heading">
+                                            <field name="car_name"/> - <field name="car_color"/>
+                                        </h3>
+                                        <div class="license_plate"><field name="license_plate"/></div>
+                                        <field name="priority" widget="priority"/>
+                                        <span class="pull-right btek-timer" t-if="record.receipt_date">
+                                            <img src="/car_repair_industry/static/image/ic_timer.svg"/>
+                                            <field name="receipt_date"/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="o_fleet_repair_kanban_main">
+                                        <ul>
+                                            <t t-if="record.client_id">
+                                                <li class="o_text_overflow"><strong>Khách Hàng: </strong><field name="client_id"/></li>
+                                            </t>
+                                            <t t-if="record.state">
+                                                <li class="o_text_overflow"><strong>Trạng thái: </strong><field name="state"/></li>
+                                            </t>
+                                            <t t-if="record.sequence">
+                                                <li class="o_text_overflow"><strong>Mã Phiếu: </strong><field name="sequence"/></li>
+                                            </t>
+                                            <t t-if="record.service_type_ids">
+                                                <li class="o_text_overflow"><strong>Dịch Vụ: </strong><field name="service_name"/></li>
+                                            </t>
+                                        </ul>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane">
+                                        <div class="o_kanban_card_manage_section o_kanban_manage_reports">
+                                            <div class="o_text_overflow">
+                                                <!--<a type="object" name="action_create_view_diagnose">Phiếu khám xe /</a>-->
+                                                <a type="object" name="action_create_view_quotation">Báo giá /</a>
+                                                <a type="action" name="%(action_workorder_tree_filtered)d">Công việc</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <t t-if="record.kanban_state.raw_value == 'normal'">
+                                        <div class="oe_kanban_status_working" title="Đang Sửa"><img src="/car_repair_industry/static/image/ic_repairing.svg"/>Đang Sửa</div>
+                                    </t>
+                                    <t t-if="record.kanban_state.raw_value == 'done'">
+                                        <div class="oe_kanban_status_done" title="Hoàn Thành"><img src="/car_repair_industry/static/image/ic_done.svg"/>Hoàn Thành</div>
+                                    </t>
+                                    <t t-if="record.kanban_state.raw_value == 'blocked'">
+                                        <div class="oe_kanban_status_pending"><img src="/car_repair_industry/static/image/ic_new.svg"/>Đang Chờ</div>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_fleet_repair_form" model="ir.ui.view">
+            <field name="name">fleet.repair.form</field>
+            <field name="model">fleet.repair</field>
+            <field name="arch" type="xml">
+                <form string="Car Repair">
+                    <header>
+                        <!--<button name="action_create_fleet_diagnosis" string="Create Car Diagnosis" states="draft" type="object" class="oe_highlight" style="float:left;"  groups="car_repair_industry.group_fleet_repair_service_manager,car_repair_industry.group_fleet_repair_directeur_commercial"/>-->
+                        <button name="action_create_quotation" string="Create Quotation"
+                                states="draft" type="object" class="oe_highlight"
+                                style="float:left;"
+                                groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager,car_repair_industry.group_fleet_repair_directeur_commercial"/>
+                 		<!--<button name="action_print_receipt" string="Print Receipt" states="draft" type="object" style="float:left;"/>-->
+                        <!--<button name="action_print_label" string="Print Label" states="draft" type="object" style="float:left;"/>-->
+                        <!--<button name="action_view_quotation" string="View Quotation" type="object" attrs="{'invisible': ['|', ('sale_order_id', '=', False), ('state', '!=', 'quote')]}" class="oe_highlight" style="float:left;"/>
+                        <button name="action_view_quotation" string="View Quotation/Sales Order" type="object" attrs="{'invisible': ['|', ('sale_order_id', '=', False), ('state', '!=', 'saleorder')]}" style="float:left;" class="oe_highlight"/>
+                        <button name="action_view_work_order" string="View Work Order" type="object" attrs="{'invisible': ['|', ('workorder_id', '=', False), ('state', '!=', 'workorder')]}" style="float:left;" class="oe_highlight"/>-->
+                        <field name="state" invisible="1"/>
+                        <field name="kanban_state" widget="statusbar" statusbar_visible="blocked,normal,done"/>
+                    </header>
+                    <div class="btek-detai-card">
+                        <sheet string="Car Repair">
+                            <div class="header">
+                                <div class="oe_button_box" name="button_box">
+                                    <button type="object"
+                                        name="button_view_workorder"
+                                        class="oe_stat_button"
+                                        icon="fa-wrench"
+                                        attrs="{'invisible': [('workorder_count', '=', 0)]}" groups="base.group_user">
+                                        <field name="workorder_count" widget="statinfo" string="Work Order"/>
+                                    </button>
+
+                              		<!--<button type="object"-->
+                                        <!--name="button_view_diagnosis"-->
+                                        <!--class="oe_stat_button"-->
+                                        <!--icon="fa-pencil-square"-->
+                                        <!--attrs="{'invisible': [('dig_count', '=', 0)]}" groups="base.group_user">-->
+                                        <!--<field name="dig_count" widget="statinfo" string="Diagnoses"/>-->
+                                    <!--</button>-->
+                      
+                                  	<button type="object"
+                                            name="button_view_quotation"
+                                            class="oe_stat_button"
+                                            icon="fa-usd"
+                                            attrs="{'invisible': [('quotation_count', '=', 0)]}" groups="base.group_user">
+                                            <field name="quotation_count" widget="statinfo" string="Quotations"/>
+                                        </button>
+                               
+                                  	<button type="object"
+                                            name="button_view_saleorder"
+                                            class="oe_stat_button"
+                                            icon="fa-usd"
+                                            attrs="{'invisible': [('saleorder_count', '=', 0)]}" groups="base.group_user">
+                                            <field name="saleorder_count" widget="statinfo" string="Sales Orders"/>
+                                        </button>
+                                  	<button type="object"
+                                            name="button_view_invoice"
+                                            class="oe_stat_button"
+                                            icon="fa-pencil-square-o"
+                                            attrs="{'invisible': [('inv_count', '=', 0)]}" groups="base.group_user">
+                                            <field name="inv_count" widget="statinfo" string="Invoices"/>
+                                        </button>
+                                    <button type="object" name="button_view_upsell"
+                                            class="oe_stat_button" icon="fa-gbp"
+                                            attrs="{'invisible': [('upsell_count', '=', 0)]}"
+                                            groups="base.group_user">
+                                        <field name="upsell_count" widget="statinfo" string="Upsell"/>
+                                    </button>
+                                </div>
+                            
+                                <div class="oe_title oe_left">
+                                    <h1>
+                                        <field name="car_image" widget="image" class="oe_avatar" invisible="1"/>
+                                        <field name="sequence"/>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <!--<group>-->
+                                    <!--<field name="fleet_repair_line" widget="my_many2many_tags" attrs="{'readonly': [('state', '!=', 'draft')]}" />-->
+                                <!--</group>-->
+                                <group>
+                                    <group>
+                                        <field name="client_id"
+                                               attrs="{'readonly': [('state', '!=', 'draft')]}" context="{'form_view_ref': 'car_repair_industry.res_partner_quick_form'}"/>
+
+                                        <field name="client_phone" attrs="{'readonly': [('state', '!=', 'draft')]}" invisible="1"/>
+                                        <field name="client_mobile" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="client_email" widget="email" attrs="{'readonly': [('state', '!=', 'draft')]}" invisible="1"/>
+                                        <field name="client_addr" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="confirm_sale_order" invisible="1"/>
+                                        <field name="license_plate" invisible="1"/>
+                                        <field name="receipt_date" invisible="1"/>
+                                        <!--<field name="wo_date" invisible="1"/>-->
+                                        <!--<field name="check_signup" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+                                        <field name="description" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="fleet_repair_line" widget="many2many_tags"
+                                               context="{'priority_partner_id': client_id, 'form_view_ref': 'car_repair_industry.fleet_vehicle_quick_form', 'default_driver_id': client_id}"
+                                               attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="service_type_ids" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="many2many_tags"/>
+                                        <!--<field name="service_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+
+                                        <!--<field name="receipt_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>-->
+                                        
+                                        <field name="sale_order_id" invisible="1"/>
+                                        <field name="workorder_id" invisible="1"/>
+                                        <!--<field name="diagnose_id" readonly="True" invisible="1"/>-->
+                                        <field name="user_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="company_id" readonly="1" invisible="1"/>
+                                        <field name="priority" widget="priority" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                </group>
+                            </div>
+                        </sheet>
+                    </div>
+                    
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+    </record>
+
+<!--fleet Repair Tree View-->
+
+        <record id="view_fleet_repair_tree" model="ir.ui.view">
+            <field name="name">fleet.repair.tree</field>
+            <field name="model">fleet.repair</field>
+            <field name="priority">4</field>
+            <field name="arch" type="xml">
+                <tree string="Car Repair">
+                    <field name="name"/>
+                    <field name="client_id"/>
+                    <field name="client_phone"/>
+                    <field name="client_mobile"/>
+                    <field name="license_plate"/>
+                    <field name="create_date"/>
+                    <field name="user_id"/>
+                    <field name="kanban_state"/>
+                    <field name="company_id" invisible="0"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_repair_order_filter" model="ir.ui.view">
+            <field name="name">fleet.repair.list.select</field>
+            <field name="model">fleet.repair</field>
+            <field name="arch" type="xml">
+                <search string="Search Repair Order">
+                    <field name="license_plate"/>
+                    <field name="sequence"/>
+                    <field name="client_id"/>
+                    <field name="client_phone" />
+                    <field name="user_id"/>
+                    <separator/>
+                    <filter string="In Garage" name="state_not_done" domain="[('state', 'not in', ['done', 'cancel'])]"/>
+                    <field name="receipt_date"
+                           string="Receipt date greater than or equal to"
+                           filter_domain="[('receipt_date', '&gt;=', self)]"/>
+                    <field name="receipt_date"
+                           string="Receipt date less than or equal to"
+                           filter_domain="[('receipt_date', '&lt;=', self)]"/>
+               </search>
+            </field>
+        </record>
+
+
+<!--Action-->
+        <record model="ir.actions.act_window" id="action_fleet_repair_tree_view">
+            <field name="name">Service request</field>
+            <field name="res_model">fleet.repair</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="context">{'search_default_state_not_done':1}</field>
+            <field name="domain"></field>
+            <field name="search_view_id" ref="view_repair_order_filter"/>
+            <field name="view_id" ref="view_fleet_repair_kanban"/>
+        </record>
+
+<!--Menuitems-->
+        <menuitem name="Service Requests" parent="menu_base_fleet_repair"
+                  id="menu_fleet_repair_submenu" sequence="1"
+                  action="action_fleet_repair_tree_view"
+                  groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager"/>
+
+<!-- fleet Lines-->
+
+
+
+        <menuitem name="Vehicles Management" parent="menu_base_fleet_repair" action="fleet.fleet_vehicle_action"
+                  id="car_fleet_vehicles_root" sequence="12"
+                  groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager"/>
+        <!--<menuitem action="fleet.fleet_vehicle_action" parent="car_fleet_vehicles_root"-->
+                  <!--id="car_fleet_vehicle_menu" groups="fleet.fleet_group_user"/>-->
+
+        <!--<menuitem action="fleet.fleet_vehicle_model_action" parent="car_fleet_vehicles_root"-->
+                  <!--id="car_fleet_vehicle_model_menu" groups="fleet.fleet_group_user"/>-->
+
+        <menuitem id="car_repair_menu_partner_form" parent="menu_base_fleet_repair" name="Customer"
+                  action="base.action_partner_form"
+                  groups="group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager"
+                  sequence="8"/>
+
+        <menuitem id="voucher_voucher_root_repair" name="Vouchers &amp; Coupons" parent="menu_fleet_config_menu" sequence="2"/>
+
+        <menuitem  id="repair_voucher_config_form_menu_id"
+                   name="Vouchers Config"  parent="voucher_voucher_root_repair"
+                   action="wk_coupons.voucher_config_action"
+                   groups="car_repair_industry.group_fleet_repair_service_manager" sequence="1"/>
+
+        <menuitem  id="repair_voucher_voucher_tree_menu_id" name="All Vouchers"
+                   parent="voucher_voucher_root_repair" action="wk_coupons.voucher_voucher_action_tree"
+                   groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager"
+                   sequence="2"/>
+        <menuitem  id="repair_voucher_history_menu_id" name="Voucher History" parent="voucher_voucher_root_repair"
+                   action="wk_coupons.voucher_history_action_form"
+                   groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager"
+                   sequence="3"/>
+
+        <menuitem id="repair_wk_loyalty_parent_menu_id"
+                  name="Loyalty Management" parent="menu_fleet_config_menu" sequence="12" />
+
+        <menuitem id="repair_wk_loyalty_rules_menu_id" name="Loyalty Rules" parent="repair_wk_loyalty_parent_menu_id"
+                  action="pos_loyalty_management.wk_loyalty_managment_action_id"
+                  groups="car_repair_industry.group_fleet_repair_service_manager" sequence="1"/>
+
+        <menuitem id="repair_menu_pos_loyalty_history" parent="repair_wk_loyalty_parent_menu_id"
+                  action="pos_loyalty_management.action_pos_loyalty_history"
+                  groups="car_repair_industry.group_fleet_repair_head_technician,car_repair_industry.group_fleet_repair_service_manager" sequence="2"/>
+
+    </data>
+</openerp>

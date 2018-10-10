@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<!--<template id="account_voucher_style">-->
+			<!--body {-->
+			<!--margin:20px 25px 15px 20px;-->
+			<!--font-family: "Times New Roman", serif;-->
+			<!--font-size:13px;-->
+			<!--}-->
+			<!--h2 {-->
+			<!--line-height:normal;-->
+			<!--font-size:100%;-->
+			<!--margin:0;-->
+			<!--padding:0;-->
+			<!--font-size:22px;-->
+			<!--}-->
+			<!--.content {-->
+				<!--font-size:15px;-->
+			<!--}-->
+			<!--p {-->
+			<!--line-height:normal;-->
+			<!--font-size:100%;-->
+			<!--margin:2;-->
+			<!--padding:2;-->
+			<!--}-->
+			<!--.main {-->
+			<!--float:left;-->
+			<!--width: 100%;-->
+			<!--}-->
+			<!--.top2 {-->
+			<!--width: 100%;-->
+			<!--text-align:-->
+			<!--center;-->
+			<!--}-->
+			<!--.table_sumary {-->
+			<!--width: 30%;-->
+			<!--float:-->
+			<!--right;-->
+			<!--border: 0;-->
+			<!--border-spacing: 2px;-->
+			<!--}-->
+			<!--.summary {-->
+			<!--float:right;-->
+			<!--font-weight: bold;-->
+			<!--margin-top: 5px;-->
+			<!--width: 100%;-->
+			<!--}-->
+			<!--.summary table {-->
+			<!--width: 30%;-->
+			<!--font-weight:-->
+			<!--bold;-->
+			<!--float: right;-->
+			<!--border: 0;-->
+			<!--border-collapse:separate;-->
+			<!--border-spacing:-->
+			<!--4px;-->
+			<!--}-->
+			<!--.date {-->
+			<!--float:right;-->
+			<!--font-weight:bold;-->
+			<!--margin-right: 50px;-->
+			<!--margin-top: 5px;-->
+			<!--}-->
+			<!--.signature {-->
+			<!--float:left;-->
+			<!--width:100%;-->
+			<!--margin-top: 10px;-->
+			<!--}-->
+			<!--.signature1 {-->
+			<!--float:left;-->
+			<!--width: 20%;-->
+			<!--text-align:center;-->
+			<!--}-->
+			<!--.signature2 {-->
+			<!--float:left;-->
+			<!--width: 20%;-->
+			<!--text-align:center;-->
+			<!--}-->
+			<!--.signature3 {-->
+			<!--float:left;-->
+			<!--width: 20%;-->
+			<!--text-align:center;-->
+			<!--}-->
+			<!--.signature4 {-->
+			<!--float:left;-->
+			<!--width: 20%;-->
+			<!--text-align:center;-->
+			<!--}-->
+			<!--.signature5 {-->
+			<!--float:left;-->
+			<!--width: 20%;-->
+			<!--text-align:center;-->
+			<!--}-->
+			<!--.pull-right {float:right;}-->
+		<!--</template>-->
+
+		<template id="report_account_voucher_cash">
+			<body>
+				<t t-foreach="docs" t-as="o">
+					<div class="page" style="color: black;font-size: 24px;font-family: Times New Roman;">
+						<!--<style type="text/css">-->
+								<!--.pages {-->
+								<!--font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;-->
+								<!--font-size: 16px;-->
+								<!--}-->
+							<!--</style>-->
+						<!--<t class="pages" style="color: black;font-family: inherit; font-size: 16px!important;">-->
+						<div class="row">
+							<div class="col-xs-7 text-left" style="margin-top:5px; line-height: 100%;">
+								<p>
+									<b><span style="font-family: inherit; font-size: 30px!important;" t-esc="res_company.name"/></b>
+								</p>
+								<p style="font-family: inherit; font-size: 24px!important;">
+									<span t-esc="res_company.street" />
+									<t t-if="res_company.street2!=False">
+										,&#160;<span t-esc="res_company.street2" />
+									</t>
+									<t t-if="res_company.city!=False">
+										,&#160;<span t-esc="res_company.city" /></t>
+									<t t-if="res_company.state_id!=False">
+										,&#160;<span t-esc="res_company.state_id.name" />
+									</t>
+									<t t-if="res_company.country_id!=False">
+										,&#160;<span t-esc="res_company.country_id.name"/>
+									</t>
+								</p>
+							</div>
+
+							<div class="col-xs-5 text-center" style="margin-top:5px;line-height: 100%;">
+								<p style="text-align: center;">
+									<b>
+										<span t-if="o.voucher_type == 'sale' or o.journal_id.x_type == 'receipt'" style="font-family: inherit; font-size: 24px!important;">Mẫu số 01-TT</span>
+									</b>
+									<b>
+										<span t-if="o.voucher_type=='purchase' or o.journal_id.x_type == 'payment'" style="font-family: inherit; font-size: 24px!important;">Mẫu số 02-TT</span>
+									</b>
+								</p>
+								<p style="font-style: italic;text-align: center; font-family: inherit; font-size: 24px!important;" class="text-center">(Ban hành theo TT số 200/2014/TT-BTC<br />
+									Ngày 22/12/2014 của Bộ Tài Chính)</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="col-xs-4">
+								</div>
+								<div class="col-xs-4" style="line-height: 100%;">
+									<h3 class="text-center">
+										<b>
+											<span style="font-family: inherit; font-size: 38px!important;"
+												  t-if="o.journal_id.x_type == 'receipt'">PHIẾU THU
+											</span>
+										</b>
+									</h3>
+									<h3 class="text-center">
+										<b>
+											<span style="font-family: inherit; font-size: 38px!important;"
+												  t-if="o.journal_id.x_type == 'payment'">PHIẾU CHI
+											</span>
+										</b>
+									</h3>
+									<p class="text-center">
+										Ngày :<span t-esc="o.get_time_dotay()"/>
+									</p>
+								</div>
+								<div class="col-xs-4" style="font-family: inherit; font-size: 20px!important;">
+									<div class="row">
+										<span><b>Số phiếu nhập: </b></span>
+										<span t-esc="o._get_quyen_so(o.number)"></span>
+									</div>
+									<div class="row">
+										<span><b>Số phiếu: </b></span>
+										<span t-esc="o.number or '..............'"></span>
+									</div>
+									<div class="row">
+										<table style="width:100%;color: black;font-family: inherit; font-size: 20px!important; line-height: 110%;">
+											<t t-if="o.journal_id.x_type == 'payment'">
+												<t t-if="o.line_ids">
+													<t t-set="tf" t-value="0"/>
+													<t t-foreach="o._get_account()" t-as="line">
+														<tr>
+															<t t-if="tf==0">
+																<td class="text-left">
+																	<span><b>TK Nợ:</b></span>
+																</td>
+															</t>
+															<t t-if="tf>=1">
+																<td>
+																	<span><b>&#160;</b></span>
+																</td>
+															</t>
+															<td class="text-left">
+																<t t-esc="line[0]"/>
+															</td>
+															<td class="text-right">
+																<t t-esc="line[1]" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+															</td>
+														</tr>
+														<t t-set="tf" t-value="tf+1"/>
+													</t>
+												</t>
+												<tr>
+													<td>
+														<span><b>TK Có:</b></span>
+													</td>
+													<td class="text-left">
+														<span t-esc="o.account_id.code"></span>
+													</td>
+													<td class="text-right">
+														<span><t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/></span>
+													</td>
+												</tr>
+											</t>
+											<t t-if="o.journal_id.x_type == 'receipt'">
+												<tr>
+													<td>
+														<span><b>TK Nợ:</b></span>
+													</td>
+													<td class="text-left">
+														<span t-esc="o.account_id.code"></span>
+													</td>
+													<td class="text-right">
+														<span><t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/></span>
+													</td>
+												</tr>
+												<t t-if="o.line_ids">
+													<t t-set="tf" t-value="0"/>
+													<t t-foreach="o._get_account()" t-as="line">
+														<tr>
+															<t t-if="tf==0">
+																<td class="text-left">
+																	<span><b>TK Có:</b></span>
+																</td>
+															</t>
+															<t t-if="tf>=1">
+																<td>
+																	<span><b>&#160;</b></span>
+																</td>
+															</t>
+															<td class="text-left">
+																<t t-esc="line[0]"/>
+															</td>
+															<td class="text-right">
+																<t t-esc="line[1]" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+															</td>
+														</tr>
+														<t t-set="tf" t-value="tf+1"/>
+													</t>
+												</t>
+											</t>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="content" style="font-family: inherit; font-size: 24px!important;">
+								<table style="line-height: 130%;margin-left: 5%;color: black;font-family: inherit; font-size: 24px!important;">
+									<tr>
+										<td width="25%">
+											<span
+													  t-if="o.journal_id.x_type == 'receipt'">Người nộp tiền
+												</span>
+											<span
+													  t-if="o.journal_id.x_type == 'payment'">Người nhận tiền
+												</span>
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td > <b><span t-esc="o.recipient_pay" /></b></td>
+									</tr>
+									<tr>
+										<td width="25%">
+											Tên khách
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td > <t t-if="o.partner_id">
+												<span t-esc="o.partner_id.name"/>
+											</t>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">
+											Địa chỉ
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<!--<t t-if="o.partner_id.street!=False">-->
+												<!--<span t-esc="o.partner_id.street"/>-->
+											<!--</t>-->
+											<!--<t t-if="o.partner_id.ward_id.name!=False">-->
+												<!--,&#160;<span t-esc="o.partner_id.ward_id.name"/>-->
+											<!--</t>-->
+											<!--<t t-if="o.partner_id.district_id.name!=False">-->
+												<!--,&#160;<span t-esc="o.partner_id.district_id.name"/>-->
+											<!--</t>-->
+											<!--<t t-if="o.partner_id.state_id.name!=False">-->
+												<!--,&#160;<span t-esc="o.partner_id.state_id.name"/>-->
+											<!--</t>-->
+											<!--<t t-if="o.partner_id.country_id.name!=False">-->
+												<!--,&#160;<span t-esc="o.partner_id.country_id.name"/>-->
+											<!--</t>-->
+											<t t-if="o.partner_id.address!=False">
+												<span t-esc="o.partner_id.address"/>
+											</t>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">
+											<t t-if="o.journal_id.x_type=='receipt'">
+												Lý do nộp
+											</t>
+											<t t-if="o.journal_id.x_type=='payment'">
+												Lý do chi
+											</t>
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<span t-esc="o.x_name" />
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Số tiền</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<strong>
+												<t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+												<!--<span t-esc="o.currency_id.name" />-->
+											</strong>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Bằng chữ</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<t style="font-style: italic;">
+												<span t-esc="o.amount_in_word" />
+												<t t-if="o.currency_id.currency_text" t-esc="o.currency_id.currency_text" />&#160;chẵn.
+											</t>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Kèm theo</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											0 chứng từ gốc.
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Thời hạn hoàn ứng</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											&#160;
+										</td>
+									</tr>
+
+								</table>
+
+							</div>
+						</div>
+						<div class="row" style="font-family: inherit; font-size: 24px!important;">
+							<table width="100%">
+								<tr style="text-align: right;margin-right: 5%;">
+									<p style="text-align: right;margin-right: 5%;">
+										<b>Ngày........tháng.......năm..........</b>
+									</p>
+								</tr>
+							</table>
+						</div>
+
+						<div class="row">
+							<table width="100%" style="line-height: 100%;color: black;font-family: inherit; font-size: 24px!important;">
+								<tr>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Giám đốc</b>
+										</span>
+
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Kế toán trưởng</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Thủ quỹ</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Người nhận tiền</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Người lập phiếu</b>
+										</span>
+									</td>
+								</tr>
+								<tr style="line-height: 100%;color: black;font-family: inherit; font-size: 20px!important;">
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên, đóng dấu)</i></span>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="row" style="margin-left: 3%; font-family: inherit; font-size: 24px!important;">
+							<span><i>
+							Đã nhận đủ số tiền (viết bằng chữ): .....................................................................................................
+							</i></span>
+							<span><i>
+							...............................................................................................................................................................
+							</i></span>
+							<p style="color: black;font-family: inherit; font-size: 20px!important;">
+								<div class="col-xs-8">
+									+ Tỷ giá ngoại tệ (vàng, bạc, đá quý):
+								</div>
+								<div class="col-xs-4">
+									+ Số tiền quy đổi:
+								</div>
+							</p>
+							<!--+ Tỷ giá ngoại tệ (vàng, bạc, đá quý): <span t-esc="o.get_rate()"/><span t-esc="o.currency_id.name" />/<span t-esc="o.currency_id.name" /><br/>-->
+							<!--+ Số tiền quy đổi: <t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>-->
+						</div>
+						<!--</t>-->
+					</div>
+				</t>
+			</body>
+		</template>
+
+		<template id="report_account_voucher_bank">
+			<body>
+				<t t-foreach="docs" t-as="o">
+					<div class="page" style="color: black;font-size: 24px;font-family: Times New Roman;">
+						<!--<style type="text/css">-->
+								<!--.pages {-->
+								<!--font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;-->
+								<!--font-size: 16px;-->
+								<!--}-->
+							<!--</style>-->
+						<!--<t class="pages" style="color: black;font-family: inherit; font-size: 16px!important;">-->
+						<div class="row">
+							<div class="col-xs-7 text-left" style="margin-top:5px;line-height: 110%;">
+								<p>
+									<b><span style="font-family: inherit; font-size: 30px!important;" t-esc="res_company.name"/></b>
+								</p>
+								<p style="font-family: inherit; font-size: 24px!important;">
+									<span t-esc="res_company.street" />
+									<t t-if="res_company.street2!=False">
+										,&#160;<span t-esc="res_company.street2" />
+									</t>
+									<t t-if="res_company.city!=False">
+										,&#160;<span t-esc="res_company.city" /></t>
+									<t t-if="res_company.state_id!=False">
+										,&#160;<span t-esc="res_company.state_id.name" />
+									</t>
+									<t t-if="res_company.country_id!=False">
+										,&#160;<span t-esc="res_company.country_id.name"/>
+									</t>
+								</p>
+							</div>
+
+							<div class="col-xs-1">
+								</div>
+
+							<div class="col-xs-4 " style="margin-top:7px; font-size: 20px!important; line-height: 110%;">
+								<div class="row">
+									<span><b>Số: </b></span>
+									<span t-esc="o.number or '..............'"></span>
+								</div>
+								<div class="row">
+									<table style="width:100%;color: black;font-size: 20px;font-family: inherit; font-size: 20px!important; line-height: 110%;">
+										<t t-if="o.journal_id.x_type == 'payment'">
+											<t t-if="o.line_ids">
+												<t t-set="tf" t-value="0"/>
+												<t t-foreach="o._get_account()" t-as="line">
+													<tr>
+														<t t-if="tf==0">
+															<td class="text-left">
+																<span><b>TK Nợ:</b></span>
+															</td>
+														</t>
+														<t t-if="tf>=1">
+															<td>
+																<span><b>&#160;</b></span>
+															</td>
+														</t>
+														<td class="text-left">
+															<t t-esc="line[0]"/>
+														</td>
+														<td class="text-right">
+															<t t-esc="line[1]" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+														</td>
+													</tr>
+													<t t-set="tf" t-value="tf+1"/>
+												</t>
+											</t>
+											<tr>
+												<td>
+													<span><b>TK Có:</b></span>
+												</td>
+												<td class="text-left">
+													<span t-esc="o.account_id.code"></span>
+												</td>
+												<td class="text-right">
+													<span><t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/></span>
+												</td>
+											</tr>
+										</t>
+										<t t-if="o.journal_id.x_type == 'receipt'">
+											<tr>
+												<td>
+													<span><b>TK Nợ:</b></span>
+												</td>
+												<td class="text-left">
+													<span t-esc="o.account_id.code"></span>
+												</td>
+												<td class="text-right">
+													<span><t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/></span>
+												</td>
+											</tr>
+											<t t-if="o.line_ids">
+												<t t-set="tf" t-value="0"/>
+												<t t-foreach="o._get_account()" t-as="line">
+													<tr>
+														<t t-if="tf==0">
+															<td class="text-left">
+																<span><b>TK Có:</b></span>
+															</td>
+														</t>
+														<t t-if="tf>=1">
+															<td>
+																<span><b>&#160;</b></span>
+															</td>
+														</t>
+														<td class="text-left">
+															<t t-esc="line[0]"/>
+														</td>
+														<td class="text-right">
+															<t t-esc="line[1]" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+														</td>
+													</tr>
+													<t t-set="tf" t-value="tf+1"/>
+												</t>
+											</t>
+										</t>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="col-xs-4">
+								</div>
+								<div class="col-xs-4" style="; line-height: 100%;">
+									<h3 class="text-center">
+										<b>
+											<span style="font-family: inherit; font-size: 38px!important;"
+												  t-if="o.journal_id.x_type == 'receipt'">GIẤY BÁO CÓ
+											</span>
+										</b>
+									</h3>
+									<h3 class="text-center">
+										<b>
+											<span style="font-family: inherit; font-size: 38px!important;"
+												  t-if="o.journal_id.x_type == 'payment'">GIẤY BÁO NỢ
+											</span>
+										</b>
+									</h3>
+									<p class="text-center">
+										Ngày :<span t-esc="o.get_time_dotay()"/>
+									</p>
+								</div>
+								<div class="col-xs-4" style="font-family: inherit; font-size: 20px!important;">
+
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="content" style="font-family: inherit; font-size: 24px!important;">
+								<table style="line-height: 130%;margin-left: 5%;color: black;font-family: inherit; font-size: 24px!important;">
+									<tr>
+										<td width="25%">
+											<span
+													  t-if="o.journal_id.x_type == 'receipt'">Người nộp tiền
+												</span>
+											<span
+													  t-if="o.journal_id.x_type == 'payment'">Người nhận tiền
+												</span>
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td > <b><span t-esc="o.recipient_pay" /></b></td>
+									</tr>
+									<tr>
+										<td width="25%">
+											Khách hàng
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td >
+											<t t-if="o.partner_id">
+												<span t-esc="o.partner_id.name"/>
+											</t>
+										</td>
+									</tr>
+									<!--<tr>-->
+										<!--<td width="25%">-->
+											<!--Địa chỉ-->
+										<!--</td>-->
+										<!--<td width="5%">-->
+											<!--:-->
+										<!--</td>-->
+										<!--<td>-->
+											<!--<t t-if="o.partner_id.address!=False">-->
+												<!--<span t-esc="o.partner_id.address"/>-->
+											<!--</t>-->
+										<!--</td>-->
+									<!--</tr>-->
+									<tr>
+										<td width="25%">
+											<t t-if="o.journal_id.x_type=='receipt'">
+												Lý do
+											</t>
+											<t t-if="o.journal_id.x_type=='payment'">
+												Lý do
+											</t>
+										</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<span t-esc="o.x_name" />
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Số tài khoản</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<t t-if="o.journal_id.bank_acc_number">
+												<span t-esc="o.journal_id.bank_acc_number"/>
+											</t>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Ngân hàng</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<t t-if="o.journal_id.bank_id.name">
+												<span t-esc="o.journal_id.bank_id.name"/>
+											</t>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Số tiền</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<strong>
+												<t t-esc="o.amount" t-esc-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+												<!--<span t-esc="o.currency_id.name" />-->
+											</strong>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Loại tiền</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<t t-esc="o.currency_id.name"/>
+										</td>
+									</tr>
+									<tr>
+										<td width="25%">Bằng chữ</td>
+										<td width="5%">
+											:
+										</td>
+										<td>
+											<t style="font-style: italic;">
+												<span t-esc="o.amount_in_word" />
+												<t t-if="o.currency_id.currency_text" t-esc="o.currency_id.currency_text" />&#160;chẵn.
+											</t>
+										</td>
+									</tr>
+
+								</table>
+
+							</div>
+						</div>
+						<div class="row">
+							<table width="100%" style="font-family: inherit; font-size: 24px!important;">
+								<tr style="text-align: right;margin-right: 5%;">
+									<p style="text-align: right;margin-right: 5%;">
+										<b>Ngày........tháng.......năm..........</b>
+									</p>
+								</tr>
+							</table>
+						</div>
+
+						<div class="row">
+							<table width="100%" style="line-height: 100%;color: black;font-family: inherit; font-size: 24px!important;">
+								<tr>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Giám đốc</b>
+										</span>
+
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Kế toán trưởng</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Thủ quỹ</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Người nhận tiền</b>
+										</span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span>
+											<b>Người lập phiếu</b>
+										</span>
+									</td>
+								</tr>
+								<tr style="line-height: 100%;color: black;font-family: inherit; font-size: 20px!important;">
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên, đóng dấu)</i></span>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+										<br/>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+									<td style="text-align: center;" width="20%">
+										<span><i>(Ký, họ tên)</i></span>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="row" style="margin-left: 3%;font-family: inherit; font-size: 24px!important;">
+							<span><i>
+							Đã nhận đủ số tiền (viết bằng chữ): .....................................................................................................
+							</i></span>
+							<span><i>
+							...............................................................................................................................................................
+							</i></span>
+							<p style="color: black;font-family: inherit; font-size: 20px!important;">
+								<div class="col-xs-8">
+									+ Tỷ giá ngoại tệ (vàng, bạc, đá quý):
+								</div>
+								<div class="col-xs-4">
+									+ Số tiền quy đổi:
+								</div>
+							</p>
+						</div>
+						<!--</t>-->
+					</div>
+				</t>
+			</body>
+		</template>
+
+
+		<template id="report_accountvoucher">
+                <t t-foreach="docs" t-as="doc">
+					<t t-if="doc.journal_id.type == 'cash'">
+                    	<t t-call="btek_account_payment.report_account_voucher_cash"/>
+                    </t>
+					<t t-if="doc.journal_id.type == 'bank'">
+                    	<t t-call="btek_account_payment.report_account_voucher_bank"/>
+                    </t>
+                </t>
+        </template>
+
+	</data>
+</openerp>

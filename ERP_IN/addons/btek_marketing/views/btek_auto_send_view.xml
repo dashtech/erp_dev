@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="btek_auto_send_log_form_view" model="ir.ui.view">
+        <field name="name">btek.auto.send.log.form</field>
+        <field name="model">btek.auto.send.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group cosplan="2" col ="4">
+                        <field name="create_day"/>
+                        <field name="total_message"/>
+                    </group>
+                    <field name="btek_auto_send_id" invisible="1"/>
+                    <field name="btek_auto_send_mail_id" invisible="1"/>
+                    <notebook>
+                        <page string="Detail">
+                            <field name="btek_auto_send_log_detail_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="create_day"/>
+                                    <field name="result"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--auto send mess view-->
+    <record id="btek_auto_send_tree_view" model="ir.ui.view">
+        <field name="name">btek.auto.send.tree</field>
+        <field name="model">btek.auto.send</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="subject" string="Subject"/>
+                <field name="channel"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="btek_auto_send_form_view" model="ir.ui.view">
+        <field name="name">btek.auto.send.form</field>
+        <field name="model">btek.auto.send</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm"
+                            states="draft"
+                            type="object"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"
+                            class="oe_highlight" string="Confirm" confirm="This will run the auto event"/>
+                    <button name="action_cancel"
+                            states="running" type="object"
+                            attrs="{'invisible': [('state', '!=', 'running')]}"
+                            class="oe_highlight" string="Cancel"
+                            confirm="This will stop the auto event"/>
+                    <field name="state" readonly="1" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <label for="name" string="Channel"/>
+                        <div>
+                            <field name="channel" widget="radio" options="{'horizontal': true}"/>
+                        </div>
+                    </group>
+                    <group>
+                        <label for="name" string="Subject"/>
+                        <div>
+                            <field name="subject" nolabel="1" required="1"/>
+                        </div>
+                        <field name="brand_name" attrs="{'invisible': [('channel', '!=', 'sms')], 'required': [('channel', '=', 'sms')]}"/>
+                        <field name="zalo_url_id" string="OA" placeholder="Official account"
+                               attrs="{'invisible': [('channel', '!=', 'zalo')], 'required': [('channel', '=', 'zalo')]}"/>
+                        <field name="sms_type" invisible="1"/>
+                        <field name="accent_vietnamese"
+                               widget="radio" options="{'horizontal': true}"
+                               attrs="{'invisible': ['|', ('channel', '!=', 'sms'), ('sms_type', '!=', '3')]}"/>
+                    </group>
+                    <group>
+                        <field name="model_id"/>
+                        <field name="btek_auto_condition_ids" string="Condition"/>
+                        <field name="define_domain" string="Domain define" invisible="1"/>
+                        <field name="domain" widget="char_domain_1" options="{'model_field': 'model_id'}" string="Condition extend"/>
+                        <field name="auto_domain" invisible="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Message">
+                            <sheet>
+                                <field name="message_template_id"
+                                       domain="[('channel', '=', channel)]"
+                                       style="width:20%" widget="radio"/>
+                                <field name="message" style="width:80%"/>
+                            </sheet>
+                        </page>
+                    </notebook>
+                    <notebook>
+                        <page string="Auto Run Infnormation">
+                            <sheet>
+                                <header>
+                                    <button name="run_manually" type="object" string="Run Manually" class="oe_highlight"
+                                            attrs="{'invisible': [('state', '!=', 'running')]}"/>
+                                </header>
+                                <group>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="active"/>
+                                    </group>
+                                    <group>
+                                        <field name="user_id"/>
+                                        <field name="priority"/>
+                                    </group>
+                                </group>
+                                <notebook>
+                                    <page string="Information">
+                                        <group>
+                                            <group>
+                                                <field name="interval_number"/>
+                                                <field name="nextcall"/>
+                                                <field name="doall"/>
+                                            </group>
+                                            <group>
+                                                <field name="interval_type"/>
+                                            <field name="numbercall"/>
+                                            </group>
+                                        </group>
+                                    </page>
+                                    <page string="Technical Data" groups="base.group_no_one">
+                                        <group string="Action to Trigger">
+                                            <field name="model" readonly="1"/>
+                                            <field name="function" readonly="1"/>
+                                        </group>
+                                        <label for="args"/>
+                                        <field name="args" readonly="1"/>
+                                    </page>
+                                </notebook>
+                            </sheet>
+                        </page>
+                        <page string="Sent Logs">
+                            <field name="btek_auto_send_log_ids">
+                                <tree create="false">
+                                    <field name="create_day"/>
+                                    <field name="total_message"/>
+                                    <field name="note"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_btek_auto_send" model="ir.actions.act_window">
+        <field name="name">Btek Auto send Message</field>
+        <field name="res_model">btek.auto.send</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_btek_auto_send" name="Automation Message"
+              action="action_btek_auto_send"
+              parent="menu_btek_auto_marketing"
+              sequence="5"/>
+</odoo>

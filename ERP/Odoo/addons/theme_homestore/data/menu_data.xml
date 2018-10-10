@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+	<data>
+		
+		
+		<record id="menu_women" model="website.menu">
+			<field name="name">Groceries</field>
+			<field name="url">#</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">36</field>
+			<field name="is_mega_menu">True</field>
+			<field name="submenu_view">
+			<![CDATA[
+					<div id="groceries">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Groceries & Staples</a></h2>
+									<ul class="">
+										<li>
+											<a href="#" title="">- Atta/Flour</a>
+										</li>
+										<li>
+											<a href="#" title="">- Dals & Pulses</a>
+										</li>
+										<li>
+											<a href="#" title="">- Dry Fruits</a>
+										</li>
+										<li>
+											<a href="#" title="">- Rice</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Spices</a></h2>
+									<ul class="bullet">
+										<li>
+											<a href="#" title="Accessories">- Oiles & Ghess</a>
+										</li>
+										<li>
+											<a href="#" title=" Hats And Gloves">- Sale </a>
+										</li>
+										<li>
+											<a href="#" title="Lifestyle">- Seasonings</a>
+										</li>
+										<li>
+											<a href="#" title="Dress">- Olive Oil</a>
+										</li>										
+									</ul>
+								</div>
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Instant Meals</a></h2>
+									<ul class="">
+										<li>
+											<a href="#" title="">- Dips</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Dressings</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Jams/Butter</a>
+										</li>
+										<li>
+											<a href="#" title="  ">- Paste/Purees</a>
+										</li>										
+									</ul>								
+								</div>
+								
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Personal Care</a></h2>
+									<ul class="">
+										<li>
+											<a href="#" title="">- Body Care</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Perfumes</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Deo</a>
+										</li>
+										<li>
+											<a href="#" title="  ">- Hair Care</a>
+										</li>	
+										
+										<li>
+											<a href="#" title="  ">- Kajal</a>
+										</li>										
+									</ul>				
+									
+								</div>
+								
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Baby Product</a></h2>
+									<ul class="">
+										<li>
+											<a href="#" title="">- Baby food</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Baby Oil</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Baby Soap</a>
+										</li>
+										<li>
+											<a href="#" title="  ">- Diaper/wipes</a>
+										</li>	
+										
+										<li>
+											<a href="#" title="  ">- Baby Shampoo</a>
+										</li>										
+									</ul>								
+								</div>
+								
+								<div class="col-md-2 col-sm-4">
+									<h2><a href="#">Beverages</a></h2>
+									<ul class="">
+										<li>
+											<a href="#" title="">- Packed Mineral water</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Tea & Coffee</a>
+										</li>
+										<li>
+											<a href="#" title=" ">- Soft Drinks</a>
+										</li>
+										<li>
+											<a href="#" title="  ">- Fruit Juice</a>
+										</li>	
+										
+										<li>
+											<a href="#" title="  ">- Drinks</a>
+										</li>										
+									</ul>								
+								</div>
+								<div class="col-md-12 col-sm-12 last-block">
+									<div class="row">
+										<img src="/theme_homestore/static/src/image/Grocery & Staples.png" class="img img-responsive" style="margin:0px auto;" />
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+			 ]]>
+
+			</field>
+		</record>	
+		
+		
+
+	</data>
+</odoo>

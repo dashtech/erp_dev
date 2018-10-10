@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="service_ids_view"  model="ir.ui.view">
+        <field name="name">service_ids_view</field>
+        <field name="model">service.provider</field>
+        <field name="priority">5001</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="product_ids" string="Services" domain="[('type', '=', 'service')]"/>
+                </group>
+                <footer>
+                    <button name="action_ok_service" type="object" string="Done" options="{'always_reload': True}"/> or
+                    <button name="cancel" string="Cancel" special="cancel" class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_service_ids" model="ir.actions.act_window">
+        <field name="name">Service</field>
+        <field name="res_model">service.provider</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'form_view_ref': 'bave_social.service_ids_view'}</field>
+        <field name="domain">[]</field>
+    </record>
+
+</odoo>

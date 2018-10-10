@@ -1,0 +1,387 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_setup
+#
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2016
+# fanha99 <fanha99@hotmail.com>, 2016
+# Phạm Lân <phamquanglan@gmail.com>, 2016
+# son dang <son.dang@doda100.com>, 2016
+# Hoang Loc Le Huu <loclhh@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-19 12:35+0000\n"
+"PO-Revision-Date: 2016-09-19 12:35+0000\n"
+"Last-Translator: Hoang Loc Le Huu <loclhh@gmail.com>, 2016\n"
+"Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "(reload fonts)"
+msgstr "(nạp lại fonts)"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid ""
+"<span>(*) This configuration is related to the company you're logged into.</span>"
+msgstr ""
+"<span>(*) Cấu hình này có liên quan đến công ty mà bạn đăng nhập.</span>"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_portal
+msgid "Activate the customer portal"
+msgstr "Kích hoạt cổng thông tin khách hàng"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_share
+msgid "Allow documents sharing"
+msgstr "Cho phép chia sẻ tài liệu"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_group_multi_currency
+msgid "Allow multi currencies"
+msgstr "Cho phép đa tiền tệ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_calendar
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr "Cho phép người dùng đồng bộ hóa lịch của họ với Lịch Google"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_base_import
+msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
+msgstr "Cho phép người dùng nhập dữ liệu từ các tệp CSV / XLS / XLSX / ODS"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_group_multi_currency
+msgid "Allows to work in a multi currency environment"
+msgstr "Cho phép làm việc trong một môi trường đa tiền tệ"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Apply"
+msgstr "Áp dụng"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_drive
+msgid "Attach Google documents to any record"
+msgstr "Gắn tài liệu Google vào bất kỳ bản ghi nào"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Authentication"
+msgstr "Chứng thực"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_custom_footer
+msgid ""
+"Check this to define the report footer manually. Otherwise it will be filled"
+" in automatically."
+msgstr ""
+"Kiểm tra để xác định phần chân của báo cáo bằng tay, nếu không nó sẽ được điền"
+"tự động".
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Configure outgoing email servers"
+msgstr "Cấu hình máy chủ gửi email"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Configure your company data"
+msgstr "Cấu hình dữ liệu công ty của bạn"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_footer
+msgid "Custom Report Footer *"
+msgstr "Báo cáo tuỳ chỉnh chân trang*"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_custom_footer
+msgid "Custom footer *"
+msgstr "Tùy chỉnh chân trang *"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Edit default access rights for new users"
+msgstr "Chỉnh sửa quyền truy cập mặc định cho người dùng mới"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Email"
+msgstr "Tên đăng nhập / Email"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_font
+msgid "Font *"
+msgstr "Phông chữ *"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_rml_footer
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_rml_footer_readonly
+msgid "Footer text displayed at the bottom of all reports."
+msgstr "Văn bản chân trang được hiển thị ở cuối tất cả các báo cáo."
+
+#. module: base_setup
+#: model:ir.actions.act_window,name:base_setup.action_general_configuration
+#: model:ir.ui.menu,name:base_setup.menu_config
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "General Settings"
+msgstr "Thiết lập chung"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_module_portal
+msgid "Give your customers access to their documents."
+msgstr "Cung cấp cho khách hàng của bạn quyền truy cập vào tài liệu của họ."
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Google Calendar"
+msgstr "Lịch Google"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Google Drive"
+msgstr "Google Drive"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Google Integration"
+msgstr "Tích hợp Google"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_id
+msgid "ID"
+msgstr "Mã"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Import / Export"
+msgstr "Nhập / Xuất"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Inter company"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_inter_company_rules
+msgid "Manage Inter Company"
+msgstr ""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_group_multi_company
+msgid "Manage multiple companies"
+msgstr "Quản lý nhiều công ty"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Multi Company"
+msgstr "Đa công ty"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Multi Currencies"
+msgstr "Đa tiền tệ"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "New users access rights"
+msgstr "uyền truy cập người dùng mới"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid ""
+"Once installed, you can configure your API credentials for \"Google "
+"calendar\""
+msgstr ""
+"Sau khi cài đặt, bạn có thể định cấu hình chứng chỉ API của mình cho \" Google "
+"lịch\""
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_paper_format
+msgid "Paper Format *"
+msgstr "Định dạng giấy *"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Portal access"
+msgstr "Truy cập cổng"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Preview RML Report"
+msgstr "Xem trước báo cáo RML"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header
+msgid "RML Header *"
+msgstr "Tiêu đề RML *"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header2
+msgid "RML Internal Header *"
+msgstr "iêu đề nội bộ RML *"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header3
+msgid "RML Internal Header for Landscape Reports *"
+msgstr "Tiêu đề nội bộ RML cho phong cách báo cáo *"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "RML Report Configuration"
+msgstr "Cấu hình báo cáo RML"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Report Configuration"
+msgstr "Cấu hình báo cáo"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_footer_readonly
+msgid "Report Footer *"
+msgstr "Chân báo cáo *"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_font
+msgid ""
+"Set the font into the report header, it will be used as default font in the "
+"RML reports of the user company"
+msgstr ""
+"Đặt phông chữ vào tiêu đề báo cáo, nó sẽ được sử dụng làm phông chữ mặc định trong thư mục"
+"Báo cáo RML của công ty người dùng"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_module_share
+msgid "Share or embed any screen of Odoo."
+msgstr "Chia sẻ hoặc nhúng bất kỳ màn hình nào của Odoo."
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_company_share_partner
+msgid "Share partners to all companies"
+msgstr "Chia sẻ đối tác với tất cả các công ty"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_company_share_partner
+msgid ""
+"Share your partners to all companies defined in your instance.\n"
+" * Checked : Partners are visible for every companies, even if a company is defined on the partner.\n"
+" * Unchecked : Each company can see only its partner (partners where company is defined). Partners not related to a company are visible for all companies."
+msgstr ""
+"Chia sẻ đối tác của bạn với tất cả các công ty được xác định trong trường hợp của bạn. \ N"
+"Đã kiểm tra: Các đối tác có thể nhìn thấy được cho mọi công ty, ngay cả khi một công ty được xác định trên đối tác. \ N"
+"* Bỏ đánh dấu: Mỗi công ty chỉ có thể nhìn thấy đối tác của mình (đối tác mà công ty được xác định) Các đối tác không liên quan đến một công ty đều có thể nhìn thấy được đối với tất cả các công ty."
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid "Shared resources"
+msgstr "Tài nguyên chia sẻ"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_module_google_calendar
+msgid "This installs the module google_calendar."
+msgstr "Cài đặt này sẽ cài đặt module google_calendar."
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_module_google_drive
+msgid "This installs the module google_docs."
+msgstr "Cài đặt này sẽ cài đặt module google_docs."
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_module_inter_company_rules
+msgid ""
+"This installs the module inter_company_rules.\n"
+" Configure company rules to automatically create SO/PO when one of your company sells/buys to another of your company."
+msgstr ""
+"Điều này sẽ cài đặt mô-đun inter_company_rules. \ N"
+"Cấu hình các quy tắc của công ty để tự động tạo SO / PO khi một trong những công ty của bạn bán / mua cho một công ty khác của công ty bạn."
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr "Sử dụng các nhà cung cấp chứng thực bên ngoài (OAuth)"
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid ""
+"When you send a document to a customer\n"
+"                                    (quotation, invoice), your customer will be\n"
+"                                    able to signup to get all his documents,\n"
+"                                    read your company news, check his projects,\n"
+"                                    etc."
+msgstr ""
+"Khi bạn gửi tài liệu cho khách hàng \ n"
+"(báo giá, hóa đơn), khách hàng của bạn sẽ là \ n"
+"có thể đăng ký để có được tất cả các tài liệu của mình, \ n"
+"đọc tin tức công ty của bạn, kiểm tra dự án của mình, v.v ..."
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_base_config_settings_group_multi_company
+msgid ""
+"Work in multi-company environments, with appropriate security access between"
+" companies."
+msgstr ""
+"Làm việc trong môi trường đa công ty, với quyền truy cập an toàn thích hợp giữa"
+" các công ty."
+
+#. module: base_setup
+#: model:ir.ui.view,arch_db:base_setup.view_general_configuration
+msgid ""
+"You will find more options in your company details: address for the header "
+"and footer, overdue payments texts, etc."
+msgstr ""
+"Bạn sẽ tìm thấy nhiều lựa chọn trong chi tiết công ty của bạn: địa chỉ cho tiêu đề"
+"và chân trang, các văn bản thanh toán quá hạn, v.v ..."
+
+#. module: base_setup
+#: model:ir.model,name:base_setup.model_base_config_settings
+msgid "base.config.settings"
+msgstr "base.config.settings"

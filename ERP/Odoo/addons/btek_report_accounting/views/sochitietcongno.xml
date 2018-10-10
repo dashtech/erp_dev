@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="so_chi_tiet_congno_report_form" model="ir.ui.view">
+            <field name="name">Report</field>
+            <field name="model">so.chi.tiet.congno</field>
+            <field name="arch" type="xml">
+                <form string="SỔ CHI TIẾT CÔNG NỢ">
+                    <group>
+                        <group>
+                            <field name="company_id" string="Công ty"/>
+                            <field name="account_ids" string="Tài khoản" required="1"
+                                   widget="many2many_tags"/>
+                            <field name="result_selection"/>
+                            <field name="type_entries" string="Loại"/>
+                        </group>
+                        <group>
+                            <field name="start_date" string="Từ ngày"/>
+                            <field name="end_date" string="Đến ngày"/>
+                        </group>
+                    </group>
+                    <!--<notebook name="Filter" colspan="4">-->
+                        <!--<page string="Bộ lọc">-->
+                            <!--<group col="4"-->
+                                   <!--&gt;-->
+                                <!---->
+                            <!--</group>-->
+                        <!--</page>-->
+                    <!--</notebook>-->
+                    <footer>
+                        <button name="action_print" string="Export Excel"
+                                class="oe_highlight" type="object"/>
+                        |
+                        <button name="preview_excel" string="Preview Excel"
+                                class="oe_highlight" type="object"/>
+                        |
+                        <button name="view_report" string="View Detail"
+                                class="oe_highlight" type="object"/>
+                        |
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="so_chi_tiet_congno_report_act_anhtt" model="ir.actions.act_window">
+            <field name="name">SỔ CHI TIẾT CÔNG NỢ</field>
+            <field name="res_model">so.chi.tiet.congno</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="so_chi_tiet_congno_report_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_so_chi_tiet_congno_report" name="Sổ chi tiết công nợ"
+                  sequence="2" parent="account.menu_finance_reports"
+                  action="so_chi_tiet_congno_report_act_anhtt" groups="account.group_account_user"/>
+
+        <report id="so_chi_tiet_congno_report"
+                model="so.chi.tiet.congno"
+                string="Sochitietcongno"
+                report_type="xlsx"
+                name="btek_report_accounting.sochitiet_report"
+                file="btek_report_accounting.sochitietcongno"
+                attachment_use="False"/>
+
+        <!--view report in form-->
+        <record id="res_partner_so_chi_tiet_cong_no_tree" model="ir.ui.view">
+            <field name="name">res.partner.so.chi.tiet.cong.no.tree</field>
+            <field name="model">res.partner.so.chi.tiet.cong.no</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_kh"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="nodauky"/>
+                    <field name="codauky"/>
+                    <field name="debit"/>
+                    <field name="credit"/>
+                    <field name="nocuoiky"/>
+                    <field name="cocuoiky"/>
+                    <!--<field name="wizard_id"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_partner_so_chi_tiet_cong_no_action" model="ir.actions.act_window">
+            <field name="name">DETAIL CREDIT BOOK</field>
+            <field name="res_model">res.partner.so.chi.tiet.cong.no</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--action open move line-->
+        <record id="open_res_partner_so_chi_tiet_cong_no_action" model="ir.actions.act_window">
+            <field name="name">CREDIT MOVE LINES</field>
+            <field name="res_model">account.move.line</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="open_res_partner_so_chi_tiet_cong_no_server_action" model="ir.actions.server">
+            <field name="name">DETAIL CREDIT BOOK</field>
+            <field name="model_id" ref="model_res_partner_so_chi_tiet_cong_no"/>
+            <field name="condition">True</field>
+            <field name="state">code</field>
+            <field name="code">action = record.open_move_line_action()</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_open_res_partner_so_chi_tiet_cong_no" model="ir.values">
+            <field eval="'tree_but_open'" name="key2"/>
+            <field eval="'res.partner.so.chi.tiet.cong.no'" name="model"/>
+            <field name="name">DETAIL CREDIT BOOK</field>
+            <field eval="'ir.actions.server,%d'%open_res_partner_so_chi_tiet_cong_no_server_action" name="value"/>
+        </record>
+
+        <!--open move-->
+        <record id="open_account_move_line_account_move_server_action"
+                model="ir.actions.server">
+            <field name="name">DETAIL CREDIT BOOK</field>
+            <field name="model_id" ref="account.model_account_move_line"/>
+            <field name="condition">True</field>
+            <field name="state">code</field>
+            <field name="code">action = record.open_move_action()</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="action_open_account_move_line_account_move"
+                model="ir.values">
+            <field eval="'tree_but_open'" name="key2"/>
+            <field eval="'account.move.line'" name="model"/>
+            <field name="name">DETAIL CREDIT BOOK</field>
+            <field eval="'ir.actions.server,%d'%open_account_move_line_account_move_server_action" name="value"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Happy Customer Block" id="snippet_happy_customer">
+			<section class="section-map">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-3">
+
+							<div class="count-up-item">
+								<div class="icon-count-up icon-customer">
+									<i class="fa fa-user fa-3x"></i>
+								</div>
+								<div class="numscroller">
+									<span class="stat-count highlight">200</span>
+								</div>
+
+								<p>Happy Customers</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3">
+
+							<div class="count-up-item">
+								<div class="icon-count-up icon-customer">
+									<i class="fa fa-th-list fa-3x"></i>
+								</div>
+								<div class="numscroller">
+									<span class="stat-count highlight">53</span>
+								</div>
+
+								<p>Item</p>
+							</div>
+
+						</div>
+						<div class="col-md-3 col-sm-3">
+
+							<div class="count-up-item">
+								<div class="icon-count-up icon-customer">
+									<i class="fa fa-eye fa-3x"></i>
+								</div>
+								<div class="numscroller">
+									<span class="stat-count highlight">45</span>
+								</div>
+
+								<p>Views</p>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-3">
+
+							<div class="count-up-item">
+								<div class="icon-count-up icon-customer">
+									<i class="fa fa-pie-chart fa-3x"></i>
+								</div>
+								<div class="numscroller">
+									<span class="stat-count highlight">11</span>
+								</div>
+
+								<p>Sales</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+</odoo>

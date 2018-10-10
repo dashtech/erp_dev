@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="Matrix">
+        <tr>
+            <td style="vertical-align: top; width: 100px; max-width: 100px">
+                <label class="o_form_label o_form_label_empty o_form_label_false" data-original-title="" title="">
+                    <t t-raw="ques.string" />
+                </label>
+            </td>
+            <td>
+                <t t-foreach="ques.labels_2" t-as="row_label">
+                    <div style="display: flex; padding-bottom: 7px;">
+                        <div>
+                            <t t-if="ques.type == 'matrix_input'">
+                                <input t-if="!er" type="text" t-att-data="row_label.id" t-att-value="row_label.value_input" />
+                                <!--<t t-if="er">-->
+                                    <!--<span>-->
+                                        <!--<t t-esc="row_label.value_input" />-->
+                                    <!--</span>-->
+                                <!--</t>-->
+                                <input t-if="er" type="text" disabled="disabled" t-att-data="row_label.id" t-att-value="row_label.value_input" />
+                            </t>
+                        </div>
+                        <div style="padding-left: 10px; padding-top: 3px;">
+                            <t t-foreach="ques.labels_ids" t-as="col_label">
+                                <t t-if="col_label.id == row_label.value_radio">
+                                    <div t-att-class="'radio radio-inline '+col_label.color">
+                                        <input t-if="!er" type="radio" t-att-name="row_label.id" checked="checked"
+                                               t-att-id="col_label.id+'_'+row_label.id" t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <input t-if="er" type="radio" t-att-name="row_label.id" disabled="disabled" checked="checked"
+                                               t-att-id="col_label.id+'_'+row_label.id" t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <label t-att-for="col_label.id+'_'+row_label.id"></label>
+                                    </div>
+                                </t>
+                                <t t-if="col_label.id != row_label.value_radio">
+                                    <div t-att-class="'radio radio-inline '+col_label.color">
+                                        <input t-if="!er" type="radio" t-att-name="row_label.id" t-att-id="col_label.id+'_'+row_label.id"
+                                               t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <input t-if="er" type="radio" t-att-name="row_label.id" disabled="disabled" t-att-id="col_label.id+'_'+row_label.id"
+                                               t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <label t-att-for="col_label.id+'_'+row_label.id"></label>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </td>
+        </tr>
+    </t>
+
+    <t t-name="Matrix Row">
+        <tr>
+            <td style="vertical-align: top; width: 100px; max-width: 100px">
+                <label class="o_form_label o_form_label_empty o_form_label_false" data-original-title="" title="">
+                    <t t-raw="ques.string" />
+                </label>
+            </td>
+            <td>
+                <t t-foreach="ques.labels_2" t-as="row_label">
+                    <div style="display: flex; padding-bottom: 7px;">
+                        <!--<div>-->
+                            <!--<t t-if="ques.type == 'matrix_row'">-->
+                                <!--<input t-if="!er" type="text" t-att-data="row_label.id" t-att-value="row_label.value_input" />-->
+                                <!--<t t-if="er">-->
+                                    <!--<span>-->
+                                        <!--<t t-esc="row_label.value_input" />-->
+                                    <!--</span>-->
+                                <!--</t>-->
+                                <!--<input t-if="er" type="text" disabled="disabled" t-att-data="row_label.id" t-att-value="row_label.value_input" />-->
+                            <!--</t>-->
+                        <!--</div>-->
+                        <div style="padding-left: 0px; padding-top: 3px;">
+                            <t t-foreach="ques.labels_ids" t-as="col_label">
+                                <t t-if="col_label.id == row_label.value_radio">
+                                    <div t-att-class="'radio radio-inline '+col_label.color">
+                                        <input t-if="!er" type="radio" t-att-name="row_label.id" checked="checked"
+                                               t-att-id="col_label.id+'_'+row_label.id" t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <input t-if="er" type="radio" t-att-name="row_label.id" disabled="disabled" checked="checked"
+                                               t-att-id="col_label.id+'_'+row_label.id" t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <label t-att-for="col_label.id+'_'+row_label.id"></label>
+                                    </div>
+                                </t>
+                                <t t-if="col_label.id != row_label.value_radio">
+                                    <div t-att-class="'radio radio-inline '+col_label.color">
+                                        <input t-if="!er" type="radio" t-att-name="row_label.id" t-att-id="col_label.id+'_'+row_label.id"
+                                               t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <input t-if="er" type="radio" t-att-name="row_label.id" disabled="disabled" t-att-id="col_label.id+'_'+row_label.id"
+                                               t-att-data="ques.id" t-att-value="col_label.id" />
+                                        <label t-att-for="col_label.id+'_'+row_label.id"></label>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </td>
+        </tr>
+    </t>
+    <t t-name="FreeText">
+        <tr>
+            <td style="vertical-align: top; width: 100px; max-width: 100px">
+                <label class="o_form_label o_form_label_empty o_form_label_false" data-original-title="" title="">
+                    <t t-raw="ques.string" />
+                </label>
+            </td>
+            <td>
+                <textarea t-if="!er" style="margin-bottom: 7px" t-att-data="ques.id"><t t-raw="ques.value" /></textarea>
+                <textarea t-if="er" style="margin-bottom: 7px" disabled="disabled" t-att-data="ques.id"><t t-raw="ques.value" /></textarea>
+            </td>
+        </tr>
+    </t>
+    <t t-name="TextBox">
+        <tr>
+            <td style="vertical-align: top; width: 100px; max-width: 100px">
+                <label class="o_form_label o_form_label_empty o_form_label_false" data-original-title="" title="">
+                    <t t-raw="ques.string" />
+                </label>
+            </td>
+            <td>
+                <input t-if="!er" type="text" style="margin-bottom: 7px" t-att-value="ques.value" t-att-data="ques.id" />
+                <input t-if="er" type="text" style="margin-bottom: 7px" disabled="disabled" t-att-value="ques.value" t-att-data="ques.id" />
+            </td>
+        </tr>
+    </t>
+    <t t-name="DateTime">
+        <tr>
+            <td style="vertical-align: top; width: 100px; max-width: 100px">
+                <label class="o_form_label o_form_label_empty o_form_label_false" data-original-title="" title="">
+                    <t t-raw="ques.string" />
+                </label>
+            </td>
+            <td>
+                <input t-if="!er" type="datetime" style="margin-bottom: 7px" t-att-value="ques.value" t-att-data="ques.id" />
+                <input t-if="er" type="datetime" style="margin-bottom: 7px" disabled="disabled" t-att-value="ques.value" t-att-data="ques.id" />
+            </td>
+        </tr>
+    </t>
+    <t t-name="PageContent">
+        <div class="js_question-wrapper" style="padding: 10px 10px;">
+            <h2>
+                <span><t t-raw="p.string" /></span>
+            </h2>
+            <table>
+                <tbody>
+                    <t t-foreach="p.question" t-as="ques">
+                        <t t-if="ques.type == 'matrix'">
+                            <t t-call="Matrix" />
+                        </t>
+                        <t t-if="ques.type == 'matrix_input'">
+                            <t t-call="Matrix" />
+                        </t>
+                        <t t-if="ques.type == 'matrix_row'">
+                            <t t-call="Matrix Row" />
+                        </t>
+                        <t t-if="ques.type == 'free_text'">
+                            <t t-call="FreeText" />
+                        </t>
+                        <t t-if="ques.type == 'textbox'">
+                            <t t-call="TextBox" />
+                        </t>
+                        <t t-if="ques.type == 'datetime'">
+                            <t t-call="TextBox" />
+                        </t>
+                        <t t-if="ques.type == 'simple_choice'">
+                            <t t-call="TextBox" />
+                        </t>
+                        <t t-if="ques.type == 'multiple_choice'">
+                            <t t-call="TextBox" />
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+    <t t-name="FieldOK">
+        <div class="o_notebook car_auto_page">
+            <ul t-attf-class="nav nav-tabs" role="tablist">
+                <li t-foreach="widget.pages" t-as="page">
+                    <a role="tab" t-attf-href="##{page.id}" data-toggle="tab" disable_anchor="true">
+                        <t t-esc="page.string"/>
+                    </a>
+                </li>
+            </ul>
+            <t t-set="er" t-value="widget.get('effective_readonly')" />
+            <div class="tab-content">
+                <div role="tabpanel" t-foreach="widget.pages" t-as="page" t-attf-class="tab-pane" t-att-id="id">
+                    <t t-foreach="page.group" t-as="_group">
+                        <table style="float: left; width: 50%">
+                            <tr>
+                                <td>
+                                    <t t-foreach="_group" t-as="p">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="vertical-align: top">
+                                                        <t t-call="PageContent" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="OrderProduct">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">So Luong:</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="quantity" placeholder="so luong" />
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="MyKanBan">
+        <div class="o_kanban_view o_fleet_repair_kanban o_kanban_ungrouped oknhehihi" style="display: flex">
+            <div style="display: flex; width: 100%; padding: 15px 2px;">
+                <div class="search_ok" style="flex: 1">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg input-search-ok" placeholder="search...." />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info btn-lg search-ok" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter_ok" style="flex: 1">
+                    <a class="btn btn-default btn-select">
+                    <input type="hidden" class="btn-select-input" id="" name="" t-att-value="widget.category_value" />
+                    <span class="btn-select-value"><t t-esc="widget.category_value" /></span>
+                    <span class='btn-select-arrow fa fa-arrow-down'></span>
+                        <ul>
+                            <t t-foreach="widget.category" t-as="cate">
+                                <li t-att-value="cate.id"><t t-esc="cate.name" /></li>
+                            </t>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <div style="width: 100%; display: flex;">
+                <div style="flex: 1">
+                </div>
+                <div style="flex: 1; max-width: 150px;">
+                    <span style="line-height: 30px;"><t t-esc="widget.page_label" /></span>
+                    <span class="btn-group btn-group-sm" style="float: right">
+                        <button class="fa fa-chevron-left btn btn-icon previous-ok" type="button"></button>
+                        <button class="fa fa-chevron-right btn btn-icon next-ok" type="button"></button>
+                    </span>
+                </div>
+            </div>
+            <t t-foreach="widget.data" t-as="d">
+                <div class="oe_kanban_global_click o_fleet_repair_kanban o_kanban_record"
+                     style="box-shadow: 0px 0px 1px 1px #666666 !important">
+                    <div style="display: flex; padding: 0px">
+                        <div style="padding-left: 0px">
+                            <t t-if="d.image_medium">
+                                <img style="width: 128px" t-att-src="'data:image/png;base64, '+d.image_medium" t-att-alt="d.name" />
+                            </t>
+                            <t t-if="!d.image_medium">
+                                <img style="width: 128px" src="/car_repair_industry/static/src/image/placeholder.png" />
+                            </t>
+                        </div>
+                        <div style="padding: 10px">
+                            <ul>
+                                <li><h3 style="margin-top: 0px"><t t-esc="d.name" /></h3></li>
+                                <li style="overflow: hidden; color: rgb(123,123,123); font-weight: 300;">
+                                    <span style="font-weight: 600; font-size: 14px; display: block">
+                                        Tham chiếu nội bộ
+                                    </span>
+                                    <span style="display: block">
+                                        <t t-if="d.default_code">
+                                            <t t-esc="d.default_code" />
+                                        </t>
+                                    </span>
+                                </li>
+                                <li style="color: #d21f30; font-size: 17px;"><t t-esc="d.list_price" /> VND</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div >
+                        <ul>
+                            <!--<li><h3><t t-esc="d.name" /></h3></li>-->
+                            <!--<li></li>-->
+                        </ul>
+                    </div>
+                    <div >
+                        <button class="btn btn-primary btn-sm order_product" t-att-data="d.id" style="float: right; margin-left: 5px" type="button">Đặt Hàng</button>
+                        <button class="btn btn-default btn-sm create_product" t-att-data="d.id" style="float: right" type="button">Tạo Sản Phẩm</button>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+    <t t-name="Nothing">
+        <div></div>
+    </t>
+    <t t-extend="FormRenderingNotebook">
+        <t t-jquery="a[role='tab']" t-operation="replace">
+            <a role="tab" t-attf-href="##{page.id}" t-att-mydata="page.myid"
+               t-att-accesskey="page.accesskey" data-toggle="tab" disable_anchor="true">
+                <t t-esc="page.string"/>
+            </a>
+        </t>
+    </t>
+    <t t-name="Many2ManyFleet">
+        <t t-foreach="elements" t-as="el">
+            <span t-attf-class="badge dropdown" t-att-data-index="el_index" t-att-data-id="el.id">
+                <span class="o_badge_text" t-attf-title="#{el['display_name']}"><t t-raw="el['display_name']"/></span>
+                <span t-if="!readonly" class="fa fa-times o_delete"/>
+            </span>
+        </t>
+    </t>
+
+    <!--<t t-extend="FieldMany2One">-->
+        <!--<t t-jquery="t[t-if='widget.get('effective_readonly')']" t-operation="replace">-->
+        <!--</t>-->
+    <!--</t>-->
+
+    <t t-extend="UserMenu">
+        <t t-jquery="li.o_user_menu" t-operation="replace">
+            <li class="o_user_menu">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+                    <img class="img-circle oe_topbar_avatar" t-att-src="_s + '/web/static/src/img/user_menu_avatar.png'"/>
+                    <span class="oe_topbar_name"/> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <!--<li><a href="#" data-menu="documentation">Documentation</a></li>-->
+                    <!--<li><a href="#" data-menu="support">Support</a></li>-->
+                    <!--<li class="divider"/>-->
+                    <!--<li><a href="#" data-menu="settings">Preferences</a></li>-->
+                    <!--<li><a href="#" data-menu="account">My Odoo.com account</a></li>-->
+                    <li><a href="#" data-menu="logout">Log out</a></li>
+                </ul>
+            </li>
+        </t>
+
+    </t>
+</templates>

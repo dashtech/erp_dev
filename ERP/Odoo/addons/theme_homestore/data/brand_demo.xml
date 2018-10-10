@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+   <data noupdate="1">
+    	
+    	<record id="product_brand_1" model="product.brand">
+            <field name="name">Cinaabon</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-1.png"/>
+        </record>
+        
+         <record id="product_brand_2" model="product.brand">
+            <field name="name">BrickFire</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-2.png"/>
+        </record>
+         
+         <record id="product_brand_3" model="product.brand">
+            <field name="name">Prairie City</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-4.png"/>
+        </record>
+        
+         <record id="product_brand_4" model="product.brand">
+            <field name="name">Oakrum farm</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-5.png"/>
+        </record>
+        
+        <record id="product_brand_5" model="product.brand">
+            <field name="name">Hotmax Pro</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-1.png"/>
+        </record>
+        
+          <record id="product_brand_6" model="product.brand">
+            <field name="name">Steviva</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-2.png"/>
+        </record>
+          <record id="product_brand_7" model="product.brand">
+            <field name="name">Steviva1</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-4.png"/>
+        </record>
+        
+        
+        <record id="product_brand_8" model="product.brand">
+            <field name="name">Fastrack1</field>
+            <field name="brand_image" type="base64" file="theme_homestore/static/src/image/brand-5.png"/>
+        </record>
+        
+        
+        
+        
+    
+        
+    </data>
+</odoo>

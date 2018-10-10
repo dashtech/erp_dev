@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Language Selector Inherit & Added Language Direction -->
+    <template id="language_selector_inherit" inherit_id="website.language_selector">
+        <xpath expr="//ul/li/a[@class='js_change_lang']" position="replace">
+            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg[0])"
+               t-att-data-default-lang="(editable or translatable) and 'true' if website and lg[0] == website.default_lang_code else None"
+               t-att-data-lang="lg[0]" t-att-data-lang_dir="lg[2]" class="js_change_lang">
+                <t t-esc="lg[1].split('/').pop()"/>
+            </a>
+        </xpath>
+    </template>
+
+    <!-- Language Flag Template -->
+    <template id="language_flags" name="Language Flags">
+        <li t-if="(request.website_multilang and len(website.language_ids) &gt; 1)" class="dropdown language_dropdown">
+            <a href="#" class="dropdown-toggle language_flag" data-toggle="dropdown">
+                <t t-foreach="website.language_ids" t-as="lg">
+                    <t t-if="request.context.get('lang') == lg.code">
+                        <img t-att-src="website.image_url(lg, 'lang_flag')" height="30"
+                             width="30" t-att-title="lg.name" />
+                    </t>
+                </t>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" style="min-width: 80px;">
+                <t t-foreach="website.language_ids" t-as="lg">
+                    <t t-if="lang!=lg.code">
+                        <li style="min-width: 50px;">
+                            <a t-att-href="url_for(request.httprequest.path + '?' + keep_query(), lang=lg.code)"
+                               t-att-data-default-lang="(editable or translatable) and 'true' if website and lg.code == website.default_lang_code else None"
+                               class="js_change_lang" t-att-data-lang="lg.code" t-att-data-lang_dir="lg.direction">
+                                <img t-att-src="website.image_url(lg, 'lang_flag')" height="30" width="30" t-att-title="lg.name" />
+                            </a>
+                        </li>
+                    </t>
+                </t>
+            </ul>
+        </li>
+    </template>
+
+    <!-- Customize Options for Language Flag -->
+    <template id="top_menu_flags" inherit_id="website.layout" name="Show Language Flag"
+              active="False" customize_show="True">
+        <xpath expr="//ul[@id='top_menu']/t" position="after">
+            <li class="divider"/>
+            <t t-call="website_language_flag_73lines.language_flags"/>
+        </xpath>
+    </template>
+
+</odoo>

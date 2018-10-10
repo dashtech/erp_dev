@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="car_color_tree_view" model="ir.ui.view">
+            <field name="name">car.color.tree</field>
+            <field name="model">fleet.vehicle.color</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                    <field name="color_code"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                    <field name="car_vehicle_model_ids"
+                           widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_car_color" model="ir.actions.act_window">
+            <field name="name">Car color</field>
+            <field name="res_model">fleet.vehicle.color</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="menu_action_car_color"
+              name="Car color" action="action_car_color"
+              parent="fleet.fleet_configuration"
+              groups="base.group_no_one" sequence="4"/>
+
+        <record id="fleet.fleet_vehicle_view_search" model="ir.ui.view">
+            <field name="name">fleet.vehicle.search</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="arch" type="xml">
+                <search string="All vehicles">
+                    <field name="license_plate"/>
+                    <field name="vin_sn" />
+                    <field name="name" filter_domain="['|', ('name','ilike',self), ('license_plate','ilike',self)]" string="Vehicle"/>
+                    <field name="driver_id"/>
+                    <!--<field name="tag_ids"/>-->
+                    <field name="location"/>
+                    <!--<field name="state_id" />-->
+                    <filter name="alert_true" domain="['|',('contract_renewal_due_soon','=',True),('contract_renewal_overdue','=',True)]" string="Has Alert(s)"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="1" string="Group By">
+                        <filter name="groupby_status" context="{'group_by' : 'state_id'}" string="Status"/>
+                        <filter name="groupby_model" context="{'group_by' : 'model_id'}" string="Model"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+
+
+        <record id="repair_fleet_vehicle_view_form" model="ir.ui.view">
+            <field name="name">repair.fleet.form</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="replace">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                        <button name="return_action_to_open"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-book"
+                            context="{'xml_id':'fleet_vehicle_log_contract_action'}"
+                            help="show the contract for this vehicle">
+                            <field name="contract_count" widget="statinfo" string="Contracts"/>
+                        </button>
+                        <button name="act_show_log_cost"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-usd"
+                            help="show all the costs for this vehicle"
+                            groups="fleet.fleet_group_manager">
+                            <field name="cost_count" widget="statinfo" string="Costs"/>
+                        </button>
+                        <button name="return_action_to_open"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-wrench"
+                            context="{'xml_id':'fleet_vehicle_log_services_action'}"
+                            help="show the services logs for this vehicle" >
+                            <field name="service_count" widget="statinfo" string="Services"/>
+                        </button>
+                        <button name="return_action_to_open"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-flask"
+                            context="{'xml_id':'fleet_vehicle_log_fuel_action'}"
+                            help="show the fuel logs for this vehicle" >
+                            <field name="fuel_logs_count" widget="statinfo" string="Fuel"/>
+                        </button>
+                        <button name="return_action_to_open"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-tachometer"
+                            context="{'xml_id':'fleet_vehicle_odometer_action'}"
+                            help="show the odometer logs for this vehicle" >
+                            <field name="odometer_count" widget="statinfo" string="Odometer"/>
+                        </button>
+                        <button type="object"
+                            name="button_view_service"
+                            class="oe_stat_button"
+                            icon="fa-wrench"
+                            help="Show the services logs for this vehicle" >>
+                            <field name="service_count" widget="statinfo" string="Services"/>
+                        </button>
+                    </div>
+                    <field name="image_medium" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="model_id" class="oe_edit_only"/>
+                        <h1>
+                            <field name="model_id"/>
+                        </h1>
+                        <label for="license_plate" class="oe_edit_only"/>
+                        <h2>
+                            <field name="license_plate" class="oe_inline"/>
+                        </h2>
+                        <label for="tag_ids" class="oe_edit_only"/>
+                        <field name="tag_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                    </div>
+                    <group col="2" string="General Properties">
+                        <group>
+                            <field name="driver_id" />
+                            <field name="location" />
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="type_id"/>
+                            <field name="color_id"
+                                   domain="[('car_vehicle_model_ids', 'in', model_id)]"/>
+                            <field name="car_info" invisible="1"/>
+                            <field name="vin_sn" />
+                            <field name="chassis_number" />
+                        </group>
+                        <group>
+                            <label for="odometer"/>
+                            <div class="o_row">
+                                <field name="odometer"/>
+                                <field name="odometer_unit"/>
+                            </div>
+                            <field name="acquisition_date"/>
+                            <field name="car_value"/>
+                            <field name="seats"/>
+                            <field name="doors"/>
+                        </group>
+                    </group>
+                    <group col="2">
+                        <group string="Engine Options">
+                            <field name="fuel_type" />
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+
+                </xpath>
+            </field>
+        </record>
+
+        <record id="fleet_vehicle_version_form_view" model="ir.ui.view">
+            <field name="name">fleet.vehicle.version.form</field>
+            <field name="model">fleet.vehicle.version</field>
+            <field name="arch" type="xml">
+                <form string="Vehicle version">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="fleet_vehicle_version_tree_view" model="ir.ui.view">
+            <field name="name">fleet.vehicle.version.tree</field>
+            <field name="model">fleet.vehicle.version</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicle version">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_fleet_vehicle_version" model="ir.actions.act_window">
+            <field name="name">Vehicle version</field>
+            <field name="res_model">fleet.vehicle.version</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_action_fleet_vehicle_version"
+              name="Vehicle version"
+              action="action_fleet_vehicle_version"
+              parent="fleet.fleet_configuration"
+              groups="base.group_no_one"
+              sequence="3"/>
+
+        <record id="fleet_vehicle_type_tree_view" model="ir.ui.view">
+            <field name="name">fleet.vehicle.type.tree</field>
+            <field name="model">fleet.vehicle.type</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_fleet_vehicle_type" model="ir.actions.act_window">
+            <field name="name">Vehicle type</field>
+            <field name="res_model">fleet.vehicle.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="menu_action_fleet_vehicle_type"
+              name="Vehicle type"
+              action="action_fleet_vehicle_type"
+              parent="fleet.fleet_configuration"
+              groups="base.group_no_one"
+              sequence="5"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="tax_inout_report_form_in" model="ir.ui.view">
+            <field name="name">Report</field>
+            <field name="model">tax.in.out.report</field>
+            <field name="arch" type="xml">
+                <form string="Thuế đầu vào">
+                    <group col="4">
+                        <field name="company_id" string="Công ty"/>
+                        <field name="type_report" invisible="1"/>
+                    </group>
+                    <notebook name="Filter" colspan="4">
+                        <page string="Bộ lọc">
+                            <group col="4"
+                                   >
+                                <field name="start_date" string="Từ ngày"/>
+                                <field name="end_date" string="Đến ngày"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="action_print" string="Print" class="oe_highlight" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="tax_inout_report_act_in" model="ir.actions.act_window">
+            <field name="name">Thuế đầu vào</field>
+            <field name="res_model">tax.in.out.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="tax_inout_report_form_in"/>
+            <field name="context">{
+            'default_type_report': 'in'}
+        </field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_tax_inout_report_in" name="Thuế đầu vào"
+                  sequence="40" parent="account.menu_finance_reports"
+                  action="tax_inout_report_act_in" groups="account.group_account_user"/>
+
+
+        <record id="tax_inout_report_form_out" model="ir.ui.view">
+            <field name="name">Report</field>
+            <field name="model">tax.in.out.report</field>
+            <field name="arch" type="xml">
+                <form string="Thuế đầu ra">
+                    <group col="4">
+                        <field name="company_id" string="Công ty"/>
+                        <field name="type_report" invisible="1"/>
+                    </group>
+                    <notebook name="Filter" colspan="4">
+                        <page string="Bộ lọc">
+                            <group col="4"
+                                   >
+                                <field name="start_date" string="Từ ngày"/>
+                                <field name="end_date" string="Đến ngày"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="action_print" string="Print" class="oe_highlight" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="tax_inout_report_act_out" model="ir.actions.act_window">
+            <field name="name">Thuế đầu ra</field>
+            <field name="res_model">tax.in.out.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="tax_inout_report_form_out"/>
+            <field name="context">{
+            'default_type_report': 'out'}
+        </field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_tax_inout_report_out" name="Thuế đầu ra"
+                  sequence="41" parent="account.menu_finance_reports"
+                  action="tax_inout_report_act_out" groups="account.group_account_user"/>
+
+        <report id="tax_in_out_report"
+                model="tax.in.out.report"
+                string="TaxReport"
+                report_type="xlsx"
+                name="btek_tax_report.tax_in_out_report"
+                file="btek_tax_report.tax_inout_report"
+                attachment_use="False"/>
+
+        <record id="btek_view_tax_form_inherited" model="ir.ui.view">
+            <field name="name">account.tax.form.inherited</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form" />
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="after">
+                    <field name="sequence"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

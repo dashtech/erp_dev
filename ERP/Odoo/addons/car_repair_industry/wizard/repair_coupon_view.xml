@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="view_fleet_repair_coupon_form" model="ir.ui.view">
+            <field name="name">fleet.repair.coupon.form</field>
+            <field name="model">fleet.repair.coupon</field>
+            <field name="arch" type="xml">
+                <form string="Enter Value Voucher">
+                    <group>
+                        <field name="coupon_code" style="width: 50%"/>
+                    </group>
+                    <footer>
+                        <button name="do_compare_coupon" string="Validate" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancelled" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_fleet_repair_coupon" model="ir.actions.act_window">
+            <field name="name">Enter &amp; Check coupon code</field>
+            <field name="res_model">fleet.repair.coupon</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+			<field name="view_id" ref="view_fleet_repair_coupon_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>

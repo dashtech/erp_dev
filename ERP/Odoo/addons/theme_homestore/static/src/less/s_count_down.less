@@ -1,0 +1,141 @@
+
+.custom-content h3.discount-title{
+
+	font-size: 270.92%;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 25px;
+    color: #fff;
+
+}
+
+.custom-content h3.discount-title:before{
+	content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.custom-content h3.discount-title a{
+	 color: #fff;
+}
+
+.custom-content .discount-description{
+	margin-bottom: 30px;
+	color: #fff;
+}
+#clockdiv3,
+#clockdiv1,
+#clockdiv{
+	
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	color:@color-primary;
+}
+
+#clockdiv3 > div,
+#clockdiv1 > div,
+#clockdiv > div{
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: inline-block;
+	border:2px solid #fff;
+}
+
+#clockdiv3 > div >div,
+#clockdiv1 > div >div,
+#clockdiv > div >div{
+	background: #F5F5F5;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+#clockdiv3 div > span,
+#clockdiv1 div > span,
+#clockdiv div > span{
+	padding: 0px 15px;
+	border-radius: 3px;	
+	display: inline-block;
+	font-size: 23px;
+    font-weight: bold;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+.action-custom {
+    padding-top: 30px;
+}
+
+
+.action-custom a {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 123.07%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    line-height: 38px;
+    padding: 0 40px;
+    transition: 0.2s;
+    -moz-transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.action-custom a:hover{
+	background-color:@color-primary;
+	border-color:@color-primary;
+}
+
+
+@media(max-width:767px){
+
+	.custom-content h3.discount-title{
+			font-size: 99.92%;
+	}
+	
+	#clockdiv3,
+	#clockdiv1,
+	#clockdiv{
+		font-size:15px;
+	}
+	
+	#clockdiv3 > div,
+	#clockdiv1 > div,
+	#clockdiv > div{
+		    padding: 8px 6px;
+	
+	}
+	.custom-content .discount-description{
+		font-size:14px;
+	}
+	.smalltext{
+		
+		font-size: 11px;
+	}
+	
+	#clockdiv3 > div >div,
+	#clockdiv1 > div >div,
+	#clockdiv > div >div{
+		padding: 4px 2px;
+	}
+	
+	.action-custom {
+		    padding-top: 15px;
+		}
+
+}
+

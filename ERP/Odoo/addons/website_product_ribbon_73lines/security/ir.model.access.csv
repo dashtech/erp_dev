@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_ribbon,product_ribbon,model_product_ribbon,,1,0,0,0

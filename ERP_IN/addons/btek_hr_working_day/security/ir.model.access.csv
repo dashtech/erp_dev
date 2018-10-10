@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_working_day,access_working_day,model_hr_working_day,hr_timesheet.group_hr_timesheet_user,1,1,1,1
+access_working_day_import,access_working_day_import,model_hr_working_day_import,hr_timesheet.group_hr_timesheet_user,1,1,1,1
+access_hr_working_day_employee,access_hr_working_day_employee,model_hr_working_day_employee,hr_timesheet.group_hr_timesheet_user,1,1,1,1
+access_hr_working_day_employee_line,access_hr_working_day_employee_line,model_hr_working_day_employee_line,hr_timesheet.group_hr_timesheet_user,1,1,1,1

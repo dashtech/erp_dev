@@ -1,0 +1,647 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* btek_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-12 04:07+0000\n"
+"PO-Revision-Date: 2018-09-12 04:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: btek_purchase
+#: model:mail.template,body_html:btek_purchase.bave_email_template_edi_purchase
+msgid "\n"
+"<p>Dear\n"
+"% if object.partner_id.is_company and object.partner_id.child_ids:\n"
+"    ${object.partner_id.child_ids[0].name}\n"
+"% else :\n"
+"    ${object.partner_id.name}\n"
+"% endif\n"
+",</p><p>\n"
+"Here is a ${object.state in ('draft', 'sent') and 'request for quotation' or 'purchase order confirmation'} <strong>${object.name}</strong>\n"
+"% if object.partner_ref:\n"
+"    with reference: ${object.partner_ref}\n"
+"% endif\n"
+"% if object.origin:\n"
+"    (RFQ origin: ${object.origin})\n"
+"% endif\n"
+"from ${object.company_id.name}.\n"
+"</p>\n"
+"\n"
+"<p>If you have any question, do not hesitate to contact us.</p>\n"
+"<p>Best regards,</p>\n"
+""
+msgstr "\n"
+"<p>Kính gửi\n"
+"% if object.partner_id.is_company and object.partner_id.child_ids:\n"
+"    ${object.partner_id.child_ids[0].name}\n"
+"% else :\n"
+"    ${object.partner_id.name}\n"
+"% endif\n"
+",</p><p>\n"
+"Đây là ${object.state in ('draft', 'sent') and 'yêu cầu báo giá' or 'xác nhận đơn mua hàng'} <strong>${object.name}</strong>\n"
+"% if object.partner_ref:\n"
+"    with reference: ${object.partner_ref}\n"
+"% endif\n"
+"% if object.origin:\n"
+"    (RFQ origin: ${object.origin})\n"
+"% endif\n"
+"từ ${object.company_id.name}.\n"
+"</p>\n"
+"\n"
+"<p>Nếu có câu hỏi gì, hãy liên hệ với chúng tôi.</p>\n"
+"<p>Trân trọng,</p>\n"
+""
+
+#. module: btek_purchase
+#: model:mail.template,body_html:btek_purchase.bave_email_template_edi_purchase_done
+msgid "\n"
+"<p>Dear ${object.partner_id.name}\n"
+"% if object.partner_id.parent_id:\n"
+"    (<i>${object.partner_id.parent_id.name}</i>)\n"
+"% endif\n"
+",</p>\n"
+"<p>\n"
+"Please find in attachment a <strong>${object.state in ('draft', 'sent') and 'request for quotation' or 'purchase order confirmation'} ${object.name}</strong>\n"
+"% if object.partner_ref:\n"
+"    with reference: ${object.partner_ref}\n"
+"% endif\n"
+"% if object.origin:\n"
+"    (RFQ origin: ${object.origin})\n"
+"% endif\n"
+"from ${object.company_id.name}.\n"
+"</p>\n"
+"\n"
+"<p>You can reply to this email if you have any questions.</p>\n"
+"<p>Thank you,</p>\n"
+""
+msgstr "\n"
+"<p>Kính gửi ${object.partner_id.name}\n"
+"% if object.partner_id.parent_id:\n"
+"    (<i>${object.partner_id.parent_id.name}</i>)\n"
+"% endif\n"
+",</p>\n"
+"<p>\n"
+"Please find in attachment a <strong>${object.state in ('draft', 'sent') and 'request for quotation' or 'purchase order confirmation'} ${object.name}</strong>\n"
+"% if object.partner_ref:\n"
+"    with reference: ${object.partner_ref}\n"
+"% endif\n"
+"% if object.origin:\n"
+"    (RFQ origin: ${object.origin})\n"
+"% endif\n"
+"từ ${object.company_id.name}.\n"
+"</p>\n"
+"\n"
+"<p>Bạn có thể trả lời email này nếu có bất kỳ câu hỏi nào.</p>\n"
+"<p>Cảm ơn,</p>\n"
+""
+
+#. module: btek_purchase
+#: model:mail.template,subject:btek_purchase.bave_email_template_edi_purchase
+#: model:mail.template,subject:btek_purchase.bave_email_template_edi_purchase_done
+msgid "${object.company_id.name} Order (Ref ${object.name or 'n/a' })"
+msgstr "${object.company_id.name} Đơn mua hàng (Ref ${object.name or 'n/a' })"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<b>Số tiền bằng chữ:</b>"
+msgstr "<b>Số tiền bằng chữ:</b>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<b>Tổng giá trị đơn hàng :</b>"
+msgstr "<b>Tổng giá trị đơn hàng :</b>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<b>Tổng thuế :</b>"
+msgstr "<b>Tổng thuế :</b>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<b>Tổng trước thuế :</b>"
+msgstr "<b>Tổng trước thuế :</b>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<i>(Ký, ghi rõ họ tên)</i>"
+msgstr "<i>(Ký, ghi rõ họ tên)</i>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span style=\"font-family: inherit; font-size: 34px!important;\"><b>YÊU CẦU BÁO GIÁ</b></span>"
+msgstr "<span style=\"font-family: inherit; font-size: 34px!important;\"><b>YÊU CẦU BÁO GIÁ</b></span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<span style=\"font-family: inherit; font-size: 34px!important;\"><b>ĐƠN ĐẶT HÀNG</b></span>"
+msgstr "<span style=\"font-family: inherit; font-size: 34px!important;\"><b>ĐƠN ĐẶT HÀNG</b></span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Ghi chú:</span>"
+msgstr "<span>Ghi chú:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Mã NCC:</span>"
+msgstr "<span>Mã NCC:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Ngày dự kiến:</span>"
+msgstr "<span>Ngày dự kiến:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Ngày lập phiếu:</span>"
+msgstr "<span>Ngày lập phiếu:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Người lập phiếu: </span>"
+msgstr "<span>Người lập phiếu: </span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Nhà Cung cấp:</span>"
+msgstr "<span>Nhà Cung cấp:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Số phiếu:</span>"
+msgstr "<span>Số phiếu:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Điện thoại:</span>"
+msgstr "<span>Điện thoại:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<span>Địa chỉ:</span>"
+msgstr "<span>Địa chỉ:</span>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<strong>........., Ngày....tháng....năm....</strong>"
+msgstr "<strong>........., Ngày....tháng....năm....</strong>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "<strong>Người lập phiếu</strong>"
+msgstr "<strong>Người lập phiếu</strong>"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "<strong>Nhà cung cấp</strong>"
+msgstr "<strong>Nhà cung cấp</strong>"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_purchase_order_amount_total_in_word
+msgid "Amount total in word"
+msgstr "Số tiền bằng chữ"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_name
+msgid "Attachment Name"
+msgstr "Tên đính kèm"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_local_url
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_website_url
+msgid "Attachment URL"
+msgstr "URL Đính kèm"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_attachment_id
+msgid "Automatically created field to link to parent ir.attachment"
+msgstr "Automatically created field to link to parent ir.attachment"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.import_purchase_order_line_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:58
+#, python-format
+msgid "Cannot import empty file!"
+msgstr "Không thể nhập từ tập tin trống!"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_checksum
+msgid "Checksum/SHA1"
+msgstr "Checksum/SHA1"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:372
+#, python-format
+msgid "Compose Email"
+msgstr "Compose Email"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_db_datas
+msgid "Database Data"
+msgstr "Database Data"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_search_inherit
+msgid "Date approve greater than or equal to"
+msgstr "Ngày được chấp thuận lớn hơn hoặc bằng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_search_inherit
+msgid "Date approve less than or equal to"
+msgstr "Ngày được chấp thuận nhỏ hơn hoặc bằng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_filter_inherit
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_search_inherit
+msgid "Date order greater than or equal to"
+msgstr "Ngày đặt hàng lớn hơn hoặc bằng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_filter_inherit
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_search_inherit
+msgid "Date order less than or equal to"
+msgstr "Ngày đặt hàng nhỏ hơn hoặc bằng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_filter_inherit
+msgid "Date planned greater than or equal to"
+msgstr "Ngày dự kiến lớn hơn hoặc bằng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.view_purchase_order_filter_inherit
+msgid "Date planned less than or equal to"
+msgstr "Ngày dự kiến nhỏ hơn hoặc bằng"
+
+#. module: btek_purchase
+#: sql_constraint:purchase.order:0
+msgid "Date planned must be greater than date order!"
+msgstr "Ngày dự kiến phải lớn hơn ngày đặt hàng!"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:143
+#, python-format
+msgid "Error: row {} Uom invalid!"
+msgstr "Lỗi: dòng {} ĐVT không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:257
+#, python-format
+msgid "Error: row {} cannot find tax \"{}\""
+msgstr "Lỗi: dòng {} không tìm thấy thuế \"{}\""
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:131
+#, python-format
+msgid "Error: row {} date planned invalid!"
+msgstr "Lỗi: dòng {} ngày theo kế hoạch không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:121
+#, python-format
+msgid "Error: row {} name invalid!"
+msgstr "Lỗi: dòng {} tên không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:149
+#, python-format
+msgid "Error: row {} price invalid!"
+msgstr "Lỗi: dòng {} giá không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:109
+#: code:addons/btek_purchase/models/purchase.py:115
+#, python-format
+msgid "Error: row {} product code invalid!"
+msgstr "Lỗi: dòng {} mã sản phẩm không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:137
+#, python-format
+msgid "Error: row {} qty invalid!"
+msgstr "Lỗi: dòng {} số lượng không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:105
+#, python-format
+msgid "Error: row {} sequence invalid!"
+msgstr "Lỗi: dòng {} số thứ tự không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:155
+#, python-format
+msgid "Error: row {} tax invalid!"
+msgstr "Lỗi: dòng {} thuế không đúng!"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:243
+#, python-format
+msgid "Error: row {} unit invalid !"
+msgstr "Lỗi: dòng {} đơn vị tính không đúng !"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:220
+#, python-format
+msgid "Error: row {}: cannot find product with product code =\"{}\""
+msgstr "Lỗi: dòng {}: không tìm thấy sản phẩm với mã =\"{}\""
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_datas
+msgid "File Content"
+msgstr "Nội dung tập tin"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_datas_fname
+msgid "File Name"
+msgstr "Tên tập tin"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_file_size
+msgid "File Size"
+msgstr "Dung lượng file"
+
+#. module: btek_purchase
+#: code:addons/btek_purchase/models/purchase.py:65
+#, python-format
+msgid "Format file incorrect, you must import file have at least {} column!"
+msgstr "Định dạng file không đúng, bạn phải nhập file có ít nhất {} cột!"
+
+#. module: btek_purchase
+#: model:ir.model.fields,help:btek_purchase.field_import_purchase_order_line_priority
+msgid "Gives the sequence order when displaying a list of tasks."
+msgstr "Chỉ ra thứ tự sắp xếp khi hiển thị danh sách nhiệm vụ."
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_purchase
+#: model:ir.actions.act_window,name:btek_purchase.action_import_purchase_order_line
+#: model:ir.ui.view,arch_db:btek_purchase.import_purchase_order_line_form_view
+msgid "Import order line"
+msgstr "Nhập dòng đơn hàng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.purchase_order_form_change
+msgid "Import product"
+msgstr "Nhập VT-HH"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_index_content
+msgid "Indexed Content"
+msgstr "Indexed Content"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_public
+msgid "Is public document"
+msgstr "Là tài liệu công khai"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_mimetype
+msgid "Mime Type"
+msgstr "Mime Type"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "Mã vật tư, hàng hóa"
+msgstr "Mã vật tư, hàng hóa"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_order_id
+msgid "Order id"
+msgstr "Order id"
+
+#. module: btek_purchase
+#: model:mail.template,report_name:btek_purchase.bave_email_template_edi_purchase_done
+msgid "PO_${(object.name or '').replace('/','_')}"
+msgstr "PO_${(object.name or '').replace('/','_')}"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_priority
+msgid "Priority"
+msgstr "Mức độ ưu tiên"
+
+#. module: btek_purchase
+#: model:ir.actions.report.xml,name:btek_purchase.action_btek_purchase_oder_report
+#: model:ir.model,name:btek_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Đơn hàng Mua"
+
+#. module: btek_purchase
+#: model:ir.model,name:btek_purchase.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Chi tiết đơn mua hàng"
+
+#. module: btek_purchase
+#: model:mail.template,report_name:btek_purchase.bave_email_template_edi_purchase
+msgid "Quotation_${(object.name or '').replace('/','_')}"
+msgstr "Báo giá_${(object.name or '').replace('/','_')}"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.purchase_order_form_change
+msgid "Re-Send RFQ by Email"
+msgstr "Gửi lại báo giá bằng Email"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_purchase_order_real_date_order
+msgid "Real Date Order"
+msgstr "Real Date Order"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_purchase_order_real_date_planned
+msgid "Real Date Planned"
+msgstr "Real Date Planned"
+
+#. module: btek_purchase
+#: model:ir.actions.report.xml,name:btek_purchase.btek_purchase_quotation_report
+msgid "Request Quotation"
+msgstr "Yêu cầu báo giá"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_res_field
+msgid "Resource Field"
+msgstr "Resource Field"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_res_id
+msgid "Resource ID"
+msgstr "ID Tài nguyên"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_res_model
+msgid "Resource Model"
+msgstr "Resource Model"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_res_name
+msgid "Resource Name"
+msgstr "Tên Tài nguyên"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "STT"
+msgstr "STT"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.purchase_order_form_change
+msgid "Send PO by Email"
+msgstr "Gửi Đơn hàng"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.purchase_order_form_change
+msgid "Send RFQ by Email"
+msgstr "Gửi báo giá qua email"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_store_fname
+msgid "Stored Filename"
+msgstr "Tên tệp tin được lưu trữ"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_template_file_url
+msgid "Template file url"
+msgstr "Liên kết tải tập tin mẫu"
+
+#. module: btek_purchase
+#: model:ir.model.fields,help:btek_purchase.field_import_purchase_order_line_res_model
+msgid "The database object this attachment will be attached to."
+msgstr "The database object this attachment will be attached to."
+
+#. module: btek_purchase
+#: model:ir.model.fields,help:btek_purchase.field_import_purchase_order_line_res_id
+msgid "The record id this is attached to."
+msgstr "The record id this is attached to."
+
+#. module: btek_purchase
+#: sql_constraint:purchase.order.line:0
+msgid "The sequence must be unique per order!"
+msgstr "The sequence must be unique per order!"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "Thuế"
+msgstr "Thuế"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "Thành tiền"
+msgstr "Thành tiền"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "Tên vật tư, hàng hóa"
+msgstr "Tên vật tư, hàng hóa"
+
+#. module: btek_purchase
+#: model:ir.model.fields,field_description:btek_purchase.field_import_purchase_order_line_url
+msgid "Url"
+msgstr "Url"
+
+#. module: btek_purchase
+#: model:ir.model.fields,help:btek_purchase.field_import_purchase_order_line_type
+msgid "You can either upload a file from your computer or copy/paste an internet link to your file."
+msgstr "You can either upload a file from your computer or copy/paste an internet link to your file."
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "chẵn."
+msgstr "chẵn."
+
+#. module: btek_purchase
+#: model:ir.model,name:btek_purchase.model_import_purchase_order_line
+msgid "import.purchase.order.line"
+msgstr "import.purchase.order.line"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "Đvt"
+msgstr "Đvt"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_oder
+msgid "Đơn giá"
+msgstr "Đơn giá"
+
+#. module: btek_purchase
+#: model:ir.ui.view,arch_db:btek_purchase.btek_purchase_quotation
+msgid "Đơn vị"
+msgstr "Đơn vị"
+

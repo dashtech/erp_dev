@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+    <!-- Less & Css & JS Assets -->
+    <template id="product_ribbon_assets_frontend" name="Product Ribbon Frontend Assets" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link href="/website_product_ribbon_73lines/static/src/less/product_ribbon.less"
+                  type="text/less" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>

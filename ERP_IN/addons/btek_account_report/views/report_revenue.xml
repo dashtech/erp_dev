@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_revenue_xlsx"
+        model="wizard.report.revenue"
+        string="Revenue Report"
+        report_type="xlsx"
+        name="btek_account_report.report.revenue.xlsx"
+        file="btek_account_report.report_revenue.xlsx"
+        attachment_use="False"/>
+
+    <menuitem id="account.menu_finance_reports" name="Reports"
+              parent="account.menu_finance" sequence="5"
+              groups="account.group_account_invoice,account.group_account_user"/>
+
+</odoo>

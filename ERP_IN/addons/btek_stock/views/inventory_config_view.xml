@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_inventory_config" model="ir.ui.view">
+        <field name="name">view_inventory_config</field>
+        <field name="model">btek.inventory.config</field>
+        <field name="arch" type="xml">
+            <form string="Configure Mailling List" create="false" delete="false">
+                <group>
+                    <field name="name" invisible="1"/>
+                    <field name="mailling_list"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_inventory_config" model="ir.actions.act_window">
+        <field name="name">Mailling List Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">btek.inventory.config</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="btek_stock.inventory_config_view"/>
+    </record>
+
+    <menuitem id="menu_inventory_config" name="Mailling List Settings"
+              parent="stock.menu_stock_config_settings"
+              sequence="26" action="action_inventory_config"/>
+
+</odoo>

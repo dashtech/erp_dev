@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_import_product_category,access.manager.import.product.category,model_import_product_category,,1,1,1,1
+access_manager_import_product_uom,access.manager.import.product.uom,model_import_product_uom,,1,1,1,1
+access_manager_import_customer,access.manager.import.customer,model_import_customer,,1,1,1,1
+access_manager_import_supplier,access.manager.import.supplier,model_import_supplier,,1,1,1,1
+access_home,access_home,model_home_import,,1,1,1,1

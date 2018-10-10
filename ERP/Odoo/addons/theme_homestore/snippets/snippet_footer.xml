@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<template name="Theme Footer" id="snippet_footer">
+			<section> 
+				<div class="oe_content" id="footer">
+					<div class="footer-container">
+						<div class="footer-top">
+							<div class="container">
+								<div class="row">
+									<div class="about-us-footer">
+										<img src="/theme_homestore/static/src/image/footer_logo.png"
+											class="img img-responsive" />
+										<p>
+											Excepteur sint occaecat cupidatat non proident, sunt in
+											culpa
+											qui officia deserunt mollit anim id est laborum. Sed
+											ut
+											<br />
+											perspiciatis unde omnis iste natus error sit voluptatem
+											accusantium doloremque laudantium
+										</p>
+									</div>
+
+									<div class="social-footer">
+										<div class="socials-wrap">
+
+
+											<ul>
+												<li class="li-social facebook-social">
+													<a t-att-href="website.social_facebook" t-if="website.social_facebook">
+														<span class="fa fa-facebook icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social twitter-social">
+													<a t-att-href="website.social_twitter" t-if="website.social_twitter">
+														<span class="fa fa-twitter icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social google-social">
+													<a t-att-href="website.social_googleplus" t-if="website.social_googleplus"
+														rel="publisher">
+														<span class="fa fa-google-plus icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social linkedin-social">
+													<a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+														<span class="fa fa-linkedin icon-social"></span>
+
+													</a>
+												</li>
+
+												<li class="li-social pinterest-social">
+													<a t-att-href="website.social_youtube" t-if="website.social_youtube">
+														<span class="fa fa-pinterest icon-social"></span>
+
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="support-footer">
+										<ul class="list-support">
+											<li>
+												<a href="#" title="Information">Information</a>
+											</li>
+											<li>
+												<a href="#" title="Support Center">Support Center</a>
+											</li>
+											<li>
+												<a href="#" title="Shipping Info ">Shipping Info </a>
+											</li>
+											<li>
+												<a href="#" title="My Account">My Account</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+</odoo>

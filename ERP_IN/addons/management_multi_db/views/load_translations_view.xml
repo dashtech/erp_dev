@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="load_translations_form_view">
+        <field name="name">Load Translations form view</field>
+        <field name="model">load.translation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="verify_all_db" string="Verify all DB" states="draft" type="object"/>
+                    <button name="cancel" string="Cancel" type="object"
+                            attrs="{'invisible': [('state', 'in', ('draft', 'done', 'cancel'))]}"/>
+                    <button name="put_in_queue" string="Execute" states="verified" type="object"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="patch_upgrade"/>
+                        </group>
+                        <group>
+                            <field name="execute_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="DB List">
+                            <field name="db_ids" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </page>
+                        <page string="DB Language Log">
+                            <field name="db_language_log_ids" mode="tree" options="{'reload_on_button': true}" readonly="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="db_id"/>
+                                    <field name="load_translation_id" invisible="1"/>
+                                    <field name="state"/>
+                                    <field name="message"/>
+                                    <field name="start_time"/>
+                                    <field name="end_time"/>
+                                    <field name="delta_time"/>
+                                    <field name="parent_state" invisible="1"/>
+                                    <button name="re_verify_db" string="Reverify"
+                                            type="object" class="oe_link oe_highlight"
+                                            attrs="{'invisible': ['|', ('parent_state', '!=', 'verified'), ('state', '!=', 'error')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="load_translations_tree_view">
+        <field name="name">Load Translations tree view</field>
+        <field name="model">load.translation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="execute_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_load_translations" model="ir.actions.act_window">
+        <field name="name">Load Translations</field>
+        <field name="res_model">load.translation</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_load_translations"
+            name="Load Translations"
+            parent="base_setup.menu_config"
+            sequence="400"
+            action="action_load_translations"
+            groups="base.group_no_one"/>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part of Odoo Module Developed by 73lines
+    See LICENSE file for full copyright and licensing details.
+-->
+<odoo>
+
+    <!-- Snippets & Thumbnails -->
+    <template id="s_product_carousel_place_in_tab" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[contains(@class, 'o_panel_body')]" position="inside">
+            <t t-snippet="snippet_product_carousel_73lines.s_product_carousel"
+               t-thumbnail="/snippet_product_carousel_73lines/static/src/img/product_carousel.png" />
+            <t t-snippet="snippet_product_carousel_73lines.s_product_carousel_mini"
+               t-thumbnail="/snippet_product_carousel_73lines/static/src/img/product_carousel.png" />
+            <t t-snippet="snippet_product_carousel_73lines.product_tab_carousel"
+               t-thumbnail="/snippet_product_carousel_73lines/static/src/img/product_carousel.png" />
+        </xpath>
+    </template>
+
+    <!-- Less & Css & JS Assets -->
+    <template id="product_carousel_assets_frontend" name="Product Carousel Frontend Assets"
+              inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link href="/snippet_product_carousel_73lines/static/src/less/product_carousel.less"
+                  rel="stylesheet" type="text/less" />
+            <script type="text/javascript"
+                    src="/snippet_product_carousel_73lines/static/src/js/product_carousel.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

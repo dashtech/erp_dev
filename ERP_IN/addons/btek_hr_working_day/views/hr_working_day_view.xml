@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="hr_timesheet.timesheet_menu_root" name="Timesheets"
+              sequence="55"
+              groups="btek_hr_holiday.group_hr_user_internal"
+              web_icon="hr_timesheet,static/description/icon_timesheet.png"/>
+
+    <record id="hr_working_day_tree" model="ir.ui.view">
+        <field name="name">hr_working_day_tree</field>
+        <field name="model">hr.working.day</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="department_ids"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_working_day_form" model="ir.ui.view">
+        <field name="name">hr_working_day_form</field>
+        <field name="model">hr.working.day</field>
+        <field name="arch" type="xml">
+            <form >
+                <header>
+                    <button name="action_comfirm" states="draft" string="Submit"
+                            class="btn-primary" type="object" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_set_draft" states="validated" string="Set to Draft"
+                            class="btn-primary" type="object" attrs="{'invisible': [('state', '!=', 'validated')]}"/>
+                    <button name="action_approve" states="validated" string="Approve"
+                            class="btn-primary" type="object" attrs="{'invisible': [('state', '!=', 'validated')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name's Timesheet"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="date_from" required="1"/>
+                            <!--<field name="department_ids" widget="many2many_checkboxes"/>-->
+                             <field name="company_id" required="1"
+                             attrs="{'readonly': [('state', '=', 'done')]}"/>
+                        </group>
+                        <group>
+                            <field name="date_to" required="1"/>
+                            <field name="department_ids" widget="many2many_tags"
+                                   domain="[('company_id', '=', company_id)]"
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <!--<field name="flag_domain"/>-->
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Summary">
+                            <widget type="btek_weekly_timesheet">
+                            </widget>
+                        </page>
+                        <page string="Details" class="o_hr_timesheet_sheet_details">
+                            <field context="{'timesheet_date_from': date_from, 'timesheet_date_to': date_to}" name="timesheet_ids" nolabel="1">
+                                <tree editable="bottom" string="Timesheet Activities">
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                    <field name="employee_id" required="1"/>
+                                    <field name="unit_amount" string="Amount" sum="Amount"/>
+                                </tree>
+                                <form string="Timesheet Activities">
+                                    <group>
+                                        <field name="date"/>
+                                        <field name="name"/>
+                                        <field name="employee_id"/>
+                                        <field name="unit_amount" string="Amount"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="working_day_action" model="ir.actions.act_window">
+        <field name="name">Working Day</field>
+        <field name="res_model">hr.working.day</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="working_day_main_menu"
+              name="Working Day"
+              parent="hr_timesheet.timesheet_menu_root"
+              sequence="6"/>
+
+    <menuitem id="working_day_menu"
+              name="Working Day"
+              parent="working_day_main_menu"
+              action="working_day_action"/>
+
+</odoo>

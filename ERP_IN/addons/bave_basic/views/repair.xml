@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_fleet_repair_form_basic" model="ir.ui.view">
+        <field name="name">view.fleet.repair.form.basic</field>
+        <field name="model">fleet.repair</field>
+        <field name="priority">1600</field>
+        <field name="inherit_id"
+               ref="car_repair_industry.view_fleet_repair_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_create_quotation']"
+                   position="attributes">
+                <attribute name="string">Create repair order</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

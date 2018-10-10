@@ -1,0 +1,1352 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* promotion_ept
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-07 10:57+0000\n"
+"PO-Revision-Date: 2018-09-07 10:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: promotion_ept
+#: selection:promotion.method,applied_on:0
+msgid " Category Level"
+msgstr " Nhóm VTHH"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_orderline_count
+msgid "# OrdeLines"
+msgstr "# Chi tiết đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_order_count
+msgid "# Orders"
+msgstr "# Đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_quotationline_count
+msgid "# QuotationLines"
+msgstr "# Chi tiết báo giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_quotation_count
+msgid "# Quotations"
+msgstr "# Báo giá"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "$  On"
+msgstr "$  Trên"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "$ Discount"
+msgstr "$ Giảm giá"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "$ Discount On Any Product"
+msgstr "$ Giảm giá trên bất kỳ VTHH nào"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "$ On"
+msgstr "$ Trên"
+
+#. module: promotion_ept
+#: model:mail.template,report_name:promotion_ept.email_template_edi_promotion
+msgid "${(object.name or '').replace('/','_')}"
+msgstr "${(object.name or '').replace('/','_')}"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "%  \n"
+"				                    	+ \n"
+"				                    	Extra off"
+msgstr "%  \n"
+"				                    	+ \n"
+"				                    	Bổ sung"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "% Discount"
+msgstr "% Giảm giá"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "% Discount On Any Product"
+msgstr "% Giảm giá trên bất kỳ VTHH nào"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "% On"
+msgstr "% Trên"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "+ \n"
+"				                    	Extra"
+msgstr "+ \n"
+"				                    	Thêm"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "<span class=\"o_stat_text\"> Lines</span>"
+msgstr "<span class=\"o_stat_text\"> Chi tiết đơn hàng</span>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "<span class=\"o_stat_text\"> Orders</span>"
+msgstr "<span class=\"o_stat_text\"> Đơn hàng</span>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "<span class=\"o_stat_text\"> QLines</span>"
+msgstr "<span class=\"o_stat_text\"> Chi tiết Báo giá</span>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "<span class=\"o_stat_text\"> Quotations</span>"
+msgstr "<span class=\"o_stat_text\"> Báo giá</span>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong> Thank You. </strong>"
+msgstr "<strong> Cảm ơn. </strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "<strong> to</strong>"
+msgstr "<strong> đến</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>Discount Amount :</strong>"
+msgstr "<strong>Giá trị khuyến mãi :</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>From :</strong>"
+msgstr "<strong>Từ :</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>Secreat Coupon :</strong>"
+msgstr "<strong>Phiếu giảm giá bí mật :</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>Terms and Conditions:</strong>"
+msgstr "<strong>Các điều khoản và điều kiện:</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>To :</strong>"
+msgstr "<strong>Đến :</strong>"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "<strong>Your Offer:</strong>"
+msgstr "<strong>Ưu đãi của bạn:</strong>"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_sale_order_coupon_code
+msgid "Add coupon code to apply promotion in sale order"
+msgstr "Thêm mã phiếu giảm giá để áp dụng khuyến mại trong đơn đặt hàng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Any product"
+msgstr "Mọi VTHH"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_applied_on
+msgid "Apply On"
+msgstr "Áp dụng cho"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_is_specific_time
+msgid "Apply Specific Time Period"
+msgstr "Áp dụng khoảng thời gian cụ thể"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_is_for_specific_area
+msgid "Apply only for Specific Area?"
+msgstr "Áp dụng cho khu vực cụ thể?"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_is_for_specific_customers
+msgid "Apply only for Specific Customers?"
+msgstr "Áp dụng cho khách hàng cụ thể?"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Approve"
+msgstr "Chấp thuận"
+
+#. module: promotion_ept
+#: selection:promotion.method,state:0
+msgid "Approved"
+msgstr "Đã chấp thuận"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "BOGO"
+msgstr "Mua hàng tặng hàng"
+
+#. module: promotion_ept
+#: selection:promotion.method,compute_price:0
+msgid "BOGO Offer"
+msgstr "Ưu đãi mua hàng tặng hàng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "BOGO Sale"
+msgstr "Mua hàng tặng hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_bar_code_ean13
+msgid "Bar code to apply promotion in sale order"
+msgstr "Bar code to apply promotion in sale order"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bar_code_ean13
+msgid "Barcode"
+msgstr "Mã vạch"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bar_image
+msgid "Barcode Image"
+msgstr "Hình ảnh mã vạch"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Barcode detail"
+msgstr "Chi tiết mã vạch"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bar_code_sequence
+msgid "Barcode random No"
+msgstr "Barcode random No"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promo_on_prdct_B_on
+msgid "Based On"
+msgstr "Dựa trên"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bogo_sale_on
+msgid "Bogo sale on"
+msgstr "Bogo sale on"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Buy"
+msgstr "Mua"
+
+#. module: promotion_ept
+#: selection:promotion.method,bogo_sale_on:0
+msgid "Buy (X Unit) of Product , Get (X Unit) of Product Free"
+msgstr "Mua (X đơn vị) VTHH, Nhận (X đơn vị) VTHH miễn phí"
+
+#. module: promotion_ept
+#: selection:promotion.method,bogo_sale_on:0
+msgid "Buy (X Unit) of Product A, Get (Y Unit) of Product B for $ or % Discount"
+msgstr "Mua (X đơn vị) của VTHH A, Nhận (Y đơn vị) giảm giá $ hoặc % của VTHH B "
+
+#. module: promotion_ept
+#: selection:promotion.method,bogo_sale_on:0
+msgid "Buy (X Unit) of Product Get (Y Unit) of Another Product Free"
+msgstr "Mua (X đơn vị) VTHH, Nhận (Y đơn vị) của VTHH khác miễn phí"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "COUPON"
+msgstr "COUPON"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_extend_wizard
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: promotion_ept
+#: selection:promotion.method,state:0
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: promotion_ept
+#: sql_constraint:promotion.method:0
+msgid "Cant be duplicate value for promotion code field!"
+msgstr "Không thể trùng lặp cho trường mã khuyến mại!"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,help:promotion_ept.product_form_inherit
+msgid "Click here to add new Promotion Product"
+msgstr "Nhấp vào đây để thêm VTHH khuyến mãi mới"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,help:promotion_ept.action_promotion_list_form
+msgid "Click here to add new promotion"
+msgstr "Nhấp vào đây để thêm khuyến mãi mới"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Close"
+msgstr "Đóng"
+
+#. module: promotion_ept
+#: selection:promotion.method,state:0
+msgid "Closed"
+msgstr "Đã đóng"
+
+#. module: promotion_ept
+#: selection:promotion.method,compute_price:0
+msgid "Clubbed Promotion"
+msgstr "Khuyến mãi mở rộng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_coupon_code
+msgid "Code"
+msgstr "Mã"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Compute Promotion"
+msgstr "Cách tính khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_compute_price
+msgid "Compute price"
+msgstr "Tính toán giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_country_ids
+msgid "Countries"
+msgstr "Quốc gia"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_coupon_code
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_kanban_view
+#: model:ir.ui.view,arch_db:promotion_ept.view_order_form_with_promotion
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Coupon Code"
+msgstr "Mã giảm giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_report_coupon_code
+msgid "Coupon code"
+msgstr "Mã giảm giá"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:243
+#, python-format
+msgid "Coupon code length should be in 7 to 10 Character."
+msgstr "Độ dài mã phiếu giảm giá phải từ 7 đến 10 ký tự."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_coupon_code
+msgid "Coupon code to apply promotion in sale order"
+msgstr "Mã phiếu giảm giá để áp dụng khuyến mại trong đơn đặt hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_config_settings_group_promotion_product
+msgid "Create Promotion Product"
+msgstr "Tạo VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_create_uid
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_create_uid
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_create_date
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_create_date
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_partner_category_ids
+msgid "Customer Groups"
+msgstr "Nhóm khách hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_customer_ids
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Customers"
+msgstr "Khách hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_sale_config_settings_promotion_product_category_id
+#: model:ir.model.fields,help:promotion_ept.field_sale_config_settings_promotion_product_id
+msgid "Default product used for promotion apply in sale order"
+msgstr "Sản phẩm mặc định được sử dụng cho khuyến mãi được áp dụng trong đơn đặt hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_Bproduct
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_free_product
+msgid "Discounted Product"
+msgstr "VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_Bproduct_unit
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bogoelse_Bproduct_unit
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bxgy_Bproduct_unit
+msgid "Discounted Product Qty"
+msgstr "Số lượng VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_barcode_discription
+msgid "Discription"
+msgstr "Mô tả"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_display_name
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_display_name
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_extend_wizard
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+#: selection:promotion.method,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_to_end
+msgid "End"
+msgstr "Đến"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_end_date
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_date_end
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_time_end
+msgid "End Time"
+msgstr "Thời gian kết thúc"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_extend_end_date
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_date_end
+msgid "Ending date of promotion code"
+msgstr "Ngày kết thúc mã khuyến mại"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Extend Promotion"
+msgstr "Mở rộng khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Extra Promotion"
+msgstr "Khuyến mãi bổ sung"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Extra off"
+msgstr "Bổ sung"
+
+#. module: promotion_ept
+#: selection:promotion.method.rule.based,price_based_on:0
+msgid "Fix Price"
+msgstr "Giá cố"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promo_on_prdct_B_fixed_price
+#: selection:promotion.method,promo_on_prdct_B_on:0
+msgid "Fixed Discount"
+msgstr "Khuyến mãi cố định"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_fixed_price
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_based_on_fixed_price
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Fixed Price"
+msgstr "Giá cố định"
+
+#. module: promotion_ept
+#: selection:promotion.method,compute_price:0
+msgid "Fixed Price Discount"
+msgstr "Giảm giá cố định"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Get"
+msgstr "Nhận"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Global"
+msgstr "Toàn bộ"
+
+#. module: promotion_ept
+#: selection:promotion.method,applied_on:0
+msgid "Global Level"
+msgstr "Toàn bộ"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_id
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_id
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_id
+msgid "ID"
+msgstr "ID"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_product_normal_form_view
+msgid "Internal Category"
+msgstr "Nhóm nội bộ"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_product_product_is_promo_product
+msgid "Is Promotion Product"
+msgstr "Là một VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_repair_order_line_promotion_product
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_line_promotion_product
+msgid "Is a Free Promotion Product"
+msgstr "Là một VTHH khuyến mãi miễn phí"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_repair_order_line_is_promotion
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_line_is_promotion
+msgid "Is a Promotion"
+msgstr "Là một khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:247
+#: code:addons/promotion_ept/models/promotion.py:249
+#, python-format
+msgid "It has to be less then 100"
+msgstr "Nó phải ít hơn 100"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend___last_update
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method___last_update
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_write_uid
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_write_uid
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_extend_write_date
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_write_date
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_max_limit_per_user
+msgid "Limit"
+msgstr "Giới hạn"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Limit Per User"
+msgstr "Giới hạn cho mỗi người dùng"
+
+#. module: promotion_ept
+#: model:res.groups,name:promotion_ept.group_promotion_product
+msgid "Manage Promotion Product"
+msgstr "Quản lý VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:res.groups,name:promotion_ept.group_promotion_manager
+msgid "Manager"
+msgstr "Người quản lý"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_max_promotion_amount
+msgid "Max Promotion Amount"
+msgstr "Giá trị khuyến mãi tối đa"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bogoelse_Aproduct_unit
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_bxgy_Aproduct_unit
+msgid "Min Product Qty"
+msgstr "Số lượng tối thiểu"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_min_order_amount
+msgid "Min. Order Amount"
+msgstr "Giá trị đơn hàng tối thiểu"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_min_order_quantity
+msgid "Min. Order Quantity"
+msgstr "Số lượng đặt hàng tối thiểu"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_kanban_view
+msgid "Name"
+msgstr "Tên"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "ON Any Product"
+msgstr "Trên mọi VTHH"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "On"
+msgstr "Trên"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Other Discount is"
+msgstr "Giảm giá khác là"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_base_promotionlist_id
+msgid "Other Pricelist"
+msgstr "Bảng giá khác"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Other Promotionlist"
+msgstr "Danh sách khuyến mãi khác"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Percentage"
+msgstr "Phần trăm"
+
+#. module: promotion_ept
+#: selection:promotion.method.rule.based,price_based_on:0
+msgid "Percentage (discount)"
+msgstr "Phần trăm (giảm giá)"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promo_on_prdct_B_percentage_price
+#: selection:promotion.method,compute_price:0
+#: selection:promotion.method,promo_on_prdct_B_on:0
+msgid "Percentage Discount"
+msgstr "Giảm giá theo phần trăm"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_percent_price
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_based_on_percent_price
+msgid "Percentage Price"
+msgstr "Phần trăm giá"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:316
+#, python-format
+msgid "Please Add Extra Percentage or Extra off."
+msgstr "Vui lòng thêm phần trăm hoặc bổ sung."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:255
+#, python-format
+msgid "Please Enter  some Value for Calculation of promotion amount"
+msgstr "Vui lòng nhập một số giá trị để tính số tiền khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:277
+#, python-format
+msgid "Please Enter End tme"
+msgstr "Vui lòng nhập thời gian kết thúc"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:260
+#: code:addons/promotion_ept/models/promotion.py:262
+#, python-format
+msgid "Please Enter Range"
+msgstr "Vui lòng nhập phạm vi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:269
+#, python-format
+msgid "Please Enter Start date"
+msgstr "Vui lòng nhập ngày bắt đầu"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:275
+#, python-format
+msgid "Please Enter Start time"
+msgstr "Vui lòng nhập thời gian bắt đầu"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:273
+#, python-format
+msgid "Please Enter Valid End Time"
+msgstr "Vui lòng nhập thời gian kết thúc hợp lệ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:279
+#, python-format
+msgid "Please Enter Valid Limit for Coupon."
+msgstr "Vui lòng nhập giới hạn hợp lệ cho phiếu giảm giá."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:271
+#, python-format
+msgid "Please Enter Valid Start Time"
+msgstr "Vui lòng nhập thời gian bắt đầu hợp lệ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:252
+#, python-format
+msgid "Please Enter some Value for Calculation of promotion amount"
+msgstr "Vui lòng nhập một số giá trị để tính số tiền khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:267
+#, python-format
+msgid "Please Enter valid End date"
+msgstr "Vui lòng nhập ngày kết thúc hợp lệ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:265
+#, python-format
+msgid "Please Enter valid Start date"
+msgstr "Vui lòng nhập ngày bắt đầu hợp lệ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:296
+#, python-format
+msgid "Please Select any Range Based On."
+msgstr "Vui lòng chọn bất kỳ phạm vi nào dựa trên."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:240
+#, python-format
+msgid "Please Set Promotion Product From Promotion Configuration To Create Promotion."
+msgstr "Vui lòng đặt sản phẩm khuyến mãi từ cấu hình khuyến mãi để tạo khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:320
+#, python-format
+msgid "Please Varify Both Promotion End Dates."
+msgstr "Vui lòng xác minh cả ngày kết thúc khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:326
+#, python-format
+msgid "Please Varify Clubbed Promotion Category"
+msgstr "Vui lòng xác minh danh mục khuyến mại được gắn thẻ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:331
+#, python-format
+msgid "Please Varify Clubbed Promotion Product"
+msgstr "Vui lòng xác minh VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:336
+#, python-format
+msgid "Please Varify Clubbed Promotion Product variant"
+msgstr "Vui lòng xác minh biến thể VTHH được khuyến mãi mở rộng"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:285
+#, python-format
+msgid "Please Varify Customer Address and Countries you set in Promotion."
+msgstr "Vui lòng xác minh địa chỉ và quốc gia của khách hàng bạn đặt trong khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:287
+#, python-format
+msgid "Please Varify Customer Address and States you set in Promotion."
+msgstr "Vui lòng xác minh địa chỉ khách hàng và các quốc gia bạn đã đặt trong khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:292
+#, python-format
+msgid "Please Varify Customer Group Address and Countries you set in Promotion."
+msgstr "Vui lòng xác minh địa chỉ nhóm khách hàng và quốc gia bạn đặt trong khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:294
+#, python-format
+msgid "Please Varify Customer Group Address and States you set in Promotion."
+msgstr "Vui lòng xác minh địa chỉ nhóm khách hàng và các quốc gia bạn đã đặt trong khuyến mãi."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:281
+#, python-format
+msgid "Please Varify Maximum Promotion Amount and Fixed Amount"
+msgstr "Vui lòng xác minh số tiền khuyến mãi tối đa và số tiền cố định"
+
+#. module: promotion_ept
+#: selection:promotion.method,range_based_on:0
+msgid "Price"
+msgstr "Giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_price_discount
+msgid "Price Discount"
+msgstr "Chiết khấu"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_price_surcharge
+msgid "Price Surcharge"
+msgstr "Phụ thu"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_price_based_on
+msgid "Price based on"
+msgstr "Giá dựa trên"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.product_form_inherit
+#: model:ir.model,name:promotion_ept.model_product_product
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_product_ids
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Product"
+msgstr "Vật tư - Hàng hóa"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_categ_ids
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Product Category"
+msgstr "Nhóm VT-HH"
+
+#. module: promotion_ept
+#: selection:promotion.method,applied_on:0
+msgid "Product Level"
+msgstr "VTHH"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_Aproduct_unit
+msgid "Product Qty"
+msgstr "Số lượng VTHH"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_product_tmpl_ids
+msgid "Product Template"
+msgstr "Mẫu VT-HH"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Product Variant"
+msgstr "Biến thể Vật tư-hàng hóa"
+
+#. module: promotion_ept
+#: model:ir.module.category,name:promotion_ept.module_promotion_category
+#: model:ir.ui.menu,name:promotion_ept.menu_action_sale_promotion_list_form
+#: model:ir.ui.menu,name:promotion_ept.menu_sale_promotion
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_tree
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+#: model:ir.ui.view,arch_db:promotion_ept.view_sales_config_promotion
+msgid "Promotion"
+msgstr "Khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_repair_order_line_promotion_price
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_line_promotion_price
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_promo_price
+msgid "Promotion Amount"
+msgstr "Giá trị khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promotion_budget
+msgid "Promotion Budget"
+msgstr "Ngân sách khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_date_start
+msgid "Promotion Date Period"
+msgstr "Khoảng thời gian khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_promotion_extend_wizard
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_extend_wizard
+msgid "Promotion Extend"
+msgstr "Mở rộng khuyến mại"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_total_salepromo_amount
+msgid "Promotion Given"
+msgstr "Khuyến mãi đã dùng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Promotion Levels"
+msgstr "Mức khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_order_promotion_id
+msgid "Promotion Method"
+msgstr "Phương thức khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_promotion_list_form
+msgid "Promotion Methods"
+msgstr "Phương thức khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_name
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Promotion Name"
+msgstr "Tên khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Promotion Period"
+msgstr "Thời gian khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promotion_product_id
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_config_settings_promotion_product_id
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_report_promotion_product
+#: model:ir.ui.menu,name:promotion_ept.menu_action_product_form
+msgid "Promotion Product"
+msgstr "VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_config_settings_promotion_product_category_id
+msgid "Promotion Product Category"
+msgstr "Danh mục VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:245
+#, python-format
+msgid "Promotion Product's category should be in sale config setting promotion product category selected"
+msgstr "Danh mục VTHH khuyến mãi sẽ được bán trong danh mục sản phẩm khuyến mại thiết lập cấu hình đã chọn"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_promo_id
+msgid "Promotion Reference"
+msgstr "Tham chiếu khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_time_start
+msgid "Promotion Time Period"
+msgstr "Thời gian khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Promotion Types"
+msgstr "Loại khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_order_form_with_promotion
+msgid "Promotion code"
+msgstr "Mã khuyến mãi"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/sale_order.py:178
+#, python-format
+msgid "Promotion is not apply in your order please remove Promotion and then Confirm order."
+msgstr "Khuyến mãi khhông áp dụng trên đơn hàng của bạn, vui lòng xóa bỏ khuyến mãi và xác nhận đơn hàng."
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/sale_order.py:180
+#, python-format
+msgid "Promotion is not apply in your order please remove promo code and Confirm order."
+msgstr "Khuyến mãi khhông áp dụng trên đơn hàng của bạn, vui lòng xóa bỏ mã khuyến mãi và xác nhận đơn hàng."
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_promo_name
+msgid "Promotion name"
+msgstr "Tên khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_applied_on
+msgid "PromotionList Item applicable on selected option"
+msgstr "PromotionList Item applicable on selected option"
+
+#. module: promotion_ept
+#: selection:promotion.method,range_based_on:0
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_kanban_view
+msgid "Quotations"
+msgstr "Báo giá"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Range Based On"
+msgstr "Dựa trên phạm vi"
+
+#. module: promotion_ept
+#: selection:promotion.method,compute_price:0
+msgid "Range based Discount"
+msgstr "Giảm giá dựa trên phạm vi"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_range_based_on
+msgid "Range based on"
+msgstr "Phạm vi dựa trên"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Rule"
+msgstr "Quy tắc"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_ids
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Rule Lines"
+msgstr "Quy tắc con"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_sale_order_list
+msgid "Sale Order"
+msgstr "Đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_sale_order_line_list
+msgid "Sale Order Lines"
+msgstr "Chi tiết đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_sale_quotation_list
+msgid "Sale quotation"
+msgstr "Báo giá"
+
+#. module: promotion_ept
+#: model:ir.actions.act_window,name:promotion_ept.action_sale_quotation_line_list
+msgid "Sale quotation Lines"
+msgstr "Chi tiết báo giá"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn đặt hàng"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Dòng hàng của Đơn hàng bán"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_kanban_view
+msgid "Sales Orders"
+msgstr "Lệnh sửa chữa"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_sale_report
+msgid "Sales Orders Statistics"
+msgstr "Thống kê đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Search Promotion Method"
+msgstr "Search Promotion Method"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_date_start
+msgid "Select promotion period"
+msgstr "Select promotion period"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Send by Email"
+msgstr "Gửi qua Email"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_method_search
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_sequence_name
+msgid "Sequence name"
+msgstr "Sequence name"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_order_form_with_promotion
+msgid "Set Promotion"
+msgstr "Áp dụng khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_sale_config_settings_group_promo_product_show
+#: model:res.groups,name:promotion_ept.group_promotion_product_show
+msgid "Show Promotion Product"
+msgstr "Hiển thị VTHH khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.promotion_kanban_view
+msgid "Specific maximum discount should be allowed per sales"
+msgstr "Giảm giá tối đa cụ thể sẽ được phép cho mỗi đơn hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_categ_ids
+msgid "Specify a product category if this promotion only applies to products belonging to these categories."
+msgstr "Chỉ định danh mục sản phẩm nếu khuyến mại này chỉ áp dụng cho các sản phẩm thuộc các danh mục này."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_promotion_product_id
+msgid "Specify a product for set product in sale order."
+msgstr "Chỉ định sản phẩm cho sản phẩm đã đặt trong đơn đặt hàng."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_product_ids
+msgid "Specify a products in which the Promotion is apply."
+msgstr "Chỉ định một VTHH mà Khuyến mại được áp dụng."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_product_tmpl_ids
+msgid "Specify a template in which the Promotion is apply."
+msgstr "Chỉ định mẫu VTHH mà Khuyến mại được áp dụng."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_max_limit_per_user
+msgid "Specify for the limit to use coupon code per user"
+msgstr "Chỉ định giới hạn sử dụng mã phiếu thưởng cho mỗi người dùng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_customer_ids
+msgid "Specify if Promotion apply for specific customers"
+msgstr "Chỉ định xem Khuyến mại có áp dụng cho các khách hàng cụ thể hay không"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_price_discount
+msgid "Specify the extra percentage to calculated with the other promotion amount."
+msgstr "Chỉ định phần trăm phụ để tính với số tiền khuyến mãi khác."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_price_surcharge
+msgid "Specify the fixed amount to add to the amount calculated with the discount."
+msgstr "Chỉ định số tiền cố định để thêm vào số tiền được tính với chiết khấu."
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_max_promotion_amount
+msgid "Specify the maximum discount should be allowed per sales"
+msgstr "Chỉ định mức chiết khấu tối đa được phép cho mỗi lần bán hàng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_min_order_quantity
+msgid "Specify the minimum Quantity required to activate discount coupon"
+msgstr "Chỉ định số lượng tối thiểu cần thiết để kích hoạt phiếu giảm giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_min_order_amount
+msgid "Specify the minimum amount from where sales become eligible for the discount coupon"
+msgstr "Chỉ định số tiền tối thiểu từ nơi bán hàng đủ điều kiện cho phiếu giảm giá"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_rule_based_from_start
+msgid "Start"
+msgstr "Từ"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_state
+msgid "State"
+msgstr "Giai đoạn"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_state_ids
+msgid "States"
+msgstr "Trạng thái"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_orderline_count
+msgid "The number of orderlines in which this promotion is applied"
+msgstr "Số lượng đơn đặt hàng mà khuyến mãi này được áp dụng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_order_count
+msgid "The number of orders in which this promotion is applied"
+msgstr "Số lượng đơn đặt hàng mà khuyến mãi này được áp dụng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_quotation_count
+msgid "The number of quotation in which this promotion is applied"
+msgstr "Số lượng báo giá mà khuyến mãi này được áp dụng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_quotationline_count
+msgid "The number of quotationlines in which this promotion is applied"
+msgstr "Số lượng báo giá mà khuyến mãi này được áp dụng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "This is Range base on Price"
+msgstr "Đây là phạm vi dựa trên giá"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "This is Range base on Quantity"
+msgstr "Đây là phạm vi dựa trên số lượng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_timezone
+msgid "Timezone"
+msgstr "Múi giờ"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_max_coupon_limit
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Total Usage Limit"
+msgstr "Giới hạn số lần sử dụng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Unit"
+msgstr "Đơn vị"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Unit of"
+msgstr "Đơn vị của"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Unit of Product Free"
+msgstr "Đơn vị VTHH miễn phí"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Unit."
+msgstr "Đơn vị."
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_order_form_with_promotion
+msgid "Unset Promotion"
+msgstr "Hủy áp dụng"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Used Promotion"
+msgstr "Khuyến mãi đã sử dụng"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_used_promo_count
+msgid "Used promo count"
+msgstr "Sô khuyến mãi đã sử dụng"
+
+#. module: promotion_ept
+#: model:res.groups,name:promotion_ept.group_promotion_user
+msgid "User"
+msgstr "Người dùng"
+
+#. module: promotion_ept
+#: selection:promotion.method,applied_on:0
+msgid "Variant Level"
+msgstr "Biến thể VTHH"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:427
+#, python-format
+msgid "Warning"
+msgstr "Cảnh báo"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:427
+#, python-format
+msgid "You are Set BOGO and its applied On Global"
+msgstr "Bạn đang đặt mua hàng tặng hàng và được áp dụng trên toàn bộ"
+
+#. module: promotion_ept
+#: code:addons/promotion_ept/models/promotion.py:478
+#, python-format
+msgid "You can not delete a Promotion which is set in sale order! Try to cancel sale order before."
+msgstr "Bạn không thể xóa một Khuyến mãi được sử dụng trên đơn hàng! Thử hủy đơn đặt hàng trước đó."
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Your Order Amount between :"
+msgstr "Số tiền đặt hàng của bạn giữa :"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "Your Order Quantity between :"
+msgstr "Số lượng đặt hàng của bạn giữa :"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_zip_from
+msgid "Zip From"
+msgstr "Zip From"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "Zip Range"
+msgstr "Phạm vi Zip"
+
+#. module: promotion_ept
+#: model:ir.model.fields,field_description:promotion_ept.field_promotion_method_zip_to
+msgid "Zip To"
+msgstr "Zip To"
+
+#. module: promotion_ept
+#: model:ir.actions.report.xml,name:promotion_ept.report_promotion_barcode
+msgid "barcode / pdf"
+msgstr "barcode / pdf"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+msgid "is Free"
+msgstr "là miễn phí"
+
+#. module: promotion_ept
+#: model:res.request.link,name:promotion_ept.req_link_sale_order
+msgid "promotion"
+msgstr "khuyến mãi"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_promotion_extend
+msgid "promotion.extend"
+msgstr "promotion.extend"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_promotion_method
+msgid "promotion.method"
+msgstr "promotion.method"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_promotion_method_rule_based
+msgid "promotion.method.rule.based"
+msgstr "promotion.method.rule.based"
+
+#. module: promotion_ept
+#: model:ir.model.fields,help:promotion_ept.field_promotion_method_bar_code_sequence
+msgid "random digit 12 for generate barcode"
+msgstr "số ngẫu nhiên 12 để tạo mã vạch"
+
+#. module: promotion_ept
+#: model:ir.model,name:promotion_ept.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "sale.config.settings"
+
+#. module: promotion_ept
+#: model:ir.ui.view,arch_db:promotion_ept.report_promotion_document
+#: model:ir.ui.view,arch_db:promotion_ept.view_promotion_list_form
+msgid "to"
+msgstr "đến"
+

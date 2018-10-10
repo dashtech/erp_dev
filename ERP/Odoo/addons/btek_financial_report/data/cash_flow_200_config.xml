@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+    	<!-- Income Statement for Circular 200/2014/TT-BTC -->
+    	<!-- BEGIN -->
+    	<record id="to_fs_config_cf_200_I" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">1</field>
+    		<field name="name">I. Lưu chuyển tiền từ hoạt động kinh doanh</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_70" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">30</field>
+    		<field name="name">Tiền và tương đương tiền cuối kỳ (70 = 50 + 60 + 61)</field>
+    		<field name="to_code">70</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_50" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">27</field>
+    		<field name="name">Lưu chuyển tiền thuần trong kỳ (50 = 20 + 30 + 40)</field>
+    		<field name="to_code">50</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_70"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_60" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">28</field>
+    		<field name="name">Tiền và tương đương tiền đầu kỳ</field>
+    		<field name="to_code">60</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_70"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">op</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_61" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">29</field>
+    		<field name="name">Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ</field>
+    		<field name="to_code">61</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_70"></field>
+    		<field name="style_overwrite" eval="4" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_20" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">9</field>
+    		<field name="name">Lưu chuyển tiền thuần từ hoạt động kinh doanh</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_50"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record> 
+    	
+    	<record id="to_fs_config_cf_200_01" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">2</field>
+    		<field name="name">1. Tiền thu từ bán hàng, cung cấp dịch vụ và doanh thu khác</field>
+    		<field name="to_code">01</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_5111'),
+    			ref('to_fs_account_code_5112'),
+    			ref('to_fs_account_code_5113'),    			
+    			ref('to_fs_account_code_131'),
+    			ref('to_fs_account_code_331'),
+    			ref('to_fs_account_code_121'),
+    			ref('to_fs_account_code_515'),
+    		])]"/>
+    		<field name="to_excluded_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_521'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_02" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">3</field>
+    		<field name="name">2. Tiền chi trả cho người cung cấp hàng hóa, dịch vụ</field>
+    		<field name="to_code">02</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[    			
+    			ref('to_fs_account_code_131'),
+    			ref('to_fs_account_code_331'),
+    			ref('to_fs_account_code_151'),
+    			ref('to_fs_account_code_152'),
+    			ref('to_fs_account_code_153'),
+    			ref('to_fs_account_code_154'),
+    			ref('to_fs_account_code_155'),
+    			ref('to_fs_account_code_156'),
+    			ref('to_fs_account_code_157'),
+    			ref('to_fs_account_code_158'),
+    			ref('to_fs_account_code_635'),
+    		])]"/>
+    	</record> 
+    	
+    	<record id="to_fs_config_cf_200_03" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">4</field>
+    		<field name="name">3. Tiền chi trả cho người lao động</field>
+    		<field name="to_code">03</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_111'),ref('to_fs_account_code_112')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_334')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_04" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">5</field>
+    		<field name="name">4. Tiền lãi vay đã trả</field>
+    		<field name="to_code">04</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_635'),
+    			ref('to_fs_account_code_335'),
+    			ref('to_fs_account_code_242')    			
+    		])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_05" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">6</field>
+    		<field name="name">5. Thuế thu nhập doanh nghiệp đã nộp</field>
+    		<field name="to_code">05</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_111'),ref('to_fs_account_code_112')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3334')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_06" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">7</field>
+    		<field name="name">6. Tiền thu khác từ hoạt động kinh doanh</field>
+    		<field name="to_code">06</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_111'),ref('to_fs_account_code_112')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[    			
+    			ref('to_fs_account_code_711'),
+    			ref('to_fs_account_code_133'),
+    			ref('to_fs_account_code_141'),
+    			ref('to_fs_account_code_244'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_07" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">8</field>
+    		<field name="name">7. Tiền chi khác cho hoạt động kinh doanh</field>
+    		<field name="to_code">07</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_20"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_811'),
+    			ref('to_fs_account_code_161'),
+    			ref('to_fs_account_code_3331'),
+    			ref('to_fs_account_code_3332'),
+    			ref('to_fs_account_code_3333'),
+    			ref('to_fs_account_code_3335'),
+    			ref('to_fs_account_code_3336'),
+    			ref('to_fs_account_code_3337'),
+    			ref('to_fs_account_code_3338'),
+    			ref('to_fs_account_code_3339'),
+    			ref('to_fs_account_code_244'),
+    			ref('to_fs_account_code_3381'),
+    			ref('to_fs_account_code_3382'),
+    			ref('to_fs_account_code_3383'),
+    			ref('to_fs_account_code_3384'),
+    			ref('to_fs_account_code_3386'),
+    			ref('to_fs_account_code_3387'),
+    			ref('to_fs_account_code_3388'),
+    			ref('to_fs_account_code_344'),
+    			ref('to_fs_account_code_352'),
+    			ref('to_fs_account_code_353'),
+    			ref('to_fs_account_code_356'),
+    			ref('to_fs_account_code_336'),
+    			ref('to_fs_account_code_138'),	
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_II" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">10</field>
+    		<field name="name">II. Lưu chuyển tiền từ hoạt động đầu tư</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_30" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">18</field>
+    		<field name="name">Lưu chuyển tiền thuần từ hoạt động đầu tư</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_50"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_21" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">11</field>
+    		<field name="name">1. Tiền chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác</field>
+    		<field name="to_code">21</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[    			
+    			ref('to_fs_account_code_811'),
+    			ref('to_fs_account_code_211'),
+    			ref('to_fs_account_code_213'),
+    			ref('to_fs_account_code_217'),
+    			ref('to_fs_account_code_241'),
+    			ref('to_fs_account_code_331'),
+    			ref('to_fs_account_code_331'),
+    		])]"/>
+    	</record> 
+    	
+    	<record id="to_fs_config_cf_200_22" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">12</field>
+    		<field name="name">2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác</field>
+    		<field name="to_code">22</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[    			
+    			ref('to_fs_account_code_711'),
+    			ref('to_fs_account_code_5117'),
+    			ref('to_fs_account_code_131'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_23" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">13</field>
+    		<field name="name">3. Tiền chi cho vay, mua các công cụ nợ của đơn vị khác</field>
+    		<field name="to_code">23</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_128'),
+    			ref('to_fs_account_code_171'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_24" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">14</field>
+    		<field name="name">4. Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác</field>
+    		<field name="to_code">24</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113'),
+   			])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_128'),
+    			ref('to_fs_account_code_171'),
+    		])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_25" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">15</field>
+    		<field name="name">5. Tiền chi đầu tư góp vốn vào đơn vị khác</field>
+    		<field name="to_code">25</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_331'),
+    			ref('to_fs_account_code_221'),
+    			ref('to_fs_account_code_222'),
+    			ref('to_fs_account_code_2281'),
+    			ref('to_fs_account_code_2288')])]"/>    			
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_26" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">16</field>
+    		<field name="name">6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác</field>
+    		<field name="to_code">26</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_131'),
+    			ref('to_fs_account_code_221'),
+    			ref('to_fs_account_code_222'),
+    			ref('to_fs_account_code_2281')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_27" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">17</field>
+    		<field name="name">7. Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia</field>
+    		<field name="to_code">27</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_30"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_515')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_111'),ref('to_fs_account_code_112')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_III" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">19</field>
+    		<field name="name">III. Lưu chuyển tiền từ hoạt động tài chính</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_40" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">26</field>
+    		<field name="name">Lưu chuyển tiền thuần từ hoạt động tài chính</field>
+    		<field name="to_code"></field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_50"></field>
+    		<field name="style_overwrite" eval="3" />
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_31" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">20</field>
+    		<field name="name">1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu</field>
+    		<field name="to_code">31</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_411')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_32" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">21</field>
+    		<field name="name">2. Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành</field>
+    		<field name="to_code">32</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_411'),ref('to_fs_account_code_419')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_33" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">22</field>
+    		<field name="name">3. Tiền thu từ đi vay</field>
+    		<field name="to_code">33</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">db</field>
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_3411'),
+    			ref('to_fs_account_code_3431'),
+    			ref('to_fs_account_code_3432'),
+    			ref('to_fs_account_code_4111'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_34" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">23</field>
+    		<field name="name">4. Tiền chi trả nợ gốc vay</field>
+    		<field name="to_code">34</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_3411'),
+    			ref('to_fs_account_code_3431'),
+    			ref('to_fs_account_code_3432'),
+    			ref('to_fs_account_code_4111'),
+   			])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_35" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">24</field>
+    		<field name="name">5. Tiền chi trả nợ thuê tài chính</field>
+    		<field name="to_code">35</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_3412')])]"/>
+    	</record>
+    	
+    	<record id="to_fs_config_cf_200_36" model="account.financial.report">
+    		<field name="to_financial_statement">cash_flow</field>
+    		<field name="to_decision">tt200</field>
+    		<field name="sequence">25</field>
+    		<field name="name">6. Cổ tức, lợi nhuận đã trả cho chủ sở hữu</field>
+    		<field name="to_code">36</field>
+    		<field name="to_notes"></field>
+    		<field name="parent_id" ref="to_fs_config_cf_200_40"></field>
+    		<field name="style_overwrite" eval="4" />
+    		<field name="to_balance_type">cr</field>
+    		<field name="sign" eval="-1" />
+    		<field name="type">accounts</field>
+    		<field name="to_included_accounts" eval="[(6, 0 ,[
+    			ref('to_fs_account_code_111'),
+    			ref('to_fs_account_code_112'),
+    			ref('to_fs_account_code_113')])]"/>
+    		<field name="to_counterpart_accounts" eval="[(6, 0 ,[ref('to_fs_account_code_421'),ref('to_fs_account_code_3385')])]"/>
+    	</record>
+    	<!-- END -->
+    	
+   	</data>
+</odoo>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="module_log_form_view">
+        <field name="name">Module log form view</field>
+        <field name="model">module.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="management_module_id" invisible="1"/>
+                        <field name="db_log_id" invisible="1"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="db_id"/>
+                        </group>
+                        <group>
+                            <field name="module_detail_id"/>
+                            <field name="message"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                        </group>
+                        <group>
+                            <field name="delta_time"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="module_log_tree_view">
+        <field name="name">Module log tree view</field>
+        <field name="model">module.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="db_id"/>
+                <field name="module_detail_id"/>
+                <field name="message"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="db_log_form_view">
+        <field name="name">DB log form view</field>
+        <field name="model">db.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="re_verify_db" string="Reverify"
+                            type="object" attrs="{'invisible': ['|', ('parent_state', '!=', 'verified'), ('state', '!=', 'error')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="management_module_id" invisible="1"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="db_id"/>
+                        </group>
+                        <group>
+                            <field name="message"/>
+                            <field name="parent_state" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Module log">
+                            <field name="module_log_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="db_log_tree_view">
+        <field name="name">DB log tree view</field>
+        <field name="model">db.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="db_id"/>
+                 <field name="state"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="db_language_log_form_view">
+        <field name="name">DB language log form view</field>
+        <field name="model">db.language.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="re_verify_db" string="Reverify"
+                            type="object" attrs="{'invisible': ['|', ('parent_state', '!=', 'verified'), ('state', '!=', 'error')]}"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="load_translation_id" invisible="1"/>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="db_id"/>
+                        </group>
+                        <group>
+                            <field name="message"/>
+                            <field name="parent_state" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="db_language_log_tree_view">
+        <field name="name">DB language log tree view</field>
+        <field name="model">db.language.log</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="db_id"/>
+                 <field name="state"/>
+                <field name="message"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

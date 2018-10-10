@@ -1,0 +1,453 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* btek_legal_financing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-22 07:35+0000\n"
+"PO-Revision-Date: 2018-05-22 14:38+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_account_id
+msgid "Account"
+msgstr "Tài khoản"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Cancel Entry"
+msgstr "Hủy bút toán"
+
+#. module: btek_legal_financing
+#: selection:closing.entry,state:0
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: btek_legal_financing
+#: model:ir.actions.act_window,name:btek_legal_financing.action_closing_entry_config_tree_view
+#: model:ir.actions.act_window,name:btek_legal_financing.action_closing_entry_tree_view
+#: model:ir.ui.menu,name:btek_legal_financing.closing_entry_config_menu
+#: model:ir.ui.menu,name:btek_legal_financing.closing_entry_menu
+msgid "Closing Entries"
+msgstr "Bút toán đóng sổ"
+
+#. module: btek_legal_financing
+#: model:ir.model,name:btek_legal_financing.model_closing_entry
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_closing_entry_id
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_tree_view
+msgid "Closing Entry"
+msgstr "Bút toán đóng sổ"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_config_form_view
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_config_tree_view
+msgid "Closing Entry Config"
+msgstr "Cấu hình Bút toán đóng sổ"
+
+#. module: btek_legal_financing
+#: model:ir.model,name:btek_legal_financing.model_closing_entry_configs
+msgid "Closing Entry Configuration"
+msgstr "Cấu hình Bút toán đóng sổ"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Closing Entry Form"
+msgstr "Mẫu kết Bút toán đóng sổ"
+
+#. module: btek_legal_financing
+#: model:ir.model,name:btek_legal_financing.model_closing_entry_line
+msgid "Closing Entry Line"
+msgstr "Closing Entry Line"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_company_id
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_company_id
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: btek_legal_financing
+#: selection:closing.entry,state:0
+msgid "Confirmed"
+msgstr "Đã xác nhận"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_create_uid
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_create_uid
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_create_date
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_create_date
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_credit
+msgid "Credit"
+msgstr "Có"
+
+#. module: btek_legal_financing
+#: selection:closing.entry.configs,forward_type:0
+msgid "Credit -> Debit"
+msgstr "Có -> Nợ"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_date
+msgid "Date"
+msgstr "Ngày tháng"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_debit
+msgid "Debit"
+msgstr "Nợ"
+
+#. module: btek_legal_financing
+#: selection:closing.entry.configs,forward_type:0
+msgid "Debit -> Credit"
+msgstr "Nợ -> Có"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_display_name
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_display_name
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: btek_legal_financing
+#: selection:closing.entry,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_end_date
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_code
+msgid "Entry Code"
+msgstr "Mã bút toán"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_name
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_name
+msgid "Entry Name"
+msgstr "Tên bút toán"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_forward_account_code
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_forward_account_id
+msgid "Forward Account"
+msgstr "Tài khoản chuyển tiếp"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_forward_type
+msgid "Forward Type"
+msgstr "Loại chuyển tiếp"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_x_group
+msgid "Group Account"
+msgstr "Nhóm tài khoản"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_cr_db_5213_5111
+msgid "Hàng bán bị trả lại"
+msgstr "Hàng bán bị trả lại"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_id
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_id
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_journal_id
+msgid "Journal"
+msgstr "Sổ nhật ký"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_account_move_id
+msgid "Journal Entry"
+msgstr "Bút toán sổ nhật ký"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_closing_entry_line
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Journal Items"
+msgstr "Chứng từ"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6421
+msgid "Kết chuyển chi phí bán hàng"
+msgstr "Kết chuyển chi phí bán hàng"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6415
+msgid "Kết chuyển chi phí bảo hành"
+msgstr "Kết chuyển chi phí bảo hành"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6238
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6278
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6418
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6428
+msgid "Kết chuyển chi phí bằng tiền khác"
+msgstr "Kết chuyển chi phí bằng tiền khác"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6237
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6277
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6417
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6427
+msgid "Kết chuyển chi phí dịch vụ mua ngoài"
+msgstr "Kết chuyển chi phí dịch vụ mua ngoài"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6233
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6273
+msgid "Kết chuyển chi phí dụng cụ sản xuất"
+msgstr "Kết chuyển chi phí dụng cụ sản xuất"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6413
+msgid "Kết chuyển chi phí dụng cụ, đồ dùng"
+msgstr "Kết chuyển chi phí dụng cụ, đồ dùng"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6426
+msgid "Kết chuyển chi phí dự phòng"
+msgstr "Kết chuyển chi phí dự phòng"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6274
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6414
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6424
+msgid "Kết chuyển chi phí khấu hao TSCĐ"
+msgstr "Kết chuyển chi phí khấu hao TSCĐ"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6234
+msgid "Kết chuyển chi phí khấu hao máy thi công"
+msgstr "Kết chuyển chi phí khấu hao máy thi công"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6112
+msgid "Kết chuyển chi phí mua hàng hóa"
+msgstr "Kết chuyển chi phí mua hàng hóa"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6111
+msgid "Kết chuyển chi phí mua nguyên liệu, vật liệu"
+msgstr "Kết chuyển chi phí mua nguyên liệu, vật liệu"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_621
+msgid "Kết chuyển chi phí mua nguyên liệu, vật liệu trực tiếp"
+msgstr "Kết chuyển chi phí mua nguyên liệu, vật liệu trực tiếp"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6272
+msgid "Kết chuyển chi phí nguyên, vật liệu"
+msgstr "Kết chuyển chi phí nguyên, vật liệu"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6231
+msgid "Kết chuyển chi phí nhân công"
+msgstr "Kết chuyển chi phí nhân công"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6271
+msgid "Kết chuyển chi phí nhân công phân xưởng"
+msgstr "Kết chuyển chi phí nhân công phân xưởng"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_622
+msgid "Kết chuyển chi phí nhân công trực tiếp"
+msgstr "Kết chuyển chi phí nhân công trực tiếp"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6411
+msgid "Kết chuyển chi phí nhân viên"
+msgstr "Kết chuyển chi phí nhân viên"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6422
+msgid "Kết chuyển chi phí quản lý doanh nghiệp"
+msgstr "Kết chuyển chi phí quản lý doanh nghiệp"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6232
+msgid "Kết chuyển chi phí vật liệu"
+msgstr "Kết chuyển chi phí vật liệu"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6412
+msgid "Kết chuyển chi phí vật liệu, bao bì"
+msgstr "Kết chuyển chi phí vật liệu, bao bì"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6423
+msgid "Kết chuyển chi phí đồ dùng văn phòng"
+msgstr "Kết chuyển chi phí đồ dùng văn phòng"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_cr_db_5211_5111
+msgid "Kết chuyển chiết khấu thương mại"
+msgstr "Kết chuyển chiết khấu thương mại"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5112
+msgid "Kết chuyển doanh thu bán các thành phẩm"
+msgstr "Kết chuyển doanh thu bán các thành phẩm"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5111
+msgid "Kết chuyển doanh thu bán hàng hóa"
+msgstr "Kết chuyển doanh thu bán hàng hóa"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5113
+msgid "Kết chuyển doanh thu cung cấp dịch vụ"
+msgstr "Kết chuyển doanh thu cung cấp dịch vụ"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_515
+msgid "Kết chuyển doanh thu hoạt động tài chính khác"
+msgstr "Kết chuyển doanh thu hoạt động tài chính khác"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5118
+msgid "Kết chuyển doanh thu khác"
+msgstr "Kết chuyển doanh thu khác"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5117
+msgid "Kết chuyển doanh thu kinh doanh bất động sản đầu tư"
+msgstr "Kết chuyển doanh thu kinh doanh bất động sản đầu tư"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_5114
+msgid "Kết chuyển doanh thu trợ cấp, trợ giá"
+msgstr "Kết chuyển doanh thu trợ cấp, trợ giá"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_631
+msgid "Kết chuyển giá thành sản xuất"
+msgstr "Kết chuyển giá thành sản xuất"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_632
+msgid "Kết chuyển giá vốn hàng bán"
+msgstr "Kết chuyển giá vốn hàng bán"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_cr_db_5212_5111
+msgid "Kết chuyển giảm giá hàng bán"
+msgstr "Kết chuyển giảm giá hàng bán"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_profit_loss
+msgid "Kết chuyển lãi / lỗ"
+msgstr "Kết chuyển lãi / lỗ"
+
+#. module: btek_legal_financing
+#: model:closing.entry.configs,name:btek_legal_financing.to_closing_entry_6425
+msgid "Kết chuyển thuế, phí và lệ phí"
+msgstr "Kết chuyển thuế, phí và lệ phí"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry___last_update
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs___last_update
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_write_uid
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_write_uid
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_write_date
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_write_date
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: btek_legal_financing
+#: selection:closing.entry.configs,forward_type:0
+msgid "Mixed"
+msgstr "Hỗn hợp"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_line_name
+msgid "Name"
+msgstr "Tên"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_origin_account_code
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_origin_account_id
+msgid "Origin Account"
+msgstr "Tài khoản gốc"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Post"
+msgstr "Vào sổ"
+
+#. module: btek_legal_financing
+#: selection:closing.entry,state:0
+msgid "Posted"
+msgstr "Đã vào sổ"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_profit_loss
+msgid "Profit/Loss"
+msgstr "Lãi/Lỗ"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_reference
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_configs_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: btek_legal_financing
+#: model:ir.ui.view,arch_db:btek_legal_financing.closing_entry_form_view
+msgid "Set to Draft"
+msgstr "Đặt về dự thảo"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: btek_legal_financing
+#: model:ir.model.fields,field_description:btek_legal_financing.field_closing_entry_state
+msgid "Status"
+msgstr "Trạng thái"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_product_category_form_view" model="ir.ui.view">
+        <field name="name">import.product.category.form.view</field>
+        <field name="model">import.product.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="template_file_url" widget="url"/>
+                </group>
+                <group>
+                    <field name="name" invisible ="1" attrs="{'value':'product category'}"/>
+                    <field name="type" invisible="1"/>
+                    <field name="datas_fname" invisible="1"/>
+                    <field name="datas" filename="datas_fname"/>
+                </group>
+                <footer>
+                    <button name="import_product_category" type="object"
+                            string="Import product category"
+                            class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_import_product_category" model="ir.actions.act_window">
+        <field name="name">Import product category</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">import.product.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!--<menuitem id="bave_import_menu_root"-->
+              <!--name="Import Data"-->
+              <!--parent="sales_team.menu_sale_config"/>-->
+
+    <!--<menuitem id="import_product_category_menu"-->
+              <!--name="Import Product Category"-->
+              <!--action="action_import_product_category"-->
+              <!--parent="bave_import_menu_root" sequence="2"/>-->
+</odoo>
